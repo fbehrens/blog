@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import PostCard from '../components/PostCard.astro';
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const tags = [...new Set(posts.map(p => p.data.tag))].sort();
+---
+<Layout title="Blog">
+  <div class="mb-8 flex flex-wrap gap-2 items-center">
+    <a href="/"
+      class="text-sm px-3 py-1 rounded-full border bg-(--color-primary) text-white border-(--color-primary)">
+      Alle
+    </a>
+    {tags.map(tag => (
+      <a href={`/tag/${tag}`}
+        class="text-sm px-3 py-1 rounded-full border border-(--color-border) text-(--color-muted) hover:border-(--color-primary) hover:text-(--color-primary) transition-colors">
+        {tag}
+      </a>
+    ))}
+  </div>
+  <div>
+    {posts.map(post => (
+      <PostCard
+        title={post.data.title}
+        date={post.data.date}
+        tag={post.data.tag}
+        description={post.data.description}
+        slug={post.id}
+      />
+    ))}
+  </div>
+</Layout>

@@ -1,0 +1,52 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  return posts.map(post => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, date, tag, description, image } = post.data;
+const formatted = date.toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<Layout title={title} description={description}>
+  <article>
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <time class="text-sm text-(--color-muted)">{formatted}</time>
+        <a href={`/tag/${tag}`}
+          class="text-xs px-2 py-0.5 rounded-full bg-(--color-primary-light) text-(--color-primary) hover:bg-(--color-primary) hover:text-white transition-colors">
+          {tag}
+        </a>
+      </div>
+      <h1 class="font-serif text-3xl font-bold leading-snug">{title}</h1>
+    </header>
+
+    {image && (
+      <img src={image.src} alt={title} width={image.width} height={image.height}
+        class="w-full rounded-lg mb-8 object-cover max-h-80" />
+    )}
+
+    <div class="prose prose-neutral max-w-none
+      [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:mt-8 [&_h2]:mb-3
+      [&_h3]:font-serif [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2
+      [&_p]:mb-4 [&_p]:leading-7 [&_p]:text-[oklch(20%_0_0)]
+      [&_a]:text-(--color-primary) [&_a]:underline [&_a:hover]:text-(--color-primary-hover)
+      [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-4
+      [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-4
+      [&_li]:mb-1
+      [&_code]:bg-(--color-primary-light) [&_code]:px-1 [&_code]:rounded [&_code]:text-sm
+      [&_pre]:bg-[oklch(15%_0_0)] [&_pre]:text-white [&_pre]:p-4 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_pre]:mb-4
+      [&_blockquote]:border-l-4 [&_blockquote]:border-(--color-primary) [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-(--color-muted)
+      [&_img]:rounded-lg [&_img]:my-6">
+      <Content />
+    </div>
+
+    <footer class="mt-10 pt-6 border-t border-(--color-border)">
+      <a href="/" class="text-sm text-(--color-primary) hover:underline">← Alle Artikel</a>
+    </footer>
+  </article>
+</Layout>

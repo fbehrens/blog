@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import PostCard from '../../components/PostCard.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  const tags = [...new Set(posts.map(p => p.data.tag))];
+  return tags.map(tag => ({
+    params: { tag },
+    props: { posts: posts.filter(p => p.data.tag === tag).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()) },
+  }));
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const allTags = [...new Set((await getCollection('posts', ({ data }) => !data.draft)).map(p => p.data.tag))].sort();
+---
+<Layout title={`#${tag}`} description={`Artikel mit dem Tag ${tag}`}>
+  <div class="mb-8 flex flex-wrap gap-2 items-center">
+    <a href="/"
+      class="text-sm px-3 py-1 rounded-full border border-(--color-border) text-(--color-muted) hover:border-(--color-primary) hover:text-(--color-primary) transition-colors">
+      Alle
+    </a>
+    {allTags.map(t => (
+      <a href={`/tag/${t}`}
+        class={`text-sm px-3 py-1 rounded-full border transition-colors ${t === tag ? 'bg-(--color-primary) text-white border-(--color-primary)' : 'border-(--color-border) text-(--color-muted) hover:border-(--color-primary) hover:text-(--color-primary)'}`}>
+        {t}
+      </a>
+    ))}
+  </div>
+  <div>
+    {posts.map(post => (
+      <PostCard
+        title={post.data.title}
+        date={post.data.date}
+        tag={post.data.tag}
+        description={post.data.description}
+        slug={post.id}
+      />
+    ))}
+  </div>
+</Layout>

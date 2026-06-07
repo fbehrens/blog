@@ -1,0 +1,37 @@
+---
+---
+<div id="cookie-banner"
+  class="fixed bottom-0 inset-x-0 z-50 p-4 bg-white border-t border-(--color-border) shadow-lg hidden">
+  <div class="max-w-2xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
+    <p class="text-sm text-(--color-muted) flex-1">
+      Diese Website verwendet Google Analytics zur anonymen Auswertung des Datenverkehrs.
+      Weitere Informationen in der <a href="/impressum" class="underline hover:text-(--color-primary)">Datenschutzerklärung</a>.
+    </p>
+    <div class="flex gap-2 shrink-0">
+      <button id="cookie-decline"
+        class="text-sm px-4 py-2 border border-(--color-border) rounded hover:border-(--color-primary) hover:text-(--color-primary) transition-colors">
+        Ablehnen
+      </button>
+      <button id="cookie-accept"
+        class="text-sm px-4 py-2 bg-(--color-primary) text-white rounded hover:bg-(--color-primary-hover) transition-colors">
+        Akzeptieren
+      </button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  const banner = document.getElementById('cookie-banner');
+  if (!localStorage.getItem('ga_consent')) {
+    banner.classList.remove('hidden');
+  }
+  document.getElementById('cookie-accept').addEventListener('click', () => {
+    localStorage.setItem('ga_consent', 'true');
+    banner.classList.add('hidden');
+    window.dispatchEvent(new Event('ga-consent-granted'));
+  });
+  document.getElementById('cookie-decline').addEventListener('click', () => {
+    localStorage.setItem('ga_consent', 'false');
+    banner.classList.add('hidden');
+  });
+</script>
