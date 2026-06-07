@@ -1,5 +1,10 @@
 name = "blog"
 compatibility_date = "2026-06-07"
 
+routes = [
+  { pattern = "aufb.de", custom_domain = true },
+  { pattern = "www.aufb.de", custom_domain = true },
+]
+
 [assets]
 directory = "./dist"
