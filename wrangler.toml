@@ -1,4 +1,5 @@
 name = "blog"
+main = "src/worker.ts"
 compatibility_date = "2026-06-07"
 
 routes = [
@@ -8,6 +9,16 @@ routes = [
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
+
+[[send_email]]
+name = "EMAIL"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "blog-subscribers"
+database_id = "32734eed-5274-4957-a78b-c4f226c28a9e"
+migrations_dir = "./migrations"
 
 [observability]
 enabled = false

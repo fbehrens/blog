@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const sessions = (await getCollection('teach'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Layout title="Teach" description="Learning sessions, published from my teach workspace.">
+  <header class="mb-8">
+    <h1 class="font-serif text-3xl font-bold leading-snug mb-2">Teach</h1>
+    <p class="text-(--color-muted)">
+      Self-directed learning sessions — each with a mission, resources, and interactive lessons.
+    </p>
+  </header>
+
+  <div>
+    {sessions.map(s => (
+      <article class="py-6 border-b border-(--color-border) last:border-0">
+        <div class="flex items-center gap-3 mb-2">
+          <time class="text-sm text-(--color-muted)">
+            {s.data.date.toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+          {s.data.tags.map(t => (
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-primary-light) text-(--color-primary)">{t}</span>
+          ))}
+        </div>
+        <a href={`/teach/${s.data.session}`} class="group">
+          <h2 class="font-serif text-xl font-semibold mb-1 group-hover:text-(--color-primary) transition-colors">{s.data.title}</h2>
+          <p class="text-(--color-muted) text-sm leading-relaxed line-clamp-3">{s.data.description}</p>
+        </a>
+        {s.data.lessons.length > 0 && (
+          <p class="text-xs text-(--color-muted) mt-2">{s.data.lessons.length} lesson{s.data.lessons.length === 1 ? '' : 's'}</p>
+        )}
+      </article>
+    ))}
+    {sessions.length === 0 && (
+      <p class="text-(--color-muted)">No sessions published yet.</p>
+    )}
+  </div>
+</Layout>

@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
@@ -17,5 +18,9 @@
     "astro": "^6.4.4",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.16.13",
+    "vitest": "^4.1.8"
   }
 }

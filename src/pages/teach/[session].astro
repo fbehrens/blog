@@ -1,0 +1,60 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const sessions = await getCollection('teach');
+  return sessions.map(s => ({ params: { session: s.data.session }, props: { session: s } }));
+}
+
+const { session } = Astro.props;
+const { Content } = await render(session);
+const { title, date, tags, description, lessons } = session.data;
+const formatted = date.toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<Layout title={title} description={description}>
+  <article>
+    <header class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <time class="text-sm text-(--color-muted)">{formatted}</time>
+        {tags.map(t => (
+          <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-primary-light) text-(--color-primary)">{t}</span>
+        ))}
+      </div>
+      <h1 class="font-serif text-3xl font-bold leading-snug">{title}</h1>
+    </header>
+
+    {lessons.length > 0 && (
+      <nav class="mb-8 rounded-lg border border-(--color-border) p-4">
+        <h2 class="font-serif text-lg font-semibold mb-2">Lessons</h2>
+        <ol class="list-decimal pl-5 space-y-1">
+          {lessons.map(l => (
+            <li>
+              <a href={l.href} class="text-(--color-primary) underline hover:text-(--color-primary-hover)">{l.title}</a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
+
+    <div class="prose prose-neutral max-w-none
+      [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:mt-8 [&_h2]:mb-3
+      [&_h3]:font-serif [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2
+      [&_p]:mb-4 [&_p]:leading-7 [&_p]:text-[oklch(20%_0_0)]
+      [&_a]:text-(--color-primary) [&_a]:underline [&_a:hover]:text-(--color-primary-hover)
+      [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-4
+      [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-4
+      [&_li]:mb-1
+      [&_code]:bg-(--color-primary-light) [&_code]:px-1 [&_code]:rounded [&_code]:text-sm
+      [&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_pre_code]:rounded-none [&_pre_code]:text-base
+      [&_pre]:bg-[oklch(15%_0_0)] [&_pre]:text-white [&_pre]:p-4 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_pre]:mb-4
+      [&_blockquote]:border-l-4 [&_blockquote]:border-(--color-primary) [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-(--color-muted)
+      [&_img]:rounded-lg [&_img]:my-6">
+      <Content />
+    </div>
+
+    <footer class="mt-10 pt-6 border-t border-(--color-border)">
+      <a href="/teach" class="text-sm text-(--color-primary) hover:underline">← Alle Sessions</a>
+    </footer>
+  </article>
+</Layout>

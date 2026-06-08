@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astro Islands Architecture</title>
+  <style>
+    :root {
+      --bg: #0f0f13;
+      --surface: #1a1a24;
+      --surface2: #242435;
+      --border: #2e2e45;
+      --text: #e2e2f0;
+      --muted: #8888aa;
+      --accent: #7c3aed;
+      --accent-bright: #a78bfa;
+      --green: #34d399;
+      --yellow: #fbbf24;
+      --red: #f87171;
+      --blue: #60a5fa;
+      --orange: #fb923c;
+      --code-bg: #12121a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      padding: 2rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    h1 { font-size: 2rem; color: var(--accent-bright); margin-bottom: 0.25rem; }
+    h2 { font-size: 1.3rem; color: var(--accent-bright); margin: 2.5rem 0 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    h3 { font-size: 1rem; color: var(--yellow); margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; color: var(--text); }
+    a { color: var(--accent-bright); }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .callout {
+      border-left: 3px solid var(--accent);
+      padding: 0.75rem 1rem;
+      background: var(--surface);
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+    .callout.try { border-color: var(--green); }
+    .callout.warn { border-color: var(--yellow); }
+    .callout.svelte { border-color: #ff3e00; }
+
+    .callout-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .callout.try .callout-label { color: var(--green); }
+    .callout.warn .callout-label { color: var(--yellow); }
+    .callout.svelte .callout-label { color: #ff3e00; }
+    .callout .callout-label { color: var(--accent-bright); }
+
+    code {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 0.85em;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+      color: var(--accent-bright);
+    }
+
+    pre {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      overflow-x: auto;
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      margin: 1rem 0;
+    }
+
+    .kw { color: #c792ea; }
+    .fn { color: #82aaff; }
+    .str { color: #c3e88d; }
+    .cmt { color: #546e7a; font-style: italic; }
+    .tag { color: #f07178; }
+    .attr { color: #ffcb6b; }
+    .val { color: #c3e88d; }
+    .dir { color: var(--orange); font-weight: 700; }
+
+    .directive-grid {
+      display: grid;
+      grid-template-columns: auto 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 1rem 0;
+    }
+    .directive-grid .dg-header {
+      background: var(--surface2);
+      padding: 0.6rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+    .directive-grid .dg-cell {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+    }
+    .directive-grid .dg-cell:last-child,
+    .directive-grid .dg-header:last-child { border-right: none; }
+    .directive-grid .dg-cell.directive { color: var(--orange); font-family: monospace; font-weight: 700; }
+    .directive-grid .dg-cell.when { color: var(--text); }
+    .directive-grid .dg-cell.use { color: var(--muted); font-style: italic; }
+
+    .diagram {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      font-family: monospace;
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+    .static-box { color: var(--muted); }
+    .island-box { color: var(--green); font-weight: bold; }
+    .server-island { color: var(--blue); font-weight: bold; }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .compare-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .compare-card h4 { font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .compare-card.sveltekit h4 { color: #ff3e00; }
+    .compare-card.astro h4 { color: var(--accent-bright); }
+    .compare-card ul { padding-left: 1.2rem; color: var(--muted); font-size: 0.875rem; }
+    .compare-card ul li { margin-bottom: 0.3rem; }
+
+    .quiz-section {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quiz-section h3 { color: var(--green); margin-top: 0; }
+    .quiz-q {
+      margin: 1.25rem 0 0.5rem;
+      font-weight: 600;
+    }
+    .quiz-options { display: flex; flex-direction: column; gap: 0.5rem; }
+    .quiz-opt {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .quiz-opt:hover { border-color: var(--accent); background: var(--surface2); }
+    .quiz-opt.correct { border-color: var(--green); background: rgba(52, 211, 153, 0.08); color: var(--green); }
+    .quiz-opt.wrong { border-color: var(--red); background: rgba(248, 113, 113, 0.08); color: var(--red); }
+    .quiz-feedback { font-size: 0.875rem; margin-top: 0.5rem; min-height: 1.4rem; color: var(--muted); }
+    .quiz-feedback.correct { color: var(--green); }
+    .quiz-feedback.wrong { color: var(--red); }
+
+    .cite {
+      font-size: 0.75rem;
+      color: var(--muted);
+      vertical-align: super;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); }
+    footer ol { padding-left: 1.2rem; }
+    footer li { margin-bottom: 0.25rem; }
+  </style>
+</head>
+<body>
+<a href="/teach/astro/" style="position:fixed;top:0;left:0;z-index:99999;background:#111;color:#fff;font:14px/1.4 system-ui,-apple-system,sans-serif;padding:8px 14px;border-bottom-right-radius:8px;text-decoration:none;opacity:.85">← Learning Astro's Islands Architecture</a>
+
+<h1>Astro Islands Architecture</h1>
+<p class="subtitle">Session 1 · For SvelteKit developers</p>
+
+<!-- ─── 1. The Problem ─── -->
+<h2>1. The Problem Islands Solve</h2>
+
+<p>
+  In SvelteKit, every page ships a JavaScript bundle. Even a mostly-static marketing page hydrates the entire component tree in the browser. That JS is cheap when every component is interactive — but expensive when 90% of your page is just text and images.
+</p>
+
+<div class="compare-grid">
+  <div class="compare-card sveltekit">
+    <h4>SvelteKit (full hydration)</h4>
+    <ul>
+      <li>Full JS bundle sent for every page</li>
+      <li>Entire tree hydrated on load</li>
+      <li>Great for highly-interactive apps</li>
+      <li>Overkill for content-heavy pages</li>
+    </ul>
+  </div>
+  <div class="compare-card astro">
+    <h4>Astro (islands)</h4>
+    <ul>
+      <li>Zero JS by default</li>
+      <li>Only explicitly-marked components hydrate</li>
+      <li>Great for content-heavy sites with some interactivity</li>
+      <li>Granular control per component</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout svelte">
+  <div class="callout-label">Svelte analogy</div>
+  Think of it like SvelteKit but where every component defaults to <code>SSR-only</code> and you must opt-in to client-side hydration one component at a time.
+</div>
+
+<!-- ─── 2. What is an Island ─── -->
+<h2>2. What Is an Island?</h2>
+
+<p>
+  An <strong>island</strong> is an interactive UI component embedded in an otherwise static HTML page.<sup class="cite">[1]</sup>
+  The term was coined by Etsy engineer Katie Sylor-Miller (2019) and formalized by Preact creator Jason Miller:
+</p>
+
+<div class="callout">
+  <div class="callout-label">Definition</div>
+  "Render HTML pages on the server, and inject placeholders around highly dynamic regions that can then be hydrated on the client into small self-contained widgets."
+  <br><em style="font-size:0.8rem;color:var(--muted)">— Jason Miller, 2020</em>
+</div>
+
+<p>Astro has two kinds of islands:</p>
+
+<div class="diagram">
+<span class="static-box">┌────────────────────────────────────────────────────┐</span>
+<span class="static-box">│          PAGE  (static HTML, zero JS)              │</span>
+<span class="static-box">│                                                    │</span>
+<span class="static-box">│  &lt;nav&gt; static&lt;/nav&gt;                                │</span>
+<span class="static-box">│                                                    │</span>
+<span class="island-box">│  ┌──────────────────────────────┐                  │</span>
+<span class="island-box">│  │  🏝  CLIENT ISLAND (Svelte)  │  ← hydrated JS   │</span>
+<span class="island-box">│  │  Counter.svelte client:load  │                  │</span>
+<span class="island-box">│  └──────────────────────────────┘                  │</span>
+<span class="static-box">│                                                    │</span>
+<span class="static-box">│  &lt;main&gt; 1000 words of content &lt;/main&gt;              │</span>
+<span class="static-box">│                                                    │</span>
+<span class="server-island">│  ┌──────────────────────────────┐                  │</span>
+<span class="server-island">│  │  🗄  SERVER ISLAND           │  ← server-render │</span>
+<span class="server-island">│  │  UserGreeting server:defer   │     in parallel  │</span>
+<span class="server-island">│  └──────────────────────────────┘                  │</span>
+<span class="static-box">│                                                    │</span>
+<span class="static-box">│  &lt;footer&gt; static &lt;/footer&gt;                         │</span>
+<span class="static-box">└────────────────────────────────────────────────────┘</span>
+</div>
+
+<p>
+  Islands load and hydrate <strong>independently</strong> — they don't block each other, and they don't block the static content around them.<sup class="cite">[1]</sup>
+</p>
+
+<!-- ─── 3. Client Directives ─── -->
+<h2>3. Client Directives — The Core API</h2>
+
+<p>
+  You turn any framework component into a client island by adding a <code>client:*</code> directive.<sup class="cite">[2]</sup>
+  Without one, the component renders as static HTML on the server and ships <em>zero JS</em>.
+</p>
+
+<pre><span class="cmt">---</span>
+<span class="kw">import</span> Counter <span class="kw">from</span> <span class="str">'../components/Counter.svelte'</span>;
+<span class="cmt">---</span>
+
+<span class="cmt">&lt;!-- Static — renders HTML only, no JS sent --&gt;</span>
+<span class="tag">&lt;Counter</span> <span class="attr">initialCount</span>=<span class="val">{0}</span> <span class="tag">/&gt;</span>
+
+<span class="cmt">&lt;!-- Island — hydrated immediately --&gt;</span>
+<span class="tag">&lt;Counter</span> <span class="attr">initialCount</span>=<span class="val">{0}</span> <span class="dir">client:load</span> <span class="tag">/&gt;</span>
+
+<span class="cmt">&lt;!-- Island — hydrated when browser is idle --&gt;</span>
+<span class="tag">&lt;Counter</span> <span class="attr">initialCount</span>=<span class="val">{0}</span> <span class="dir">client:idle</span> <span class="tag">/&gt;</span>
+
+<span class="cmt">&lt;!-- Island — hydrated only when scrolled into view --&gt;</span>
+<span class="tag">&lt;Counter</span> <span class="attr">initialCount</span>=<span class="val">{0}</span> <span class="dir">client:visible</span> <span class="tag">/&gt;</span></pre>
+
+<div class="directive-grid">
+  <div class="dg-header">Directive</div>
+  <div class="dg-header">When it hydrates</div>
+  <div class="dg-header">Use for</div>
+
+  <div class="dg-cell directive">client:load</div>
+  <div class="dg-cell when">Immediately on page load</div>
+  <div class="dg-cell use">Critical UI — nav menus, modals above the fold</div>
+
+  <div class="dg-cell directive">client:idle</div>
+  <div class="dg-cell when">After page load, when browser is idle (<code>requestIdleCallback</code>)</div>
+  <div class="dg-cell use">Non-critical interactive widgets</div>
+
+  <div class="dg-cell directive">client:visible</div>
+  <div class="dg-cell when">When the component enters the viewport</div>
+  <div class="dg-cell use">Below-the-fold components, infinite scroll, lazy charts</div>
+
+  <div class="dg-cell directive">client:media</div>
+  <div class="dg-cell when">When a CSS media query matches</div>
+  <div class="dg-cell use">Mobile-only interactive widgets</div>
+
+  <div class="dg-cell directive">client:only</div>
+  <div class="dg-cell when">Client-only — skips server render entirely</div>
+  <div class="dg-cell use">Components that need browser APIs at render time (e.g. WebGL, localStorage)</div>
+</div>
+
+<div class="callout warn">
+  <div class="callout-label">Important</div>
+  <code>client:only</code> requires you to pass the framework name: <code>client:only="svelte"</code>.
+  The component won't render at all on the server, so there's no static HTML fallback.
+</div>
+
+<!-- ─── 4. Server Islands ─── -->
+<h2>4. Server Islands — The Other Kind</h2>
+
+<p>
+  A <strong>server island</strong> is different: it renders on the server (not the client) but does so <em>after</em> the initial static HTML is sent.
+  This lets you serve fast static HTML immediately, then stream in personalized or dynamic server-rendered content.<sup class="cite">[4]</sup>
+</p>
+
+<pre><span class="cmt">---</span>
+<span class="kw">import</span> UserGreeting <span class="kw">from</span> <span class="str">'../components/UserGreeting.astro'</span>;
+<span class="cmt">---</span>
+
+<span class="cmt">&lt;!-- Page renders instantly. UserGreeting streams in separately. --&gt;</span>
+<span class="tag">&lt;UserGreeting</span> <span class="dir">server:defer</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;span</span> <span class="attr">slot</span>=<span class="val">"fallback"</span><span class="tag">&gt;</span>Loading...<span class="tag">&lt;/span&gt;</span>
+<span class="tag">&lt;/UserGreeting&gt;</span></pre>
+
+<div class="card">
+  <strong>Client island vs Server island:</strong>
+  <ul style="padding-left:1.2rem;margin-top:0.5rem;color:var(--muted);font-size:0.9rem;">
+    <li><strong style="color:var(--green)">Client island</strong>: static HTML on server → JS shipped → hydrated in browser</li>
+    <li><strong style="color:var(--blue)">Server island</strong>: static HTML on server → server re-renders the island → streamed as HTML → no JS shipped</li>
+  </ul>
+</div>
+
+<!-- ─── 5. Svelte as an Island ─── -->
+<h2>5. Using Svelte Components as Islands</h2>
+
+<p>This is one-time setup, then it works exactly like your existing Svelte knowledge.<sup class="cite">[3]</sup></p>
+
+<pre><span class="cmt"># 1. Add the integration</span>
+npx astro add svelte</pre>
+
+<p>That creates/updates three files:</p>
+
+<pre><span class="cmt">// astro.config.mjs</span>
+<span class="kw">import</span> { defineConfig } <span class="kw">from</span> <span class="str">'astro/config'</span>;
+<span class="kw">import</span> svelte <span class="kw">from</span> <span class="str">'@astrojs/svelte'</span>;
+
+<span class="kw">export default</span> <span class="fn">defineConfig</span>({
+  integrations: [<span class="fn">svelte</span>()],
+});</pre>
+
+<pre><span class="cmt">// svelte.config.js  (auto-created)</span>
+<span class="kw">import</span> { vitePreprocess } <span class="kw">from</span> <span class="str">'@astrojs/svelte'</span>;
+<span class="kw">export default</span> { preprocess: <span class="fn">vitePreprocess</span>() };</pre>
+
+<pre><span class="cmt">// src/pages/index.astro</span>
+<span class="cmt">---</span>
+<span class="kw">import</span> Counter <span class="kw">from</span> <span class="str">'../components/Counter.svelte'</span>;
+<span class="cmt">---</span>
+<span class="tag">&lt;html&gt;&lt;body&gt;</span>
+  <span class="tag">&lt;h1&gt;</span>Hello<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;Counter</span> <span class="attr">initialCount</span>=<span class="val">{5}</span> <span class="dir">client:load</span> <span class="tag">/&gt;</span>
+<span class="tag">&lt;/body&gt;&lt;/html&gt;</span></pre>
+
+<div class="callout warn">
+  <div class="callout-label">Props limitation</div>
+  Props passed to hydrated islands must be <strong>serializable</strong> — objects, arrays, strings, numbers, dates.
+  You <em>cannot</em> pass functions as props. This differs from SvelteKit where callbacks flow freely.
+</div>
+
+<div class="callout svelte">
+  <div class="callout-label">Svelte 5 note</div>
+  The current <code>@astrojs/svelte</code> (v8+) targets Svelte 5. For Svelte 3/4, use <code>@astrojs/svelte@5</code>.
+</div>
+
+<!-- ─── 6. Try This ─── -->
+<h2>6. Try This</h2>
+
+<div class="callout try">
+  <div class="callout-label">Exercise 1 — Scaffold and observe</div>
+  <ol style="padding-left:1.2rem;margin-top:0.4rem;font-size:0.9rem;">
+    <li>Run <code>npm create astro@latest my-islands-demo</code> (choose "empty" template)</li>
+    <li>Run <code>npx astro add svelte</code></li>
+    <li>Create <code>src/components/Counter.svelte</code> with a simple <code>let count = $state(0)</code> + button</li>
+    <li>Add it to <code>src/pages/index.astro</code> <strong>without</strong> any <code>client:*</code> directive first</li>
+    <li>Open DevTools → Network → reload. Notice: <strong>zero Svelte JS</strong> in the bundle</li>
+    <li>Now add <code>client:load</code> and reload. The Svelte runtime appears in Network</li>
+    <li>Change to <code>client:visible</code> and observe it only hydrates when scrolled into view</li>
+  </ol>
+</div>
+
+<div class="callout try">
+  <div class="callout-label">Exercise 2 — Compare directive timing</div>
+  <p style="font-size:0.9rem;margin:0.4rem 0 0">
+    Add <em>three</em> copies of your counter to a page — one with each of <code>client:load</code>, <code>client:idle</code>, <code>client:visible</code>.
+    Open DevTools Performance tab and record the page load. You'll see them hydrate at different times.
+    Which one is most appropriate for a "subscribe to newsletter" form above the fold?
+  </p>
+</div>
+
+<!-- ─── Quiz ─── -->
+<div class="quiz-section">
+  <h3>Quick Check</h3>
+
+  <div class="quiz-q">Q1. A Svelte component in Astro with no <code>client:*</code> directive will…</div>
+  <div class="quiz-options" id="q1">
+    <div class="quiz-opt" onclick="answer('q1',this,false)">Hydrate immediately on page load</div>
+    <div class="quiz-opt" onclick="answer('q1',this,true)">Render as static HTML with no JavaScript sent to the browser</div>
+    <div class="quiz-opt" onclick="answer('q1',this,false)">Throw a build error</div>
+    <div class="quiz-opt" onclick="answer('q1',this,false)">Only render on the client, skipping server render</div>
+  </div>
+  <div class="quiz-feedback" id="q1-fb"></div>
+
+  <div class="quiz-q">Q2. You have a complex chart below the fold. The best directive is…</div>
+  <div class="quiz-options" id="q2">
+    <div class="quiz-opt" onclick="answer('q2',this,false)">client:load</div>
+    <div class="quiz-opt" onclick="answer('q2',this,false)">client:idle</div>
+    <div class="quiz-opt" onclick="answer('q2',this,true)">client:visible</div>
+    <div class="quiz-opt" onclick="answer('q2',this,false)">client:only="svelte"</div>
+  </div>
+  <div class="quiz-feedback" id="q2-fb"></div>
+
+  <div class="quiz-q">Q3. What is the key difference between a client island and a server island?</div>
+  <div class="quiz-options" id="q3">
+    <div class="quiz-opt" onclick="answer('q3',this,false)">Client islands use React; server islands use Svelte</div>
+    <div class="quiz-opt" onclick="answer('q3',this,true)">Client islands ship JS and hydrate in the browser; server islands re-render on the server and stream HTML — no JS shipped</div>
+    <div class="quiz-opt" onclick="answer('q3',this,false)">Server islands are faster because they use WebAssembly</div>
+    <div class="quiz-opt" onclick="answer('q3',this,false)">They are the same thing — just different syntax</div>
+  </div>
+  <div class="quiz-feedback" id="q3-fb"></div>
+
+  <div class="quiz-q">Q4. You want to pass an event handler as a prop to your Svelte island. You should…</div>
+  <div class="quiz-options" id="q4">
+    <div class="quiz-opt" onclick="answer('q4',this,false)">Use client:load — functions work fine with that directive</div>
+    <div class="quiz-opt" onclick="answer('q4',this,true)">Redesign: functions can't be serialized across the server/client boundary — use a store or event system inside the island instead</div>
+    <div class="quiz-opt" onclick="answer('q4',this,false)">Wrap the function in JSON.stringify first</div>
+    <div class="quiz-opt" onclick="answer('q4',this,false)">Use client:only="svelte" to bypass the restriction</div>
+  </div>
+  <div class="quiz-feedback" id="q4-fb"></div>
+</div>
+
+<footer>
+  <p>Sources</p>
+  <ol>
+    <li><a href="https://docs.astro.build/en/concepts/islands/" target="_blank">Islands Architecture — Astro Docs</a></li>
+    <li><a href="https://docs.astro.build/en/guides/framework-components/" target="_blank">Front-end Frameworks — Astro Docs</a></li>
+    <li><a href="https://docs.astro.build/en/guides/integrations-guide/svelte/" target="_blank">@astrojs/svelte Integration — Astro Docs</a></li>
+    <li><a href="https://docs.astro.build/en/guides/server-islands/" target="_blank">Server Islands — Astro Docs</a></li>
+  </ol>
+</footer>
+
+<script>
+  const feedback = {
+    q1: { correct: "Correct — no directive = zero JS, static HTML only. Interactivity is always opt-in.", wrong: "Nope. Without a client: directive, Astro strips all JS and outputs static HTML." },
+    q2: { correct: "Correct — client:visible defers hydration until the component scrolls into view, saving the cost until it's actually needed.", wrong: "Think about when the user will actually see this component. There's a directive specifically designed for below-the-fold content." },
+    q3: { correct: "Exactly. Client islands = JS to browser. Server islands = HTML from server, streamed in. Server islands have no client-side JS cost.", wrong: "The distinction is where the rendering happens and whether JS is shipped to the browser." },
+    q4: { correct: "Correct — props must cross the server/client boundary as serialized data. Functions aren't serializable. Move logic inside the island or use a shared store.", wrong: "No directive changes this. Functions can't be serialized into HTML. The architecture requires island-internal state management." },
+  };
+
+  function answer(qid, el, correct) {
+    const container = document.getElementById(qid);
+    if (container.querySelector('.correct, .wrong')) return; // already answered
+    el.classList.add(correct ? 'correct' : 'wrong');
+    const fb = document.getElementById(qid + '-fb');
+    fb.textContent = correct ? '✓ ' + feedback[qid].correct : '✗ ' + feedback[qid].wrong;
+    fb.className = 'quiz-feedback ' + (correct ? 'correct' : 'wrong');
+  }
+</script>
+</body>
+</html>
