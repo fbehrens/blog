@@ -8,3 +8,11 @@ routes = [
 
 [assets]
 directory = "./dist"
+
+[env.dev]
+routes = [
+  { pattern = "dev.aufb.de", custom_domain = true },
+]
+
+[env.dev.assets]
+directory = "./dist"

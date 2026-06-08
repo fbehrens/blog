@@ -2,56 +2,44 @@
 title: "Setting up a staging environment"
 date: 2026-06-08
 tag: code
-description: "How Cloudflare Pages preview deployments give you a free staging environment with zero extra config."
+description: "Adding a dev.aufb.de staging environment to a Cloudflare Worker blog using wrangler environments."
 draft: false
 ---
 
-## The problem
+## The setup
 
-Before publishing a post I want to see it live — real fonts, real layout, real URLs — not just a local dev server. Drafts (`draft: true` in frontmatter) hide posts from production, but they also hide them from me.
+This blog runs as a **Cloudflare Worker with static assets** — not Cloudflare Pages. Custom domains (`aufb.de`, `www.aufb.de`) are wired up in `wrangler.toml` and visible in the Workers dashboard under Domains & Routes.
 
-## What Cloudflare Pages gives you for free
+## What I tried first
 
-Every branch push gets its own preview URL:
+Cloudflare Pages has branch preview URLs (`dev.<project>.pages.dev`) that auto-deploy on every push. That would have been free staging with zero config. But since this is a Worker, there's no branch concept — only preview deployments at `*-blog.fbehrens.workers.dev`, and you can't bind a custom domain to those.
 
+## Wrangler environments
+
+Workers support named environments in `wrangler.toml`. Adding an `[env.dev]` block creates a separate Worker (`blog-dev`) with its own routes:
+
+```toml
+[env.dev]
+routes = [
+  { pattern = "dev.aufb.de", custom_domain = true },
+]
+
+[env.dev.assets]
+directory = "./dist"
 ```
-https://<branch-name>.<project>.pages.dev
-```
 
-No extra config, no second project, no cost. The preview builds run the same pipeline as production.
-
-## Setup
-
-Create a `staging` branch and push it:
+Deploy it with:
 
 ```sh
-git checkout -b staging
-git push -u origin staging
+wrangler deploy --env dev
 ```
 
-From now on the workflow is:
-
-| Action | Where it appears |
-|---|---|
-| Push to `staging` | `staging.<project>.pages.dev` |
-| Push to `main` | `www.aufb.de` (production) |
-
-Draft posts are visible on the preview URL because the build runs identically — the `draft` filter only applies to what you choose to render, so if you want drafts visible on staging you can gate on `import.meta.env.CF_PAGES_BRANCH`.
-
-## Custom domain for staging (optional)
-
-If you want `staging.aufb.de` instead of the auto-generated URL, add a CNAME in Cloudflare DNS:
-
-```
-staging.aufb.de  CNAME  staging.<project>.pages.dev  (proxied)
-```
-
-Then add `staging.aufb.de` as a custom domain in Pages → your project → Custom domains.
+On first deploy, Cloudflare creates the CNAME `dev.aufb.de → blog-dev.fbehrens.workers.dev` automatically (because `custom_domain = true`).
 
 ## The workflow
 
 ```
-edit post → commit → push to staging → check staging.aufb.de → push to main → live
+edit → build → wrangler deploy --env dev → check dev.aufb.de → wrangler deploy → live
 ```
 
-One branch, no extra infrastructure.
+Production and dev are independent Workers. Pushing to GitHub only redeploys production — the dev environment is a manual deploy.
