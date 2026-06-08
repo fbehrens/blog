@@ -2,23 +2,28 @@
 interface Props {
   title: string;
   date: Date;
-  tag: string;
+  tags: string[];
   description: string;
   slug: string;
 }
-const { title, date, tag, description, slug } = Astro.props;
+const { title, date, tags, description, slug } = Astro.props;
 const formatted = date.toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
-<article class="py-6 border-b border-(--color-border) last:border-0">
-  <div class="flex items-center gap-3 mb-2">
-    <time class="text-sm text-(--color-muted)">{formatted}</time>
-    <a href={`/tag/${tag}`}
-      class="text-xs px-2 py-0.5 rounded-full bg-(--color-primary-light) text-(--color-primary) hover:bg-(--color-primary) hover:text-white transition-colors">
-      {tag}
+<article data-slug={slug} data-title={title} data-description={description} class="py-6 border-b border-(--color-border) last:border-0">
+  <div class="post-header">
+    <div class="flex items-center gap-3 mb-2">
+      <time class="text-sm text-(--color-muted)">{formatted}</time>
+      {tags.map(t => (
+        <a href={`/tag/${t}`}
+          class="text-xs px-2 py-0.5 rounded-full bg-(--color-primary-light) text-(--color-primary) hover:bg-(--color-primary) hover:text-white transition-colors">
+          {t}
+        </a>
+      ))}
+    </div>
+    <a href={`/posts/${slug}`} class="group">
+      <h2 class="font-serif text-xl font-semibold mb-1 group-hover:text-(--color-primary) transition-colors">{title}</h2>
+      <p class="text-(--color-muted) text-sm leading-relaxed line-clamp-3">{description}</p>
     </a>
   </div>
-  <a href={`/posts/${slug}`} class="group">
-    <h2 class="font-serif text-xl font-semibold mb-1 group-hover:text-(--color-primary) transition-colors">{title}</h2>
-    <p class="text-(--color-muted) text-sm leading-relaxed line-clamp-3">{description}</p>
-  </a>
+  <div class="post-body-container hidden mt-4"></div>
 </article>

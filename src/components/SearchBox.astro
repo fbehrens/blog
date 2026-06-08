@@ -1,0 +1,61 @@
+---
+// no props — operates on article[data-slug] elements already on the page
+---
+<div class="mb-6 flex items-center gap-2">
+  <input
+    id="post-search"
+    type="search"
+    placeholder="search"
+    class="flex-1 text-sm bg-transparent border border-(--color-border) rounded px-3 py-1.5 outline-none focus:border-(--color-primary) placeholder:text-(--color-muted) transition-colors"
+  />
+  <button
+    id="search-full-btn"
+    class="text-xs text-(--color-muted) hover:text-(--color-primary) transition-colors px-1 shrink-0"
+  >full</button>
+</div>
+
+<script>
+  const input = document.getElementById('post-search') as HTMLInputElement;
+  const fullBtn = document.getElementById('search-full-btn') as HTMLButtonElement;
+  const articles = Array.from(document.querySelectorAll('article[data-slug]')) as HTMLElement[];
+
+  function filter() {
+    const q = input.value.toLowerCase().trim();
+    for (const art of articles) {
+      const title = (art.dataset.title ?? '').toLowerCase();
+      const desc = (art.dataset.description ?? '').toLowerCase();
+      const body = (art.dataset.body ?? '').toLowerCase();
+      const visible = !q || title.includes(q) || desc.includes(q) || body.includes(q);
+      art.classList.toggle('hidden', !visible);
+    }
+  }
+
+  input.addEventListener('input', filter);
+
+  fullBtn.addEventListener('click', async () => {
+    fullBtn.textContent = '…';
+    fullBtn.disabled = true;
+
+    const visible = articles.filter(a => !a.classList.contains('hidden'));
+
+    try {
+      await Promise.all(visible.map(async art => {
+        const slug = art.dataset.slug!;
+        const res = await fetch(`/post-body/${slug}`);
+        const html = await res.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const container = art.querySelector('.post-body-container') as HTMLElement;
+        container.innerHTML = doc.body.innerHTML;
+        container.classList.remove('hidden');
+        art.dataset.body = container.textContent ?? '';
+        art.dataset.expanded = 'true';
+      }));
+
+      fullBtn.remove();
+      filter();
+    } catch {
+      fullBtn.textContent = 'full';
+      fullBtn.disabled = false;
+    }
+  });
+</script>

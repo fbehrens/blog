@@ -1,7 +1,8 @@
 ---
 title: "Building this blog with Claude"
 date: 2026-06-08
-tag: code
+tags:
+  - code
 description: "How this blog came to exist — a session with Claude Code where all decisions were made in a Q&A."
 draft: false
 ---

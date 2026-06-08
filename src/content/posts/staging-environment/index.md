@@ -1,7 +1,8 @@
 ---
 title: "Setting up a staging environment"
 date: 2026-06-08
-tag: code
+tags:
+  - code
 description: "Adding a dev.aufb.de staging environment to a Cloudflare Worker blog using wrangler environments."
 draft: false
 ---
