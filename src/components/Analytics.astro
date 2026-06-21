@@ -1,20 +1,13 @@
 ---
-const GA_ID = import.meta.env.PUBLIC_GA_ID;
+// Cloudflare Web Analytics — cookieless, privacy-first, no consent required.
+// Set PUBLIC_CF_BEACON_TOKEN (from the Cloudflare dashboard) to enable.
+const TOKEN = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
 ---
-{GA_ID && (
-  <script is:inline define:vars={{ GA_ID }}>
-    function loadGA() {
-      if (localStorage.getItem('ga_consent') !== 'true') return;
-      const s = document.createElement('script');
-      s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-      s.async = true;
-      document.head.appendChild(s);
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', GA_ID, { anonymize_ip: true });
-    }
-    loadGA();
-    window.addEventListener('ga-consent-granted', loadGA);
-  </script>
+{TOKEN && (
+  <script
+    is:inline
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon={JSON.stringify({ token: TOKEN })}
+  ></script>
 )}
