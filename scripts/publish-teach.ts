@@ -101,6 +101,16 @@ function injectBackLink(html: string, session: string, title: string): string {
 function escapeHtml(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
+// Lessons/reference HTML live in lessons/ (etc.) in the source and reference
+// siblings via `../`. Publishing flattens them into public/teach/<slug>/, so
+// those `../` paths must be rebased: assets/ stays a subdir, lesson & reference
+// HTML land at the session root, and the mission becomes the chromed landing.
+function rewriteLessonPaths(html: string, slug: string): string {
+  return html
+    .replace(/\.\.\/assets\//g, 'assets/')
+    .replace(/\.\.\/(?:lessons|explainers|reference)\//g, '')
+    .replace(/\.\.\/MISSION\.md/g, `/teach/${slug}/`);
+}
 
 // --- fs helpers ---
 function rmrf(p: string) { if (fs.existsSync(p)) fs.rmSync(p, { recursive: true, force: true }); }
@@ -217,7 +227,7 @@ function publishSession(slug: string): { lessons: number } {
 
   fs.mkdirSync(path.join(PUBLIC_TEACH, slug), { recursive: true });
   for (const l of lessons) {
-    const html = injectBackLink(fs.readFileSync(l.srcFile, 'utf8'), slug, title);
+    const html = injectBackLink(rewriteLessonPaths(fs.readFileSync(l.srcFile, 'utf8'), slug), slug, title);
     fs.writeFileSync(path.join(PUBLIC_TEACH, slug, path.basename(l.srcFile)), html);
   }
   const assetsDir = path.join(TEACH_DIR, slug, 'assets');

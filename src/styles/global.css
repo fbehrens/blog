@@ -26,3 +26,82 @@ article[data-expanded] .post-header {
   padding: 0.75rem;
   margin-bottom: 1rem;
 }
+
+/* Breadcrumb trail — minimal, sans, muted (mirrors the .crumbs in /c/teach lessons). */
+.crumbs {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+.crumbs a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+.crumbs a:hover {
+  color: var(--color-primary);
+}
+.crumbs .sep {
+  margin: 0 0.45rem;
+  opacity: 0.55;
+}
+
+/* Lesson-style accents for long-form posts (ported from the /c/teach lesson CSS:
+   Tufte-ish serif feel, rust-red accent, kicker label, italic lead, callouts). */
+.lesson {
+  --accent: #b4361f;
+  --accent-soft: #fbeee9;
+  --ok: #1f7a4d;
+  --ok-soft: #effbf3;
+}
+.lesson .kicker {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.lesson .lead {
+  color: var(--color-muted);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0.25rem 0 1.5rem;
+}
+.lesson blockquote {
+  border-left: 3px solid var(--accent);
+  font-style: normal;
+  color: oklch(30% 0 0);
+}
+.lesson .callout {
+  background: var(--accent-soft);
+  border: 1px solid #f0d8d0;
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.5rem 0;
+}
+.lesson .callout > :last-child {
+  margin-bottom: 0;
+}
+.lesson .callout .tag {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+.lesson .callout.ok {
+  background: var(--ok-soft);
+  border-color: #c8ebd6;
+}
+.lesson .callout.ok .tag {
+  color: var(--ok);
+}
+.lesson hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2.5rem 0;
+}

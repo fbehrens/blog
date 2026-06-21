@@ -1,0 +1,229 @@
+- generic [active] [ref=e1]:
+  - link "← Effect Services the opencode Way, Observed via OTEL" [ref=e2] [cursor=pointer]:
+    - /url: /teach/effect/
+  - generic [ref=e3]:
+    - text: Effect course · Lesson 1 of the
+    - link "mission" [ref=e4] [cursor=pointer]:
+      - /url: ../MISSION.md
+    - text: "· next:"
+    - link "0002 — compose an AppLayer & runtime" [ref=e5] [cursor=pointer]:
+      - /url: "#"
+    - text: "· ref:"
+    - link "opencode-shape cheat sheet" [ref=e6] [cursor=pointer]:
+      - /url: ../reference/effect-opencode-shape.html
+  - text: Lesson 01 · The keystone
+  - heading "From flat functions to a Service + Layer" [level=1] [ref=e7]
+  - paragraph [ref=e8]:
+    - text: Why every opencode module is a
+    - code [ref=e9]: Context.Service
+    - text: with a
+    - code [ref=e10]: Layer
+    - text: — and how to turn your
+    - code [ref=e11]: skills.ts
+    - text: into one.
+  - paragraph [ref=e12]:
+    - text: Your
+    - code [ref=e13]: msk
+    - text: already writes good Effect 4. But it's
+    - emphasis [ref=e14]: flat
+    - text: ":"
+    - code [ref=e15]: scanSkills
+    - text: ","
+    - code [ref=e16]: findSkillsDirs
+    - text: and friends are loose exported functions. opencode never does this. Every domain —
+    - code [ref=e17]: Skill
+    - text: ","
+    - code [ref=e18]: Discovery
+    - text: ","
+    - code [ref=e19]: Config
+    - text: ","
+    - code [ref=e20]: Storage
+    - text: — is packaged as a
+    - strong [ref=e21]: Service
+    - text: (an interface you depend on) plus a
+    - strong [ref=e22]: Layer
+    - text: (the recipe that builds it). This one move is the difference in "shape." Get it, and the rest of opencode reads easily.
+  - generic [ref=e23]:
+    - text: The single win for today Wrap your skills logic in a
+    - code [ref=e24]: Skills
+    - text: service with a
+    - code [ref=e25]: layer
+    - text: and a
+    - code [ref=e26]: defaultLayer
+    - text: ", exported as a namespace. One module, converted. That's it."
+  - heading "The three pieces" [level=2] [ref=e27]
+  - paragraph [ref=e28]:
+    - text: An opencode module is always these three things, in order (
+    - 'link "Effect docs: Services" [ref=e29] [cursor=pointer]':
+      - /url: https://effect.website/docs/requirements-management/services/
+    - text: "):"
+  - list [ref=e30]:
+    - listitem [ref=e31]:
+      - strong [ref=e32]: Interface
+      - text: — what the service offers. Plain TypeScript.
+    - listitem [ref=e33]:
+      - strong [ref=e34]: Service tag
+      - text: "— an identity Effect can look up:"
+      - code [ref=e35]: Context.Service
+      - text: .
+    - listitem [ref=e36]:
+      - strong [ref=e37]: Layer
+      - text: — how to build the implementation, declaring its own dependencies in its type.
+  - heading "What you have now" [level=2] [ref=e38]
+  - paragraph [ref=e39]:
+    - text: Straight from
+    - code [ref=e40]: msk/src/skills.ts
+    - text: "— dependency-on-the-call-site, no boundary:"
+  - code [ref=e42]: "// flat: a bare function. Its deps (FileSystem) leak into every caller's type. export const scanSkills = Effect.fn(\"scanSkills\")(function* (rootDir: string) { // ...uses FileSystem directly... return { entries, skillsDirs } })"
+  - heading "The same thing, opencode-shaped" [level=2] [ref=e43]
+  - paragraph [ref=e44]:
+    - text: Compare
+    - code [ref=e45]: opencode/src/skill/discovery.ts
+    - text: ". The pattern, applied to your skills module:"
+  - code [ref=e47]: "// src/skills.ts import { Context, Effect, Layer, FileSystem } from \"effect\" // 1. INTERFACE — the surface other code depends on. export interface Interface { readonly scan: (rootDir: string) => Effect.Effect<ScanResult, DuplicateSkillsError> } // 2. SERVICE TAG — the lookup key + the type \"I need Skills\". export class Skills extends Context.Service<Skills, Interface>()(\"msk/Skills\") {} // 3. LAYER — build it once; deps (FileSystem) live in the LAYER's type, not callers'. export const layer: Layer.Layer<Skills, never, FileSystem.FileSystem> = Layer.effect( Skills, Effect.gen(function* () { const fs = yield* FileSystem.FileSystem // acquire deps ONCE, here const scan = Effect.fn(\"Skills.scan\")(function* (rootDir: string) { // ...your existing logic, using the captured `fs`... return { entries, skillsDirs } }) return Skills.of({ scan }) // the implementation }), ) // defaultLayer = layer with its dependencies already satisfied → plug-and-play. export const defaultLayer = layer.pipe(Layer.provide(BunFileSystem.layer))"
+  - paragraph [ref=e48]:
+    - text: And the caller stops carrying
+    - code [ref=e49]: FileSystem
+    - text: in its type — it just asks for
+    - code [ref=e50]: Skills
+    - text: ":"
+  - code [ref=e52]: "const program = Effect.gen(function* () { const skills = yield* Skills // requirement: Skills, not FileSystem return yield* skills.scan(rootDir) })"
+  - heading "Why this is the keystone" [level=2] [ref=e53]
+  - generic [ref=e54]:
+    - generic [ref=e55]:
+      - heading "It unlocks the refactor" [level=3] [ref=e56]
+      - text: Once each module is a Service, you merge them with
+      - code [ref=e57]: Layer.mergeAll
+      - text: into one
+      - code [ref=e58]: AppLayer
+      - text: — exactly opencode's
+      - code [ref=e59]: app-runtime.ts
+      - text: . That's lesson 2.
+    - generic [ref=e60]:
+      - heading "It unlocks telemetry" [level=3] [ref=e61]
+      - text: Your
+      - code [ref=e62]: Effect.fn("Skills.scan")
+      - text: is
+      - emphasis [ref=e63]: already a span
+      - text: . Add a tracer Layer to the AppLayer and every call shows up in
+      - link "motel" [ref=e64] [cursor=pointer]:
+        - /url: https://github.com/kitlangton/motel
+      - text: . That's lesson 3 — almost free, because of the shape.
+  - heading "Check yourself" [level=2] [ref=e65]
+  - generic [ref=e66]:
+    - generic [ref=e67]:
+      - text: After the refactor, where does the
+      - code [ref=e68]: FileSystem
+      - text: requirement live?
+    - button "in every caller of scan, as before" [ref=e69]:
+      - text: in every caller of
+      - code [ref=e70]: scan
+      - text: ", as before"
+    - button "in the layer's type, not in callers" [ref=e71]:
+      - text: in the
+      - code [ref=e72]: layer
+      - text: "'s type, not in callers"
+    - button "in the Skills service tag itself" [ref=e73]:
+      - text: in the
+      - code [ref=e74]: Skills
+      - text: service tag itself
+    - button "nowhere — it gets erased at runtime" [ref=e75]
+  - generic [ref=e76]:
+    - generic [ref=e77]:
+      - text: What is
+      - code [ref=e78]: class Skills extends Context.Service<Skills, Interface>()("msk/Skills")
+      - text: "?"
+    - button "the service tag — identity + the type you yield*" [ref=e79]:
+      - text: the service tag — identity + the type you
+      - code [ref=e80]: yield*
+    - button "the layer that constructs the implementation" [ref=e81]
+    - button "the implementation object returned by scan" [ref=e82]:
+      - text: the implementation object returned by
+      - code [ref=e83]: scan
+    - button "a tagged error class for skill failures" [ref=e84]
+  - generic [ref=e85]:
+    - generic [ref=e86]:
+      - text: What's the difference between
+      - code [ref=e87]: layer
+      - text: and
+      - code [ref=e88]: defaultLayer
+      - text: "?"
+    - button "none — defaultLayer is just an alias" [ref=e89]:
+      - text: none —
+      - code [ref=e90]: defaultLayer
+      - text: is just an alias
+    - button "defaultLayer has fewer features, for tests" [ref=e91]:
+      - code [ref=e92]: defaultLayer
+      - text: has fewer features, for tests
+    - button "defaultLayer already has its dependencies provided" [ref=e93]:
+      - code [ref=e94]: defaultLayer
+      - text: already has its dependencies provided
+    - button "layer is async, defaultLayer is sync" [ref=e95]:
+      - code [ref=e96]: layer
+      - text: is async,
+      - code [ref=e97]: defaultLayer
+      - text: is sync
+  - generic [ref=e98]:
+    - text: Run it — there's a working sandbox A runnable version of everything above lives in
+    - code [ref=e99]: ../playground/
+    - text: (same stack as msk). The tag is named
+    - code [ref=e100]: Service
+    - text: and re-exported as a namespace — opencode's exact idiom — so callers write
+    - code [ref=e101]: Skills.Service
+    - text: /
+    - code [ref=e102]: Skills.defaultLayer
+    - text: .
+    - code [ref=e104]: "cd playground bun install # once bun start # scans ~/.claude/skills bun start <dir> # scan any directory bun run check # typecheck — passes clean"
+    - text: Open
+    - code [ref=e105]: playground/skills.ts
+    - text: beside this lesson and match each numbered comment to the three pieces above.
+  - generic [ref=e106]:
+    - text: Your task before lesson 2 In
+    - code [ref=e107]: msk/src/skills.ts
+    - text: ", add the"
+    - code [ref=e108]: Skills
+    - text: "service: interface →"
+    - code [ref=e109]: Context.Service
+    - text: tag →
+    - code [ref=e110]: layer
+    - text: (move the
+    - code [ref=e111]: fs
+    - text: acquisition up, keep your existing logic) →
+    - code [ref=e112]: defaultLayer
+    - text: . Don't wire it into
+    - code [ref=e113]: msk.ts
+    - text: yet — just get it to typecheck with
+    - code [ref=e114]: bun run check
+    - text: . Tell me when it compiles, or paste any type error and we'll work through it.
+  - heading "Read this (primary source)" [level=2] [ref=e115]
+  - paragraph [ref=e116]:
+    - text: "The clearest worked example is in your own clones:"
+    - link "opencode/src/skill/discovery.ts" [ref=e117] [cursor=pointer]:
+      - /url: https://github.com/sst/opencode/blob/dev/packages/opencode/src/skill/discovery.ts
+      - code [ref=e118]: opencode/src/skill/discovery.ts
+    - text: "(local:"
+    - code [ref=e119]: ~/c/open/opencode/packages/opencode/src/skill/discovery.ts
+    - text: ). Read it top-to-bottom once and find the three pieces —
+    - code [ref=e120]: interface Interface
+    - text: ","
+    - code [ref=e121]: class Service extends Context.Service
+    - text: ","
+    - code [ref=e122]: export const layer = Layer.effect(...)
+    - text: . It is the template for everything we'll do.
+  - generic [ref=e123]:
+    - text: Beta caveat Docs on effect.website show Effect 3 imports. You're on
+    - code [ref=e124]: effect@4
+    - text: beta — for ground truth on
+    - code [ref=e125]: Context.Service
+    - text: signatures, check
+    - code [ref=e126]: ~/c/open/effect-smol
+    - text: or just mirror opencode.
+  - separator [ref=e127]
+  - paragraph [ref=e128]:
+    - text: I'm your teacher for this course — ask me anything that's unclear, paste errors, or say "show me
+    - emphasis [ref=e129]: X
+    - text: in the opencode source" and I'll pull it up. When your
+    - code [ref=e130]: Skills
+    - text: service compiles, we move to
+    - strong [ref=e131]: "Lesson 2: merge services into one AppLayer + a ManagedRuntime"
+    - text: .

@@ -10,6 +10,7 @@ const posts = defineCollection({
     description: z.string(),
     image: image().optional(),
     draft: z.boolean().default(false),
+    lesson: z.boolean().default(false),
   }),
 });
 
