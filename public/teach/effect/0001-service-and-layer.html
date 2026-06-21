@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 1 · The opencode module shape: Service + Layer</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a href="/teach/effect/" style="position:fixed;top:0;left:0;z-index:99999;background:#111;color:#fff;font:14px/1.4 system-ui,-apple-system,sans-serif;padding:8px 14px;border-bottom-right-radius:8px;text-decoration:none;opacity:.85">← Effect Services the opencode Way, Observed via OTEL</a>
+
+<div class="crumbs">
+  Effect course · Lesson 1 of the
+  <a href="../MISSION.md">mission</a> ·
+  next: <a href="#">0002 — compose an AppLayer & runtime</a> ·
+  ref: <a href="../reference/effect-opencode-shape.html">opencode-shape cheat sheet</a>
+</div>
+
+<span class="kicker">Lesson 01 · The keystone</span>
+<h1>From flat functions to a Service + Layer</h1>
+<p class="sub">Why every opencode module is a <code>Context.Service</code> with a <code>Layer</code> — and how to turn your <code>skills.ts</code> into one.</p>
+
+<p>
+Your <code>msk</code> already writes good Effect 4. But it's <em>flat</em>: <code>scanSkills</code>,
+<code>findSkillsDirs</code> and friends are loose exported functions. opencode never does this. Every
+domain — <code>Skill</code>, <code>Discovery</code>, <code>Config</code>, <code>Storage</code> — is packaged
+as a <strong>Service</strong> (an interface you depend on) plus a <strong>Layer</strong> (the recipe that
+builds it). This one move is the difference in "shape." Get it, and the rest of opencode reads easily.
+</p>
+
+<div class="callout">
+  <span class="tag">The single win for today</span>
+  Wrap your skills logic in a <code>Skills</code> service with a <code>layer</code> and a
+  <code>defaultLayer</code>, exported as a namespace. One module, converted. That's it.
+</div>
+
+<h2>The three pieces</h2>
+<p>An opencode module is always these three things, in order
+(<a href="https://effect.website/docs/requirements-management/services/">Effect docs: Services</a>):</p>
+
+<ol>
+  <li><strong>Interface</strong> — what the service offers. Plain TypeScript.</li>
+  <li><strong>Service tag</strong> — an identity Effect can look up: <code>Context.Service</code>.</li>
+  <li><strong>Layer</strong> — how to build the implementation, declaring its own dependencies in its type.</li>
+</ol>
+
+<h2>What you have now</h2>
+<p>Straight from <code>msk/src/skills.ts</code> — dependency-on-the-call-site, no boundary:</p>
+<pre><code><span class="cmt">// flat: a bare function. Its deps (FileSystem) leak into every caller's type.</span>
+export const scanSkills = Effect.fn(<span class="tok">"scanSkills"</span>)(function* (rootDir: string) {
+  <span class="cmt">// ...uses FileSystem directly...</span>
+  return { entries, skillsDirs }
+})</code></pre>
+
+<h2>The same thing, opencode-shaped</h2>
+<p>
+Compare <code>opencode/src/skill/discovery.ts</code>. The pattern, applied to your skills module:
+</p>
+<pre><code><span class="cmt">// src/skills.ts</span>
+import { Context, Effect, Layer, FileSystem } from <span class="tok">"effect"</span>
+
+<span class="cmt">// 1. INTERFACE — the surface other code depends on.</span>
+export interface Interface {
+  readonly scan: (rootDir: string) =&gt; Effect.Effect&lt;ScanResult, DuplicateSkillsError&gt;
+}
+
+<span class="cmt">// 2. SERVICE TAG — the lookup key + the type "I need Skills".</span>
+export class Skills extends Context.Service&lt;Skills, Interface&gt;()(<span class="tok">"msk/Skills"</span>) {}
+
+<span class="cmt">// 3. LAYER — build it once; deps (FileSystem) live in the LAYER's type, not callers'.</span>
+export const layer: Layer.Layer&lt;Skills, never, FileSystem.FileSystem&gt; = Layer.effect(
+  Skills,
+  Effect.gen(function* () {
+    const fs = yield* FileSystem.FileSystem        <span class="cmt">// acquire deps ONCE, here</span>
+
+    const scan = Effect.fn(<span class="tok">"Skills.scan"</span>)(function* (rootDir: string) {
+      <span class="cmt">// ...your existing logic, using the captured `fs`...</span>
+      return { entries, skillsDirs }
+    })
+
+    return Skills.of({ scan })                      <span class="cmt">// the implementation</span>
+  }),
+)
+
+<span class="cmt">// defaultLayer = layer with its dependencies already satisfied → plug-and-play.</span>
+export const defaultLayer = layer.pipe(Layer.provide(BunFileSystem.layer))</code></pre>
+
+<p>And the caller stops carrying <code>FileSystem</code> in its type — it just asks for <code>Skills</code>:</p>
+<pre><code>const program = Effect.gen(function* () {
+  const skills = yield* Skills            <span class="cmt">// requirement: Skills, not FileSystem</span>
+  return yield* skills.scan(rootDir)
+})</code></pre>
+
+<h2>Why this is the keystone</h2>
+<div class="two-col">
+  <div>
+    <h3>It unlocks the refactor</h3>
+    Once each module is a Service, you merge them with <code>Layer.mergeAll</code> into one
+    <code>AppLayer</code> — exactly opencode's <code>app-runtime.ts</code>. That's lesson 2.
+  </div>
+  <div>
+    <h3>It unlocks telemetry</h3>
+    Your <code>Effect.fn("Skills.scan")</code> is <em>already a span</em>. Add a tracer Layer to
+    the AppLayer and every call shows up in <a href="https://github.com/kitlangton/motel">motel</a>.
+    That's lesson 3 — almost free, because of the shape.
+  </div>
+</div>
+
+<h2>Check yourself</h2>
+
+<div class="quiz" data-answer="1" data-fb="The Layer declares deps in its third type slot; the Service tag is only an identity, so callers depend on the tag, not on FileSystem.">
+  <div class="q">After the refactor, where does the <code>FileSystem</code> requirement live?</div>
+  <button>in every caller of <code>scan</code>, as before</button>
+  <button>in the <code>layer</code>'s type, not in callers</button>
+  <button>in the <code>Skills</code> service tag itself</button>
+  <button>nowhere — it gets erased at runtime</button>
+</div>
+
+<div class="quiz" data-answer="0" data-fb="Context.Service()(\"id\") makes the tag: both a unique runtime identity and the type you yield* to get the implementation.">
+  <div class="q">What is <code>class Skills extends Context.Service&lt;Skills, Interface&gt;()("msk/Skills")</code>?</div>
+  <button>the service tag — identity + the type you <code>yield*</code></button>
+  <button>the layer that constructs the implementation</button>
+  <button>the implementation object returned by <code>scan</code></button>
+  <button>a tagged error class for skill failures</button>
+</div>
+
+<div class="quiz" data-answer="2" data-fb="defaultLayer = layer + its deps provided. layer still needs FileSystem from outside; defaultLayer is ready to run on its own.">
+  <div class="q">What's the difference between <code>layer</code> and <code>defaultLayer</code>?</div>
+  <button>none — <code>defaultLayer</code> is just an alias</button>
+  <button><code>defaultLayer</code> has fewer features, for tests</button>
+  <button><code>defaultLayer</code> already has its dependencies provided</button>
+  <button><code>layer</code> is async, <code>defaultLayer</code> is sync</button>
+</div>
+
+<div class="callout">
+  <span class="tag">Run it — there's a working sandbox</span>
+  A runnable version of everything above lives in <code>../playground/</code> (same stack as msk).
+  The tag is named <code>Service</code> and re-exported as a namespace — opencode's exact idiom —
+  so callers write <code>Skills.Service</code> / <code>Skills.defaultLayer</code>.
+  <pre><code>cd playground
+bun install        <span class="cmt"># once</span>
+bun start          <span class="cmt"># scans ~/.claude/skills</span>
+bun start &lt;dir&gt;    <span class="cmt"># scan any directory</span>
+bun run check      <span class="cmt"># typecheck — passes clean</span></code></pre>
+  Open <code>playground/skills.ts</code> beside this lesson and match each numbered comment to the
+  three pieces above.
+</div>
+
+<div class="win">
+  <span class="tag">Your task before lesson 2</span>
+  In <code>msk/src/skills.ts</code>, add the <code>Skills</code> service: interface → <code>Context.Service</code> tag →
+  <code>layer</code> (move the <code>fs</code> acquisition up, keep your existing logic) → <code>defaultLayer</code>.
+  Don't wire it into <code>msk.ts</code> yet — just get it to typecheck with <code>bun run check</code>.
+  Tell me when it compiles, or paste any type error and we'll work through it.
+</div>
+
+<h2>Read this (primary source)</h2>
+<p>
+The clearest worked example is in your own clones:
+<a href="https://github.com/sst/opencode/blob/dev/packages/opencode/src/skill/discovery.ts"><code>opencode/src/skill/discovery.ts</code></a>
+(local: <code>~/c/open/opencode/packages/opencode/src/skill/discovery.ts</code>). Read it top-to-bottom once
+and find the three pieces — <code>interface Interface</code>, <code>class Service extends Context.Service</code>,
+<code>export const layer = Layer.effect(...)</code>. It is the template for everything we'll do.
+</p>
+
+<div class="callout">
+  <span class="tag">Beta caveat</span>
+  Docs on effect.website show Effect 3 imports. You're on <code>effect@4</code> beta — for ground truth on
+  <code>Context.Service</code> signatures, check <code>~/c/open/effect-smol</code> or just mirror opencode.
+</div>
+
+<hr>
+<p class="footer">
+  I'm your teacher for this course — ask me anything that's unclear, paste errors, or say
+  "show me <em>X</em> in the opencode source" and I'll pull it up. When your <code>Skills</code> service
+  compiles, we move to <strong>Lesson 2: merge services into one AppLayer + a ManagedRuntime</strong>.
+</p>
+
+<script src="../assets/quiz.js"></script>
+<script src="../assets/copy.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference · The opencode module shape (Effect 4)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a href="/teach/effect/" style="position:fixed;top:0;left:0;z-index:99999;background:#111;color:#fff;font:14px/1.4 system-ui,-apple-system,sans-serif;padding:8px 14px;border-bottom-right-radius:8px;text-decoration:none;opacity:.85">← Effect Services the opencode Way, Observed via OTEL</a>
+
+<div class="crumbs">Reference · compressed from the lessons · keep this open while you refactor</div>
+
+<span class="kicker">Cheat sheet</span>
+<h1>The opencode module shape</h1>
+<p class="sub">Every domain module in opencode follows this skeleton. Copy it.</p>
+
+<h2>The skeleton</h2>
+<pre><code>import { Context, Effect, Layer } from <span class="tok">"effect"</span>
+
+<span class="cmt">// 1 · INTERFACE — the public surface</span>
+export interface Interface {
+  readonly doThing: (arg: A) =&gt; Effect.Effect&lt;Out, Err&gt;
+}
+
+<span class="cmt">// 2 · TAG — identity + the type you yield*</span>
+export class Service extends Context.Service&lt;Service, Interface&gt;()(<span class="tok">"app/Name"</span>) {}
+
+<span class="cmt">// 3 · LAYER — build once; deps live in slot 3 of the type</span>
+export const layer: Layer.Layer&lt;Service, never, Dep&gt; = Layer.effect(
+  Service,
+  Effect.gen(function* () {
+    const dep = yield* Dep                       <span class="cmt">// acquire deps ONCE</span>
+    const doThing = Effect.fn(<span class="tok">"Name.doThing"</span>)(function* (arg) { <span class="cmt">/* ... */</span> })
+    return Service.of({ doThing })
+  }),
+)
+
+<span class="cmt">// 4 · DEFAULT LAYER — deps pre-provided, ready to run</span>
+export const defaultLayer = layer.pipe(Layer.provide(Dep.defaultLayer))</code></pre>
+
+<h2>The namespace export (index.ts)</h2>
+<pre><code><span class="cmt">// re-export the whole module under one name</span>
+export * as Discovery from <span class="tok">"./discovery"</span>
+<span class="cmt">// callers write:  Discovery.Service, Discovery.layer, Discovery.defaultLayer</span></code></pre>
+
+<h2>Compose them (the AppLayer — lesson 2)</h2>
+<pre><code>export const AppLayer = Layer.mergeAll(
+  Skills.defaultLayer,
+  Config.defaultLayer,
+  Storage.defaultLayer,
+)
+<span class="cmt">// then: const runtime = ManagedRuntime.make(AppLayer)</span></code></pre>
+
+<h2>Decoder ring</h2>
+<table>
+<tr><td><code>Context.Service&lt;Self, Iface&gt;()("id")</code></td><td>make a service tag (identity you <code>yield*</code>)</td></tr>
+<tr><td><code>Layer.effect(Tag, eff)</code></td><td>build an impl that needs effects/deps to construct</td></tr>
+<tr><td><code>Layer.succeed(Tag, value)</code></td><td>build an impl from a plain value (no deps)</td></tr>
+<tr><td><code>Layer.provide(L2)</code></td><td>satisfy a layer's deps using another layer</td></tr>
+<tr><td><code>Layer.mergeAll(...)</code></td><td>combine sibling services into one layer</td></tr>
+<tr><td><code>Effect.fn("Name.op")(gen)</code></td><td>named effect = <strong>a span</strong> (free telemetry)</td></tr>
+<tr><td><code>Service.of({...})</code></td><td>type-checked construction of the interface</td></tr>
+<tr><td><code>yield* Service</code></td><td>get the implementation inside an Effect.gen</td></tr>
+</table>
+
+<h2>Reading order in the opencode clone</h2>
+<ol>
+  <li><code>src/skill/discovery.ts</code> — the cleanest single-module example.</li>
+  <li><code>src/skill/index.ts</code> — namespace re-export + a bigger service.</li>
+  <li><code>src/effect/app-runtime.ts</code> — <code>Layer.mergeAll</code> of every service.</li>
+  <li><code>packages/core/src/observability/otlp.ts</code> — the OTLP tracer layer.</li>
+</ol>
+
+<style>
+table { border-collapse: collapse; width: 100%; font-size: .85rem; margin: 1rem 0; }
+td { border-bottom: 1px solid var(--rule); padding: .45rem .5rem; vertical-align: top; }
+td:first-child { white-space: nowrap; }
+</style>
+
+<hr>
+<p class="footer">Companion to <a href="../lessons/0001-service-and-layer.html">Lesson 1</a>. Ask your teacher to extend this sheet as new patterns come up.</p>
+</body>
+</html>
