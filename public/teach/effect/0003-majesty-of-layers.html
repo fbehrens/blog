@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 3 · The majesty of Layers — requirements are just parameters</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a href="/teach/effect/" style="position:fixed;top:0;left:0;z-index:99999;background:#111;color:#fff;font:14px/1.4 system-ui,-apple-system,sans-serif;padding:8px 14px;border-bottom-right-radius:8px;text-decoration:none;opacity:.85">← Effect Services the opencode Way, Observed via OTEL</a>
+
+<div class="crumbs">
+  Effect course · Lesson 3 ·
+  prev: <a href="0002-testing-a-service.html">0002 — testing a service</a> ·
+  next: <a href="0004-default-services.html">0004 — default services</a> ·
+  ref: <a href="effect-opencode-shape.html">opencode-shape</a>
+</div>
+
+<span class="kicker">Lesson 03 · The mental model</span>
+<h1>The majesty of Layers</h1>
+<p class="sub">Distilled from Kit Langton's <em>“Effect and the Near Inexpressible Majesty of Layers.”</em> He wrote opencode and motel — the two tools this whole course orbits. This is the canonical framing of what you've been practicing.</p>
+
+<p>
+In Lessons 1–2 you built a service and tested it by swapping its layer. This lesson gives you the
+<em>why</em> — one mental model that makes all of it click: <strong>a service requirement is just a
+function parameter, tracked in the type system.</strong> Once you see that, dependency injection and
+testing stop being magic.
+</p>
+
+<div class="callout">
+  <span class="tag">The single win for today</span>
+  Read <code>Effect&lt;A, E, R&gt;</code> fluently — especially the third slot <code>R</code> — and explain why
+  providing a <em>test layer</em> is strictly safer than <code>vi.mock</code>. Backed by a runnable
+  <code>coinFlip</code> in your playground.
+</div>
+
+<h2>First, the pain: what <code>vi.mock</code> can't see</h2>
+<p>The article opens with a surge-pricing function tested via <code>vi.mock</code>. Four footguns, all invisible to the type checker:</p>
+<pre><code><span class="cmt">// 1 · misspell the file → mock silently misses, real code runs</span>
+vi.mock(<span class="tok">"./future-flaps"</span>, () =&gt; ({ isEnabled: vi.fn() }))
+
+<span class="cmt">// 2 · misspell the function → you mock an imaginary export</span>
+vi.mock(<span class="tok">"./feature-flags"</span>, () =&gt; ({ isEnable: vi.fn() }))
+
+<span class="cmt">// 3 · wrong return type → type-checks anyway (mocks are untethered)</span>
+vi.mocked(isEnabled).mockResolvedValue(<span class="tok">"sure"</span>)   <span class="cmt">// boolean expected</span>
+
+<span class="cmt">// 4 · the dependency is INVISIBLE in the signature</span>
+export const getPrice = async (basePrice: number): Promise&lt;number&gt; <span class="cmt">// ...needs flags? who knows</span></code></pre>
+<blockquote>
+  “This isn't just a footgun — it's a foot armada.” The signature of <code>getPrice</code> gives no
+  indication whatsoever of its dependence on feature flags. Nothing at the type level apprises us of it.
+</blockquote>
+
+<h2>The fix: requirements live in the type</h2>
+<p>
+When you <code>yield*</code> a service, Effect adds it to the effect's <strong>third type parameter</strong>.
+The dependency becomes impossible to forget — the compiler won't run the program until you provide it.
+</p>
+<pre><code><span class="tok">Effect</span>.Effect&lt;string, never, <span class="tok">Random</span>&gt;
+<span class="cmt">//            ^^^^^^                 A — what it succeeds with</span>
+<span class="cmt">//                    ^^^^^          E — how it can fail</span>
+<span class="cmt">//                           ^^^^^^ R — what it REQUIRES (the services)</span></code></pre>
+
+<div class="callout">
+  <span class="tag">The one analogy to keep</span>
+  <strong>A requirement is a function parameter. Providing a layer is passing the argument.</strong>
+  <pre><code>const useConfig: (config: Config) =&gt; string       <span class="cmt">// requires Config</span>
+const useConfig: Effect&lt;string, never, Config&gt;    <span class="cmt">// ...same thing, third slot</span>
+
+useConfigFn(config)                               <span class="cmt">// arg eliminates the requirement</span>
+effect.pipe(Effect.provide(configLayer))          <span class="cmt">// layer eliminates the requirement</span></code></pre>
+  One difference: calling a function runs it now; <code>Effect.provide</code> just <em>satisfies</em> the
+  requirement — nothing runs until you execute the effect. (Think of a function closed over its arg in a thunk.)
+</div>
+
+<h2>Tag &amp; Layer, in two breaths</h2>
+<div class="two-col">
+  <div>
+    <h3>Tag = effectful interface</h3>
+    The service's name + shape, no implementation. “What”, never “how”.
+  </div>
+  <div>
+    <h3>Layer = effectful constructor</h3>
+    Builds the implementation. <code>Layer.succeed</code> for a ready value;
+    <code>Layer.effect</code> when construction itself needs other services.
+  </div>
+</div>
+
+<h2>The runnable example: <code>coinFlip</code></h2>
+<p>One interface, <em>two</em> implementations — a real one and a fixed one for tests. No mocking anywhere.</p>
+<pre><code>export class Random extends Context.Service&lt;Random, {
+  readonly nextNumber: Effect.Effect&lt;number&gt;
+}&gt;()(<span class="tok">"playground/Random"</span>) {}
+
+export const randomLayer = Layer.succeed(Random, {
+  nextNumber: Effect.sync(() =&gt; Math.random()),
+})
+export const fixedRandomLayer = (n: number) =&gt;
+  Layer.succeed(Random, { nextNumber: Effect.succeed(n) })
+
+export const coinFlip: Effect.Effect&lt;string, never, Random&gt; = Effect.gen(function* () {
+  const random = yield* Random            <span class="cmt">// ← this adds Random to the R slot</span>
+  const n = yield* random.nextNumber
+  return n &gt; 0.5 ? <span class="tok">"heads"</span> : <span class="tok">"tails"</span>
+})</code></pre>
+<p>Testing is just providing the fixed layer — deterministic, type-safe, four lines:</p>
+<pre><code>const flipWith = (n: number) =&gt;
+  Effect.runPromise(coinFlip.pipe(Effect.provide(fixedRandomLayer(n))))
+
+expect(await flipWith(1)).toBe(<span class="tok">"heads"</span>)   <span class="cmt">// 1 &gt; 0.5</span>
+expect(await flipWith(0)).toBe(<span class="tok">"tails"</span>)</code></pre>
+
+<div class="win">
+  <span class="tag">Run it — it's in your playground</span>
+  <pre><code>cd playground
+bun test            <span class="cmt"># 5 pass — coinFlip + skills, no mocks, no real disk/RNG</span>
+bun run check       <span class="cmt"># clean</span></code></pre>
+  Then <strong>prove the safety claim yourself</strong>: open <code>coinflip.test.ts</code>, delete
+  <code>.pipe(Effect.provide(fixedRandomLayer(n)))</code>, and watch <code>bun run check</code> fail with
+  <em>“Missing 'Random' in the expected Effect context.”</em> The forgotten dependency is a
+  <em>compile error</em>, not a 2 a.m. production page.
+</div>
+
+<div class="callout">
+  <span class="tag">Effect 3 → Effect 4 (your stack)</span>
+  The article is written in Effect 3. Two mechanical swaps and everything else is identical:
+  <pre><code><span class="cmt">// tag</span>
+Context.Tag(<span class="tok">"Random"</span>)&lt;Random, Shape&gt;()        <span class="cmt">// 3.x</span>
+Context.Service&lt;Random, Shape&gt;()(<span class="tok">"Random"</span>)      <span class="cmt">// 4.x  ← you use this</span>
+
+<span class="cmt">// traced fn — 4.x wants a name (and that name becomes a span — see telemetry lesson)</span>
+Effect.fn(function* () { … })                  <span class="cmt">// 3.x</span>
+Effect.fn(<span class="tok">"Pricing.getPrice"</span>)(function* () { … }) <span class="cmt">// 4.x</span></code></pre>
+</div>
+
+<h2>Under the hood (one paragraph)</h2>
+<p>
+The runtime threads an ambient <code>Context</code> — basically a <code>Map&lt;string, any&gt;</code> — through every
+effect. The tag's string (<code>"playground/Random"</code>) is the map key. <code>yield* Random</code> just looks up
+that key; a layer just writes to it. It sounds unsafe, but it's <em>correct by construction</em>: yielding a tag
+adds its type to <code>R</code>, providing a layer removes it, and the layer constructors are constrained to match
+the tag's interface. If your program type-checks, every lookup is guaranteed to hit, with the right type.
+</p>
+
+<h2>Check yourself</h2>
+
+<div class="quiz" data-answer="2" data-fb="The R (third) slot lists required services. yield*-ing a tag introduces a requirement there; Effect.provide eliminates it.">
+  <div class="q">In <code>Effect&lt;A, E, R&gt;</code>, what is <code>R</code>?</div>
+  <button>the return value of the effect</button>
+  <button>the recovery handler for errors</button>
+  <button>the services the effect requires</button>
+  <button>the runtime it executes on</button>
+</div>
+
+<div class="quiz" data-answer="0" data-fb="Tests provide a real, type-checked alternate implementation. A renamed file or mistyped method is a compile error, not a silent miss.">
+  <div class="q">Why is providing a test layer safer than <code>vi.mock("./file")</code>?</div>
+  <button>it's a real implementation the type checker verifies</button>
+  <button>it runs faster than a mocked function</button>
+  <button>it automatically resets between tests</button>
+  <button>it doesn't need an import statement</button>
+</div>
+
+<div class="quiz" data-answer="1" data-fb="Layer.effect is for when building the implementation itself needs to yield* another service (e.g. pricingLayer needs FeatureFlags). Layer.succeed takes a ready value.">
+  <div class="q">When do you reach for <code>Layer.effect</code> instead of <code>Layer.succeed</code>?</div>
+  <button>when the service has more than one method</button>
+  <button>when constructing it requires another service</button>
+  <button>when the service can fail at runtime</button>
+  <button>when you want it shared across tests</button>
+</div>
+
+<h2>Read / watch this (primary source)</h2>
+<p>
+The full article is the best companion to this lesson — Kit's prose is half the fun:
+<a href="https://effect.institute">Effect Institute</a> (chapters 1–2 cover <code>Context.Tag</code>, <code>Layer</code>,
+and services from scratch). Author of <a href="https://github.com/sst/opencode">opencode</a> and
+<a href="https://github.com/kitlangton/motel">motel</a> — i.e. exactly the code shape and telemetry tool
+this course is steering you toward.
+</p>
+
+<hr>
+<p class="footer">
+  Ask me to walk through the surge-pricing <code>Pricing → FeatureFlags</code> example in Effect-4 form if you
+  want the “layer depends on a layer” case made runnable. Otherwise, next stop is the one this article keeps
+  hinting at: <strong>motel + OTEL — point a tracer at your <code>Effect.fn</code> spans and watch them.</strong>
+</p>
+
+<script src="assets/quiz.js"></script>
+<script src="assets/copy.js"></script>
+</body>
+</html>

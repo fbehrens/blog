@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Referenz — Fahrradtickets im Rheinland</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  /* Entscheidungsbaum — nur hier gebraucht, daher lokal. */
+  .tree { max-width: 38rem; margin: 1.5rem 0; }
+  .node {
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--ink);
+    border-radius: 3px;
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 0.5rem;
+    background: #fff;
+  }
+  .node .ask { border: 0; padding: 0; margin: 0; font-size: 1rem; color: var(--ink); font-weight: 600; }
+  .node .out { font-size: 0.9rem; color: var(--ink-soft); margin: 0.35rem 0 0; }
+  .node.result { border-left-color: var(--nrw); background: #f4f8f5; }
+  .node.result.free { border-left-color: var(--rlp); background: #f1f5f9; }
+  .price { font-family: "SF Mono", ui-monospace, Menlo, monospace; font-weight: 600; color: var(--accent); }
+  .indent-1 { margin-left: 1.4rem; }
+  .indent-2 { margin-left: 2.8rem; }
+</style>
+</head>
+<body>
+<a href="/teach/oeffi/" style="position:fixed;top:0;left:0;z-index:99999;background:#111;color:#fff;font:14px/1.4 system-ui,-apple-system,sans-serif;padding:8px 14px;border-bottom-right-radius:8px;text-decoration:none;opacity:.85">← Radtouren mit Bahnanreise im Rheinland</a>
+
+<p class="eyebrow">Referenz · Stand 3. August 2026</p>
+<h1>Fahrradtickets im Rheinland</h1>
+<p class="subtitle">Eine Seite. Ausdrucken, falten, in die Lenkertasche.
+Gehört zu <a href="0001-welches-fahrradticket.html">Lektion 1</a>.</p>
+
+<h2>Grundsatz</h2>
+
+<p class="callout">
+Das Deutschlandticket enthält <strong>nie</strong> ein Fahrrad.
+Fahrradtickets sind <strong>Gebietspauschalen für 24 Stunden</strong>, keine
+Streckenfahrkarten. Frage also nicht "wohin?", sondern "durch welches Gebiet?".
+</p>
+
+<h2>Entscheidung</h2>
+
+<div class="tree">
+
+  <div class="node">
+    <p class="ask">1 · Berührt die Fahrt Rheinland-Pfalz?</p>
+    <p class="out">Grenze rechtsrheinisch hinter Bad Honnef · linksrheinisch hinter Bonn-Mehlem</p>
+  </div>
+
+  <div class="node result free indent-1">
+    <p class="ask">Ja → RLP-Abschnitt: <span class="price">0,00 €</span></p>
+    <p class="out">Werktags <strong>ab 9:00 Uhr</strong>, Sa/So/Feiertag ganztags.
+    Vor 9:00 Uhr werktags kostenpflichtig.<br>
+    Für den NRW-Abschnitt derselben Fahrt trotzdem ein NRW-Ticket lösen (siehe 2).</p>
+  </div>
+
+  <div class="node indent-1">
+    <p class="ask">2 · Bleibt die Fahrt ganz im Rheinlandnetz?</p>
+    <p class="out">Köln · Bonn · Siegburg · Hennef · Euskirchen · Bergisch Gladbach · Bergheim · Düren · Aachen</p>
+  </div>
+
+  <div class="node result indent-2">
+    <p class="ask">Ja → 24hTicket Fahrrad <span class="price">4,50 €</span></p>
+    <p class="out">Rheinlandtarif, gültig im gesamten Rheinlandnetz, 24 Stunden, beliebig viele Fahrten.</p>
+  </div>
+
+  <div class="node result indent-2">
+    <p class="ask">Nein → 24hFahrradTicket NRW <span class="price">6,30 €</span></p>
+    <p class="out">Gilt in ganz NRW, 24 Stunden, kombinierbar mit jedem NRW-Ticket
+    und dem Deutschlandticket. <strong>Im Zweifel immer dieses.</strong></p>
+  </div>
+
+  <div class="node indent-1">
+    <p class="ask">3 · Mehr als sieben Radtouren pro Monat?</p>
+    <p class="out">47,80 € ÷ 6,30 € ≈ 7,6</p>
+  </div>
+
+  <div class="node result indent-2">
+    <p class="ask">Ja → NRWupgradeFahrradMonat <span class="price">47,80 €/Monat</span></p>
+    <p class="out">Nur zusätzlich zum Deutschlandticket oder einem NRW-Abo buchbar.
+    Monatlich kündbar bis zum 10.</p>
+  </div>
+
+</div>
+
+<h2>Die drei Regime auf einen Blick</h2>
+
+<table>
+<thead>
+<tr><th>Gebiet</th><th>Produkt</th><th>Preis</th><th>Geltung</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td><span class="tag tag-nrw">NRW</span> Rheinlandnetz</td>
+  <td>24hTicket Fahrrad</td>
+  <td class="price">4,50 €</td>
+  <td>24 h, ganzes Rheinlandnetz</td>
+</tr>
+<tr>
+  <td><span class="tag tag-nrw">NRW</span> landesweit</td>
+  <td>24hFahrradTicket NRW</td>
+  <td class="price">6,30 €</td>
+  <td>24 h, ganz NRW</td>
+</tr>
+<tr>
+  <td><span class="tag tag-nrw">NRW</span> landesweit</td>
+  <td>NRWupgradeFahrradMonat</td>
+  <td class="price">47,80 €</td>
+  <td>Kalendermonat, nur als Zusatz zum Abo</td>
+</tr>
+<tr>
+  <td><span class="tag tag-rlp">RLP</span> VRM / RNN</td>
+  <td>—</td>
+  <td class="price">0,00 €</td>
+  <td>Mo–Fr ab 9 Uhr, Sa/So/Feiertag ganztags</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Regeln unabhängig vom Ticket</h2>
+
+<ul>
+<li><strong>Kein Beförderungsanspruch.</strong> Volles Radabteil = kein Platz,
+auch mit gültigem Ticket.</li>
+<li><strong>Vorrang:</strong> Rollstuhl und Kinderwagen vor Fahrrad.</li>
+<li><strong>Erlaubt</strong> im SPNV in den markierten Mehrzweckbereichen:
+Fahrrad, E-Bike, Pedelec, Tandem, Liegerad, Dreirad — nach Platz.</li>
+<li><strong>Nicht erlaubt</strong> in Bus und Stadtbahn: Tandem, Liegerad,
+Dreirad (Ausnahme: Menschen mit Behinderung).</li>
+<li><strong>Faltrad</strong> zusammengefaltet = Gepäck, kein Ticket nötig.</li>
+</ul>
+
+<h2>Wortschatz</h2>
+
+<table>
+<thead><tr><th>Begriff</th><th>Bedeutung</th></tr></thead>
+<tbody>
+<tr><td><strong>Rheinlandtarif</strong></td><td>Seit 1.6.2026 der gemeinsame Tarif von VRS und AVV.</td></tr>
+<tr><td><strong>Rheinlandnetz</strong></td><td>Das Gebiet, in dem der Rheinlandtarif gilt.</td></tr>
+<tr><td><strong>NRW-Tarif</strong></td><td>Der Dachtarif über allen NRW-Verbünden, für verbundübergreifende Fahrten.</td></tr>
+<tr><td><strong>VRM / RNN</strong></td><td>Die Verbünde auf der rheinland-pfälzischen Seite (Rhein-Mosel, Rhein-Nahe).</td></tr>
+<tr><td><strong>SPNV</strong></td><td>Schienenpersonennahverkehr — RE, RB, S-Bahn. Nicht Stadtbahn, nicht Bus.</td></tr>
+<tr><td><strong>SEV</strong></td><td>Schienenersatzverkehr — Busse statt Zügen bei Baustellen. Radmitnahme meist stark eingeschränkt.</td></tr>
+</tbody>
+</table>
+
+<div class="footer">
+Quellen:
+<a href="https://www.gorheinland.com/rheinlandtarif">go.Rheinland — Rheinlandtarif</a> ·
+<a href="https://www.vrr.de/de/tickets-tarife/ticketuebersicht/ticket/nrw/fahrradtagesticket-nrw/">VRR — 24hFahrradTicket NRW</a> ·
+<a href="https://infoportal.mobil.nrw/nrw-tarif/nrw-tarif-von-a-z/fahrradmitnahme-1.html">mobil.nrw — Fahrradmitnahme</a> ·
+<a href="https://www.mittelrheinbahn.de/de/tickets/informationen-rund-ums-ticket/reisen-mit-dem-fahrrad">MittelrheinBahn — Reisen mit dem Fahrrad</a>
+<br>Preise geprüft am 3. August 2026.
+</div>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 5 · The Config service — settings as a layer</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a href="/teach/effect/" style="position:fixed;top:0;left:0;z-index:99999;background:#111;color:#fff;font:14px/1.4 system-ui,-apple-system,sans-serif;padding:8px 14px;border-bottom-right-radius:8px;text-decoration:none;opacity:.85">← Effect Services the opencode Way, Observed via OTEL</a>
+
+<div class="crumbs">
+  Effect course · Lesson 5 ·
+  prev: <a href="0004-default-services.html">0004 — default services</a> ·
+  ref: <a href="effect-opencode-shape.html">opencode-shape</a> ·
+  code: <code>packages/skillman/src/config.ts</code>
+</div>
+
+<span class="kicker">Lesson 05 · skillman, leaf 1 of 4</span>
+<h1>The Config service</h1>
+<p class="sub">First real service in your skill-manager. It owns one question — <em>where is <code>skills_root</code>?</em> — and answers it so completely that no other module ever learns the answer came from an env var. Built on the <code>ConfigProvider</code> default service from Lesson 4, TDD'd, with a one-line test seam.</p>
+
+<div class="callout">
+  <span class="tag">The single win for today</span>
+  Read config <strong>once, at layer-build time</strong>, fail the whole app if it's missing, and test both the
+  happy path and the fail-fast path <em>without touching <code>process.env</code></em> — by swapping the
+  <code>ConfigProvider</code> underneath.
+</div>
+
+<h2>Two layers of "Config" — don't conflate them</h2>
+<table class="t">
+  <tr><th></th><th><code>effect</code>'s <code>Config</code> + <code>ConfigProvider</code></th><th>your <code>skillman/Config</code> service</th></tr>
+  <tr><td>what</td><td>the toolkit: <code>Config.string("X")</code> describes <em>reading</em> a value</td><td>your domain service: "skillman's settings"</td></tr>
+  <tr><td>where from</td><td>the ambient <code>ConfigProvider</code> default service (Lesson 4)</td><td>built on top, in one place</td></tr>
+  <tr><td>callers see</td><td>—</td><td><code>yield* Config.Service</code> then <code>config.skillsRoot</code></td></tr>
+</table>
+<p>The toolkit reads; your service <em>packages</em> the reads into a named thing the rest of the app depends on.</p>
+
+<h2>The reading primitive</h2>
+<p>
+<code>Config.string("SKILLS_ROOT")</code> returns a <code>Config&lt;string&gt;</code> — which <em>is</em> an
+<code>Effect&lt;string, ConfigError, never&gt;</code>. <code>R</code> is <code>never</code> because it reads from the
+<strong>ambient <code>ConfigProvider</code></strong>, a default service (Lesson 4) — real <code>process.env</code> in
+production. It fails with <code>ConfigError</code>, and the error <em>names the missing key</em> — remember that, the
+fail-fast test relies on it.
+</p>
+<pre><code><span class="cmt">// effect/Config.d.ts</span>
+<span class="tok">declare function</span> string(name?: string): Config&lt;string&gt;
+<span class="tok">declare function</span> int(name?: string): Config&lt;number&gt;
+<span class="tok">declare function</span> boolean(name?: string): Config&lt;boolean&gt;
+<span class="cmt">// + withDefault, option, nested, orElse, map, all — for when one env var isn't enough</span></code></pre>
+
+<h2>The service (your real code)</h2>
+<pre><code><span class="cmt">// packages/skillman/src/config.ts</span>
+<span class="tok">import</span> { Config <span class="tok">as</span> EffectConfig, Context, Effect, Layer } <span class="tok">from</span> <span class="tok">"effect"</span>
+
+<span class="tok">export interface</span> Interface {
+  <span class="tok">readonly</span> skillsRoot: Effect.Effect&lt;string&gt;
+}
+
+<span class="tok">export class</span> Service <span class="tok">extends</span> Context.Service&lt;Service, Interface&gt;()(<span class="tok">"skillman/Config"</span>) {}
+
+<span class="cmt">// Resolve the env var ONCE at layer construction. If SKILLS_ROOT is missing,</span>
+<span class="cmt">// the layer BUILD fails (ConfigError) — the app refuses to start mis-configured.</span>
+<span class="tok">export const</span> layer: Layer.Layer&lt;Service, EffectConfig.ConfigError&gt; = Layer.effect(
+  Service,
+  Effect.gen(<span class="tok">function*</span> () {
+    <span class="tok">const</span> skillsRoot = <span class="tok">yield*</span> EffectConfig.string(<span class="tok">"SKILLS_ROOT"</span>)
+    <span class="tok">return</span> Service.of({ skillsRoot: Effect.succeed(skillsRoot) })
+  }),
+)</code></pre>
+
+<div class="callout">
+  <span class="tag">Two design decisions worth pausing on</span>
+  <strong>1 · Read at build time, not call time.</strong> The <code>yield* Config.string</code> runs <em>once</em> when the
+  layer is constructed. The interface exposes <code>skillsRoot</code> as an already-resolved <code>Effect.succeed</code>,
+  not a fresh read. So a misconfigured app dies at startup, not on the 500th request.<br><br>
+  <strong>2 · The <code>ConfigError</code> is in the layer's error channel</strong>
+  (<code>Layer.Layer&lt;Service, ConfigError&gt;</code>), not buried inside a method. Building the app surfaces the
+  failure; the type even tells you it can happen.
+</div>
+
+<h2>The test seam: swap the provider, not the env</h2>
+<p>
+Here's the Lesson-4 payoff. <code>ConfigProvider.fromEnv({ env })</code> builds a provider backed by a
+<strong>fixed map</strong> instead of real <code>process.env</code>. <code>ConfigProvider.layer(provider)</code> installs
+it. Provide it <em>under</em> your <code>Config.layer</code> and the whole stack reads from your fake — no global
+mutation, no <code>vi.mock</code>, no leakage between tests.
+</p>
+<pre><code><span class="cmt">// packages/skillman/src/config.test.ts</span>
+<span class="tok">import</span> { describe, expect, it } <span class="tok">from</span> <span class="tok">"@effect/vitest"</span>
+<span class="tok">import</span> { ConfigProvider, Effect, Layer } <span class="tok">from</span> <span class="tok">"effect"</span>
+<span class="tok">import</span> * <span class="tok">as</span> Config <span class="tok">from</span> <span class="tok">"./config.ts"</span>
+
+<span class="cmt">// Config.layer, fed a fake env map underneath — same shape as a defaultLayer.</span>
+<span class="tok">const</span> configWith = (env: Record&lt;string, string&gt;) =&gt;
+  Config.layer.pipe(Layer.provide(ConfigProvider.layer(ConfigProvider.fromEnv({ env }))))
+
+describe(<span class="tok">"Config"</span>, () =&gt; {
+  it.effect(<span class="tok">"reads skillsRoot from SKILLS_ROOT"</span>, () =&gt;
+    Effect.gen(<span class="tok">function*</span> () {
+      <span class="tok">const</span> config = <span class="tok">yield*</span> Config.Service
+      expect(<span class="tok">yield*</span> config.skillsRoot).toBe(<span class="tok">"/home/me/skills"</span>)
+    }).pipe(Effect.provide(configWith({ SKILLS_ROOT: <span class="tok">"/home/me/skills"</span> }))))
+
+  it.effect(<span class="tok">"fails when SKILLS_ROOT is missing"</span>, () =&gt;
+    Effect.gen(<span class="tok">function*</span> () {
+      <span class="cmt">// Effect.flip moves the error into the success channel so we can assert on it.</span>
+      <span class="tok">const</span> error = <span class="tok">yield*</span> Effect.gen(<span class="tok">function*</span> () {
+        <span class="tok">const</span> config = <span class="tok">yield*</span> Config.Service
+        <span class="tok">return</span> <span class="tok">yield*</span> config.skillsRoot
+      }).pipe(Effect.provide(configWith({})), Effect.flip)
+      expect(String(error)).toMatch(/SKILLS_ROOT/)
+    }))
+})</code></pre>
+
+<div class="callout">
+  <span class="tag">An honest TDD note</span>
+  The fail-fast test passed the moment it was written — <code>Config.string</code> <em>already</em> errors with the key
+  name, so this test didn't <em>drive</em> code, it <strong>locks the contract</strong>. That's a legitimate use of a
+  test: pin behaviour you depend on (the error mentions the key) so a future refactor can't silently break it. Just be
+  honest with yourself about which tests are tracer-bullets and which are guardrails.
+</div>
+
+<h2>Why <code>fromEnv({env})</code> beats <code>vi.mock</code> here</h2>
+<div class="two-col">
+  <div>
+    <h3>vi.mock(process.env)</h3>
+    Global mutation. Tests leak into each other, order matters, and the mock is untethered from the real type —
+    exactly the "foot armada" from Lesson 3.
+  </div>
+  <div>
+    <h3>ConfigProvider.fromEnv({env})</h3>
+    A value you pass in. Each test builds its own provider, scoped to its own layer. No globals, no reset hooks,
+    type-checked end to end.
+  </div>
+</div>
+
+<div class="win">
+  <span class="tag">Run it</span>
+  <pre><code>bun test packages/skillman   <span class="cmt"># 2 pass — happy path + fail-fast, no real env touched</span>
+bun run check                <span class="cmt"># clean — ConfigError shows in the layer's type</span></code></pre>
+  Then poke it: change <code>"SKILLS_ROOT"</code> in <code>config.ts</code> to <code>"SKILLS_DIR"</code> and watch the
+  <em>happy-path</em> test fail with a <code>ConfigError</code> naming <code>SKILLS_DIR</code> — the read and the test
+  env drifted apart, and the failure tells you exactly which key.
+</div>
+
+<h2>Where this slots in</h2>
+<p>
+<code>Config</code> is leaf 1 of skillman's four services. It depends on nothing but the <code>ConfigProvider</code>
+default, so it sits at the bottom. Next come <strong>Project</strong> (walk <code>cwd</code> up to <code>.git</code>,
+expose the project's skills dir — needs <code>FileSystem</code> + <code>Path</code>), then <strong>Skills</strong>
+(the domain heart: available / linked / link / copy — needs Config + Project), then a thin <strong>Cli</strong>.
+Each is a swappable layer; each gets the same <code>fromEnv</code>-style test seam in its own dimension.
+</p>
+
+<h2>Check yourself</h2>
+
+<div class="quiz" data-answer="2" data-fb="The yield* Config.string runs once when Layer.effect builds the service, so a missing var fails at startup — not on some later request.">
+  <div class="q">When does <code>Config.string("SKILLS_ROOT")</code> actually read the env var?</div>
+  <button>every time a caller reads config.skillsRoot</button>
+  <button>when the process first imports config.ts</button>
+  <button>once, when Config.layer is built</button>
+  <button>lazily, only if no default is set</button>
+</div>
+
+<div class="quiz" data-answer="0" data-fb="fromEnv({env}) builds a provider over a fixed map; provided under Config.layer, the whole stack reads the fake — no process.env, no globals.">
+  <div class="q">How do the tests avoid touching real <code>process.env</code>?</div>
+  <button>provide a ConfigProvider.fromEnv over a fixed map, under Config.layer</button>
+  <button>they set process.env in a beforeEach and clear it after</button>
+  <button>vi.mock the "effect" module's Config.string</button>
+  <button>they don't — the tests read the developer's real env</button>
+</div>
+
+<div class="quiz" data-answer="1" data-fb="Effect.flip swaps the error and success channels, so the ConfigError becomes the success value you can assert on with expect.">
+  <div class="q">What does <code>Effect.flip</code> do in the fail-fast test?</div>
+  <button>retries the effect until it succeeds</button>
+  <button>moves the error into the success channel so you can assert on it</button>
+  <button>converts the ConfigError into a thrown exception</button>
+  <button>provides a default value when config is missing</button>
+</div>
+
+<hr>
+<p class="footer">
+  Next leaf: <strong>Project</strong> — TDD a service that finds the project root by walking up to <code>.git</code> and
+  exposes its skills dir. That one finally pulls in <code>FileSystem</code> + <code>Path</code>, so we'll fake them the
+  same way we faked the env here.
+</p>
+
+<script src="assets/quiz.js"></script>
+<script src="assets/copy.js"></script>
+</body>
+</html>

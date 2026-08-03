@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference · Effect language service (LSP) in VSCode</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a href="/teach/effect/" style="position:fixed;top:0;left:0;z-index:99999;background:#111;color:#fff;font:14px/1.4 system-ui,-apple-system,sans-serif;padding:8px 14px;border-bottom-right-radius:8px;text-decoration:none;opacity:.85">← Effect Services the opencode Way, Observed via OTEL</a>
+
+<div class="crumbs">Reference · the Effect LSP — editor + CLI diagnostics</div>
+
+<span class="kicker">Cheat sheet</span>
+<h1>Effect language service</h1>
+<p class="sub"><code>@effect/language-service</code> — a TypeScript plugin that adds Effect-aware diagnostics, refactors, and type display.</p>
+
+<h2>Setup (per project)</h2>
+<pre><code><span class="cmt"># 1 · install</span>
+bun add -d @effect/language-service
+
+<span class="cmt"># 2 · tsconfig.json — register the plugin</span>
+{ "compilerOptions": { "plugins": [{ "name": "@effect/language-service" }] } }
+
+<span class="cmt"># 3 · VSCode — use the WORKSPACE TypeScript (bundled TS won't load plugins)</span>
+<span class="cmt">#    .vscode/settings.json:</span>
+{ "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true }</code></pre>
+
+<div class="callout">
+  <span class="tag">The one gotcha</span>
+  The plugin only loads under the <strong>workspace</strong> TypeScript. In VSCode run
+  <em>Cmd-Shift-P → "TypeScript: Select TypeScript Version" → "Use Workspace Version"</em>.
+  Confirm with <em>"TypeScript: Open TS Server log"</em> or just hover an <code>Effect</code> value —
+  you'll see the three-slot <code>Effect&lt;A, E, R&gt;</code> rendered nicely.
+</div>
+
+<h2>Editor-only vs CLI</h2>
+<p>
+A TS language-service plugin runs <em>only while editing</em>. Plain <code>tsc</code> (and CI) won't see
+Effect diagnostics. To get them at build time, patch the local compiler:
+</p>
+<pre><code>bunx effect-language-service patch     <span class="cmt"># patches node_modules/typescript</span>
+<span class="cmt"># make it stick across installs — package.json:</span>
+{ "scripts": { "prepare": "effect-language-service patch" } }</code></pre>
+<p>After patching, <code>tsc --noEmit</code> emits Effect warnings/errors too. Tune exit-code behavior in
+<code>tsconfig</code> under the plugin's options (e.g. <code>ignoreEffectWarningsInTscExitCode</code>).</p>
+
+<h2>Diagnostics you'll meet early</h2>
+<table>
+<tr><td><code>floatingEffect</code></td><td>An <code>Effect</code> value created but never <code>yield*</code>'d or run — it does nothing. Usually a bug.</td></tr>
+<tr><td><code>multipleEffectProvide</code></td><td>Chained <code>Effect.provide(a)</code> then <code>Effect.provide(b)</code>. Merge into one layer instead: <code>Effect.provide(L.pipe(Layer.provide(dep)))</code> — protects scoped-layer lifecycle.</td></tr>
+<tr><td><code>globalFetch</code></td><td>Using global <code>fetch</code> instead of Effect's HttpClient.</td></tr>
+<tr><td><code>redundantSchemaTagIdentifier</code></td><td>Repeating the tag string in <code>Schema.TaggedError("X")("X", …)</code> — drop the duplicate.</td></tr>
+</table>
+
+<h2>Other powers</h2>
+<ul>
+  <li>Quick-info shows <code>Effect&lt;A, E, R&gt;</code> with the success / error / requirement channels split out.</li>
+  <li>Refactors: wrap in <code>Effect.gen</code>, add a missing <code>yield*</code>, convert <code>pipe</code>↔<code>gen</code>.</li>
+  <li>"Go to definition" on an <code>RpcClient</code> resolves to the Rpc definition.</li>
+</ul>
+
+<style>
+table { border-collapse: collapse; width: 100%; font-size: .85rem; margin: 1rem 0; }
+td { border-bottom: 1px solid var(--rule); padding: .45rem .5rem; vertical-align: top; }
+td:first-child { white-space: nowrap; font-family: ui-monospace, monospace; }
+</style>
+
+<hr>
+<p class="footer">Set up live in <code>playground/</code>. Ask your teacher to show any diagnostic on real code.</p>
+</body>
+</html>

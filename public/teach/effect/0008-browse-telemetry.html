@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 8 · Browse telemetry — reading the waterfall</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a href="/teach/effect/" style="position:fixed;top:0;left:0;z-index:99999;background:#111;color:#fff;font:14px/1.4 system-ui,-apple-system,sans-serif;padding:8px 14px;border-bottom-right-radius:8px;text-decoration:none;opacity:.85">← Effect Services the opencode Way, Observed via OTEL</a>
+
+<div class="crumbs">
+  Effect course · Lesson 8 ·
+  prev: <a href="0007-telemetry-motel.html">0007 — telemetry to motel</a> ·
+  ref: motel <code>http://127.0.0.1:27686</code>
+</div>
+
+<span class="kicker">Lesson 08 · reading runtime evidence</span>
+<h1>Browse telemetry</h1>
+<p class="sub">Spans are in motel — now <em>read</em> them. Three ways into the same SQLite store: a terminal TUI for eyeballing, an HTTP/JSON API for scripting, and an MCP surface for AI agents. The point isn't the tool; it's the habit — <strong>debug from runtime evidence, not from guesses.</strong></p>
+
+<div class="callout">
+  <span class="tag">The single win for today</span>
+  Read a trace as a <strong>waterfall</strong>: a tree of spans with durations. Where the tree branches tells you what
+  called what; where time pools tells you where to look; what repeats tells you what's wasted.
+</div>
+
+<h2>1 · The TUI — eyeball it</h2>
+<pre><code>bunx @kitlangton/motel        <span class="cmt"># ingest + viewer</span></code></pre>
+<table class="t">
+  <tr><th>key</th><th>does</th></tr>
+  <tr><td><code>[</code> / <code>]</code></td><td>switch service — pick <code>skillman</code></td></tr>
+  <tr><td><code>j</code> / <code>k</code></td><td>move selection through recent traces</td></tr>
+  <tr><td><code>enter</code> / <code>esc</code></td><td>drill in / back out: trace → waterfall → span detail</td></tr>
+  <tr><td><code>s</code></td><td>cycle sort: recent → slowest → errors</td></tr>
+  <tr><td><code>/</code></td><td>filter traces</td></tr>
+  <tr><td><code>tab</code></td><td>toggle correlated logs for the service</td></tr>
+  <tr><td><code>o</code></td><td>open the selected trace in the browser</td></tr>
+  <tr><td><code>?</code></td><td>full cheat sheet · <code>q</code> quit</td></tr>
+</table>
+
+<h2>2 · The HTTP API — script it</h2>
+<p>
+Everything the TUI shows is plain JSON over HTTP — perfect for a quick <code>curl</code> or a CI assertion. The full spec
+is at <code>/openapi.json</code>; the endpoints you'll actually use:
+</p>
+<pre><code>GET /api/health                       <span class="cmt"># liveness {"ok":true,...}</span>
+GET /api/services                     <span class="cmt"># {"data":["skillman", ...]}</span>
+GET /api/traces?service=skillman      <span class="cmt"># recent traces (root op, duration, spanCount)</span>
+GET /api/traces/&lt;trace-id&gt;             <span class="cmt"># full tree → data.spans[] with depth + durationMs</span>
+GET /api/spans/&lt;span-id&gt;               <span class="cmt"># one span + its logs</span>
+GET /api/logs?service=skillman        <span class="cmt"># recent correlated logs</span>
+GET /api/traces/search?...            <span class="cmt"># structured search</span></code></pre>
+
+<p>A trace detail comes back as a flat <code>spans[]</code>, each carrying a <code>depth</code> — so rendering the tree is a one-liner:</p>
+<pre><code>TRACE=$(curl -s <span class="tok">"127.0.0.1:27686/api/traces?service=skillman"</span> \
+  | python3 -c <span class="tok">"import json,sys; print(json.load(sys.stdin)['data'][0]['traceId'])"</span>)
+
+curl -s <span class="tok">"127.0.0.1:27686/api/traces/$TRACE"</span> | python3 -c <span class="tok">"
+import json,sys
+d = json.load(sys.stdin)['data']
+print(d['rootOperationName'], d['durationMs'], 'ms', d['spanCount'], 'spans')
+for s in d['spans']:
+    print('  '*s['depth'] + f\"{s['operationName']:&lt;22} {s['durationMs']:&gt;3}ms [{s['status']}]\")
+"</span></code></pre>
+
+<h2>3 · What skillman's <code>link</code> actually looks like</h2>
+<p>That query, run against a real <code>link git</code>, prints the tree below — and it is <em>exactly</em> the shape of the code that produced it:</p>
+<pre><code>cli.link                11ms  [ok]
+  Skills.link              9ms  [ok]
+    Skills.sourceOf          8ms  [ok]
+      Skills.realFolders       8ms  [ok]
+    Skills.linked            1ms  [ok]
+      Project.root             1ms  [ok]
+    Project.root             0ms  [ok]</code></pre>
+<div class="callout">
+  <span class="tag">Read it like a detective</span>
+  <strong>Shape</strong> = call graph: <code>cli.link</code> → <code>Skills.link</code> → resolve the source, check
+  what's linked, then write. <strong>Time</strong> pools in <code>sourceOf → realFolders</code> (8 of 11 ms — it
+  <code>readDirectory</code>s and <code>stat</code>s the skills dirs). <strong>Repetition</strong> is the tell:
+  <code>Project.root</code> appears <em>twice</em> — once under <code>Skills.linked</code>, once directly. The
+  <code>.git</code> walk runs twice per link. A code review glanced past it; the waterfall makes it obvious.
+</div>
+
+<h2>The lesson under the lesson</h2>
+<p>
+That duplicate <code>Project.root</code> is the whole reason telemetry earns its keep. The tests are green, the code
+reads fine, the output is correct — and yet the trace shows wasted work. <strong>Hermetic unit tests prove
+correctness; traces reveal behaviour.</strong> (The fix, for later: memoize the project root, or thread
+<code>skillsDir</code> down instead of re-deriving it. Don't fix it from a guess — fix it, then re-read the trace and
+confirm the second <code>Project.root</code> is gone.)
+</p>
+
+<h2>4 · For your AI agent</h2>
+<p>
+motel ships a <code>motel-debug</code> skill and an MCP server (<code>motel-mcp</code>) that expose the same
+<code>/api</code> surface to coding agents — so an agent can pull a trace and reason about runtime behaviour instead of
+hallucinating it. Install once and any future session can query your local telemetry:
+</p>
+<pre><code>npx skills add kitlangton/motel --skill motel-debug      <span class="cmt"># project-local</span>
+npx skills add kitlangton/motel --skill motel-debug -g    <span class="cmt"># global</span></code></pre>
+<p class="sub">Privacy note: the store is local but real. Correlated logs can contain secrets/PII and AI traces can contain full prompt text — treat <code>~/.local/state/motel/telemetry.sqlite</code> as sensitive dev data.</p>
+
+<h2>Check yourself</h2>
+
+<div class="quiz" data-answer="1" data-fb="The detail endpoint returns a flat spans[] where each span carries a depth — indent by depth and you've drawn the waterfall.">
+  <div class="q">How do you reconstruct the span tree from <code>GET /api/traces/&lt;id&gt;</code>?</div>
+  <button>it returns nested children you recurse into</button>
+  <button>a flat <code>spans[]</code> where each span has a <code>depth</code> to indent by</button>
+  <button>you call <code>/api/spans/&lt;id&gt;</code> once per level</button>
+  <button>the TUI is the only way; the API is unstructured</button>
+</div>
+
+<div class="quiz" data-answer="2" data-fb="The waterfall showed Project.root twice — the .git walk runs once via Skills.linked and again via install reading skillsDir. Correct, tested, green, and still wasteful.">
+  <div class="q">What did skillman's <code>link</code> trace reveal that the passing tests did not?</div>
+  <button>a span exporting to the wrong service</button>
+  <button>an error swallowed by orDie</button>
+  <button><code>Project.root</code> runs twice — the <code>.git</code> walk is duplicated</button>
+  <button>the symlink was created in the wrong directory</button>
+</div>
+
+<div class="quiz" data-answer="0" data-fb="Unit tests over fakes prove the output is correct; they say nothing about how the work was done. The trace is where redundant calls, slow spans, and bad call graphs show up.">
+  <div class="q">Why keep traces around if the unit tests already pass?</div>
+  <button>tests prove correctness; traces reveal behaviour — redundant work, hot spans, call shape</button>
+  <button>traces replace the need for unit tests</button>
+  <button>so the CI can fail on slow code automatically</button>
+  <button>they don't add anything once tests are green</button>
+</div>
+
+<hr>
+<p class="footer">
+  That closes the telemetry arc: <strong>shape → AppLayer → OTEL/motel → read the evidence.</strong> The same
+  <code>telemetry.ts</code> now points at any Effect app — next stop on the mission is refactoring <code>msk</code> into
+  this shape, where its existing <code>Effect.fn("scanSkills")</code> spans will light up for free.
+</p>
+
+<script src="assets/quiz.js"></script>
+<script src="assets/copy.js"></script>
+</body>
+</html>

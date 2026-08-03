@@ -1,0 +1,77 @@
+/* Styles for the quiz component in quiz.js. Load after style.css. */
+
+.quiz {
+  max-width: 38rem;
+  border: 1px solid var(--rule, #d8d2c8);
+  border-left: 3px solid var(--ink, #16130f);
+  border-radius: 3px;
+  padding: 1rem 1.2rem;
+  margin: 1.4rem 0;
+  background: #fff;
+}
+
+.quiz .q {
+  margin: 0 0 0.8rem;
+  font-weight: 600;
+}
+
+.quiz .scenario {
+  margin: 0 0 0.7rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft, #55504a);
+  font-style: italic;
+}
+
+.quiz button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  font-size: 0.94rem;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.4rem;
+  border: 1px solid var(--rule, #d8d2c8);
+  border-radius: 3px;
+  background: #fdfcfa;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.quiz button:hover:not(:disabled) { background: #f1ece4; }
+.quiz button:disabled { cursor: default; opacity: 1; }
+
+.quiz button.is-right {
+  background: #e7f1e9;
+  border-color: #2f7d4f;
+}
+
+.quiz button.is-wrong.is-picked {
+  background: #f7e6e3;
+  border-color: #a8402f;
+  text-decoration: line-through;
+}
+
+.quiz button.is-wrong:not(.is-picked) { opacity: 0.55; }
+
+.quiz .why {
+  margin: 0.7rem 0 0;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--rule, #d8d2c8);
+  font-size: 0.9rem;
+  color: var(--ink-soft, #55504a);
+}
+
+.quiz-score {
+  font-family: ui-sans-serif, -apple-system, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft, #55504a);
+}
+
+@media print {
+  .quiz button { background: #fff; }
+  .quiz .why { display: block !important; }
+  .quiz .why[hidden] { display: block !important; }
+}

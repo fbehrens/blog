@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 4 · Default services — the ones you never provide</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a href="/teach/effect/" style="position:fixed;top:0;left:0;z-index:99999;background:#111;color:#fff;font:14px/1.4 system-ui,-apple-system,sans-serif;padding:8px 14px;border-bottom-right-radius:8px;text-decoration:none;opacity:.85">← Effect Services the opencode Way, Observed via OTEL</a>
+
+<div class="crumbs">
+  Effect course · Lesson 4 ·
+  prev: <a href="0003-majesty-of-layers.html">0003 — majesty of layers</a> ·
+  next: <a href="0005-config-service.html">0005 — the Config service</a> ·
+  ref: <a href="effect-opencode-shape.html">opencode-shape</a>
+</div>
+
+<span class="kicker">Lesson 04 · The runtime's standard library</span>
+<h1>Default services</h1>
+<p class="sub">Lesson 3 hammered the rule: <em>yield* a service and it lands in the <code>R</code> slot — you must provide it or it won't compile.</em> So why does <code>Effect.sleep</code>, <code>Random.next</code>, <code>Effect.log</code>, and your own <code>Config.string("SKILLS_ROOT")</code> all run with <code>R = never</code>? This lesson is the exception that proves the rule.</p>
+
+<div class="callout">
+  <span class="tag">The single win for today</span>
+  Name the handful of <strong>default services</strong>, explain why they don't show up in <code>R</code>
+  (they're <code>Context.Reference</code>s with a built-in default), and override one — which is exactly
+  how <code>it.effect</code> makes <code>Clock</code> and <code>Random</code> deterministic in your tests.
+</div>
+
+<h2>The puzzle</h2>
+<p>By Lesson 3's rule, this should not type-check — it uses the clock and the RNG, yet asks for nothing:</p>
+<pre><code><span class="tok">const</span> program: Effect.Effect&lt;number, never, <span class="tok">never</span>&gt; = Effect.gen(<span class="tok">function*</span> () {
+  <span class="tok">yield*</span> Effect.sleep(<span class="tok">"10 millis"</span>)        <span class="cmt">// uses Clock</span>
+  <span class="tok">const</span> n = <span class="tok">yield*</span> Random.nextInt          <span class="cmt">// uses Random</span>
+  <span class="tok">yield*</span> Effect.log(<span class="tok">"picked"</span>, n)           <span class="cmt">// uses the Logger / Console</span>
+  <span class="tok">return</span> n
+})
+<span class="cmt">//                                  ^^^^^ R = never — nothing to provide</span></code></pre>
+<p>
+Clock, Random and Console are real services living in the context <code>Map</code> — the same machinery as your
+<code>skillman/Config</code>. The difference is they ship with a <strong>default value the runtime installs for you</strong>.
+</p>
+
+<h2>The mechanism: <code>Context.Reference</code></h2>
+<p>
+A normal service (<code>Context.Service</code>) has no value until a layer builds one — so yielding it adds a
+requirement to <code>R</code>. A <strong><code>Context.Reference</code></strong> is a service that carries its own
+<code>defaultValue()</code>. In the Effect 4 source that is literally one line:
+</p>
+<pre><code><span class="cmt">// effect/Context.d.ts</span>
+<span class="tok">interface</span> Reference&lt;Shape&gt; <span class="tok">extends</span> Service&lt;<span class="tok">never</span>, Shape&gt; {
+  <span class="tok">readonly</span> defaultValue: () =&gt; Shape   <span class="cmt">// ← always answerable, so never required</span>
+}</code></pre>
+<p>
+Note the <code>never</code> in <code>Service&lt;never, Shape&gt;</code>: a Reference contributes <em>nothing</em> to the
+requirements channel. That's the whole trick. The standard services are all declared this way:
+</p>
+<pre><code><span class="cmt">// effect/Clock.d.ts, Random.d.ts, Console.d.ts, ConfigProvider.d.ts, Tracer.d.ts, Scheduler.d.ts</span>
+<span class="tok">export declare const</span> Clock:          Context.Reference&lt;Clock&gt;
+<span class="tok">export declare const</span> Random:         Context.Reference&lt;{ ... }&gt;
+<span class="tok">export declare const</span> Console:        Context.Reference&lt;Console&gt;
+<span class="tok">export declare const</span> ConfigProvider: Context.Reference&lt;ConfigProvider&gt;   <span class="cmt">// ← Lesson 5 leans on this</span>
+<span class="tok">export declare const</span> Tracer:         Context.Reference&lt;Tracer&gt;          <span class="cmt">// ← the telemetry lesson leans on this</span>
+<span class="tok">export declare const</span> Scheduler:      Context.Reference&lt;Scheduler&gt;</code></pre>
+
+<div class="callout">
+  <span class="tag">The mental model</span>
+  <strong>A default service is a <code>let</code> with a default value at the top of every program.</strong>
+  Always in scope (so never in <code>R</code>), but you can shadow it for a block. <code>Context.Service</code> =
+  a parameter you <em>must</em> pass; <code>Context.Reference</code> = a parameter with a default already filled in.
+</div>
+
+<h2>The roster you actually touch</h2>
+<table class="t">
+  <tr><th>Reference</th><th>Default it ships with</th><th>You override it to…</th></tr>
+  <tr><td><code>Clock</code></td><td>real wall-clock / <code>setTimeout</code></td><td>a <code>TestClock</code> you advance by hand — no real waiting</td></tr>
+  <tr><td><code>Random</code></td><td>seeded PRNG</td><td>a fixed sequence for deterministic tests</td></tr>
+  <tr><td><code>Console</code></td><td>the real <code>console</code></td><td>capture output, or silence it</td></tr>
+  <tr><td><code>ConfigProvider</code></td><td><code>fromEnv()</code> → real <code>process.env</code></td><td>a fixed map — <strong>the Config test seam, Lesson 5</strong></td></tr>
+  <tr><td><code>Tracer</code></td><td>no-op tracer</td><td>an OTEL tracer → spans to motel — <strong>the telemetry lesson</strong></td></tr>
+  <tr><td><code>Scheduler</code> / loggers / log level</td><td>sensible runtime defaults</td><td>rarely; tune concurrency or log verbosity</td></tr>
+</table>
+
+<h2>Overriding one</h2>
+<p>Because it's just a service, you override a default with the ordinary tools — <code>provideService</code> for a
+ready value, or a layer:</p>
+<pre><code><span class="cmt">// swap the ConfigProvider for a fixed map (no real env)</span>
+program.pipe(
+  Effect.provideService(ConfigProvider.ConfigProvider, ConfigProvider.fromEnv({ env: { SKILLS_ROOT: <span class="tok">"/tmp/s"</span> } })),
+)
+
+<span class="cmt">// the R slot was already `never`; providing here SHADOWS the default, it doesn't satisfy a requirement</span></code></pre>
+<p>
+You don't have to do this by hand for the common case. <code>@effect/vitest</code>'s <code>it.effect</code> wraps your
+test in a <strong>TestContext</strong> that swaps <code>Clock</code> for a <code>TestClock</code> and <code>Random</code>
+for a deterministic one — for free. That's why a time-based effect under <code>it.effect</code> doesn't actually sleep.
+</p>
+
+<div class="win">
+  <span class="tag">Prove it — in your playground</span>
+  <pre><code><span class="cmt">// the puzzle program above compiles & runs with R = never:</span>
+bun run -e <span class="tok">'import {Effect,Random} from "effect"; Effect.runPromise(Effect.gen(function*(){yield* Effect.sleep("10 millis"); return yield* Random.nextInt}).pipe(Effect.tap((n)=>Effect.log(n)))) '</span></code></pre>
+  Then the reveal: a <em>non</em>-default service like your <code>Config.Service</code> <strong>does</strong> appear in
+  <code>R</code> and won't compile until provided. Same context <code>Map</code>; the only difference is whether a
+  <code>defaultValue()</code> exists.
+</div>
+
+<h2>Why this matters for skillman</h2>
+<p>
+Your <code>Config</code> service (next lesson) is built <em>on top of</em> the <code>ConfigProvider</code> default
+service. <code>Config.string("SKILLS_ROOT")</code> reads from whatever <code>ConfigProvider</code> is in scope —
+the real env in production, a fixed map in tests — and you never thread it through your code. The telemetry lesson
+does the same move with <code>Tracer</code>: swap the no-op default for an OTEL one and your existing
+<code>Effect.fn</code> spans start flowing to motel, with zero changes to call sites.
+</p>
+
+<h2>Check yourself</h2>
+
+<div class="quiz" data-answer="1" data-fb="A Context.Reference carries a defaultValue(), so the runtime can always answer a lookup — it contributes `never` to R and so never needs providing.">
+  <div class="q">Why does <code>yield* Random.nextInt</code> leave <code>R = never</code>?</div>
+  <button>Random is a global, not a service at all</button>
+  <button>Random is a Context.Reference — it has a built-in default value</button>
+  <button>the compiler special-cases the Random module</button>
+  <button>nextInt is pure and uses no service</button>
+</div>
+
+<div class="quiz" data-answer="2" data-fb="Providing a default service shadows its default for that scope — it doesn't discharge a requirement, because there was never one in R.">
+  <div class="q">What happens when you <code>provideService(ConfigProvider, …)</code> on an effect whose <code>R</code> is already <code>never</code>?</div>
+  <button>it's a type error — nothing to provide</button>
+  <button>it adds ConfigProvider to R</button>
+  <button>it shadows the default provider for that scope</button>
+  <button>nothing — providers are ignored unless required</button>
+</div>
+
+<div class="quiz" data-answer="0" data-fb="it.effect installs a TestContext that swaps Clock→TestClock and Random→deterministic, so sleeps don't really wait and RNG is reproducible.">
+  <div class="q">Why doesn't a <code>Effect.sleep("1 hour")</code> under <code>it.effect</code> actually take an hour?</div>
+  <button>it.effect swaps in a TestClock you control</button>
+  <button>vitest mocks setTimeout globally</button>
+  <button>Effect skips sleeps in test mode</button>
+  <button>the sleep runs on a background fiber</button>
+</div>
+
+<hr>
+<p class="footer">
+  Next: <a href="0005-config-service.html">Lesson 5 — the Config service</a>, where you build your own service
+  <em>on top of</em> the <code>ConfigProvider</code> default and turn it into a one-line test seam.
+</p>
+
+<script src="assets/quiz.js"></script>
+<script src="assets/copy.js"></script>
+</body>
+</html>

@@ -53,6 +53,9 @@ blockquote { border-left: 3px solid var(--accent); margin: 1.2rem 0; padding: .2
 .win { background: #effbf3; border: 1px solid #c8ebd6; border-radius: 7px; padding: .8rem 1rem; margin: 1.4rem 0; }
 .win .tag { color: var(--ok); font-family: ui-sans-serif, sans-serif; font-weight: 700; font-size: .7rem;
   text-transform: uppercase; letter-spacing: .08em; display: block; margin-bottom: .25rem; }
+table.t { border-collapse: collapse; width: 100%; margin: 1.2rem 0; font-size: .9rem; }
+table.t th, table.t td { border: 1px solid var(--rule); padding: .45rem .6rem; text-align: left; vertical-align: top; }
+table.t th { background: var(--accent-soft); font-family: ui-sans-serif, sans-serif; }
 hr { border: none; border-top: 1px solid var(--rule); margin: 2.4rem 0; }
 .footer { margin-top: 3rem; font-size: .85rem; color: var(--muted); }
 .crumbs { font-family: ui-sans-serif, sans-serif; font-size: .8rem; color: var(--muted); margin-bottom: 1.5rem; }

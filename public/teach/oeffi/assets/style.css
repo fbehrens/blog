@@ -1,0 +1,208 @@
+/* Shared stylesheet for the ÖPNV+Rad teaching workspace.
+   Tufte-inspired: generous margins, serif body, sidenotes, print-friendly. */
+
+:root {
+  --ink: #16130f;
+  --ink-soft: #55504a;
+  --rule: #d8d2c8;
+  --paper: #fffdf9;
+  --accent: #8a3324;      /* rot-braun, wie Bahnsteigkante */
+  --accent-soft: #f4ece7;
+  --nrw: #1b5e3a;         /* NRW-Grün */
+  --rlp: #1f4e79;         /* RLP-Blau */
+  --warn: #9a6a00;
+  --measure: 38rem;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }
+
+body {
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+  max-width: 54rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Kopf ---------- */
+
+.eyebrow {
+  font-family: ui-sans-serif, -apple-system, "Helvetica Neue", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.4rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 600;
+  margin: 0 0 0.6rem;
+  max-width: var(--measure);
+}
+
+.subtitle {
+  font-style: italic;
+  color: var(--ink-soft);
+  max-width: var(--measure);
+  margin: 0 0 2.5rem;
+}
+
+h2 {
+  font-size: 1.28rem;
+  font-weight: 600;
+  margin: 3rem 0 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+  max-width: var(--measure);
+}
+
+h3 {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 1.8rem 0 0.4rem;
+  max-width: var(--measure);
+}
+
+p, ul, ol { max-width: var(--measure); }
+li { margin-bottom: 0.35rem; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+code, .mono {
+  font-family: "SF Mono", ui-monospace, Menlo, monospace;
+  font-size: 0.86em;
+}
+
+/* ---------- Randnotizen ---------- */
+
+.sidenote {
+  float: right;
+  clear: right;
+  width: 12rem;
+  margin-right: -14rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 1000px) {
+  .sidenote {
+    float: none;
+    width: auto;
+    margin: 0.8rem 0;
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--rule);
+    max-width: var(--measure);
+  }
+}
+
+/* ---------- Karten & Kästen ---------- */
+
+.card {
+  max-width: var(--measure);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  background: #fff;
+}
+
+.card h3 { margin-top: 0; }
+
+.callout {
+  max-width: var(--measure);
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 0.8rem 1rem;
+  margin: 1.4rem 0;
+  font-size: 0.94rem;
+}
+
+.callout.warn { border-left-color: var(--warn); background: #fbf4e3; }
+.callout.nrw  { border-left-color: var(--nrw); background: #ecf4ee; }
+.callout.rlp  { border-left-color: var(--rlp); background: #eaf0f6; }
+
+.tag {
+  display: inline-block;
+  font-family: ui-sans-serif, -apple-system, sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.12rem 0.45rem;
+  border-radius: 2px;
+  vertical-align: 0.12em;
+}
+.tag-nrw { background: var(--nrw); color: #fff; }
+.tag-rlp { background: var(--rlp); color: #fff; }
+
+/* ---------- Tabellen ---------- */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: var(--measure);
+  margin: 1.2rem 0;
+  font-size: 0.92rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+th {
+  font-family: ui-sans-serif, -apple-system, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-bottom: 1.5px solid var(--ink);
+}
+
+tbody tr:last-child td { border-bottom: 1.5px solid var(--ink); }
+
+/* ---------- Fuß ---------- */
+
+.footer {
+  max-width: var(--measure);
+  margin-top: 4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+
+.footer a { color: var(--ink-soft); }
+
+.ask {
+  max-width: var(--measure);
+  margin-top: 2rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px dashed var(--rule);
+  border-radius: 3px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Druck ---------- */
+
+@media print {
+  html { font-size: 11pt; }
+  body { padding: 0; max-width: none; background: #fff; }
+  .quiz, .ask { break-inside: avoid; }
+  .sidenote { float: none; border-left: 2px solid #ccc; padding-left: 0.7rem; margin: 0.6rem 0; }
+  a::after { content: " (" attr(href) ")"; font-size: 0.75em; color: #666; word-break: break-all; }
+  a[href^="#"]::after, .nolink a::after { content: ""; }
+}

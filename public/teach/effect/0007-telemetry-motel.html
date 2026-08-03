@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 7 · Telemetry to motel — spans for free</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a href="/teach/effect/" style="position:fixed;top:0;left:0;z-index:99999;background:#111;color:#fff;font:14px/1.4 system-ui,-apple-system,sans-serif;padding:8px 14px;border-bottom-right-radius:8px;text-decoration:none;opacity:.85">← Effect Services the opencode Way, Observed via OTEL</a>
+
+<div class="crumbs">
+  Effect course · Lesson 7 ·
+  prev: <a href="0006-effect-gen.html">0006 — effect gen</a> ·
+  next: <a href="0008-browse-telemetry.html">0008 — browse telemetry</a> ·
+  code: <code>packages/skillman/src/telemetry.ts</code>
+</div>
+
+<span class="kicker">Lesson 07 · the OTEL payoff</span>
+<h1>Telemetry to motel</h1>
+<p class="sub">You already wrote the spans. Every <code>Effect.fn("Skills.link")</code> and <code>Effect.withSpan("Project.root")</code> in skillman <em>is</em> a span — they just had nowhere to go. This lesson adds the one piece that ships them: a tracer layer pointed at a local <strong>motel</strong> daemon. No code change to the domain, no per-function wiring.</p>
+
+<div class="callout">
+  <span class="tag">The single win for today</span>
+  A trace exporter is <strong>just another layer</strong>. Merge one <code>Otlp.layer</code> into your <code>AppLayer</code>
+  and the span tree you'd already named lights up in motel — built in <code>main.ts</code> only, so tests stay
+  tracer-free.
+</div>
+
+<h2>What is motel?</h2>
+<p>
+<strong>motel</strong> (by Kit Langton, same author as opencode) is a local OpenTelemetry ingest server + terminal
+viewer, backed by SQLite. You point your app's OTLP/HTTP exporter at <code>http://127.0.0.1:27686</code> and debug with
+real runtime evidence — from a TUI, a web UI, or an AI agent. No Docker, no cloud account, one daemon shared across all
+your local projects.
+</p>
+<pre><code><span class="cmt"># start the headless ingest daemon (forks, returns immediately)</span>
+bunx @kitlangton/motel daemon
+
+<span class="cmt"># or the interactive TUI (ingest + viewer in one)</span>
+bunx @kitlangton/motel
+
+<span class="cmt"># it listens here and appends the OTLP paths itself:</span>
+<span class="cmt">#   http://127.0.0.1:27686/v1/traces</span>
+<span class="cmt">#   http://127.0.0.1:27686/v1/logs</span></code></pre>
+
+<h2>The tracer layer (your real code)</h2>
+<p>
+The combined OTLP layer lives in <code>effect/unstable/observability</code>. It needs two things provided underneath: an
+<code>HttpClient</code> to POST with (Bun has <code>fetch</code>, so <code>FetchHttpClient.layer</code> works), and a
+serialization format (<code>OtlpSerialization.layerJson</code>). Give it those and its output collapses to
+<code>Layer&lt;never&gt;</code> — a pure side-effect layer that installs the tracer into the runtime.
+</p>
+<pre><code><span class="cmt">// packages/skillman/src/telemetry.ts</span>
+<span class="tok">import</span> { Layer } <span class="tok">from</span> <span class="tok">"effect"</span>
+<span class="tok">import</span> { FetchHttpClient } <span class="tok">from</span> <span class="tok">"effect/unstable/http"</span>
+<span class="tok">import</span> { Otlp, OtlpSerialization } <span class="tok">from</span> <span class="tok">"effect/unstable/observability"</span>
+
+<span class="cmt">// motel's local OTLP ingest. It appends /v1/traces, /v1/logs itself.</span>
+<span class="tok">const</span> MOTEL_URL = <span class="tok">"http://127.0.0.1:27686"</span>
+
+<span class="cmt">// If motel isn't running the batched POSTs just fail quietly — the CLI still works.</span>
+<span class="tok">export const</span> layer: Layer.Layer&lt;never&gt; = Otlp.layer({
+  baseUrl: MOTEL_URL,
+  resource: { serviceName: <span class="tok">"skillman"</span> },
+}).pipe(Layer.provide([FetchHttpClient.layer, OtlpSerialization.layerJson]))</code></pre>
+
+<h2>Wire it in <code>main.ts</code> — and only there</h2>
+<p>
+The tracer belongs to the <em>runtime</em>, not the domain. Merge it into the <code>AppLayer</code> at the entry point.
+Your tests provide <code>Skills.layer</code> over fakes and never see it — telemetry is a production concern, kept out
+of the unit suite.
+</p>
+<pre><code><span class="cmt">// packages/skillman/src/main.ts</span>
+<span class="tok">const</span> AppLayer = Layer.mergeAll(Skills.defaultLayer, BunServices.layer, Telemetry.layer)
+
+command.pipe(Command.run({ version: <span class="tok">"0.1.0"</span> }), Effect.provide(AppLayer), BunRuntime.runMain)</code></pre>
+<div class="callout">
+  <span class="tag">Why this is the whole job</span>
+  <code>Otlp.layer</code> sets the runtime's <strong>Tracer</strong> (a default service, Lesson 4). Once it's installed,
+  every span that was <em>already</em> created by <code>Effect.fn(name)</code> / <code>Effect.withSpan(name)</code> gets
+  collected and batch-exported. The names you wrote months ago for readability become your trace tree. That's the payoff
+  the through-line promised: <strong>the spans were free because the named effects were already there.</strong>
+</div>
+
+<h2>Run it</h2>
+<div class="win">
+  <span class="tag">Emit a trace</span>
+  <pre><code>bunx @kitlangton/motel daemon              <span class="cmt"># start ingest</span>
+curl -s 127.0.0.1:27686/api/health         <span class="cmt"># {"ok":true,...}</span>
+
+cd some-project-with-.git
+SKILLS_ROOT=/path/to/skills bun run packages/skillman/src/main.ts link git
+
+<span class="cmt"># a moment later, motel knows your service:</span>
+curl -s 127.0.0.1:27686/api/services       <span class="cmt"># {"data":["skillman"]}</span></code></pre>
+</div>
+
+<h2>The gotcha that telemetry itself taught us</h2>
+<p>
+First run, the traces came back <strong>fragmented</strong>: <code>Skills.sourceOf</code>, <code>Skills.linked</code> and
+<code>Project.root</code> each showed up as a <em>separate root trace</em> instead of one tree under
+<code>link</code>. The cause was visible only because we were looking at telemetry:
+</p>
+<pre><code><span class="cmt">// BEFORE — install was an UNNAMED Effect.fn, so link/copy weren't spans.</span>
+<span class="cmt">// Their children had no parent span → each floated up as its own root.</span>
+<span class="tok">const</span> install = (write) =&gt; Effect.fn(<span class="tok">function*</span> (name) { <span class="cmt">/* ... */</span> })
+
+<span class="cmt">// AFTER — name the span, and add a per-command root span in the CLI handler.</span>
+<span class="tok">const</span> install = (span, write) =&gt; Effect.fn(span)(<span class="tok">function*</span> (name) { <span class="cmt">/* ... */</span> })
+<span class="tok">const</span> link = install(<span class="tok">"Skills.link"</span>, (from, to) =&gt; fs.symlink(from, to))
+
+<span class="cmt">// cli.ts — wrap each handler so one invocation = one trace</span>
+report(Effect.gen(<span class="tok">function*</span> () { <span class="cmt">/* ... */</span> })).pipe(Effect.withSpan(<span class="tok">"cli.link"</span>))</code></pre>
+<div class="callout">
+  <span class="tag">The rule</span>
+  <strong>Spans nest only under an active parent span.</strong> An <code>Effect.fn</code> with no name string is
+  <em>not</em> a span — it runs, but it opens no span context, so anything it calls becomes a root. Name the boundaries
+  you want to see, and give each top-level operation (here, a CLI command) a wrapping <code>withSpan</code> so its work
+  collects under one tree.
+</div>
+
+<h2>Check yourself</h2>
+
+<div class="quiz" data-answer="2" data-fb="The domain code is untouched. You add ONE layer (Otlp.layer + its HttpClient/serialization deps) and merge it into AppLayer in main.">
+  <div class="q">What did instrumenting skillman with OTEL actually require?</div>
+  <button>adding withSpan to every function in the domain</button>
+  <button>a decorator on each service method</button>
+  <button>one tracer layer merged into AppLayer — the spans already existed</button>
+  <button>switching the test runner to record traces</button>
+</div>
+
+<div class="quiz" data-answer="1" data-fb="FetchHttpClient gives it something to POST with (Bun's fetch), OtlpSerialization.layerJson gives it a wire format. Provide both and Otlp.layer becomes Layer<never>.">
+  <div class="q">Why does <code>Otlp.layer</code> need <code>FetchHttpClient.layer</code> and <code>OtlpSerialization.layerJson</code> under it?</div>
+  <button>to authenticate with motel's cloud backend</button>
+  <button>it needs an HTTP client to send with and a serialization format to encode</button>
+  <button>to provide the FileSystem for the SQLite store</button>
+  <button>they're optional — it works without them</button>
+</div>
+
+<div class="quiz" data-answer="0" data-fb="An unnamed Effect.fn opens no span context, so its children have no parent and become separate root traces. Name it (and add a per-command root span) to get one tree.">
+  <div class="q">Why did the first traces show <code>sourceOf</code> and <code>linked</code> as separate roots instead of nested under <code>link</code>?</div>
+  <button><code>install</code> was an unnamed <code>Effect.fn</code>, so <code>link</code>/<code>copy</code> weren't spans</button>
+  <button>motel can't nest spans across service boundaries</button>
+  <button>the exporter dropped the parent spans</button>
+  <button>OTLP flattens all spans by design</button>
+</div>
+
+<hr>
+<p class="footer">
+  Next: <strong><a href="0008-browse-telemetry.html">browse the telemetry</a></strong> — read the waterfall in motel's
+  TUI and query the same data over HTTP, including the thing the trace tree revealed about skillman that a code review
+  missed.
+</p>
+
+<script src="assets/quiz.js"></script>
+<script src="assets/copy.js"></script>
+</body>
+</html>

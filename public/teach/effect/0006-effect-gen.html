@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 6 · Effect.gen — generators as do-notation</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a href="/teach/effect/" style="position:fixed;top:0;left:0;z-index:99999;background:#111;color:#fff;font:14px/1.4 system-ui,-apple-system,sans-serif;padding:8px 14px;border-bottom-right-radius:8px;text-decoration:none;opacity:.85">← Effect Services the opencode Way, Observed via OTEL</a>
+
+<div class="crumbs">
+  Effect course · Lesson 6 ·
+  prev: <a href="0005-config-service.html">0005 — the Config service</a> ·
+  next: <a href="0007-telemetry-motel.html">0007 — telemetry to motel</a> ·
+  ref: <a href="effect-opencode-shape.html">opencode-shape</a>
+</div>
+
+<span class="kicker">Lesson 06 · The workhorse syntax</span>
+<h1><code>Effect.gen</code></h1>
+<p class="sub">You already write it in your sleep. This lesson is the layer under the habit: what <code>yield*</code> actually does, where the three type channels come from, how failure short-circuits, and the two gotchas (the missing <code>*</code>, the native <code>throw</code>). Knowing the mechanism is what lets you debug it when the types go sideways.</p>
+
+<div class="callout">
+  <span class="tag">The single win for today</span>
+  Explain <code>Effect.gen</code> as <strong>do-notation built on JS generators</strong>: <code>yield*</code> = "run this
+  effect, bind its success"; the <code>return</code> is your <code>A</code>; and <code>E</code> + <code>R</code> are the
+  <em>union</em> of every effect you yielded. Then spot why a missing <code>*</code> is a bug the LSP catches.
+</div>
+
+<h2>The shape, and the one true mental model</h2>
+<p>
+<code>Effect.gen</code> takes a generator function and returns an <code>Effect</code>. The signature tells the whole story:
+</p>
+<pre><code><span class="cmt">// effect/Effect.d.ts (simplified)</span>
+<span class="tok">const</span> gen: &lt;Eff <span class="tok">extends</span> Effect&lt;any, any, any&gt;, AEff&gt;(
+  f: () =&gt; Generator&lt;Eff, AEff, <span class="tok">never</span>&gt;,
+) =&gt; Effect&lt;AEff, /* E of every Eff */, /* R of every Eff */&gt;</code></pre>
+<p>Read it as: <strong>the things you <code>yield*</code> are <code>Eff</code> (effects); the thing you <code>return</code> is
+<code>AEff</code> (the success).</strong> It is <code>async</code>/<code>await</code> for effects:</p>
+<div class="two-col">
+  <div>
+    <h3>async / await</h3>
+    <pre><code><span class="tok">async function</span> f() {
+  <span class="tok">const</span> a = <span class="tok">await</span> getA()
+  <span class="tok">const</span> b = <span class="tok">await</span> getB(a)
+  <span class="tok">return</span> a + b
+}</code></pre>
+  </div>
+  <div>
+    <h3>Effect.gen</h3>
+    <pre><code>Effect.gen(<span class="tok">function*</span> () {
+  <span class="tok">const</span> a = <span class="tok">yield*</span> getA
+  <span class="tok">const</span> b = <span class="tok">yield*</span> getB(a)
+  <span class="tok">return</span> a + b
+})</code></pre>
+  </div>
+</div>
+<p>Same straight-line code. The difference is what it desugars to and what it tracks.</p>
+
+<h2>What <code>yield*</code> actually does</h2>
+<p>
+Every <code>Effect</code> is <em>iterable</em> — it implements <code>[Symbol.iterator]</code>. <code>yield*</code> (yield-<em>delegate</em>)
+hands control to that iterator, the runtime runs the effect, and the <strong>success value is handed back</strong> as the
+result of the <code>yield*</code> expression. Under the hood it's just <code>flatMap</code> stitched together for you:
+</p>
+<pre><code><span class="cmt">// what the generator compiles down to, conceptually</span>
+getA.pipe(Effect.flatMap((a) =&gt;
+  getB(a).pipe(Effect.flatMap((b) =&gt;
+    Effect.succeed(a + b)))))</code></pre>
+<p>
+That's why <code>gen</code> isn't magic and isn't slower-in-spirit than pipes: it <em>is</em> the pipe, written as
+statements. Use whichever reads better; mix them freely.
+</p>
+
+<div class="callout">
+  <span class="tag">v4 note — no adapter</span>
+  Effect 3 tutorials sometimes show <code>Effect.gen(function* ($) { yield* $(effect) })</code> or a <code>_</code>
+  parameter. <strong>Effect 4 dropped the adapter</strong> — you <code>yield*</code> the effect directly, as above. If you
+  see <code>$(...)</code> in a snippet, it's old; delete the wrapper.
+</div>
+
+<h2>Where the three channels come from</h2>
+<p>This is the part worth burning in, because it explains 90% of "why is my type <code>R = Foo | Bar</code>?":</p>
+<table class="t">
+  <tr><th>Channel</th><th>Comes from</th></tr>
+  <tr><td><code>A</code> — success</td><td>the generator's <code>return</code> value (or <code>void</code> if none)</td></tr>
+  <tr><td><code>E</code> — error</td><td>the <strong>union</strong> of the <code>E</code> of every effect you <code>yield*</code></td></tr>
+  <tr><td><code>R</code> — requirements</td><td>the <strong>union</strong> of the <code>R</code> of every effect you <code>yield*</code></td></tr>
+</table>
+<pre><code>Effect.gen(<span class="tok">function*</span> () {
+  <span class="tok">const</span> cfg = <span class="tok">yield*</span> Config.Service          <span class="cmt">// R += Config</span>
+  <span class="tok">const</span> root = <span class="tok">yield*</span> cfg.skillsRoot          <span class="cmt">// E += never</span>
+  <span class="tok">const</span> files = <span class="tok">yield*</span> fs.readDirectory(root) <span class="cmt">// E += PlatformError, R += FileSystem</span>
+  <span class="tok">return</span> files.length                        <span class="cmt">// A = number</span>
+})
+<span class="cmt">// ⇒ Effect&lt;number, PlatformError, Config | FileSystem&gt;</span></code></pre>
+<p>You never annotate these — they're inferred by accumulation. Add a <code>yield*</code> that needs <code>Path</code> and
+<code>Path</code> appears in <code>R</code> automatically. That's the Lesson-3 rule in action, one line at a time.</p>
+
+<h2>Failure short-circuits — like <code>await</code> throwing</h2>
+<p>
+If a <code>yield*</code>'d effect fails, the generator <strong>stops there</strong>. No later line runs; the failure becomes
+the <code>gen</code>'s failure. You don't check return codes between steps:
+</p>
+<pre><code>Effect.gen(<span class="tok">function*</span> () {
+  <span class="tok">const</span> root = <span class="tok">yield*</span> cfg.skillsRoot          <span class="cmt">// if this fails…</span>
+  <span class="tok">const</span> files = <span class="tok">yield*</span> fs.readDirectory(root) <span class="cmt">// …this never runs</span>
+  <span class="tok">return</span> files
+})</code></pre>
+<p>Recover with the usual combinators around the <em>yielded</em> effect or the whole <code>gen</code>:
+<code>Effect.catchTag</code>, <code>Effect.orElse</code>, <code>Effect.option</code>, <code>Effect.either</code>. Normal
+<code>if</code> / <code>for</code> / <code>while</code> / <code>try</code> all work inside the body — it's just JavaScript.</p>
+
+<h2>The two gotchas</h2>
+<div class="two-col">
+  <div>
+    <h3>1 · The missing <code>*</code></h3>
+    <pre><code><span class="tok">const</span> root = <span class="tok">yield</span> cfg.skillsRoot   <span class="cmt">// ✗</span>
+<span class="tok">const</span> root = <span class="tok">yield*</span> cfg.skillsRoot  <span class="cmt">// ✓</span></code></pre>
+    Plain <code>yield</code> hands back the <em>effect object</em>, not its value — <code>root</code> is now an unrun
+    <code>Effect</code>. The Effect LSP flags this (<code>floatingEffect</code> / type mismatch). If a value "is an Effect
+    when you expected a string," look for the dropped <code>*</code>.
+  </div>
+  <div>
+    <h3>2 · Native <code>throw</code></h3>
+    <pre><code><span class="cmt">// inside gen:</span>
+<span class="tok">if</span> (!ok) <span class="tok">throw new</span> Error(<span class="tok">"x"</span>)  <span class="cmt">// ⇒ DEFECT</span>
+<span class="tok">if</span> (!ok) <span class="tok">return yield*</span> Effect.fail(e) <span class="cmt">// ✓ typed E</span></code></pre>
+    A thrown error becomes an unchecked <strong>defect</strong> (it's not in <code>E</code>, won't be caught by
+    <code>catchTag</code>). Put failures in the error channel with <code>Effect.fail</code> so they're typed and recoverable.
+  </div>
+</div>
+
+<h2>The traced sibling: <code>Effect.fn("name")</code></h2>
+<p>
+When the <code>gen</code> is a reusable function — especially one you want on your trace — reach for <code>Effect.fn</code>.
+Same generator body, but it takes args and the name becomes a <strong>span</strong>:
+</p>
+<pre><code><span class="tok">export const</span> scanSkills = Effect.fn(<span class="tok">"scanSkills"</span>)(<span class="tok">function*</span> (root: string) {
+  <span class="tok">const</span> fs = <span class="tok">yield*</span> FileSystem.FileSystem
+  <span class="tok">return</span> <span class="tok">yield*</span> fs.readDirectory(root)
+})
+<span class="cmt">// scanSkills("/x") : Effect&lt;string[], PlatformError, FileSystem&gt;  — and emits a "scanSkills" span</span></code></pre>
+<p>
+This is the on-ramp to the telemetry lesson: <code>msk</code> already wraps its logic in <code>Effect.fn("…")</code>, so
+those functions are <em>already spans</em>. Point a tracer at them and the call tree shows up in motel for free.
+<code>Effect.gen</code> = anonymous inline block; <code>Effect.fn("name")</code> = named, reusable, traced.
+</p>
+
+<div class="win">
+  <span class="tag">Prove the mechanism</span>
+  <pre><code><span class="cmt"># a gen IS a flatMap chain — these two print the same thing:</span>
+bun run -e <span class="tok">'import {Effect} from "effect"; Effect.runPromise(Effect.gen(function*(){const a=yield* Effect.succeed(2); const b=yield* Effect.succeed(3); return a+b}).pipe(Effect.tap(Effect.log)))'</span></code></pre>
+  Now drop the <code>*</code> from one <code>yield</code> and run <code>bun run check</code> in <code>packages/skillman</code>
+  — the type of that binding flips to <code>Effect&lt;…&gt;</code> and arithmetic on it fails to compile. That red squiggle is
+  the whole lesson in one keystroke.
+</div>
+
+<h2>Check yourself</h2>
+
+<div class="quiz" data-answer="1" data-fb="yield* delegates to the effect's iterator; the runtime runs it and binds the success value back. It's flatMap written as a statement.">
+  <div class="q">What does <code>const x = yield* someEffect</code> bind <code>x</code> to?</div>
+  <button>the effect object itself, unrun</button>
+  <button>the success value of running that effect</button>
+  <button>a Promise of the success value</button>
+  <button>the effect's requirements (R)</button>
+</div>
+
+<div class="quiz" data-answer="2" data-fb="A and the return value aside, E and R are accumulated as the UNION across every effect you yield* — that's why requirements pile up automatically.">
+  <div class="q">Where do a <code>gen</code>'s <code>E</code> and <code>R</code> channels come from?</div>
+  <button>you must annotate them on Effect.gen</button>
+  <button>only from the last effect yielded</button>
+  <button>the union of E/R of every effect you yield*</button>
+  <button>from the generator's return statement</button>
+</div>
+
+<div class="quiz" data-answer="0" data-fb="A native throw becomes a defect — it's not in the typed E channel, so catchTag/orElse won't see it. Use Effect.fail for recoverable, typed errors.">
+  <div class="q">Inside a <code>gen</code>, what's wrong with <code>throw new Error(...)</code> for an expected failure?</div>
+  <button>it becomes an untyped defect, not a catchable E</button>
+  <button>generators can't contain throw statements</button>
+  <button>it short-circuits later effects (which is fine)</button>
+  <button>nothing — it's the recommended way to fail</button>
+</div>
+
+<hr>
+<p class="footer">
+  You've now got the syntax (<code>gen</code>), the shape (Service + Layer), the testing seam, and the default services.
+  Next we put them together on a fresh service: <strong>Project</strong> — TDD a <code>gen</code> that walks <code>cwd</code>
+  up to <code>.git</code>, pulling in <code>FileSystem</code> + <code>Path</code> so you watch <code>R</code> accumulate live.
+</p>
+
+<script src="assets/quiz.js"></script>
+<script src="assets/copy.js"></script>
+</body>
+</html>

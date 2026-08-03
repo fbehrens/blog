@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 2 · Testing a service by swapping its Layer</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a href="/teach/effect/" style="position:fixed;top:0;left:0;z-index:99999;background:#111;color:#fff;font:14px/1.4 system-ui,-apple-system,sans-serif;padding:8px 14px;border-bottom-right-radius:8px;text-decoration:none;opacity:.85">← Effect Services the opencode Way, Observed via OTEL</a>
+
+<div class="crumbs">
+  Effect course · Lesson 2 ·
+  prev: <a href="0001-service-and-layer.html">0001 — Service + Layer</a> ·
+  next: <a href="0003-majesty-of-layers.html">0003 — majesty of Layers</a> ·
+  ref: <a href="effect-opencode-shape.html">opencode-shape cheat sheet</a>
+</div>
+
+<span class="kicker">Lesson 02 · The payoff</span>
+<h1>Testing a service: swap the Layer, fake the disk</h1>
+<p class="sub">Why you split <code>layer</code> from <code>defaultLayer</code> in Lesson 1 — and how it makes <code>skills.ts</code> testable without touching a real filesystem.</p>
+
+<p>
+In Lesson 1 you built two layers: <code>Skills.layer</code> (needs a <code>FileSystem</code> from outside)
+and <code>Skills.defaultLayer</code> (Bun's real FS baked in). That split looked like bookkeeping. Here's
+the cash-out: <strong>to test, you provide the open <code>Skills.layer</code> and hand it a fake
+filesystem instead of Bun's.</strong> Same service, no disk, deterministic.
+</p>
+
+<div class="callout">
+  <span class="tag">The single win for today</span>
+  Write a test that runs <code>Skills.scan</code> against an in-memory filesystem and asserts the result —
+  green in milliseconds, no real files. This is the move your <code>msk/src/skills.test.ts</code> already uses.
+</div>
+
+<h2>Two kinds of code, two test styles</h2>
+<p>opencode (and your <code>msk</code>) split testing along a clean line:</p>
+<div class="two-col">
+  <div>
+    <h3>Pure functions → call directly</h3>
+    <code>parseSkills</code> in msk takes strings, returns data. No Effect, no layers — just
+    <code>expect(parseSkills(...)).toEqual(...)</code>. Keep pure logic pure so it's trivially testable.
+  </div>
+  <div>
+    <h3>Effects with deps → provide a fake Layer</h3>
+    <code>scan</code> needs <code>FileSystem</code>. You can't call it directly — you run it with a
+    <em>test</em> filesystem provided. That's this lesson.
+  </div>
+</div>
+
+<h2>Step 1 — a fake filesystem</h2>
+<p>
+Effect ships <code>FileSystem.layerNoop</code>: a complete <code>FileSystem</code> where every method throws
+unless you override it. Override only the methods your code calls. <code>scan</code> uses two:
+</p>
+<pre><code>import { Effect, FileSystem } from <span class="tok">"effect"</span>
+
+const fakeFs = (children: string[], skillMds: string[]) =&gt;
+  FileSystem.layerNoop({
+    readDirectory: () =&gt; Effect.succeed(children),
+    exists: (path) =&gt; Effect.succeed(skillMds.includes(path)),
+  })</code></pre>
+
+<h2>Step 2 — provide <code>layer</code>, not <code>defaultLayer</code></h2>
+<p>This is the whole idea. The open layer lets you inject the fake; the default layer would force the real disk.</p>
+<pre><code>const scan = (children: string[], skillMds: string[], root = <span class="tok">"/root"</span>) =&gt;
+  Effect.runPromise(
+    Effect.gen(function* () {
+      const skills = yield* Skills.Service
+      return yield* skills.scan(root)
+    }).pipe(
+      Effect.provide(Skills.layer),              <span class="cmt">// open: still needs FileSystem</span>
+      Effect.provide(fakeFs(children, skillMds)), <span class="cmt">// ...the fake satisfies it</span>
+    ),
+  )</code></pre>
+
+<div class="callout">
+  <span class="tag">Why this works</span>
+  <code>Skills.layer</code>'s type is <code>Layer&lt;Skills, never, FileSystem&gt;</code> — the
+  <code>FileSystem</code> hole is <em>visible in the type</em>. <code>Effect.provide(fakeFs)</code> fills it.
+  <code>defaultLayer</code> already filled it with Bun, so there'd be no hole to inject into.
+</div>
+
+<h2>Step 3 — assert</h2>
+<pre><code>import { describe, expect, it } from <span class="tok">"bun:test"</span>
+
+describe(<span class="tok">"Skills.scan"</span>, () =&gt; {
+  it(<span class="tok">"returns only dirs that contain a SKILL.md"</span>, async () =&gt; {
+    const entries = await scan(
+      [<span class="tok">"alpha"</span>, <span class="tok">"beta"</span>, <span class="tok">"gamma"</span>],
+      [<span class="tok">"/root/alpha/SKILL.md"</span>, <span class="tok">"/root/gamma/SKILL.md"</span>],
+    )
+    expect(entries).toEqual([
+      { name: <span class="tok">"alpha"</span>, folder: <span class="tok">"/root/alpha"</span> },
+      { name: <span class="tok">"gamma"</span>, folder: <span class="tok">"/root/gamma"</span> },
+    ])
+  })
+})</code></pre>
+
+<div class="win">
+  <span class="tag">Run it — it's already in your playground</span>
+  This exact test lives in <code>playground/skills.test.ts</code> and passes:
+  <pre><code>cd playground
+bun test            <span class="cmt"># 2 pass, 0 fail, ~110ms — no real disk touched</span></code></pre>
+  Now <strong>add a third test yourself</strong>: when <code>exists</code> <em>fails</em> (return
+  <code>Effect.fail(...)</code> from the fake), <code>scan</code> should still succeed and skip that entry —
+  because the code uses <code>Effect.orElseSucceed(() =&gt; false)</code>. Prove the error-handling works.
+</div>
+
+<h2>Check yourself</h2>
+
+<div class="quiz" data-answer="1" data-fb="defaultLayer bakes in BunFileSystem — the dependency hole is already filled, so there's nothing to inject a fake into. The open layer keeps the hole visible.">
+  <div class="q">Why provide <code>Skills.layer</code> instead of <code>Skills.defaultLayer</code> in a test?</div>
+  <button><code>defaultLayer</code> is slower to construct</button>
+  <button><code>layer</code> leaves the <code>FileSystem</code> hole open to inject a fake</button>
+  <button><code>defaultLayer</code> can't be used with <code>runPromise</code></button>
+  <button>they're identical; it's just convention</button>
+</div>
+
+<div class="quiz" data-answer="2" data-fb="layerNoop gives a full FileSystem whose methods throw unless overridden — so you stub only what your code under test calls, and accidental extra calls fail loudly.">
+  <div class="q">What does <code>FileSystem.layerNoop({...})</code> give you?</div>
+  <button>the real FS, but read-only</button>
+  <button>an empty object you fill in completely</button>
+  <button>a full FS that throws on any method you didn't override</button>
+  <button>a recording of real FS calls to replay</button>
+</div>
+
+<div class="quiz" data-answer="0" data-fb="Pure functions (parseSkills) take data and return data — assert directly. Only effects with dependencies need a provided test layer.">
+  <div class="q">A pure function like <code>parseSkills(strings) → data</code> should be tested how?</div>
+  <button>called directly: <code>expect(fn(input)).toEqual(out)</code></button>
+  <button>by providing a fake <code>FileSystem</code> layer</button>
+  <button>through <code>Effect.runPromise</code> with a test layer</button>
+  <button>it can't be unit-tested, only integration-tested</button>
+</div>
+
+<h2>Read this (primary source)</h2>
+<p>
+Your own <a href="https://github.com/sst/opencode"><code>msk/src/skills.test.ts</code></a> is the best reference —
+it builds a richer fake FS (with <code>stat</code>/<code>readLink</code>) the same way, and tests the pure
+<code>parseSkills</code> directly. Read it next to <code>playground/skills.test.ts</code> and notice they're the
+same two techniques at different scale. For the FS contract itself, see
+<a href="https://effect.website/docs/platform/file-system/">Effect docs — FileSystem</a>.
+</p>
+
+<hr>
+<p class="footer">
+  Ask me anything — paste a failing test and we'll read the error together. When your third test
+  (the <code>exists</code>-fails case) is green, the next lesson is
+  <strong>Lesson 3: merge services into one AppLayer + a ManagedRuntime</strong>, then telemetry.
+</p>
+
+<script src="assets/quiz.js"></script>
+<script src="assets/copy.js"></script>
+</body>
+</html>

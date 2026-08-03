@@ -9,6 +9,22 @@ tags:
 lessons:
   - title: "Lesson 1 · The opencode module shape: Service + Layer"
     href: "/teach/effect/0001-service-and-layer.html"
+  - title: "Lesson 2 · Testing a service by swapping its Layer"
+    href: "/teach/effect/0002-testing-a-service.html"
+  - title: "Lesson 3 · The majesty of Layers — requirements are just parameters"
+    href: "/teach/effect/0003-majesty-of-layers.html"
+  - title: "Lesson 4 · Default services — the ones you never provide"
+    href: "/teach/effect/0004-default-services.html"
+  - title: "Lesson 5 · The Config service — settings as a layer"
+    href: "/teach/effect/0005-config-service.html"
+  - title: "Lesson 6 · Effect.gen — generators as do-notation"
+    href: "/teach/effect/0006-effect-gen.html"
+  - title: "Lesson 7 · Telemetry to motel — spans for free"
+    href: "/teach/effect/0007-telemetry-motel.html"
+  - title: "Lesson 8 · Browse telemetry — reading the waterfall"
+    href: "/teach/effect/0008-browse-telemetry.html"
+  - title: "Reference · Effect language service (LSP) in VSCode"
+    href: "/teach/effect/effect-lsp.html"
   - title: "Reference · The opencode module shape (Effect 4)"
     href: "/teach/effect/effect-opencode-shape.html"
 ---
@@ -42,6 +58,8 @@ into opencode's shape, and watch its spans flow into a local telemetry viewer.
 
 ### Knowledge
 
+- [Kit Langton — "Effect and the Near Inexpressible Majesty of Layers"](https://effect.institute) + [Effect Institute](https://effect.institute)
+  The canonical, on-mission framing of Tag/Layer/Service by the author of opencode AND motel. Use for: the mental model (requirements = function parameters; the R slot; test-layers vs vi.mock). Written in Effect 3 — swap `Context.Tag(...)<Self,Shape>()` → `Context.Service<Self,Shape>()("id")`; rest is identical in 4.x. Basis of Lesson 3.
 - [Effect docs — Services & Layers](https://effect.website/docs/requirements-management/services/)
   The canonical model for `Context.Service` / `Layer`. Use for: defining and wiring services. Note: site examples are often Effect 3 — adapt imports to the 4.x `effect/unstable/*` layout.
 - [Effect docs — Observability / Tracing](https://effect.website/docs/observability/tracing/)
