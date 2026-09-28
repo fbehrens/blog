@@ -11,15 +11,6 @@ routes = [
 directory = "./dist"
 binding = "ASSETS"
 
-[[send_email]]
-name = "EMAIL"
-
-[[d1_databases]]
-binding = "DB"
-database_name = "blog-subscribers"
-database_id = "32734eed-5274-4957-a78b-c4f226c28a9e"
-migrations_dir = "./migrations"
-
 [observability]
 enabled = false
 head_sampling_rate = 1
