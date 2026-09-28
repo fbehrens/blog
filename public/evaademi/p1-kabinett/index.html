@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EVA ADEMI — Kabinett</title>
+<style>
+:root{
+  --nacht:#0b0a09; --nacht-2:#131110; --wachs:#e8ddcb; --wachs-dim:#9a9086;
+  --rose:#c98f86; --bronze:#8c6b4a; --linie:#2a2522;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text",Georgia,serif;
+  --sans:"Helvetica Neue",Inter,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--nacht);color:var(--wachs);font-family:var(--serif);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+/* ---------- Staub / Raumlicht ---------- */
+.raum{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(120% 70% at 50% -10%, rgba(232,221,203,.07), transparent 60%),
+    radial-gradient(90% 60% at 10% 110%, rgba(140,107,74,.06), transparent 60%);}
+.korn{position:fixed;inset:-50%;pointer-events:none;z-index:60;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:korn 1.2s steps(3) infinite}
+@keyframes korn{0%{transform:translate(0,0)}33%{transform:translate(-2%,1%)}66%{transform:translate(1%,-2%)}}
+
+/* ---------- Eingang ---------- */
+#eingang{position:fixed;inset:0;z-index:50;background:var(--nacht);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;
+  transition:opacity 1.4s ease, visibility 1.4s}
+#eingang.weg{opacity:0;visibility:hidden}
+#eingang h1{font-size:clamp(2.4rem,9vw,7rem);font-weight:400;letter-spacing:.22em;
+  text-indent:.22em;line-height:1;text-align:center}
+#eingang .sub{font-family:var(--sans);font-size:.66rem;letter-spacing:.44em;
+  text-transform:uppercase;color:var(--wachs-dim);text-indent:.44em;text-align:center}
+.eintreten{font-family:var(--sans);font-size:.64rem;letter-spacing:.4em;text-transform:uppercase;
+  background:none;border:1px solid var(--linie);color:var(--wachs-dim);
+  padding:1.1em 2.4em;cursor:pointer;transition:.6s;text-indent:.4em}
+.eintreten:hover{border-color:var(--wachs-dim);color:var(--wachs);letter-spacing:.5em}
+.fadein{animation:auf 2.4s both}
+@keyframes auf{from{opacity:0;filter:blur(6px)}to{opacity:1;filter:none}}
+
+/* ---------- Kopf ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;
+  align-items:center;padding:1.5rem 2.2rem;isolation:isolate;
+  font-family:var(--sans);font-size:.6rem;letter-spacing:.34em;text-transform:uppercase}
+header .marke{text-indent:.34em}
+nav a{margin-left:1.6rem;text-decoration:none;opacity:.55;transition:.4s}
+nav a:hover{opacity:1}
+
+/* ---------- Kabinett-Sektion ---------- */
+main{position:relative;z-index:1;padding-top:26vh}
+.kabinett{padding:0 clamp(1.2rem,5vw,6rem) 12vh;scroll-margin-top:12vh}
+.schwelle{display:flex;align-items:baseline;gap:1.4rem;padding:13vh 0 8vh;
+  border-top:1px solid var(--linie)}
+.schwelle .rn{font-family:var(--sans);font-size:.62rem;letter-spacing:.34em;color:var(--bronze)}
+.schwelle h2{font-size:clamp(1.8rem,5vw,3.4rem);font-weight:400;letter-spacing:.14em;flex:1}
+.schwelle p{max-width:26ch;font-size:.86rem;line-height:1.7;color:var(--wachs-dim);font-style:italic}
+
+/* ---------- Sockel-Reihe ---------- */
+.reihe{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:center;
+  gap:clamp(2rem,6vw,7rem);padding-bottom:4vh}
+.sockel{position:relative;cursor:pointer;background:none;border:0;padding:0;color:inherit;
+  text-align:center;opacity:0;transform:translateY(26px);
+  transition:opacity 1.5s ease, transform 1.5s cubic-bezier(.2,.7,.2,1)}
+.sockel.da{opacity:1;transform:none}
+.sockel .licht{position:absolute;left:50%;top:-22%;width:260%;height:150%;transform:translateX(-50%);
+  background:radial-gradient(ellipse 42% 46% at 50% 26%, rgba(232,221,203,.20), rgba(232,221,203,.05) 52%, transparent 74%);
+  filter:blur(26px);opacity:.45;transition:opacity .9s;pointer-events:none}
+.sockel:hover .licht,.sockel:focus-visible .licht{opacity:1}
+/* Der Rahmen des Fotos löst sich in den dunklen Raum auf */
+.sockel img{filter:brightness(.88) contrast(1.04) saturate(.94);
+  transition:filter 1s, transform 1.2s cubic-bezier(.2,.7,.2,1);
+  -webkit-mask-image:radial-gradient(ellipse 80% 78% at 50% 50%, #000 66%, rgba(0,0,0,.6) 86%, transparent 100%);
+  mask-image:radial-gradient(ellipse 80% 78% at 50% 50%, #000 66%, rgba(0,0,0,.6) 86%, transparent 100%)}
+.sockel:hover img,.sockel:focus-visible img{filter:brightness(1.05) contrast(1.02);transform:translateY(-6px)}
+.sockel .platte{display:block;width:80%;height:26px;margin:-14px auto 0;
+  background:radial-gradient(ellipse 50% 60% at 50% 0%, rgba(0,0,0,.65), transparent 72%)}
+.schild{margin-top:1.1rem;font-family:var(--sans);font-size:.56rem;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--wachs-dim);text-indent:.26em;
+  opacity:.45;transition:opacity .7s}
+.sockel:hover .schild,.sockel:focus-visible .schild{opacity:1;color:var(--wachs)}
+
+/* Höhenstaffelung wie im Raum */
+.h-s img{height:clamp(150px,20vh,230px);width:auto}
+.h-m img{height:clamp(210px,30vh,340px);width:auto}
+.h-l img{height:clamp(260px,40vh,440px);width:auto}
+
+/* ---------- Vitrine (Overlay) ---------- */
+#vitrine{position:fixed;inset:0;z-index:70;background:rgba(6,5,5,.97);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transition:opacity .7s;backdrop-filter:blur(6px)}
+#vitrine.auf{opacity:1;visibility:visible}
+#vitrine figure{max-width:min(1100px,88vw);display:flex;gap:clamp(1.5rem,5vw,4.5rem);
+  align-items:center;flex-wrap:wrap;justify-content:center}
+#vitrine img{max-height:74vh;width:auto;filter:brightness(1.04);
+  -webkit-mask-image:radial-gradient(ellipse 82% 80% at 50% 50%, #000 70%, rgba(0,0,0,.65) 88%, transparent 100%);
+  mask-image:radial-gradient(ellipse 82% 80% at 50% 50%, #000 70%, rgba(0,0,0,.65) 88%, transparent 100%)}
+#vitrine figcaption{max-width:24ch}
+#vitrine h3{font-size:2rem;font-weight:400;letter-spacing:.16em;margin-bottom:1rem}
+#vitrine #v-en{color:var(--bronze)}
+#vitrine .meta{font-family:var(--sans);font-size:.62rem;letter-spacing:.2em;line-height:2.4;
+  text-transform:uppercase;color:var(--wachs-dim)}
+.vsteuer{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
+  display:flex;gap:2.4rem;font-family:var(--sans);font-size:.6rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--wachs-dim)}
+.vsteuer button{background:none;border:0;color:inherit;cursor:pointer;letter-spacing:.3em;
+  font:inherit;transition:.4s}
+.vsteuer button:hover{color:var(--wachs)}
+#zaehler{color:var(--bronze)}
+
+/* ---------- Schlussräume ---------- */
+.text{max-width:62ch;margin:0 auto;padding:0 1.4rem}
+.text p{font-size:1.02rem;line-height:2;margin-bottom:1.7rem;color:#cdc3b4}
+.text p.gross{font-size:1.5rem;line-height:1.8;color:var(--wachs);font-style:italic}
+.vita{display:grid;grid-template-columns:8rem 1fr;gap:1rem 2rem;max-width:62ch;margin:0 auto;
+  padding:0 1.4rem;font-family:var(--sans);font-size:.78rem;line-height:1.9;color:#cdc3b4}
+.vita dt{color:var(--bronze);letter-spacing:.14em}
+.aus{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;max-width:62ch;margin:2rem auto 0;padding:0 1.4rem;
+  font-family:var(--sans);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--wachs-dim)}
+footer{border-top:1px solid var(--linie);margin-top:16vh;padding:4rem 2.2rem 3rem;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:1.4rem;
+  font-family:var(--sans);font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--wachs-dim)}
+header::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(11,10,9,.92),rgba(11,10,9,0));mix-blend-mode:normal}
+@media(max-width:720px){
+  .schwelle{flex-direction:column;gap:.8rem}main{padding-top:20vh}
+  header{padding:1.1rem 1.1rem;font-size:.5rem;letter-spacing:.2em}
+  nav a{margin-left:.85rem}
+  #vitrine figure{flex-direction:column;gap:1.4rem}
+  #vitrine img{max-height:52vh}
+  .vsteuer{gap:1.2rem;font-size:.54rem;letter-spacing:.2em}
+}
+</style>
+</head>
+<body>
+<div class="raum"></div><div class="korn"></div>
+
+<div id="eingang">
+  <div class="sub fadein" style="animation-delay:.3s">Bildhauerin — Skulptur, Plastik und Assemblage</div>
+  <h1 class="fadein" style="animation-delay:.6s">EVA ADEMI</h1>
+  <div class="sub fadein" style="animation-delay:1.1s">Kabinett der Flora und Fauna</div>
+  <button class="eintreten fadein" style="animation-delay:1.8s">Eintreten</button>
+</div>
+
+<header>
+  <span class="marke">Eva Ademi</span>
+  <nav>
+    <a href="#wachs">Wachs</a><a href="#bronze">Bronze</a><a href="#stein">Stein</a>
+    <a href="#assemblage">Assemblage</a><a href="#vita">Vita</a><a href="../index.html">Index</a>
+  </nav>
+</header>
+
+<main id="saal"></main>
+
+<div id="vitrine" role="dialog" aria-modal="true">
+  <figure>
+    <img id="v-bild" alt="">
+    <figcaption>
+      <h3 id="v-titel"></h3>
+      <div class="meta"><span id="v-en"></span><span id="v-det"></span><br><span id="v-mat"></span></div>
+    </figcaption>
+  </figure>
+  <div class="vsteuer">
+    <button data-nav="-1">← Zurück</button>
+    <span id="zaehler"></span>
+    <button data-nav="1">Weiter →</button>
+    <button data-nav="x">Schließen</button>
+  </div>
+</div>
+
+<script src="../assets/werke.js"></script>
+<script>
+const W = window.WERKE, G = window.GRUPPEN, T = window.TEXTE;
+const hoehe = ["h-m","h-l","h-s","h-m","h-s","h-l","h-m"];
+let k = 0;
+
+/* Räume bauen */
+const saal = document.getElementById("saal");
+saal.innerHTML = G.map(gr=>{
+  const teile = W.filter(w=>w.g===gr.g);
+  if(!teile.length) return "";
+  return `<section class="kabinett" id="${gr.g}">
+    <div class="schwelle"><span class="rn">${gr.r}</span><h2>${gr.n}</h2><p>${gr.s}</p></div>
+    <div class="reihe">${teile.map(w=>{
+      const i = W.indexOf(w);
+      return `<button class="sockel ${hoehe[k++%hoehe.length]}" data-i="${i}">
+        <span class="licht"></span>
+        <img src="../assets/werke/${w.f}" alt="${w.t}" loading="lazy">
+        <span class="platte"></span>
+        <span class="schild">${w.t}</span>
+      </button>`}).join("")}</div>
+  </section>`;
+}).join("") + `
+<section class="kabinett" id="vita">
+  <div class="schwelle"><span class="rn">VI</span><h2>Über die Arbeit</h2><p>Werden und Vergehen.</p></div>
+  <div class="text">
+    <p class="gross">${T.intro}</p>
+    ${T.absatz.map(p=>`<p>${p}</p>`).join("")}
+    <p class="gross">${T.schluss}</p>
+  </div>
+  <div class="schwelle" style="margin-top:10vh"><span class="rn">VII</span><h2>Vita</h2><p>Bonn-Ramersdorf</p></div>
+  <dl class="vita">${T.vita.map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join("")}</dl>
+  <div class="aus">${T.ausstellungen.map(a=>`<span>${a}</span>`).join("")}</div>
+</section>
+<footer>
+  <span>Atelier Bonn-Ramersdorf — Kursangebot 2026</span>
+  <span>Kontakt · Termine · Anfahrt · Impressum</span>
+</footer>`;
+
+/* Eintreten */
+const eingang = document.querySelector("#eingang");
+function eintreten(){eingang.classList.add("weg");document.body.style.overflow="auto"}
+eingang.querySelector("button").onclick = eintreten;
+if(location.hash){ eintreten(); }
+else { document.body.style.overflow="hidden"; }
+
+/* Werke erscheinen im Licht */
+const io = new IntersectionObserver((es)=>es.forEach((e,n)=>{
+  if(e.isIntersecting){ setTimeout(()=>e.target.classList.add("da"), n*110); io.unobserve(e.target); }
+}),{threshold:.2});
+document.querySelectorAll(".sockel").forEach(s=>io.observe(s));
+
+/* Vitrine */
+const vit=document.getElementById("vitrine");
+const $ = id=>document.getElementById(id);
+let aktuell=0;
+function zeigen(i){
+  aktuell=(i+W.length)%W.length; const w=W[aktuell];
+  $("v-bild").src="../assets/werke/"+w.f; $("v-bild").alt=w.t;
+  $("v-titel").textContent=w.t;
+  $("v-en").innerHTML = w.en ? w.en+"<br>" : "";
+  $("v-det").textContent = w.d || "—";
+  $("v-mat").textContent = w.gruppe+" · "+(w.j||"o. J.");
+  $("zaehler").textContent=String(aktuell+1).padStart(2,"0")+" / "+W.length;
+  vit.classList.add("auf");
+}
+document.querySelectorAll(".sockel").forEach(s=>s.onclick=()=>zeigen(+s.dataset.i));
+vit.querySelectorAll("[data-nav]").forEach(b=>b.onclick=e=>{
+  e.stopPropagation();
+  const d=b.dataset.nav;
+  d==="x" ? vit.classList.remove("auf") : zeigen(aktuell+ +d);
+});
+vit.onclick=e=>{ if(e.target===vit) vit.classList.remove("auf"); };
+addEventListener("keydown",e=>{
+  if(!vit.classList.contains("auf"))return;
+  if(e.key==="Escape")vit.classList.remove("auf");
+  if(e.key==="ArrowRight")zeigen(aktuell+1);
+  if(e.key==="ArrowLeft")zeigen(aktuell-1);
+});
+</script>
+</body>
+</html>

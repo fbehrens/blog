@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EVA ADEMI — Werden und Vergehen</title>
+<style>
+:root{
+  --papier:#e6dfd2; --papier-t:#d9d0bf; --wachs:#f2e9d8;
+  --tinte:#1e1a15; --grau:#6f675b; --rost:#a5613f; --rose:#c08b80;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Hoefler Text",Georgia,serif;
+  --sans:"Helvetica Neue",Inter,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--papier);color:var(--tinte);font-family:var(--serif);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block}
+a{color:inherit;text-decoration:none}
+
+/* Atmosphäre: Papier + Wachslicht, das mit dem Scrollen kippt */
+#atem{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+   radial-gradient(90% 70% at 50% 0%, rgba(242,233,216,.9), transparent 60%),
+   radial-gradient(70% 60% at 85% 100%, rgba(165,97,63,.12), transparent 65%),
+   linear-gradient(180deg,var(--wachs),var(--papier) 45%,var(--papier-t));
+  transition:filter 1.2s}
+#faser{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .40 0 0 0 0 .33 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23f)'/%3E%3C/svg%3E")}
+
+/* Kopf */
+header{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;
+  padding:1.6rem 2.2rem;font-family:var(--sans);font-size:.58rem;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--grau);isolation:isolate}
+header::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(242,233,216,.95),rgba(242,233,216,0))}
+
+/* Lebenslinie */
+.linie{position:fixed;left:2.2rem;top:22vh;bottom:22vh;width:1px;background:rgba(30,26,21,.14);z-index:30}
+.linie i{position:absolute;left:0;top:0;width:1px;background:var(--rost);height:0}
+.linie b{position:absolute;left:-3px;width:7px;height:7px;border-radius:50%;background:var(--rost);
+  transform:translateY(-3px);font-size:0}
+.linie em{position:absolute;left:1rem;font-family:var(--sans);font-size:.52rem;letter-spacing:.3em;
+  font-style:normal;color:var(--grau);white-space:nowrap;transform:translateY(-.4em)}
+
+/* Ouvertüre */
+.ouv{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:2rem;position:relative;z-index:2;text-align:center;padding:0 1.4rem}
+.ouv .oben{font-family:var(--sans);font-size:.6rem;letter-spacing:.44em;text-transform:uppercase;
+  color:var(--grau);text-indent:.44em}
+.ouv h1{font-size:clamp(2.6rem,10vw,8rem);font-weight:400;line-height:.95;letter-spacing:.02em}
+.ouv h1 span{display:block;font-style:italic;color:var(--rost)}
+.ouv .unten{max-width:34ch;font-size:.94rem;line-height:2;color:#4a4339}
+.scrollhin{position:absolute;bottom:3.4rem;font-family:var(--sans);font-size:.54rem;
+  letter-spacing:.34em;text-transform:uppercase;color:var(--grau)}
+.scrollhin::after{content:"";display:block;width:1px;height:46px;background:var(--grau);
+  margin:1rem auto 0;transform-origin:top;animation:atmen 3.2s ease-in-out infinite}
+@keyframes atmen{0%,100%{transform:scaleY(.25);opacity:.3}50%{transform:scaleY(1);opacity:.8}}
+
+/* Werk-Bühne: ein Werk pro Blick */
+.buehne{min-height:118vh;display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:2;padding:12vh clamp(1.2rem,7vw,8rem)}
+.buehne .inhalt{display:flex;align-items:center;gap:clamp(2rem,7vw,7rem);
+  max-width:1180px;width:100%;flex-wrap:wrap;justify-content:center}
+.buehne.kehrt .inhalt{flex-direction:row-reverse}
+.bild{position:relative;flex:0 1 auto;
+  opacity:0;transform:translateY(46px) scale(.985);filter:blur(7px) saturate(.8);
+  transition:opacity 1.6s ease, transform 1.8s cubic-bezier(.16,.84,.24,1), filter 1.6s}
+.buehne.da .bild{opacity:1;transform:none;filter:none}
+.bild img{max-height:min(66vh,620px);width:auto;
+  -webkit-mask-image:radial-gradient(ellipse 68% 66% at 50% 48%, #000 50%, rgba(0,0,0,.7) 82%, transparent 100%);
+  mask-image:radial-gradient(ellipse 68% 66% at 50% 48%, #000 50%, rgba(0,0,0,.7) 82%, transparent 100%)}
+.bild::after{content:"";position:absolute;left:8%;right:8%;bottom:-26px;height:26px;
+  background:radial-gradient(ellipse at 50% 0%, rgba(40,30,20,.22), transparent 70%)}
+
+.wort{flex:1 1 260px;max-width:34ch;
+  opacity:0;transform:translateY(24px);transition:opacity 1.6s .35s, transform 1.6s .35s}
+.buehne.da .wort{opacity:1;transform:none}
+.wort .nr{font-family:var(--sans);font-size:.56rem;letter-spacing:.34em;color:var(--rost);
+  margin-bottom:1.4rem}
+.wort h2{font-size:clamp(1.7rem,3.6vw,2.7rem);font-weight:400;letter-spacing:.06em;line-height:1.1}
+.wort .en{font-style:italic;color:var(--rost);font-size:.98rem;margin-top:.5rem}
+.wort .mat{font-family:var(--sans);font-size:.62rem;letter-spacing:.14em;color:var(--grau);
+  line-height:2;margin-top:1.1rem;padding-top:1.1rem;border-top:1px solid rgba(30,26,21,.14)}
+.wort .zitat{margin-top:2rem;font-style:italic;font-size:1.02rem;line-height:1.95;color:#4a4339}
+
+/* Gruppen-Zäsur */
+.zaesur{min-height:72vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:1.4rem;position:relative;z-index:2;text-align:center;padding:0 1.4rem}
+.zaesur .rn{font-family:var(--sans);font-size:.56rem;letter-spacing:.4em;color:var(--rost)}
+.zaesur h3{font-size:clamp(2.2rem,7vw,5rem);font-weight:400;letter-spacing:.12em;
+  opacity:0;transform:scale(.97);transition:1.4s}
+.zaesur.da h3{opacity:1;transform:none}
+.zaesur p{max-width:38ch;font-size:.92rem;line-height:2;color:#4a4339;font-style:italic;
+  opacity:0;transition:1.4s .3s}
+.zaesur.da p{opacity:1}
+
+/* Essay */
+.essay{max-width:60ch;margin:0 auto;padding:22vh 1.6rem;position:relative;z-index:2}
+.essay p{font-size:1.06rem;line-height:2.15;margin-bottom:1.9rem;color:#3c362d;
+  opacity:0;transform:translateY(16px);transition:1.3s}
+.essay p.da{opacity:1;transform:none}
+.essay p.gross{font-size:1.5rem;line-height:1.85;font-style:italic;color:var(--tinte)}
+
+/* Schluss */
+.schluss{position:relative;z-index:2;padding:10vh clamp(1.4rem,7vw,8rem) 6vh;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:3.4rem;
+  border-top:1px solid rgba(30,26,21,.14)}
+.schluss h4{font-family:var(--sans);font-size:.56rem;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--rost);margin-bottom:1.4rem}
+.schluss li,.schluss p{list-style:none;font-size:.88rem;line-height:2.1;color:#3c362d}
+.schluss .jahr{font-family:var(--sans);font-size:.62rem;letter-spacing:.14em;color:var(--grau);display:block}
+footer{position:relative;z-index:2;padding:3rem clamp(1.4rem,7vw,8rem) 3.4rem;
+  font-family:var(--sans);font-size:.56rem;letter-spacing:.3em;text-transform:uppercase;color:var(--grau);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+@media(max-width:760px){
+  .linie{display:none}
+  .buehne{min-height:auto;padding:9vh 1.4rem}
+  .buehne .inhalt,.buehne.kehrt .inhalt{flex-direction:column;gap:2rem}
+  .bild img{max-height:56vh}
+  header{padding:1.1rem 1.2rem;font-size:.5rem;letter-spacing:.22em}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="atem"></div><div id="faser"></div>
+
+<header><span>Eva Ademi — Bildhauerin</span><a href="../index.html">Index</a></header>
+<div class="linie"><i id="lline"></i><b id="lpunkt"><em id="lname"></em></b></div>
+
+<section class="ouv">
+  <div class="oben">Skulptur · Plastik · Assemblage</div>
+  <h1>Werden<span>und Vergehen</span></h1>
+  <p class="unten" id="anzahl"></p>
+  <div class="scrollhin">Weiter</div>
+</section>
+
+<main id="zug"></main>
+
+<script src="../assets/werke.js"></script>
+<script>
+const W=window.WERKE,G=window.GRUPPEN,T=window.TEXTE;
+const zitate=[
+ "Die vitale Kraft des Lebendigen, die sich selbstbewusst in die Welt drängen möchte.",
+ "Manchmal verzaubern sie durch ihre pure Schönheit.",
+ "Das Element des zwangsläufigen Verfalls alles Lebendigen.",
+ "Manchmal verstören sie mit ihrer zarten Melancholie.",
+ "Rostige Drähte und Nägel, verbleichte Knochen, ausgewaschene Hölzer.",
+ "Manchmal überwältigen sie mit ihrer unbändigen Energie."
+];
+let n=0,zi=0,html="";
+G.forEach(gr=>{
+  const teile=W.filter(w=>w.g===gr.g); if(!teile.length)return;
+  html+=`<section class="zaesur" data-name="${gr.n}"><div class="rn">${gr.r}</div>
+    <h3>${gr.n}</h3><p>${gr.s}</p></section>`;
+  teile.forEach(w=>{
+    n++;
+    const zit = n%3===0 ? `<p class="zitat">„${zitate[zi++%zitate.length]}“</p>` : "";
+    html+=`<section class="buehne ${n%2?"":"kehrt"}" data-name="${w.t}">
+      <div class="inhalt">
+        <figure class="bild"><img src="../assets/werke/${w.f}" alt="${w.t}" loading="lazy"></figure>
+        <div class="wort">
+          <div class="nr">${String(n).padStart(2,"0")} / ${String(W.length).padStart(2,"0")}</div>
+          <h2>${w.t}</h2>
+          ${w.en?`<div class="en">${w.en}</div>`:""}
+          <div class="mat">${w.d||"—"}<br>${w.gruppe} · ${w.j||"o. J."}</div>
+          ${zit}
+        </div>
+      </div></section>`;
+  });
+});
+
+html+=`<section class="essay" data-name="Text">
+  <p class="gross">${T.intro}</p>
+  ${T.absatz.map(p=>`<p>${p}</p>`).join("")}
+  <p class="gross">${T.schluss}</p>
+</section>
+<section class="schluss" data-name="Vita">
+  <div><h4>Vita</h4><ul>${T.vita.map(([a,b])=>`<li><span class="jahr">${a}</span>${b}</li>`).join("")}</ul></div>
+  <div><h4>Ausstellungen</h4><ul>${T.ausstellungen.map(a=>`<li>${a}</li>`).join("")}</ul></div>
+  <div><h4>Atelier</h4><p>Bonn-Ramersdorf</p><p>Kursangebot 2026 — Bildhauerkurse in Speckstein und Wachs.</p><p>Termine nach Vereinbarung.</p></div>
+</section>
+<footer><span>Eva Ademi — Bonn</span><span>Kontakt · Termine · Anfahrt · Impressum · Datenschutz</span></footer>`;
+document.getElementById("zug").innerHTML=html;
+const zahlwort=["","eine","zwei","drei","vier","fünf","sechs","sieben","acht","neun","zehn"];
+document.getElementById("anzahl").textContent =
+  "Eine Ausstellung in "+W.length+" Stationen.";
+
+/* Erscheinen & Vergehen */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting) e.target.classList.add("da");
+  else if(e.boundingClientRect.top>0) e.target.classList.remove("da");
+}),{threshold:.28});
+document.querySelectorAll(".buehne,.zaesur").forEach(s=>io.observe(s));
+const io2=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add("da")),{threshold:.6});
+document.querySelectorAll(".essay p").forEach(p=>io2.observe(p));
+
+/* Lebenslinie + Lichtwechsel */
+const linie=document.getElementById("lline"),punkt=document.getElementById("lpunkt"),
+      name=document.getElementById("lname"),atem=document.getElementById("atem");
+const stationen=[...document.querySelectorAll("[data-name]")];
+addEventListener("scroll",()=>{
+  const p=scrollY/Math.max(1,document.body.scrollHeight-innerHeight);
+  linie.style.height=(p*100)+"%"; punkt.style.top=(p*100)+"%";
+  const mitte=innerHeight/2;
+  let nah=stationen[0],d=1e9;
+  for(const s of stationen){const r=s.getBoundingClientRect();
+    const dd=Math.abs(r.top+r.height/2-mitte); if(dd<d){d=dd;nah=s}}
+  name.textContent=nah.dataset.name;
+  atem.style.filter=`hue-rotate(${(p*14).toFixed(1)}deg) brightness(${(1-p*.1).toFixed(3)})`;
+},{passive:true});
+</script>
+</body>
+</html>

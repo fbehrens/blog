@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EVA ADEMI — Drei Entwürfe</title>
+<style>
+:root{--bg:#16130f;--t:#e8ddcb;--grau:#8f867a;--rost:#a5613f;
+ --serif:"Iowan Old Style",Palatino,Georgia,serif;--sans:"Helvetica Neue",Inter,system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--t);font-family:var(--serif);padding:8vh clamp(1.4rem,6vw,7rem)}
+.kopf{margin-bottom:9vh;max-width:56ch}
+.kopf .o{font-family:var(--sans);font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:var(--grau);margin-bottom:1.6rem}
+h1{font-size:clamp(2rem,6vw,4rem);font-weight:400;letter-spacing:.06em;line-height:1.1}
+.kopf p{margin-top:1.8rem;font-size:.98rem;line-height:2;color:#b8ae9f}
+.karten{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.6rem}
+a.karte{display:block;text-decoration:none;color:inherit;border:1px solid #2b2621;padding:2.2rem;
+ transition:.5s;position:relative;overflow:hidden}
+a.karte:hover{border-color:var(--rost);background:#1b1713}
+.karte .nr{font-family:var(--sans);font-size:.58rem;letter-spacing:.36em;color:var(--rost)}
+.karte h2{font-size:1.8rem;font-weight:400;letter-spacing:.1em;margin:1.2rem 0 .4rem}
+.karte .idee{font-family:var(--sans);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--grau)}
+.karte p{font-size:.9rem;line-height:1.95;color:#b8ae9f;margin-top:1.4rem}
+.karte ul{margin-top:1.4rem;padding-left:1.1rem;font-family:var(--sans);font-size:.74rem;line-height:2;color:#8f867a}
+.vor{margin-top:1.8rem;height:120px;display:flex;gap:.5rem;align-items:flex-end;overflow:hidden}
+.vor img{height:100%;width:auto;object-fit:cover;filter:brightness(.8)}
+footer{margin-top:10vh;font-family:var(--sans);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--grau);line-height:2.4}
+</style></head>
+<body>
+<div class="kopf">
+  <div class="o">Entwurf · Website Redesign</div>
+  <h1>EVA ADEMI<br>Drei Prototypen</h1>
+  <p>Drei Lesarten derselben Idee: der Besuch der Website soll sich anfühlen wie der Besuch einer Ausstellung. Gleiche Inhalte, gleiche Werke — drei verschiedene Räume.</p>
+</div>
+<div class="karten">
+  <a class="karte" href="p1-kabinett/index.html">
+    <div class="nr">Prototyp I</div><h2>Kabinett</h2>
+    <div class="idee">Dunkler Raum · Spotlight · Vitrine</div>
+    <p>Man betritt einen abgedunkelten Saal. Die Skulpturen stehen auf Sockeln im Lichtkegel, in fünf Kabinetten nach Material. Ein Klick öffnet die Vitrine — Einzelwerk, Wandschild, Pfeiltasten.</p>
+    <ul><li>Eingangsschwelle „Eintreten“</li><li>Höhenstaffelung wie im Raum</li><li>Warm-schwarz, Wachs, Bronze</li></ul>
+    <div class="vor"><img src="assets/werke/falter-m.jpg" alt=""><img src="assets/werke/gorilla-hockend.jpg" alt=""><img src="assets/werke/sichler.jpg" alt=""></div>
+  </a>
+  <a class="karte" href="p2-saal/index.html">
+    <div class="nr">Prototyp II</div><h2>Saal</h2>
+    <div class="idee">White Cube · Hängung · Rundgang</div>
+    <p>Ein weißer Saal, der sich seitwärts öffnet. Scrollen wird zum Gehen an der Wand entlang. Werke auf gemeinsamer Blickachse, Wandschilder links darunter, Grundriss am Boden.</p>
+    <ul><li>Horizontaler Rundgang</li><li>Große Wandtexte als Saalschilder</li><li>Mobil: klassisch vertikal</li></ul>
+    <div class="vor"><img src="assets/werke/koralle-iv.jpg" alt=""><img src="assets/werke/polarbaer.jpg" alt=""><img src="assets/werke/trieb.jpg" alt=""></div>
+  </a>
+  <a class="karte" href="p3-werden/index.html">
+    <div class="nr">Prototyp III</div><h2>Werden und Vergehen</h2>
+    <div class="idee">Inszenierung · ein Werk pro Blick</div>
+    <p>Die Ausstellung als Erzählung: 38 Stationen, jedes Werk allein im Bild. Werke treten aus der Unschärfe hervor und verschwinden wieder. Papierlicht, das über den Besuch hinweg kippt.</p>
+    <ul><li>Lebenslinie als Wegmarke</li><li>Essay in den Rundgang eingelegt</li><li>Respektiert reduzierte Bewegung</li></ul>
+    <div class="vor"><img src="assets/werke/jellyfish.jpg" alt=""><img src="assets/werke/keimlinge-50.jpg" alt=""><img src="assets/werke/qualle-ii.jpg" alt=""></div>
+  </a>
+</div>
+<footer>
+  Bilder, Titel, Material-, Maß- und Jahresangaben: evaademi.com (38 Werke, abgerufen 28.09.2026)<br>
+  Statisches HTML/CSS/JS, kein Build — jeder Prototyp läuft eigenständig
+</footer>
+</body></html>
