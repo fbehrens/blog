@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1 · Where does a new window land?</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/tree.js"></script>
+<script src="../assets/quiz.js"></script>
+</head>
+<body>
+<main>
+<header class="lesson">
+  <div class="kicker">AeroSpace layouts · lesson 1</div>
+  <h1>Where does a new window land?</h1>
+  <p class="lead">After this lesson you can predict the new window's position before you press ⌘N.</p>
+</header>
+
+<h2>Your screen is a tree</h2>
+<p>AeroSpace stores every window of a workspace in a tree.<span class="cite"><a href="https://nikitabobko.github.io/AeroSpace/guide#tree">[guide]</a></span></p>
+<ul>
+  <li>Every <b>window</b> is a leaf. Every non-leaf node is a <b>container</b>.</li>
+  <li>Each workspace has exactly one <b>root container</b>.</li>
+  <li>Every container has a <b>layout</b> (<code>tiles</code> or <code>accordion</code>) and an <b>orientation</b> (<code>horizontal</code> or <code>vertical</code>). Together these give four names: <code>h_tiles</code>, <code>v_tiles</code>, <code>h_accordion</code>, <code>v_accordion</code>.<span class="cite"><a href="https://nikitabobko.github.io/AeroSpace/guide#layouts">[layouts]</a></span></li>
+</ul>
+<p>This course writes trees compactly. <code>h[1 v[2 3]]</code> means an <code>h_tiles</code> root holding window 1, followed by a <code>v_tiles</code> container holding 2 and 3. Upper case (<code>V[…]</code>) means accordion.</p>
+<div id="static"></div>
+
+<h2>The placement rule</h2>
+<div class="rule-box">
+  <strong>Rule</strong>
+  A new window is inserted into the <em>same container</em> as the <em>most recently focused</em> window, <em>directly after it</em>.
+</div>
+<p>That's the whole rule. It's in the source, not in the guide: <code>unbindAndGetBindingDataForNewTilingWindow</code> in <code>Sources/AppBundle/tree/MacWindow.swift</code> binds the new window to <code>mruWindow.parent</code> at <code>mruWindow.ownIndex + 1</code>.<span class="cite"><a href="https://github.com/nikitabobko/AeroSpace/blob/main/Sources/AppBundle/tree/MacWindow.swift">[source]</a></span> Three consequences follow:</p>
+<ol>
+  <li><b>Focus first, then open.</b> Focus picks both the container and the slot.</li>
+  <li><b>A new window never creates a container.</b> It only joins one that already exists. Nesting always comes from a command such as <code>join-with</code> or <code>move</code>, covered in the next lessons.</li>
+  <li><b>Floating trap.</b> If the last focused window is floating, there's no tiling parent to join, so the new window is appended to the end of the root container. Your config floats Finder, Chromium, and others, so watch for this.</li>
+</ol>
+<p class="aside">The new window uses its container's orientation. In an <code>h_…</code> container it appears to the right of the focused window. In a <code>v_…</code> container it appears below. <b>Normalization</b> keeps the tree tidy: containers with one child are flattened, and nested containers alternate orientation.<span class="cite"><a href="https://nikitabobko.github.io/AeroSpace/guide#normalization">[normalization]</a></span></p>
+
+<h2>Play</h2>
+<p>Click a window to focus it, then press <b>open new window</b>. You can also click inside the box and use the keys <kbd>n</kbd>, <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd>, and <kbd>x</kbd>. Use <code>join-with</code> to build nesting, then watch where new windows go.</p>
+<div id="sim"></div>
+<p class="aside">The simulator is a JavaScript port of AeroSpace's own tree code (<code>assets/tree.js</code>). It's checked against the before/after examples in the AeroSpace docs and tests. Window sizes are always equal here; <code>resize</code> isn't simulated.</p>
+
+<h2>Predict</h2>
+<p>Commit to an answer before you click. Wrong-then-right is how the rule sticks.</p>
+<div id="quiz"></div>
+
+<h2>Dojo: do it for real</h2>
+<p>The dojo is a throwaway app whose windows are big numbered color blocks (<code>assets/dojo/</code>, bundle id <code>local.aerospace.dojo</code>). Press <kbd>⌘N</kbd> to open a new window and <kbd>⌘W</kbd> to close one. Running <code>open</code> again while it's running also opens a window.</p>
+<pre>~/c/teach/aerospace/assets/dojo/build.sh                     # once (already built)
+open ~/c/teach/aerospace/assets/dojo/Dojo.app               # starts with window 1</pre>
+<ol class="steps">
+  <li>Switch to an <b>empty</b> workspace and start the dojo. Press <kbd>⌘N</kbd> twice. You should see <code>h[1 2 3]</code>, since each new window lands after the one you just focused.</li>
+  <li>Focus <b>2</b> (<kbd>alt-h</kbd>/<kbd>alt-l</kbd>). Enter service mode with <kbd>alt-shift-;</kbd>, then press <kbd>alt-shift-l</kbd> (<code>join-with right</code>). You now have <code>h[1 v[2 3]]</code>.</li>
+  <li>Focus <b>1</b>, <em>say out loud</em> where 4 will land, then press <kbd>⌘N</kbd>.</li>
+  <li>Focus <b>3</b>, predict, then press <kbd>⌘N</kbd>.</li>
+  <li>Click a floating window such as Finder, then click back into a dojo window and press <kbd>⌘N</kbd>. Next, activate Finder only, then run <code>open …/Dojo.app</code> from a terminal. Where does the new window land each time?</li>
+</ol>
+
+<h2>Recall</h2>
+<details><summary>Close your eyes. State the placement rule and its three consequences, then reveal.</summary>
+<p>Same container as the <b>most recently focused window</b>, directly after it. (1) Focus first, then open. (2) New windows never create containers. (3) If the most recent window is floating, the new window goes to the end of the root container.</p></details>
+
+<div class="source"><a href="https://nikitabobko.github.io/AeroSpace/guide#tree">AeroSpace Guide: Tree, Layouts, Normalization</a>. Five minutes of reading, and the model everything else builds on.</div>
+<p class="ask">Something unclear, or a layout you want to build? Ask your teacher (me, the agent) in the chat.</p>
+
+<nav class="course">
+  <a href="../reference/tree-and-placement.html">Reference: tree &amp; placement →</a>
+  <a href="0002-move-and-join-with.html">Lesson 2: reshaping with <code>move</code> &amp; <code>join-with</code> →</a>
+</nav>
+</main>
+
+<script>
+  Aero.renderScreen(document.getElementById("static"), Aero.parse("h[1 v[2 3]]", {focus: 2}), {width: 300, height: 150});
+  document.getElementById("static").insertAdjacentHTML("afterend",
+    `<pre class="aero-tree" style="margin-top:.6rem">${Aero.parse("h[1 v[2 3]]", {focus: 2}).toString()}</pre>`);
+
+  Aero.mount(document.getElementById("sim"), Aero.parse("h[1 2 3]", {focus: 3}),
+    {controls: ["new", "focus", "join", "close", "flatten"], width: 420, height: 240});
+
+  Quiz.mount(document.getElementById("quiz"), [
+    { prompt: "Window 2 is focused.", setup: "h[1 2 3]", focus: 2, cmd: "open new window",
+      options: ["h[1 2 4 3]", "h[1 2 3 4]", "h[4 1 2 3]"], answer: 0,
+      why: "It lands directly after the focused window (2), not at the end." },
+    { prompt: "Window 1 is focused.", setup: "h[1 v[2 3]]", focus: 1, cmd: "open new window",
+      options: ["h[1 4 v[2 3]]", "h[1 v[2 3 4]]", "h[1 v[2 3] 4]"], answer: 0,
+      why: "1's parent is the root, so window 4 joins the root right after 1 and squeezes between 1 and the stack." },
+    { prompt: "Window 2 is focused.", setup: "h[1 v[2 3]]", focus: 2, cmd: "open new window",
+      options: ["h[1 v[2 4 3]]", "h[1 4 v[2 3]]", "h[1 v[2 3] 4]"], answer: 0,
+      why: "2's parent is the v_tiles stack. Window 4 goes into the stack, right after 2 (below it)." },
+    { prompt: "Vertical root (for example, a portrait monitor). Window 1 is focused.", setup: "v[1 2]", focus: 1, cmd: "open new window",
+      options: ["v[1 3 2]", "v[1 2 3]", "h[v[1 3] 2]"], answer: 0,
+      why: "Same rule. Orientation only decides whether 'after' means right or below." },
+    { prompt: "Window 3 is focused inside a v_accordion.", setup: "h[1 V[2 3]]", focus: 3, cmd: "open new window",
+      options: ["h[1 V[2 3 4]]", "h[1 4 V[2 3]]", "h[1 V[2 3] 4]"], answer: 0,
+      why: "Accordion or tiles doesn't matter: 4 joins 3's container, the accordion, and is shown on top." },
+    { prompt: "Window 3 is focused.", setup: "h[v[1 2] 3]", focus: 3, cmd: "open new window",
+      options: ["h[v[1 2] 3 4]", "h[v[1 2 4] 3]", "h[v[1 2] v[3 4]]"], answer: 0,
+      why: "3 sits in the root, so 4 goes into the root after 3. No new container is created." },
+    { prompt: "You want a new terminal to join the right-hand stack in <code>h[1 v[2 3]]</code>. What must be true just before you open it?",
+      options: ["A window in that stack is focused", "The root container itself is focused", "The leftmost window is focused last"],
+      answer: 0, why: "The container of the most recently focused window receives the new window." },
+    { prompt: "The window you focused last is a <b>floating</b> Finder window. Where does a new tiling window go?",
+      options: ["At the end of the root container", "Right after the last tiled window", "Into a new floating container"],
+      answer: 0, why: "A floating window has no tiling parent, so AeroSpace falls back to appending to the root (MacWindow.swift)." },
+  ]);
+</script>
+</body>
+</html>

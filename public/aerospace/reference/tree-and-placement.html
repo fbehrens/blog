@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reference · Tree &amp; placement</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/tree.js"></script>
+</head>
+<body class="reference">
+<main>
+<header class="lesson">
+  <div class="kicker">AeroSpace layouts · reference</div>
+  <h1>Tree &amp; placement</h1>
+</header>
+
+<div class="grid">
+<section>
+  <h2>The model</h2>
+  <ul>
+    <li><b>Window</b>: a leaf.</li>
+    <li><b>Container</b>: a non-leaf node, with a layout and an orientation.</li>
+    <li><b>Root container</b>: exactly one per workspace.</li>
+    <li>Layouts: <code>tiles</code> | <code>accordion</code>. Orientations: <code>horizontal</code> | <code>vertical</code>.</li>
+    <li>The "layout of a window" is the layout of its parent container.</li>
+  </ul>
+  <p class="aside">Source: <a href="https://nikitabobko.github.io/AeroSpace/guide#tree">guide#tree</a>. Note: an i3 "container" is an AeroSpace "node".</p>
+</section>
+
+<section>
+  <h2>Notation (this course)</h2>
+  <pre>h[1 v[2 3]]      h_tiles root: 1 | stack(2/3)
+H[…]  V[…]       accordion (upper case)
+</pre>
+  <div id="ex"></div>
+</section>
+
+<section>
+  <h2>Placement rule</h2>
+  <div class="rule-box"><strong>New window</strong>
+  Goes into the parent of the <em>most recently focused</em> window, at <em>index + 1</em>.</div>
+  <ul>
+    <li>Focus decides the container and the slot.</li>
+    <li>A new window never creates a container.</li>
+    <li>If the most recent window is floating, the new window goes to the <b>end of the root</b>.</li>
+    <li>Dialogs are floating; popups aren't tiled.</li>
+  </ul>
+  <p class="aside"><code>MacWindow.swift → unbindAndGetBindingDataForNewTilingWindow</code></p>
+</section>
+
+<section>
+  <h2>Normalization (on by default)</h2>
+  <ol>
+    <li><b>Flatten</b>: a container with one child is replaced by that child. A root with a single window is allowed.</li>
+    <li><b>Opposite orientation</b>: a nested container always has the opposite orientation to its parent.</li>
+  </ol>
+  <p class="aside"><a href="https://nikitabobko.github.io/AeroSpace/guide#normalization">guide#normalization</a>. Both are enabled in your config.</p>
+</section>
+
+<section>
+  <h2>Your current bindings</h2>
+  <table>
+    <tr><td><kbd>alt-hjkl</kbd></td><td><code>focus</code></td></tr>
+    <tr><td><kbd>alt-shift-hjkl</kbd></td><td><code>move</code></td></tr>
+    <tr><td><kbd>alt-/</kbd></td><td><code>layout tiles horizontal vertical</code></td></tr>
+    <tr><td><kbd>alt-,</kbd></td><td><code>layout accordion horizontal vertical</code></td></tr>
+    <tr><td><kbd>alt-shift-;</kbd> → <kbd>alt-shift-hjkl</kbd></td><td><code>join-with</code> (service mode)</td></tr>
+    <tr><td><kbd>alt-shift-;</kbd> → <kbd>r</kbd></td><td><code>flatten-workspace-tree</code></td></tr>
+    <tr><td><kbd>alt-shift-;</kbd> → <kbd>f</kbd></td><td><code>layout floating tiling</code></td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>join-with</h2>
+  <div class="rule-box"><strong>Wrap</strong>
+  Me + nearest node in that direction → new container, <em>opposite</em> orientation of their parent, at the neighbour's slot.</div>
+  <ul><li>right/down: I'm first. left/up: I'm last.</li>
+  <li>Neighbour may be a whole container → things can rotate.</li></ul>
+</section>
+
+<section>
+  <h2>move</h2>
+  <ol>
+    <li><b>Swap</b>: sibling that way is a window.</li>
+    <li><b>Move in</b>: sibling is a container → land after its most recently focused window.</li>
+    <li><b>Move out</b>: climb to first ancestor with the move's orientation, land beside the container I left.</li>
+  </ol>
+  <p><b>Wall</b>: reaching the root wraps the whole tree in a new root (move's orientation). <code>h[1 2 <b>3</b>] move down → v[h[1 2] 3]</code></p>
+</section>
+
+<section>
+  <h2>Dojo</h2>
+  <pre>open ~/c/teach/aerospace/assets/dojo/Dojo.app
+⌘N new · ⌘W close · ⌘Q quit
+rebuild: assets/dojo/build.sh</pre>
+  <p class="aside">Bundle id <code>local.aerospace.dojo</code>. The focused window has a white frame and a size label.</p>
+</section>
+</div>
+
+<nav class="course"><a href="../lessons/0001-where-new-windows-land.html">← Lesson 1</a><a href="../lessons/0002-move-and-join-with.html">Lesson 2 →</a></nav>
+</main>
+<script>Aero.renderScreen(document.getElementById("ex"), Aero.parse("h[1 v[2 3]]", {focus: 2}), {width: 220, height: 110});</script>
+</body>
+</html>
