@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karte — Radtouren mit Bahn, Bonn / Porz</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  html,body{margin:0;height:100%;font-family:ui-sans-serif,-apple-system,sans-serif}
+  #map{height:100%}
+  .leaflet-popup-content{font-size:13px;line-height:1.45;min-width:210px}
+  .leaflet-popup-content b{font-size:14px}
+  .pk{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;
+      padding:1px 5px;border-radius:2px;color:#fff;vertical-align:1px;white-space:nowrap}
+  .pk-rheinland{background:#1b5e3a}
+  .pk-rlp{background:#1f4e79}
+  .pk-nrw{background:#8a3324}
+  .pk-none{background:#8b8b8b}
+  .popup-paket{margin-top:.5rem;padding-top:.45rem;border-top:1px solid #ddd;font-size:12px;color:#444}
+  .leaflet-control-layers-overlays label{margin-bottom:3px}
+  .legende{position:absolute;bottom:14px;left:14px;z-index:1000;background:rgba(255,253,249,.95);
+    border:1px solid #d8d2c8;border-radius:3px;padding:.6rem .8rem;font-size:11px;
+    max-width:23rem;color:#55504a;line-height:1.45}
+  .legende h4{margin:0 0 .35rem;font-size:12px;color:#16130f}
+  .legende table{border-collapse:collapse;margin:.2rem 0 .5rem}
+  .legende td{padding:1px 6px 1px 0;vertical-align:top}
+  .legende a{color:#8a3324}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div class="legende">
+  <h4>Tagespaket — zwei Personen, zwei Räder</h4>
+  <table>
+    <tr><td><span class="pk pk-rheinland">RHEINLAND 35,40 €</span></td>
+        <td>24hTicket 5 Pers. PS 3 + 2 × Radticket</td></tr>
+    <tr><td><span class="pk pk-rlp">RLP 40,00 €</span></td>
+        <td>RLP-Ticket, Räder gratis — werktags erst ab 9 Uhr</td></tr>
+    <tr><td><span class="pk pk-nrw">NRW 72,40 €</span></td>
+        <td>24hTicket NRW 5 Pers. + 2 × Radticket</td></tr>
+  </table>
+  <b>Schematisch</b> — gerade Verbindungen zwischen den Halten, nicht der
+  Gleisverlauf. Preise geprüft am 3.&nbsp;August 2026, Details in
+  <a href="tagespakete.html">Die drei Tagespakete</a> und
+  <a href="streckenplan.html">Streckenplan Bonn / Porz</a>. Vor jeder Tour
+  die Tageslage bei <a href="https://www.zuginfo.nrw/">zuginfo.nrw</a> prüfen.
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const DATA = [
+ {
+  "name": "Standorte und Einstiegsbahnhöfe",
+  "farbe": "#16130f",
+  "info": "",
+  "paket": "",
+  "paket_kurz": "",
+  "paket_lang": "",
+  "linien": [],
+  "punkte": [
+   {
+    "name": "Köln-Zündorf",
+    "lat": 50.86593,
+    "lon": 7.04298,
+    "desc": "Standort — Stadtbahn 7. Zum DB-Anschluss Porz-Wahn rund 4 km mit dem Rad."
+   },
+   {
+    "name": "Bonn Vilich-Müldorf",
+    "lat": 50.75672,
+    "lon": 7.14425,
+    "desc": "Standort — Haltestelle der Stadtbahn 66. Nach Norden Siegburg, nach Süden Bonn Hbf."
+   },
+   {
+    "name": "Bonn Hbf",
+    "lat": 50.73204,
+    "lon": 7.09676,
+    "desc": "Einstieg LINKSRHEINISCH. Alles nach Süden: RB 30 Ahrtal, RB 26 / RE 5 Mittelrhein, S 23 Voreifel. Rheinland-Pfalz-Ticket gilt bis hierher."
+   },
+   {
+    "name": "Porz-Wahn",
+    "lat": 50.85816,
+    "lon": 7.07923,
+    "desc": "Einstieg RECHTSRHEINISCH. S 12 ins Siegtal, 20-Minuten-Takt. RE 9 und S 19 halten hier NICHT."
+   },
+   {
+    "name": "Troisdorf",
+    "lat": 50.81395,
+    "lon": 7.15087,
+    "desc": "Knoten rechtsrheinisch. S 12, S 19, RE 9 — und im Normalbetrieb RE 8 / RB 27 nach Koblenz."
+   },
+   {
+    "name": "Siegburg/Bonn",
+    "lat": 50.79403,
+    "lon": 7.20266,
+    "desc": "Knoten. Von Vilich-Müldorf direkt mit der Stadtbahn 66 erreichbar. S 12, S 19, RE 9."
+   }
+  ]
+ },
+ {
+  "name": "RB 30 — Ahrtal (Ahr-Radweg)",
+  "farbe": "#1f4e79",
+  "info": "Werktags erst ab 9 Uhr nutzbar — das ist die Zeitgrenze des RLP-Tickets und zugleich der Beginn der kostenlosen Radmitnahme. Am Wochenende ab 0 Uhr.",
+  "paket": "rlp",
+  "paket_kurz": "RHEINLAND-PFALZ-TICKET 40,00 €",
+  "paket_lang": "Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig.",
+  "linien": [
+   [
+    [
+     50.73204,
+     7.09676
+    ],
+    [
+     50.68381,
+     7.15968
+    ],
+    [
+     50.66907,
+     7.18142
+    ],
+    [
+     50.57732,
+     7.22971
+    ],
+    [
+     50.5474,
+     7.1442
+    ],
+    [
+     50.54183,
+     7.09511
+    ],
+    [
+     50.50479,
+     6.9775
+    ],
+    [
+     50.48879,
+     6.97215
+    ]
+   ]
+  ],
+  "punkte": [
+   {
+    "name": "Bad Neuenahr",
+    "lat": 50.5474,
+    "lon": 7.1442,
+    "desc": "Ahr-Radweg. Kurort, guter Wiedereinstieg."
+   },
+   {
+    "name": "Ahrweiler",
+    "lat": 50.54183,
+    "lon": 7.09511,
+    "desc": "Altstadt. Haltepunkt ist Ahrweiler Markt — Lage hier auf Ortsmitte gesetzt."
+   },
+   {
+    "name": "Altenahr",
+    "lat": 50.50479,
+    "lon": 6.9775,
+    "desc": "Enges Ahrtal, Felsen. Beliebter Startpunkt talabwärts."
+   },
+   {
+    "name": "Ahrbrück",
+    "lat": 50.48879,
+    "lon": 6.97215,
+    "desc": "Endpunkt der Ahrtalbahn. Seit Dezember 2025 wieder erreichbar."
+   }
+  ]
+ },
+ {
+  "name": "RB 26 / RE 5 — Mittelrhein (Rheinradweg links)",
+  "farbe": "#2f6ea8",
+  "info": "RB 26 hält überall, RE 5 ist schneller aber gröber. Für Radtouren die RB 26.",
+  "paket": "rlp",
+  "paket_kurz": "RHEINLAND-PFALZ-TICKET 40,00 €",
+  "paket_lang": "Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig.",
+  "linien": [
+   [
+    [
+     50.73204,
+     7.09676
+    ],
+    [
+     50.68381,
+     7.15968
+    ],
+    [
+     50.66907,
+     7.18142
+    ],
+    [
+     50.57732,
+     7.22971
+    ],
+    [
+     50.54675,
+     7.25824
+    ],
+    [
+     50.43448,
+     7.40507
+    ],
+    [
+     50.35031,
+     7.59045
+    ],
+    [
+     50.2314,
+     7.58601
+    ],
+    [
+     49.96881,
+     7.88349
+    ],
+    [
+     50.00111,
+     8.25872
+    ]
+   ]
+  ],
+  "punkte": [
+   {
+    "name": "Remagen",
+    "lat": 50.57732,
+    "lon": 7.22971,
+    "desc": "Grenze NRW / Rheinland-Pfalz. Umstieg zur Ahrtalbahn. Fähre nach Erpel."
+   },
+   {
+    "name": "Sinzig",
+    "lat": 50.54675,
+    "lon": 7.25824,
+    "desc": "Zwischen Rhein und Ahr — kurze Verbindung zwischen beiden Radwegen."
+   },
+   {
+    "name": "Andernach",
+    "lat": 50.43448,
+    "lon": 7.40507,
+    "desc": "Geysir, Rheinradweg."
+   },
+   {
+    "name": "Koblenz Hbf",
+    "lat": 50.35031,
+    "lon": 7.59045,
+    "desc": "Deutsches Eck. Umstieg Mosel und Lahn."
+   },
+   {
+    "name": "Boppard",
+    "lat": 50.2314,
+    "lon": 7.58601,
+    "desc": "Beginn des Oberen Mittelrheintals."
+   },
+   {
+    "name": "Bingen (Rhein)",
+    "lat": 49.96881,
+    "lon": 7.88349,
+    "desc": "Ende des Welterbetals. RB 26 fährt weiter bis Mainz."
+   }
+  ]
+ },
+ {
+  "name": "S 23 — Voreifel (Erft-Radweg, Eifel)",
+  "farbe": "#1b6b3a",
+  "info": "Die einzige Südrichtung, die im NRW-Tarif bleibt — und darum die einzige, die auch werktags vor 9 Uhr funktioniert.",
+  "paket": "rheinland",
+  "paket_kurz": "RHEINLAND-PAKET 35,40 €",
+  "paket_lang": "Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)",
+  "linien": [
+   [
+    [
+     50.73204,
+     7.09676
+    ],
+    [
+     50.71826,
+     7.04303
+    ],
+    [
+     50.68969,
+     7.02613
+    ],
+    [
+     50.62953,
+     6.94826
+    ],
+    [
+     50.658,
+     6.79204
+    ],
+    [
+     50.55875,
+     6.76479
+    ]
+   ],
+   [
+    [
+     50.658,
+     6.79204
+    ],
+    [
+     50.53854,
+     6.55669
+    ],
+    [
+     50.22392,
+     6.66036
+    ],
+    [
+     49.75758,
+     6.65207
+    ]
+   ]
+  ],
+  "punkte": [
+   {
+    "name": "Rheinbach",
+    "lat": 50.62953,
+    "lon": 6.94826,
+    "desc": "Glasstadt, Tor zur Voreifel."
+   },
+   {
+    "name": "Euskirchen",
+    "lat": 50.658,
+    "lon": 6.79204,
+    "desc": "Knoten. Anschluss RE 22 Richtung Gerolstein und Trier."
+   },
+   {
+    "name": "Bad Münstereifel",
+    "lat": 50.55875,
+    "lon": 6.76479,
+    "desc": "Endpunkt, mittelalterliche Stadtmauer."
+   },
+   {
+    "name": "Kall",
+    "lat": 50.53854,
+    "lon": 6.55669,
+    "desc": "Nationalpark Eifel. Über RE 22 ab Euskirchen."
+   },
+   {
+    "name": "Gerolstein",
+    "lat": 50.22392,
+    "lon": 6.66036,
+    "desc": "Vulkaneifel. Weit, aber machbar als langer Tag."
+   }
+  ]
+ },
+ {
+  "name": "S 12 — Siegtal (Sieg-Radweg)",
+  "farbe": "#8a3324",
+  "info": "Die beste Linie ab Porz: 20-Minuten-Takt, kein Umsteigen. Das Rheinland-Paket reicht bis Eitorf.",
+  "paket": "rheinland",
+  "paket_kurz": "RHEINLAND-PAKET 35,40 €",
+  "paket_lang": "Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)",
+  "linien": [
+   [
+    [
+     50.85816,
+     7.07923
+    ],
+    [
+     50.90027,
+     7.05972
+    ],
+    [
+     50.82865,
+     7.1172
+    ],
+    [
+     50.81395,
+     7.15087
+    ],
+    [
+     50.79403,
+     7.20266
+    ],
+    [
+     50.77328,
+     7.28444
+    ],
+    [
+     50.76857,
+     7.3477
+    ],
+    [
+     50.77357,
+     7.44752
+    ],
+    [
+     50.77377,
+     7.65664
+    ]
+   ]
+  ],
+  "punkte": [
+   {
+    "name": "Steinstraße",
+    "lat": 50.90027,
+    "lon": 7.05972,
+    "desc": "S-12-Halt in Köln-Gremberghoven."
+   },
+   {
+    "name": "Spich",
+    "lat": 50.82865,
+    "lon": 7.1172,
+    "desc": "S-12-Halt vor Troisdorf."
+   },
+   {
+    "name": "Hennef (Sieg)",
+    "lat": 50.77328,
+    "lon": 7.28444,
+    "desc": "Sieg-Radweg. Kurze Tour: hin mit der S 12, zurück am Fluss."
+   },
+   {
+    "name": "Blankenberg (Sieg)",
+    "lat": 50.76857,
+    "lon": 7.3477,
+    "desc": "Burgruine über dem Siegtal."
+   },
+   {
+    "name": "Eitorf",
+    "lat": 50.77357,
+    "lon": 7.44752,
+    "desc": "Letzter Halt im Rheinlandnetz."
+   },
+   {
+    "name": "Au (Sieg)",
+    "lat": 50.77377,
+    "lon": 7.65664,
+    "desc": "ACHTUNG ANDERES PAKET: Au liegt schon in Rheinland-Pfalz. Das Rheinland-Paket endet in Eitorf. Für Au entweder Rheinland-Pfalz-Ticket (40 €) oder NRW-Paket (72,40 €)."
+   }
+  ]
+ },
+ {
+  "name": "RE 9 — Westerwald und Siegerland",
+  "farbe": "#b05a1e",
+  "info": "Hält NICHT in Porz-Wahn. Ab Troisdorf oder Siegburg einsteigen. Bis Hennef reicht das Rheinland-Paket; östlich von Au wird die Tarifzuordnung gemischt (RLP und Westfalen) — die teuerste Richtung, die ihr habt.",
+  "paket": "nrw",
+  "paket_kurz": "NRW-PAKET 72,40 €",
+  "paket_lang": "Tagespaket: NRW-Paket, 72,40 € für zwei Personen mit zwei Rädern. 24hTicket NRW 5 Personen (59,80 €) + 2 × 24hFahrradTicket NRW (12,60 €)",
+  "linien": [
+   [
+    [
+     50.81395,
+     7.15087
+    ],
+    [
+     50.79403,
+     7.20266
+    ],
+    [
+     50.77328,
+     7.28444
+    ],
+    [
+     50.77377,
+     7.65664
+    ],
+    [
+     50.78947,
+     7.86952
+    ],
+    [
+     50.87596,
+     8.01646
+    ]
+   ]
+  ],
+  "punkte": [
+   {
+    "name": "Betzdorf (Sieg)",
+    "lat": 50.78947,
+    "lon": 7.86952,
+    "desc": "Westerwald, liegt in Rheinland-Pfalz. Tarifisch heikel — vor der Fahrt am Automaten gegenprüfen."
+   },
+   {
+    "name": "Siegen Hbf",
+    "lat": 50.87596,
+    "lon": 8.01646,
+    "desc": "Endpunkt, NRW aber außerhalb des Rheinlandnetzes. Ganzer Tag."
+   }
+  ]
+ },
+ {
+  "name": "Stadtbahn 66 — die Brücke",
+  "farbe": "#6a3d9a",
+  "info": "Verbindet beide Netze und hält vor der Haustür. Bis Dezember 2026 der einzige radtaugliche Weg ins Siebengebirge.",
+  "paket": "rheinland",
+  "paket_kurz": "RHEINLAND-PAKET 35,40 €",
+  "paket_lang": "Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)",
+  "linien": [
+   [
+    [
+     50.79403,
+     7.20266
+    ],
+    [
+     50.77682,
+     7.18809
+    ],
+    [
+     50.75672,
+     7.14425
+    ],
+    [
+     50.73204,
+     7.09676
+    ],
+    [
+     50.72515,
+     7.15475
+    ],
+    [
+     50.67874,
+     7.19314
+    ],
+    [
+     50.64424,
+     7.2246
+    ]
+   ]
+  ],
+  "punkte": [
+   {
+    "name": "Sankt Augustin Zentrum",
+    "lat": 50.77682,
+    "lon": 7.18809,
+    "desc": "Zwischen Vilich-Müldorf und Siegburg."
+   },
+   {
+    "name": "Bonn Ramersdorf",
+    "lat": 50.72515,
+    "lon": 7.15475,
+    "desc": "Knoten in Beuel."
+   },
+   {
+    "name": "Königswinter",
+    "lat": 50.67874,
+    "lon": 7.19314,
+    "desc": "Drachenfels, Siebengebirge."
+   },
+   {
+    "name": "Königswinter Fähre",
+    "lat": 50.67332,
+    "lon": 7.19217,
+    "desc": "Rheinquerung zur linken Seite — Anschluss an RB 26 in Bad Godesberg."
+   },
+   {
+    "name": "Bad Honnef",
+    "lat": 50.64424,
+    "lon": 7.2246,
+    "desc": "Endpunkt. Ab hier per Rad weiter nach Süden."
+   }
+  ]
+ },
+ {
+  "name": "S 19 — Köln, Flughafen, Düren",
+  "farbe": "#777777",
+  "info": "Nicht über Porz-Wahn. Wer dort steht, sieht nur die S 12.",
+  "paket": "rheinland",
+  "paket_kurz": "RHEINLAND-PAKET 35,40 €",
+  "paket_lang": "Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)",
+  "linien": [
+   [
+    [
+     50.81395,
+     7.15087
+    ],
+    [
+     50.87908,
+     7.11936
+    ],
+    [
+     50.94173,
+     6.97389
+    ],
+    [
+     50.94278,
+     6.95907
+    ],
+    [
+     50.81006,
+     6.4832
+    ]
+   ]
+  ],
+  "punkte": [
+   {
+    "name": "Köln/Bonn Flughafen",
+    "lat": 50.87908,
+    "lon": 7.11936,
+    "desc": "Die S 19 fährt hierüber — und lässt darum Porz-Wahn aus."
+   }
+  ]
+ },
+ {
+  "name": "RE 8 / RB 27 — GESPERRT bis 13.12.2026",
+  "farbe": "#a8402f",
+  "info": "Korridorsanierung Rechter Rhein, 10.07.–13.12.2026. SEV-Busse nehmen Räder nur nach Kapazität. Umgehung: Stadtbahn 66 bis Bad Honnef.",
+  "paket": "",
+  "paket_kurz": "",
+  "paket_lang": "",
+  "linien": [
+   [
+    [
+     50.81395,
+     7.15087
+    ],
+    [
+     50.73853,
+     7.12746
+    ],
+    [
+     50.67874,
+     7.19314
+    ],
+    [
+     50.64424,
+     7.2246
+    ],
+    [
+     50.60294,
+     7.21966
+    ],
+    [
+     50.56925,
+     7.27606
+    ],
+    [
+     50.43124,
+     7.47302
+    ],
+    [
+     50.35031,
+     7.59045
+    ]
+   ]
+  ],
+  "punkte": [
+   {
+    "name": "Bonn-Beuel",
+    "lat": 50.73853,
+    "lon": 7.12746,
+    "desc": "Bis 13. Dezember 2026 OHNE Zugverkehr."
+   },
+   {
+    "name": "Unkel",
+    "lat": 50.60294,
+    "lon": 7.21966,
+    "desc": "Rheinland-Pfalz, Rheinradweg rechts."
+   },
+   {
+    "name": "Linz (Rhein)",
+    "lat": 50.56925,
+    "lon": 7.27606,
+    "desc": "Fähre nach Remagen — Teil des Ersatzkonzepts."
+   },
+   {
+    "name": "Neuwied",
+    "lat": 50.43124,
+    "lon": 7.47302,
+    "desc": "Rechtsrheinisch vor Koblenz."
+   }
+  ]
+ }
+];
+const map = L.map('map').setView([50.68, 7.15], 10);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 18, attribution: '&copy; OpenStreetMap'
+}).addTo(map);
+
+function badge(L_) {
+  if (!L_.paket) return '';
+  return '<span class="pk pk-' + L_.paket + '">' + L_.paket_kurz + '</span>';
+}
+
+const overlays = {};
+DATA.forEach(L_ => {
+  const grp = L.layerGroup();
+  const gesperrt = L_.name.indexOf('GESPERRT') >= 0;
+
+  L_.linien.forEach(coords => {
+    L.polyline(coords, {color: L_.farbe, weight: 4, opacity: .85,
+      dashArray: gesperrt ? '8,7' : null})
+     .bindPopup('<b>' + L_.name + '</b> ' + badge(L_) +
+       (L_.paket_lang ? '<div class="popup-paket">' + L_.paket_lang + '</div>' : '') +
+       (L_.info ? '<div class="popup-paket">' + L_.info + '</div>' : ''))
+     .addTo(grp);
+  });
+
+  L_.punkte.forEach(p => {
+    L.circleMarker([p.lat, p.lon], {radius: 6, color: L_.farbe, weight: 2,
+      fillColor: '#fff', fillOpacity: 1})
+     .bindPopup('<b>' + p.name + '</b> ' + badge(L_) + '<br>' + p.desc +
+       (L_.paket_lang ? '<div class="popup-paket">' + L_.paket_lang + '</div>' : '') +
+       (L_.info ? '<div class="popup-paket"><i>' + L_.info + '</i></div>' : ''))
+     .addTo(grp);
+  });
+
+  grp.addTo(map);
+  overlays['<span style="color:' + L_.farbe + '">&#9632;</span> ' + L_.name +
+           ' ' + badge(L_)] = grp;
+});
+L.control.layers(null, overlays, {collapsed: false}).addTo(map);
+</script>
+</body>
+</html>

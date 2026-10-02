@@ -1,4 +1,7 @@
 ---
+import { publicEntries, entryPath } from '../lib/public-entries';
+
+const links = publicEntries.filter(e => e.typ === 'link');
 ---
 <header class="border-b border-(--color-border) py-4">
   <div class="max-w-2xl mx-auto px-4 flex items-center justify-between">
@@ -9,6 +12,20 @@
       <a href="/teach" class="text-sm text-(--color-muted) hover:text-(--color-primary) transition-colors">
         Teach
       </a>
+      {links.length > 0 && (
+        <details id="links-menu" class="relative">
+          <summary class="list-none cursor-pointer text-sm text-(--color-muted) hover:text-(--color-primary) transition-colors">
+            Links
+          </summary>
+          <ul class="absolute right-0 mt-2 min-w-40 rounded-lg border border-(--color-border) bg-white shadow-md py-1 z-10">
+            {links.map(l => (
+              <li>
+                <a href={entryPath(l)} class="block px-3 py-1.5 text-sm hover:bg-(--color-primary-light) hover:text-(--color-primary)">{l.name}</a>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
       <a href="https://github.com/fbehrens" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
         class="text-(--color-muted) hover:text-(--color-primary) transition-colors">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -24,3 +41,10 @@
     </nav>
   </div>
 </header>
+<script>
+  const menu = document.getElementById('links-menu') as HTMLDetailsElement | null;
+  if (menu) {
+    document.addEventListener('click', e => { if (!menu.contains(e.target as Node)) menu.open = false; });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') menu.open = false; });
+  }
+</script>

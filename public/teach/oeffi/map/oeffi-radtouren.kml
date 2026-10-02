@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document>
+<name>Radtouren mit Bahn — Bonn / Porz</name>
+<description>Schematischer Streckenplan mit dem jeweils erforderlichen Tagespaket (zwei Personen, zwei Räder). Linien sind gerade Verbindungen zwischen Halten, nicht der Gleisverlauf. Stand 3. August 2026.</description>
+<Style id="s0"><LineStyle><color>ff0f1316</color><width>4</width></LineStyle><IconStyle><color>ff0f1316</color></IconStyle></Style>
+<Style id="s1"><LineStyle><color>ff794e1f</color><width>4</width></LineStyle><IconStyle><color>ff794e1f</color></IconStyle></Style>
+<Style id="s2"><LineStyle><color>ffa86e2f</color><width>4</width></LineStyle><IconStyle><color>ffa86e2f</color></IconStyle></Style>
+<Style id="s3"><LineStyle><color>ff3a6b1b</color><width>4</width></LineStyle><IconStyle><color>ff3a6b1b</color></IconStyle></Style>
+<Style id="s4"><LineStyle><color>ff24338a</color><width>4</width></LineStyle><IconStyle><color>ff24338a</color></IconStyle></Style>
+<Style id="s5"><LineStyle><color>ff1e5ab0</color><width>4</width></LineStyle><IconStyle><color>ff1e5ab0</color></IconStyle></Style>
+<Style id="s6"><LineStyle><color>ff9a3d6a</color><width>4</width></LineStyle><IconStyle><color>ff9a3d6a</color></IconStyle></Style>
+<Style id="s7"><LineStyle><color>ff777777</color><width>4</width></LineStyle><IconStyle><color>ff777777</color></IconStyle></Style>
+<Style id="s8"><LineStyle><color>ff2f40a8</color><width>4</width></LineStyle><IconStyle><color>ff2f40a8</color></IconStyle></Style>
+<Folder><name>Standorte und Einstiegsbahnhöfe</name>
+<Placemark><name>Köln-Zündorf</name><description>Standort — Stadtbahn 7. Zum DB-Anschluss Porz-Wahn rund 4 km mit dem Rad.</description><styleUrl>#s0</styleUrl><Point><coordinates>7.04298,50.86593,0</coordinates></Point></Placemark>
+<Placemark><name>Bonn Vilich-Müldorf</name><description>Standort — Haltestelle der Stadtbahn 66. Nach Norden Siegburg, nach Süden Bonn Hbf.</description><styleUrl>#s0</styleUrl><Point><coordinates>7.14425,50.75672,0</coordinates></Point></Placemark>
+<Placemark><name>Bonn Hbf</name><description>Einstieg LINKSRHEINISCH. Alles nach Süden: RB 30 Ahrtal, RB 26 / RE 5 Mittelrhein, S 23 Voreifel. Rheinland-Pfalz-Ticket gilt bis hierher.</description><styleUrl>#s0</styleUrl><Point><coordinates>7.09676,50.73204,0</coordinates></Point></Placemark>
+<Placemark><name>Porz-Wahn</name><description>Einstieg RECHTSRHEINISCH. S 12 ins Siegtal, 20-Minuten-Takt. RE 9 und S 19 halten hier NICHT.</description><styleUrl>#s0</styleUrl><Point><coordinates>7.07923,50.85816,0</coordinates></Point></Placemark>
+<Placemark><name>Troisdorf</name><description>Knoten rechtsrheinisch. S 12, S 19, RE 9 — und im Normalbetrieb RE 8 / RB 27 nach Koblenz.</description><styleUrl>#s0</styleUrl><Point><coordinates>7.15087,50.81395,0</coordinates></Point></Placemark>
+<Placemark><name>Siegburg/Bonn</name><description>Knoten. Von Vilich-Müldorf direkt mit der Stadtbahn 66 erreichbar. S 12, S 19, RE 9.</description><styleUrl>#s0</styleUrl><Point><coordinates>7.20266,50.79403,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>RB 30 — Ahrtal (Ahr-Radweg)  [Rheinland-Pfalz-Ticket 40,00 €]</name>
+<description>Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig. Werktags erst ab 9 Uhr nutzbar — das ist die Zeitgrenze des RLP-Tickets und zugleich der Beginn der kostenlosen Radmitnahme. Am Wochenende ab 0 Uhr.</description>
+<Placemark><name>RB 30 — Ahrtal (Ahr-Radweg)  [Rheinland-Pfalz-Ticket 40,00 €]</name><description>Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig. Werktags erst ab 9 Uhr nutzbar — das ist die Zeitgrenze des RLP-Tickets und zugleich der Beginn der kostenlosen Radmitnahme. Am Wochenende ab 0 Uhr.</description><styleUrl>#s1</styleUrl><LineString><tessellate>1</tessellate><coordinates>7.09676,50.73204,0 7.15968,50.68381,0 7.18142,50.66907,0 7.22971,50.57732,0 7.1442,50.5474,0 7.09511,50.54183,0 6.9775,50.50479,0 6.97215,50.48879,0</coordinates></LineString></Placemark>
+<Placemark><name>Bad Neuenahr [Rheinland-Pfalz-Ticket 40,00 €]</name><description>Ahr-Radweg. Kurort, guter Wiedereinstieg.
+
+Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig.</description><styleUrl>#s1</styleUrl><Point><coordinates>7.1442,50.5474,0</coordinates></Point></Placemark>
+<Placemark><name>Ahrweiler [Rheinland-Pfalz-Ticket 40,00 €]</name><description>Altstadt. Haltepunkt ist Ahrweiler Markt — Lage hier auf Ortsmitte gesetzt.
+
+Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig.</description><styleUrl>#s1</styleUrl><Point><coordinates>7.09511,50.54183,0</coordinates></Point></Placemark>
+<Placemark><name>Altenahr [Rheinland-Pfalz-Ticket 40,00 €]</name><description>Enges Ahrtal, Felsen. Beliebter Startpunkt talabwärts.
+
+Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig.</description><styleUrl>#s1</styleUrl><Point><coordinates>6.9775,50.50479,0</coordinates></Point></Placemark>
+<Placemark><name>Ahrbrück [Rheinland-Pfalz-Ticket 40,00 €]</name><description>Endpunkt der Ahrtalbahn. Seit Dezember 2025 wieder erreichbar.
+
+Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig.</description><styleUrl>#s1</styleUrl><Point><coordinates>6.97215,50.48879,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>RB 26 / RE 5 — Mittelrhein (Rheinradweg links)  [Rheinland-Pfalz-Ticket 40,00 €]</name>
+<description>Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig. RB 26 hält überall, RE 5 ist schneller aber gröber. Für Radtouren die RB 26.</description>
+<Placemark><name>RB 26 / RE 5 — Mittelrhein (Rheinradweg links)  [Rheinland-Pfalz-Ticket 40,00 €]</name><description>Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig. RB 26 hält überall, RE 5 ist schneller aber gröber. Für Radtouren die RB 26.</description><styleUrl>#s2</styleUrl><LineString><tessellate>1</tessellate><coordinates>7.09676,50.73204,0 7.15968,50.68381,0 7.18142,50.66907,0 7.22971,50.57732,0 7.25824,50.54675,0 7.40507,50.43448,0 7.59045,50.35031,0 7.58601,50.2314,0 7.88349,49.96881,0 8.25872,50.00111,0</coordinates></LineString></Placemark>
+<Placemark><name>Remagen [Rheinland-Pfalz-Ticket 40,00 €]</name><description>Grenze NRW / Rheinland-Pfalz. Umstieg zur Ahrtalbahn. Fähre nach Erpel.
+
+Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig.</description><styleUrl>#s2</styleUrl><Point><coordinates>7.22971,50.57732,0</coordinates></Point></Placemark>
+<Placemark><name>Sinzig [Rheinland-Pfalz-Ticket 40,00 €]</name><description>Zwischen Rhein und Ahr — kurze Verbindung zwischen beiden Radwegen.
+
+Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig.</description><styleUrl>#s2</styleUrl><Point><coordinates>7.25824,50.54675,0</coordinates></Point></Placemark>
+<Placemark><name>Andernach [Rheinland-Pfalz-Ticket 40,00 €]</name><description>Geysir, Rheinradweg.
+
+Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig.</description><styleUrl>#s2</styleUrl><Point><coordinates>7.40507,50.43448,0</coordinates></Point></Placemark>
+<Placemark><name>Koblenz Hbf [Rheinland-Pfalz-Ticket 40,00 €]</name><description>Deutsches Eck. Umstieg Mosel und Lahn.
+
+Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig.</description><styleUrl>#s2</styleUrl><Point><coordinates>7.59045,50.35031,0</coordinates></Point></Placemark>
+<Placemark><name>Boppard [Rheinland-Pfalz-Ticket 40,00 €]</name><description>Beginn des Oberen Mittelrheintals.
+
+Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig.</description><styleUrl>#s2</styleUrl><Point><coordinates>7.58601,50.2314,0</coordinates></Point></Placemark>
+<Placemark><name>Bingen (Rhein) [Rheinland-Pfalz-Ticket 40,00 €]</name><description>Ende des Welterbetals. RB 26 fährt weiter bis Mainz.
+
+Tagespaket: Rheinland-Pfalz-Ticket, 40,00 € für zwei Personen mit zwei Rädern. 30 € erste Person + 10 € zweite Person. Räder gratis ab 9 Uhr. Werktags erst ab 9 Uhr gültig.</description><styleUrl>#s2</styleUrl><Point><coordinates>7.88349,49.96881,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>S 23 — Voreifel (Erft-Radweg, Eifel)  [Rheinland-Paket 35,40 €]</name>
+<description>Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €) Die einzige Südrichtung, die im NRW-Tarif bleibt — und darum die einzige, die auch werktags vor 9 Uhr funktioniert.</description>
+<Placemark><name>S 23 — Voreifel (Erft-Radweg, Eifel)  [Rheinland-Paket 35,40 €]</name><description>Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €) Die einzige Südrichtung, die im NRW-Tarif bleibt — und darum die einzige, die auch werktags vor 9 Uhr funktioniert.</description><styleUrl>#s3</styleUrl><LineString><tessellate>1</tessellate><coordinates>7.09676,50.73204,0 7.04303,50.71826,0 7.02613,50.68969,0 6.94826,50.62953,0 6.79204,50.658,0 6.76479,50.55875,0</coordinates></LineString></Placemark>
+<Placemark><name>S 23 — Voreifel (Erft-Radweg, Eifel)  [Rheinland-Paket 35,40 €]</name><description>Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €) Die einzige Südrichtung, die im NRW-Tarif bleibt — und darum die einzige, die auch werktags vor 9 Uhr funktioniert.</description><styleUrl>#s3</styleUrl><LineString><tessellate>1</tessellate><coordinates>6.79204,50.658,0 6.55669,50.53854,0 6.66036,50.22392,0 6.65207,49.75758,0</coordinates></LineString></Placemark>
+<Placemark><name>Rheinbach [Rheinland-Paket 35,40 €]</name><description>Glasstadt, Tor zur Voreifel.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s3</styleUrl><Point><coordinates>6.94826,50.62953,0</coordinates></Point></Placemark>
+<Placemark><name>Euskirchen [Rheinland-Paket 35,40 €]</name><description>Knoten. Anschluss RE 22 Richtung Gerolstein und Trier.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s3</styleUrl><Point><coordinates>6.79204,50.658,0</coordinates></Point></Placemark>
+<Placemark><name>Bad Münstereifel [Rheinland-Paket 35,40 €]</name><description>Endpunkt, mittelalterliche Stadtmauer.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s3</styleUrl><Point><coordinates>6.76479,50.55875,0</coordinates></Point></Placemark>
+<Placemark><name>Kall [Rheinland-Paket 35,40 €]</name><description>Nationalpark Eifel. Über RE 22 ab Euskirchen.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s3</styleUrl><Point><coordinates>6.55669,50.53854,0</coordinates></Point></Placemark>
+<Placemark><name>Gerolstein [Rheinland-Paket 35,40 €]</name><description>Vulkaneifel. Weit, aber machbar als langer Tag.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s3</styleUrl><Point><coordinates>6.66036,50.22392,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>S 12 — Siegtal (Sieg-Radweg)  [Rheinland-Paket 35,40 €]</name>
+<description>Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €) Die beste Linie ab Porz: 20-Minuten-Takt, kein Umsteigen. Das Rheinland-Paket reicht bis Eitorf.</description>
+<Placemark><name>S 12 — Siegtal (Sieg-Radweg)  [Rheinland-Paket 35,40 €]</name><description>Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €) Die beste Linie ab Porz: 20-Minuten-Takt, kein Umsteigen. Das Rheinland-Paket reicht bis Eitorf.</description><styleUrl>#s4</styleUrl><LineString><tessellate>1</tessellate><coordinates>7.07923,50.85816,0 7.05972,50.90027,0 7.1172,50.82865,0 7.15087,50.81395,0 7.20266,50.79403,0 7.28444,50.77328,0 7.3477,50.76857,0 7.44752,50.77357,0 7.65664,50.77377,0</coordinates></LineString></Placemark>
+<Placemark><name>Steinstraße [Rheinland-Paket 35,40 €]</name><description>S-12-Halt in Köln-Gremberghoven.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s4</styleUrl><Point><coordinates>7.05972,50.90027,0</coordinates></Point></Placemark>
+<Placemark><name>Spich [Rheinland-Paket 35,40 €]</name><description>S-12-Halt vor Troisdorf.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s4</styleUrl><Point><coordinates>7.1172,50.82865,0</coordinates></Point></Placemark>
+<Placemark><name>Hennef (Sieg) [Rheinland-Paket 35,40 €]</name><description>Sieg-Radweg. Kurze Tour: hin mit der S 12, zurück am Fluss.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s4</styleUrl><Point><coordinates>7.28444,50.77328,0</coordinates></Point></Placemark>
+<Placemark><name>Blankenberg (Sieg) [Rheinland-Paket 35,40 €]</name><description>Burgruine über dem Siegtal.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s4</styleUrl><Point><coordinates>7.3477,50.76857,0</coordinates></Point></Placemark>
+<Placemark><name>Eitorf [Rheinland-Paket 35,40 €]</name><description>Letzter Halt im Rheinlandnetz.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s4</styleUrl><Point><coordinates>7.44752,50.77357,0</coordinates></Point></Placemark>
+<Placemark><name>Au (Sieg) [Rheinland-Paket 35,40 €]</name><description>ACHTUNG ANDERES PAKET: Au liegt schon in Rheinland-Pfalz. Das Rheinland-Paket endet in Eitorf. Für Au entweder Rheinland-Pfalz-Ticket (40 €) oder NRW-Paket (72,40 €).
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s4</styleUrl><Point><coordinates>7.65664,50.77377,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>RE 9 — Westerwald und Siegerland  [NRW-Paket 72,40 €]</name>
+<description>Tagespaket: NRW-Paket, 72,40 € für zwei Personen mit zwei Rädern. 24hTicket NRW 5 Personen (59,80 €) + 2 × 24hFahrradTicket NRW (12,60 €) Hält NICHT in Porz-Wahn. Ab Troisdorf oder Siegburg einsteigen. Bis Hennef reicht das Rheinland-Paket; östlich von Au wird die Tarifzuordnung gemischt (RLP und Westfalen) — die teuerste Richtung, die ihr habt.</description>
+<Placemark><name>RE 9 — Westerwald und Siegerland  [NRW-Paket 72,40 €]</name><description>Tagespaket: NRW-Paket, 72,40 € für zwei Personen mit zwei Rädern. 24hTicket NRW 5 Personen (59,80 €) + 2 × 24hFahrradTicket NRW (12,60 €) Hält NICHT in Porz-Wahn. Ab Troisdorf oder Siegburg einsteigen. Bis Hennef reicht das Rheinland-Paket; östlich von Au wird die Tarifzuordnung gemischt (RLP und Westfalen) — die teuerste Richtung, die ihr habt.</description><styleUrl>#s5</styleUrl><LineString><tessellate>1</tessellate><coordinates>7.15087,50.81395,0 7.20266,50.79403,0 7.28444,50.77328,0 7.65664,50.77377,0 7.86952,50.78947,0 8.01646,50.87596,0</coordinates></LineString></Placemark>
+<Placemark><name>Betzdorf (Sieg) [NRW-Paket 72,40 €]</name><description>Westerwald, liegt in Rheinland-Pfalz. Tarifisch heikel — vor der Fahrt am Automaten gegenprüfen.
+
+Tagespaket: NRW-Paket, 72,40 € für zwei Personen mit zwei Rädern. 24hTicket NRW 5 Personen (59,80 €) + 2 × 24hFahrradTicket NRW (12,60 €)</description><styleUrl>#s5</styleUrl><Point><coordinates>7.86952,50.78947,0</coordinates></Point></Placemark>
+<Placemark><name>Siegen Hbf [NRW-Paket 72,40 €]</name><description>Endpunkt, NRW aber außerhalb des Rheinlandnetzes. Ganzer Tag.
+
+Tagespaket: NRW-Paket, 72,40 € für zwei Personen mit zwei Rädern. 24hTicket NRW 5 Personen (59,80 €) + 2 × 24hFahrradTicket NRW (12,60 €)</description><styleUrl>#s5</styleUrl><Point><coordinates>8.01646,50.87596,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Stadtbahn 66 — die Brücke  [Rheinland-Paket 35,40 €]</name>
+<description>Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €) Verbindet beide Netze und hält vor der Haustür. Bis Dezember 2026 der einzige radtaugliche Weg ins Siebengebirge.</description>
+<Placemark><name>Stadtbahn 66 — die Brücke  [Rheinland-Paket 35,40 €]</name><description>Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €) Verbindet beide Netze und hält vor der Haustür. Bis Dezember 2026 der einzige radtaugliche Weg ins Siebengebirge.</description><styleUrl>#s6</styleUrl><LineString><tessellate>1</tessellate><coordinates>7.20266,50.79403,0 7.18809,50.77682,0 7.14425,50.75672,0 7.09676,50.73204,0 7.15475,50.72515,0 7.19314,50.67874,0 7.2246,50.64424,0</coordinates></LineString></Placemark>
+<Placemark><name>Sankt Augustin Zentrum [Rheinland-Paket 35,40 €]</name><description>Zwischen Vilich-Müldorf und Siegburg.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s6</styleUrl><Point><coordinates>7.18809,50.77682,0</coordinates></Point></Placemark>
+<Placemark><name>Bonn Ramersdorf [Rheinland-Paket 35,40 €]</name><description>Knoten in Beuel.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s6</styleUrl><Point><coordinates>7.15475,50.72515,0</coordinates></Point></Placemark>
+<Placemark><name>Königswinter [Rheinland-Paket 35,40 €]</name><description>Drachenfels, Siebengebirge.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s6</styleUrl><Point><coordinates>7.19314,50.67874,0</coordinates></Point></Placemark>
+<Placemark><name>Königswinter Fähre [Rheinland-Paket 35,40 €]</name><description>Rheinquerung zur linken Seite — Anschluss an RB 26 in Bad Godesberg.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s6</styleUrl><Point><coordinates>7.19217,50.67332,0</coordinates></Point></Placemark>
+<Placemark><name>Bad Honnef [Rheinland-Paket 35,40 €]</name><description>Endpunkt. Ab hier per Rad weiter nach Süden.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s6</styleUrl><Point><coordinates>7.2246,50.64424,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>S 19 — Köln, Flughafen, Düren  [Rheinland-Paket 35,40 €]</name>
+<description>Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €) Nicht über Porz-Wahn. Wer dort steht, sieht nur die S 12.</description>
+<Placemark><name>S 19 — Köln, Flughafen, Düren  [Rheinland-Paket 35,40 €]</name><description>Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €) Nicht über Porz-Wahn. Wer dort steht, sieht nur die S 12.</description><styleUrl>#s7</styleUrl><LineString><tessellate>1</tessellate><coordinates>7.15087,50.81395,0 7.11936,50.87908,0 6.97389,50.94173,0 6.95907,50.94278,0 6.4832,50.81006,0</coordinates></LineString></Placemark>
+<Placemark><name>Köln/Bonn Flughafen [Rheinland-Paket 35,40 €]</name><description>Die S 19 fährt hierüber — und lässt darum Porz-Wahn aus.
+
+Tagespaket: Rheinland-Paket, 35,40 € für zwei Personen mit zwei Rädern. 24hTicket 5 Personen Preisstufe 3 (26,40 €) + 2 × 24hTicket Fahrrad (9,00 €)</description><styleUrl>#s7</styleUrl><Point><coordinates>7.11936,50.87908,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>RE 8 / RB 27 — GESPERRT bis 13.12.2026</name>
+<description>Korridorsanierung Rechter Rhein, 10.07.–13.12.2026. SEV-Busse nehmen Räder nur nach Kapazität. Umgehung: Stadtbahn 66 bis Bad Honnef.</description>
+<Placemark><name>RE 8 / RB 27 — GESPERRT bis 13.12.2026</name><description>Korridorsanierung Rechter Rhein, 10.07.–13.12.2026. SEV-Busse nehmen Räder nur nach Kapazität. Umgehung: Stadtbahn 66 bis Bad Honnef.</description><styleUrl>#s8</styleUrl><LineString><tessellate>1</tessellate><coordinates>7.15087,50.81395,0 7.12746,50.73853,0 7.19314,50.67874,0 7.2246,50.64424,0 7.21966,50.60294,0 7.27606,50.56925,0 7.47302,50.43124,0 7.59045,50.35031,0</coordinates></LineString></Placemark>
+<Placemark><name>Bonn-Beuel</name><description>Bis 13. Dezember 2026 OHNE Zugverkehr.</description><styleUrl>#s8</styleUrl><Point><coordinates>7.12746,50.73853,0</coordinates></Point></Placemark>
+<Placemark><name>Unkel</name><description>Rheinland-Pfalz, Rheinradweg rechts.</description><styleUrl>#s8</styleUrl><Point><coordinates>7.21966,50.60294,0</coordinates></Point></Placemark>
+<Placemark><name>Linz (Rhein)</name><description>Fähre nach Remagen — Teil des Ersatzkonzepts.</description><styleUrl>#s8</styleUrl><Point><coordinates>7.27606,50.56925,0</coordinates></Point></Placemark>
+<Placemark><name>Neuwied</name><description>Rechtsrheinisch vor Koblenz.</description><styleUrl>#s8</styleUrl><Point><coordinates>7.47302,50.43124,0</coordinates></Point></Placemark>
+</Folder>
+</Document></kml>

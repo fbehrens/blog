@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Salsa Beat Machine — Practice Tool</title>
+<style>
+  :root {
+    --bg: #0e0e1c; --tile: #1d1d33; --tile-on: #262645; --ink: #ececf4;
+    --dim: #6f6f8a; --accent: #e0533d; --focus: #f0a030; --radius: 14px;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    display: flex; flex-direction: column; align-items: center;
+    min-height: 100vh; padding: 1rem .8rem 7.5rem;
+  }
+  h1 { font-size: 1.15rem; margin: .2rem 0 0; letter-spacing: .02em; }
+  .sub { color: var(--dim); font-size: .75rem; margin: .1rem 0 1rem; }
+  .sub a { color: var(--dim); }
+
+  .grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem;
+    width: 100%; max-width: 420px;
+  }
+  .tile {
+    position: relative; background: var(--tile); border-radius: var(--radius);
+    padding: .9rem .4rem .7rem; text-align: center; cursor: pointer;
+    border: 2px solid transparent; opacity: .45; transition: opacity .15s, transform .05s;
+    user-select: none; -webkit-user-select: none;
+  }
+  .tile.enabled { opacity: 1; background: var(--tile-on); }
+  .tile.hit { transform: scale(1.05); }
+  .tile.focused { border-color: var(--focus); }
+  .tile.dimmed-by-focus { opacity: .25; }
+  .tile .icon { font-size: 1.9rem; line-height: 1; pointer-events: none; }
+  .tile .name { font-size: .8rem; font-weight: 600; margin-top: .4rem; pointer-events: none; }
+  .tile .hint { font-size: .62rem; color: var(--dim); pointer-events: none; min-height: .9em; }
+  .focus-btn {
+    position: absolute; top: .35rem; right: .35rem; width: 1.7rem; height: 1.7rem;
+    border-radius: 50%; border: none; background: #00000055; color: var(--dim);
+    font-size: .85rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .tile.focused .focus-btn { background: var(--focus); color: #1a1a1a; }
+  .clave-dir {
+    position: absolute; top: .35rem; left: .35rem; border: none; border-radius: 8px;
+    background: #00000055; color: var(--dim); font-size: .65rem; padding: .2rem .4rem; cursor: pointer;
+  }
+
+  .dots { display: flex; gap: .45rem; margin: 1.1rem 0 .2rem; }
+  .dot {
+    width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--tile);
+    color: var(--dim); display: flex; align-items: center; justify-content: center;
+    font-size: .85rem; font-weight: 700;
+  }
+  .dot.lit { background: var(--ink); color: var(--bg); }
+  .dot.lit.one { background: var(--accent); color: #fff; }
+
+  .transport {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: #16162acc; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    padding: .8rem 1.2rem calc(.8rem + env(safe-area-inset-bottom));
+    display: flex; align-items: center; gap: 1rem; justify-content: center;
+  }
+  .play {
+    width: 3.4rem; height: 3.4rem; border-radius: 50%; border: none;
+    background: #fff; color: #111; font-size: 1.3rem; cursor: pointer; flex-shrink: 0;
+  }
+  .bpm-wrap { display: flex; flex-direction: column; width: min(46vw, 240px); }
+  .bpm-wrap label { font-size: .7rem; color: var(--dim); display: flex; justify-content: space-between; }
+  .bpm-wrap b { color: var(--ink); font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--accent); height: 2rem; }
+  footer { margin-top: 1.2rem; font-size: .65rem; color: var(--dim); text-align: center; max-width: 420px; }
+  footer a { color: var(--dim); }
+</style>
+</head>
+<body>
+<h1>🎵 Salsa Beat Machine</h1>
+<p class="sub">tap a tile to enable/disable · 🎯 = focus (solo) · <a href="../../reference/timing-and-counting.html">timing reference</a></p>
+
+<div class="grid" id="grid"></div>
+
+<div class="dots" id="dots"></div>
+
+<div class="transport">
+  <button class="play" id="play">▶</button>
+  <div class="bpm-wrap">
+    <label>Tempo <b id="bpmVal">180 BPM</b></label>
+    <input type="range" id="bpm" min="140" max="220" value="180" step="1">
+  </div>
+</div>
+
+<footer>
+  Patterns: son clave, campana, conga tumbao, cáscara, bass tumbao, I–V piano montuno.
+  Samples CC0/CC-BY — see <a href="samples/ATTRIBUTION.md">attribution</a>.
+  iPhone: flip the silent switch off to hear audio.
+</footer>
+
+<script>
+'use strict';
+const E = i => i;          // eighth index helper for readability
+const N = m => Math.pow(2, m / 12); // semitone offset -> playbackRate factor
+
+// hit: [eighthIndex, sampleKey, gain, rate, cut]   cut = force-stop after seconds
+// period: pattern length in eighths (16 = one 8-count, 32 = two)
+const INSTRUMENTS = [
+  { id: 'count', name: 'Count', icon: '🎤', hint: '1,2,3 · 5,6,7', period: 16, baseGain: 1.0,
+    hits: [[0,'count1'],[2,'count2'],[4,'count3'],[8,'count5'],[10,'count6'],[12,'count7']] },
+  { id: 'clave', name: 'Clave', icon: '🥢', hint: 'son 2-3', period: 16, baseGain: 0.9,
+    dir: '2-3',
+    patterns: { '2-3': [2,4,8,11,14], '3-2': [0,3,6,10,12] },
+    get hits() { return this.patterns[this.dir].map(i => [i, 'clave']); } },
+  { id: 'cowbell', name: 'Cowbell', icon: '🔔', hint: 'campana', period: 16, baseGain: 0.45,
+    hits: [[0,'cowbell',1],[2,'cowbell',.4,1,.12],[4,'cowbell',.9],[6,'cowbell',.4,1,.12],
+           [8,'cowbell',1],[10,'cowbell',.4,1,.12],[12,'cowbell',.9],[14,'cowbell',.4,1,.12]] },
+  { id: 'congas', name: 'Congas', icon: '🪘', hint: 'tumbao', period: 16, baseGain: 0.9,
+    hits: [[2,'conga',.55,1.45,.18],[6,'conga',.9],[7,'conga',1],
+           [10,'conga',.55,1.45,.18],[14,'conga',.9],[15,'conga',1]] },
+  { id: 'timbales', name: 'Timbales', icon: '🥁', hint: 'cáscara', period: 16, baseGain: 0.5,
+    hits: [0,2,4,5,7,8,10,11,13,15].map(i => [i, 'timbale1', [0,8].includes(i) ? 1 : .65]) },
+  { id: 'maracas', name: 'Maracas', icon: '🪇', hint: 'eighths', period: 16, baseGain: 0.5,
+    hits: Array.from({length: 16}, (_, i) =>
+      i % 2 === 0 ? [i, 'maraca1', .9] : [i, 'maraca2', .5]) },
+  { id: 'bass', name: 'Bass', icon: '🎸', hint: 'tumbao', period: 32, baseGain: 0.95,
+    // A#1 sample; cycle A = C major (G1 fifth, C2 root), cycle B = G7 (D2 fifth, G1 root)
+    hits: [[3,'bass',.9,N(-3)],[6,'bass',1,N(2)],[11,'bass',.9,N(-3)],[14,'bass',1,N(2)],
+           [19,'bass',.9,N(4)],[22,'bass',1,N(-3)],[27,'bass',.9,N(4)],[30,'bass',1,N(-3)]] },
+  { id: 'piano', name: 'Piano', icon: '🎹', hint: 'montuno I–V', period: 32, baseGain: 0.8,
+    // C4 sample; onsets from the-rhythm-of-salsa I-I-V-V riff
+    hits: [ [0,'piano',.75,N(7)],[1,'piano',.7,N(0)],[2,'piano',.7,N(4)],[3,'piano',.8,N(9)],
+            [5,'piano',.8,N(7)],[7,'piano',.65,N(7)],[9,'piano',.8,N(0)],[11,'piano',.75,N(9)],
+            [13,'piano',.75,N(7)],[15,'piano',.8,N(7)],
+            [16,'piano',.7,N(7)],[17,'piano',.75,N(-1)],[18,'piano',.8,N(2)],[19,'piano',.8,N(5)],
+            [21,'piano',.85,N(2)],[23,'piano',.6,N(7)],[25,'piano',.85,N(2)],[27,'piano',.75,N(5)],
+            [29,'piano',.65,N(2)],[31,'piano',.7,N(7)] ] },
+];
+
+const SAMPLES = ['count1','count2','count3','count5','count6','count7','clave','cowbell',
+                 'conga','timbale1','maraca1','maraca2','bass','piano'];
+
+// ---------- state ----------
+const state = {
+  enabled: Object.fromEntries(INSTRUMENTS.map(i => [i.id, true])),
+  focus: null,            // instrument id or null — temporary lens, never touches enabled
+  playing: false,
+};
+const audible = id => state.focus ? id === state.focus : state.enabled[id];
+
+// ---------- UI ----------
+const grid = document.getElementById('grid');
+const tiles = {};
+for (const inst of INSTRUMENTS) {
+  const t = document.createElement('div');
+  t.className = 'tile enabled';
+  t.innerHTML = `<button class="focus-btn" title="focus (solo)">🎯</button>
+    <div class="icon">${inst.icon}</div><div class="name">${inst.name}</div>
+    <div class="hint">${inst.hint}</div>`;
+  if (inst.id === 'clave') {
+    const d = document.createElement('button');
+    d.className = 'clave-dir'; d.textContent = '2-3';
+    d.onclick = e => { e.stopPropagation();
+      inst.dir = inst.dir === '2-3' ? '3-2' : '2-3';
+      d.textContent = inst.dir; t.querySelector('.hint').textContent = 'son ' + inst.dir; };
+    t.appendChild(d);
+  }
+  t.onclick = () => { state.enabled[inst.id] = !state.enabled[inst.id]; render(); };
+  t.querySelector('.focus-btn').onclick = e => { e.stopPropagation();
+    state.focus = state.focus === inst.id ? null : inst.id; render(); };
+  grid.appendChild(t);
+  tiles[inst.id] = t;
+}
+
+const dotsEl = document.getElementById('dots');
+const dots = [];
+for (let i = 1; i <= 8; i++) {
+  const d = document.createElement('div');
+  d.className = 'dot'; d.textContent = i;
+  dotsEl.appendChild(d); dots.push(d);
+}
+
+function render() {
+  for (const inst of INSTRUMENTS) {
+    const t = tiles[inst.id];
+    t.classList.toggle('enabled', state.enabled[inst.id]);
+    t.classList.toggle('focused', state.focus === inst.id);
+    t.classList.toggle('dimmed-by-focus', !!state.focus && state.focus !== inst.id);
+  }
+}
+
+// ---------- audio ----------
+let ctx = null;
+const buffers = {};
+async function loadSamples() {
+  ctx = new (window.AudioContext || window.webkitAudioContext)();
+  await Promise.all(SAMPLES.map(async name => {
+    const res = await fetch(`samples/${name}.wav`);
+    buffers[name] = await ctx.decodeAudioData(await res.arrayBuffer());
+  }));
+}
+
+function playHit(sample, time, gain, rate, cut) {
+  const src = ctx.createBufferSource();
+  src.buffer = buffers[sample];
+  src.playbackRate.value = rate || 1;
+  const g = ctx.createGain();
+  g.gain.value = gain;
+  if (cut) g.gain.setTargetAtTime(0.0001, time + cut, 0.02);
+  src.connect(g); g.connect(ctx.destination);
+  src.start(time);
+  if (cut) src.stop(time + cut + 0.15);
+}
+
+// ---------- scheduler ----------
+let eighth = 0, nextTime = 0, timer = null;
+const eighthDur = () => 60 / +document.getElementById('bpm').value / 2;
+
+function scheduleStep(idx, time) {
+  const hitIds = [];
+  for (const inst of INSTRUMENTS) {
+    if (!audible(inst.id)) continue;
+    for (const [i, sample, vel, rate, cut] of inst.hits) {
+      if (i === idx % inst.period) {
+        playHit(sample, time, inst.baseGain * (vel ?? 1), rate, cut);
+        hitIds.push(inst.id);
+      }
+    }
+  }
+  const count = (idx % 16) / 2; // 0..7 on even eighths
+  const delay = Math.max(0, (time - ctx.currentTime) * 1000);
+  setTimeout(() => {
+    if (!state.playing) return;
+    if (idx % 2 === 0) {
+      dots.forEach((d, j) => { d.className = 'dot' + (j === count ? ' lit' + (j === 0 ? ' one' : '') : ''); });
+    }
+    for (const id of hitIds) {
+      tiles[id].classList.add('hit');
+      setTimeout(() => tiles[id].classList.remove('hit'), 90);
+    }
+  }, delay);
+}
+
+function tick() {
+  while (nextTime < ctx.currentTime + 0.12) {
+    scheduleStep(eighth, nextTime);
+    nextTime += eighthDur();
+    eighth++;
+  }
+}
+
+const playBtn = document.getElementById('play');
+playBtn.onclick = async () => {
+  if (!ctx) { playBtn.textContent = '…'; await loadSamples(); }
+  await ctx.resume();
+  if (state.playing) {
+    state.playing = false; clearInterval(timer);
+    playBtn.textContent = '▶';
+    dots.forEach(d => d.className = 'dot');
+  } else {
+    state.playing = true; eighth = 0; nextTime = ctx.currentTime + 0.1;
+    timer = setInterval(tick, 25);
+    playBtn.textContent = '⏸';
+  }
+};
+
+const bpmInput = document.getElementById('bpm');
+bpmInput.oninput = () => { document.getElementById('bpmVal').textContent = bpmInput.value + ' BPM'; };
+</script>
+</body>
+</html>

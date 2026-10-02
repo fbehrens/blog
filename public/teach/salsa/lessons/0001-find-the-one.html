@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 0001 — Find the One</title>
+<style>
+  :root {
+    --ink: #1a1a2e; --paper: #fdfbf7; --accent: #c0392b; --gold: #b8860b;
+    --soft: #8a8577; --line: #e6e1d6; --ok: #2e7d32; --bad: #c62828;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--paper); color: var(--ink);
+    max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem;
+    line-height: 1.65;
+  }
+  .kicker { color: var(--accent); font-size: .8rem; letter-spacing: .15em; text-transform: uppercase; font-family: -apple-system, sans-serif; }
+  h1 { font-size: 2rem; margin: 0 0 .3rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.4rem; border-bottom: 2px solid var(--line); padding-bottom: .3rem; }
+  .lede { font-size: 1.05rem; color: #444; }
+  .win { background: #fdf6e3; border: 1px solid var(--gold); border-radius: 8px; padding: .9rem 1.1rem; margin: 1.4rem 0; }
+  .win strong { color: var(--gold); }
+  a { color: var(--accent); }
+  .note { background: #f3efe6; border-left: 4px solid var(--accent); padding: .8rem 1rem; margin: 1.2rem 0; font-size: .95rem; }
+  /* trainer */
+  .trainer { background: #16162a; color: #eee; border-radius: 12px; padding: 1.5rem; margin: 1.2rem 0; font-family: -apple-system, sans-serif; }
+  .counts { display: flex; gap: .5rem; justify-content: center; margin: 1rem 0; }
+  .beat {
+    width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; font-weight: 700; background: #2a2a45; color: #777; transition: all .05s;
+  }
+  .beat.pause { background: #1e1e35; font-size: 1rem; }
+  .beat.lit { background: #eee; color: #16162a; transform: scale(1.15); }
+  .beat.lit.is-one { background: var(--accent); color: #fff; }
+  .beat.hidden-mode { color: transparent; }
+  .controls { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; align-items: center; }
+  button {
+    font-family: inherit; font-size: 1rem; padding: .55rem 1.2rem; border-radius: 8px;
+    border: none; cursor: pointer; background: var(--accent); color: #fff; font-weight: 600;
+  }
+  button.secondary { background: #2a2a45; color: #ddd; }
+  select { font-size: 1rem; padding: .5rem; border-radius: 8px; background: #2a2a45; color: #eee; border: 1px solid #444; }
+  .tapzone {
+    margin-top: 1rem; padding: 1.3rem; border: 2px dashed #555; border-radius: 10px;
+    text-align: center; cursor: pointer; user-select: none; font-size: 1.05rem;
+  }
+  .tapzone:active { background: #222240; }
+  .feedback { text-align: center; min-height: 2.2em; margin-top: .8rem; font-size: 1.1rem; font-weight: 600; }
+  .feedback .good { color: #81c784; }
+  .feedback .bad { color: #e57373; }
+  .streak { text-align: center; color: #aaa; font-size: .9rem; }
+  /* quiz */
+  .q { margin: 1.4rem 0; }
+  .q p { font-weight: bold; margin-bottom: .5rem; }
+  .q label { display: block; padding: .45rem .7rem; border: 1px solid var(--line); border-radius: 6px; margin: .3rem 0; cursor: pointer; }
+  .q label:hover { background: #f3efe6; }
+  .q .result { font-weight: 600; min-height: 1.4em; }
+  .q .result.ok { color: var(--ok); }
+  .q .result.no { color: var(--bad); }
+  footer { margin-top: 3rem; border-top: 2px solid var(--line); padding-top: 1rem; font-size: .95rem; color: var(--soft); }
+</style>
+</head>
+<body>
+<p class="kicker">Salsa · Lesson 0001 · ~20 minutes</p>
+<h1>Find the One</h1>
+<p class="lede">Everything you'll re-learn as a lead — basics, cross-body leads, turn patterns — collapses if you can't anchor it to beat 1. This lesson recalibrates your ear so you find the 1 yourself, without copying other dancers.</p>
+
+<div class="win">🏆 <strong>Today's win:</strong> hit the 1 three times in a row in the trainer below, then find the 1 in one real song within a single 8-count phrase.</div>
+
+<h2>1 · The 60-second refresher</h2>
+<p>Salsa phrases in counts of 8. As an On1 lead you break <em>forward on 1</em>, step 1-2-3 (pause 4), 5-6-7 (pause 8). You knew this — what's likely rusted is hearing <em>where the phrase starts</em>. Full breakdown in the <a href="../reference/timing-and-counting.html">Timing &amp; Counting reference</a>.</p>
+<p>Three landmarks that hand you the 1 (<a href="https://salsacantante.com/blog/how-to-find-the-one/">salsacantante's guide</a> covers each in depth):</p>
+<ul>
+  <li><strong>Conga “tu-tum”</strong> — the open double-tap at the <em>end</em> of each bar. The next beat is the 1 (or the 5).</li>
+  <li><strong>Cowbell</strong> — open hits land on 1 and 3 when it enters in the chorus.</li>
+  <li><strong>The singer</strong> — verses and melodic phrases start on a 1.</li>
+</ul>
+
+<h2>2 · Trainer: tap the 1</h2>
+<p>This trainer plays a synthetic salsa pulse: a low <strong>boom on the 1</strong>, a mid tone on the 5, clave clicks on top. <strong>Learn mode</strong> shows the count. <strong>Test mode</strong> hides it and starts the loop at a random point — listen, find the phrase, and tap (spacebar or click) exactly on a 1.</p>
+
+<div class="trainer">
+  <div class="controls">
+    <button id="startBtn">▶ Start</button>
+    <select id="bpm">
+      <option value="160">160 BPM — practice</option>
+      <option value="180" selected>180 BPM — social standard</option>
+      <option value="200">200 BPM — fast</option>
+    </select>
+    <button id="modeBtn" class="secondary">Mode: Learn</button>
+  </div>
+  <div class="counts" id="counts"></div>
+  <div class="tapzone" id="tapzone">TAP HERE on the 1 &nbsp;·&nbsp; or press <strong>Space</strong></div>
+  <div class="feedback" id="feedback">&nbsp;</div>
+  <div class="streak" id="streak">Streak: 0 / 3</div>
+</div>
+
+<div class="note"><strong>Make it physical:</strong> once you pass 3-in-a-row, stand up and dance your basic to the trainer in test mode at 180 BPM. Ears first, then feet.</div>
+
+<h2>3 · Check yourself</h2>
+<div class="q" data-answer="b">
+  <p>Q1. The conga's open double-tap (“tu-tum”) tells you that…</p>
+  <label><input type="radio" name="q1" value="a"> you are on the 1 right now</label>
+  <label><input type="radio" name="q1" value="b"> the 1 (or 5) is the very next beat</label>
+  <label><input type="radio" name="q1" value="c"> the song is in 3-2 clave</label>
+  <div class="result"></div>
+</div>
+<div class="q" data-answer="a">
+  <p>Q2. As an On1 lead, your forward break with the left foot happens on…</p>
+  <label><input type="radio" name="q2" value="a"> count 1</label>
+  <label><input type="radio" name="q2" value="b"> count 2</label>
+  <label><input type="radio" name="q2" value="c"> count 5</label>
+  <div class="result"></div>
+</div>
+<div class="q" data-answer="c">
+  <p>Q3. The most reliable cue that a new musical phrase (a 1) is starting:</p>
+  <label><input type="radio" name="q3" value="a"> the bass note — it always lands on 1</label>
+  <label><input type="radio" name="q3" value="b"> a louder beat than the others</label>
+  <label><input type="radio" name="q3" value="c"> the vocal or melody line beginning</label>
+  <div class="result"></div>
+</div>
+<div class="q" data-answer="b">
+  <p>Q4. On which counts does the On1 lead pause?</p>
+  <label><input type="radio" name="q4" value="a"> 1 and 5</label>
+  <label><input type="radio" name="q4" value="b"> 4 and 8</label>
+  <label><input type="radio" name="q4" value="c"> 3 and 7</label>
+  <div class="result"></div>
+</div>
+
+<h2>4 · Real-world drill (5 min)</h2>
+<ol>
+  <li>Put on <em>Vivir Mi Vida</em> (Marc Anthony) — clear phrasing, moderate tempo.</li>
+  <li>Listen for the conga and the vocal entries. Clap only the 1s for one verse.</li>
+  <li>When confident, dance your basic. If you drift, stop, listen one phrase, re-enter on a 1.</li>
+  <li>Repeat with one harder song, e.g. <em>La Rebelión</em> (Joe Arroyo).</li>
+</ol>
+
+<h2>Primary source</h2>
+<p>📖 Read <a href="https://salsacantante.com/blog/how-to-find-the-one/"><strong>“How to Find the ‘One’… in Salsa Music” — salsacantante</strong></a> — the best instrument-by-instrument walkthrough I found, with audio examples. For extra solo ear training between sessions, try <a href="https://beatlab.app/en/salsa/">BeatLab's salsa rhythm trainer</a>.</p>
+
+<footer>
+  <p>Stuck or curious? Ask your teacher (the agent) — e.g. “why does the bass anticipate the 1?” or “drill me on clave”.</p>
+  <p><a href="../reference/timing-and-counting.html">Reference: On1 Timing &amp; Counting</a> · Next lesson: rebuilding the basic &amp; cross-body lead</p>
+</footer>
+
+<script>
+// ---------- trainer ----------
+const countsEl = document.getElementById('counts');
+const beats = [];
+for (let i = 1; i <= 8; i++) {
+  const d = document.createElement('div');
+  d.className = 'beat' + (i === 4 || i === 8 ? ' pause' : '');
+  d.textContent = i;
+  countsEl.appendChild(d);
+  beats.push(d);
+}
+
+let ctx = null, playing = false, testMode = false;
+let startTime = 0, startBeat = 0; // startBeat: which beat (0-7) the loop began on
+let schedAhead = 0.12, nextNote = 0, nextIdx = 0, timer = null;
+let streak = 0;
+
+const spb = () => 60 / parseInt(document.getElementById('bpm').value);
+
+// son clave 2-3 hits, in eighth-note positions within the 8-count (0..15)
+const clave23 = [2, 4, 8, 11, 14];
+
+function tone(t, freq, dur, gainV, type = 'sine') {
+  const o = ctx.createOscillator(), g = ctx.createGain();
+  o.type = type; o.frequency.value = freq;
+  g.gain.setValueAtTime(gainV, t);
+  g.gain.exponentialRampToValueAtTime(0.001, t + dur);
+  o.connect(g); g.connect(ctx.destination);
+  o.start(t); o.stop(t + dur);
+}
+
+function scheduleBeat(idx, t) {
+  const beatNum = idx % 8; // 0 = "1"
+  if (beatNum === 0) tone(t, 110, 0.28, 0.9);            // boom on 1
+  else if (beatNum === 4) tone(t, 165, 0.2, 0.55);       // mid on 5
+  else tone(t, 660, 0.05, 0.12, 'triangle');             // tick
+  // clave clicks (eighth positions for this beat)
+  for (const c of clave23) {
+    if (Math.floor(c / 2) === beatNum) {
+      tone(t + (c % 2) * spb() / 2, 1800, 0.04, 0.25, 'square');
+    }
+  }
+  const showT = (t - ctx.currentTime) * 1000;
+  setTimeout(() => {
+    if (!playing) return;
+    beats.forEach(b => b.classList.remove('lit', 'is-one'));
+    if (!testMode) {
+      beats[beatNum].classList.add('lit');
+      if (beatNum === 0) beats[beatNum].classList.add('is-one');
+    }
+  }, Math.max(0, showT));
+}
+
+function scheduler() {
+  while (nextNote < ctx.currentTime + schedAhead) {
+    scheduleBeat(nextIdx, nextNote);
+    nextNote += spb();
+    nextIdx++;
+  }
+}
+
+function start() {
+  if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
+  ctx.resume();
+  playing = true;
+  startBeat = testMode ? Math.floor(Math.random() * 8) : 0;
+  nextIdx = startBeat;
+  startTime = ctx.currentTime + 0.2;
+  nextNote = startTime;
+  timer = setInterval(scheduler, 25);
+  document.getElementById('startBtn').textContent = '⏹ Stop';
+}
+
+function stop() {
+  playing = false;
+  clearInterval(timer);
+  beats.forEach(b => b.classList.remove('lit', 'is-one'));
+  document.getElementById('startBtn').textContent = '▶ Start';
+}
+
+document.getElementById('startBtn').onclick = () => playing ? stop() : start();
+document.getElementById('bpm').onchange = () => { if (playing) { stop(); start(); } };
+document.getElementById('modeBtn').onclick = function () {
+  testMode = !testMode;
+  this.textContent = 'Mode: ' + (testMode ? 'Test' : 'Learn');
+  streak = 0; updateStreak();
+  beats.forEach(b => b.classList.toggle('hidden-mode', testMode));
+  if (playing) { stop(); start(); }
+};
+
+function tap() {
+  if (!playing) return;
+  const now = ctx.currentTime;
+  const n = Math.round((now - startTime) / spb());
+  const beatNum = ((n + startBeat) % 8 + 8) % 8; // 0 = the "1"
+  const nearest = startTime + n * spb();
+  const off = Math.round((now - nearest) * 1000);
+  const fb = document.getElementById('feedback');
+  if (beatNum === 0) {
+    streak++;
+    fb.innerHTML = '<span class="good">✓ That was the 1! (' + (off >= 0 ? '+' : '') + off + ' ms)</span>';
+  } else {
+    streak = 0;
+    fb.innerHTML = '<span class="bad">✗ You tapped beat ' + (beatNum + 1) + '. Listen for the low boom.</span>';
+  }
+  updateStreak();
+  if (streak >= 3) {
+    fb.innerHTML = '<span class="good">🏆 3 in a row — you own the 1. Now stand up and dance the basic to it.</span>';
+  }
+}
+
+function updateStreak() {
+  document.getElementById('streak').textContent = 'Streak: ' + Math.min(streak, 3) + ' / 3';
+}
+
+document.getElementById('tapzone').onclick = tap;
+document.addEventListener('keydown', e => {
+  if (e.code === 'Space') { e.preventDefault(); tap(); }
+});
+
+// ---------- quiz ----------
+document.querySelectorAll('.q').forEach(q => {
+  const ans = q.dataset.answer;
+  q.querySelectorAll('input').forEach(inp => {
+    inp.addEventListener('change', () => {
+      const r = q.querySelector('.result');
+      if (inp.value === ans) { r.textContent = '✓ Correct'; r.className = 'result ok'; }
+      else { r.textContent = '✗ Not quite — think about it and try again'; r.className = 'result no'; }
+    });
+  });
+});
+</script>
+</body>
+</html>

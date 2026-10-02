@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>4 · Two monitors</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/tree.js"></script>
+<script src="../assets/quiz.js"></script>
+<script src="../assets/monitors.js"></script>
+</head>
+<body>
+<main>
+<header class="lesson">
+  <div class="kicker">AeroSpace layouts · lesson 4</div>
+  <h1>Two monitors</h1>
+  <p class="lead">After this lesson you can predict which monitor a workspace appears on, and move focus, windows and whole workspaces between monitors.</p>
+</header>
+
+<h2>The model: one pool, each workspace has a home</h2>
+<ul>
+  <li>All monitors share <b>one pool</b> of workspaces. Each monitor shows exactly one of them (its <em>visible</em> workspace). Two monitors can't show the same workspace.<span class="cite"><a href="https://nikitabobko.github.io/AeroSpace/guide#multiple-monitors">[guide]</a></span></li>
+  <li>Every workspace, even an invisible or empty one, <b>belongs to a monitor</b>.</li>
+  <li>Monitors are numbered left to right, starting at 1. <code>main</code> is the one set as main display in System Settings → Displays.</li>
+</ul>
+<div class="rule-box">
+  <strong>Rule: which monitor does a workspace belong to?</strong>
+  The first that applies: (1) its <em>forced assignment</em> from the config, (2) the monitor it's <em>visible on</em> now, (3) the monitor it was <em>last shown on</em>, (4) the <em>main</em> monitor.
+</div>
+<p class="aside">Source: <code>workspaceMonitor</code> in <code>Sources/AppBundle/tree/Workspace.swift</code>. Step 3 is the one people forget: a workspace remembers where you last saw it.<span class="cite"><a href="https://github.com/nikitabobko/AeroSpace/blob/main/Sources/AppBundle/tree/Workspace.swift">[source]</a></span></p>
+
+<h2><code>workspace X</code>: it comes to its home, and focus goes with it</h2>
+<ul>
+  <li><b>X is visible somewhere:</b> nothing moves, only focus jumps to that monitor.</li>
+  <li><b>X is hidden:</b> X replaces whatever its home monitor shows, and focus jumps there, even if you were working on the other monitor.</li>
+  <li><b>X is new or empty:</b> its home is <code>main</code>. Unlike i3, AeroSpace doesn't open it on the monitor you're looking at.</li>
+</ul>
+<div class="rule-box">
+  <strong>Trap: empty workspaces forget their home</strong>
+  An empty, hidden workspace is deleted, along with the monitor it remembered. Show empty workspace 5 on the secondary monitor, switch away, then press <kbd>alt-5</kbd>: it opens on <b>main</b>. <code>persistent-workspaces</code> (commented out in your config) prevents this.
+</div>
+
+<h2>Three things you can move</h2>
+<table>
+  <tr><th>You want to…</th><th>Command</th><th>What happens</th></tr>
+  <tr><td>send <b>this window</b> to the other monitor</td>
+      <td><code>move-node-to-monitor next</code></td>
+      <td>It joins the workspace visible there, at the root. Going <code>right</code> into an <code>h</code> root, it lands <b>first</b> (on the side it came from). Otherwise it lands <b>last</b>. Focus stays behind unless you add <code>--focus-follows-window</code>.<span class="cite"><a href="https://github.com/nikitabobko/AeroSpace/blob/main/Sources/AppBundle/command/impl/MoveNodeToMonitorCommand.swift">[source]</a></span></td></tr>
+  <tr><td>send <b>this workspace</b> to the other monitor</td>
+      <td><kbd>alt-shift-tab</kbd><br><code>move-workspace-to-monitor --wrap-around next</code></td>
+      <td>The whole workspace moves and stays focused. The monitor it left shows another workspace that belongs there. Fails for force-assigned workspaces.<span class="cite"><a href="https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor">[cmd]</a></span></td></tr>
+  <tr><td>bring <b>workspace X</b> here</td>
+      <td><code>summon-workspace X</code></td>
+      <td>X appears on the focused monitor, wherever it was before. X's home is now this monitor (rule step 3).<span class="cite"><a href="https://nikitabobko.github.io/AeroSpace/commands#summon-workspace">[cmd]</a></span></td></tr>
+</table>
+<p class="aside">"Another workspace that belongs there": first the one it showed before, then any hidden workspace that belongs to that monitor, and otherwise the first <em>empty numbered</em> workspace (<code>1</code>, <code>2</code>, …). That's why a stray empty <code>4</code> sometimes shows up. (<code>getStubWorkspace</code>, <code>Workspace.swift</code>)</p>
+
+<h2>Focus doesn't cross monitors (yet)</h2>
+<p>Your <kbd>alt-h</kbd>/<kbd>alt-l</kbd> is plain <code>focus left|right</code>. Its default is <code>--boundaries workspace</code>, so at the monitor edge it just <b>stops</b>.<span class="cite"><a href="https://nikitabobko.github.io/AeroSpace/commands#focus">[focus]</a></span></p>
+<ul>
+  <li><code>focus --boundaries all-monitors-outer-frame right</code> continues onto the next monitor.</li>
+  <li>It lands on that monitor's <b>most recently focused window</b>, not on the one geometrically closest. (<code>FocusCommand.swift</code>)</li>
+  <li><code>move</code> has the same flag: at the edge, the window goes to the other monitor (like <code>move-node-to-monitor</code>, with focus following). But then you lose lesson 2's "wall" trick (<code>h[1 2 3]</code> + <code>move right</code> → <code>h[v[1 2] 3]</code>) at the inner edge.</li>
+</ul>
+
+<h2>Pinning workspaces to monitors</h2>
+<pre>[workspace-to-monitor-force-assignment]
+    B = 'secondary'                   # browser always on the second screen
+    T = ['secondary', 'main']         # first pattern that matches wins
+    1 = 'odyssey'                     # case-insensitive regex on the monitor name</pre>
+<p>Patterns: <code>main</code>, <code>secondary</code> (only with exactly two monitors), a number (left to right, from 1), or a regex on the name from <code>aerospace list-monitors</code>. A forced workspace always appears on its monitor, <code>summon-workspace</code> can't pull it elsewhere, and <code>move-workspace-to-monitor</code> fails on it.<span class="cite"><a href="https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors">[guide]</a></span></p>
+<p class="aside">The guide's suggested style: one or two dedicated workspaces on the secondary monitor (browser, logs, chat), "the rest" on main. With that, rule step 3 rarely surprises you.</p>
+
+<h2>Play</h2>
+<p>Main on the left, secondary on the right. The red frame is the focused monitor. The list shows every workspace and its home (<code>→M</code>/<code>→S</code>). Watch the homes change.</p>
+<div id="sim"></div>
+<p class="aside">A JS port of the workspace↔monitor logic from AeroSpace 0.20.3 (<code>assets/monitors.js</code>). Workspace <code>B</code> is force-assigned to the secondary monitor. Click a window to focus it.</p>
+
+<h2>Predict</h2>
+<p>Main shows workspace <b>1</b>, secondary shows workspace <b>2</b>, unless the question says otherwise.</p>
+<div id="quiz"></div>
+
+<h2>Dojo: do it for real</h2>
+<p>Right now only one monitor is connected (<code>aerospace list-monitors</code> shows the Odyssey G93SD). Connect a second display first. An iPad via Sidecar works too.</p>
+<pre>aerospace list-monitors                                     # names + order
+aerospace list-workspaces --all --format '%{workspace} %{monitor-name} %{workspace-is-visible}'</pre>
+<ol class="steps">
+  <li><b>Homes.</b> Run the <code>list-workspaces</code> line above. Predict the monitor column before you read it.</li>
+  <li><b>Remote switch.</b> Focus the secondary monitor (click), then <kbd>alt-1</kbd>. Where does 1 appear, and where is focus?</li>
+  <li><b>Move a workspace.</b> On workspace 1, press <kbd>alt-shift-tab</kbd>. Predict what main shows now, then check. Run the <code>list-workspaces</code> line again: where is 1's home?</li>
+  <li><b>Move a window.</b> Open two dojo windows on main. Run <code>aerospace move-node-to-monitor --focus-follows-window next</code>. Predict whether it lands left or right on the secondary monitor.</li>
+  <li><b>The forgetting trap.</b> On the secondary monitor, switch to empty workspace 5 (<kbd>alt-5</kbd> lands on main, so use <code>aerospace summon-workspace 5</code>). Switch away, then <kbd>alt-5</kbd>.</li>
+  <li><b>Edge.</b> Focus the rightmost window on main, then <kbd>alt-l</kbd>. Nothing? Now try <code>aerospace focus --boundaries all-monitors-outer-frame right</code>.</li>
+</ol>
+
+<h2>Suggested bindings (not applied)</h2>
+<pre># main mode: focus crosses monitors, move keeps the in-workspace wall behaviour
+alt-h = 'focus --boundaries all-monitors-outer-frame left'
+alt-l = 'focus --boundaries all-monitors-outer-frame right'
+alt-shift-period = 'move-node-to-monitor --focus-follows-window --wrap-around next'
+# already there: alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+[workspace-to-monitor-force-assignment]   # pick yours
+    B = ['secondary', 'main']</pre>
+<p class="aside">Tell me which workspaces you want pinned, and I'll put this into your dotfiles.</p>
+
+<h2>Recall</h2>
+<details><summary>State the four-step home rule, what <code>workspace X</code> does, the three "move" commands, and the two traps. Then reveal.</summary>
+<p><b>Home</b>: forced → visible on → last shown on → main.<br>
+<b><code>workspace X</code></b>: visible → just focus that monitor. Hidden → it appears on its home monitor and focus follows. New → main.<br>
+<b>Move</b>: window → <code>move-node-to-monitor</code> (joins the root there, on the side it came from). Workspace → <code>move-workspace-to-monitor</code> (<kbd>alt-shift-tab</kbd>). Bring here → <code>summon-workspace X</code>.<br>
+<b>Traps</b>: empty workspaces are deleted and forget their home. Plain <code>focus</code>/<code>move</code> stop at the monitor edge unless you add <code>--boundaries all-monitors-outer-frame</code>.</p></details>
+
+<div class="source"><a href="https://nikitabobko.github.io/AeroSpace/guide#multiple-monitors">AeroSpace Guide: Multiple monitors</a>. Short, and explains why the pool is shared.</div>
+<p class="ask">Something unclear, or a setup you want to build? Ask your teacher (me, the agent) in the chat.</p>
+
+<nav class="course">
+  <a href="0003-layout-tiles-accordion.html">← Lesson 3</a>
+  <a href="../reference/tree-and-placement.html">Reference</a>
+  <span>next: sizes (<code>resize</code>, <code>balance-sizes</code>)</span>
+</nav>
+</main>
+
+<script>
+  Monitors.mount(document.getElementById("sim"), {
+    workspaces: { "1": "h[1 2]", "2": "h[3 4]", "3": "h[5]", "B": "h[6]" },
+    visible: ["1", "2"], focus: 0, forced: { "B": "secondary" }, extra: ["5"],
+  });
+
+  Quiz.mount(document.getElementById("quiz"), [
+    { prompt: "Focus is on <b>main</b>. Workspace 3 is hidden and was last shown on main. You run <code>workspace 3</code>.",
+      options: ["3 replaces 1 on main", "3 replaces 2 on secondary", "Nothing, 3 is hidden"], answer: 0,
+      why: "3's home is main (last shown there), so it appears there." },
+    { prompt: "Focus is on <b>secondary</b>. Workspace 3 is hidden, home main. You run <code>workspace 3</code>.",
+      options: ["3 replaces 1 on main, focus jumps to main", "3 replaces 2 on secondary", "3 swaps places with 2"], answer: 0,
+      why: "A workspace appears on its home monitor, not on the one you're looking at." },
+    { prompt: "Focus is on main. You run <code>workspace 2</code> (visible on secondary).",
+      options: ["Focus moves to secondary, nothing else changes", "2 moves to main", "1 and 2 swap monitors"], answer: 0,
+      why: "A visible workspace isn't moved. Only focus jumps." },
+    { prompt: "Focus is on secondary. Workspace 7 doesn't exist yet. You run <code>workspace 7</code>.",
+      options: ["7 opens on main", "7 opens on secondary", "Error: no such workspace"], answer: 0,
+      why: "A new workspace has no home yet, so it falls back to main. (i3 would use the current monitor.)" },
+    { prompt: "Focus is on main. You run <code>summon-workspace 2</code>.",
+      options: ["2 moves to main. Secondary falls back to another workspace that belongs to it", "1 and 2 swap", "Focus just moves to secondary"], answer: 0,
+      why: "summon pulls 2 here. Secondary needs something to show, so it takes a hidden workspace of its own, or the first empty numbered one." },
+    { prompt: "Main shows <code>h[1 2]</code> with 2 focused (rightmost). Your config: <code>alt-l = 'focus right'</code>. You press <kbd>alt-l</kbd>.",
+      options: ["Nothing happens", "Focus moves to secondary", "Focus wraps to window 1"], answer: 0,
+      why: "The default is --boundaries workspace with --boundaries-action stop." },
+    { prompt: "Same situation, but with <code>focus --boundaries all-monitors-outer-frame right</code>. Secondary shows <code>h[3 4]</code>, where 4 was focused last.",
+      options: ["Window 4", "Window 3 (closest to the edge)", "The secondary workspace, with no window focused"], answer: 0,
+      why: "Crossing a monitor focuses that workspace's most recently focused window, not the closest one." },
+    { prompt: "Window 2 is focused on main. Secondary shows <code>h[3 4]</code>. You run <code>move-node-to-monitor right</code>.",
+      options: ["h[2 3 4]", "h[3 4 2]", "h[3 v[4 2]]"], answer: 0,
+      why: "Moving right into an h root, the window enters on the near side: index 0." },
+    { prompt: "Same, but <code>move-node-to-monitor next</code>.",
+      options: ["h[3 4 2]", "h[2 3 4]", "h[3 2 4]"], answer: 0,
+      why: "next/prev (and patterns) always append at the end of the root." },
+    { prompt: "Workspace B is force-assigned to <code>secondary</code> and focused there. You press <kbd>alt-shift-tab</kbd>.",
+      options: ["It fails, B stays", "B moves to main", "B moves, and the assignment updates"], answer: 0,
+      why: "move-workspace-to-monitor (and summon-workspace) refuse to break a forced assignment." },
+    { prompt: "Empty workspace 5 was shown on secondary. You switched to another workspace there. Later, from main, you run <code>workspace 5</code>.",
+      options: ["5 opens on main", "5 opens on secondary", "Error"], answer: 0,
+      why: "Hidden + empty + not persistent = deleted. The recreated 5 has no home, so it goes to main." },
+  ]);
+</script>
+</body>
+</html>

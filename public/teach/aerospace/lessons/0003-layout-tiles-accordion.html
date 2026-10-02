@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>3 · layout: tiles, accordion, orientation</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/tree.js"></script>
+<script src="../assets/quiz.js"></script>
+</head>
+<body>
+<main>
+<header class="lesson">
+  <div class="kicker">AeroSpace layouts · lesson 3</div>
+  <h1><code>layout</code>: tiles, accordion, orientation</h1>
+  <p class="lead">After this lesson you can predict what <kbd>alt-/</kbd> and <kbd>alt-,</kbd> do to any tree, including when they rotate your whole screen.</p>
+</header>
+
+<h2>Layout belongs to the container</h2>
+<p>Windows don't have a layout. Every <b>container</b> has two independent properties:</p>
+<table>
+  <tr><th></th><th><code>horizontal</code></th><th><code>vertical</code></th></tr>
+  <tr><th><code>tiles</code></th><td><code>h[…]</code> side by side</td><td><code>v[…]</code> stacked</td></tr>
+  <tr><th><code>accordion</code></th><td><code>H[…]</code> one visible, others peek left/right</td><td><code>V[…]</code> one visible, others peek top/bottom</td></tr>
+</table>
+<p><code>layout</code> changes the <em>focused window's parent container</em>. Focus picks the target, just like in lesson 1.<span class="cite"><a href="https://nikitabobko.github.io/AeroSpace/commands#layout">[layout]</a></span></p>
+<p class="aside">Accordion: the focused (most recent) window fills the container. The others are stacked behind it, their edges visible as <code>accordion-padding</code> (30 px in your config). <kbd>alt-hjkl</kbd> in the accordion's direction cycles through them.<span class="cite"><a href="https://nikitabobko.github.io/AeroSpace/guide#layouts">[guide]</a></span></p>
+
+<h2>Your two keys</h2>
+<pre>alt-slash = 'layout tiles horizontal vertical'
+alt-comma = 'layout accordion horizontal vertical'</pre>
+<div class="rule-box">
+  <strong>Rule</strong>
+  Walk the arguments left to right. Apply the <em>first one that does not already describe</em> the container. <code>tiles</code>/<code>accordion</code> keep the orientation. <code>horizontal</code>/<code>vertical</code> keep the layout.
+</div>
+<p>So each key is a two-step toggle:</p>
+<table>
+  <tr><th>Container is</th><th><kbd>alt-/</kbd></th><th><kbd>alt-,</kbd></th></tr>
+  <tr><td><code>h</code> tiles</td><td>→ <code>v</code> (flip)</td><td>→ <code>H</code> (to accordion)</td></tr>
+  <tr><td><code>v</code> tiles</td><td>→ <code>h</code> (flip)</td><td>→ <code>V</code> (to accordion)</td></tr>
+  <tr><td><code>H</code> accordion</td><td>→ <code>h</code> (to tiles)</td><td>→ <code>V</code> (flip)</td></tr>
+  <tr><td><code>V</code> accordion</td><td>→ <code>v</code> (to tiles)</td><td>→ <code>H</code> (flip)</td></tr>
+</table>
+<p>Mnemonic: <b>wrong layout → switch layout. Right layout → flip orientation.</b> <kbd>/</kbd> means tiles, <kbd>,</kbd> means accordion.<span class="cite"><a href="https://github.com/nikitabobko/AeroSpace/blob/main/Sources/AppBundle/command/impl/LayoutCommand.swift">[source]</a></span></p>
+
+<h2>The trap: flipping rotates the ancestors</h2>
+<div class="rule-box">
+  <strong>Rule</strong>
+  With normalization on (your config), flipping a nested container's orientation also flips <em>every ancestor</em>, alternating up to the root. Nested containers must stay opposite to their parent.
+</div>
+<p>So in <code>h[1 v[<b>2</b> 3]]</code>, <kbd>alt-/</kbd> doesn't put 2 and 3 side by side on the right. It gives <code>v[1 h[2 3]]</code>: 1 on top, 2 and 3 below. The whole screen rotates 90°.<span class="cite"><a href="https://github.com/nikitabobko/AeroSpace/blob/main/Sources/AppBundle/tree/TilingContainer.swift">[changeOrientation]</a></span></p>
+<div id="flip-ex"></div>
+<ul>
+  <li>Switching <b>tiles ↔ accordion never</b> touches ancestors. Only orientation flips propagate.</li>
+  <li>Want 2 and 3 side by side on the right? That's <code>h[1 2 3]</code>. Use <code>move</code>, not <code>layout</code>.</li>
+</ul>
+
+<h2>When to use accordion</h2>
+<p>One slot, many windows, shown one at a time. Classic: <code>h[1 V[2 3 4]]</code>, editor left, and on the right a browser, terminal and docs you cycle with <kbd>alt-j</kbd>/<kbd>alt-k</kbd>. Build it with nesting (lesson 2), focus inside the stack, then <kbd>alt-,</kbd>.</p>
+
+<h2>Play</h2>
+<p>Click inside the box. <kbd>/</kbd> and <kbd>,</kbd> are your two layout keys. <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> focus, <kbd>H</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd> move, <kbd>n</kbd> new, <kbd>x</kbd> close.</p>
+<div id="sim"></div>
+
+<h2>Predict</h2>
+<p>Commit before you click.</p>
+<div id="quiz"></div>
+
+<h2>Build it</h2>
+<p>Reach each target with as few commands as possible. Par is the simulator's shortest path.</p>
+<div id="challenge"></div>
+
+<h2>Dojo: do it for real</h2>
+<pre>open ~/c/teach/aerospace/assets/dojo/Dojo.app               # then ⌘N twice → h[1 2 3]</pre>
+<ol class="steps">
+  <li><b>The four states.</b> Press <kbd>alt-/</kbd>, <kbd>alt-/</kbd>, <kbd>alt-,</kbd>, <kbd>alt-,</kbd>, <kbd>alt-/</kbd>. Name the state after each press <em>before</em> you look.</li>
+  <li><b>Accordion cycling.</b> In <code>H[1 2 3]</code>, cycle with <kbd>alt-h</kbd>/<kbd>alt-l</kbd>. Then <kbd>alt-,</kbd> to <code>V</code>: which keys cycle now?</li>
+  <li><b>The rotation trap.</b> Reset (<kbd>alt-shift-;</kbd> <kbd>r</kbd>), build <code>h[1 v[2 3]]</code>, focus 2, <kbd>alt-/</kbd>. Predict first. Then <kbd>alt-/</kbd> again.</li>
+  <li><b>Side panel.</b> From <code>h[1 2 3 4]</code>, build <code>h[1 V[2 3 4]]</code>. Then open a new window from inside the accordion: where does it land?</li>
+  <li><b>Timed.</b> From <code>h[1 2 3]</code>: <code>h[1 V[2 3]]</code> → back to <code>h[1 2 3]</code>. Goal: under 8 s.</li>
+</ol>
+
+<h2>Recall</h2>
+<details><summary>State the argument rule, what each key does, and the rotation trap. Then reveal.</summary>
+<p><b>Rule</b>: first argument that doesn't describe the focused window's parent wins.<br>
+<b><kbd>alt-/</kbd></b>: accordion → tiles (same orientation); tiles → flip orientation. <b><kbd>alt-,</kbd></b>: tiles → accordion; accordion → flip.<br>
+<b>Trap</b>: an orientation flip also flips all ancestors (alternating), so a nested flip rotates the whole screen. Layout switches don't propagate.</p></details>
+
+<div class="source"><a href="https://nikitabobko.github.io/AeroSpace/commands#layout">AeroSpace commands: layout</a> and the <a href="https://nikitabobko.github.io/AeroSpace/guide#layouts">guide's Layouts section</a>.</div>
+<p class="ask">Something unclear, or a layout you want to build? Ask your teacher (me, the agent) in the chat.</p>
+
+<nav class="course">
+  <a href="0002-move-and-join-with.html">← Lesson 2</a>
+  <a href="../reference/tree-and-placement.html">Reference</a>
+  <a href="0004-two-monitors.html">Lesson 4: two monitors →</a>
+</nav>
+</main>
+
+<script>
+  // rotation trap: before / after
+  (() => {
+    const el = document.getElementById("flip-ex");
+    el.style.display = "flex"; el.style.gap = "1.2rem"; el.style.alignItems = "center"; el.style.flexWrap = "wrap";
+    const before = Aero.parse("h[1 v[2 3]]", {focus: 2}), after = before.clone();
+    after.layout("tiles", "horizontal", "vertical");
+    const box = (ws, label) => { const d = document.createElement("div"); const s = document.createElement("div");
+      d.appendChild(s); Aero.renderScreen(s, ws, {width: 220, height: 120});
+      d.insertAdjacentHTML("beforeend", `<div class="aside" style="margin-top:.3rem"><code>${label}</code></div>`); return d; };
+    el.appendChild(box(before, "h[1 v[2 3]], focus 2"));
+    el.insertAdjacentHTML("beforeend", `<kbd>alt-/</kbd> →`);
+    el.appendChild(box(after, after.compact()));
+  })();
+
+  Aero.mount(document.getElementById("sim"), Aero.parse("h[1 v[2 3]]", {focus: 2}),
+    {controls: ["focus", "move", "join", "layout", "new", "close", "flatten"], width: 420, height: 240});
+
+  // Build-it challenge (same widget as lesson 2)
+  (() => {
+    const targets = [
+      { start: "h[1 2 3]", focus: 1, goal: "v[1 2 3]", par: 1 },
+      { start: "h[1 2 3]", focus: 1, goal: "V[1 2 3]", par: 2 },
+      { start: "h[1 V[2 3]]", focus: 2, goal: "h[1 v[2 3]]", par: 1 },
+      { start: "h[1 2 3]", focus: 3, goal: "h[1 V[2 3]]", par: 2 },
+      { start: "v[1 h[2 3]]", focus: 1, goal: "h[1 v[2 3]]", par: 1 },
+      { start: "h[1 2 3 4]", focus: 1, goal: "h[1 V[2 3 4]]", par: 2 },
+    ];
+    const root = document.getElementById("challenge");
+    let t = 0;
+    const run = () => {
+      const c = targets[t];
+      root.innerHTML = `<div class="aero-row" style="align-items:center;gap:1rem;margin-bottom:.6rem">
+          <div><div class="aside">target ${t + 1}/${targets.length} · par ${c.par}</div><div class="goal"></div><pre class="aero-tree" style="margin-top:.3rem">${c.goal}</pre></div>
+          <div class="status aside"></div></div><div class="sim"></div>
+          <button class="next" style="margin-top:.5rem">next target →</button>`;
+      const goal = Aero.parse(c.goal); goal.focused = null;
+      Aero.renderScreen(root.querySelector(".goal"), goal, {width: 180, height: 100});
+      const api = Aero.mount(root.querySelector(".sim"), Aero.parse(c.start, {focus: c.focus}),
+        {controls: ["focus", "move", "join", "layout", "flatten"], width: 360, height: 200});
+      const status = root.querySelector(".status");
+      let n = 0, won = false;
+      new MutationObserver(() => {
+        const msg = root.querySelector(".aero-log").textContent;
+        if (msg === "› reset") { n = 0; won = false; status.textContent = ""; return; }
+        if (won) return;
+        n++;
+        if (api.ws.compact() === c.goal) { won = true; status.innerHTML = `✓ reached in <b>${n}</b> command${n > 1 ? "s" : ""}${n <= c.par ? " (par!)" : ` (par ${c.par}, reset and retry?)`}`; }
+        else status.textContent = `${n} command${n > 1 ? "s" : ""}…`;
+      }).observe(root.querySelector(".aero-log"), {childList: true, characterData: true, subtree: true});
+      root.querySelector(".next").onclick = () => { t = (t + 1) % targets.length; run(); };
+    };
+    run();
+  })();
+
+  Quiz.mount(document.getElementById("quiz"), [
+    { prompt: "Window 1 is focused.", setup: "h[1 2 3]", focus: 1, cmd: "alt-/ (layout tiles horizontal vertical)",
+      options: ["v[1 2 3]", "h[1 2 3]", "H[1 2 3]"], answer: 0,
+      why: "'tiles' and 'horizontal' already match, so 'vertical' is the first that doesn't. Orientation flips." },
+    { prompt: "Window 1 is focused.", setup: "h[1 2 3]", focus: 1, cmd: "alt-, (layout accordion horizontal vertical)",
+      options: ["H[1 2 3]", "V[1 2 3]", "v[1 2 3]"], answer: 0,
+      why: "'accordion' doesn't match, so it's applied. Orientation is kept." },
+    { prompt: "Window 1 is focused.", setup: "H[1 2 3]", focus: 1, cmd: "alt-,",
+      options: ["V[1 2 3]", "h[1 2 3]", "H[1 2 3]"], answer: 0,
+      why: "Already accordion and horizontal, so 'vertical' wins: flip to V." },
+    { prompt: "Window 1 is focused.", setup: "V[1 2 3]", focus: 1, cmd: "alt-/",
+      options: ["v[1 2 3]", "h[1 2 3]", "H[1 2 3]"], answer: 0,
+      why: "'tiles' doesn't match, so the layout switches and orientation stays vertical." },
+    { prompt: "Window 2 is focused.", setup: "h[1 v[2 3]]", focus: 2, cmd: "alt-/",
+      options: ["v[1 h[2 3]]", "h[1 h[2 3]]", "h[1 2 3]"], answer: 0,
+      why: "The stack flips to h, so its parent (the root) must flip to v. The whole screen rotates." },
+    { prompt: "Window 1 is focused.", setup: "h[1 v[2 3]]", focus: 1, cmd: "alt-/",
+      options: ["v[1 h[2 3]]", "v[1 v[2 3]]", "h[1 v[2 3]]"], answer: 0,
+      why: "1's parent is the root. Root flips to v, and normalization flips the nested stack to h. Same result as from 2." },
+    { prompt: "Window 2 is focused.", setup: "h[1 v[2 3]]", focus: 2, cmd: "alt-,",
+      options: ["h[1 V[2 3]]", "H[1 v[2 3]]", "v[1 H[2 3]]"], answer: 0,
+      why: "Layout switches don't propagate. Only 2's parent, the stack, becomes an accordion." },
+    { prompt: "Window 2 is focused.", setup: "h[1 V[2 3]]", focus: 2, cmd: "alt-,",
+      options: ["v[1 H[2 3]]", "h[1 H[2 3]]", "h[1 v[2 3]]"], answer: 0,
+      why: "Already accordion, so orientation flips to H, and the root rotates to v with it." },
+    { prompt: "Window 3 is focused.", setup: "h[1 V[2 3]]", focus: 3, cmd: "open new window",
+      options: ["h[1 V[2 3 4]]", "h[1 4 V[2 3]]", "h[1 V[2 3] 4]"], answer: 0,
+      why: "Lesson 1 rule: it joins 3's container, the accordion, and becomes the visible window." },
+    { prompt: "You want 2 and 3 side by side on the right of <code>h[1 v[2 3]]</code>. Best move?",
+      options: ["Focus 2, move left", "Focus 2, alt-/", "Focus 2, alt-, twice"],
+      answer: 0, why: "move left un-nests 2 → h[1 2 3]: side by side is just 'no nesting'. Any orientation flip of the stack rotates the root too." },
+  ]);
+</script>
+</body>
+</html>

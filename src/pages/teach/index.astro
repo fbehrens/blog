@@ -1,15 +1,15 @@
 ---
-import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { getMissions } from '../../lib/missions';
 
-const sessions = (await getCollection('teach'))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const missions = getMissions();
+const linkClass = 'text-(--color-primary) underline hover:text-(--color-primary-hover)';
 ---
-<Layout title="Teach" description="Learning sessions, published from my teach workspace.">
+<Layout title="Teach" description="Learning missions, published from my teach workspace.">
   <header class="mb-8">
     <h1 class="font-serif text-3xl font-bold leading-snug mb-2">Teach</h1>
     <p class="text-(--color-muted)">
-      Self-directed learning sessions — each with a mission, resources, and interactive lessons.
+      Self-directed learning missions — each with interactive lessons and references.
     </p>
     <p class="mt-3 text-sm text-(--color-muted) border-l-2 border-(--color-border) pl-3">
       These are my own private learning sessions, generated with the
@@ -22,27 +22,30 @@ const sessions = (await getCollection('teach'))
   </header>
 
   <div>
-    {sessions.map(s => (
+    {missions.map(m => (
       <article class="py-6 border-b border-(--color-border) last:border-0">
-        <div class="flex items-center gap-3 mb-2">
-          <time class="text-sm text-(--color-muted)">
-            {s.data.date.toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </time>
-          {s.data.tags.map(t => (
-            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-primary-light) text-(--color-primary)">{t}</span>
-          ))}
-        </div>
-        <a href={`/teach/${s.data.session}`} class="group">
-          <h2 class="font-serif text-xl font-semibold mb-1 group-hover:text-(--color-primary) transition-colors">{s.data.title}</h2>
-          <p class="text-(--color-muted) text-sm leading-relaxed line-clamp-3">{s.data.description}</p>
-        </a>
-        {s.data.lessons.length > 0 && (
-          <p class="text-xs text-(--color-muted) mt-2">{s.data.lessons.length} lesson{s.data.lessons.length === 1 ? '' : 's'}</p>
+        <h2 class="font-serif text-xl font-semibold mb-1">{m.title}</h2>
+        {m.why && <p class="text-(--color-muted) text-sm leading-relaxed mb-3">{m.why}</p>}
+        {m.lessons.length > 0 && (
+          <>
+            <h3 class="text-sm font-semibold mt-3 mb-1">Lessons</h3>
+            <ol class="list-decimal pl-5 space-y-1 text-sm">
+              {m.lessons.map(l => <li><a href={l.href} class={linkClass}>{l.title}</a></li>)}
+            </ol>
+          </>
+        )}
+        {m.references.length > 0 && (
+          <>
+            <h3 class="text-sm font-semibold mt-3 mb-1">References</h3>
+            <ul class="list-disc pl-5 space-y-1 text-sm">
+              {m.references.map(r => <li><a href={r.href} class={linkClass}>{r.title}</a></li>)}
+            </ul>
+          </>
         )}
       </article>
     ))}
-    {sessions.length === 0 && (
-      <p class="text-(--color-muted)">No sessions published yet.</p>
+    {missions.length === 0 && (
+      <p class="text-(--color-muted)">No missions published yet.</p>
     )}
   </div>
 </Layout>

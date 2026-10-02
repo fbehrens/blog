@@ -1,7 +1,7 @@
 # ADR 0002: Publish Teach Sessions to the Blog
 
 ## Status
-Accepted
+Superseded by [ADR 0003](0003-sync-public-entries.md)
 
 ## Context
 Teach-skill sessions live in `/Users/fb/c/teach/<session>/` (e.g. `astro`, `effect`,

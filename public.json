@@ -1,0 +1,28 @@
+[
+  {
+    "name": "evaademi",
+    "source": "/Users/fb/c/kata/evaademi",
+    "typ": "unlisted"
+  },
+  {
+    "name": "aerospace",
+    "source": "ankara:/Users/fb/c/teach/aerospace",
+    "typ": "teach"
+  },
+  {
+    "name": "effect",
+    "source": "/Users/fb/c/teach/effect",
+    "typ": "teach",
+    "exclude": ["packages", "package.json", "bun.lock", "tsconfig.base.json"]
+  },
+  {
+    "name": "salsa",
+    "source": "/Users/fb/c/teach/salsa",
+    "typ": "link"
+  },
+  {
+    "name": "oeffi",
+    "source": "/Users/fb/c/teach/oeffi",
+    "typ": "teach"
+  }
+]

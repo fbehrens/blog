@@ -1,0 +1,100 @@
+/* Shared course stylesheet — Tufte-inspired, print friendly */
+:root {
+  --ink: #1f1d1a; --muted: #6b665e; --paper: #fffff8; --rule: #d9d4c7;
+  --accent: #a0301e; --good: #2e7d4f; --bad: #b3261e; --code-bg: #f3f1e8;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --mono: "SF Mono", ui-monospace, Menlo, monospace;
+}
+* { box-sizing: border-box; }
+html { font-size: 17px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); line-height: 1.55; }
+main { max-width: 46rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+header.lesson { border-bottom: 1px solid var(--rule); margin-bottom: 2rem; padding-bottom: 1rem; }
+.kicker { font-variant: small-caps; letter-spacing: .08em; color: var(--muted); font-size: .9rem; }
+h1 { font-weight: 400; font-size: 2.2rem; line-height: 1.15; margin: .2rem 0 .5rem; }
+h2 { font-weight: 400; font-style: italic; font-size: 1.45rem; margin: 2.4rem 0 .6rem; }
+h3 { font-weight: 600; font-size: 1.05rem; margin: 1.6rem 0 .4rem; }
+p, li { hyphens: auto; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code, kbd, pre { font-family: var(--mono); font-size: .82rem; }
+code { background: var(--code-bg); padding: .08em .3em; border-radius: 3px; }
+kbd { border: 1px solid var(--rule); border-bottom-width: 2px; border-radius: 4px; padding: 0 .35em; background: #fff; }
+pre { background: var(--code-bg); padding: .8rem 1rem; border-radius: 4px; overflow-x: auto; line-height: 1.35; }
+.lead { font-size: 1.15rem; color: var(--muted); }
+.cite { font-size: .78rem; color: var(--muted); vertical-align: super; line-height: 0; }
+.cite a { color: var(--muted); }
+
+/* Callouts */
+.rule-box { border-left: 3px solid var(--accent); padding: .6rem 1rem; margin: 1.2rem 0; background: #fbf7ec; }
+.rule-box strong:first-child { font-variant: small-caps; letter-spacing: .05em; color: var(--accent); display: block; }
+.win { border-left: 3px solid var(--good); padding: .6rem 1rem; margin: 1.2rem 0; background: #f1f8f2; }
+.aside { font-size: .88rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: .6rem; }
+.source { border: 1px solid var(--rule); padding: .8rem 1rem; border-radius: 4px; margin: 2rem 0 1rem; }
+.source::before { content: "Primary source"; display: block; font-variant: small-caps; letter-spacing: .06em; color: var(--muted); font-size: .85rem; }
+.ask { font-style: italic; color: var(--muted); margin-top: 1.4rem; }
+nav.course { display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem; font-size: .9rem; }
+ol.steps > li { margin-bottom: .5rem; }
+details > summary { cursor: pointer; color: var(--accent); }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; margin: 1rem 0; }
+th, td { text-align: left; border-bottom: 1px solid var(--rule); padding: .35rem .5rem; vertical-align: top; }
+th { font-weight: 600; font-variant: small-caps; letter-spacing: .04em; }
+
+/* ——— Aero simulator (assets/tree.js) ——— */
+.aero-sim { border: 1px solid var(--rule); border-radius: 6px; padding: 1rem; margin: 1.2rem 0; background: #fff; outline: none; }
+.aero-sim:focus-within, .aero-sim:focus { box-shadow: 0 0 0 2px #e9dcc0; }
+.aero-row { display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; }
+.aero-screen { position: relative; background: #2b2a28; border-radius: 4px; flex: none; }
+.aero-win { position: absolute; border: 2px solid #2b2a28; color: #fff; font: 700 1.4rem var(--mono);
+  display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 3px; transition: all .15s; }
+.aero-win.focused { box-shadow: inset 0 0 0 4px #fff; }
+.aero-win.ghost { opacity: .45; border-radius: 0; }
+.aero-tree { margin: 0; flex: 1; min-width: 12rem; font-size: .8rem; background: var(--code-bg); }
+.aero-controls { display: flex; flex-wrap: wrap; gap: .5rem .9rem; margin-top: .8rem; }
+.aero-group { display: flex; flex-wrap: wrap; gap: .3rem; }
+.aero-controls button, .quiz button { font: .78rem var(--mono); padding: .3rem .55rem; border: 1px solid var(--rule);
+  background: #faf8f1; border-radius: 4px; cursor: pointer; color: var(--ink); }
+.aero-controls button:hover, .quiz button:hover { background: #f0ead9; }
+.aero-reset { margin-left: auto; }
+.aero-log { font: .78rem var(--mono); color: var(--muted); margin-top: .5rem; min-height: 1.2em; }
+
+/* ——— Quiz (assets/quiz.js) ——— */
+.quiz { border: 1px solid var(--rule); border-radius: 6px; padding: 1rem 1.2rem; margin: 1.2rem 0; background: #fff; }
+.quiz .q-head { display: flex; justify-content: space-between; color: var(--muted); font-size: .85rem; font-variant: small-caps; letter-spacing: .05em; }
+.quiz .q-prompt { margin: .4rem 0 .8rem; }
+.quiz .q-setup { display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; }
+.quiz .q-cmd { font: .9rem var(--mono); background: var(--ink); color: var(--paper); padding: .25rem .6rem; border-radius: 4px; display: inline-block; margin: .6rem 0; }
+.quiz .q-options { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: .4rem; }
+.quiz .q-opt { border: 2px solid var(--rule); border-radius: 6px; padding: .4rem; cursor: pointer; background: #fff; }
+.quiz .q-opt:hover { border-color: var(--muted); }
+.quiz .q-opt .lbl { font: 600 .8rem var(--mono); color: var(--muted); display: block; margin-bottom: .25rem; }
+.quiz .q-opt.right { border-color: var(--good); } .quiz .q-opt.wrong { border-color: var(--bad); opacity: .7; }
+.quiz .q-opt .aero-win { cursor: default; font-size: .95rem; }
+.quiz .q-feedback { margin-top: .8rem; min-height: 1.4em; }
+.quiz .q-feedback.good { color: var(--good); } .quiz .q-feedback.bad { color: var(--bad); }
+.quiz .q-nav { display: flex; justify-content: space-between; align-items: center; margin-top: .8rem; }
+.quiz .q-score { font-size: .9rem; color: var(--muted); }
+
+/* ——— Reference sheets ——— */
+body.reference main { max-width: 60rem; }
+body.reference .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem 1.6rem; }
+body.reference section { break-inside: avoid; }
+body.reference h2 { margin-top: 1.4rem; }
+
+@media print {
+  body { background: #fff; font-size: 11pt; }
+  main { padding: 0; max-width: none; }
+  .aero-controls, .q-nav, nav.course, .ask { display: none; }
+  a { color: var(--ink); }
+  pre, .rule-box, .quiz, .aero-sim { break-inside: avoid; }
+  .aero-win, .aero-screen { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* ——— Two-monitor simulator (assets/monitors.js) ——— */
+.mon-row { display: flex; gap: .8rem; flex-wrap: wrap; }
+.mon { border: 2px solid var(--rule); border-radius: 6px; padding: .4rem; }
+.mon.focused { border-color: var(--accent); }
+.mon-label { font: .78rem var(--mono); color: var(--muted); margin-bottom: .3rem; }
+.mon.focused .mon-label { color: var(--accent); }
+.mon-tree { display: inline-block; margin-top: .3rem; font-size: .75rem; }
+.mon-list { margin-top: .6rem; }
+.mon-list code { margin-right: .2rem; }

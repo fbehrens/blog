@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>2 · Reshaping with move &amp; join-with</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/tree.js"></script>
+<script src="../assets/quiz.js"></script>
+</head>
+<body>
+<main>
+<header class="lesson">
+  <div class="kicker">AeroSpace layouts · lesson 2</div>
+  <h1>Reshaping with <code>move</code> &amp; <code>join-with</code></h1>
+  <p class="lead">After this lesson you can predict how <code>move</code> and <code>join-with</code> reshape the tree, and build <code>h[1 v[2 3]]</code> in one command.</p>
+</header>
+
+<h2>Two tools, two jobs</h2>
+<ul>
+  <li><b><code>join-with &lt;dir&gt;</code></b> <em>creates</em> nesting. It wraps the focused window and its neighbour into a new container.</li>
+  <li><b><code>move &lt;dir&gt;</code></b> <em>relocates</em> the focused window. Nesting disappears on its own when a container is left with one child (flatten normalization).</li>
+</ul>
+<p>Lesson 1 said new windows never create containers. So these two commands (plus <code>layout</code>, next lesson) are how every nested layout is built.</p>
+
+<h2><code>join-with</code>: wrap me and my neighbour</h2>
+<div class="rule-box">
+  <strong>Rule</strong>
+  Take the focused window and the <em>nearest node</em> in the direction. Put both into a <em>new container</em> with the <em>opposite orientation</em> of their parent, at the neighbour's old slot.<span class="cite"><a href="https://nikitabobko.github.io/AeroSpace/commands#join-with">[join-with]</a></span>
+</div>
+<ul>
+  <li><code>join-with right</code> / <code>down</code>: you end up <b>first</b> (top or left) in the new container.</li>
+  <li><code>join-with left</code> / <code>up</code>: you end up <b>last</b>.</li>
+  <li>The neighbour can be a whole container. Then the new container holds you plus that entire subtree, which can rotate things you didn't expect (see quiz).</li>
+</ul>
+<div id="join-ex"></div>
+<p class="aside">Source: <code>JoinWithCommand.swift</code>. It's i3's <code>split</code>, redesigned so it survives flatten normalization.<span class="cite"><a href="https://github.com/nikitabobko/AeroSpace/blob/main/Sources/AppBundle/command/impl/JoinWithCommand.swift">[source]</a></span></p>
+
+<h2><code>move</code>: three cases</h2>
+<p>Look at the focused window's parent. Does it have the move's orientation (<code>h</code> for left/right, <code>v</code> for up/down), and is there a sibling in that direction?<span class="cite"><a href="https://github.com/nikitabobko/AeroSpace/blob/main/Sources/AppBundle/command/impl/MoveCommand.swift">[source]</a></span></p>
+<table>
+  <tr><th>Situation</th><th>Result</th><th>Example</th></tr>
+  <tr><td><b>1. Swap.</b> The sibling is a window.</td><td>Trade places.</td><td><code>h[1 <b>2</b> 3]</code> move right → <code>h[1 3 2]</code></td></tr>
+  <tr><td><b>2. Move in.</b> The sibling is a container.</td><td>Dive in and land after that container's <em>most recently focused</em> window (the lesson 1 rule again).</td><td><code>h[1 <b>2</b> v[3 4]]</code> move right → <code>h[1 v[3 2 4]]</code> if 3 was last focused</td></tr>
+  <tr><td><b>3. Move out.</b> Wrong orientation, or no sibling that way.</td><td>Climb until an ancestor has the right orientation. Land right beside the container you climbed out of.</td><td><code>h[1 v[2 <b>3</b>]]</code> move left → <code>h[1 3 2]</code></td></tr>
+</table>
+<div class="rule-box">
+  <strong>Edge case: the workspace wall</strong>
+  If move-out climbs all the way to the root, AeroSpace wraps the <em>entire old tree</em> in a new root with the move's orientation and puts you beside it. So <code>h[1 2 <b>3</b>] move down</code> → <code>v[h[1 2] 3]</code>: 3 goes full-width at the bottom.
+</div>
+<p class="aside">That's <code>--boundaries-action create-implicit-container</code>, the default. It explains the classic surprise: <code>h[1 2 <b>3</b>] move right</code> doesn't do nothing. It gives <code>h[v[1 2] 3]</code>.<span class="cite"><a href="https://nikitabobko.github.io/AeroSpace/commands#move">[move]</a></span></p>
+
+<h2>Play</h2>
+<p>Click inside the box. <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> focus, <kbd>H</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd> move, <kbd>n</kbd> new, <kbd>x</kbd> close. <code>join-with</code> and flatten are buttons.</p>
+<div id="sim"></div>
+
+<h2>Predict</h2>
+<p>Commit before you click.</p>
+<div id="quiz"></div>
+
+<h2>Build it</h2>
+<p>Reach each target in the simulator with as few commands as possible (focus counts). Par is in brackets.</p>
+<div id="challenge"></div>
+
+<h2>Dojo: do it for real</h2>
+<pre>open ~/c/teach/aerospace/assets/dojo/Dojo.app               # then ⌘N twice → h[1 2 3]</pre>
+<ol class="steps">
+  <li><b>Editor + stack.</b> Focus 2, then <kbd>alt-shift-;</kbd> <kbd>alt-shift-l</kbd> (<code>join-with right</code>) → <code>h[1 v[2 3]]</code>. Reset with <kbd>alt-shift-;</kbd> <kbd>r</kbd>.</li>
+  <li><b>Same result, other side.</b> Focus 3, then <code>join-with left</code>. Same tree? Why?</li>
+  <li><b>Bottom bar.</b> From <code>h[1 2 3]</code>, focus 3, <kbd>alt-shift-j</kbd> (<code>move down</code>). Predict first.</li>
+  <li><b>Escape the stack.</b> From <code>h[1 v[2 3]]</code>, focus 3, <kbd>alt-shift-h</kbd>. Then focus 1 and <kbd>alt-shift-l</kbd> twice. Say each result aloud first.</li>
+  <li><b>Timed.</b> <kbd>r</kbd>-reset, then build <code>h[v[1 2] v[3 4]]</code> from <code>h[1 2 3 4]</code>. Goal: under 10 s.</li>
+</ol>
+<p class="aside">AeroSpace 0.20.3 is now installed. Your config's <code>alt-shift-hjkl</code> is <code>move</code> in main mode and <code>join-with</code> in service mode, so the same keys do both jobs, one <kbd>alt-shift-;</kbd> apart.</p>
+
+<h2>Recall</h2>
+<details><summary>State the join-with rule, the three move cases, and the wall edge case. Then reveal.</summary>
+<p><b>join-with</b>: me + nearest node in that direction → new container, opposite orientation of their parent, at the neighbour's slot. Right/down puts me first, left/up puts me last.<br>
+<b>move</b>: (1) sibling window → swap. (2) sibling container → dive in, land after its most recently focused window. (3) otherwise → climb to the first ancestor with the right orientation, land beside the container I left.<br>
+<b>Wall</b>: at the root, the whole tree gets wrapped in a new root with the move's orientation.</p></details>
+
+<div class="source"><a href="https://nikitabobko.github.io/AeroSpace/commands#move">AeroSpace commands: move</a> and <a href="https://nikitabobko.github.io/AeroSpace/commands#join-with">join-with</a>. Read the before/after tree examples.</div>
+<p class="ask">Something unclear, or a layout you want to build? Ask your teacher (me, the agent) in the chat.</p>
+
+<nav class="course">
+  <a href="0001-where-new-windows-land.html">← Lesson 1</a>
+  <a href="../reference/tree-and-placement.html">Reference</a>
+  <a href="0003-layout-tiles-accordion.html">Lesson 3: <code>layout</code>, accordion &amp; orientation →</a>
+</nav>
+</main>
+
+<script>
+  // join-with example: before / after
+  (() => {
+    const el = document.getElementById("join-ex");
+    el.style.display = "flex"; el.style.gap = "1.2rem"; el.style.alignItems = "center"; el.style.flexWrap = "wrap";
+    const before = Aero.parse("h[1 2 3]", {focus: 2}), after = before.clone(); after.joinWith("right");
+    const box = (ws, label) => { const d = document.createElement("div"); const s = document.createElement("div");
+      d.appendChild(s); Aero.renderScreen(s, ws, {width: 220, height: 120});
+      d.insertAdjacentHTML("beforeend", `<div class="aside" style="margin-top:.3rem"><code>${label}</code></div>`); return d; };
+    el.appendChild(box(before, "h[1 2 3], focus 2"));
+    el.insertAdjacentHTML("beforeend", `<code>join-with right</code> →`);
+    el.appendChild(box(after, after.compact()));
+  })();
+
+  Aero.mount(document.getElementById("sim"), Aero.parse("h[1 2 3]", {focus: 2}),
+    {controls: ["focus", "move", "join", "new", "close", "flatten"], width: 420, height: 240});
+
+  // Build-it challenge: watch the tree <pre> and compare against the target.
+  (() => {
+    const targets = [
+      { start: "h[1 2 3]", focus: 3, goal: "h[1 v[2 3]]", par: 1 },
+      { start: "h[1 2 3]", focus: 1, goal: "v[h[1 2] 3]", par: 3 },
+      { start: "h[1 2 3 4]", focus: 1, goal: "h[v[1 2] v[3 4]]", par: 3 },
+      { start: "h[1 v[2 3]]", focus: 1, goal: "h[1 3 2]", par: 2 },
+      { start: "h[1 2 3]", focus: 1, goal: "v[1 h[2 3]]", par: 1 },
+    ];
+    const root = document.getElementById("challenge");
+    let t = 0;
+    const run = () => {
+      const c = targets[t];
+      root.innerHTML = `<div class="aero-row" style="align-items:center;gap:1rem;margin-bottom:.6rem">
+          <div><div class="aside">target ${t + 1}/${targets.length} · par ${c.par}</div><div class="goal"></div></div>
+          <div class="status aside"></div></div><div class="sim"></div>
+          <button class="next" style="margin-top:.5rem">next target →</button>`;
+      const goal = Aero.parse(c.goal); goal.focused = null;
+      Aero.renderScreen(root.querySelector(".goal"), goal, {width: 180, height: 100});
+      const api = Aero.mount(root.querySelector(".sim"), Aero.parse(c.start, {focus: c.focus}),
+        {controls: ["focus", "move", "join", "flatten"], width: 360, height: 200});
+      const status = root.querySelector(".status");
+      let n = 0, won = false;
+      new MutationObserver(() => {
+        const msg = root.querySelector(".aero-log").textContent;
+        if (msg === "› reset") { n = 0; won = false; status.textContent = ""; return; }
+        if (won) return;
+        n++;
+        if (api.ws.compact() === c.goal) { won = true; status.innerHTML = `✓ reached in <b>${n}</b> command${n > 1 ? "s" : ""}${n <= c.par ? " (par!)" : ` (par ${c.par}, reset and retry?)`}`; }
+        else status.textContent = `${n} command${n > 1 ? "s" : ""}…`;
+      }).observe(root.querySelector(".aero-log"), {childList: true, characterData: true, subtree: true});
+      root.querySelector(".next").onclick = () => { t = (t + 1) % targets.length; run(); };
+    };
+    run();
+  })();
+
+  Quiz.mount(document.getElementById("quiz"), [
+    { prompt: "Window 2 is focused.", setup: "h[1 2 3]", focus: 2, cmd: "move right",
+      options: ["h[1 3 2]", "h[1 v[2 3]]", "h[1 2 3]"], answer: 0,
+      why: "Case 1: the sibling is a window, so they swap." },
+    { prompt: "Window 3 is focused.", setup: "h[1 v[2 3]]", focus: 3, cmd: "move left",
+      options: ["h[1 3 2]", "h[3 1 2]", "h[1 v[3 2]]"], answer: 0,
+      why: "Case 3: the stack is vertical, so 3 climbs out to the root and lands just left of the stack. The stack now has one child and flattens." },
+    { prompt: "Window 2 is focused. Inside the stack, 3 was focused more recently than 4.", setup: "h[1 2 v[3 4]]", focus: 2,
+      prep: (ws) => { ws.find(3).markMru(); ws.focus(ws.find(2)); }, cmd: "move right",
+      options: ["h[1 v[3 2 4]]", "h[1 v[2 3 4]]", "h[1 v[3 4] 2]"], answer: 0,
+      why: "Case 2: the sibling is a container, so 2 dives in and lands after the stack's most recently focused window (3)." },
+    { prompt: "Window 2 is focused.", setup: "h[v[1 2] v[3 4]]", focus: 2, cmd: "move right",
+      options: ["h[1 2 v[3 4]]", "h[v[1] v[3 2 4]]", "h[v[1 2] v[3 4]]"], answer: 0,
+      why: "Case 3: 2's parent is vertical, so it climbs out and lands right after its old stack. That stack has one child left and flattens to plain 1." },
+    { prompt: "Window 3 is focused.", setup: "h[1 2 3]", focus: 3, cmd: "move down",
+      options: ["v[h[1 2] 3]", "h[1 v[2 3]]", "h[1 2 3]"], answer: 0,
+      why: "The workspace wall: nothing vertical above 3, so the whole tree is wrapped in a new v root, and 3 lands below it at full width." },
+    { prompt: "Window 3 is focused (already rightmost).", setup: "h[1 2 3]", focus: 3, cmd: "move right",
+      options: ["h[v[1 2] 3]", "h[1 2 3]", "h[1 v[2 3]]"], answer: 0,
+      why: "Wall again. The old root is wrapped into a new h root beside 3. Opposite-orientation normalization turns the wrapped h into v." },
+    { prompt: "Window 2 is focused.", setup: "h[1 2 3]", focus: 2, cmd: "join-with left",
+      options: ["h[v[1 2] 3]", "h[v[2 1] 3]", "h[1 v[2 3]]"], answer: 0,
+      why: "join-with left: the new container replaces 1's slot, and you (2) end up last, i.e. below 1." },
+    { prompt: "Window 1 is focused.", setup: "h[1 v[2 3]]", focus: 1, cmd: "join-with right",
+      options: ["v[1 h[2 3]]", "h[v[1 2] 3]", "h[1 v[2 3]]"], answer: 0,
+      why: "The neighbour is the whole stack. A new v container wraps 1 and the stack. The root now has one child and flattens, and the old stack flips to h. Everything rotates." },
+    { prompt: "Window 4 is focused.", setup: "h[1 v[2 3 4]]", focus: 4, cmd: "join-with up",
+      options: ["h[1 v[2 h[3 4]]]", "h[1 v[h[2 3] 4]]", "h[1 v[2 3 4]]"], answer: 0,
+      why: "Nearest node above 4 is 3. They get wrapped in an h container (opposite of the v stack), sitting where 3 was." },
+    { prompt: "You want <code>h[1 v[2 3]]</code> starting from <code>h[1 2 3]</code>. Which single command does it?",
+      options: ["Focus 2, join-with right", "Focus 2, move right", "Focus 3, move down"], answer: 0,
+      why: "Only join-with creates a nested container here. 'move right' just swaps, and 'move down' hits the wall and makes a full-width bottom row." },
+  ]);
+</script>
+</body>
+</html>
