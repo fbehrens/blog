@@ -15,6 +15,10 @@ const buildTime = new Date().toISOString();
 
 export default defineConfig({
   site: 'https://www.aufb.de',
+  server: {
+    host: true,
+    allowedHosts: ['wien', 'wien.kite-ling.ts.net']
+  },
   vite: {
     plugins: [tailwindcss()],
     define: {
