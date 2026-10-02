@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karte — Bahntrassen in NRW</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  body { max-width: none; }
+  #map { height: 75vh; border-radius: 6px; }
+  .legend { background: #fff; padding: 6px 10px; border-radius: 4px; font: 13px/1.5 system-ui, sans-serif; }
+  .legend i { display: inline-block; width: 18px; height: 4px; margin-right: 6px; vertical-align: middle; }
+  .leaflet-tooltip { font: 13px/1.4 system-ui, sans-serif; }
+</style>
+</head>
+<body>
+
+<p class="meta">Referenz · Karte · Daten: <a href="https://bahntrassenradeln.de/bahn_nw.htm">bahntrassenradeln.de</a> (Achim Bartoschek)</p>
+<h1>Bahntrassen in NRW</h1>
+<p class="subtitle">__COUNT__ Trassenwege, zusammen rund __KM__ km. Darüberfahren zeigt Name, Länge und Höhenmeter, Klicken zeigt die Links zur Beschreibung und zur GPX-Datei.</p>
+
+<div id="map"></div>
+
+<p class="meta">Länge und Höhenmeter sind aus den GPX-Dateien berechnet (Anstieg ab 5 m gezählt), einfache Strecke. Die Werte gelten in Track-Richtung, rückwärts sind Auf und Ab vertauscht. Neu erzeugen: <code>uv run tools/build_trassen_map.py</code>.</p>
+
+<footer>
+  <p>Referenz: <a href="../lessons/0004-trassenbiken-nrw.html">Lektion 4 — Trassenbiken in NRW</a> · <a href="glossary.html">Glossar</a></p>
+</footer>
+
+<script>
+const DATA = __DATA__;
+const REGIONS = __REGIONS__;
+const COLORS = { "1": "#1f77b4", "2": "#2ca02c", "3": "#d62728", "4": "#9467bd", "5": "#ff7f0e" };
+
+const map = L.map("map");
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 18,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+const fmt = v => v == null ? "–" : v.toLocaleString("de-DE");
+const style = f => ({ color: COLORS[f.properties.region], weight: 4, opacity: 0.85 });
+
+const layer = L.geoJSON(DATA, {
+  style,
+  onEachFeature: (f, l) => {
+    const p = f.properties;
+    l.bindTooltip(
+      `<b>${p.name}</b><br>${p.km.toLocaleString("de-DE")} km · ↑ ${fmt(p.up)} m · ↓ ${fmt(p.down)} m` +
+      (p.min != null ? `<br>${fmt(p.min)}–${fmt(p.max)} m ü. NN` : ""),
+      { sticky: true }
+    );
+    l.bindPopup(
+      `<b>${p.nr}</b> ${p.name}<br>${p.belag ? "Belag: " + p.belag + "<br>" : ""}` +
+      `<a href="${p.url}" target="_blank">Beschreibung</a> · <a href="${p.gpx}">GPX</a>`
+    );
+    l.on("mouseover", () => l.setStyle({ weight: 8, opacity: 1 }));
+    l.on("mouseout", () => layer.resetStyle(l));
+  }
+}).addTo(map);
+map.fitBounds(layer.getBounds());
+
+const legend = L.control({ position: "bottomright" });
+legend.onAdd = () => {
+  const d = L.DomUtil.create("div", "legend");
+  d.innerHTML = Object.entries(REGIONS)
+    .map(([k, v]) => `<i style="background:${COLORS[k]}"></i>NW ${k} · ${v}`).join("<br>");
+  return d;
+};
+legend.addTo(map);
+</script>
+</body>
+</html>

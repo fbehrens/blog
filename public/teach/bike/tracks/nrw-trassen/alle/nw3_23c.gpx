@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.16.3" version="1.1">
+
+<trk>
+  <name>NW 3.23c*</name>
+  <trkseg>
+    <trkpt lat="51.495740" lon="7.551290"/>
+    <trkpt lat="51.496000" lon="7.551360"/>
+    <trkpt lat="51.496230" lon="7.551470"/>
+    <trkpt lat="51.496470" lon="7.551610"/>
+    <trkpt lat="51.496670" lon="7.551800"/>
+    <trkpt lat="51.496840" lon="7.551980"/>
+    <trkpt lat="51.497000" lon="7.552180"/>
+    <trkpt lat="51.497370" lon="7.552700"/>
+    <trkpt lat="51.497570" lon="7.553000"/>
+    <trkpt lat="51.497950" lon="7.553770"/>
+    <trkpt lat="51.498160" lon="7.554230"/>
+    <trkpt lat="51.498350" lon="7.554810"/>
+    <trkpt lat="51.498540" lon="7.555480"/>
+  </trkseg>
+</trk>
+
+</gpx>

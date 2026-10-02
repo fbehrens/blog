@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 3 — cycle.travel: planner, stage-splitter, second navigator</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<p class="meta">Lesson 0003 · ~40 minutes · Mission: Berlin → Usedom</p>
+<h1>cycle.travel, end to end</h1>
+<p class="subtitle">One tool that plans the line, splits it into days, finds the beds, feeds the Edge — and rides in your pocket.</p>
+
+<h2>Why this planner, for this tour</h2>
+
+<p>Lesson 1 said the ride is really decided by the routing profile. cycle.travel's whole personality is that decision: it prefers smooth surfaces and quiet roads, and it says so out loud — <em>"cycle.travel aims to choose a balanced route that prefers smooth surfaces, but will sometimes go off-pavement to avoid hills, busy roads or long detours."</em> For sandy Brandenburg, that bias is worth more than any other feature.</p>
+
+<p>The second reason is the one nobody advertises: it is a <strong>planner, not a plotter</strong>. Its job is to find a good line from A to B, not to let you trace one you already know. You steer it by dragging, not by drawing. Fight this and you'll hate it; accept it and a 340 km tour takes ten minutes to rough out.</p>
+
+<p>Third: the whole core — routing, turn-by-turn, offline maps, worldwide coverage — is free. It's one developer (Richard), funded by a supporter scheme, with maps updated about monthly.</p>
+
+<h2>1 · Planning the line</h2>
+
+<ul>
+  <li><strong>Click a start, click an end.</strong> Or type place names into <em>From</em> / <em>To</em>. OpenStreetMap rarely has house numbers — type the street, not the number.</li>
+  <li><strong>Drag the route</strong> to move it; a numbered <em>via point</em> appears where you dragged. Click a via point → <em>Remove via</em> to undo it.</li>
+  <li><strong>Extend</strong> it: on desktop, tick <em>Click map to add more points</em>; on Android, long-press the new end.</li>
+  <li><strong>Surface toggle:</strong> <em>Paths &amp; roads</em> ⇄ <strong>Paved only</strong>, right under the from/to boxes. You can even constrain <em>one segment</em>: click the via point that starts it and change <em>Go any way</em> to <em>paved</em>. That is the precise tool for "quiet all week, but no sand between Zerpenschleuse and Joachimsthal".</li>
+  <li><strong>Round-trip</strong> and <strong>Suggest a ride</strong> exist for day rides from a single point — useful for a rest-day loop from your Usedom hotel.</li>
+</ul>
+
+<p>Read the result the way the map wants to be read: <strong>blue = paved, green = unpaved</strong>, with a road-type breakdown in the left panel and an elevation graph on demand. That green fraction is the same number Lesson 1 told you to say out loud.</p>
+
+<h2>2 · Splitting 340 km into days</h2>
+
+<p>This is the feature that makes cycle.travel worth a dedicated lesson, and it hides in an unlikely place: the <strong>Save</strong> dialog.</p>
+
+<ol class="steps">
+  <li>Plan the whole Berlin → Usedom line as <em>one</em> route. Don't pre-chop it.</li>
+  <li>Click <strong>Save</strong>, name it, and tick <strong>Split into multiple days</strong>.</li>
+  <li>In <em>Split by day</em>, set the number of days <em>or</em> an average distance per day, and optionally <strong>Short first day</strong> / <strong>Short last day</strong> — exactly right when day 1 starts after a train and the last day ends at a ferry.</li>
+  <li>You get one saved journey per day, individually exportable and individually loadable on the Edge.</li>
+</ol>
+
+<p>Then hang the logistics on it: <strong>Find hotels</strong> shows bookable hotels, campsites, hostels and self-catering along the line; the map key also carries <strong>water taps, food stores, cafés, bike shops and repair stations</strong>. Plan the stage ends where the beds are, not where the round numbers are.</p>
+
+<p>Supporters additionally get <strong>PDF downloads</strong> at touring or long-distance scale — or a pure <strong>cue-sheet</strong>, which is the cheapest possible backup navigator: paper doesn't run out of battery in Anklam.</p>
+
+<h2>3 · Getting it onto the Edge Explore 2</h2>
+
+<p>cycle.travel has a direct integration, so arrow 2 of the pipeline collapses into one click:</p>
+
+<blockquote><strong>Save the route → GPS button → Send to Garmin Connect</strong> → authorise once → it lands in Garmin Connect as a <em>course</em> → Connect app pushes it to the Edge over Bluetooth.</blockquote>
+
+<p>Save <em>before</em> you export: an unnamed download shows up on the device as "cycle.travel", and five stages called "cycle.travel" is its own small hell.</p>
+
+<p>If you'd rather move files by hand, <em>More download options</em> gives you:</p>
+
+<table>
+  <tr><th>Format</th><th>Contains</th><th>Use for</th></tr>
+  <tr><td><strong>GPX track</strong></td><td>The line only, no instructions.</td><td>The universal currency — phones, any GPS, Garmin Connect import.</td></tr>
+  <tr><td><strong>TCX course</strong></td><td>Line <em>and</em> turns.</td><td>cycle.travel's own recommendation for Garmin Edge and Wahoo.</td></tr>
+  <tr><td><strong>TCX activity</strong></td><td>Like a TCX course.</td><td>Easier import into Garmin's own software.</td></tr>
+  <tr><td><strong>GPX route</strong></td><td>Turn icons, no line.</td><td>Memory-starved old units. Not your Edge — see Lesson 1.</td></tr>
+  <tr><td><strong>KML</strong></td><td>The line.</td><td>Google Earth, Maps.me.</td></tr>
+</table>
+
+<p>Two options worth knowing: pick TCX course or GPX route and you can tick <strong>Announce turns in advance</strong>, which nudges each cue slightly before the junction so the beep arrives while you can still act on it. And elevation data only rides along if you download <em>from the map page</em> with the elevation graph open — not from the journeys page.</p>
+
+<div class="callout">
+  <span class="label">Which path for this tour?</span>
+  <p>Default to <strong>Send to Garmin Connect</strong>: fewest moving parts, and the Explore 2 rebuilds its own cues from its on-board map anyway. Reach for <strong>TCX course</strong> only if you find Garmin's regenerated turns disagreeing with the line you planned.</p>
+</div>
+
+<h2>4 · Does the website sync journeys to the Android app?</h2>
+
+<p><strong>Yes — through the account, not through a background sync.</strong> One login covers both: <em>"you can use the same account on both the app and the website, so the routes you've planned on the web are accessible in the app (and vice versa)."</em> Your journeys live on cycle.travel's server; the app lists them under <strong>Routes</strong>.</p>
+
+<p>The nuance that matters on tour:</p>
+
+<ul>
+  <li><strong>Save on the website first.</strong> An unsaved route on screen is not a journey and will not appear anywhere else.</li>
+  <li><strong>Log in with the identical method</strong> on both — email/password, or Google, or Apple. Different method = different account = empty Routes list, and this is the single most common complaint in the forum.</li>
+  <li><strong>Listing needs data; riding offline needs a download.</strong> To have a stage available with no reception: <em>Routes</em> list → <strong>long-press the route name</strong> (Android) → download. A phone symbol marks downloaded routes.</li>
+  <li><strong>Download the map too</strong>, separately: <em>Settings → Offline map</em>, choose your areas. Recent Android builds can pull offline tiles at the same time as the route. Route without map = directions with a blank screen.</li>
+</ul>
+
+<p>So the honest sentence for the tour: <em>plan on the laptop, save, then — while you still have wifi — open the app and download every stage plus the map corridor.</em> Do that in the hotel, not at the roadside.</p>
+
+<h3>The app as your second navigator</h3>
+
+<p>Turn-by-turn directions, offline maps and international coverage are free, no region unlocks. Battery: download the maps, then fly in airplane mode, and enable <strong>Dim between turns</strong> (App Settings) — the screen sleeps between junctions and wakes to tell you. The speedometer doubles as pause/stop; the arrow button recentres the map.</p>
+
+<p>Supporter extras that actually matter touring: <strong>offline points-of-interest search</strong> (cafés, water, bike shops — working without reception), contours and hill-shading, the high-contrast <em>Wayfarer</em> style, and the extra map library. Sketch mode is iPhone-only so far.</p>
+
+<div class="callout source">
+  <span class="label">Primary sources</span>
+  <p><a href="https://cycle.travel/help/route_planning">Planning a route</a> and the fuller <a href="https://cycle.travel/advice/map">route-planner help</a>; <a href="https://cycle.travel/advice/map/gps">GPS &amp; file formats</a> (the export table above); <a href="https://cycle.travel/app/help/accounts">Logging in</a> and the <a href="https://cycle.travel/app/help/faq">app FAQ</a> (the sync and offline answers); <a href="https://cycle.travel/help/account">Your account</a>. When in doubt, the <a href="https://cycle.travel/forum/all">cycle.travel forum</a> is answered by the developer himself.</p>
+</div>
+
+<h2>Do it now: the tour, roughed out in one sitting</h2>
+
+<ol class="steps">
+  <li>Create a free cycle.travel account. <strong>Write down which login method you used</strong> — you'll need the same one on the phone.</li>
+  <li>Plan <strong>Berlin Museumsinsel → Peenemünde</strong> as one route. Leave the toggle on <em>Paths &amp; roads</em> for now.</li>
+  <li>Note the unpaved (green) share and the total. Then flip to <strong>Paved only</strong> and note both numbers again. The difference between the two versions is your real decision about tyres and daily distance.</li>
+  <li>Save it with <strong>Split into multiple days</strong> ticked: try 5 days, <em>Short first day</em> on. Look at where the splits land — town, or forest?</li>
+  <li>Fix the ugly splits by hand: reopen a day, drag the end to the next real town, re-save.</li>
+  <li>Click <strong>Find hotels</strong> and sanity-check that each stage end has somewhere to sleep.</li>
+  <li>Send <strong>day 1</strong> to Garmin Connect and on to the Edge. Compare it against the komoot version from Lesson 1 — same corridor, different opinions.</li>
+  <li>Install the Android app, log in <em>the same way</em>, confirm all five days appear under Routes, then long-press each one to download, and grab the offline map for the whole Berlin–Usedom corridor.</li>
+  <li>Put the phone in airplane mode and load day 1. If it still gives directions, your redundancy is real.</li>
+</ol>
+
+<h2>Check yourself</h2>
+<p>No peeking at the text above — retrieval is the point.</p>
+
+<div class="quiz" data-quiz></div>
+
+<details class="recall">
+  <summary>From memory: where does the multi-day split live?</summary>
+  <p>In the Save dialog — tick "Split into multiple days", then choose a number of days or an average daily distance, with optional short first and last days. You get one saved journey per day.</p>
+</details>
+
+<details class="recall">
+  <summary>From memory: two reasons a stage might be missing from the phone app.</summary>
+  <p>Either you logged in with a different method than on the website (Google vs email = two accounts), or the route was never saved on the website. And a third, for offline: it was listed but never downloaded.</p>
+</details>
+
+<details class="recall">
+  <summary>From memory: why save a route before downloading it?</summary>
+  <p>The file takes its name from the saved route. Skip it and every stage arrives on the device called "cycle.travel".</p>
+</details>
+
+<footer>
+  <p><strong>Next up:</strong> Lesson 4 — the Android phone as a full second navigator: cycle.travel vs OsmAnd vs Organic Maps, and the redundancy plan for when the Edge dies mid-stage.</p>
+  <p>Reference: <a href="../reference/glossary.html">Glossary</a> · <a href="0001-planner-to-device.html">Lesson 1</a> · <a href="0002-device-core-features.html">Lesson 2</a> · <a href="../MISSION.md">Mission</a></p>
+  <p class="ask">Stuck at any step, or the device did something the lesson didn't predict? Ask me — that's what I'm here for, and your answer becomes the next lesson.</p>
+</footer>
+
+<script src="../assets/quiz.js"></script>
+<script>
+renderQuiz(document.querySelector("[data-quiz]"), [
+  {
+    prompt: "Routes planned on the cycle.travel website reach the Android app how?",
+    options: [
+      "Same account, same journeys — log in identically",
+      "Automatic background sync of every planned line",
+      "Manual export of a GPX file, then import it"
+    ],
+    answer: 0,
+    why: "Journeys are stored against your account, so saved routes appear in the app's Routes list (and app routes appear on the web). You must use the same login method on both."
+  },
+  {
+    prompt: "You want a stage usable with no phone reception. What is required?",
+    options: [
+      "Download the route and the offline map",
+      "Download the route; maps stream regardless",
+      "Nothing — saved journeys are always offline"
+    ],
+    answer: 0,
+    why: "Long-press the route in the Routes list to download it, and separately download map tiles under Settings → Offline map. A route without tiles gives directions over a blank screen."
+  },
+  {
+    prompt: "Which cycle.travel export carries both the line and the turn instructions?",
+    options: [
+      "TCX course, its pick for Edge units",
+      "GPX track, the most universal format",
+      "GPX route, which stores turn icons"
+    ],
+    answer: 0,
+    why: "GPX track is the line alone; GPX route is turn icons without a line. TCX course has both, and cycle.travel recommends it for Garmin Edge and Wahoo devices."
+  },
+  {
+    prompt: "Your planned line dives onto sand between two towns. Cleanest fix?",
+    options: [
+      "Set that segment's via point to paved only",
+      "Switch the whole route to paved only mode",
+      "Drag the line repeatedly until sand is gone"
+    ],
+    answer: 0,
+    why: "Click the via point starting the segment and change 'Go any way' to 'paved'. It constrains just that stretch, leaving the rest of the tour free to use good unpaved cycleways."
+  },
+  {
+    prompt: "Where does cycle.travel hide the multi-day stage splitter?",
+    options: [
+      "In the Save dialog, as a tickbox",
+      "In the GPS export download window",
+      "In your account profile preferences"
+    ],
+    answer: 0,
+    why: "Tick 'Split into multiple days' when saving, then set days or an average daily distance. It is the fastest way to turn 340 km into ridable stages."
+  }
+]);
+</script>
+</body>
+</html>

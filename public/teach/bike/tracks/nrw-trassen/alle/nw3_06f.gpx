@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.16.3" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2018-12-29T21:19:56Z</time>
+    <bounds maxlat="51.469182120636106" maxlon="6.99610878713429" minlat="51.46748436614871" minlon="6.995929582044482"/>
+  </metadata>
+
+  <trk>
+    <name>NW 3.06f*</name>
+    <trkseg>
+      <trkpt lat="51.46748436614871" lon="6.99610878713429">
+        <ele>59.7890625</ele>
+      </trkpt>
+      <trkpt lat="51.468108650296926" lon="6.99602278880775">
+        <ele>58.83203125</ele>
+      </trkpt>
+      <trkpt lat="51.46853537298739" lon="6.995951123535633">
+        <ele>58.796875</ele>
+      </trkpt>
+      <trkpt lat="51.46890820004046" lon="6.995929582044482">
+        <ele>58.5859375</ele>
+      </trkpt>
+      <trkpt lat="51.469182120636106" lon="6.995972581207752">
+        <ele>57.80078125</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.16.3" version="1.1">
+
+  <trk>
+    <name>NW 4.29</name>
+    <trkseg>
+ <trkpt lat="51.08136253" lon="8.11844571">
+  <ele>362.700</ele>
+ </trkpt>
+ <trkpt lat="51.08093052" lon="8.11838276">
+  <ele>346.400</ele>
+ </trkpt>
+ <trkpt lat="51.08064336" lon="8.11844529">
+  <ele>349.100</ele>
+ </trkpt>
+ <trkpt lat="51.08046365" lon="8.11844864">
+  <ele>348.500</ele>
+ </trkpt>
+ <trkpt lat="51.08022150" lon="8.11852466">
+  <ele>347.800</ele>
+ </trkpt>
+ <trkpt lat="51.07997993" lon="8.11867193">
+  <ele>348.600</ele>
+ </trkpt>
+ <trkpt lat="51.07943444" lon="8.11905331">
+  <ele>352.700</ele>
+ </trkpt>
+ <trkpt lat="51.07887955" lon="8.11937777">
+  <ele>354.100</ele>
+ </trkpt>
+ <trkpt lat="51.07830774" lon="8.11984523">
+  <ele>355.200</ele>
+ </trkpt>
+ <trkpt lat="51.07776233" lon="8.12022661">
+  <ele>353.600</ele>
+ </trkpt>
+ <trkpt lat="51.07722647" lon="8.12069340">
+  <ele>351.400</ele>
+ </trkpt>
+ <trkpt lat="51.07673488" lon="8.12105943">
+  <ele>352.100</ele>
+ </trkpt>
+ <trkpt lat="51.07616256" lon="8.12145556">
+  <ele>353.800</ele>
+ </trkpt>
+ <trkpt lat="51.07551858" lon="8.12189578">
+  <ele>356.700</ele>
+ </trkpt>
+ <trkpt lat="51.07488189" lon="8.12209334">
+  <ele>357.800</ele>
+ </trkpt>
+ <trkpt lat="51.07436900" lon="8.12203165">
+  <ele>354.700</ele>
+ </trkpt>
+ <trkpt lat="51.07394504" lon="8.12182571">
+  <ele>352.600</ele>
+ </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

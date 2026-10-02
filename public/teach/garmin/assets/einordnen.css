@@ -1,0 +1,94 @@
+/* Einordnen-Übung: Begriffe in genau zwei Kategorien sortieren, mit Sofort-Rückmeldung.
+   Erwartet die Variablen aus lesson.css. Verhalten in einordnen.js. */
+
+.einordnen {
+  max-width: var(--measure);
+  margin: 2.5rem 0;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.einordnen-aufgabe { margin: 0 0 1.2rem; max-width: none; }
+
+.einordnen-punktestand {
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.einordnen-zeile {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: .5rem;
+  align-items: center;
+  padding: .5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.einordnen-zeile:last-of-type { border-bottom: 0; }
+
+.einordnen-begriff {
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+  font-size: .9rem;
+  line-height: 1.35;
+  padding-right: .5rem;
+}
+
+.einordnen-knopf {
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+  font-size: .78rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: .4rem .7rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color .12s, background .12s;
+}
+
+.einordnen-knopf:hover:not(:disabled) { border-color: var(--ink-soft); }
+.einordnen-knopf:disabled { cursor: default; opacity: .45; }
+
+.einordnen-knopf.treffer {
+  border-color: var(--good);
+  background: var(--good-soft);
+  font-weight: 700;
+  opacity: 1;
+}
+
+.einordnen-knopf.fehler {
+  border-color: var(--bad);
+  background: var(--bad-soft);
+  text-decoration: line-through;
+  opacity: 1;
+}
+
+.einordnen-notiz {
+  grid-column: 1 / -1;
+  display: none;
+  font-size: .85rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  padding: .1rem 0 .4rem;
+  max-width: none;
+}
+
+.einordnen-zeile.beantwortet .einordnen-notiz { display: block; }
+
+@media (max-width: 34rem) {
+  .einordnen-zeile { grid-template-columns: 1fr; }
+  .einordnen-knopf { width: 100%; }
+}
+
+@media print {
+  .einordnen-notiz { display: block; }
+  .einordnen-knopf { display: none; }
+  .einordnen-punktestand { display: none; }
+}

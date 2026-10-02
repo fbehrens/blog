@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="www.bahntrassenradeln.de" version="1.1">
+
+<trk>
+  <name>NW 4.16a*</name>
+    <extensions>
+      <gpxx:TrackExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayColor>DarkRed</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+  <trkseg>
+    <trkpt lat="50.950570" lon="6.983050"/>
+    <trkpt lat="50.951900" lon="6.984730"/>
+    <trkpt lat="50.952570" lon="6.985560"/>
+    <trkpt lat="50.953340" lon="6.986550"/>
+    <trkpt lat="50.953920" lon="6.987280"/>
+    <trkpt lat="50.954330" lon="6.987820"/>
+    <trkpt lat="50.954560" lon="6.988120"/>
+    <trkpt lat="50.954660" lon="6.988330"/>
+    <trkpt lat="50.954770" lon="6.988670"/>
+    <trkpt lat="50.955000" lon="6.989120"/>
+    <trkpt lat="50.955210" lon="6.989370"/>
+    <trkpt lat="50.955490" lon="6.989720"/>
+    <trkpt lat="50.955840" lon="6.990070"/>
+    <trkpt lat="50.956040" lon="6.990180"/>
+    <trkpt lat="50.956300" lon="6.990240"/>
+    <trkpt lat="50.956480" lon="6.990300"/>
+    <trkpt lat="50.956690" lon="6.990520"/>
+    <trkpt lat="50.957360" lon="6.991350"/>
+    <trkpt lat="50.958100" lon="6.992310"/>
+    <trkpt lat="50.958580" lon="6.992890"/>
+    <trkpt lat="50.959090" lon="6.993530"/>
+    <trkpt lat="50.959220" lon="6.993710"/>
+    <trkpt lat="50.959340" lon="6.993850"/>
+    <trkpt lat="50.959430" lon="6.993870"/>
+    <trkpt lat="50.959580" lon="6.994020"/>
+    <trkpt lat="50.960200" lon="6.994800"/>
+    <trkpt lat="50.960730" lon="6.995340"/>
+    <trkpt lat="50.961330" lon="6.995920"/>
+    <trkpt lat="50.961860" lon="6.996360"/>
+  </trkseg>
+</trk>
+
+</gpx>

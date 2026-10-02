@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="www.bahntrassenradeln.de" version="1.1">
+
+<trk>
+  <name>NW 4.05d*</name>
+    <extensions>
+      <gpxx:TrackExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayColor>DarkRed</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+  <trkseg>
+    <trkpt lat="51.359540" lon="7.355430"/>
+    <trkpt lat="51.359750" lon="7.355210"/>
+    <trkpt lat="51.359960" lon="7.355300"/>
+    <trkpt lat="51.360140" lon="7.355600"/>
+    <trkpt lat="51.360260" lon="7.355970"/>
+    <trkpt lat="51.360350" lon="7.356190"/>
+    <trkpt lat="51.360410" lon="7.356160"/>
+    <trkpt lat="51.360630" lon="7.355670"/>
+    <trkpt lat="51.360730" lon="7.355240"/>
+    <trkpt lat="51.360770" lon="7.354640"/>
+    <trkpt lat="51.360760" lon="7.354170"/>
+    <trkpt lat="51.360660" lon="7.353620"/>
+    <trkpt lat="51.360380" lon="7.352720"/>
+    <trkpt lat="51.360140" lon="7.352030"/>
+    <trkpt lat="51.359970" lon="7.351420"/>
+    <trkpt lat="51.359950" lon="7.351090"/>
+    <trkpt lat="51.359960" lon="7.350640"/>
+    <trkpt lat="51.360060" lon="7.350240"/>
+    <trkpt lat="51.360290" lon="7.349880"/>
+    <trkpt lat="51.360590" lon="7.349740"/>
+    <trkpt lat="51.360940" lon="7.349850"/>
+    <trkpt lat="51.361460" lon="7.350500"/>
+    <trkpt lat="51.362060" lon="7.351260"/>
+    <trkpt lat="51.362330" lon="7.351490"/>
+    <trkpt lat="51.362540" lon="7.351570"/>
+    <trkpt lat="51.362730" lon="7.351430"/>
+    <trkpt lat="51.362880" lon="7.350970"/>
+    <trkpt lat="51.362900" lon="7.350540"/>
+    <trkpt lat="51.362700" lon="7.349910"/>
+    <trkpt lat="51.361930" lon="7.347500"/>
+    <trkpt lat="51.361770" lon="7.347040"/>
+    <trkpt lat="51.361610" lon="7.346720"/>
+    <trkpt lat="51.361280" lon="7.346370"/>
+    <trkpt lat="51.360980" lon="7.345970"/>
+    <trkpt lat="51.360870" lon="7.345760"/>
+    <trkpt lat="51.360670" lon="7.344980"/>
+    <trkpt lat="51.360510" lon="7.344470"/>
+    <trkpt lat="51.360460" lon="7.343790"/>
+    <trkpt lat="51.360480" lon="7.343310"/>
+    <trkpt lat="51.360700" lon="7.342580"/>
+    <trkpt lat="51.360780" lon="7.342100"/>
+    <trkpt lat="51.360520" lon="7.341030"/>
+    <trkpt lat="51.360240" lon="7.339950"/>
+    <trkpt lat="51.360330" lon="7.339520"/>
+    <trkpt lat="51.360540" lon="7.339150"/>
+    <trkpt lat="51.360710" lon="7.338750"/>
+    <trkpt lat="51.360680" lon="7.338020"/>
+    <trkpt lat="51.360780" lon="7.337220"/>
+    <trkpt lat="51.360720" lon="7.336560"/>
+    <trkpt lat="51.360710" lon="7.336460"/>
+    <trkpt lat="51.360650" lon="7.335610"/>
+    <trkpt lat="51.360650" lon="7.335470"/>
+    <trkpt lat="51.360680" lon="7.334640"/>
+    <trkpt lat="51.360680" lon="7.334570"/>
+    <trkpt lat="51.360820" lon="7.333860"/>
+    <trkpt lat="51.361080" lon="7.333190"/>
+    <trkpt lat="51.361430" lon="7.332300"/>
+    <trkpt lat="51.361910" lon="7.331690"/>
+    <trkpt lat="51.362340" lon="7.331240"/>
+    <trkpt lat="51.362740" lon="7.331260"/>
+    <trkpt lat="51.363090" lon="7.331190"/>
+    <trkpt lat="51.363320" lon="7.330810"/>
+    <trkpt lat="51.363240" lon="7.330440"/>
+    <trkpt lat="51.363160" lon="7.329870"/>
+    <trkpt lat="51.362650" lon="7.329850"/>
+    <trkpt lat="51.362290" lon="7.329550"/>
+    <trkpt lat="51.361990" lon="7.329090"/>
+  </trkseg>
+</trk>
+
+</gpx>

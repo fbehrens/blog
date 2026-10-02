@@ -1,0 +1,146 @@
+/* Übungs-Komponenten: Quiz (Multiple Choice) und Abfragekarten (Freies Erinnern).
+   Erwartet die Variablen aus lesson.css. Verhalten in quiz.js. */
+
+/* --- Multiple Choice --------------------------------------------------- */
+
+.quiz {
+  max-width: var(--measure);
+  margin: 2.5rem 0;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.quiz-nummer {
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.quiz-frage {
+  font-size: 1.05rem;
+  margin: 0 0 1.1rem;
+  max-width: none;
+}
+
+.quiz-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  font-size: .96rem;
+  line-height: 1.45;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: .7rem .9rem;
+  margin-bottom: .55rem;
+  cursor: pointer;
+  transition: border-color .12s, background .12s;
+}
+
+.quiz-option:hover:not(:disabled) { border-color: var(--ink-soft); }
+.quiz-option:disabled { cursor: default; }
+
+.quiz-option.ist-richtig {
+  border-color: var(--good);
+  background: var(--good-soft);
+  font-weight: 700;
+}
+
+.quiz-option.ist-falsch {
+  border-color: var(--bad);
+  background: var(--bad-soft);
+  text-decoration: line-through;
+  color: var(--ink-soft);
+}
+
+.quiz-rueckmeldung {
+  display: none;
+  margin-top: 1rem;
+  padding: .85rem 1rem;
+  border-radius: 4px;
+  font-size: .93rem;
+  line-height: 1.5;
+}
+
+.quiz-rueckmeldung.sichtbar { display: block; }
+.quiz-rueckmeldung.richtig { background: var(--good-soft); border-left: 3px solid var(--good); }
+.quiz-rueckmeldung.falsch  { background: var(--bad-soft);  border-left: 3px solid var(--bad); }
+.quiz-rueckmeldung p { max-width: none; margin: 0; }
+
+.quiz-nochmal {
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+  font-size: .78rem;
+  background: none;
+  border: 0;
+  color: var(--accent);
+  cursor: pointer;
+  padding: .4rem 0 0;
+  text-decoration: underline;
+}
+
+/* --- Abfragekarten (erst denken, dann aufdecken) ------------------------ */
+
+.abfrage {
+  max-width: var(--measure);
+  margin: 2.5rem 0;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--ink-soft);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.abfrage-aufgabe { margin: 0 0 1rem; max-width: none; }
+
+.abfrage-karte {
+  border-bottom: 1px dashed var(--rule);
+  padding: .6rem 0;
+}
+
+.abfrage-karte:last-of-type { border-bottom: 0; }
+
+.abfrage-vorderseite {
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+  font-size: .92rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.abfrage-vorderseite::after {
+  content: "aufdecken";
+  font-size: .7rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.abfrage-karte.offen .abfrage-vorderseite::after { content: "zuklappen"; color: var(--ink-soft); }
+
+.abfrage-rueckseite {
+  display: none;
+  font-size: .93rem;
+  color: var(--ink-soft);
+  padding: .6rem 0 .2rem;
+  max-width: none;
+}
+
+.abfrage-karte.offen .abfrage-rueckseite { display: block; }
+
+/* Beim Drucken alles offen – die Karte soll als Referenz taugen. */
+@media print {
+  .abfrage-rueckseite { display: block; }
+  .abfrage-vorderseite::after { content: ""; }
+  .quiz-nochmal { display: none; }
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="www.bahntrassenradeln.de" version="1.1">
+
+  <trk>
+    <name>NW 3.02d</name>
+    <trkseg>
+ <trkpt lat="51.46492872" lon="6.84850699">
+  <ele>36.187</ele>
+ </trkpt>
+ <trkpt lat="51.46447233" lon="6.84843818">
+  <ele>36.187</ele>
+ </trkpt>
+ <trkpt lat="51.46426722" lon="6.84842032">
+  <ele>35.225</ele>
+ </trkpt>
+ <trkpt lat="51.46395584" lon="6.84839719">
+  <ele>35.225</ele>
+ </trkpt>
+ <trkpt lat="51.46352073" lon="6.84839417">
+  <ele>35.706</ele>
+ </trkpt>
+ <trkpt lat="51.46300139" lon="6.84836425">
+  <ele>34.745</ele>
+ </trkpt>
+ <trkpt lat="51.46243569" lon="6.84832670">
+  <ele>33.783</ele>
+ </trkpt>
+ <trkpt lat="51.46219237" lon="6.84832360">
+  <ele>34.264</ele>
+ </trkpt>
+ <trkpt lat="51.46190185" lon="6.84832586">
+  <ele>34.745</ele>
+ </trkpt>
+ <trkpt lat="51.46158325" lon="6.84830943">
+  <ele>34.264</ele>
+ </trkpt>
+ <trkpt lat="51.46123457" lon="6.84830013">
+  <ele>34.745</ele>
+ </trkpt>
+ <trkpt lat="51.46108579" lon="6.84829745">
+  <ele>35.225</ele>
+ </trkpt>
+ <trkpt lat="51.46061523" lon="6.84827247">
+  <ele>35.225</ele>
+ </trkpt>
+ <trkpt lat="51.46036654" lon="6.84827012">
+  <ele>35.706</ele>
+ </trkpt>
+ <trkpt lat="51.45996974" lon="6.84825336">
+  <ele>36.187</ele>
+ </trkpt>
+ <trkpt lat="51.45965332" lon="6.84824338">
+  <ele>36.187</ele>
+ </trkpt>
+ <trkpt lat="51.45951435" lon="6.84823978">
+  <ele>36.187</ele>
+ </trkpt>
+ <trkpt lat="51.45933548" lon="6.84822327">
+  <ele>36.187</ele>
+ </trkpt>
+ <trkpt lat="51.45911688" lon="6.84823626">
+  <ele>36.667</ele>
+ </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 1 — From planner to device</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<p class="meta">Lesson 0001 · ~20 minutes · Mission: Berlin → Usedom</p>
+<h1>From planner to device</h1>
+<p class="subtitle">The one pipeline every tour runs through — and your first stage riding on the Edge tonight.</p>
+
+<h2>The idea: four boxes, three arrows</h2>
+
+<p>Every self-guided tour, from a Sunday loop to a transcontinental, is the same pipeline:</p>
+
+<blockquote>
+  <strong>Planner</strong> → <strong>File</strong> → <strong>Device</strong> → <strong>Guidance</strong>
+</blockquote>
+
+<p>Almost every beginner's problem is really a problem at one specific arrow. "My Garmin sent me down a farm track" is an arrow&nbsp;1 problem (planner settings). "I got no turn prompts" is an arrow&nbsp;2 or&nbsp;3 problem (file format, or how it reached the device). Learning to say <em>which arrow</em> is the skill this lesson buys you.</p>
+
+<h3>Arrow 1 — Planner → File: track, not route</h3>
+
+<p>A <strong>track</strong> is thousands of points describing the exact line. A <strong>route</strong> (in the GPX sense) is a handful of via-points that the receiving device connects <em>using its own map and its own opinions</em>. Same file name, wildly different rides. For touring, always export a track. See <a href="../reference/glossary.html">the glossary</a>.</p>
+
+<p>Your planner's <strong>routing profile</strong> is where the ride is really decided. Brandenburg is full of sandy <em>Wirtschaftswege</em> — a "shortest" or MTB-flavoured profile will happily push you into deep sand with loaded panniers. Planners disagree here on purpose: komoot's surface labels <a href="https://www.cyclingthread.com/planning-bike-trip-our-6-best-cycling-route-planners">can be optimistic</a>, while <a href="https://cycle.travel/map">cycle.travel</a> is tuned toward quiet, rideable surfaces. Planning the same stage twice in two planners and comparing is a cheap, powerful check.</p>
+
+<h3>Arrow 2 — File → Device: GPX or FIT</h3>
+
+<table>
+  <tr><th>Path</th><th>How</th><th>Trade-off</th></tr>
+  <tr>
+    <td><strong>GPX via Garmin Connect</strong></td>
+    <td>Import into Connect (web or phone), then send to the Edge.</td>
+    <td>Easy, wireless, universal. Garmin regenerates turn cues from its own map. <a href="https://support.garmin.com/en-US/?faq=wKuZXCaZRP4mWPX5aRz5h5">Connect accepts GPX and TCX only.</a></td>
+  </tr>
+  <tr>
+    <td><strong>FIT via USB</strong></td>
+    <td>Copy the <code>.fit</code> file into <code>Garmin/NewFiles</code> on the mounted device.</td>
+    <td>Keeps the planner's own turn instructions and course points intact. <a href="https://support.komoot.com/hc/articles/360041874691">komoot documents this path.</a></td>
+  </tr>
+</table>
+
+<p>For Berlin → Usedom, GPX-via-Connect is the right default: it is fewer moving parts, and the Explore 2 has a routable map on board, so it can build its own cues.</p>
+
+<h3>Arrow 3 — Device → Guidance</h3>
+
+<p>The Edge Explore 2 turns whatever you send into a <strong>Course</strong>, and reroutes you when you drift off it. One quirk worth knowing before it bites you at km 60: <strong>it does not do U-turns.</strong> Overshoot a turn and it will compute a fresh way forward rather than telling you to spin around (<a href="https://www8.garmin.com/manuals/webhelp/GUID-E67DE53E-5B08-4903-9767-F58973BC1829/EN-US/GUID-62C3249E-F56E-467B-A9DA-83D907CDF4E6.html">owner's manual</a>). Lesson 4 will drill the recovery habit.</p>
+
+<div class="callout source">
+  <span class="label">Primary source — read before the next lesson</span>
+  <p>The <a href="https://www8.garmin.com/manuals/webhelp/GUID-E67DE53E-5B08-4903-9767-F58973BC1829/EN-US/Edge_Explore_2_OM_EN-US.pdf">Edge Explore 2 Owner's Manual</a>, section <em>Courses</em> (about six pages). It is dry and it is definitive — worth more than any ten YouTube reviews. For the route itself, the non-commercial <a href="https://de.wikivoyage.org/wiki/Radfernweg_Berlin%E2%80%93Usedom">Wikivoyage description of the Radfernweg Berlin–Usedom</a> (~337 km, Museumsinsel → Peenemünde) is the honest one.</p>
+</div>
+
+<h2>Do it now: your first stage on the device</h2>
+
+<p>Goal: not the whole tour — one stage, end to end, so the pipeline is proven before it matters.</p>
+
+<ol class="steps">
+  <li>Open a planner (<a href="https://www.komoot.com/plan">komoot</a> or <a href="https://cycle.travel/map">cycle.travel</a>) on a big screen, not the phone. Set the profile to <strong>bike touring / trekking</strong>, not mountain bike.</li>
+  <li>Plan <strong>Berlin Museumsinsel → Bernau/Biesenthal-ish</strong>, roughly the first 40–60 km of the Radfernweg. Don't optimise it — you are testing plumbing, not choosing the final line.</li>
+  <li>Scan the surface breakdown. Note the unpaved percentage out loud. This number is the single best predictor of how the day actually feels.</li>
+  <li>Export as <strong>GPX track</strong> (not "GPX route").</li>
+  <li>Import to <a href="https://connect.garmin.com/modern/courses">Garmin Connect → Training &amp; Planning → Courses → Import</a>, then <strong>Send to Device</strong>.</li>
+  <li>On the Edge: <em>Navigation → Courses</em>, open it, and press Ride. Watch that a purple line and a turn cue appear. That's the win.</li>
+  <li>Same GPX to your phone as backup — we will do the Android side properly in Lesson 2.</li>
+</ol>
+
+<h2>Check yourself</h2>
+<p>No peeking at the text above — retrieval is the point.</p>
+
+<div class="quiz" data-quiz></div>
+
+<details class="recall">
+  <summary>From memory: name the four boxes of the pipeline.</summary>
+  <p>Planner → File → Device → Guidance. When something goes wrong, name the arrow before you name the fix.</p>
+</details>
+
+<details class="recall">
+  <summary>From memory: why is a GPX <em>route</em> a bad thing to tour on?</summary>
+  <p>It stores only sparse via-points, so each device re-invents the line between them with its own map and routing rules. What you saw on the screen is not necessarily what you'll ride.</p>
+</details>
+
+<footer>
+  <p><strong>Next up:</strong> <a href="0002-device-core-features.html">Lesson 2 — the Edge Explore 2 itself</a>: buttons, gestures, routing settings, and going off course on purpose.</p>
+  <p>Reference: <a href="../reference/glossary.html">Glossary</a> · <a href="../MISSION.md">Mission</a></p>
+  <p class="ask">Stuck at any step, or the device did something the lesson didn't predict? Ask me — that's what I'm here for, and your answer becomes the next lesson.</p>
+</footer>
+
+<script src="../assets/quiz.js"></script>
+<script>
+renderQuiz(document.querySelector("[data-quiz]"), [
+  {
+    prompt: "Your export is a GPX containing only sparse via-points. What is the risk?",
+    options: [
+      "The device invents its own line between points",
+      "The device follows your line without any prompts",
+      "The device rejects the whole file as invalid"
+    ],
+    answer: 0,
+    why: "That is a GPX route. The receiving device connects the via-points with its own map and routing rules, so the ridden line can differ from the planned one."
+  },
+  {
+    prompt: "Which file formats will Garmin Connect accept when importing a course?",
+    options: [
+      "GPX and TCX files, but not FIT",
+      "FIT and GPX files, but not TCX",
+      "TCX and FIT files, but not GPX"
+    ],
+    answer: 0,
+    why: "Connect imports GPX and TCX. FIT courses reach the device by copying them over USB into Garmin/NewFiles."
+  },
+  {
+    prompt: "You overshoot a turn by twenty metres on the Edge Explore 2. It will:",
+    options: [
+      "compute a fresh way onward, never a U-turn",
+      "tell you to turn around and come back",
+      "wait in silence until you rejoin yourself"
+    ],
+    answer: 0,
+    why: "The Explore 2 does not issue U-turns; it recalculates forward. Sometimes that means a much longer loop than simply stopping and turning around yourself."
+  },
+  {
+    prompt: "Best insurance against your Edge failing on day three of the tour?",
+    options: [
+      "The same stage loaded offline on your phone",
+      "A second battery pack inside your frame bag",
+      "A printed elevation profile for every single stage"
+    ],
+    answer: 0,
+    why: "Redundancy in the navigator, not just in power. A dead or wet head unit ends navigation entirely unless a second device already holds the stage offline."
+  }
+]);
+</script>
+</body>
+</html>

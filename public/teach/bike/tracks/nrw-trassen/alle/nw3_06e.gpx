@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="www.bahntrassenradeln.de" version="1.1">
+
+  <trk>
+    <name>NW 3.06e</name>
+    <trkseg>
+ <trkpt lat="51.46423906" lon="6.99756606">
+  <ele>81.950</ele>
+ </trkpt>
+ <trkpt lat="51.46444073" lon="6.99734353">
+  <ele>82.520</ele>
+ </trkpt>
+ <trkpt lat="51.46454827" lon="6.99721310">
+  <ele>82.990</ele>
+ </trkpt>
+ <trkpt lat="51.46467467" lon="6.99707069">
+  <ele>83.500</ele>
+ </trkpt>
+ <trkpt lat="51.46488187" lon="6.99686081">
+  <ele>83.560</ele>
+ </trkpt>
+ <trkpt lat="51.46551562" lon="6.99645664">
+  <ele>82.750</ele>
+ </trkpt>
+ <trkpt lat="51.46607143" lon="6.99629126">
+  <ele>82.530</ele>
+ </trkpt>
+ <trkpt lat="51.46652221" lon="6.99624374">
+  <ele>82.420</ele>
+ </trkpt>
+ <trkpt lat="51.46702847" lon="6.99618062">
+  <ele>82.450</ele>
+ </trkpt>
+ <trkpt lat="51.46758579" lon="6.99610803">
+  <ele>82.520</ele>
+ </trkpt>
+ <trkpt lat="51.46819725" lon="6.99604047">
+  <ele>82.330</ele>
+ </trkpt>
+ <trkpt lat="51.46870980" lon="6.99594308">
+  <ele>82.140</ele>
+ </trkpt>
+ <trkpt lat="51.46874257" lon="6.99594811">
+  <ele>82.310</ele>
+ </trkpt>
+ <trkpt lat="51.46875020" lon="6.99595146">
+  <ele>82.310</ele>
+ </trkpt>
+ <trkpt lat="51.46874106" lon="6.99595322">
+  <ele>82.310</ele>
+ </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

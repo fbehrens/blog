@@ -18,7 +18,17 @@
   {
     "name": "salsa",
     "source": "/Users/fb/c/teach/salsa",
-    "typ": "link"
+    "typ": "teach"
+  },
+  {
+    "name": "bike",
+    "source": "/Users/fb/c/teach/bike",
+    "typ": "teach"
+  },
+  {
+    "name": "garmin",
+    "source": "/Users/fb/c/teach/garmin",
+    "typ": "teach"
   },
   {
     "name": "oeffi",

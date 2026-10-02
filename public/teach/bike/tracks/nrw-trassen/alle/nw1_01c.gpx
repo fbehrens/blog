@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.16.3" version="1.1">
+
+  <trk>
+    <name>NW 1.01c</name>
+    <trkseg>
+ <trkpt lat="51.40700399" lon="6.34601399">
+  <ele>32.871</ele>
+ </trkpt>
+ <trkpt lat="51.40682998" lon="6.34575600">
+  <ele>32.532</ele>
+ </trkpt>
+ <trkpt lat="51.40654801" lon="6.34542097">
+  <ele>31.652</ele>
+ </trkpt>
+ <trkpt lat="51.40604996" lon="6.34484799">
+  <ele>31.552</ele>
+ </trkpt>
+ <trkpt lat="51.40573497" lon="6.34447600">
+  <ele>32.503</ele>
+ </trkpt>
+ <trkpt lat="51.40541797" lon="6.34404500">
+  <ele>31.502</ele>
+ </trkpt>
+ <trkpt lat="51.40517598" lon="6.34356799">
+  <ele>31.986</ele>
+ </trkpt>
+ <trkpt lat="51.40504204" lon="6.34324503">
+  <ele>31.848</ele>
+ </trkpt>
+ <trkpt lat="51.40489703" lon="6.34293700">
+  <ele>32.755</ele>
+ </trkpt>
+ <trkpt lat="51.40465102" lon="6.34231204">
+  <ele>31.839</ele>
+ </trkpt>
+ <trkpt lat="51.40456502" lon="6.34175004">
+  <ele>31.448</ele>
+ </trkpt>
+ <trkpt lat="51.40455597" lon="6.34120303">
+  <ele>32.464</ele>
+ </trkpt>
+ <trkpt lat="51.40454600" lon="6.34051597">
+  <ele>32.121</ele>
+ </trkpt>
+ <trkpt lat="51.40451901" lon="6.33994499">
+  <ele>31.848</ele>
+ </trkpt>
+ <trkpt lat="51.40451297" lon="6.33938198">
+  <ele>31.971</ele>
+ </trkpt>
+ <trkpt lat="51.40451398" lon="6.33898099">
+  <ele>31.911</ele>
+ </trkpt>
+ <trkpt lat="51.40451800" lon="6.33865703">
+  <ele>31.860</ele>
+ </trkpt>
+ <trkpt lat="51.40451800" lon="6.33825202">
+  <ele>30.474</ele>
+ </trkpt>
+ <trkpt lat="51.40453803" lon="6.33781096">
+  <ele>30.514</ele>
+ </trkpt>
+ <trkpt lat="51.40455999" lon="6.33730997">
+  <ele>30.235</ele>
+ </trkpt>
+ <trkpt lat="51.40452303" lon="6.33651998">
+  <ele>30.308</ele>
+ </trkpt>
+ <trkpt lat="51.40452798" lon="6.33590902">
+  <ele>30.527</ele>
+ </trkpt>
+ <trkpt lat="51.40454700" lon="6.33568103">
+  <ele>32.698</ele>
+ </trkpt>
+ <trkpt lat="51.40453502" lon="6.33503697">
+  <ele>31.410</ele>
+ </trkpt>
+ <trkpt lat="51.40451297" lon="6.33433800">
+  <ele>32.698</ele>
+ </trkpt>
+ <trkpt lat="51.40452999" lon="6.33388102">
+  <ele>32.000</ele>
+ </trkpt>
+ <trkpt lat="51.40454600" lon="6.33366301">
+  <ele>31.276</ele>
+ </trkpt>
+ <trkpt lat="51.40471598" lon="6.33297997">
+  <ele>31.398</ele>
+ </trkpt>
+ <trkpt lat="51.40487499" lon="6.33245702">
+  <ele>30.969</ele>
+ </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

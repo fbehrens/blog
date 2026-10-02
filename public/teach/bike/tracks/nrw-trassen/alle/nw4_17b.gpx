@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="www.bahntrassenradeln.de" version="1.1">
+
+  <trk>
+    <name>NW 4.17b</name>
+    <trkseg>
+ <trkpt lat="50.97779338" lon="7.08605524">
+  <ele>69.352</ele>
+ </trkpt>
+ <trkpt lat="50.97741502" lon="7.08618474">
+  <ele>68.391</ele>
+ </trkpt>
+ <trkpt lat="50.97737546" lon="7.08628432">
+  <ele>68.391</ele>
+ </trkpt>
+ <trkpt lat="50.97733665" lon="7.08692553">
+  <ele>68.872</ele>
+ </trkpt>
+ <trkpt lat="50.97733146" lon="7.08700106">
+  <ele>68.391</ele>
+ </trkpt>
+ <trkpt lat="50.97718209" lon="7.08756893">
+  <ele>68.872</ele>
+ </trkpt>
+ <trkpt lat="50.97738627" lon="7.08788476">
+  <ele>69.833</ele>
+ </trkpt>
+ <trkpt lat="50.97745568" lon="7.08799414">
+  <ele>69.833</ele>
+ </trkpt>
+ <trkpt lat="50.97761946" lon="7.08854089">
+  <ele>70.313</ele>
+ </trkpt>
+ <trkpt lat="50.97772222" lon="7.08891992">
+  <ele>70.313</ele>
+ </trkpt>
+ <trkpt lat="50.97786354" lon="7.08926752">
+  <ele>70.794</ele>
+ </trkpt>
+ <trkpt lat="50.97802070" lon="7.08969668">
+  <ele>71.275</ele>
+ </trkpt>
+ <trkpt lat="50.97821734" lon="7.09006162">
+  <ele>71.275</ele>
+ </trkpt>
+ <trkpt lat="50.97843527" lon="7.09036496">
+  <ele>70.794</ele>
+ </trkpt>
+ <trkpt lat="50.97853342" lon="7.09103309">
+  <ele>72.236</ele>
+ </trkpt>
+ <trkpt lat="50.97857198" lon="7.09129829">
+  <ele>72.236</ele>
+ </trkpt>
+ <trkpt lat="50.97865647" lon="7.09194889">
+  <ele>72.236</ele>
+ </trkpt>
+ <trkpt lat="50.97871003" lon="7.09235516">
+  <ele>72.717</ele>
+ </trkpt>
+ <trkpt lat="50.97873769" lon="7.09263755">
+  <ele>73.198</ele>
+ </trkpt>
+ <trkpt lat="50.97889166" lon="7.09381437">
+  <ele>72.236</ele>
+ </trkpt>
+ <trkpt lat="50.97902343" lon="7.09463538">
+  <ele>73.198</ele>
+ </trkpt>
+ <trkpt lat="50.97917958" lon="7.09616926">
+  <ele>73.678</ele>
+ </trkpt>
+ <trkpt lat="50.97922124" lon="7.09683244">
+  <ele>69.833</ele>
+ </trkpt>
+ <trkpt lat="50.97933314" lon="7.09747475">
+  <ele>70.313</ele>
+ </trkpt>
+ <trkpt lat="50.97943062" lon="7.09804203">
+  <ele>70.794</ele>
+ </trkpt>
+ <trkpt lat="50.97956817" lon="7.09898399">
+  <ele>72.236</ele>
+ </trkpt>
+ <trkpt lat="50.97974234" lon="7.10040296">
+  <ele>72.236</ele>
+ </trkpt>
+ <trkpt lat="50.97978593" lon="7.10051159">
+  <ele>72.236</ele>
+ </trkpt>
+ <trkpt lat="50.97984678" lon="7.10062475">
+  <ele>72.717</ele>
+ </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

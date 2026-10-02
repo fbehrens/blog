@@ -1,0 +1,2954 @@
+=== PAGE 1 ===
+EDGE
+®
+ EXPLORE 2
+Benutzerhandbuch
+=== PAGE 2 ===
+© 2022 Garmin Ltd. oder deren Tochtergesellschaften
+Alle Rechte vorbehalten. Gemäß Urheberrechten darf dieses Handbuch ohne die schriftliche Genehmigung von Garmin weder ganz noch teilweise kopiert werden. Garmin behält sich 
+das Recht vor, Änderungen und Verbesserungen an seinen Produkten vorzunehmen und den Inhalt dieses Handbuchs zu ändern, ohne Personen oder Organisationen über solche 
+Änderungen oder Verbesserungen informieren zu müssen. Unter www.garmin.com finden Sie aktuelle Updates sowie zusätzliche Informationen zur Verwendung dieses Produkts.
+Garmin
+®
+, das Garmin Logo, ANT+
+®
+, Auto Lap
+®
+, Auto Pause
+®
+, Edge
+®
+, inReach
+®
+, VIRB
+®
+ und Virtual Partner
+®
+ sind Marken von Garmin Ltd. oder deren Tochtergesellschaften und sind in 
+den USA und anderen Ländern eingetragen. Connect IQ™, Firstbeat Analytics™, Garmin Connect™, Garmin Express™, HRM-Dual™, HRM-Fit™, HRM-Pro™, Index™, Rally™, tempe™, 
+Varia™ und Vector™ sind Marken von Garmin Ltd. oder deren Tochtergesellschaften. Diese Marken dürfen nur mit ausdrücklicher Genehmigung von Garmin verwendet werden.
+Android™ ist eine Marke von Google Inc. Apple
+®
+ und Mac
+®
+ sind Marken von Apple, Inc. und sind in den USA und anderen Ländern eingetragen. Die Wortmarke BLUETOOTH
+®
+ und 
+die Logos sind Eigentum von Bluetooth SIG, Inc. und werden von Garmin ausschließlich unter Lizenz verwendet. Bosch
+®
+ ist eine eingetragene Marke der Robert Bosch GmbH. The 
+Cooper Institute
+®
+ sowie alle verbundenen Marken sind Eigentum von The Cooper Institute. Shimano
+®
+ ist eine eingetragene Marke von Shimano, Inc. Windows
+®
+ und Windows NT
+®
+ sind 
+in den USA und anderen Ländern eingetragene Marken der Microsoft Corporation. Weitere Marken und Markennamen sind Eigentum ihrer jeweiligen Inhaber.
+Dieses Produkt ist ANT+
+®
+ zertifiziert. Unter www.thisisant.com/directory finden Sie eine Liste kompatibler Produkte und Apps.
+M/N: A04457, B04457
+=== PAGE 3 ===
+Inhaltsverzeichnis
+Einführung........................................1
+Übersicht über das Gerät........................ 1
+Übersicht über das Hauptmenü..........3
+Anzeigen von Widgets.........................3
+Anzeigen von Übersichten.................. 4
+Verwenden des Touchscreens........... 4
+Sperren des Touchscreens............. 4
+Erfassen von Satellitensignalen............. 5
+Navigation........................................ 5
+Eine Fahrradtour machen....................... 5
+Positionen................................................ 6
+Speichern der Position........................ 6
+Speichern von Positionen auf der 
+Karte..................................................... 6
+Navigieren zu einer Position............... 7
+Navigation zurück zum Start.............. 7
+Starten einer Tour von einer geteilten 
+Position................................................ 8
+Navigieren zu einer geteilten Position 
+während einer Tour............................. 9
+Anhalten der Navigation..................... 9
+Bearbeiten von Positionen.................. 9
+Löschen von Positionen......................9
+Teilen von Positionen über eine Karte 
+mithilfe der Garmin Connect App..... 10
+Melden von Gefahrenstellen............. 10
+Strecken................................................. 11
+Planen und Navigieren von 
+Strecken............................................. 11
+Erstellen und Navigieren einer Round-
+Trip-Strecke....................................... 12
+Erstellen von Strecken aus kürzlichen 
+Touren................................................ 12
+Abfahren von Strecken von Garmin 
+Connect.............................................. 13
+Tipps zum Navigieren von 
+Strecken............................................. 13
+Anzeigen von Streckendetails.......... 13
+Anzeigen von Strecken auf der 
+Karte............................................... 14
+Verwenden von ClimbPro................. 14
+Anstiegskategorien....................... 15
+Streckenoptionen.............................. 15
+Umleiten von Strecken...................... 15
+Anhalten einer Strecke...................... 15
+Löschen einer Strecke.......................15
+Karteneinstellungen.............................. 16
+Einstellungen für die 
+Kartendarstellung.............................. 16
+Ändern der Kartenausrichtung......... 16
+Kartendesigns....................................16
+Routeneinstellungen............................. 17
+Auswählen einer Aktivität für die 
+Routenberechnung............................ 17
+Online-Funktionen.......................... 17
+Koppeln eines Smartphones................ 17
+Bluetooth Online-Funktionen................ 18
+Sicherheits- und 
+Trackingfunktionen........................... 19
+Unfall-Benachrichtigung................ 19
+Notfallhilfe..................................... 20
+Hinzufügen von 
+Notfallkontakten............................ 20
+Anzeigen von Notfallkontakten.... 20
+Anfordern von Hilfe....................... 20
+Aktivieren und Deaktivieren der 
+Unfall-Benachrichtigung................ 21
+Abbrechen einer automatisierten 
+Nachricht........................................ 21
+Senden einer Status-Aktualisierung 
+nach einem Unfall.......................... 21
+LiveTrack........................................ 21
+Aktivieren von LiveTrack........... 21
+Starten einer GroupTrack 
+Sitzung........................................22
+Live-Eventfreigabe......................... 23
+Aktivieren der Live-
+Eventfreigabe............................. 23
+GroupRide...................................... 23
+Starten einer GroupRide 
+Sitzung........................................24
+Teilnehmen an einer GroupRide 
+Sitzung........................................25
+Senden von GroupRide 
+Nachrichten................................ 26
+GroupRide Kartenstatus............ 26
+Verlassen einer GroupRide 
+Sitzung........................................27
+Tipps für GroupRide 
+Sitzungen................................... 27
+Inhaltsverzeichnis i
+=== PAGE 4 ===
+Nachrichtenversand für 
+Zuschauer...................................... 27
+Blockieren des 
+Nachrichtenversands für 
+Zuschauer.................................. 27
+Einrichten des Fahrradalarms.......28
+Wiedergeben von Ansagen auf dem 
+Smartphone................................... 28
+Wiedergeben von Musik................... 28
+Training..........................................28
+Training in Gebäuden............................ 28
+Koppeln des Indoor Trainers............ 29
+Verwenden eines Indoor Trainers.... 29
+Einstellen des Widerstands.......... 29
+Einrichten der simulierten 
+Neigung.......................................... 29
+Einrichten der Leistungsvorgabe.. 30
+Einrichten eines Trainingsziels............ 30
+Antreten gegen eine vorherige 
+Aktivität.................................................. 30
+Eigene Statistiken...........................30
+Leistungsmesswerte............................ 31
+Informationen zur VO2max-
+Berechnung........................................ 31
+Anzeigen Ihrer VO2max-
+Berechnung.................................... 32
+Tipps für VO2max-Berechnung beim 
+Radfahren.......................................33
+Erholungszeit..................................... 33
+Anzeigen der Erholungszeit.......... 33
+Deaktivieren von 
+Leistungsbenachrichtigungen.......... 33
+Anzeigen des Fitnessalters.............. 34
+Anzeigen von Intensitätsminuten.....34
+Persönliche Rekorde............................. 34
+Anzeigen Ihrer persönlichen 
+Rekorde.............................................. 34
+Zurücksetzen persönlicher 
+Bestzeiten.......................................... 34
+Löschen persönlicher Rekorde......... 34
+Trainingszonen......................................34
+Einrichten des Benutzerprofils............. 34
+Funksensoren.................................35
+Koppeln von Funksensoren.................. 36
+Akkulaufzeit von Funksensoren........... 36
+Einrichten von Herzfrequenz-
+Bereichen............................................... 36
+Informationen zu Herzfrequenz-
+Bereichen........................................... 36
+Fitnessziele........................................ 37
+Trainieren mit Leistungsmessern........ 37
+Einrichten von Leistungsbereichen.. 37
+Kalibrieren des Leistungsmessers... 37
+Pedalbasierte Leistung..................... 38
+Aktualisieren der Software des Rally 
+Systems über den Edge 
+Fahrradcomputer...............................38
+Situationsbewusstsein......................... 38
+Verwenden der Varia 
+Kamerafunktionen............................. 39
+Aktivieren des Tons bei grüner 
+Gefahrenstufe.................................... 39
+E-Bike-Training...................................... 39
+Anzeigen der Details des E-Bike-
+Sensors.............................................. 40
+inReach Fernbedienung........................ 40
+Verwenden der inReach 
+Fernbedienung................................... 40
+Protokoll........................................ 40
+Anzeigen von Touren............................ 40
+Anzeigen Ihrer Zeit in den einzelnen 
+Trainingszonen.................................. 41
+Löschen von Touren..........................41
+Anzeigen von Gesamtwerten............... 41
+Löschen von Gesamtwerten............. 41
+Garmin Connect.................................... 42
+Garmin Connect+ Abonnement........ 42
+Übertragen von Touren in Garmin 
+Connect.............................................. 42
+Datenaufzeichnung............................... 43
+Datenverwaltung................................... 43
+Verbinden des Geräts mit dem 
+Computer........................................... 43
+Übertragen von Dateien auf das 
+Gerät................................................... 43
+Löschen von Dateien......................... 43
+Entfernen des USB-Kabels................ 44
+Anpassen des Geräts......................44
+Von Connect IQ herunterladbare 
+Funktionen............................................. 44
+ii Inhaltsverzeichnis
+=== PAGE 5 ===
+Herunterladen von Connect IQ 
+Funktionen über den Computer........ 44
+Aktualisieren von Aktivitätsprofilen..... 45
+Hinzufügen von Datenseiten............ 46
+Hinzufügen einer Datenseite für 
+Musikfunktionen............................ 46
+Bearbeiten von Datenseiten..............46
+Neuanordnen von Datenseiten......... 47
+Einstellungen für Alarme und 
+Meldungen......................................... 47
+Einrichten von Bereichsalarmen... 48
+Einrichten wiederkehrender 
+Alarme............................................ 48
+Auto Lap®.......................................... 48
+Speichern von Runden nach 
+Position.......................................... 48
+Speichern von Runden nach 
+Distanz........................................... 49
+Markieren von Runden nach Zeit.. 49
+Anpassen des Rundenbanners..... 49
+Verwenden von Auto Pause............. 50
+Automatisches Starten des 
+Timers................................................ 50
+Ändern der Satelliteneinstellung...... 50
+Verwenden des Auto-
+Ruhezustands.................................... 50
+Verwenden des Auto-
+Seitenwechsels................................. 51
+Telefoneinstellungen............................ 51
+Gastmodus............................................ 51
+Aktivieren des Gastmodus................51
+Deaktivieren des Gastmodus........... 51
+Systemeinstellungen.............................52
+Anzeigeeinstellungen........................ 52
+Verwenden der 
+Displaybeleuchtung....................... 52
+Anpassen von Übersichten............... 52
+Anpassen der Widget-Schleife......... 52
+Einstellungen für die 
+Datenaufzeichnung........................... 53
+Datenmittelung für Trittfrequenz 
+oder Leistung................................. 53
+Ändern der Maßeinheiten................. 53
+Ein- und Ausschalten der Töne des 
+Geräts................................................. 53
+Ändern der Sprache des Geräts....... 53
+Zeitzonen........................................... 53
+Geräteinformationen...................... 54
+Aufladen des Geräts............................. 54
+Informationen zum Akku.................. 54
+Anbringen der Standardhalterung........ 55
+Entnehmen des Edge........................ 55
+Anbringen einer 
+Befestigungsschlaufe........................... 56
+Übersicht über die Edge Halterung mit 
+Stromversorgung.................................. 56
+Installieren der Edge Halterung mit 
+Stromversorgung...............................57
+Erforderliche Kabel............................ 59
+Status-LED der Edge Halterung mit 
+Stromversorgung...............................59
+Technische Daten................................. 60
+Produkt-Updates................................... 60
+Aktualisieren der Software mit der 
+Garmin Connect App......................... 60
+Aktualisieren der Software mithilfe von 
+Garmin Express................................. 60
+Anzeigen von Geräteinformationen..... 60
+Anzeigen von aufsichtsrechtlichen und 
+Compliance-Informationen............... 61
+Pflege des Geräts.................................. 61
+Reinigen des Geräts.......................... 61
+Pflege der Edge Halterung mit 
+Stromversorgung.................................. 61
+Reinigen der Edge Halterung mit 
+Stromversorgung...............................61
+Reinigen des USB-Anschlusses........62
+Fehlerbehebung..............................62
+Zurücksetzen des Edge 
+Fahrradcomputers................................ 62
+Wiederherstellen der 
+Werksstandards................................ 62
+Löschen von Benutzerdaten und 
+Einstellungen..................................... 62
+Beenden des Demomodus................... 62
+Optimieren der Akkulaufzeit................. 62
+Aktivieren des Energiesparmodus... 63
+Das Smartphone stellt keine Verbindung 
+mit dem Gerät her................................. 63
+Verbessern des GPS-
+Satellitenempfangs............................... 63
+Mein Gerät zeigt die falsche Sprache 
+an........................................................... 63
+Inhaltsverzeichnis iii
+=== PAGE 6 ===
+Kalibrieren des barometrischen 
+Höhenmessers...................................... 64
+Festlegen der Höhe........................... 64
+Temperaturanzeigen............................. 64
+Ersatz-Dichtungsringe...........................64
+Weitere Informationsquellen................ 64
+Anhang...........................................65
+Datenfelder............................................ 65
+VO2max-Standard-Bewertungen..........67
+Berechnen von Herzfrequenz-
+Bereichen............................................... 68
+Radgröße und -umfang......................... 68
+iv Inhaltsverzeichnis
+=== PAGE 7 ===
+Einführung
+ WARNUNG
+Lesen Sie alle Produktwarnungen und sonstigen wichtigen Informationen der Anleitung "Wichtige Sicherheits- 
+und Produktinformationen", die dem Produkt beiliegt.
+Lassen Sie sich stets von Ihrem Arzt beraten, bevor Sie ein Trainingsprogramm beginnen oder ändern.
+Übersicht über das Gerät
+Einführung 1
+=== PAGE 8 ===
+Drücken Sie die Taste, um den Ruhezustand zu aktivieren und zu deaktivieren.
+Halten Sie die Taste gedrückt, um das Gerät ein- und auszuschalten oder den 
+Touchscreen zu sperren.
+Drücken Sie die Taste, um eine neue Runde zu markieren.
+USB-Anschluss (unter der 
+Schutzkappe)
+Heben Sie die Schutzkappe an, um das Gerät aufzuladen oder mit einem Computer 
+zu verbinden.
+Setzen Sie die Schutzkappe wieder auf, um Schäden am USB-Anschluss zu 
+vermeiden.
+Drücken Sie die Taste, um den Aktivitäten-Timer zu starten und zu stoppen.
+Wählen Sie die Taste, um das Hauptmenü zu öffnen.
+Übersichten
+Streichen Sie im Hauptmenü nach oben oder unten, um die Übersichten anzu­
+zeigen.
+Wählen Sie die Option, um die Übersicht oder das Menü zu öffnen.
+Aktivitätsprofil
+Streichen Sie nach links oder rechts, um das Aktivitätsprofil zu ändern.
+Wählen Sie die Option, um das Aktivitätsprofil zu öffnen.
+Widgets
+Streichen Sie von oben nach unten über das Display, um die Widgets anzuzeigen, 
+und streichen Sie dann nach links oder rechts, um weitere Widgets anzuzeigen.
+Elektrische Kontakte
+Verwenden Sie zum Aufladen Zubehör für eine externe Stromversorgung.
+HINWEIS: Nicht auf allen Modellen verfügbar.
+HINWEIS: Besuchen Sie buy.garmin.com, um optionales Zubehör zu erwerben.
+2 Einführung
+=== PAGE 9 ===
+Übersicht über das Hauptmenü
+Über das Hauptmenü können Sie schnell auf die Funktionen des Edge Fahrradcomputers zugreifen.
+Akkuladestand
+GPS-Signalstärke
+Bluetooth
+®
+ Status
+Synchronisierung läuft
+Wählen Sie diese Option, um eine Tour zu beginnen.
+Ändern Sie das Fahrradprofil mit den Pfeilen.
+Navigation Wählen Sie diese Option, um die Karte zu durchsuchen, eine Position zu speichern oder nach 
+Positionen, Points of Interest oder Adressen zu suchen.
+Strecken Wählen Sie diese Option, um eine neue Strecke zu erstellen oder auf eine gespeicherte Strecke 
+zuzugreifen.
+Protokoll Wählen Sie diese Option, um auf vorherige Touren und Gesamtwerte zuzugreifen.
+Wählen Sie diese Option, um auf Online-Funktionen, persönliche Rekorde, Kontakte und Einstel­
+lungen zuzugreifen.
+Wählen Sie diese Option, um auf Ihre Connect IQ™ Apps, Widgets und Datenfelder zuzugreifen.
+Anzeigen von Widgets
+Auf dem Gerät sind verschiedene Widgets vorinstalliert. Weitere Widgets sind verfügbar, wenn Sie das Gerät mit 
+einem Smartphone oder einem anderen kompatiblen Gerät koppeln.
+1 Streichen Sie im Hauptmenü oder während einer Tour von oben nach unten über das Display.
+Das Status-Widget wird angezeigt. Wenn ein Icon blinkt, sucht das Gerät ein Signal. Wenn ein Symbol 
+leuchtet, wurde das Signal gefunden oder der Sensor ist verbunden. Sie können ein beliebiges Symbol 
+auswählen, um die Einstellungen zu ändern.
+2 Streichen Sie von links nach rechts, um weitere Widgets anzuzeigen.
+Wenn Sie das nächste Mal nach unten streichen, um Widgets anzuzeigen, wird das zuletzt aufgerufene Widget 
+angezeigt.
+Einführung 3
+=== PAGE 10 ===
+Anzeigen von Übersichten
+Übersichten bieten einen direkten Zugriff auf Gesundheitsdaten, Aktivitätsinformationen, integrierte Sensoren 
+und mehr.
+• Streichen Sie im Hauptmenü nach oben.
+Das Gerät durchblättert die Übersichten.
+• Wählen Sie eine Übersicht 
+ , um zusätzliche Informationen anzuzeigen.
+• Wählen Sie 
+ , um die Übersichten anzupassen (Anpassen von Übersichten, Seite 52).
+Verwenden des Touchscreens
+• Wenn der Timer läuft, tippen Sie auf das Display, um das Schnellzugriffs-Menü-Overlay anzuzeigen.
+Über das Schnellzugriffs-Menü-Overlay können Sie während einer Tour zum Hauptmenü zurückkehren.
+• Wählen Sie 
+ , um zum Hauptmenü zurückzukehren.
+• Streichen Sie zum Blättern über das Display oder verwenden Sie die Pfeiltasten.
+• Streichen Sie im Hauptmenü nach oben, um die Übersichten anzuzeigen.
+• Streichen Sie im Hauptmenü oder auf der Tourseite nach unten, um die Widgets anzuzeigen.
+• Wählen Sie 
+ , um ein Menü zu öffnen.
+• Wählen Sie 
+ , um zur vorherigen Seite zurückzukehren.
+• Wählen Sie 
+ , um die Änderungen zu speichern und die Seite zu schließen.
+• Wählen Sie 
+ , um die Seite zu schließen und zur vorherigen Seite zurückzukehren.
+• Wählen Sie 
+ , um in der Nähe einer Position zu suchen.
+• Wählen Sie 
+ , um ein Element zu löschen.
+• Wählen Sie 
+ , um weitere Informationen zu erhalten.
+Sperren des Touchscreens
+Sie können das Display sperren, um unbeabsichtigte Eingaben zu vermeiden.
+• Halten Sie 
+  gedrückt, und wählen Sie Display sperren.
+• Wählen Sie während einer Aktivität die Taste 
+ .
+4 Einführung
+=== PAGE 11 ===
+Erfassen von Satellitensignalen
+Das Gerät benötigt möglicherweise eine ungehinderte Sicht zum Himmel, um Satellitensignale zu erfassen. 
+Uhrzeit und Datum werden automatisch basierend auf der GPS-Position eingerichtet.
+TIPP: Weitere Informationen zu GPS finden Sie unter www.garmin.com/aboutGPS.
+1 Begeben Sie sich im Freien an eine für den Empfang geeignete Stelle.
+Die Vorderseite des Geräts sollte gen Himmel gerichtet sein.
+2 Warten Sie, während das Gerät Satelliten erfasst.
+Es kann 30 bis 60 Sekunden dauern, bis Satellitensignale erfasst werden.
+Navigation
+Navigationsfunktionen und -einstellungen gelten auch beim Navigieren von Strecken (Strecken, Seite 11).
+• Positionen und Suchen von Orten (Positionen, Seite 6)
+• Planen von Strecken (Strecken, Seite 11)
+• Routeneinstellungen (Routeneinstellungen, Seite 17)
+• Karteneinstellungen (Karteneinstellungen, Seite 16)
+Eine Fahrradtour machen
+Wenn Sie einen Funksensor oder drahtloses Zubehör verwenden, kann dieser Sensor bzw. das Zubehör während 
+der Grundeinstellung gekoppelt und aktiviert werden (Koppeln von Funksensoren, Seite 36).
+1 Halten Sie die Taste 
+  gedrückt, um das Gerät einzuschalten.
+2 Gehen Sie nach draußen, und warten Sie, während das Gerät Satelliten erfasst.
+Die Balken für das Satellitensignal werden grün angezeigt, wenn das Gerät bereit ist.
+3 Wählen Sie im Hauptmenü die Option 
+  bzw. 
+ , um das Fahrradprofil zu ändern.
+4 Wählen Sie 
+ , um den Aktivitäten-Timer zu starten.
+HINWEIS: Das Protokoll wird nur aufgezeichnet, wenn der Aktivitäten-Timer läuft.
+5 Streichen Sie nach links oder rechts, um weitere Trainingsseiten anzuzeigen.
+Sie können von oben nach unten über die Trainingsseiten streichen, um die Widgets anzuzeigen.
+6 Tippen Sie bei Bedarf auf das Display, um Statusüberlagerungsdaten (einschließlich Akku-Laufzeit) 
+anzuzeigen oder zum Hauptmenü zurückzukehren.
+7 Wählen Sie 
+ , um den Aktivitäten-Timer zu stoppen.
+8 Wählen Sie Speich..
+9 Wählen Sie 
+ .
+Navigation 5
+=== PAGE 12 ===
+Positionen
+Sie können Positionen mit dem Gerät aufzeichnen und dort speichern.
+Speichern der Position
+Zum Speichern einer Position müssen Sie zunächst Satellitensignale erfassen.
+Falls Sie sich bestimmte Stellen merken oder an einen bestimmten Ort zurückkehren möchten, können Sie eine 
+Position markieren.
+1 Beginnen Sie Ihre Tour.
+2 Wählen Sie Navigation > 
+  > Position speichern > 
+ .
+Speichern von Positionen auf der Karte
+1 Wählen Sie Navigation > Karte durchsuchen.
+2 Suchen Sie auf der Karte nach der Position.
+3 Wählen Sie die Position.
+Positionsdaten werden oben auf der Karte angezeigt.
+4 Wählen Sie die Positionsinformationen.
+5 Wählen Sie 
+  > Position speichern > 
+ .
+6 Navigation
+=== PAGE 13 ===
+Navigieren zu einer Position
+TIPP: Verwenden Sie die Übersicht POSITIONSSUCHE, um eine Schnellsuche über das Hauptmenü 
+durchzuführen. Sie können die Übersicht bei Bedarf der Übersichtsschleife hinzufügen (Anpassen von 
+Übersichten, Seite 52).
+1 Wählen Sie Navigation.
+2 Wählen Sie eine Option:
+• Wählen Sie Karte durchsuchen, um zu einer Position auf der Karte zu navigieren.
+• Wählen Sie Strecken, um bei der Navigation eine gespeicherte Strecke zu verwenden (Strecken, 
+Seite 11).
+• Wählen Sie Suchen, um zu einem Point of Interest, einer Stadt, einer Adresse, einer Kreuzung oder zu 
+bekannten Koordinaten zu navigieren.
+TIPP: Sie können 
+  wählen, um spezifische Suchinformationen einzugeben.
+• Wählen Sie Favoriten, um zu einer gespeicherten Position zu navigieren.
+• Wählen Sie Kürzlich gefunden, um zu einer der letzten 50 Positionen zu navigieren, die Sie gefunden 
+haben.
+• Wählen Sie 
+  > Suche bei:, um das Suchgebiet einzugrenzen.
+3 Wählen Sie eine Position.
+4 Wählen Sie Los!.
+5 Folgen Sie den Anweisungen auf dem Display zum Ziel.
+Navigation zurück zum Start
+Sie können jederzeit während der Tour zum Startpunkt zurückkehren.
+1 Beginnen Sie Ihre Tour.
+2 Sie können jederzeit auf dem Display von oben nach unten streichen, um im Steuerungs-Widget die Option 
+Zurück zum Start zu wählen.
+3 Wählen Sie Entlang gleicher Route oder Kürzeste Route.
+4 Wählen Sie Los!.
+Das Gerät führt Sie zurück zum Startpunkt der Tour.
+Navigation 7
+=== PAGE 14 ===
+Starten einer Tour von einer geteilten Position
+Sie können die Garmin Connect™ App verwenden, um eine Position aus Apple
+®
+ Maps mit dem Edge 
+Fahrradcomputer zu teilen und zu dieser Position zu navigieren (Teilen von Positionen über eine Karte mithilfe 
+der Garmin Connect App, Seite 10).
+1 Wählen Sie die geteilten Positionsdaten im dynamischen Bereich des Hauptmenüs aus 
+ .
+Auf dem Edge Fahrradcomputer wird eine Karte mit dem Namen der geteilten Position und ihrer Koordinaten 
+angezeigt.
+TIPP: Die Position wird unter Navigation > Kürzlich gefunden gespeichert.
+2 Wählen Sie Los!.
+3 Folgen Sie den Anweisungen auf dem Display zum Ziel.
+8 Navigation
+=== PAGE 15 ===
+Navigieren zu einer geteilten Position während einer Tour
+Diese Funktion ist für Touren vorgesehen, bei denen GPS verwendet wird. Wenn Sie bei der Tour ein Indoor 
+Aktivitätsprofil verwenden, bei dem die Navigation deaktiviert ist, wählen Sie 
+ , um die Benachrichtigung zu 
+verwerfen.
+TIPP: Die Position wird unter Navigation > Kürzlich gefunden gespeichert.
+Sie können geteilte Positionen auf dem Edge Fahrradcomputer erhalten und zu diesen Positionen navigieren 
+(Teilen von Positionen über eine Karte mithilfe der Garmin Connect App, Seite 10).
+1 Starten Sie eine Tour (Eine Fahrradtour machen, Seite 5).
+Auf dem Edge Fahrradcomputer wird in einer Benachrichtigung der Name der geteilten Position angezeigt.
+2 Wählen Sie 
+ , um zur geteilten Position zu navigieren.
+3 Folgen Sie den Anweisungen auf dem Display zum Ziel.
+Anhalten der Navigation
+1 Tippen Sie auf das Display.
+2 Wählen Sie Navigation anhalten > 
+ .
+Bearbeiten von Positionen
+1 Wählen Sie Navigation > Favoriten.
+2 Wählen Sie eine Position.
+3 Wählen Sie oben auf der Seite die Informationsleiste aus.
+4 Wählen Sie 
+ .
+5 Wählen Sie ein Attribut aus.
+Wählen Sie beispielsweise Höhe ändern, um eine für die Position bekannte Höhe einzugeben.
+6 Geben Sie die neuen Informationen ein und wählen Sie 
+ .
+Löschen von Positionen
+1 Wählen Sie Navigation > Favoriten.
+2 Wählen Sie eine Position.
+3 Wählen Sie oben auf der Seite die Positionsdaten aus.
+4 Wählen Sie 
+  > Position löschen > 
+ .
+Navigation 9
+=== PAGE 16 ===
+Teilen von Positionen über eine Karte mithilfe der Garmin Connect App
+HINWEIS
+Sie sind dafür verantwortlich, beim Teilen von Positionsdaten mit anderen Personen Vorsicht walten zu lassen. 
+Stellen Sie stets sicher, dass Sie wissen, mit wem Sie die Positionsdaten teilen, und dass Sie die Daten auch mit 
+diesen Personen teilen möchten.
+HINWEIS: Diese Funktion ist nur verfügbar, wenn das mit Strecken kompatible Garmin
+®
+ Gerät über die Bluetooth 
+Technologie mit einem iPhone
+®
+ Gerät verbunden ist.
+Sie können Positionsdaten aus Apple Maps mit Ihrem kompatiblen Garmin Gerät teilen.
+1 Wählen Sie in Apple Maps eine Position aus.
+2 Wählen Sie 
+  > 
+ .
+3 Wählen Sie bei Bedarf in der Garmin Connect App das Garmin Gerät.
+In der Garmin Connect App wird in einer Nachricht darauf hingewiesen, dass die Position jetzt auf dem Gerät 
+verfügbar ist (Starten einer Tour von einer geteilten Position, Seite 8).
+Melden von Gefahrenstellen
+ WARNUNG
+Diese Funktion ermöglicht es Benutzern, Informationen zu möglichen Gefahrenstellen auf ihrer Tour zu 
+übermitteln. Garmin übernimmt keinerlei Gewähr im Hinblick auf die Genauigkeit, Vollständigkeit oder Aktualität 
+der von Benutzern übermittelten Informationen. Achten Sie stets auf die Umgebung und beachten Sie 
+während der Tour verfügbare Schilder. Falls Sie nicht auf die Umgebung achten, könnte es zu Sach- oder 
+Personenschäden kommen.
+Während der Tour können Sie jederzeit eine Gefahrenstelle melden, die für Radfahrer gefährlich sein könnte, 
+beispielsweise Schlaglöcher, frei laufende Hunde oder umgestürzte Bäume. Außerdem können Sie das 
+Vorhandensein einer Gefahrenstelle auf dem Edge Fahrradcomputer bestätigen oder melden, dass eine 
+Gefahrenstelle nicht mehr vorhanden ist. Gefahrenstellen laufen ab, wenn sie eine bestimmte Zeit lang nicht 
+gemeldet wurden.
+1 Beginnen Sie Ihre Tour (Eine Fahrradtour machen, Seite 5).
+2 Tippen Sie auf das Display, um das Schnellzugriffs-Menü-Overlay anzuzeigen.
+3 Wählen Sie 
+ .
+4 Wählen Sie den Typ der Gefahrenstelle.
+5 Wählen Sie Melden.
+Die Gefahrenstelle wird auf der Navigationskarte angezeigt und der Edge Fahrradcomputer gibt einen 
+akustischen Alarm aus (Einstellungen für Alarme und Meldungen, Seite 47).
+10 Navigation
+=== PAGE 17 ===
+Strecken
+Sie können eine Strecke aus Ihrem Konto bei Garmin Connect an das Gerät senden. Wenn die Strecke auf dem 
+Gerät gespeichert ist, können Sie ihr auf dem Gerät folgen. Außerdem können Sie benutzerdefinierte Strecken 
+direkt auf dem Gerät erstellen und speichern.
+Sie können einer gespeicherten Strecke folgen, weil es eine schöne Route ist. Beispielsweise können Sie eine 
+gut für Fahrräder geeignete Strecke zur Arbeit speichern und ihr folgen.
+TIPP: Sie können Strecken von Drittanbieter-Apps an das Gerät senden, wenn Sie die Konten verknüpfen oder 
+eine Connect IQ App verwenden. Weitere Informationen zu Connect IQ Apps finden Sie unter apps.garmin.com.
+Planen und Navigieren von Strecken
+Sie können eigene Strecken erstellen und ihnen folgen. Eine Strecke setzt sich aus einer Reihe von Wegpunkten 
+oder Positionen zusammen, die zum Endziel führen.
+TIPP: Sie können in der Garmin Connect App eine benutzerdefinierte Strecke erstellen und an das Gerät senden 
+(Abfahren von Strecken von Garmin Connect, Seite 13).
+1 Wählen Sie Strecken > 
+  > Routenplaner.
+2 Wählen Sie eine Option:
+• Wählen Sie Aktuelle Position, um die aktuelle Position auf der Karte auszuwählen.
+• Wählen Sie Karte verwenden und anschließend eine Position, um eine Position auf der Karte 
+auszuwählen.
+• Wählen Sie Gespeichert und kürzlich gefunden > Favoriten und dann eine Position, um eine gespeicherte 
+Position auszuwählen.
+• Wählen Sie Gespeichert und kürzlich gefunden > Kürzlich gefunden und dann eine Position, um eine 
+Position auszuwählen, nach der Sie kürzlich gesucht haben.
+• Wählen Sie Points of Interest und dann einen Point of Interest in der Nähe, um nach einem Point of 
+Interest zu suchen und ihn auszuwählen.
+• Wählen Sie Städte und dann eine Stadt in der Nähe, um eine Stadt auszuwählen.
+• Wählen Sie Suchfunktionen > Adressen, und geben Sie die Adresse ein, um eine Adresse auszuwählen.
+• Wählen Sie Suchfunktionen > Kreuzungen, und geben Sie die Straßennamen ein, um nach einer Kreuzung 
+zu suchen.
+• Wählen Sie Suchfunktionen > Koordinaten, und geben Sie die Koordinaten ein, um Koordinaten zu 
+verwenden.
+3 Wählen Sie bei Aufforderung das 
+ , um der Strecke die Position hinzuzufügen.
+Es wird eine Karte der Strecke angezeigt.
+4 Wählen Sie auf der Karte eine Option, um weitere Positionen hinzuzufügen.
+• Wählen Sie 
+  > 
+ , um über die Karte eine weitere Position hinzuzufügen.
+• Wählen Sie 
+ , um nach einer anderen Position zu suchen.
+• Wählen Sie 
+ , um das Hinzufügen der zuvor eingefügten Position rückgängig zu machen.
+5 Wiederholen Sie die Schritte 2 bis 4, bis Sie alle Positionen für die Route ausgewählt haben.
+6 Streichen Sie bei Bedarf von unten nach oben über das Display und wählen Sie eine Option:
+• Halten Sie auf einer Position das Symbol 
+  gedrückt und ziehen Sie es, um die Liste neu anzuordnen.
+• Streichen Sie nach links und wählen Sie 
+ , um eine Position zu entfernen.
+7 Wählen Sie bei Bedarf eine Option aus:
+• Wählen Sie 
+  > Hin und zurück, um die Route mit derselben Route zurück zur Startposition zu berechnen.
+• Wählen Sie 
+  > Schleife zum Startpunkt, um die Route mit einer anderen Strecke zurück zur Startposition 
+zu berechnen.
+8 Wählen Sie Speich..
+9 Geben Sie einen Namen für die Strecke ein.
+10 Wählen Sie 
+  > Los!.
+Navigation 11
+=== PAGE 18 ===
+Erstellen und Navigieren einer Round-Trip-Strecke
+Das Gerät kann basierend auf einer bestimmten Distanz, Startposition und Navigationsrichtung eine Round-Trip-
+Strecke erstellen.
+1 Wählen Sie Strecken > 
+  > RoundTrip-Routing.
+2 Wählen Sie Distanz und geben Sie die Gesamt-Distanz für die Strecke ein.
+3 Wählen Sie Startort.
+4 Wählen Sie eine Option:
+• Wählen Sie Aktuelle Position, um die aktuelle Position auszuwählen.
+• Wählen Sie Karte verwenden und anschließend eine Position, um eine Position auf der Karte 
+auszuwählen.
+• Wählen Sie Favoriten und anschließend eine Position, um eine gespeicherte Position auszuwählen.
+• Wählen Sie Kürzlich gefunden und anschließend eine Position, um eine Position auszuwählen, nach der 
+Sie kürzlich gesucht haben.
+• Wählen Sie Points of Interest und anschließend einen Point of Interest in der Nähe, um nach einem Point 
+of Interest zu suchen und ihn auszuwählen.
+• Wählen Sie Suchfunktionen > Adressen und geben Sie die Adresse ein, um eine Adresse auszuwählen.
+• Wählen Sie Suchfunktionen > Kreuzungen und geben Sie die Straßennamen ein, um nach einer Kreuzung 
+zu suchen.
+• Wählen Sie Suchfunktionen > Koordinaten und geben Sie die Koordinaten ein, um Koordinaten zu 
+verwenden.
+5 Wählen Sie Startrichtung und anschließend eine Richtung.
+6 Wählen Sie Suchen.
+TIPP: Sie können 
+  wählen, um die Suche erneut durchzuführen.
+7 Wählen Sie eine Strecke, um sie auf der Karte anzuzeigen.
+TIPP: Wählen Sie 
+  und 
+ , um die anderen Strecken anzuzeigen.
+8 Wählen Sie Speich. > Los!.
+Erstellen von Strecken aus kürzlichen Touren
+Sie können eine neue Strecke aus einer zuvor auf diesem Edge Gerät gespeicherten Tour erstellen.
+1 Wählen Sie Protokoll > Touren.
+2 Wählen Sie eine Tour.
+3 Wählen Sie 
+  > Tour als Strecke speichern.
+4 Geben Sie einen Namen für die Strecke ein, und wählen Sie 
+ .
+12 Navigation
+=== PAGE 19 ===
+Abfahren von Strecken von Garmin Connect
+Zum Herunterladen von Strecken von Garmin Connect ist ein Konto bei Garmin Connect erforderlich (Garmin 
+Connect, Seite 42).
+1 Wählen Sie eine Option:
+• Öffnen Sie die Garmin Connect App.
+• Rufen Sie die Website connect.garmin.com auf.
+2 Erstellen und speichern Sie eine neue Strecke oder wählen Sie eine vorhandene Strecke aus.
+3 Wählen Sie eine Option:
+• Wählen Sie in der Garmin Connect App die Option 
+ .
+• Wählen Sie auf der Garmin Connect Website die Option An Gerät senden.
+4 Wählen Sie Ihren Edge Fahrradcomputer.
+5 Wählen Sie eine Option:
+• Synchronisieren Sie das Gerät mit der Garmin Connect App.
+• Synchronisieren Sie das Gerät mit der Garmin Express™ Anwendung.
+Auf dem Gerät wird die Strecke als dynamischer Bereich im Hauptmenü angezeigt.
+6 Wählen Sie die Strecke.
+HINWEIS: Wählen Sie bei Bedarf die Option Strecken, um eine andere Strecke auszuwählen.
+7 Wählen Sie Los!.
+Tipps zum Navigieren von Strecken
+• Verwenden Sie Abbiegehinweise (Streckenoptionen, Seite 15).
+• Wenn das Training ein Warm up umfasst, drücken Sie 
+ , um die Strecke zu starten. Wärmen Sie sich wie 
+üblich auf.
+• Bleiben Sie beim Aufwärmen abseits der Trainingsstrecke.
+Wenn Sie startklar sind, begeben Sie sich zu Ihrer Strecke. Wenn Sie einen beliebigen Abschnitt der Strecke 
+erreichen, wird eine Meldung angezeigt.
+• Wechseln Sie zur Karte, um die Streckenkarte anzuzeigen.
+Wenn Sie von der Strecke abweichen, wird eine Meldung angezeigt.
+Anzeigen von Streckendetails
+1 Wählen Sie Strecken.
+2 Wählen Sie eine Strecke.
+3 Wählen Sie eine Option:
+• Wählen Sie die Strecke, um sie auf der Karte anzuzeigen.
+• Wählen Sie die Anstiegsgrafik, um Details und Höhenprofile für die einzelnen Anstiege anzuzeigen.
+• Wählen Sie Übersicht, um Details zur Strecke anzuzeigen.
+Navigation 13
+=== PAGE 20 ===
+Anzeigen von Strecken auf der Karte
+Sie können für jede auf dem Gerät gespeicherte Strecke anpassen, wie diese auf der Karte angezeigt wird. 
+Beispielsweise können Sie das Gerät so anpassen, dass der Weg zur Arbeit auf der Karte immer in Gelb 
+angezeigt wird. Eine alternative Strecke kann in Grün dargestellt werden. Dies ermöglicht es Ihnen, Strecken 
+während der Fahrt zu sehen, dabei aber keiner bestimmten Strecke zu folgen bzw. darauf zu navigieren.
+1 Wählen Sie Strecken.
+2 Wählen Sie die Strecke.
+3 Wählen Sie 
+ .
+4 Wählen Sie Immer anzeigen, damit die Strecke auf der Karte angezeigt wird.
+5 Wählen Sie Farbe und anschließend eine Farbe.
+6 Wählen Sie Streckenpunkte, um Streckenpunkte auf der Karte anzuzeigen.
+Wenn Sie der Strecke das nächste Mal folgen, wird sie auf der Karte angezeigt.
+Verwenden von ClimbPro
+Die ClimbPro Funktion unterstützt Sie dabei, Ihre Anstrengung für die nächsten Anstiege einer Strecke besser zu 
+regeln. Sie können Details zu den Anstiegen anzeigen, u. a. deren Position, die durchschnittliche Steigung und 
+den gesamten Anstieg. Die Anstiegskategorien basieren auf Länge und Steigung und werden farblich dargestellt 
+(Anstiegskategorien, Seite 15).
+1 Aktivieren Sie die ClimbPro Funktion für das Aktivitätsprofil (Aktualisieren von Aktivitätsprofilen, Seite 45).
+2 Sehen Sie sich die Anstiege und Streckendetails der Strecke an (Anzeigen von Streckendetails, Seite 13).
+3 Folgen Sie einer gespeicherten Strecke (Strecken, Seite 11).
+Zu Beginn eines Anstiegs wird die ClimbPro Seite automatisch angezeigt.
+Nachdem Sie die Tour gespeichert haben, können Sie im Tourenprotokoll die Anstiegssplits anzeigen.
+14 Navigation
+=== PAGE 21 ===
+Anstiegskategorien
+Anstiegskategorien werden anhand des Anstiegswerts ermittelt. Zum Berechnen des Anstiegswerts wird die 
+Neigung mit der Anstiegslänge multipliziert. Ein Anstieg muss eine Länge von mindestens 500 Metern und eine 
+durchschnittliche Neigung von mindestens 3 Prozent haben, um als Anstieg zu gelten.
+Kategorie Anstiegswert Farbe
+Hors Catégorie (HC) Mehr als 80.000
+Kategorie 1 Mehr als 64.000
+Kategorie 2 Mehr als 32.000
+Kategorie 3 Mehr als 16.000
+Kategorie 4 Mehr als 8.000
+Nicht klassifiziert Mehr als 1.500
+Streckenoptionen
+Wählen Sie Strecken > 
+ .
+Abbiegehinweise: Aktiviert oder deaktiviert Abbiegehinweise.
+Streckenabwei- chungswarnungen: Warnt Sie, wenn Sie von der Strecke abweichen.
+Suchen: Ermöglicht es Ihnen, gespeicherte Strecken nach Namen zu suchen.
+Sortieren: Ermöglicht es Ihnen, gespeicherte Strecken nach Name, Distanz oder Datum zu sortieren.
+Löschen: Ermöglicht es Ihnen, alle oder mehrere gespeicherte Strecken vom Gerät zu löschen.
+Umleiten von Strecken
+Sie können wählen, wie die Route vom Gerät neu berechnet wird, wenn Sie von der Strecke abweichen.
+Wählen Sie eine Option, wenn Sie von der Strecke abweichen:
+• Wählen Sie Navigation anhalten, um die Navigation anzuhalten, bis Sie wieder auf die Strecke 
+zurückkehren.
+• Wählen Sie Umleiten, um einen Umleitungsvorschlag zu wählen.
+HINWEIS: Die erste Umleitungsoption ist die kürzeste Route zurück zur Strecke und wird nach 10 Sekunden 
+automatisch gestartet.
+Anhalten einer Strecke
+1 Blättern Sie zur Karte.
+2 Streichen Sie von oben nach unten über das Display und blättern Sie zum Steuerungen-Widget.
+3 Wählen Sie Strecke anhalten > 
+ .
+Löschen einer Strecke
+1 Wählen Sie Navigation > Strecken.
+2 Streichen Sie auf einer Strecke nach links.
+3 Wählen Sie 
+ .
+Navigation 15
+=== PAGE 22 ===
+Karteneinstellungen
+Wählen Sie 
+  > Aktivitätsprofile, dann ein Profil und schließlich die Option Navigation > Karte. 
+Ausrichtung: Legt fest, wie die Karte auf der Seite angezeigt wird.
+Auto-Zoom: Wählt automatisch einen Zoom-Maßstab für die Karte aus. Ist Aus aktiviert, müssen Sie die Ansicht 
+manuell vergrößern oder verkleinern.
+Navigationstext: Richtet ein, wann Abbiegehinweise angezeigt werden (routingfähige Karten erforderlich).
+Darstellung: Passt die Einstellungen für die Kartendarstellung an (Einstellungen für die Kartendarstellung, 
+Seite 16).
+Karteninformationen: Aktiviert oder deaktiviert die derzeit auf dem Gerät geladenen Karten.
+Einstellungen für die Kartendarstellung
+Wählen Sie 
+  > Aktivitätsprofile, dann ein Profil und anschließend die Option Navigation > Karte > 
+Darstellung. 
+Kartendesign: Passt die Kartendarstellung für Ihren Tourtyp an. (Kartendesigns, Seite 16)
+Popularity Karte: Markiert beliebte Straßen oder Trails für Ihren Tourtyp. Je dunkler die Straßen oder Trails, 
+desto beliebter sind sie.
+Detailgrad: Legt den auf der Karte angezeigten Detailgrad fest.
+Farbe Protokolllinie: Ermöglicht es Ihnen, die Linienfarbe des zurückgelegten Wegs zu ändern.
+Erweitert: Ermöglicht es Ihnen, Zoomstufen und Textgröße einzurichten und die plastische Karte und 
+Tiefenlinien zu aktivieren.
+Karte auf Standard zurücksetzen: Setzt die Kartendarstellung auf die Standardeinstellungen zurück.
+Ändern der Kartenausrichtung
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Navigation > Karte > Ausrichtung.
+4 Wählen Sie eine Option:
+• Wählen Sie Norden oben, um Norden am oberen Seitenrand anzuzeigen.
+• Wählen Sie In Bewegungsrichtung, um die aktuelle Bewegungsrichtung oben auf der Seite anzuzeigen.
+Kartendesigns
+Sie können das Kartendesign ändern, um die Kartendarstellung für Ihren Tourtyp anzupassen.
+Wählen Sie 
+  > Aktivitätsprofile, dann ein Profil und anschließend Navigation > Karte > Darstellung > 
+Kartendesign.
+Klassisch: Verwenden Sie das klassische Edge Kartenfarbschema ohne zusätzliches Design.
+Hoher Kontrast: Richtet die Karte so ein, dass Daten mit einem höheren Kontrast angezeigt werden, um die 
+Lesbarkeit in schwierigen Umgebungen zu erhöhen.
+Mountainbiken: Richtet die Karte so ein, dass Traildaten im Mountainbikemodus optimiert werden.
+16 Navigation
+=== PAGE 23 ===
+Routeneinstellungen
+Wählen Sie 
+  > Aktivitätsprofile, dann ein Profil und anschließend Navigation > Routing.
+Popularity-Routing: Berechnet Routen basierend auf den beliebtesten Tourstrecken von Garmin Connect.
+Routing-Modus: Legt die Art des Verkehrsmittels fest, um eine entsprechende Routenführung zu gewährleisten.
+Berechnungsmethode: Legt die Methode zum Berechnen der Route fest.
+Auf Straße zeigen: Fixiert das Positionssymbol, mit dem Ihre Position auf der Karte gekennzeichnet ist, auf der 
+nächstgelegenen Straße.
+Vermeidung einrichten: Legt die Straßen- und Wegetypen fest, die bei der Navigation vermieden werden sollen.
+Streckenneuberechnung: Berechnet die Route automatisch neu, wenn Sie von der Strecke abweichen.
+Routenneuberechnung: Berechnet die Route automatisch neu, wenn Sie von der Route abweichen.
+Auswählen einer Aktivität für die Routenberechnung
+Sie können das Gerät so einrichten, dass die Route abhängig vom Aktivitätstyp berechnet wird.
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Navigation > Routing > Routing-Modus.
+4 Wählen Sie eine Option zum Berechnen der Route.
+Sie können beispielsweise für die Straßennavigation die Option Rennradfahren oder für die Navigation im 
+Gelände die Option Mountainbiken wählen.
+Online-Funktionen
+ WARNUNG
+Bedienen Sie während der Fahrt nicht das Display, um Informationen einzugeben oder auf Nachrichten zu 
+antworten. Dies führt zu Ablenkungen, was zu einem Unfall mit schweren oder tödlichen Personenschäden 
+führen könnte.
+Online-Funktionen sind für den Edge Fahrradcomputer verfügbar, wenn Sie den Fahrradcomputer über die 
+Bluetooth Technologie mit einem kompatiblen Smartphone verbinden.
+Koppeln eines Smartphones
+Zum Verwenden der Online-Funktionen des Edge Fahrradcomputers muss dieser direkt über die Garmin 
+Connect App gekoppelt werden und nicht über die Bluetooth Einstellungen des Smartphones.
+1 Halten Sie die Taste 
+  gedrückt, um das Gerät einzuschalten.
+2 Falls Sie das Gerät zum ersten Mal eingeschaltet haben, wählen Sie eine Gerätesprache.
+Auf der nächsten Seite werden Sie zum Koppeln des Smartphones aufgefordert.
+3 Scannen Sie den QR-Code mit dem Smartphone und folgen Sie den Anweisungen auf dem Display, um die 
+Kopplung und Einrichtung abzuschließen.
+4 Falls erforderlich, aktivieren Sie den Kopplungsmodus manuell, indem Sie im Hauptmenü nach unten 
+streichen, um das Status-Widget anzuzeigen. Wählen Sie Telefon > Smartphone koppeln (Anzeigen von 
+Widgets, Seite 3).
+HINWEIS: Wenn Sie ein neues Smartphone koppeln, wählen Sie den Namen des zuvor gekoppelten 
+Smartphones und anschließend die Option 
+ , um das Smartphone zu entfernen. Nach dem Entfernen des 
+zuvor gekoppelten Smartphones wird Smartphone koppeln angezeigt.
+Nach der erfolgreichen Kopplung wird eine Meldung angezeigt und der Fahrradcomputer führt automatisch eine 
+Synchronisierung mit dem Smartphone durch.
+Online-Funktionen 17
+=== PAGE 24 ===
+Bluetooth Online-Funktionen
+Das Edge Gerät bietet unter Verwendung der Apps Garmin Connect und Connect IQ verschiedene Bluetooth 
+Online-Funktionen für Ihr kompatibles Smartphone. Weitere Informationen finden Sie unter www.garmin.com
+/apps.
+Hochladen von Aktivitäten auf Garmin Connect: Ihre Aktivität wird automatisch an Garmin Connect gesendet, 
+sobald Sie die Aufzeichnung abschließen.
+Ansagen: Ermöglicht es der Garmin Connect App, während einer Tour Statusankündigungen auf dem 
+Smartphone wiederzugeben.
+Fahrradalarm: Ermöglicht es Ihnen, einen Alarm zu aktivieren, der auf dem Gerät ausgegeben wird und einen 
+Alarm an Ihr Smartphone sendet, wenn das Gerät Bewegung erkennt.
+Von Connect IQ herunterladbare Funktionen: Ermöglicht es Ihnen, Connect IQ Funktionen mit der Connect IQ 
+App herunterzuladen.
+Downloads von Strecken von Garmin Connect: Suchen Sie bei Garmin Connect mit dem Smartphone nach 
+Strecken und senden Sie sie an Ihr Gerät.
+Edge suchen: Sucht nach Ihrem verloren gegangenen Edge Gerät, das mit dem Smartphone gekoppelt ist und 
+sich derzeit in Reichweite befindet.
+Nachrichten: Ermöglicht es Ihnen, einen eingehenden Anruf oder eine SMS-Nachricht mit einer 
+Nachrichtenvorlage zu beantworten. Diese Funktion ist mit kompatiblen Android™ Smartphones verfügbar.
+Musikfunktionen: Ermöglicht es Ihnen, mit dem Gerät die Musikwiedergabe auf dem Smartphone zu bedienen.
+Benachrichtigungen: Zeigt auf dem Gerät Telefonbenachrichtigungen und Nachrichten an.
+Sicherheits- und Trackingfunktionen: (Sicherheits- und Trackingfunktionen, Seite 19)
+Interaktion mit sozialen Medien: Veröffentlichen Sie Updates auf Ihrer Lieblingswebsite sozialer Medien, wenn 
+Sie eine Aktivität auf Garmin Connect hochladen.
+Wetter-Updates: Sendet Wetterlage und Unwetterwarnungen in Echtzeit an das Gerät.
+18 Online-Funktionen
+=== PAGE 25 ===
+Sicherheits- und Trackingfunktionen
+ ACHTUNG
+Die Sicherheits- und Trackingfunktionen sind Zusatzfunktionen und Sie sollten sich nicht als Hauptmethode auf 
+diese Funktionen verlassen, um Notfallhilfe zu erhalten. Die Garmin Connect App setzt sich nicht für Sie mit 
+Rettungsdiensten in Verbindung.
+HINWEIS
+Zum Verwenden dieser Funktionen muss auf dem Edge Explore 2 Gerät die GPS-Funktion aktiviert sein. 
+Außerdem muss das Gerät über die Bluetooth Technologie mit der Garmin Connect App verbunden sein. Sie 
+können Notfallkontakte in Ihrem Garmin Connect Konto eingeben.
+Das Edge Explore 2 Gerät bietet Sicherheits- und Trackingfunktionen, die in der Garmin Connect App 
+eingerichtet werden müssen.
+Weitere Informationen zu Sicherheits- und Trackingfunktionen finden Sie unter www.garmin.com/safety.
+Notfallhilfe: Ermöglicht es Ihnen, eine Nachricht mit Ihrem Namen, dem LiveTrack Link und der GPS-Position 
+(sofern verfügbar) an Ihre Notfallkontakte zu senden.
+Unfall-Benachrichtigung: Wenn das Edge Explore 2 Gerät während bestimmter Outdoor-Aktivitäten einen Unfall 
+erkennt, sendet es eine automatische Nachricht, den LiveTrack Link und die GPS-Position (sofern verfügbar) 
+an Ihre Notfallkontakte.
+LiveTrack: Ermöglicht es Freunden und Familie, Ihren Wettkämpfen und Trainingsaktivitäten in Echtzeit zu 
+folgen. Sie können Freunde per Email oder über soziale Medien einladen, damit diese Ihre Livedaten auf einer 
+Webseite anzeigen können.
+Live Event Sharing: Ermöglicht es Ihnen, während eines Events Nachrichten mit Echtzeit-Updates an Freunde 
+und Familie zu senden.
+HINWEIS: Diese Funktion ist nur verfügbar, wenn das Gerät mit einem kompatiblen Android Smartphone 
+verbunden ist.
+GroupRide: Ermöglicht es Ihnen, mit anderen Fahrern geteilte Strecken, Gruppennachrichten und Live-
+Positionsdaten zu erstellen und darauf zuzugreifen.
+GroupTrack: Ermöglicht es Ihnen, mit LiveTrack direkt auf dem Display und in Echtzeit Ihre Freunde zu 
+verfolgen.
+Unfall-Benachrichtigung
+ ACHTUNG
+Die Unfall-Benachrichtigung ist eine Zusatzfunktion, die nur für bestimmte Outdoor-Aktivitäten verfügbar ist. 
+Verlassen Sie sich nicht als Hauptmethode auf die Unfall-Benachrichtigung, um Notfallhilfe zu erhalten. Die 
+Garmin Connect App setzt sich nicht für Sie mit Rettungsdiensten in Verbindung.
+HINWEIS
+Zum Aktivieren der Unfall-Benachrichtigung auf dem Gerät müssen Sie zunächst in der Garmin Connect App 
+Notfallkontakte einrichten. Für das gekoppelte Smartphone muss ein Datentarif vorhanden sein. Außerdem 
+muss es sich in einem Bereich mit Mobilfunkempfang befinden, in dem die Datenübertragung unterstützt wird. 
+Ihre Notfallkontakte müssen SMS-Nachrichten empfangen können (ggf. fallen standardmäßige Gebühren für 
+SMS-Nachrichten an).
+Wenn vom Edge Gerät mit aktiviertem GPS ein Unfall erkannt wird, kann die Garmin Connect App eine 
+automatische SMS und Email mit Ihrem Namen und der GPS-Position (sofern verfügbar) an Ihre Notfallkontakte 
+senden.
+Auf Ihrem Gerät und dem gekoppelten Smartphone wird eine Nachricht angezeigt, dass Ihre Kontakte nach 
+30 Sekunden informiert werden. Falls Sie keine Hilfe benötigen, können Sie die automatisierte Notfallnachricht 
+abbrechen.
+Online-Funktionen 19
+=== PAGE 26 ===
+Notfallhilfe
+ ACHTUNG
+Die Notfallhilfe ist eine Zusatzfunktion, und Sie sollten sich nicht als Hauptmethode auf diese Funktion 
+verlassen, um im Notfall Hilfe zu erhalten. Die Garmin Connect App setzt sich nicht für Sie mit Rettungsdiensten 
+in Verbindung.
+HINWEIS
+Zum Aktivieren der Notfallhilfe auf dem Gerät müssen Sie zunächst in der Garmin Connect App Notfallkontakte 
+einrichten. Für das gekoppelte Smartphone muss ein Datentarif vorhanden sein. Außerdem muss es sich 
+in einem Bereich mit Mobilfunkempfang befinden, in dem die Datenübertragung unterstützt wird. Ihre 
+Notfallkontakte müssen SMS-Nachrichten empfangen können (ggf. fallen standardmäßige Gebühren für SMS-
+Nachrichten an).
+Wenn auf dem Edge Gerät das GPS aktiviert ist und es mit der Garmin Connect App verbunden ist, können 
+Sie eine automatische SMS mit Ihrem Namen und der GPS-Position (sofern verfügbar) an Ihre Notfallkontakte 
+senden.
+Auf dem Gerät wird eine Nachricht angezeigt, dass die Kontakte nach Ablauf eines Countdowns informiert 
+werden. Falls Sie keine Hilfe benötigen, können Sie die Nachricht abbrechen.
+Hinzufügen von Notfallkontakten
+Die Telefonnummern von Notfallkontakten werden für die Sicherheits- und Trackingfunktionen verwendet.
+1 Wählen Sie in der Garmin Connect App die Option 
+ .
+2 Wählen Sie Sicherheit und Tracking > Sicherheitsfunktionen > Notfallkontakte > Notfallkontakte 
+hinzufügen.
+3 Folgen Sie den Anweisungen auf dem Display.
+Ihre Notfallkontakte erhalten eine Benachrichtigung, wenn Sie sie als Notfallkontakt hinzufügen, und können 
+Ihre Anfrage dann annehmen oder ablehnen. Falls ein Kontakt die Anfrage ablehnt, müssen Sie einen anderen 
+Notfallkontakt wählen.
+Anzeigen von Notfallkontakten
+Zum Anzeigen der Notfallkontakte auf dem Gerät müssen Sie zunächst in der Garmin Connect App 
+Fahrerinformationen und Notfallkontakte einrichten.
+Wählen Sie 
+  > Sicherheit und Tracking > Notfallkontakte.
+Die Namen und Telefonnummern der Notfallkontakte werden angezeigt.
+Anfordern von Hilfe
+HINWEIS
+Zum Anfordern von Notfallhilfe müssen Sie auf dem Edge Gerät das GPS aktivieren und in der Garmin Connect 
+App Notfallkontakte einrichten. Für das gekoppelte Smartphone muss ein Datentarif vorhanden sein. Außerdem 
+muss es sich in einem Bereich mit Mobilfunkempfang befinden, in dem die Datenübertragung unterstützt wird. 
+Ihre Notfallkontakte müssen Email- oder SMS-Nachrichten empfangen können (ggf. fallen standardmäßige 
+Gebühren für SMS-Nachrichten an).
+1 Halten Sie die Taste 
+  fünf Sekunden lang gedrückt, um die Notfallhilfe zu aktivieren.
+Das Gerät gibt einen Signalton aus und sendet die Nachricht nach Ablauf des 5-Sekunden-Countdowns.
+TIPP: Sie können vor Ablauf des Countdowns die Option 
+  wählen, um die Nachricht abzubrechen.
+2 Wählen Sie bei Bedarf die Option Senden, um die Nachricht sofort zu senden.
+20 Online-Funktionen
+=== PAGE 27 ===
+Aktivieren und Deaktivieren der Unfall-Benachrichtigung
+HINWEIS: Für das gekoppelte Telefon muss ein Datentarif vorhanden sein. Außerdem muss es sich in einem 
+Bereich mit Mobilfunkempfang befinden, in dem die Datenübertragung unterstützt wird.
+1 Wählen Sie 
+  > Sicherheit und Tracking > Unfall-Benachrichtigung.
+2 Wählen Sie das Aktivitätsprofil, um die Unfall-Benachrichtigung zu aktivieren.
+HINWEIS: Die Unfall-Benachrichtigung ist für bestimmte Outdoor-Aktivitäten standardmäßig aktiviert. Je 
+nach Gelände und Fahrstil werden evtl. Falschmeldungen ausgegeben.
+Abbrechen einer automatisierten Nachricht
+Wenn das Gerät einen Unfall erkennt, können Sie die automatisierte Notfallnachricht auf dem Gerät oder dem 
+gekoppelten Smartphone abbrechen, bevor sie an die Notfallkontakte gesendet wird.
+Halten Sie vor Ende des 30-Sekunden-Countdowns die Option Zum Abbrechen gedrückt halten. gedrückt.
+Senden einer Status-Aktualisierung nach einem Unfall
+Damit Sie Ihren Notfallkontakten eine Status-Aktualisierung senden können, muss das Gerät einen Unfall 
+erkennen und eine automatisierte Notfallnachricht an die Notfallkontakte senden.
+Sie können Ihren Notfallkontakten eine Status-Aktualisierung senden, um Ihnen mitzuteilen, dass Sie keine Hilfe 
+benötigen.
+1 Streichen Sie von oben nach unten über das Display, und streichen Sie nach rechts oder links, um das 
+Bedienelement-Widget anzuzeigen.
+2 Wählen Sie Unfall erkannt > Alles OK.
+Eine Nachricht wird an alle Notfallkontakte gesendet.
+LiveTrack
+HINWEIS
+Sie sind dafür verantwortlich, beim Teilen von Positionsdaten mit anderen Personen Vorsicht walten zu lassen. 
+Stellen Sie stets sicher, dass Sie wissen, mit welchem Fahrer Sie die Positionsdaten teilen, und dass Sie die 
+Daten auch mit dieser Person teilen möchten.
+Die LiveTrack Funktion ermöglicht es Ihnen, Radfahraktivitäten mit Kontakten vom Smartphone und mit Social-
+Media-Konten zu teilen. Während Sie Daten mit anderen teilen, können Benutzer in Echtzeit Ihre aktuelle 
+Position verfolgen und Ihre Livedaten auf einer Webseite anzeigen.
+Zum Verwenden dieser Funktion muss auf dem Edge Explore 2 Gerät die GPS-Funktion aktiviert sein. Außerdem 
+muss das Gerät über die Bluetooth Technologie mit der Garmin Connect App verbunden sein.
+Aktivieren von LiveTrack
+Zum Starten Ihrer ersten LiveTrack Sitzung müssen Sie zunächst Kontakte in der Garmin Connect App 
+einrichten.
+1 Wählen Sie 
+  > Sicherheit und Tracking > LiveTrack.
+2 Wählen Sie eine Option:
+• Wählen Sie Automatisch starten, um jedes Mal, wenn Sie diese Art der Aktivität starten, eine LiveTrack 
+Sitzung zu starten.
+• Wählen Sie LiveTrack-Name, um den Namen der LiveTrack Sitzung zu aktualisieren. Das aktuelle Datum 
+ist der Standardname.
+• Wählen Sie Empfänger, um Empfänger anzuzeigen.
+• Wählen Sie Teilen von Strecken, wenn die Empfänger Ihre Strecke sehen sollen.
+• Wählen Sie Nachrichtenversand für Zuschauer, wenn Sie gestatten möchten, dass die Empfänger Ihnen 
+während der Radfahraktivität SMS-Nachrichten senden (Nachrichtenversand für Zuschauer, Seite 27).
+• Wählen Sie LiveTrack verlängern, um die Anzeige der LiveTrack Sitzung für 24 Stunden zu verlängern.
+3 Wählen Sie LiveTrack starten.
+Empfänger können Ihre Live-Daten auf einer Garmin Connect Trackingseite anzeigen.
+Online-Funktionen 21
+=== PAGE 28 ===
+Starten einer GroupTrack Sitzung
+Zum Starten einer GroupTrack Sitzung muss ein Smartphone mit installierter Garmin Connect App mit dem 
+Gerät gekoppelt sein (Koppeln eines Smartphones, Seite 17).
+HINWEIS: Diese Funktion ist für Group Rides mit den Fahrradcomputern Edge Explore sowie früheren Modellen 
+erforderlich.
+Verwenden Sie für die Fahrradcomputer Edge 1040, 840, 540 und spätere Modelle die GroupRide Funktion 
+(Starten einer GroupRide Sitzung, Seite 24).
+Während einer Tour können Sie die Mitfahrer in der GroupTrack Sitzung auf der Karte sehen.
+1 Wählen Sie auf dem Edge Fahrradcomputer die Option 
+  > Sicherheit und Tracking > LiveTrack > 
+GroupTrack, um die Anzeige von Verbindungen auf der Kartenseite und die Anzeige von Benachrichtigungen 
+für Nachrichten zu aktivieren.
+2 Wählen Sie in der Garmin Connect App die Option 
+  > Sicherheit und Tracking > LiveTrack > Einstellungen 
+> GroupTrack > Alle Freunde.
+3 Wählen Sie LiveTrack starten.
+4 Drücken Sie auf dem Edge Fahrradcomputer die Taste 
+  und beginnen Sie eine Tour.
+5 Rufen Sie die Karte auf, um Ihre Freunde anzuzeigen.
+Tippen Sie auf der Karte auf ein Symbol, um für andere Radfahrer in der GroupTrack Sitzung Informationen 
+zur Position und zur Richtung anzuzeigen.
+6 Zeigen Sie die GroupTrack Liste an.
+Sie können einen Radfahrer aus der Liste auswählen. Dieser Radfahrer wird dann zentriert auf der Karte 
+angezeigt.
+22 Online-Funktionen
+=== PAGE 29 ===
+Tipps für GroupTrack Sitzungen
+Die GroupTrack Funktion ermöglicht es Ihnen, andere Radfahrer in Ihrer Gruppe mit LiveTrack direkt auf dem 
+Display zu verfolgen. Alle Radfahrer in der Gruppe müssen in Ihrem Garmin Connect Konto zu Ihren Freunden 
+gehören.
+• Fahren Sie im Freien mit dem GPS.
+• Koppeln Sie den Edge Explore 2 Fahrradcomputer über die Bluetooth Technologie mit dem Smartphone.
+• Wählen Sie in der Garmin Connect App die Option 
+  > Verbindungen und wählen Sie, dass die Liste der 
+Radfahrer für die GroupTrack Sitzung aktualisiert wird.
+• Stellen Sie sicher, dass die Verbindungen ihre jeweiligen Smartphones ebenfalls koppeln und in der Garmin 
+Connect App eine LiveTrack Sitzung starten.
+• Vergewissern Sie sich, dass sich alle Freunde in Reichweite befinden (40 Kilometer bzw. 25 Meilen).
+• Rufen Sie während einer GroupTrack Sitzung die Karte auf, um Ihre Freunde anzuzeigen.
+• Halten Sie an, bevor Sie Informationen zur Position und Richtung anderer Radfahrer der GroupTrack Sitzung 
+anzeigen.
+Live-Eventfreigabe
+Die Live-Eventfreigabe ermöglicht es Ihnen, während eines Events Nachrichten an Freunde und Familie zu 
+senden, sodass diese Echtzeit-Updates erhalten, u. a. die Gesamtzeit und die Zeit der letzten Runde. Vor dem 
+Event können Sie in der Garmin Connect App die Liste der Empfänger und den Inhalt der Nachricht anpassen.
+Aktivieren der Live-Eventfreigabe
+Zum Verwenden der Live-Eventfreigabe müssen Sie zunächst in der Garmin Connect App die LiveTrack Funktion 
+einrichten.
+HINWEIS: LiveTrack Funktionen sind verfügbar, wenn das Gerät über die Bluetooth Technologie mit der Garmin 
+Connect App auf einem kompatiblen Android Smartphone verbunden ist.
+1 Schalten Sie den Edge Fahrradcomputer ein.
+2 Wählen Sie in der Garmin Connect App die Option 
+  > Sicherheit und Tracking > Live-Eventfreigabe.
+3 Wählen Sie Geräte und anschließend Ihren Edge Fahrradcomputer.
+4 Wählen Sie den Umschalter, um die Option Live-Eventfreigabe zu aktivieren.
+5 Wählen Sie Fertig.
+6 Wählen Sie Empfänger, um Personen aus Ihren Kontakten hinzuzufügen.
+7 Wählen Sie Nachrichtenoptionen, um die Nachrichtenauslöser und -optionen anzupassen.
+8 Gehen Sie nach draußen und wählen Sie auf dem Edge Explore 2 Fahrradcomputer ein GPS-Fahrradprofil.
+Die Live-Eventfreigabe bleibt 24 Stunden lang aktiviert.
+GroupRide
+ WARNUNG
+Seien Sie sich beim Radfahren jederzeit Ihrer Umgebung bewusst und halten Sie die Regeln für sicheres Fahren 
+ein. Andernfalls könnte es zu schweren oder tödlichen Verletzungen kommen.
+HINWEIS
+Sie sind dafür verantwortlich, beim Teilen von Positionsdaten mit anderen Fahrern Vorsicht walten zu lassen. 
+Stellen Sie stets sicher, dass Sie wissen, mit welchen Fahrern Sie die Positionsdaten teilen, und dass Sie die 
+Daten auch mit diesen Personen teilen möchten.
+Mit der GroupRide Funktion des Edge Fahrradcomputers können Sie mit anderen Fahrern mit kompatiblen 
+Geräten geteilte Strecken, Gruppennachrichten und Live-Positionsdaten erstellen und darauf zugreifen.
+Online-Funktionen 23
+=== PAGE 30 ===
+Starten einer GroupRide Sitzung
+Zum Starten einer GroupRide Sitzung muss ein Smartphone mit installierter Garmin Connect App mit dem Gerät 
+gekoppelt sein (Koppeln eines Smartphones, Seite 17).
+1 Blättern Sie zur GroupRide Übersicht.
+2 Wählen Sie 
+ , um dem Teilen Ihrer Live-Position mit anderen Fahrern zuzustimmen.
+3 Wählen Sie GroupRide erstellen.
+4 Wählen Sie Name, Datum oder Startzeit, um die Informationen zu bearbeiten (optional).
+5 Wählen Sie Strecke hinzufügen, um eine Strecke mit anderen Fahrern zu teilen.
+Sie können eine Ihrer gespeicherten Strecken wählen oder aber das 
+ , um eine neue Strecke zu erstellen 
+(Strecken, Seite 11).
+6 Wählen Sie Code generieren.
+Der Edge Fahrradcomputer generiert einen Code, den Sie an andere Fahrer senden können.
+7 Wählen Sie 
+  > Code zum Teilen > 
+ .
+8 Öffnen Sie die Garmin Connect App und wählen Sie Code anzeigen > Weitergeben.
+9 Wählen Sie, wie Sie den Code mit anderen Fahrern teilen möchten.
+Die Garmin Connect App teilt den GroupRide Code mit Ihren Kontakten.
+10 Wählen Sie auf dem Edge Fahrradcomputer die Option Mit Teilen der Position starten.
+24 Online-Funktionen
+=== PAGE 31 ===
+11 Drücken Sie 
+  und beginnen Sie die Tour.
+Die GroupRide Datenseite wird den Datenseiten für das aktive Profil hinzugefügt.
+12 Wählen Sie auf der GroupRide Datenseite einen Fahrer, um dessen Position auf der Karte anzuzeigen, oder 
+blättern Sie zur Karte, um alle Fahrer anzuzeigen (GroupRide Kartenstatus, Seite 26).
+Tippen Sie auf der Karte auf ein Symbol, um für andere Radfahrer während der GroupRide Sitzung 
+Informationen zur Position, zur Richtung und zum Status anzuzeigen.
+Teilnehmen an einer GroupRide Sitzung
+Sie können an einer GroupRide Sitzung auf Ihrem Edge Fahrradcomputer teilnehmen, wenn der GroupRide Code 
+mit Ihnen geteilt wird. Der Code kann vor Beginn der Tour eingegeben werden.
+1 Blättern Sie zur GroupRide Übersicht.
+TIPP: Sie können die GroupRide Übersicht zur Übersichtsschleife hinzufügen (Anpassen von Übersichten, 
+Seite 52).
+2 Wählen Sie Code eingeben.
+3 Geben Sie den 6-stelligen Code ein und wählen Sie 
+ .
+Der Edge Fahrradcomputer lädt die Strecke automatisch herunter.
+4 Wählen Sie am Tag der Tour die Option Mit Teilen der Position starten.
+5 Drücken Sie 
+  und beginnen Sie die Tour.
+Online-Funktionen 25
+=== PAGE 32 ===
+Senden von GroupRide Nachrichten
+Sie können während einer GroupRide Sitzung eine Nachricht an andere Fahrer senden.
+1 Wählen Sie auf dem Edge Fahrradcomputer auf der GroupRide Datenseite die Option 
+  > 
+ .
+2 Wählen Sie eine Option:
+• Wählen Sie eine Nachricht aus der Liste mit Nachrichtenvorlagen.
+• Wählen Sie Nachricht eingeben, um eine eigene Nachricht zu senden.
+HINWEIS: Sie können die Nachrichtenvorlagen in der Garmin Connect App in den Geräteeinstellungen 
+anpassen. Nachdem Sie die Einstellungen angepasst haben, müssen Sie die Daten synchronisieren, um 
+die Änderungen auf den Edge Fahrradcomputer anzuwenden.
+HINWEIS: Sie können an den Anfang der Nachrichtenseite blättern, um ältere Nachrichten anzuzeigen, darunter 
+Nachrichten, die vor Ihrem Beitritt zur GroupRide Sitzung gesendet wurden (Teilnehmen an einer GroupRide 
+Sitzung, Seite 25).
+GroupRide Kartenstatus
+Während einer Tour können Sie die Mitfahrer in der GroupRide Sitzung auf der Karte sehen.
+TIPP: Die Buchstaben in den Kartensymbolen entsprechen den Initialen des Vornamens der Fahrer.
+Symbol Form Farbe In Bewegung Verbunden in der 
+Garmin Connect App
+Kreis Weiß Ja Nein
+Kreis Blau Ja Ja
+Quadrat Weiß Nein Nein
+Quadrat Rot Nein Ja
+Kreis Grau Unbekannt Unbekannt
+HINWEIS: Zum Anpassen der Karteneinstellungen wählen Sie auf der GroupRide Seite die Option 
+ .
+26 Online-Funktionen
+=== PAGE 33 ===
+Verlassen einer GroupRide Sitzung
+Damit Ihr Edge Fahrradcomputer Sie aus den Karten und Listen der anderen Fahrer entfernen kann, benötigen 
+Sie eine aktive Internetverbindung.
+Sie können eine GroupRide Sitzung jederzeit verlassen.
+Wählen Sie eine Option:
+• Streichen Sie während einer Tour nach unten, um das Steuerungen-Widget anzuzeigen, und wählen Sie 
+GroupRide verlassen.
+• Wählen Sie auf der GroupRide Seite die Option GroupRide verlassen.
+• Drücken Sie 
+  > Speich., um die Aktivitätszeit zu stoppen und die Aktivität abzuschließen.
+TIPP: Der Edge Fahrradcomputer entfernt die GroupRide Sitzung automatisch, wenn sie abläuft (Tipps für 
+GroupRide Sitzungen, Seite 27).
+Tipps für GroupRide Sitzungen
+• Fahren Sie im Freien mit dem GPS.
+• Koppeln Sie Ihren kompatiblen Edge Fahrradcomputer über die Bluetooth Technologie mit Ihrem 
+Smartphone.
+• GroupRide-Teilnehmer können ihren Geräten jederzeit eine GroupRide Sitzung hinzufügen und der Sitzung 
+dann am Tag der Tour beitreten. Sitzungen laufen 24 Stunden nach der Startzeit ab.
+• Wählen Sie zum Teilen des GroupRide Codes während der Tour auf dem Edge Fahrradcomputer auf der 
+GroupRide Datenseite die Option 
+ .
+• Wenn Sie eine GroupRide Nachricht erhalten, können Sie 
+  wählen, um alle Nachrichten für diese GroupRide 
+Sitzung stummzuschalten.
+• Die Fahrerliste wird alle 15 Sekunden aktualisiert und zeigt Details für die 25 Fahrer an, die in einem Umkreis 
+von 40 km (25 Meilen) am nächsten sind. Wenn Sie weitere Fahrer außerhalb des Radius von 40 km (25 
+Meilen) anzeigen möchten, wählen Sie Mehr anzeigen.
+• Streichen Sie während einer Tour nach unten, um das Steuerungen-Widget mit mehr Optionen anzuzeigen.
+• Halten Sie an, bevor Sie Informationen zur Position und Richtung anderer Fahrer der GroupRide Sitzung 
+anzeigen (GroupRide Kartenstatus, Seite 26).
+Nachrichtenversand für Zuschauer
+HINWEIS: Für das gekoppelte Smartphone muss ein Datentarif vorhanden sein. Außerdem muss es sich in 
+einem Bereich mit Mobilfunkempfang befinden, in dem die Datenübertragung unterstützt wird.
+Beim Nachrichtenversand für Zuschauer können Ihre LiveTrack Anhänger Ihnen während Ihrer Radfahraktivität 
+SMS-Nachrichten senden. Sie können diese Funktion in der Garmin Connect App in den LiveTrack Einstellungen 
+einrichten.
+Blockieren des Nachrichtenversands für Zuschauer
+Wenn Sie Nachrichten von Zuschauern blockieren möchten, empfiehlt Garmin, die Funktion vor dem Starten der 
+Aktivität zu deaktivieren.
+Wählen Sie 
+  > Sicherheit und Tracking > LiveTrack > Nachrichtenversand für Zuschauer.
+Online-Funktionen 27
+=== PAGE 34 ===
+Einrichten des Fahrradalarms
+Sie können den Fahrradalarm aktivieren, wenn Sie nicht bei Ihrem Fahrrad sind, z. B. während einer Pause bei 
+einer langen Tour. Steuern Sie den Fahrradalarm über das Gerät oder über die Geräteeinstellungen in der Garmin 
+Connect App.
+1 Wählen Sie 
+  > Sicherheit und Tracking > Fahrradalarm.
+2 Erstellen oder aktualisieren Sie Ihren Kenncode.
+Wenn Sie den Fahrradalarm über das Edge Gerät deaktivieren, werden Sie zur Eingabe des Kenncodes 
+aufgefordert.
+3 Streichen Sie auf dem Display von oben nach unten. Wählen Sie im Bedienelement-Widget die Option 
+Fahrradalarm einrichten.
+Wenn das Gerät Bewegung erkennt, wird ein Alarm ausgegeben. Außerdem wird ein Alarm an das verbundene 
+Smartphone gesendet.
+Wiedergeben von Ansagen auf dem Smartphone
+Zum Einrichten von Ansagen müssen Sie ein Smartphone mit installierter Garmin Connect App mit dem Edge 
+Fahrradcomputer koppeln.
+Sie können die Garmin Connect App so einrichten, dass während einer Tour oder einer anderen Aktivität 
+motivierende Statusankündigungen auf dem Smartphone wiedergegeben werden. Ansagen umfassen 
+die Rundenzahl und Rundenzeit, Navigationshinweise, Leistungsdaten, Pace oder Geschwindigkeit und 
+Herzfrequenzdaten. Bei einer Ansage wird der Hauptton des Smartphones von der Garmin Connect App 
+stumm geschaltet, um die Ankündigung wiederzugeben. Sie können die Lautstärke in der Garmin Connect App 
+anpassen.
+1 Wählen Sie in der Garmin Connect App die Option 
+ .
+2 Wählen Sie Garmin-Geräte.
+3 Wählen Sie das Gerät aus.
+4 Wählen Sie Ansagen.
+Wiedergeben von Musik
+ WARNUNG
+Hören Sie keine Musik, während Sie auf öffentlichen Straßen Rad fahren, da Sie dadurch abgelenkt werden 
+könnten, was zu einem Unfall mit Personenschäden oder Todesfällen führen kann. Der Benutzer ist dafür 
+verantwortlich, lokale Gesetze und Vorschriften bezüglich des Tragens von Kopfhörern beim Radfahren zu 
+kennen und zu verstehen.
+Sie können die Musikwiedergabe auf dem Smartphone über den Edge Fahrradcomputer steuern.
+1 Starten Sie auf dem Smartphone die Wiedergabe eines Titels oder einer Playlist.
+2 Wählen Sie eine Option:
+• Streichen Sie auf dem Edge Fahrradcomputer von oben nach unten, um die Widgets anzuzeigen, und dann 
+nach links oder rechts, um das Musikfunktionen-Widget anzuzeigen.
+HINWEIS: Sie können der Widget-Schleife Optionen hinzufügen (Anpassen der Widget-Schleife, Seite 52).
+• Streichen Sie nach links oder rechts, um die Datenseite für Musikfunktionen anzuzeigen (Hinzufügen einer 
+Datenseite für Musikfunktionen, Seite 46).
+3 Hören Sie Musik vom gekoppelten Smartphone.
+Sie können die Musikwiedergabe auf dem Smartphone über den Edge Fahrradcomputer steuern.
+Training
+Training in Gebäuden
+Das Gerät umfasst ein Profil für Indoor-Aktivitäten, wenn das GPS ausgeschaltet ist. Wenn das GPS deaktiviert 
+ist, stehen Geschwindigkeits- und Distanzdaten nur zur Verfügung, wenn Sie über einen kompatiblen Sensor 
+oder Indoor Trainer verfügen, der Geschwindigkeits- und Distanzdaten an das Gerät sendet.
+28 Training
+=== PAGE 35 ===
+Koppeln des Indoor Trainers
+1 Der Edge Fahrradcomputer muss sich in einer Entfernung von maximal 3 m (10 Fuß) zum Indoor Trainer 
+befinden.
+2 Wählen Sie das Indoor-Fahrradprofil.
+3 Treten Sie auf dem Indoor Trainer in die Pedale oder drücken Sie die Kopplungstaste.
+Weitere Informationen hierzu finden Sie im Benutzerhandbuch des Indoor Trainers.
+4 Auf dem Edge Fahrradcomputer wird eine Meldung angezeigt.
+HINWEIS: Falls keine Meldung angezeigt wird, wählen Sie 
+  > Sensoren > Sensor hinzufügen.
+5 Folgen Sie den Anweisungen auf dem Display.
+Wenn der Indoor Trainer über die ANT+
+®
+ Technologie mit dem Edge Fahrradcomputer gekoppelt wurde, wird 
+er als verbundener Sensor angezeigt. Sie können die Datenfelder anpassen, um Sensordaten anzuzeigen.
+Verwenden eines Indoor Trainers
+Zum Verwenden eines kompatiblen Indoor Trainers müssen Sie den Trainer zunächst über die ANT+ 
+Technologie mit dem Gerät koppeln (Koppeln des Indoor Trainers, Seite 29).
+Es sind nicht alle Funktionen und Einstellungen für alle Indoor Trainer verfügbar. Weitere Informationen hierzu 
+finden Sie im Benutzerhandbuch des Trainers.
+Sie können das Gerät mit einem Indoor Trainer verwenden, um beim Folgen einer Strecke oder einer Aktivität 
+den Widerstand zu simulieren. Während der Verwendung eines Indoor Trainers ist das GPS automatisch 
+deaktiviert.
+1 Wählen Sie 
+  > Training > Indoor Trainer.
+2 Wählen Sie eine Option:
+• Wählen Sie Offene Tour, um die Widerstandsstufe manuell anzupassen.
+• Wählen Sie Strecke folgen, um einer gespeicherten Strecke zu folgen (Strecken, Seite 11).
+• Wählen Sie Aktivität folgen, um einer gespeicherten Tour zu folgen (Eine Fahrradtour machen, Seite 5).
+• Sofern verfügbar, wählen Sie die Option Neigung einrichten, Widerstand einstellen oder Leistungsvorgabe 
+einstellen, um die Tour anzupassen.
+HINWEIS: Der Trainerwiderstand ändert sich basierend auf den Strecken- oder Tourinformationen.
+3 Wählen Sie eine Strecke oder Aktivität.
+4 Wählen Sie Los!.
+5 Wählen Sie 
+ , um den Aktivitäten-Timer zu starten.
+Einstellen des Widerstands
+1 Wählen Sie 
+  > Training > Indoor Trainer > Widerstand einstellen.
+2 Wählen Sie 
+  bzw. 
+ , um den vom Trainer erzeugten Widerstand einzustellen.
+3 Wählen Sie 
+ , um den Aktivitäten-Timer zu starten.
+4 Wählen Sie bei Bedarf die Option 
+  bzw. 
+ , um während der Aktivität den Widerstand anzupassen.
+Einrichten der simulierten Neigung
+1 Wählen Sie 
+  > Training > Indoor Trainer > Neigung einrichten.
+2 Wählen Sie 
+  bzw. 
+ , um die vom Trainer verwendete simulierte Neigung einzurichten.
+3 Wählen Sie 
+ , um den Aktivitäten-Timer zu starten.
+4 Wählen Sie bei Bedarf die Option 
+  bzw. 
+ , um während der Aktivität die simulierte Neigung anzupassen.
+Training 29
+=== PAGE 36 ===
+Einrichten der Leistungsvorgabe
+1 Wählen Sie 
+  > Training > Indoor Trainer > Leistungsvorgabe einstellen.
+2 Stellen Sie den Wert für die Leistungsvorgabe ein.
+3 Wählen Sie 
+ , um den Aktivitäten-Timer zu starten.
+Der vom Trainer erzeugte Widerstand wird angepasst, um basierend auf der Geschwindigkeit eine konstante 
+Leistungsabgabe beizubehalten.
+4 Wählen Sie bei Bedarf die Option 
+  bzw. 
+ , um während der Aktivität die angestrebte Leistung 
+anzupassen.
+Einrichten eines Trainingsziels
+1 Wählen Sie Training > Ziel einrichten.
+2 Wählen Sie eine Option:
+• Wählen Sie Nur Distanz, um eine festgelegte Distanz auszuwählen oder eine benutzerdefinierte Distanz 
+einzugeben.
+• Wählen Sie Distanz und Zeit, um ein Distanz- und Zeitziel auszuwählen.
+• Wählen Sie Distanz und Geschwindigkeit, um ein Distanz- und Geschwindigkeitsziel auszuwählen.
+Die Trainingszielseite wird angezeigt und enthält Informationen zur voraussichtlichen Endzeit. Die 
+voraussichtliche Endzeit basiert auf Ihrer aktuellen Leistung und der verbleibenden Zeit.
+3 Wählen Sie 
+ .
+4 Wählen Sie 
+ , um den Aktivitäten-Timer zu starten.
+5 Drücken Sie am Ende der Aktivität die Taste 
+  und wählen Sie Speich..
+Antreten gegen eine vorherige Aktivität
+Sie können gegen eine zuvor aufgezeichnete Aktivität oder eine gespeicherte Strecke antreten.
+1 Wählen Sie 
+  > Training > Gegen Aktivität antreten.
+2 Wählen Sie eine Option:
+• Wählen Sie Gegen Aktivität antreten.
+• Wählen Sie Gespeicherte Strecken.
+3 Wählen Sie die Aktivität oder Strecke.
+4 Wählen Sie Los!.
+5 Wählen Sie 
+ , um den Aktivitäten-Timer zu starten.
+Eigene Statistiken
+Der Edge Explore 2 Fahrradcomputer kann Ihre persönlichen Statistiken aufzeichnen und Leistungswerte 
+berechnen. Zum Messen von Leistungswerten ist ein kompatibler Herzfrequenz-Brustgurt, Leistungsmesser 
+oder Smart-Trainer erforderlich.
+30 Eigene Statistiken
+=== PAGE 37 ===
+Leistungsmesswerte
+Bei den Leistungsmesswerten handelt es sich um Prognosen, die Sie beim Aufzeichnen und Verstehen Ihrer 
+Trainingsaktivitäten und Leistungen bei Wettkämpfen unterstützen können. Zum Messen der Werte müssen 
+einige Aktivitäten unter Verwendung der Herzfrequenzmessung am Handgelenk oder eines kompatiblen 
+Herzfrequenz-Brustgurts durchgeführt werden. Zum Messen der Radfahrleistung sind ein Herzfrequenz-
+Brustgurt und ein Leistungsmesser erforderlich.
+Diese Prognosen werden von Firstbeat Analytics™ bereitgestellt und unterstützt. Weitere Informationen finden 
+Sie unter www.garmin.com/performance-data.
+HINWEIS: Anfänglich haben Sie eventuell den Eindruck, dass die Prognosen ungenau sind. Nach ein paar 
+abgeschlossenen Aktivitäten hat sich das Gerät an Ihre Leistung angepasst.
+VO2max: Die VO2max ist die maximale Sauerstoffaufnahme (in Milliliter), die Sie pro Minute und pro Kilogramm 
+Körpergewicht bei maximaler Leistung verwerten können. Das Gerät zeigt VO2max-Werte an, die in Bezug 
+auf Hitze und Höhe korrigiert wurden, wenn Sie sich an Umgebungen mit hoher Hitze oder an große Höhen 
+akklimatisieren.
+Erholungszeit: Die Erholungszeit gibt an, wie viel Zeit bis zu Ihrer vollständigen Erholung verbleibt und bis Sie 
+wieder mit dem nächsten harten Training beginnen können.
+Informationen zur VO2max-Berechnung
+Die VO2max ist die maximale Sauerstoffaufnahme (in Milliliter), die Sie pro Minute und pro Kilogramm 
+Körpergewicht bei maximaler Leistung verwerten können. Einfach ausgedrückt ist die VO2max ein Gradmesser 
+der Ausdauerleistungsfähigkeit und sollte sich mit verbesserter Fitness erhöhen. VO2max-Berechnungen 
+werden von Firstbeat bereitgestellt und unterstützt. Koppeln Sie das Gerät von Garmin mit einem kompatiblen 
+Herzfrequenzsensor und Leistungsmesser, um Ihre VO2max-Berechnung für das Radfahren anzuzeigen.
+Eigene Statistiken 31
+=== PAGE 38 ===
+Anzeigen Ihrer VO2max-Berechnung
+Zum Anzeigen Ihrer VO2max-Berechnung müssen Sie den Herzfrequenz-Brustgurt anlegen, den 
+Leistungsmesser installieren und die Geräte mit Ihrem Gerät koppeln (Koppeln von Funksensoren, Seite 36). 
+Sie erhalten die genaueste Berechnung, wenn Sie das Benutzerprofil vollständig einrichten (Einrichten des 
+Benutzerprofils, Seite 34) und die maximale Herzfrequenz festlegen (Einrichten von Herzfrequenz-Bereichen, 
+Seite 36).
+HINWEIS: Anfänglich haben Sie eventuell den Eindruck, dass die Berechnung ungenau ist. Nach ein paar 
+Radfahrtrainings hat sich das Gerät jedoch an Ihre Radfahrleistung angepasst.
+1 Fahren Sie mindestens 20 Minuten lang mit gleichbleibender, hoher Intensität.
+2 Wählen Sie anschließend Speich..
+3 Wählen Sie 
+  > Eigene Statistiken > VO2max.
+Ihre VO2max-Berechnung wird als Zahl und Position in der farbigen Anzeige dargestellt.
+ Lila Überragend
+ Blau Ausgezeichnet
+ Grün Gut
+ Orange Ausreichend
+ Rot Schlecht
+VO2max-Daten und Analysen werden mit Genehmigung von The Cooper Institute
+®
+ bereitgestellt. 
+Weitere Informationen sind im Anhang (VO2max-Standard-Bewertungen, Seite 67) und unter 
+www.CooperInstitute.org zu finden.
+32 Eigene Statistiken
+=== PAGE 39 ===
+Tipps für VO2max-Berechnung beim Radfahren
+Die Berechnung der VO2max und deren Genauigkeit verbessern sich, wenn Sie beim Radfahrtraining 
+gleichbleibend ein mittelmäßig schweres Training absolvieren, bei dem sich Herzfrequenz sowie Watt-Leistung 
+nicht stark verändern.
+• Vergewissern Sie sich vor dem Training, dass das Gerät, der Herzfrequenz-Brustgurt und der 
+Leistungsmesser ordnungsgemäß funktionieren, die Geräte miteinander gekoppelt sind und eine 
+ausreichende Akku-Laufzeit bieten.
+• Behalten Sie während Ihres 20-minütigen Radfahrtrainings eine Herzfrequenz bei, die mehr als 70 % Ihrer 
+maximalen Herzfrequenz beträgt.
+• Behalten Sie während Ihres 20-minütigen Radfahrtrainings eine weitgehend gleichbleibende Leistungsabgabe 
+bei.
+• Vermeiden Sie hügeliges Gelände.
+• Fahren Sie nicht in einer Gruppe, da es dort zu Zug kommen kann.
+Erholungszeit
+Sie können das Garmin Gerät mit der Herzfrequenzmessung am Handgelenk oder mit einem kompatiblen 
+Herzfrequenz-Brustgurt verwenden, um anzuzeigen, wie viel Zeit bis zu Ihrer vollständigen Erholung verbleibt 
+und bis Sie wieder mit dem nächsten harten Training beginnen können.
+HINWEIS: Für die empfohlene Erholungszeit wird die VO2max-Berechnung herangezogen. Die Angabe scheint 
+daher anfänglich u. U. ungenau zu sein. Nach ein paar abgeschlossenen Aktivitäten hat sich das Gerät an Ihre 
+Leistung angepasst.
+Die Erholungszeit wird sofort nach einer Aktivität angezeigt. Ein Countdown zählt die Zeit herunter, bis es für 
+Sie wieder optimal ist, ein weiteres hartes Training zu beginnen. Im Laufe des Tages aktualisiert das Gerät 
+die Erholungszeit basierend auf Veränderungen in Bezug auf Schlaf, Stress, Entspannung und körperlicher 
+Bewegung.
+Anzeigen der Erholungszeit
+Zum Verwenden der Erholungszeitfunktion benötigen Sie ein Garmin Gerät mit Herzfrequenzmessung am 
+Handgelenk oder einen kompatiblen Herzfrequenz-Brustgurt, der mit dem Gerät gekoppelt ist (Koppeln von 
+Funksensoren, Seite 36). Wenn das Gerät mit einem Herzfrequenzsensor geliefert wurde, sind das Gerät und 
+der Sensor bereits gekoppelt. Sie erhalten die genaueste Berechnung, wenn Sie das Benutzerprofil vollständig 
+einrichten (Einrichten des Benutzerprofils, Seite 34) und die maximale Herzfrequenz festlegen (Einrichten von 
+Herzfrequenz-Bereichen, Seite 36).
+1 Wählen Sie 
+  > Eigene Statistiken > Erholung > 
+  > Aktivieren.
+2 Beginnen Sie Ihre Tour.
+3 Wählen Sie anschließend Speich..
+Ihre Erholungszeit wird angezeigt. Die Höchstzeit beträgt 4 Tage, die Mindestzeit 6 Stunden.
+Deaktivieren von Leistungsbenachrichtigungen
+Leistungsbenachrichtigungen sind standardmäßig aktiviert. Bei einigen Leistungsbenachrichtigungen handelt 
+es sich um Alarme, die beim Abschluss der Aktivität angezeigt werden. Einige Leistungsbenachrichtigungen 
+werden während einer Aktivität angezeigt oder wenn Sie einen neuen Leistungswert erreichen, z. B. eine neue 
+VO2max.
+1 Wählen Sie 
+  > Eigene Statistiken > Leistungsbenachrichtigungen.
+2 Wählen Sie eine Option.
+Eigene Statistiken 33
+=== PAGE 40 ===
+Anzeigen des Fitnessalters
+Damit das Gerät ein genaues Fitnessalter berechnen kann, müssen Sie in der Garmin Connect App das 
+Benutzerprofil einrichten.
+Das Fitnessalter gibt Aufschluss darüber, wie fit Sie im Vergleich zu Personen desselben Geschlechts sind. 
+Das Gerät nutzt Informationen wie Alter, Body Mass Index (BMI), Daten zur Herzfrequenz in Ruhe sowie das 
+Protokoll von Aktivitäten mit hoher Intensität, um ein Fitnessalter bereitzustellen. Wenn Sie über eine Index™
+Waage verfügen, verwendet das Gerät für die Ermittlung des Fitnessalters den Körperfettanteil anstelle des BMI. 
+Sport und Lebensstil können sich auf das Fitnessalter auswirken.
+Wählen Sie 
+  > Eigene Statistiken > Fitnessalter.
+Anzeigen von Intensitätsminuten
+Damit das Gerät Ihre Intensitätsminuten berechnen kann, müssen Sie es mit einem kompatiblen 
+Herzfrequenzsensor koppeln und beide Geräte bei einer Tour tragen (Koppeln von Funksensoren, Seite 36).
+Organisationen wie die Weltgesundheitsorganisation empfehlen, sich pro Woche mindestens 150 Minuten 
+lang mit mäßiger Intensität sportlich zu betätigen oder 75 Minuten pro Woche eine Aktivität mit hoher 
+Intensität auszuüben. Wenn der Edge Fahrradcomputer mit einem Herzfrequenzsensor gekoppelt ist, zeichnet 
+er die Zeit auf, die Sie mit Aktivitäten mit mäßiger bis hoher Intensität verbracht haben, das Wochenziel für 
+Intensitätsminuten und den Fortschritt beim Erreichen des Ziels.
+Wählen Sie 
+  > Eigene Statistiken > Intensitätsminuten.
+Persönliche Rekorde
+Wenn Sie eine Tour abschließen, werden auf dem Gerät neue Bestzeiten angezeigt, die Sie während der Tour 
+aufgestellt haben. Zu Bestzeiten zählen Ihre schnellste Zeit über eine Standarddistanz, die längste Tour und 
+der größte Anstieg während einer Tour. Wenn das Gerät mit einem kompatiblen Leistungsmesser gekoppelt ist, 
+zeigt es den maximalen Leistungswert an, der während eines Zeitraums von 20 Minuten aufgezeichnet wurde.
+Anzeigen Ihrer persönlichen Rekorde
+Wählen Sie 
+  > Eigene Statistiken > Persönliche Rekorde.
+Zurücksetzen persönlicher Bestzeiten
+Sie können alle persönlichen Bestzeiten auf die zuvor gespeicherten Zeiten zurücksetzen.
+1 Wählen Sie 
+  > Eigene Statistiken > Persönliche Rekorde.
+2 Wählen Sie einen Rekord, der zurückgesetzt werden soll.
+3 Wählen Sie Früherer Rekord > 
+ .
+HINWEIS: Dadurch werden keine gespeicherten Aktivitäten gelöscht.
+Löschen persönlicher Rekorde
+1 Wählen Sie 
+  > Eigene Statistiken > Persönliche Rekorde.
+2 Wählen Sie einen persönlichen Rekord.
+3 Wählen Sie 
+  > 
+ .
+Trainingszonen
+• Herzfrequenz-Bereiche (Einrichten von Herzfrequenz-Bereichen, Seite 36)
+• Leistungsbereiche (Einrichten von Leistungsbereichen, Seite 37)
+Einrichten des Benutzerprofils
+Sie können die Einstellungen für Geschlecht, Alter, Gewicht und Größe aktualisieren. Das Gerät verwendet diese 
+Informationen zur Berechnung diverser Werte wie z. B. Kalorienberechnung.
+1 Wählen Sie 
+  > Eigene Statistiken > Benutzerprofil.
+2 Wählen Sie eine Option.
+34 Eigene Statistiken
+=== PAGE 41 ===
+Funksensoren
+Der Edge Fahrradcomputer kann über die ANT+ oder Bluetooth Technologie mit Funksensoren gekoppelt und 
+verwendet werden (Koppeln von Funksensoren, Seite 36). Nach der Kopplung der Geräte können Sie die 
+optionalen Datenfelder anpassen (Hinzufügen von Datenseiten, Seite 46). Wenn das Gerät mit einem Sensor 
+geliefert wurde, sind die Geräte bereits gekoppelt.
+Wenn Sie Informationen zur Kompatibilität bestimmter Garmin Sensoren erhalten, Sensoren erwerben oder das 
+Benutzerhandbuch anzeigen möchten, besuchen Sie die Website buy.garmin.com für den jeweiligen Sensor.
+Sensortyp Beschreibung
+E-Bike
+Sie können das Gerät mit Ihrem E-Bike verwenden und während Touren Radfahrdaten 
+anzeigen, z. B. Informationen zum Akku und zum Schalten (Anzeigen der Details des E-Bike-
+Sensors, Seite 40).
+Edge-Fernbe­
+dienung
+Sie können den Edge Fahrradcomputer mit der Edge Fernbedienung steuern und beispiels­
+weise den Aktivitäten-Timer starten, Runden markieren und Datenseiten durchblättern.
+Herzfrequenz
+Sie können einen externen Sensor verwenden, beispielsweise einen Herzfrequenz-Brustgurt 
+der HRM 200, HRM 600, HRM-Dual™, HRM-Fit™ oder HRM-Pro™ Serie, um während Aktivitäten 
+Herzfrequenzdaten anzuzeigen.
+inReach-Fern­
+bedienung
+Mit der inReach
+®
+ Fernbedienung können Sie das inReach Satellitenkommunikationsgerät über 
+den Edge Fahrradcomputer bedienen (Verwenden der inReach Fernbedienung, Seite 40).
+Leuchten
+Verwenden Sie die Varia™ Smart-Fahrradlichter, um das Situationsbewusstsein zu verbes­
+sern. Mit einem Varia Frontlicht mit Dashcam können Sie während einer Tour auch Fotos 
+aufnehmen und Videos aufzeichnen (Verwenden der Varia Kamerafunktionen, Seite 39).
+Leistung
+Verwenden Sie die Rally™ oder Vector™ Leistungsmesser-Fahrradpedale, um Leistungsdaten 
+auf dem Gerät anzuzeigen. Sie können die Leistungsbereiche anpassen, damit Sie Ihren 
+Zielen und Fähigkeiten entsprechen (Einrichten von Leistungsbereichen, Seite 37), oder 
+Bereichsalarme verwenden, damit Sie benachrichtigt werden, wenn Sie einen bestimmten 
+Leistungsbereich erreichen (Einrichten von Bereichsalarmen, Seite 48).
+Radar
+Verwenden Sie ein Varia Fahrradradar, um das Situationsbewusstsein zu verbessern und 
+Alarme zu herannahenden Fahrzeugen zu senden. Mit einem Varia Radar-Kamera-Rücklicht 
+können Sie während einer Tour auch Fotos aufnehmen und Videos aufzeichnen (Verwenden 
+der Varia Kamerafunktionen, Seite 39).
+Shimano E-Bike
+Sie können den Fahrradcomputer mit Ihrem Shimano
+®
+ E-Bike-System verwenden und während 
+Touren Radfahrdaten anzeigen, z. B. Informationen zum Akku und zum Schalten (Anzeigen 
+der Details des E-Bike-Sensors, Seite 40).
+Smart-Trainer
+Verwenden Sie den Fahrradcomputer mit einem Indoor-Smart-Trainer, um beim Folgen von 
+Strecken oder Touren den Widerstand zu simulieren (Verwenden eines Indoor Trainers, 
+Seite 29).
+Geschwindig­
+keit/ Trittfre­
+quenz
+Befestigen Sie Geschwindigkeits- oder Trittfrequenzsensoren am Fahrrad, um während der 
+Tour die entsprechenden Daten auf dem Fahrradcomputer anzuzeigen. Bei Bedarf können Sie 
+den Radumfang manuell eingeben (Radgröße und -umfang, Seite 68).
+Tempe
+Bringen Sie den tempe™ Temperatursensor an einem sicher befestigten Band oder einer 
+sicher befestigten Schlaufe an, wo er der Umgebungsluft ausgesetzt ist. So liefert er fortwäh­
+rend genaue Temperaturdaten.
+VIRB Mit der VIRB
+®
+ Fernbedienung können Sie die VIRB Action-Kamera über den Fahrradcomputer 
+bedienen.
+Funksensoren 35
+=== PAGE 42 ===
+Koppeln von Funksensoren
+Wenn ein Funksensor zum ersten Mal über die ANT+ oder Bluetooth Technologie mit dem Gerät verbunden 
+wird, müssen das Gerät und der Sensor gekoppelt werden. Nach der Kopplung stellt der Edge Fahrradcomputer 
+automatisch eine Verbindung mit dem Sensor her, wenn eine Aktivität gestartet wird und der Sensor aktiv und in 
+Reichweite ist. Weitere Informationen zu Verbindungstypen finden Sie unter www.garmin.com/hrm_connection
+_types.
+HINWEIS: Wenn das Gerät mit einem Sensor geliefert wurde, sind die Geräte bereits gekoppelt.
+1 Legen Sie sich den Herzfrequenz-Brustgurt an, installieren Sie den Sensor oder drücken Sie die Taste, um 
+den Sensor zu aktivieren.
+HINWEIS: Informationen zum Koppeln finden Sie im Benutzerhandbuch des Funksensors.
+2 Das Gerät muss sich in einer Entfernung von maximal 3 m (10 Fuß) zum Sensor befinden.
+HINWEIS: Halten Sie beim Koppeln eine Entfernung von 10 m (33 Fuß) zu den Sensoren anderer Radfahrer 
+ein.
+3 Wählen Sie 
+  > Sensoren > Sensor hinzufügen.
+4 Wählen Sie eine Option:
+• Wählen Sie einen Sensortyp.
+• Wählen Sie Alle durchsuchen, um nach allen Sensoren in der Nähe zu suchen.
+Es wird eine Liste der verfügbaren Sensoren angezeigt.
+5 Wählen Sie einen oder mehrere Sensoren, die mit dem Gerät gekoppelt werden sollen.
+6 Wählen Sie Hinzufügen.
+Wenn der Sensor mit dem Gerät gekoppelt ist, zeigt dieser den Status Verbunden an. Sie können ein 
+Datenfeld anpassen, um Sensordaten anzuzeigen.
+Akkulaufzeit von Funksensoren
+Nach einer Tour wird die Akkulaufzeit der Funksensoren angezeigt, die während der Aktivität verbunden waren. 
+Die Liste ist nach Akkuladestand sortiert.
+Einrichten von Herzfrequenz-Bereichen
+Das Gerät verwendet die Benutzerprofilinformationen der ersten Einrichtung, um Ihre Herzfrequenz-Bereiche 
+zu ermitteln. Sie können die Herzfrequenz-Bereiche manuell entsprechend Ihren Fitnesszielen anpassen 
+(Fitnessziele, Seite 37). Damit Sie während der Aktivität möglichst genaue Kaloriendaten erhalten, sollten Sie 
+die maximale Herzfrequenz, die Herzfrequenz in der Ruhephase und Herzfrequenz-Bereiche einrichten.
+1 Wählen Sie 
+  > Eigene Statistiken > Trainingszonen > Herzfrequenz-Bereiche.
+2 Geben Sie die Werte für maximale und minimale Herzfrequenz ein.
+Die Werte für die Bereiche werden automatisch aktualisiert, können jedoch auch manuell bearbeitet werden.
+3 Wählen Sie Basierend auf:.
+4 Wählen Sie eine Option:
+• Wählen Sie BPM, um die Bereiche in Schlägen pro Minute anzuzeigen und zu bearbeiten.
+• Wählen Sie % Max., um die Bereiche als Prozentsatz Ihrer maximalen Herzfrequenz anzuzeigen und zu 
+bearbeiten.
+• Wählen Sie % HFR, um die Bereiche als Prozentsatz Ihrer Herzfrequenzreserve (maximale Herzfrequenz 
+minus Ruheherzfrequenz) anzuzeigen und zu bearbeiten.
+Informationen zu Herzfrequenz-Bereichen
+Viele Sportler verwenden Herzfrequenz-Bereiche, um ihr Herz-Kreislauf-System zu überwachen und zu stärken 
+und um ihre Fitness zu steigern. Ein Herzfrequenz-Bereich ist ein bestimmter Wertebereich für die Herzschläge 
+pro Minute. Die fünf normalerweise verwendeten Herzfrequenz-Bereiche sind nach steigender Intensität von 
+1 bis 5 nummeriert. Im Allgemeinen werden die Herzfrequenz-Bereiche basierend auf Prozentsätzen der 
+maximalen Herzfrequenz berechnet.
+36 Funksensoren
+=== PAGE 43 ===
+Fitnessziele
+Die Kenntnis der eigenen Herzfrequenzbereiche kann Sie dabei unterstützen, Ihre Fitness zu messen und zu 
+verbessern, wenn Sie die folgenden Grundsätze kennen und anwenden:
+• Ihre Herzfrequenz ist ein gutes Maß für die Trainingsintensität.
+• Das Training in bestimmten Herzfrequenzbereichen kann Ihr Herz-Kreislauf-System stärken und verbessern.
+Wenn Sie Ihre maximale Herzfrequenz kennen, können Sie die Tabelle auf Berechnen von Herzfrequenz-
+Bereichen, Seite 68 verwenden, um die besten Herzfrequenzbereiche für Ihre Fitnessziele zu ermitteln.
+Wenn Sie Ihre maximale Herzfrequenz nicht kennen, verwenden Sie einen im Internet verfügbaren Rechner. In 
+einigen Fitness-Studios kann möglicherweise ein Test zum Messen der maximalen Herzfrequenz durchgeführt 
+werden. Die maximale Standard-Herzfrequenz ist 220 minus Ihr Alter.
+Trainieren mit Leistungsmessern
+• Eine Liste der Leistungsmesser, die mit dem Edge Fahrradcomputer kompatibel sind (z. B. Rally und Vector 
+Systeme), ist unter www.garmin.com/cycling verfügbar.
+• Weitere Informationen hierzu sind im Benutzerhandbuch des Leistungsmessers zu finden.
+• Passen Sie die Leistungsbereiche an, damit sie Ihren Zielvorgaben und Fähigkeiten entsprechen (Einrichten 
+von Leistungsbereichen, Seite 37).
+• Verwenden Sie Bereichsalarme, damit Sie benachrichtigt werden, wenn Sie einen bestimmten 
+Leistungsbereich erreichen (Einrichten von Bereichsalarmen, Seite 48).
+• Passen Sie die Leistungsdatenfelder an (Hinzufügen von Datenseiten, Seite 46).
+Einrichten von Leistungsbereichen
+Die Werte für diese Bereiche werden vorgegeben und stimmen eventuell nicht mit Ihren persönlichen 
+Fähigkeiten überein. Sie können die Bereiche manuell auf dem Gerät anpassen oder Garmin Connect 
+verwenden. Wenn Sie Ihren Wert für die leistungsbezogene anaerobe Schwelle (FTP) kennen, können Sie diesen 
+eingeben, damit die Leistungsbereiche von der Software automatisch berechnet werden.
+1 Wählen Sie 
+  > Eigene Statistiken > Trainingszonen > Leistungsbereiche.
+2 Geben Sie einen FTP-Wert ein.
+3 Wählen Sie Basierend auf:.
+4 Wählen Sie eine Option:
+• Wählen Sie Watt, um Bereiche in Watt anzuzeigen und zu bearbeiten.
+• Wählen Sie % FTP, um Bereiche als Prozentsatz der leistungsbezogenen anaeroben Schwelle anzuzeigen 
+und zu bearbeiten.
+• Wählen Sie Einstellung, um die Anzahl der Leistungsbereiche zu bearbeiten.
+Kalibrieren des Leistungsmessers
+Damit Sie den Leistungsmesser kalibrieren können, müssen Sie ihn installieren, mit dem Gerät koppeln und 
+sicherstellen, dass der Leistungsmesser aktiv Daten überträgt.
+Kalibrierungsanweisungen, die sich speziell auf Ihren Leistungsmesser beziehen, finden Sie in der 
+Bedienungsanleitung des Herstellers.
+1 Wählen Sie 
+  > Sensoren.
+2 Wählen Sie den Leistungsmesser.
+3 Wählen Sie Kalibrieren.
+TIPP: Achten Sie darauf, dass der Leistungsmesser aktiv bleibt, bis die Meldung angezeigt wird.
+4 Folgen Sie den Anweisungen auf dem Display.
+Funksensoren 37
+=== PAGE 44 ===
+Pedalbasierte Leistung
+Der Rally misst die pedalbasierte Leistung.
+Der Rally misst dabei die angewendete Kraft mehrere Hundert Mal pro Sekunde. Darüber hinaus misst der Rally 
+Ihre Trittfrequenz oder die Rotationspedalgeschwindigkeit. Anhand der Messwerte für Kraft, Richtung der Kraft, 
+Rotation der Tretkurbel und Zeit kann der Rally die Leistung (Watt) ermitteln. Da der Rally die Leistung für das 
+linke und rechte Bein unabhängig voneinander misst, wird die Links-Rechts-Beinkraftverteilung aufgezeichnet.
+HINWEIS: Das Rally System mit einem Sensor liefert keine Angaben für die Links-Rechts-Beinkraftverteilung.
+Aktualisieren der Software des Rally Systems über den Edge Fahrradcomputer
+Zum Aktualisieren der Software müssen Sie den Edge Fahrradcomputer mit dem Rally System koppeln.
+1 Senden Sie die Daten der Tour an Ihr Garmin Connect Konto (Übertragen von Touren in Garmin Connect, 
+Seite 42).
+Garmin Connect sucht automatisch nach Software-Updates und sendet diese an den Edge Fahrradcomputer.
+2 Der Edge Fahrradcomputer muss sich in Reichweite (3 m) der Leistungsmesser befinden.
+3 Drehen Sie die Tretkurbel einige Male. Sie werden vom Edge Fahrradcomputer aufgefordert, alle 
+ausstehenden Software-Updates zu installieren.
+4 Folgen Sie den Anweisungen auf dem Display.
+Situationsbewusstsein
+ WARNUNG
+Die Varia Radfahrerassistenzgeräte können das Situationsbewusstsein verbessern. Sie sollen nicht die 
+Aufmerksamkeit des Radfahrers und dessen Urteilsvermögen ersetzen. Seien Sie sich jederzeit Ihrer Umgebung 
+bewusst und halten Sie die Regeln für sicheres Fahren ein. Andernfalls könnte es zu schweren oder tödlichen 
+Verletzungen kommen.
+Der Edge Fahrradcomputer kann mit den Varia Radfahrerassistenzgeräten verwendet werden (Funksensoren, 
+Seite 35). Weitere Informationen finden Sie im Benutzerhandbuch des Zubehörs.
+38 Funksensoren
+=== PAGE 45 ===
+Verwenden der Varia Kamerafunktionen
+HINWEIS
+In einigen Gerichtsbarkeiten ist das Aufnehmen von Videos, Ton oder Fotos evtl. untersagt oder gesetzlich 
+geregelt oder es ist dafür erforderlich, dass alle Parteien über die Aufnahme informiert sind und ihre 
+Zustimmung erteilen. Sie sind dafür verantwortlich, alle Gesetze, Bestimmungen und andere Einschränkungen 
+zu kennen und zu befolgen, die in den Gerichtsbarkeiten gelten, in denen Sie dieses Gerät verwenden möchten.
+Zum Verwenden der Varia Kamerafunktionen müssen Sie zunächst das Zubehör mit dem Fahrradcomputer 
+koppeln (Koppeln von Funksensoren, Seite 36).
+1 Tippen Sie auf das Display, um die Timer-Überlagerung anzuzeigen, und wählen Sie 
+ .
+TIPP: Sie können die Kamera auch über die Kurzbefehltasten der Timer-Überlagerung bedienen.
+Auf dem Fahrradcomputer werden die Kamerafunktionen angezeigt sowie Aufzeichnungsmodus, 
+Akkuladestand, Videoauflösung und Audiostatus aller verbundenen Kameras.
+2 Wählen Sie eine Option:
+• Wählen Sie Scheinw.kamera oder Radarkamera, um die Kameraeinstellungen anzupassen.
+• Wählen Sie 
+ , um die in der Timer-Überlagerung angezeigten Kurzbefehltasten anzupassen.
+• Wählen Sie Foto aufnehmen, Clip speichern oder Fahrt aufn..
+Aktivieren des Tons bei grüner Gefahrenstufe
+Zum Aktivieren des Tons bei grüner Gefahrenstufe müssen Sie das Gerät zunächst mit einem kompatiblen Varia 
+Radargerät koppeln und Töne aktivieren.
+Sie können einen Ton aktivieren, der ausgegeben wird, wenn das Radar zur grünen Gefahrenstufe übergeht.
+1 Wählen Sie 
+  > Sensoren.
+2 Wählen Sie das Radargerät.
+3 Wählen Sie Sensorinformationen > Alarmeinstellungen.
+4 Wählen Sie den Umschalter Ton bei grüner Gefahrenstufe.
+E-Bike-Training
+Zum Verwenden kompatibler E-Bikes, z. B. Shimano E-Bike-Systeme, müssen Sie sie mit dem Edge Gerät 
+koppeln (Koppeln von Funksensoren, Seite 36). Sie können die optionalen E-Bike-Datenseiten und -Datenfelder 
+anpassen (Hinzufügen von Datenseiten, Seite 46). 
+Funksensoren 39
+=== PAGE 46 ===
+Anzeigen der Details des E-Bike-Sensors
+1 Wählen Sie 
+  > Sensoren.
+2 Wählen Sie das E-Bike.
+3 Wählen Sie eine Option:
+• Wählen Sie Sensorinformationen > E-Bike-Details, um E-Bike-Details wie die Gesamtwerte oder die 
+Reisedistanz anzuzeigen.
+• Wählen Sie 
+ , um E-Bike-Fehlermeldungen anzuzeigen.
+Weitere Informationen finden Sie im Benutzerhandbuch des E-Bikes.
+inReach Fernbedienung
+Mit der inReach Fernbedienung können Sie das inReach Satellitenkommunikationsgerät über den Edge 
+Fahrradcomputer bedienen. Weitere Informationen zu kompatiblen Geräten finden Sie unter buy.garmin.com.
+Verwenden der inReach Fernbedienung
+1 Schalten Sie das inReach Satellitenkommunikationsgerät ein.
+2 Wählen Sie auf dem Edge Fahrradcomputer die Option 
+  > Sensoren > Sensor hinzufügen > inReach.
+3 Wählen Sie Ihr inReach Satellitenkommunikationsgerät und anschließend Hinzufügen.
+4 Streichen Sie im Hauptmenü nach unten und nach links oder rechts, um das inReach Fernbedienungswidget 
+anzuzeigen.
+5 Wählen Sie eine Option:
+• Wählen Sie 
+  > Vorlage senden und wählen Sie eine Nachricht aus der Liste, um eine Nachrichtenvorlage 
+zu senden.
+• Wählen Sie 
+  > Unterhaltung starten, dann die Kontakte für die Nachricht und geben Sie den 
+Nachrichtentext ein bzw. wählen Sie eine Sofortnachrichtenoption, um eine SMS-Nachricht zu senden.
+• Wählen Sie 
+  > Tracking starten, um während des Trackings den Timer und die zurückgelegte Strecke 
+anzuzeigen.
+• Wählen Sie SOS, um eine SOS-Nachricht zu senden.
+HINWEIS: Sie sollten die SOS-Funktion ausschließlich in einer echten Notfallsituation verwenden.
+Protokoll
+Die Protokollübersicht auf dem Edge Explore 2 Fahrradcomputer enthält Angaben zu Zeit, Distanz, Kalorien, 
+Geschwindigkeit, Runden und Höhe sowie optionale Informationen zu Sensoren mit ANT+ Technologie.
+HINWEIS: Wenn der Aktivitäten-Timer angehalten oder unterbrochen wurde, werden keine Protokolldaten 
+aufgezeichnet.
+Wenn der Speicher des Geräts voll ist, wird eine Fehlermeldung angezeigt. Das Gerät löscht oder überschreibt 
+das Protokoll nicht automatisch. Laden Sie das Protokoll regelmäßig in Ihr Garmin Connect Konto hoch, damit 
+Sie über sämtliche Daten verfügen.
+Anzeigen von Touren
+1 Streichen Sie im Hauptmenü nach oben oder nach unten, um die Protokollübersicht anzuzeigen.
+HINWEIS: Möglicherweise müssen Sie dem Hauptmenü die Übersicht hinzufügen (Anpassen von 
+Übersichten, Seite 52).
+2 Wählen Sie die Protokollübersicht.
+3 Wählen Sie Touren.
+4 Wählen Sie eine Tour.
+5 Wählen Sie eine Option.
+40 Protokoll
+=== PAGE 47 ===
+Anzeigen Ihrer Zeit in den einzelnen Trainingszonen
+Damit Sie Ihre Zeit in den einzelnen Trainingszonen anzeigen können, müssen Sie das Gerät mit einem 
+kompatiblen Herzfrequenzsensor oder Leistungsmesser koppeln, eine Aktivität beenden und die Aktivität 
+speichern.
+Sehen Sie sich Ihre Zeit in den einzelnen Herzfrequenz- und Leistungsbereichen an, um die Intensität Ihres 
+Trainings anzupassen. Sie können die Leistungsbereiche (Einrichten von Leistungsbereichen, Seite 37) und die 
+Herzfrequenz-Bereiche (Einrichten von Herzfrequenz-Bereichen, Seite 36) an Ihre Zielvorgaben und Fähigkeiten 
+anpassen. Sie können ein Datenfeld anpassen, damit es die Zeit anzeigt, die Sie während der Tour in 
+Trainingszonen verbracht haben (Hinzufügen von Datenseiten, Seite 46).
+1 Streichen Sie im Hauptmenü nach oben oder nach unten, um die Protokollübersicht anzuzeigen.
+HINWEIS: Möglicherweise müssen Sie dem Hauptmenü die Übersicht hinzufügen (Anpassen von 
+Übersichten, Seite 52).
+2 Wählen Sie die Protokollübersicht.
+3 Wählen Sie Touren.
+4 Wählen Sie eine Tour.
+5 Wählen Sie Übersicht.
+6 Wählen Sie eine Option:
+• Wählen Sie Herzfrequenz-Bereiche.
+• Wählen Sie Leistungsbereiche.
+Löschen von Touren
+1 Streichen Sie im Hauptmenü nach oben oder nach unten, um die Protokollübersicht anzuzeigen.
+HINWEIS: Möglicherweise müssen Sie dem Hauptmenü die Übersicht hinzufügen (Anpassen von 
+Übersichten, Seite 52).
+2 Wählen Sie die Protokollübersicht.
+3 Wählen Sie Touren.
+4 Streichen Sie eine Tour nach links und wählen Sie 
+ .
+Anzeigen von Gesamtwerten
+Sie können die auf dem Gerät gespeicherten Gesamtdaten anzeigen, darunter die Anzahl der Touren, die Zeit, 
+die Distanz und die Kalorien.
+1 Streichen Sie im Hauptmenü nach oben oder nach unten, um die Protokollübersicht anzuzeigen.
+HINWEIS: Möglicherweise müssen Sie dem Hauptmenü die Übersicht hinzufügen (Anpassen von 
+Übersichten, Seite 52).
+2 Wählen Sie die Protokollübersicht.
+3 Wählen Sie Gesamt.
+Löschen von Gesamtwerten
+1 Streichen Sie im Hauptmenü nach oben oder nach unten, um die Protokollübersicht anzuzeigen.
+HINWEIS: Möglicherweise müssen Sie dem Hauptmenü die Übersicht hinzufügen (Anpassen von 
+Übersichten, Seite 52).
+2 Wählen Sie die Protokollübersicht.
+3 Wählen Sie Gesamt.
+4 Wählen Sie eine Option:
+• Wählen Sie 
+ , um alle Gesamtwerte aus dem Protokoll zu löschen.
+• Wählen Sie ein Aktivitätsprofil, um Gesamtwerte für ein einzelnes Profil zu löschen.
+HINWEIS: Dadurch werden keine gespeicherten Aktivitäten gelöscht.
+5 Wählen Sie 
+ .
+Protokoll 41
+=== PAGE 48 ===
+Garmin Connect
+Sie können bei Garmin Connect eine Verbindung mit Ihren Freunden herstellen. Bei Garmin Connect gibt 
+es Tools, um Trainings zu verfolgen, zu analysieren, mit anderen zu teilen und um sich gegenseitig 
+anzuspornen. Zeichnen Sie die Aktivitäten Ihres aktiven Lifestyles auf, z. B. Touren, Lauftrainings, Spaziergänge, 
+Schwimmtrainings, Wanderungen, Triathlons und mehr.
+Sie können ein kostenloses Garmin Connect Konto erstellen, wenn Sie das Gerät über die Garmin Connect App 
+mit dem Smartphone koppeln, oder Sie können es unter connect.garmin.com erstellen.
+Speichern von Aktivitäten: Nachdem Sie eine Aktivität mit dem Gerät abgeschlossen und gespeichert haben, 
+können Sie diese auf Garmin Connect hochladen und sie dort beliebig lange speichern.
+Analysieren von Daten: Sie können detaillierte Informationen zu Ihrer Aktivität anzeigen, z. B. Zeit, Distanz, 
+Höhe, Herzfrequenz, Kalorienverbrauch, Trittfrequenz, eine Kartenansicht von oben, Diagramme zu Pace und 
+Geschwindigkeit sowie anpassbare Berichte.
+HINWEIS: Zur Erfassung einiger Daten ist optionales Zubehör erforderlich, beispielsweise ein 
+Herzfrequenzsensor.
+Teilen von Aktivitäten: Sie können eine Verbindung mit Freunden herstellen, um gegenseitig Aktivitäten zu 
+verfolgen oder Links zu Ihren Aktivitäten zu teilen.
+Verwalten von Einstellungen: Sie können die Fahrradcomputer- und Benutzereinstellungen in Ihrem Garmin 
+Connect Konto anpassen.
+Garmin Connect+ Abonnement
+Sie können die im Garmin Connect Konto verfügbaren Daten, Verbindungen und Trainings durch ein Garmin 
+Connect+ Abonnement optimieren. Zum Registrieren können Sie die Garmin Connect App im App-Shop des 
+Smartphones herunterladen oder connect.garmin.com besuchen.
+Active Intelligence (AI): Erhalten Sie KI-Einblicke in Ihre Daten und Aktivitäten.
+LiveTrack+: Senden Sie LiveTrack SMS-Nachrichten, erhalten Sie eine personalisierte Profilseite und zeigen Sie 
+vorherige LiveTrack Sitzungen an.
+Performance Dashboard: Zeigen Sie Ihre Trainingsdaten mit angepassten Diagrammen und Grafiken nach Ihren 
+Wünschen an.
+Social-Media-Funktionen: Erhalten Sie Zugriff auf exklusive Auszeichnungen, Auszeichnungs-Challenges und 
+doppelte Punkte für Challenges. Sie können den Avatar Ihres Profils mit anpassbaren Frames aktualisieren.
+Übertragen von Touren in Garmin Connect
+• Synchronisieren Sie den Edge Fahrradcomputer mit der Garmin Connect App auf dem Smartphone.
+• Verwenden Sie das USB-Kabel aus dem Lieferumfang des Edge Fahrradcomputers, um Tourdaten in Ihr 
+Garmin Connect Konto auf dem Computer zu übertragen.
+42 Protokoll
+=== PAGE 49 ===
+Datenaufzeichnung
+Das Gerät zeichnet jede Sekunde Punkte auf. Eine einsekündliche Aufzeichnung ergibt einen besonders 
+detaillierten Track, jedoch wird viel Speicherplatz beansprucht.
+Informationen zur Datenmittelung für Trittfrequenz und Leistung finden Sie unter Datenmittelung für 
+Trittfrequenz oder Leistung, Seite 53.
+Datenverwaltung
+Verbinden des Geräts mit dem Computer
+HINWEIS
+Zum Schutz vor Korrosion sollten Sie den USB-Anschluss, die Schutzkappe und den umliegenden Bereich vor 
+dem Aufladen oder dem Anschließen an einen Computer sorgfältig abtrocknen.
+1 Heben Sie die Schutzkappe über dem USB-Anschluss an.
+2 Stecken Sie ein Ende des Kabels in den USB-Anschluss am Gerät.
+3 Stecken Sie das andere Ende des Kabels in einen USB-Anschluss am Computer.
+Das Gerät wird unter Windows
+®
+ in "Dieser PC" als Wechseldatenträger und unter Mac
+®
+ als verfügbare 
+Festplatte angezeigt.
+Übertragen von Dateien auf das Gerät
+1 Verbinden Sie das Gerät mit dem Computer.
+Je nach Betriebssystem des Computers wird das Gerät als tragbares Gerät oder als Wechseldatenträger 
+angezeigt.
+HINWEIS: Mac Betriebssysteme erkennen das Gerät nicht standardmäßig. Sie müssen die Software Garmin 
+Express verwenden, um mit Dateien auf dem Gerät zu interagieren.
+2 Öffnen Sie auf dem Computer den Dateibrowser.
+3 Wählen Sie eine Datei.
+4 Wählen Sie Bearbeiten > Kopieren.
+5 Öffnen Sie das tragbare Gerät oder Laufwerk für das Gerät.
+6 Wechseln Sie zu einem Ordner.
+HINWEIS: Für die meisten Dateitypen gibt es einen benannten Ordner im Garmin Ordner.
+7 Wählen Sie Bearbeiten > Einfügen.
+Die Datei wird in der Liste der Dateien im Speicher des Geräts angezeigt.
+Löschen von Dateien
+HINWEIS
+Wenn Sie sich über den Zweck einer Datei nicht im Klaren sind, löschen Sie die betreffende Datei nicht. Der 
+Speicher des Geräts enthält wichtige Systemdateien, die nicht gelöscht werden dürfen.
+1 Öffnen Sie das Laufwerk Garmin.
+2 Öffnen Sie bei Bedarf einen Ordner.
+3 Wählen Sie eine Datei aus.
+4 Drücken Sie auf der Tastatur die Taste Entf.
+HINWEIS: Wenn Sie einen Apple Computer verwenden, müssen Sie den Papierkorb leeren, um die Dateien 
+vollständig zu entfernen.
+Protokoll 43
+=== PAGE 50 ===
+Entfernen des USB-Kabels
+Wenn das Gerät als Wechseldatenträger an den Computer angeschlossen ist, müssen Sie es sicher vom 
+Computer trennen, damit es nicht zu Datenverlusten kommt. Wenn das Gerät unter Windows als tragbares Gerät 
+verbunden ist, muss es nicht sicher getrennt werden.
+1 Führen Sie einen der folgenden Schritte aus:
+• Windows: Klicken Sie in der Taskleiste auf das Symbol Hardware sicher entfernen, und wählen Sie das 
+Gerät aus.
+• Apple: Wählen Sie das Gerät aus und dann die Option Datei > Auswerfen.
+2 Trennen Sie das Kabel vom Computer.
+Anpassen des Geräts
+Von Connect IQ herunterladbare Funktionen
+Sie können dem Gerät Connect IQ Funktionen von Garmin und anderen Anbietern hinzufügen. Verwenden Sie 
+dazu die Connect IQ App.
+Datenfelder: Laden Sie neue Datenfelder herunter, die Sensoren, Aktivitäten und Protokolldaten in neuen Formen 
+darstellen. Sie können integrierten Funktionen und Seiten Connect IQ Datenfelder hinzufügen.
+Widgets: Rufen Sie auf einen Blick Informationen wie Sensordaten und Benachrichtigungen ab.
+Apps: Fügen Sie dem Gerät interaktive Funktionen wie neue Outdoor- und Fitness-Aktivitätstypen hinzu.
+Herunterladen von Connect IQ Funktionen über den Computer
+1 Schließen Sie das Gerät mit einem USB-Kabel an den Computer an.
+2 Rufen Sie apps.garmin.com auf, und melden Sie sich an.
+3 Wählen Sie eine Connect IQ Funktion, und laden Sie sie herunter.
+4 Folgen Sie den Anweisungen auf dem Bildschirm.
+44 Anpassen des Geräts
+=== PAGE 51 ===
+Aktualisieren von Aktivitätsprofilen
+Sie können drei Aktivitätsprofile anpassen. Sie können Ihre Einstellungen und Datenfelder für eine bestimmte 
+Aktivität oder Tour anpassen.
+TIPP: Sie können die Aktivitätsprofile auch in der Garmin Connect App über die Geräteeinstellungen anpassen.
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie bei Bedarf 
+ , um den Namen und die Farbe für das Profil zu bearbeiten.
+4 Wählen Sie eine Option:
+• Wählen Sie Datenseiten, um die Datenseiten und Datenfelder anzupassen (Hinzufügen von Datenseiten, 
+Seite 46).
+• Wählen Sie Anstiege > ClimbPro, um die ClimbPro Funktion zu aktivieren (Verwenden von ClimbPro, 
+Seite 14).
+• Wählen Sie Anstiege > Anstiegserkennung, um anzupassen, welche Anstiegsarten das Gerät erkennt.
+• Wählen Sie Alarme und Meldungen, um die Aktivitätsalarme anzupassen (Einstellungen für Alarme und 
+Meldungen, Seite 47).
+• Wählen Sie Alarme und Meldungen > Warnungen vor scharfen Kurven, um Navigationswarnmeldungen 
+für schwierige Abbiegungen zu aktivieren.
+• Wählen Sie Alarme und Meldungen > Warnung verkehrsreiche Straße, um Navigationswarnmeldungen für 
+stark befahrene Straßen zu aktivieren.
+• Wählen Sie Alarme und Meldungen > Runde, um einzurichten, wie Runden ausgelöst werden (Speichern 
+von Runden nach Position, Seite 48).
+• Wählen Sie Timer > Auto Pause, um zu ändern, wann der Aktivitäten-Timer automatisch anhält 
+(Verwenden von Auto Pause, Seite 50).
+• Wählen Sie Timer > Timerstartmodus, um anzupassen, wie das Gerät den Start einer Tour erkennt und 
+automatisch den Aktivitäten-Timer startet (Automatisches Starten des Timers, Seite 50).
+• Wählen Sie Navigation > Karte, um die Karteneinstellungen anzupassen (Karteneinstellungen, Seite 16).
+• Wählen Sie Navigation > Routing, um die Routingeinstellungen anzupassen (Routeneinstellungen, 
+Seite 17).
+• Wählen Sie Navigation > Navigationsmeldungen, um Abbiegehinweise als Text oder auf der Karte 
+anzuzeigen.
+• Wählen Sie Satellitensysteme, um das GPS zu deaktivieren (Training in Gebäuden, Seite 28) oder die 
+Satelliteneinstellung zu ändern (Ändern der Satelliteneinstellung, Seite 50).
+• Wählen Sie Auto-Ruhezustand, um den Ruhezustand automatisch nach einer Inaktivität von fünf Minuten 
+zu aktivieren (Verwenden des Auto-Ruhezustands, Seite 50).
+Alle Änderungen werden im Aktivitätsprofil gespeichert.
+Anpassen des Geräts 45
+=== PAGE 52 ===
+Hinzufügen von Datenseiten
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Datenseiten > Neu hinzufügen > Datenseite.
+4 Wählen Sie eine Kategorie und anschließend ein oder mehrere Datenfelder.
+TIPP: Eine Liste aller verfügbaren Datenfelder finden Sie unter Datenfelder, Seite 65.
+5 Wählen Sie 
+ .
+6 Wählen Sie eine Option:
+• Wählen Sie eine andere Kategorie, um weitere Datenfelder auszuwählen.
+• Wählen Sie 
+ .
+7 Wählen Sie 
+  bzw. 
+ , um das Layout zu ändern.
+8 Wählen Sie 
+ .
+9 Wählen Sie eine Option:
+• Tippen Sie auf ein Datenfeld und anschließend auf ein anderes Datenfeld, um die Felder neu anzuordnen.
+• Tippen Sie zweimal auf ein Datenfeld, um es zu ändern.
+10 Wählen Sie 
+ .
+Hinzufügen einer Datenseite für Musikfunktionen
+Sie können eine Datenseite anpassen, damit sie Musikfunktionen und Echtzeitdaten anzeigt, z. B. die Rundenzeit 
+oder den gesamten Anstieg (Wiedergeben von Musik, Seite 28).
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Datenseiten > Neu hinzufügen > Musikfunktionen.
+4 Halten Sie 
+  gedrückt und ziehen Sie die Datenseite nach oben oder nach unten, um die Position der 
+Datenseite in der Schleife zu ändern (optional).
+5 Wählen Sie 
+  > Musikfunktionen > Layout und Datenfelder.
+6 Wählen Sie eine Option:
+• Tippen Sie auf ein Datenfeld und anschließend auf ein anderes Datenfeld, um die Felder neu anzuordnen.
+• Tippen Sie zweimal auf ein Datenfeld, um es zu ändern.
+7 Wählen Sie 
+ .
+Die hinzugefügte Musikdatenseite wird in der Liste von Datenseiten für das Profil angezeigt (Neuanordnen von 
+Datenseiten, Seite 47).
+Bearbeiten von Datenseiten
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Datenseiten.
+4 Wählen Sie eine Datenseite.
+5 Wählen Sie Layout und Datenfelder.
+6 Wählen Sie 
+  bzw. 
+ , um das Layout zu ändern.
+7 Wählen Sie 
+ .
+8 Wählen Sie eine Option:
+• Tippen Sie auf ein Datenfeld und anschließend auf ein anderes Datenfeld, um die Felder neu anzuordnen.
+• Tippen Sie zweimal auf ein Datenfeld, um es zu ändern.
+9 Wählen Sie 
+ .
+46 Anpassen des Geräts
+=== PAGE 53 ===
+Neuanordnen von Datenseiten
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Datenseiten > 
+  > Neu anordnen.
+4 Halten Sie auf einer Datenseite das Symbol 
+  gedrückt und ziehen Sie es an eine neue Position.
+5 Wählen Sie 
+ .
+Einstellungen für Alarme und Meldungen
+Mit den Alarmfunktionen können Sie das Training gezielt auf Zeit, Distanz, Kalorien, Herzfrequenz, Trittfrequenz 
+und Leistung abstimmen. Außerdem können Sie Navigationsalarme einrichten. Alarmeinstellungen werden 
+zusammen mit dem Aktivitätsprofil gespeichert.
+Wählen Sie 
+  > Aktivitätsprofile. Wählen Sie ein Profil und anschließend die Option Alarme und Meldungen.
+Warnungen vor scharfen Kurven: Aktiviert Alarme für schwierige Abbiegungen.
+Warnung verkehrsreiche Straße: Aktiviert Alarme für Gebiete mit hohem Verkehrsaufkommen.
+Warnungen zu Gefahren auf Straße: Aktiviert Alarme für Gefahren auf der Straße, z. B. Schlaglöcher oder 
+Hindernisse.
+Warnungen vor unbefestigten Straßen: Aktiviert Alarme für unbefestigte Straßen, z. B. Straßen mit Schotter.
+Runde: Legt fest, wie Runden ausgelöst werden (Speichern von Runden nach Position, Seite 48).
+Zeit-Alarm: Richtet einen Alarm für eine bestimmte Zeit ein (Einrichten wiederkehrender Alarme, Seite 48).
+Distanz-Alarm: Richtet einen Alarm für eine bestimmte Distanz ein (Einrichten wiederkehrender Alarme, 
+Seite 48).
+Kalorienalarm: Richtet einen Alarm für einen bestimmten Kalorienverbrauch ein.
+HF-Alarm: Legt fest, dass das Gerät einen Alarm ausgibt, wenn Ihre Herzfrequenz über oder unter einem 
+Zielbereich liegt (Einrichten von Bereichsalarmen, Seite 48).
+Trittfrequenz-Alarm: Legt fest, dass das Gerät einen Alarm ausgibt, wenn Ihre Trittfrequenz über oder unter 
+einem benutzerdefinierten Bereich für Wiederholungen pro Minute liegt (Einrichten von Bereichsalarmen, 
+Seite 48).
+Leistungsalarm: Legt fest, dass das Gerät einen Alarm ausgibt, wenn Ihre Leistungsschwelle über oder unter 
+einem Zielbereich liegt (Einrichten von Bereichsalarmen, Seite 48).
+Alarm: Umkehren: Richtet einen Alarm ein, der Sie darauf hinweist, wenn Sie während der Tour umkehren 
+sollten.
+Alarm: Essen: Richtet einen Alarm ein, der Sie zu einer bestimmten Zeit oder Distanz darauf hinweist, dass Sie 
+etwas essen sollten.
+Alarm: Trinken: Richtet einen Alarm ein, der Sie zu einer bestimmten Zeit oder Distanz darauf hinweist, dass Sie 
+etwas trinken sollten.
+Connect IQ-Alarme: Aktiviert Alarme, die Sie in Connect IQ Apps eingerichtet haben.
+Anpassen des Geräts 47
+=== PAGE 54 ===
+Einrichten von Bereichsalarmen
+Wenn Sie über einen optionalen Herzfrequenzsensor, Trittfrequenzsensor oder Leistungsmesser verfügen, 
+können Sie Bereichsalarme einrichten. Bei einem Bereichsalarm werden Sie benachrichtigt, wenn der aktuelle 
+Wert über oder unter einem bestimmten Wertebereich liegt. Beispielsweise können Sie das Gerät so einrichten, 
+dass Sie bei einer Trittfrequenz unter 40 1/min und über 90 1/min benachrichtigt werden. Sie können für den 
+Bereichsalarm auch eine Trainingszone verwenden (Trainingszonen, Seite 34).
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Alarme und Meldungen.
+4 Wählen Sie HF-Alarm, Trittfrequenz-Alarm oder Leistungsalarm.
+5 Wählen Sie die Mindest- und Höchstwerte oder Bereiche aus.
+Jedes Mal, wenn Sie den festgelegten Bereich über- oder unterschreiten, wird eine Nachricht angezeigt. Das 
+Gerät gibt auch einen Signalton aus, wenn Töne aktiviert sind (Ein- und Ausschalten der Töne des Geräts, 
+Seite 53).
+Einrichten wiederkehrender Alarme
+Bei einem wiederkehrenden Alarm werden Sie jedes Mal benachrichtigt, wenn das Gerät einen bestimmten Wert 
+oder ein bestimmtes Intervall aufgezeichnet hat. Beispielsweise können Sie das Gerät so einrichten, dass Sie 
+alle 30 Minuten benachrichtigt werden.
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Alarme und Meldungen.
+4 Wählen Sie einen Alarmtyp.
+5 Schalten Sie den Alarm ein.
+6 Geben Sie einen Wert ein.
+7 Wählen Sie 
+ .
+Jedes Mal, wenn Sie den Alarmwert erreichen, wird eine Nachricht angezeigt. Das Gerät gibt auch einen 
+Signalton aus, wenn Töne aktiviert sind (Ein- und Ausschalten der Töne des Geräts, Seite 53).
+Auto Lap
+®
+Speichern von Runden nach Position
+Sie können die Funktion Auto Lap verwenden, um die Runde bei einer bestimmten Position automatisch zu 
+markieren. Diese Funktion hilft Ihnen, Ihre Leistung während verschiedener Abschnitte einer Tour zu vergleichen 
+(z. B. einen langen Anstieg oder Trainingssprints). Verwenden Sie beim Fahren von Strecken die Option Nach 
+Position, um Runden an allen auf der Strecke gespeicherten Rundenpositionen auszulösen.
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Alarme und Meldungen > Runde.
+4 Aktivieren Sie den Alarm für Auto Lap.
+5 Wählen Sie Auto Lap-Auslöser > Nach Position.
+6 Wählen Sie Runde bei.
+7 Wählen Sie eine Option:
+• Wählen Sie Nur Lap-Taste, um den Rundenzähler jedes Mal auszulösen, wenn Sie 
+  drücken, und jedes 
+Mal, wenn Sie eine der gewählten Positionen erneut passieren.
+• Wählen Sie Start und Runde, um den Rundenzähler an der GPS-Position auszulösen, an der Sie 
+drücken, und an jeder Position, an der Sie während der Fahrt 
+  drücken.
+• Wählen Sie Speichern und Runde, um den Rundenzähler an einer bestimmten, vor der Tour gespeicherten 
+GPS-Position und an jeder Position während der Tour auszulösen, an der Sie 
+  drücken.
+8 Passen Sie bei Bedarf die Rundendatenfelder an (Hinzufügen von Datenseiten, Seite 46).
+48 Anpassen des Geräts
+=== PAGE 55 ===
+Speichern von Runden nach Distanz
+Sie können die Funktion Auto Lap verwenden, um die Runde bei einer bestimmen Distanz automatisch zu 
+speichern. Diese Funktion hilft Ihnen, Ihre Leistung während verschiedener Abschnitte einer Fahrt zu vergleichen 
+(z. B. alle 10 Meilen oder 40 Kilometer).
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Alarme und Meldungen > Runde.
+4 Aktivieren Sie den Alarm für Auto Lap.
+5 Wählen Sie Auto Lap-Auslöser > Nach Entfernung.
+6 Wählen Sie Runde bei.
+7 Geben Sie einen Wert ein.
+8 Wählen Sie 
+ .
+9 Passen Sie bei Bedarf die Rundendatenfelder an (Hinzufügen von Datenseiten, Seite 46).
+Markieren von Runden nach Zeit
+Sie können die Funktion Auto Lap verwenden, um die Runde bei einer bestimmten Zeit automatisch zu 
+markieren. Diese Funktion hilft Ihnen, Ihre Leistung während verschiedener Abschnitte einer Tour zu vergleichen 
+(z. B. alle 20 Minuten).
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Alarme und Meldungen > Runde.
+4 Aktivieren Sie den Alarm für Auto Lap.
+5 Wählen Sie Auto Lap-Auslöser > Nach Zeit.
+6 Wählen Sie Runde bei.
+7 Wählen Sie einen Wert für Stunden, Minuten oder Sekunden.
+8 Wählen Sie 
+  bzw. 
+ , um einen Wert einzugeben.
+9 Wählen Sie 
+ .
+10 Passen Sie bei Bedarf die Rundendatenfelder an (Hinzufügen von Datenseiten, Seite 46).
+Anpassen des Rundenbanners
+Sie können die Datenfelder anpassen, die im Rundenbanner angezeigt werden.
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Alarme und Meldungen > Runde.
+4 Aktivieren Sie den Alarm für Auto Lap.
+5 Wählen Sie Benutzerdefiniertes Rundenbanner.
+6 Wählen Sie ein Datenfeld aus, um es zu ändern.
+Anpassen des Geräts 49
+=== PAGE 56 ===
+Verwenden von Auto Pause
+Verwenden Sie die Funktion Auto Pause
+®
+, um den Timer automatisch anzuhalten, wenn Sie sich nicht mehr 
+fortbewegen oder wenn Ihre Geschwindigkeit unter einen bestimmten Wert absinkt. Diese Funktion ist nützlich, 
+wenn die Strecke Ampeln oder sonstige Stellen enthält, an denen Sie abbremsen oder anhalten müssen.
+HINWEIS: Wenn der Aktivitäten-Timer angehalten oder unterbrochen wurde, werden keine Protokolldaten 
+aufgezeichnet.
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Timer > Auto Pause.
+4 Wählen Sie eine Option:
+• Wählen Sie Wenn angehalten, um die Stoppuhr automatisch anzuhalten, wenn Sie sich nicht mehr 
+fortbewegen.
+• Wählen Sie Benutzerdefiniert, um den Timer automatisch anzuhalten, wenn die Geschwindigkeit unter 
+einen bestimmten Wert absinkt.
+5 Passen Sie bei Bedarf optionale Datenfelder für die Zeit an (Hinzufügen von Datenseiten, Seite 46).
+Automatisches Starten des Timers
+Diese Funktion erkennt automatisch, wenn das Gerät Satellitensignale erfasst hat und sich in Bewegung 
+befindet. Der Aktivitäten-Timer wird automatisch gestartet, oder Sie werden daran erinnert, den Aktivitäten-
+Timer zu starten, damit Sie die Daten Ihrer Tour aufzeichnen können.
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Timer > Timerstartmodus.
+4 Wählen Sie eine Option:
+• Wählen Sie Manuell und anschließend 
+ , um den Aktivitäten-Timer zu starten.
+• Wählen Sie Auswahl, damit eine visuelle Erinnerung angezeigt wird, wenn Sie die Geschwindigkeit für den 
+Hinweis für den Timerstart erreichen.
+• Wählen Sie Automatisch, um den Aktivitäten-Timer automatisch zu starten, wenn Sie die 
+Startgeschwindigkeit erreichen.
+Ändern der Satelliteneinstellung
+Sie können Multi-GNSS aktivieren, um in schwierigen Bedingungen eine bessere Leistung zu erhalten und die 
+GPS-Position schneller zu erfassen. Bei der gemeinsamen Verwendung des GPS und eines anderen Satelliten ist 
+die Akku-Laufzeit kürzer als bei der ausschließlichen Verwendung von GPS.
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Satellitensysteme.
+4 Wählen Sie eine Option.
+Verwenden des Auto-Ruhezustands
+Sie können die Funktion Auto-Ruhezustand verwenden, damit nach einer Inaktivität von 5 Minuten automatisch 
+der Ruhezustand aktiviert wird. Im Ruhezustand ist das Display ausgeschaltet und Sensoren, die Bluetooth 
+Technologie und das GPS sind deaktiviert.
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Auto-Ruhezustand.
+50 Anpassen des Geräts
+=== PAGE 57 ===
+Verwenden des Auto-Seitenwechsels
+Mit der Funktion Auto-Seitenwechsel werden bei laufendem Timer alle Trainingsdatenseiten automatisch 
+fortlaufend der Reihe nach angezeigt.
+1 Wählen Sie 
+  > Aktivitätsprofile.
+2 Wählen Sie ein Profil.
+3 Wählen Sie Datenseiten > 
+  > Auto-Seitenwechsel.
+4 Wählen Sie eine Anzeigegeschwindigkeit.
+Telefoneinstellungen
+Wählen Sie 
+  > Telefon.
+Aktivieren: Aktiviert Bluetooth.
+HINWEIS: Andere Bluetooth Einstellungen werden nur angezeigt, wenn Sie die Bluetooth Technologie 
+aktivieren.
+Eigener Name: Ermöglicht es Ihnen, einen Namen einzugeben, mit dem Ihre Geräte mit Bluetooth angezeigt 
+werden.
+Smartphone koppeln: Verbindet das Gerät mit einem kompatiblen Smartphone mit Bluetooth. Diese Einstellung 
+ermöglicht es Ihnen, Bluetooth Online-Funktionen zu nutzen, z. B. LiveTrack und Uploads von Aktivitäten auf 
+Garmin Connect.
+Jetzt synchronisieren: Ermöglicht es Ihnen, das Gerät mit Ihrem kompatiblen Smartphone zu synchronisieren.
+Smart Notifications: Ermöglicht es Ihnen, Telefonbenachrichtigungen von Ihrem kompatiblen Smartphone zu 
+aktivieren.
+Ungelesene Benachrichtigungen: Zeigt Benachrichtigungen für verpasste Anrufe auf Ihrem kompatiblen 
+Smartphone an.
+Signatur für SMS-Antwort: Aktiviert Signaturen in SMS-Antworten. Diese Funktion ist mit kompatiblen Android 
+Smartphones verfügbar.
+Gastmodus
+Mit dem Gastmodus können Sie die für einen Gastbenutzer verfügbaren Funktionen und Einstellungen 
+einschränken, bevor Sie das Gerät mit diesem Gastbenutzer teilen.
+Aktivieren des Gastmodus
+1 Wählen Sie 
+  > Gastmodus > Aktivieren.
+2 Wählen Sie eine Option:
+• Wählen Sie 
+ , geben Sie einen 4-stelligen Code ein, und wählen Sie 
+ , um den Gastmodus zu aktivieren 
+und anzugeben, dass zum Deaktivieren ein Code erforderlich ist.
+• Wählen Sie 
+ , um den Gastmodus zu aktivieren, ohne dass ein Code eingegeben werden muss.
+Das Gerät schränkt die für die Anpassung verfügbaren Einstellungen ein.
+Deaktivieren des Gastmodus
+1 Wählen Sie 
+  > Gastmodus > Aktivieren.
+2 Geben Sie bei Bedarf den 4-stelligen Code ein, und wählen Sie 
+ .
+HINWEIS: Nach drei ungültigen Versuchen werden Sie aufgefordert, den universellen Freischaltcode 
+einzugeben: Garmin.
+3 Wählen Sie eine Option:
+• Wählen Sie 
+ , um die Geräteeinstellungen wiederherzustellen, die vor der Aktivierung des Gastmodus 
+verwendet wurden.
+• Wählen Sie 
+ , um die Geräteeinstellungen beizubehalten, die während des aktivierten Gastmodus 
+verwendet wurden.
+Anpassen des Geräts 51
+=== PAGE 58 ===
+Systemeinstellungen
+Wählen Sie 
+  > System.
+• Anzeigeeinstellungen (Anzeigeeinstellungen, Seite 52)
+• Widget-Einstellungen (Anpassen der Widget-Schleife, Seite 52)
+• Einstellungen für die Datenaufzeichnung (Einstellungen für die Datenaufzeichnung, Seite 53)
+• Einheiten-Einstellungen (Ändern der Maßeinheiten, Seite 53)
+• Toneinstellungen (Ein- und Ausschalten der Töne des Geräts, Seite 53)
+• Spracheinstellungen (Ändern der Sprache des Geräts, Seite 53)
+Anzeigeeinstellungen
+Wählen Sie 
+  > System > Anzeige.
+Helligkeit: Richtet die Helligkeit der Displaybeleuchtung ein.
+Display-Beleuchtung: Richtet die Zeitdauer ein, bevor die Displaybeleuchtung ausgeschaltet wird.
+Farbmodus: Richtet das Gerät zur Anzeige von Farben für den Tag oder die Nacht ein. Sie können Automatisch 
+wählen, damit das Gerät die Farben für Tag oder Nacht automatisch basierend auf der Uhrzeit anpasst.
+Screenshot: Ermöglicht es Ihnen, durch Drücken von 
+  das Bild zu speichern, das auf dem Display des Geräts 
+angezeigt wird.
+Verwenden der Displaybeleuchtung
+Sie können auf den Touchscreen tippen, um die Beleuchtung einzuschalten.
+HINWEIS: Sie können die Dauer der Display-Beleuchtung anpassen (Anzeigeeinstellungen, Seite 52).
+1 Streichen Sie im Hauptmenü oder auf einer Datenseite von oben nach unten über das Display.
+2 Wählen Sie 
+ , und passen Sie die Helligkeit manuell mithilfe des Schiebereglers an.
+Anpassen von Übersichten
+1 Blättern Sie im Hauptmenü nach unten.
+2 Wählen Sie 
+ .
+3 Wählen Sie eine Option:
+• Wählen Sie 
+ , um der Übersichtsschleife eine Übersicht hinzuzufügen.
+• Wählen Sie 
+ , um die Übersicht nach oben oder unten zu ziehen und so die Position der Übersicht in der 
+Übersichtsschleife zu ändern.
+• Streichen Sie in einer Übersicht nach links und wählen Sie 
+ , um die Übersicht aus der Übersichtsschleife 
+zu entfernen.
+Anpassen der Widget-Schleife
+Sie können die Reihenfolge der Widgets in der Widget-Schleife ändern, Widgets entfernen und neue Widgets 
+hinzufügen.
+1 Wählen Sie 
+  > System > Widgets.
+2 Wählen Sie eine Option:
+• Wählen Sie 
+ , um der Widget-Schleife ein Widget hinzuzufügen.
+• Wählen Sie 
+ , um das Widget nach oben oder unten zu ziehen und so die Position des Widgets in der 
+Widget-Schleife zu ändern.
+• Streichen Sie in einem Widget nach links und wählen Sie 
+ , um das Widget aus der Widget-Schleife zu 
+entfernen.
+52 Anpassen des Geräts
+=== PAGE 59 ===
+Einstellungen für die Datenaufzeichnung
+Wählen Sie 
+  > System > Datenaufzeichnung.
+Durchschnittliche Trittfrequenz: Legt fest, ob das Gerät Nullwerte für Trittfrequenzdaten einbezieht, die 
+auftreten, wenn keine Pedalumdrehungen erfolgen (Datenmittelung für Trittfrequenz oder Leistung, Seite 53).
+Durchschnittliche Leistung: Legt fest, ob das Gerät Nullwerte für Leistungsdaten einbezieht, die auftreten, wenn 
+keine Pedalumdrehungen erfolgen (Datenmittelung für Trittfrequenz oder Leistung, Seite 53).
+HFV speichern: Legt fest, dass das Gerät während einer Aktivität die Herzfrequenzvariabilität aufzeichnet.
+Datenmittelung für Trittfrequenz oder Leistung
+Die Einstellung für den Durchschnitt ohne Nullwerte ist verfügbar, wenn Sie mit einem optionalen 
+Trittfrequenzsensor oder Leistungsmesser trainieren. Standardmäßig werden Nullwerte ausgenommen, die 
+auftreten, wenn keine Pedalumdrehungen erfolgen.
+Sie können den Wert für diese Einstellung ändern (Einstellungen für die Datenaufzeichnung, Seite 53).
+Ändern der Maßeinheiten
+Sie können die Maßeinheiten für Distanz und Geschwindigkeit, Höhe, Temperatur, Gewicht, Positionsformat und 
+Zeitformat anpassen.
+1 Wählen Sie 
+  > System > Einheiten.
+2 Wählen Sie eine Messgröße.
+3 Wählen Sie eine Maßeinheit für die Einstellung.
+Ein- und Ausschalten der Töne des Geräts
+Wählen Sie 
+  > System > Töne.
+Ändern der Sprache des Geräts
+Wählen Sie 
+  > System > Sprache.
+Zeitzonen
+Jedes Mal, wenn Sie das Gerät einschalten und Satellitensignale erfassen oder das Gerät mit dem Smartphone 
+synchronisieren, ermittelt es automatisch die Zeitzone und die aktuelle Uhrzeit.
+Anpassen des Geräts 53
+=== PAGE 60 ===
+Geräteinformationen
+Aufladen des Geräts
+HINWEIS
+Zum Schutz vor Korrosion sollten Sie den USB-Anschluss, die Schutzkappe und den umliegenden Bereich vor 
+dem Aufladen oder dem Anschließen an einen Computer sorgfältig abtrocknen.
+Die Stromversorgung des Geräts erfolgt über einen integrierten Lithium-Ionen-Akku, der über eine Steckdose 
+oder einen USB-Anschluss am Computer aufgeladen werden kann.
+HINWEIS: Das Gerät kann nicht außerhalb des zugelassenen Temperaturbereichs aufgeladen werden 
+(Technische Daten, Seite 60).
+1 Heben Sie die Schutzkappe 
+  über dem USB-Anschluss 
+  an.
+2 Stecken Sie das schmale Ende des USB-Kabels in den USB-Anschluss am Gerät.
+3 Schließen Sie das breite Ende des USB-Kabels an ein Netzteil oder einen USB-Anschluss am Computer an.
+4 Schließen Sie das Netzteil an eine Steckdose an.
+Wenn Sie das Gerät an eine Stromquelle anschließen, schaltet es sich ein.
+5 Laden Sie das Gerät vollständig auf.
+Setzen Sie die Schutzkappe nach dem Aufladen des Geräts wieder auf.
+Informationen zum Akku
+ WARNUNG
+Dieses Gerät ist mit einem Lithium-Ionen-Akku ausgestattet. Lesen Sie alle Produktwarnungen und sonstigen 
+wichtigen Informationen der Anleitung "Wichtige Sicherheits- und Produktinformationen", die dem Produkt 
+beiliegt.
+54 Geräteinformationen
+=== PAGE 61 ===
+Anbringen der Standardhalterung
+Zum Optimieren des GPS-Empfangs und der Lesbarkeit des Displays befestigen Sie die Fahrradhalterung 
+so, dass das Gerät horizontal zum Boden und die Vorderseite des Geräts gen Himmel ausgerichtet ist. Die 
+Fahrradhalterung lässt sich am Vorbau oder am Lenker anbringen.
+HINWEIS: Wenn Sie nicht über diese Halterung verfügen, können Sie diesen Schritt überspringen.
+1 Wählen Sie eine sichere Position für die Montage des Geräts, damit es die Fahrsicherheit nicht einschränkt.
+2 Setzen Sie die Gummiunterlage 
+  auf die Unterseite der Fahrradhalterung.
+Im Lieferumfang sind zwei Gummiunterlagen enthalten. Wählen Sie die Unterlage, die am besten für Ihr 
+Fahrrad geeignet ist. Die Gummilaschen werden auf die Unterseite der Fahrradhalterung ausgerichtet, damit 
+die Halterung nicht verrutscht.
+3 Setzen Sie die Fahrradhalterung auf den Lenkervorbau auf.
+4 Befestigen Sie die Fahrradhalterung sicher mithilfe der zwei Bänder 
+ .
+5 Richten Sie die Nasen auf der Rückseite des Geräts auf die Einkerbungen 
+  der Fahrradhalterung aus.
+6 Drücken Sie das Gerät leicht nach unten, und drehen Sie es im Uhrzeigersinn, bis es einrastet.
+Entnehmen des Edge
+1 Drehen Sie den Edge im Uhrzeigersinn, um das Gerät zu entsperren.
+2 Nehmen Sie den Edge aus der Halterung.
+Geräteinformationen 55
+=== PAGE 62 ===
+Anbringen einer Befestigungsschlaufe
+Sie können das Edge Gerät mit der optionalen Befestigungsschlaufe am Fahrradlenker sichern.
+1 Heben Sie die Schutzkappe über dem USB-Anschluss an.
+2 Beginnen Sie auf der Rückseite des Geräts und führen Sie die Schlaufe der Befestigungsschlaufe 
+  durch 
+den Schlitz am Gerät.
+3 Führen Sie das andere Ende der Befestigungsschlaufe 
+  durch die Schlaufe und ziehen Sie es fest.
+4 Schließen Sie die Schutzkappe. Stellen Sie dabei sicher, dass die Befestigungsschlaufe auf die Einkerbung 
+ausgerichtet ist.
+Übersicht über die Edge Halterung mit Stromversorgung
+56 Geräteinformationen
+=== PAGE 63 ===
+Aero-Halterung
+Schutzkappe
+Sicherungsring
+Status-LED
+Stromversorgungsmodul
+Kabel des Stromversorgungsmoduls
+Installieren der Edge Halterung mit Stromversorgung
+Verwenden Sie die Halterung mit Stromversorgung, um das Edge Gerät zu installieren und mit dem E-Bike zu 
+verbinden. Garmin empfiehlt, die Halterung zunächst für den Edge Betrachtungswinkel anzupassen und erst 
+dann das Kabel mit dem E-Bike zu verbinden.
+HINWEIS: Wenn Sie nicht über diese Halterung verfügen, können Sie diesen Schritt überspringen.
+1 Wählen Sie eine sichere Position für die Montage des Edge Geräts, damit es die Fahrsicherheit nicht 
+einschränkt.
+2 Lösen Sie mit einem 2,5-mm-Innensechskantschlüssel die Schraube 
+  am Lenkerverbindungsstück 
+ .
+3 Legen Sie die Gummiunterlage um den Lenker:
+• Wenn der Lenker einen Durchmesser von 25,4 mm hat, sollte eine dickere Unterlage verwendet werden.
+• Wenn der Lenker einen Durchmesser von 31,8 mm hat, sollte eine dünnere Unterlage verwendet werden.
+• Wenn der Lenker einen Durchmesser von 35 mm hat, verwenden Sie keine Gummiunterlage.
+4 Setzen Sie das Lenkerverbindungsstück um die Gummiunterlage.
+HINWEIS: Richten Sie die Konturen der Gummiunterlage auf die Einkerbungen an der Innenseite des 
+Lenkerverbindungsstücks aus.
+Geräteinformationen 57
+=== PAGE 64 ===
+5 Setzen Sie die Schraube wieder ein und ziehen Sie sie mit dem 2,5-mm-Innensechskantschlüssel an, bis die 
+Halterung gesichert ist.
+HINWEIS: Überprüfen Sie regelmäßig, ob die Schraube noch fest angezogen ist.
+6 Öffnen Sie den Sicherungsring 
+ .
+HINWEIS: Der Sicherungsring ist geöffnet, wenn die rote Linie an der Seite der Halterung zu sehen ist.
+7 Richten Sie die Nasen auf der Rückseite des Edge Geräts auf die Einkerbungen der E-Bike-Halterung aus 
+ .
+58 Geräteinformationen
+=== PAGE 65 ===
+8 Drücken Sie die Halterung nach unten und schließen Sie den Hebel, um das Edge Gerät in der Halterung zu 
+fixieren.
+9 Verbinden Sie das Kabel des Stromversorgungsmoduls 
+  mit dem kompatiblen Netzkabel am E-Bike 
+(Erforderliche Kabel, Seite 59).
+Erforderliche Kabel
+Zum Abschließen der Installation müssen Sie eines der folgenden kompatiblen Kabel erwerben:
+• Bosch
+®
+ Kabel für die Halterung mit Stromversorgung
+• Shimano Kabel für die Halterung mit Stromversorgung
+HINWEIS: Garmin empfiehlt, das kompatible Shimano Kabel von einem Fahrradmechaniker auf die richtige 
+Länge kürzen zu lassen.
+Leitungsfarbe Funktion der Leitung
+Rot Strom
+Gelb Strom
+Blau Masse
+Schwarz Masse
+• USB-A-Kabel für die Halterung mit Stromversorgung
+HINWEIS: Falls Sie Probleme bei der Installation und Verkabelung der Halterung haben, empfiehlt Garmin, eine 
+Fahrradwerkstatt aufzusuchen, um Hilfe zu erhalten.
+Status-LED der Edge Halterung mit Stromversorgung
+Verhalten der LED Status
+Leuchtet grün Die Halterung mit Stromversorgung ist mit der Stromversorgung verbunden, ist jedoch 
+nicht mit einem Edge Gerät verbunden.
+Blinkt grün Die Halterung mit Stromversorgung ist mit dem Edge Gerät verbunden und der Ladevor­
+gang läuft.
+Blinkt rot
+Es ist ein Fehler aufgetreten. Trennen Sie die Halterung mit Stromversorgung von der 
+Stromversorgung und entfernen Sie das Edge Gerät. Schließen Sie die Halterung mit 
+Stromversorgung wieder an und installieren Sie das Edge Gerät. Falls die LED weiterhin 
+rot blinkt, wenden Sie sich an den Produktsupport.
+Geräteinformationen 59
+=== PAGE 66 ===
+Technische Daten
+Akkutyp Wiederaufladbarer, integrierter Lithium-Ionen-Akku
+Batterielaufzeit Bis zu 16 Stunden
+Betriebstemperaturbereich
+-20 ºC bis 60 ºC (-4 ºF bis 140 ºF)
+HINWEIS: Die Akku-Laufzeit kann beim Betrieb zwischen -20 ºC und 0 ºC einge­
+schränkt sein.
+Ladetemperaturbereich 0 ºC bis 45 ºC (32 ºF bis 113 ºF)
+Funkfrequenz 2,4 GHz bei 20 dBm (maximal)
+Wasserdichtigkeit IEC 60529 IPX71
+Produkt-Updates
+Das Gerät sucht automatisch nach Updates, wenn es per Bluetooth Technologie mit einem Smartphone 
+gekoppelt ist. Über die Systemeinstellungen können Sie manuell nach Updates suchen (Systemeinstellungen, 
+Seite 52). Installieren Sie auf dem Telefon die Garmin Connect App.
+So erhalten Sie einfachen Zugriff auf folgende Dienste für Garmin Geräte:
+• Software-Updates
+• Karten-Updates
+HINWEIS: Karten-Updates sind über Garmin Express verfügbar.
+• Hochladen von Daten auf Garmin Connect
+• Produktregistrierung
+Aktualisieren der Software mit der Garmin Connect App
+Zum Aktualisieren der Gerätesoftware mit der Garmin Connect App benötigen Sie ein Garmin Connect Konto 
+und müssen das Gerät mit einem kompatiblen Smartphone koppeln (Koppeln eines Smartphones, Seite 17).
+Synchronisieren Sie das Gerät mit der Garmin Connect App.
+Wenn neue Software verfügbar ist, wird das Update von der Garmin Connect App automatisch an das Gerät 
+gesendet.
+Aktualisieren der Software mithilfe von Garmin Express
+Zum Aktualisieren der Gerätesoftware müssen Sie über ein Konto bei Garmin Connect verfügen und die 
+Anwendung Garmin Express herunterladen.
+1 Schließen Sie das Gerät mit dem USB-Kabel an den Computer an.
+Wenn neue Software verfügbar ist, wird sie von Garmin Express an das Gerät gesendet.
+2 Folgen Sie den Anweisungen auf dem Bildschirm.
+3 Trennen Sie das Gerät während der Aktualisierung nicht vom Computer.
+Anzeigen von Geräteinformationen
+Sie können Geräteinformationen anzeigen, z. B. die Geräte-ID, die Softwareversion und die Lizenzvereinbarung.
+Wählen Sie 
+  > System > Info > Copyright-Informationen.
+1 Das Gerät ist bis zu einer Tiefe von 1 m bis zu 30 Minuten lang wasserdicht. Weitere Informationen finden Sie unter www.garmin.com/waterrating.
+60 Geräteinformationen
+=== PAGE 67 ===
+Anzeigen von aufsichtsrechtlichen und Compliance-Informationen
+Das Etikett für dieses Gerät wird in elektronischer Form bereitgestellt. Das E-Label kann aufsichtsrechtliche 
+Informationen enthalten, beispielsweise von der FCC ausgestellte Identifizierungsnummern oder regionale 
+Compliance-Zeichen, und auch anwendbare Produkt- und Lizenzinformationen bieten.
+1 Wählen Sie 
+ .
+2 Wählen Sie System > Aufsichtsrechtliche Informationen.
+Pflege des Geräts
+HINWEIS
+Bewahren Sie das Gerät nicht an Orten auf, an denen es über längere Zeit extrem hohen oder niedrigen 
+Temperaturen ausgesetzt sein kann, da dies zu Schäden am Gerät führen kann.
+Bedienen Sie den Touchscreen nie mit harten oder scharfen Gegenständen, da dies zu Schäden am 
+Touchscreen führen kann.
+Verwenden Sie keine chemischen Reinigungsmittel, Lösungsmittel, Sonnenschutzmittel oder 
+Insektenschutzmittel, die die Kunststoffteile oder die Oberfläche beschädigen könnten.
+Bringen Sie die Schutzkappe sicher an, um Schäden am USB-Anschluss zu vermeiden.
+Setzen Sie das Gerät keinen starken Erschütterungen aus, und verwenden Sie es sorgsam. Andernfalls kann die 
+Lebensdauer des Produkts eingeschränkt sein.
+Reinigen des Geräts
+HINWEIS
+Bereits geringe Mengen an Schweiß oder Feuchtigkeit können beim Anschluss an ein Ladegerät zur Korrosion 
+der elektrischen Kontakte führen. Korrosion kann den Ladevorgang und die Datenübertragung verhindern.
+1 Wischen Sie das Gerät mit einem Tuch ab, das mit einer milden Reinigungslösung befeuchtet ist.
+2 Wischen Sie das Gerät trocken.
+Lassen Sie das Gerät nach der Reinigung vollständig trocknen.
+Pflege der Edge Halterung mit Stromversorgung
+HINWEIS
+Bringen Sie die Schutzkappe sicher an, um Schäden an den freiliegenden Kontakten zu vermeiden.
+Achten Sie darauf, dass die Komponenten sauber und frei von Fremdkörpern sind.
+Bewahren Sie das Gerät nicht an Orten auf, an denen es über längere Zeit extrem hohen oder niedrigen 
+Temperaturen ausgesetzt sein kann, da dies zu Schäden am Gerät führen kann.
+Verwenden Sie keine chemischen Reinigungsmittel, Lösungsmittel, Sonnenschutzmittel oder 
+Insektenschutzmittel, die die Kunststoffteile oder die Oberfläche beschädigen könnten.
+Setzen Sie das Gerät keinen starken Erschütterungen aus, und verwenden Sie es sorgsam. Andernfalls kann die 
+Lebensdauer des Produkts eingeschränkt sein.
+Ersetzen Sie Komponenten ausschließlich mit Ersatzteilen von Garmin. Weitere Informationen erhalten Sie bei 
+einem Garmin Händler oder auf der Garmin Website.
+Wenden Sie sich zur ordnungsgemäßen, im Einklang mit anwendbaren örtlichen Gesetzen und Bestimmungen 
+stehenden Entsorgung der Halterung mit Stromversorgung an die zuständige Abfallentsorgungsstelle.
+Reinigen der Edge Halterung mit Stromversorgung
+• Entfernen Sie Matsch und Schmutz im Bereich der Schutzkappe und von den freiliegenden Kontakten.
+• Achten Sie darauf, dass die Schutzkappe aufgesetzt ist. Halten Sie das Gerät dann unter fließendes Wasser.
+Lassen Sie das Gerät nach der Reinigung vollständig trocknen.
+Geräteinformationen 61
+=== PAGE 68 ===
+Reinigen des USB-Anschlusses
+1 Schalten Sie das Gerät aus und trennen Sie es von der Stromversorgung.
+2 Reinigen Sie den USB-Anschluss mit einem weichen, sauberen und fusselfreien Tuch oder mit einem 
+Wattestäbchen.
+HINWEIS: Bei Bedarf können Sie das Tuch oder das Wattestäbchen leicht mit Isopropanol befeuchten.
+3 Lassen Sie das Gerät vollständig trocknen, bevor Sie es mit der Stromversorgung verbinden.
+Fehlerbehebung
+Zurücksetzen des Edge Fahrradcomputers
+Wenn der Fahrradcomputer nicht mehr reagiert, müssen Sie ihn möglicherweise zurücksetzen. Durch diesen 
+Vorgang werden keine Daten oder Einstellungen gelöscht.
+Halten Sie die Einschalttaste 
+  12 Sekunden lang gedrückt.
+Der Fahrradcomputer wird zurückgesetzt und schaltet sich ein.
+Wiederherstellen der Werksstandards
+Sie können die Werksstandards und die Standard-Aktivitätsprofile wiederherstellen. Das Protokoll oder 
+Aktivitätsdaten, z. B. Touren und Strecken, werden nicht entfernt.
+Wählen Sie 
+  > System > Gerät zurücksetzen > Werksstandards wiederherstellen > 
+ .
+Löschen von Benutzerdaten und Einstellungen
+Sie können alle Benutzerdaten löschen und die Grundeinstellungen des Geräts wiederherstellen. Dabei werden 
+das Protokoll und Daten gelöscht, z. B. Touren und Strecken, und die Geräteeinstellungen und Aktivitätsprofile 
+werden zurückgesetzt. Dateien, die Sie dem Gerät vom Computer hinzugefügt haben, werden dabei nicht 
+entfernt.
+Wählen Sie 
+  > System > Gerät zurücksetzen > Daten löschen und Einstellungen zurücksetzen > 
+ .
+Beenden des Demomodus
+Im Demomodus wird eine Vorschau der Funktionen auf dem Edge Fahrradcomputer angezeigt.
+1 Drücken Sie achtmal die Taste 
+ .
+2 Wählen Sie 
+ .
+Optimieren der Akkulaufzeit
+• Aktivieren Sie den Energiesparmodus (Aktivieren des Energiesparmodus, Seite 63).
+• Reduzieren Sie die Helligkeit der Beleuchtung (Verwenden der Displaybeleuchtung, Seite 52), oder verkürzen 
+Sie die Display-Beleuchtungszeit (Anzeigeeinstellungen, Seite 52).
+• Aktivieren Sie die Funktion Auto-Ruhezustand (Verwenden des Auto-Ruhezustands, Seite 50).
+• Deaktivieren Sie die drahtlose Funktion Telefon (Telefoneinstellungen, Seite 51).
+• Wählen Sie die Einstellung GPS (Ändern der Satelliteneinstellung, Seite 50).
+• Entfernen Sie Funksensoren, die nicht mehr verwendet werden.
+62 Fehlerbehebung
+=== PAGE 69 ===
+Aktivieren des Energiesparmodus
+Im Energiesparmodus können Sie die Einstellungen anpassen, um die Akkulaufzeit für längere Touren zu 
+verlängern.
+1 Wählen Sie 
+  > Energiesparmodus > Aktivieren.
+2 Wählen Sie eine Option:
+• Wählen Sie Beleuchtung reduzieren, um die Beleuchtungshelligkeit zu reduzieren.
+• Wählen Sie Karte ausblenden, um die Kartenseite auszublenden.
+HINWEIS: Wenn diese Option aktiviert ist, werden Navigationsmeldungen trotzdem angezeigt.
+• Wählen Sie Satellitensysteme, um die Satelliteneinstellung zu ändern.
+Die voraussichtlich verbleibende Akkulaufzeit wird oben auf der Seite angezeigt.
+Nach der Tour sollten Sie das Gerät aufladen und den Energiesparmodus deaktivieren, um alle Gerätefunktionen 
+zu verwenden.
+Das Smartphone stellt keine Verbindung mit dem Gerät her
+Falls das Smartphone keine Verbindung mit dem Gerät herstellt, versuchen Sie es mit diesen Tipps.
+• Schalten Sie das Smartphone und das Gerät aus und schalten Sie beide Geräte wieder ein.
+• Aktivieren Sie auf dem Smartphone die Bluetooth Technologie.
+• Aktualisieren Sie die Garmin Connect App auf die aktuelle Version.
+• Entfernen Sie das Gerät aus der Garmin Connect App und den Bluetooth Einstellungen des Smartphones, um 
+die Kopplung erneut durchzuführen.
+• Wenn Sie ein neues Smartphone erworben haben, entfernen Sie das Gerät aus der Garmin Connect App auf 
+dem Smartphone, das Sie nicht mehr verwenden werden.
+• Achten Sie darauf, dass Smartphone und Gerät nicht weiter als 10 m (33 Fuß) voneinander entfernt sind.
+• Öffnen Sie auf dem Smartphone die Garmin Connect App, wählen Sie 
+  und anschließend Garmin-Geräte > 
+Gerät hinzufügen, um den Kopplungsmodus zu aktivieren.
+• Streichen Sie im Hauptmenü nach unten, um das Status-Widget anzuzeigen, und wählen Sie Telefon > 
+Smartphone koppeln, um den Kopplungsmodus manuell zu aktivieren.
+Verbessern des GPS-Satellitenempfangs
+• Synchronisieren Sie das Gerät regelmäßig mit Ihrem Garmin Konto:
+◦ Stellen Sie über das mitgelieferte USB-Kabel und die Anwendung Garmin Express eine Verbindung 
+zwischen Gerät und Computer her.
+◦ Verbinden Sie das Gerät über das Bluetooth fähige Smartphone mit der Garmin Connect App.
+Während das Gerät mit dem Garmin Konto verbunden ist, lädt es Satellitendaten von mehreren Tagen 
+herunter, damit es schnell Satellitensignale erfassen kann.
+• Begeben Sie sich mit dem Gerät im Freien an eine Stelle, an der weder hohe Gebäude noch Bäume den 
+Empfang stören.
+• Behalten Sie Ihre Position für einige Minuten bei.
+Mein Gerät zeigt die falsche Sprache an
+1 Wählen Sie 
+ .
+2 Blättern Sie nach unten zum vorletzten Element der Liste und wählen Sie es aus.
+3 Blättern Sie nach unten zum achten Element der Liste und wählen Sie es aus.
+4 Wählen Sie die Sprache.
+Fehlerbehebung 63
+=== PAGE 70 ===
+Kalibrieren des barometrischen Höhenmessers
+Das Gerät wurde werkseitig kalibriert und verwendet standardmäßig die automatische Kalibrierung am GPS-
+Startpunkt. Sie können den barometrischen Höhenmesser manuell kalibrieren, wenn Sie die genaue Höhe 
+kennen.
+1 Wählen Sie 
+  > System > Höhenmesser.
+2 Wählen Sie eine Option:
+• Wählen Sie Auto-Kalibrierung, um die Kalibrierung automatisch vom GPS-Startpunkt vorzunehmen.
+• Wählen Sie Kalibrieren > Manuell eingeben, um die aktuelle Höhe manuell einzugeben.
+• Wählen Sie Kalibrieren > DHM verwenden, um die aktuelle Höhe vom digitalen Höhenmodell (DHM) 
+einzugeben.
+• Wählen Sie Kalibrieren > GPS verwenden, um die aktuelle Höhe vom GPS-Startpunkt einzugeben.
+Festlegen der Höhe
+Wenn genaue Höhendaten für die aktuelle Position vorliegen, können Sie den Höhenmesser des Geräts manuell 
+kalibrieren.
+1 Wählen Sie Navigation > 
+  > Höhe festlegen.
+2 Geben Sie die Höhe ein, und wählen Sie 
+ .
+Temperaturanzeigen
+Wenn das Gerät direkter Sonneneinstrahlung ausgesetzt, in der Hand gehalten oder mit einem externem 
+Akkupack aufgeladen wird, kann die vom Gerät angezeigte Temperatur über der tatsächlichen Temperatur 
+liegen. Es kann auch eine gewisse Zeit dauern, bis sich das Gerät an große Temperaturänderungen angepasst 
+hat.
+Ersatz-Dichtungsringe
+Für die Halterungen sind Ersatz-Dichtungsringe verfügbar.
+HINWEIS: Verwenden Sie ausschließlich Ersatzbänder aus EPDM (Ethylen-Propylen-Dien-Monomer). Rufen Sie 
+die Website http://buy.garmin.com auf, oder wenden Sie sich an Ihren Garmin Händler.
+Weitere Informationsquellen
+• Unter support.garmin.com finden Sie zusätzliche Handbücher, Artikel und Software-Updates.
+• Rufen Sie die Website buy.garmin.com auf, oder wenden Sie sich an einen Garmin Händler, wenn Sie weitere 
+Informationen zu optionalen Zubehör- bzw. Ersatzteilen benötigen.
+64 Fehlerbehebung
+=== PAGE 71 ===
+Anhang
+Datenfelder
+Für einige Datenfelder ist ANT+ oder Bluetooth Zubehör erforderlich, damit Daten angezeigt werden können. 
+Einige Datenfelder werden auf dem Gerät in mehreren Kategorien aufgeführt.
+TIPP: Sie können die Datenfelder auch in der Garmin Connect App über die Geräteeinstellungen anpassen.
+% der maximalen Herzfrequenz: Der Prozentsatz der maximalen Herzfrequenz.
+3s - Leistung: Der 3 Sekunden gleitende Durchschnitt der Leistungsabgabe.
+Abstieg gesamt: Die gesamte Höhendistanz, die seit dem letzten Zurücksetzen des Datenfelds im Abstieg 
+zurückgelegt wurde.
+Akkuladestand: Die verbleibende Akkuleistung.
+Akkuladestand: Die verbleibende Akkuleistung eines Fahrradlichts.
+Ankunft nächster Wegpunkt: Die voraussichtliche Uhrzeit, zu der Sie den nächsten Wegpunkt der Route 
+erreichen werden (in der Ortszeit des Wegpunkts). Sie müssen auf einer Route navigieren, damit diese Daten 
+angezeigt werden.
+Anstieg gesamt: Die gesamte Höhendistanz, die seit dem letzten Zurücksetzen des Datenfelds im Anstieg 
+zurückgelegt wurde.
+Anstieg zum nächsten Streckenpunkt: Der verbleibende Anstieg zum nächsten Punkt der Strecke.
+Assistenzmodus: Der aktuelle Assistenzmodus für das E-Bike.
+Distanz: Die während des aktuellen Tracks oder der aktuellen Aktivität zurückgelegte Distanz.
+Distanz bis nächster Wegpunkt: Die verbleibende Distanz zum nächsten Wegpunkt der Route. Sie müssen auf 
+einer Route navigieren, damit diese Daten angezeigt werden.
+Distanz bis Streckenpunkt: Die verbleibende Distanz zum nächsten Punkt der Strecke.
+Distanz zum Punkt: Die verbleibende Distanz zum nächsten Punkt.
+Distanz zum Ziel: Die verbleibende Distanz zum Endziel. Sie müssen auf einer Route navigieren, damit diese 
+Daten angezeigt werden.
+Durchschnittliche Rundenzeit: Die durchschnittliche Rundenzeit für die aktuelle Aktivität.
+E-Bike-Akku: Der verbleibende Akkuladestand eines E-Bike.
+Geschätzte Ankunftszeit: Die voraussichtliche Uhrzeit, zu der Sie das Endziel erreichen werden (in der Ortszeit 
+des Ziels). Sie müssen auf einer Route navigieren, damit diese Daten angezeigt werden.
+Geschwind.: Die aktuelle Bewegungsgeschwindigkeit.
+Geschwindigkeitsgrafik: Ein Liniendiagramm der Geschwindigkeit für die aktuelle Aktivität.
+GPS-Signalstärke: Die Stärke des GPS-Satellitensignals.
+Herzfrequenz: Ihre Herzfrequenz in Schlägen pro Minute. Das Gerät muss mit einem kompatiblen 
+Herzfrequenzsensor verbunden sein.
+Herzfrequenzbereich: Ihr aktueller Herzfrequenz-Bereich (1 bis 5). Die Standard-Herzfrequenz-Bereiche beruhen 
+auf Ihrem Benutzerprofil und Ihrer maximalen Herzfrequenz (220 minus Ihrem Alter).
+Herzfrequenzkurve: Ein Liniendiagramm der aktuellen, durchschnittlichen und maximalen Herzfrequenzwerte 
+für die aktuelle Aktivität.
+Höhe: Die Höhe der aktuellen Position über oder unter dem Meeresspiegel.
+Höhengrafik: Ein Liniendiagramm der aktuellen Höhe, des gesamten Anstiegs und des gesamten Abstiegs für 
+die aktuelle Aktivität.
+Kalorien: Die Menge der insgesamt verbrannten Kalorien.
+Kilojoule: Die Gesamtleistung (Leistungsabgabe) in Kilojoule.
+Kilometerzähler: Die gesamte, bei allen Touren zurückgelegte Distanz. Dieser Gesamtwert wird beim 
+Zurücksetzen der Tourendaten nicht gelöscht.
+Leistung: Die aktuelle Leistungsabgabe in Watt.
+Anhang 65
+=== PAGE 72 ===
+Leistungsbereich: Der aktuelle Bereich der Leistungsabgabe (1 bis 7) basierend auf Ihrem FTP-Wert oder den 
+benutzerdefinierten Einstellungen.
+Leistungsgrafik: Ein Liniendiagramm der aktuellen, durchschnittlichen und maximalen Leistungsabgabewerte 
+für die aktuelle Aktivität.
+Lichtkegelwinkel-Status: Der Lichtkegelmodus des Scheinwerfers.
+Lichtmodus: Der Konfigurationsmodus des Lichtnetzwerks.
+Max. Geschwindigkeit: Die höchste Geschwindigkeit für die aktuelle Aktivität.
+Maximale Leistung: Die höchste Leistungsabgabe für die aktuelle Aktivität.
+Maximale Temperatur - 24 Stunden: Die während der vergangenen 24 Stunden von einem kompatiblen 
+Temperatursensor aufgezeichnete maximale Temperatur.
+Minimale Temperatur - 24 Stunden: Die während der vergangenen 24 Stunden von einem kompatiblen 
+Temperatursensor aufgezeichnete minimale Temperatur.
+Nächster Wegpunkt: Der nächste Punkt auf der Route. Sie müssen auf einer Route navigieren, damit diese 
+Daten angezeigt werden.
+Neigung: Die Berechnung des Höhenunterschieds (Höhe) im Verlauf der Strecke (Distanz). Wenn Sie 
+beispielsweise pro 3 m (10 Fuß) Anstieg 60 m (200 Fuß) zurücklegen, beträgt die Neigung 5 %.
+Reichweite: Die geschätzte Distanz, die Sie basierend auf den aktuellen Einstellungen und dem verbleibenden 
+Akkuladestand des E-Bikes zurücklegen können.
+Richtung: Die Richtung, in die Sie sich bewegen.
+Runde Herzfrequenz: Die durchschnittliche Herzfrequenz für die aktuelle Runde.
+Runden: Die Anzahl der Runden, die für die aktuelle Aktivität beendet wurden.
+Rundenabstieg: Der vertikale Abstieg für die aktuelle Runde.
+Rundenanstieg: Der vertikale Anstieg für die aktuelle Runde.
+Rundendistanz: Die während der aktuellen Runde zurückgelegte Distanz.
+Rundengeschwindigkeit: Die Durchschnittsgeschwindigkeit für die aktuelle Runde.
+Rundenleistung: Die durchschnittliche Leistungsabgabe für die aktuelle Runde.
+Rundenzeit: Die Timer-Zeit für die aktuelle Runde.
+Runde - Trittfrequenz: Radfahren. Die durchschnittliche Trittfrequenz für die aktuelle Runde.
+Schalttipps: Basierend auf der aktuellen Anstrengung die Empfehlung, einen höheren oder niedrigeren Gang 
+einzulegen. Das E-Bike muss sich im manuellen Schaltmodus befinden.
+Smart-Reichweite: Die geschätzte verbleibende Distanz, die das E-Bike Assistenz bietet, wobei das Gelände vor 
+Ort in Betracht gezogen wird.
+Sonnenaufgang: Der Zeitpunkt des Sonnenaufgangs basierend auf der aktuellen GPS-Position.
+Sonnenuntergang: Der Zeitpunkt des Sonnenuntergangs basierend auf der aktuellen GPS-Position.
+Temperatur: Die Lufttemperatur. Ihre Körpertemperatur beeinflusst den Temperatursensor.
+Timer: Die Timer-Zeit für die aktuelle Aktivität.
+Trainersteuerungen: Während eines Trainings der vom Indoor Trainer erzeugte Widerstand.
+Trittfrequenz: Radfahren. Die Anzahl der Umdrehungen der Tretkurbel. Das Gerät muss mit einem Zubehör zum 
+Messen der Trittfrequenz verbunden sein, damit Daten angezeigt werden.
+Trittfrequenzgrafik: Ein Liniendiagramm der Trittfrequenzwerte für die aktuelle Aktivität.
+Uhrzeit: Die Uhrzeit basierend auf der aktuellen Position und den Zeiteinstellungen (Format, Zeitzone und 
+Sommerzeit).
+Verbleibender Anstieg: Während einer Strecke wird bei Verwendung eines Höhenziels der verbleibende Anstieg 
+angezeigt.
+Verbundene Lichter: Die Anzahl der verbundenen Lichter.
+Verstrichen: Die insgesamt aufgezeichnete Zeit. Wenn Sie beispielsweise den Aktivitäten-Timer starten und 
+10 Minuten Rad fahren, den Timer dann 5 Minuten anhalten und danach erneut starten, um 20 Minuten Rad 
+zu fahren, beträgt die verstrichene Zeit 35 Minuten.
+66 Anhang
+=== PAGE 73 ===
+Zeit bis nächster Wegpunkt: Die voraussichtlich verbleibende Zeit bis zum Erreichen des nächsten Wegpunkts 
+der Route. Sie müssen auf einer Route navigieren, damit diese Daten angezeigt werden.
+Zeit bis Punkt: Die verbleibende Zeit zum nächsten Punkt.
+Zeit bis zum Ziel: Die voraussichtlich verbleibende Zeit bis zum Erreichen des Ziels. Sie müssen auf einer Route 
+navigieren, damit diese Daten angezeigt werden.
+Zielort: Die Position des endgültigen Ziels.
+Ø Geschwindigkeit: Die Durchschnittsgeschwindigkeit für die aktuelle Aktivität.
+Ø Herzfrequenz: Die durchschnittliche Herzfrequenz für die aktuelle Aktivität.
+Ø Leistung: Die durchschnittliche Leistungsabgabe für die aktuelle Aktivität.
+Ø Trittfrequenz: Radfahren. Die durchschnittliche Trittfrequenz für die aktuelle Aktivität.
+VO2max-Standard-Bewertungen
+Die folgende Tabelle enthält standardisierte Klassifikationen von VO2max-Berechnungen nach Alter und 
+Geschlecht.
+Männer Prozent 20–29 30–39 40–49 50–59 60–69 70–79
+Überragend 95 55,4 54 52,5 48,9 45,7 42,1
+Ausge­
+zeichnet 80 51,1 48,3 46,4 43,4 39,5 36,7
+Gut 60 45,4 44 42,4 39,2 35,5 32,3
+Ausreichend 40 41,7 40,5 38,5 35,6 32,3 29,4
+Schlecht 0–40 <41,7 <40,5 <38,5 <35,6 <32,3 <29,4
+Frauen Prozent 20–29 30–39 40–49 50–59 60–69 70–79
+Überragend 95 49,6 47,4 45,3 41,1 37,8 36,7
+Ausge­
+zeichnet 80 43,9 42,4 39,7 36,7 33 30,9
+Gut 60 39,5 37,8 36,3 33 30 28,1
+Ausreichend 40 36,1 34,4 33 30,1 27,5 25,9
+Schlecht 0–40 <36,1 <34,4 <33 <30,1 <27,5 <25,9
+Daten abgedruckt mit Genehmigung von The Cooper Institute. Weitere Informationen finden Sie unter 
+www.CooperInstitute.org.
+Anhang 67
+=== PAGE 74 ===
+Berechnen von Herzfrequenz-Bereichen
+Bereich
+Prozentsatz der 
+maximalen Herzfre­
+quenz
+Belastungsempfinden Vorteile
+1 50–60 % Entspannte, leichte Pace, rhythmische 
+Atmung
+Aerobes Training der Anfangsstufe, 
+geringere Belastung
+2 60–70 % Komfortable Pace, leicht tiefere 
+Atmung, Unterhaltung möglich
+Einfaches Herz-Kreislauf-Training, 
+gute Erholungspace
+3 70–80 % Mäßige Pace, eine Unterhaltung ist 
+schwieriger
+Verbessert den aeroben Bereich, 
+optimales Herz-Kreislauf-Training
+4 80–90 % Schnelle Pace und ein wenig unkomfor­
+tabel, schweres Atmen
+Verbessert den anaeroben Bereich 
+und die anaerobe Schwelle, höhere 
+Geschwindigkeit
+5 90–100 %
+Sprint-Pace, kann nicht über einen 
+längeren Zeitraum aufrechterhalten 
+werden, angestrengtes Atmen
+Anaerober und muskulärer Ausdau­
+erbereich, gesteigerte Leistung
+Radgröße und -umfang
+Wenn der Geschwindigkeitssensor für das Radfahren verwendet wird, erkennt er automatisch die Radgröße. Bei 
+Bedarf können Sie den Radumfang manuell in den Geschwindigkeitssensoreinstellungen eingeben.
+Die Reifengröße für das Radfahren ist auf beiden Seiten des Reifens angegeben. Sie können den Umfang des 
+Rads messen oder einen der im Internet verfügbaren Rechner verwenden.
+=== PAGE 75 ===
+
+=== PAGE 76 ===
+support.garmin.com
+GUID-E67DE53E-5B08-4903-9767-F58973BC1829 v6Juli 2025

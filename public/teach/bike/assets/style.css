@@ -1,0 +1,159 @@
+/* Shared stylesheet for the bike-touring teaching workspace.
+   Tufte-inspired: generous margins, serif body, sidenotes, print-friendly. */
+
+:root {
+  --ink: #111;
+  --ink-soft: #444;
+  --rule: #d8d4cc;
+  --paper: #fffef9;
+  --accent: #7a2e0e;
+  --accent-soft: #f4ece4;
+  --ok: #1d6b3a;
+  --bad: #97231a;
+}
+
+html { font-size: 16px; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: et-book, Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem;
+  max-width: 46rem;
+  counter-reset: sidenote;
+}
+
+h1, h2, h3 { font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; }
+h1 { font-size: 2.4rem; margin: 0 0 0.2em; }
+h2 { font-size: 1.6rem; margin: 2.6rem 0 0.6em; }
+h3 { font-size: 1.2rem; margin: 1.8rem 0 0.4em; font-style: italic; }
+
+.subtitle {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 1.2rem;
+  margin: 0 0 2.5rem;
+}
+
+.meta {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--rule); }
+a:hover { border-bottom-color: var(--accent); }
+
+p { margin: 0 0 1.1em; }
+
+blockquote {
+  margin: 1.5em 0;
+  padding-left: 1.2em;
+  border-left: 3px solid var(--rule);
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+code, .mono {
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  background: var(--accent-soft);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+/* --- Callouts --- */
+.callout {
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  background: #fff;
+  padding: 1rem 1.2rem;
+  margin: 1.8rem 0;
+  font-size: 1rem;
+}
+.callout > .label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+.callout.source { border-left-color: #2a5d84; }
+.callout.source > .label { color: #2a5d84; }
+
+/* --- Tables --- */
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; margin: 1.5rem 0; }
+th, td { text-align: left; padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); font-weight: 400; }
+
+/* --- Step lists (real-world tasks) --- */
+ol.steps { counter-reset: step; list-style: none; padding-left: 0; }
+ol.steps > li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 2.6rem;
+  margin-bottom: 1rem;
+}
+ol.steps > li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 0.1em;
+  width: 1.8rem; height: 1.8rem;
+  border: 1px solid var(--rule); border-radius: 50%;
+  text-align: center; line-height: 1.75rem;
+  font-size: 0.85rem; color: var(--accent); background: #fff;
+}
+
+/* --- Quiz widget (see assets/quiz.js) --- */
+.quiz { margin: 2rem 0; }
+.quiz .q {
+  border-top: 1px solid var(--rule);
+  padding: 1.2rem 0 0.4rem;
+}
+.quiz .q > p.prompt { font-weight: 600; margin-bottom: 0.7rem; }
+.quiz button.opt {
+  display: block; width: 100%; text-align: left;
+  font: inherit; font-size: 1rem;
+  background: #fff; border: 1px solid var(--rule); border-radius: 4px;
+  padding: 0.55rem 0.8rem; margin-bottom: 0.45rem; cursor: pointer;
+}
+.quiz button.opt:hover { border-color: var(--accent); }
+.quiz button.opt.correct { border-color: var(--ok); background: #edf6f0; }
+.quiz button.opt.wrong { border-color: var(--bad); background: #fbeeed; }
+.quiz .feedback { font-size: 0.95rem; color: var(--ink-soft); margin: 0.5rem 0 0.2rem; display: none; }
+.quiz .feedback.show { display: block; }
+.quiz .score { font-style: italic; color: var(--ink-soft); border-top: 1px solid var(--rule); padding-top: 0.8rem; }
+
+/* --- Recall prompts: answer hidden until clicked --- */
+details.recall {
+  border: 1px dashed var(--rule);
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+  background: #fff;
+}
+details.recall > summary { cursor: pointer; font-weight: 600; }
+details.recall > p { margin: 0.7rem 0 0; color: var(--ink-soft); }
+
+/* --- Footer --- */
+footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+footer .ask { font-style: italic; }
+
+@media print {
+  body { background: #fff; padding: 0; max-width: none; font-size: 11pt; }
+  .quiz button.opt { break-inside: avoid; }
+  a { color: #000; border: none; }
+  details.recall[open] > p { display: block; }
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.16.3" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2019-10-03T14:48:19Z</time>
+    <bounds maxlat="51.692388346418738" maxlon="8.704041838645935" minlat="51.684029996395111" minlon="8.69803000241518"/>
+  </metadata>
+
+  <trk>
+    <name>NW 5.11*</name>
+    <extensions>
+      <gpxx:TrackExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayColor>DarkRed</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="51.692388346418738" lon="8.704041838645935">
+        <ele>125</ele>
+        <time>2010-01-01T00:05:03Z</time>
+      </trkpt>
+      <trkpt lat="51.692102355882525" lon="8.703896999359131">
+        <ele>125</ele>
+        <time>2010-01-01T00:04:51Z</time>
+      </trkpt>
+      <trkpt lat="51.691942764446139" lon="8.703789710998535">
+        <ele>126</ele>
+        <time>2010-01-01T00:04:44Z</time>
+      </trkpt>
+      <trkpt lat="51.691736569628119" lon="8.703623414039612">
+        <ele>129</ele>
+        <time>2010-01-01T00:04:34Z</time>
+      </trkpt>
+      <trkpt lat="51.690995022654533" lon="8.702985048294067">
+        <ele>132</ele>
+        <time>2010-01-01T00:04:01Z</time>
+      </trkpt>
+      <trkpt lat="51.690429663285613" lon="8.702470064163208">
+        <ele>136</ele>
+        <time>2010-01-01T00:03:35Z</time>
+      </trkpt>
+      <trkpt lat="51.689435318112373" lon="8.701584935188294">
+        <ele>134</ele>
+        <time>2010-01-01T00:02:49Z</time>
+      </trkpt>
+      <trkpt lat="51.688860068097711" lon="8.701080679893494">
+        <ele>135</ele>
+        <time>2010-01-01T00:02:23Z</time>
+      </trkpt>
+      <trkpt lat="51.685524322092533" lon="8.698956370353699">
+        <ele>125</ele>
+        <time>2010-01-01T00:00:00Z</time>
+      </trkpt>
+      <trkpt lat="51.685330029577017" lon="8.698840029537678"/>
+      <trkpt lat="51.68510003015399" lon="8.698689993470907"/>
+      <trkpt lat="51.684819990769029" lon="8.698520008474588"/>
+      <trkpt lat="51.684029996395111" lon="8.69803000241518"/>
+    </trkseg>
+  </trk>
+
+</gpx>

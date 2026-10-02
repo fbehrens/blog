@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="www.bahntrassenradeln.de" version="1.1">
+
+  <trk>
+    <name>NW 1.08b</name>
+    <trkseg>
+ <trkpt lat="50.79000707" lon="6.10563484">
+  <ele>151.064</ele>
+ </trkpt>
+ <trkpt lat="50.79013565" lon="6.10552353">
+  <ele>151.064</ele>
+ </trkpt>
+ <trkpt lat="50.79027495" lon="6.10539369">
+  <ele>152.026</ele>
+ </trkpt>
+ <trkpt lat="50.79038777" lon="6.10525464">
+  <ele>152.026</ele>
+ </trkpt>
+ <trkpt lat="50.79063663" lon="6.10491249">
+  <ele>152.987</ele>
+ </trkpt>
+ <trkpt lat="50.79078013" lon="6.10473957">
+  <ele>152.506</ele>
+ </trkpt>
+ <trkpt lat="50.79108934" lon="6.10434797">
+  <ele>152.987</ele>
+ </trkpt>
+ <trkpt lat="50.79130107" lon="6.10418804">
+  <ele>152.506</ele>
+ </trkpt>
+ <trkpt lat="50.79145102" lon="6.10411294">
+  <ele>152.026</ele>
+ </trkpt>
+ <trkpt lat="50.79197547" lon="6.10391278">
+  <ele>152.987</ele>
+ </trkpt>
+ <trkpt lat="50.79204689" lon="6.10390037">
+  <ele>152.987</ele>
+ </trkpt>
+ <trkpt lat="50.79220589" lon="6.10386794">
+  <ele>152.987</ele>
+ </trkpt>
+ <trkpt lat="50.79244570" lon="6.10382418">
+  <ele>152.987</ele>
+ </trkpt>
+ <trkpt lat="50.79260009" lon="6.10379577">
+  <ele>152.987</ele>
+ </trkpt>
+ <trkpt lat="50.79299689" lon="6.10363953">
+  <ele>152.506</ele>
+ </trkpt>
+ <trkpt lat="50.79345245" lon="6.10336569">
+  <ele>152.026</ele>
+ </trkpt>
+ <trkpt lat="50.79359645" lon="6.10324072">
+  <ele>152.026</ele>
+ </trkpt>
+ <trkpt lat="50.79381723" lon="6.10291718">
+  <ele>152.506</ele>
+ </trkpt>
+ <trkpt lat="50.79391463" lon="6.10273143">
+  <ele>151.064</ele>
+ </trkpt>
+ <trkpt lat="50.79423842" lon="6.10191034">
+  <ele>149.622</ele>
+ </trkpt>
+ <trkpt lat="50.79430128" lon="6.10173105">
+  <ele>149.622</ele>
+ </trkpt>
+ <trkpt lat="50.79433112" lon="6.10161446">
+  <ele>149.622</ele>
+ </trkpt>
+ <trkpt lat="50.79452852" lon="6.10138790">
+  <ele>149.622</ele>
+ </trkpt>
+ <trkpt lat="50.79457043" lon="6.10128983">
+  <ele>149.142</ele>
+ </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.16.3" version="1.1">
+
+  <trk>
+    <name>NW 1.16</name>
+    <trkseg>
+ <trkpt lat="50.73051600" lon="7.07968500">
+  <ele>64.277</ele>
+ </trkpt>
+ <trkpt lat="50.73031200" lon="7.07994100">
+  <ele>64.450</ele>
+ </trkpt>
+ <trkpt lat="50.72991900" lon="7.08033500">
+  <ele>64.576</ele>
+ </trkpt>
+ <trkpt lat="50.72984700" lon="7.08039000">
+  <ele>64.434</ele>
+ </trkpt>
+ <trkpt lat="50.72943000" lon="7.08071100">
+  <ele>65.020</ele>
+ </trkpt>
+ <trkpt lat="50.72905700" lon="7.08097200">
+  <ele>64.959</ele>
+ </trkpt>
+ <trkpt lat="50.72866100" lon="7.08124600">
+  <ele>66.035</ele>
+ </trkpt>
+ <trkpt lat="50.72829700" lon="7.08150100">
+  <ele>66.917</ele>
+ </trkpt>
+ <trkpt lat="50.72798300" lon="7.08171100">
+  <ele>67.017</ele>
+ </trkpt>
+ <trkpt lat="50.72782800" lon="7.08184200">
+  <ele>67.236</ele>
+ </trkpt>
+ <trkpt lat="50.72769000" lon="7.08195600">
+  <ele>67.108</ele>
+ </trkpt>
+ <trkpt lat="50.72746100" lon="7.08198900">
+  <ele>67.203</ele>
+ </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

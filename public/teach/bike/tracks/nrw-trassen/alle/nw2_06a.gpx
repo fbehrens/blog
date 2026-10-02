@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="www.bahntrassenradeln.de" version="1.1">
+
+  <trk>
+    <name>NW 2.06a</name>
+    <trkseg>
+ <trkpt lat="51.67122454" lon="6.98820826">
+  <ele>36.187</ele>
+ </trkpt>
+ <trkpt lat="51.67101927" lon="6.98824732">
+  <ele>36.187</ele>
+ </trkpt>
+ <trkpt lat="51.67090184" lon="6.98827816">
+  <ele>35.706</ele>
+ </trkpt>
+ <trkpt lat="51.67058467" lon="6.98836902">
+  <ele>35.225</ele>
+ </trkpt>
+ <trkpt lat="51.67036649" lon="6.98842367">
+  <ele>36.187</ele>
+ </trkpt>
+ <trkpt lat="51.67007958" lon="6.98848427">
+  <ele>36.667</ele>
+ </trkpt>
+ <trkpt lat="51.66995854" lon="6.98852870">
+  <ele>35.706</ele>
+ </trkpt>
+ <trkpt lat="51.66943417" lon="6.98865258">
+  <ele>36.667</ele>
+ </trkpt>
+ <trkpt lat="51.66917517" lon="6.98872819">
+  <ele>36.187</ele>
+ </trkpt>
+ <trkpt lat="51.66882254" lon="6.98882014">
+  <ele>36.667</ele>
+ </trkpt>
+ <trkpt lat="51.66850403" lon="6.98887797">
+  <ele>37.629</ele>
+ </trkpt>
+ <trkpt lat="51.66843806" lon="6.98889960">
+  <ele>37.629</ele>
+ </trkpt>
+ <trkpt lat="51.66834637" lon="6.98894167">
+  <ele>37.629</ele>
+ </trkpt>
+ <trkpt lat="51.66820387" lon="6.98896866">
+  <ele>38.109</ele>
+ </trkpt>
+ <trkpt lat="51.66807923" lon="6.98904393">
+  <ele>37.629</ele>
+ </trkpt>
+ <trkpt lat="51.66783649" lon="6.98921107">
+  <ele>37.629</ele>
+ </trkpt>
+ <trkpt lat="51.66774974" lon="6.98929003">
+  <ele>37.148</ele>
+ </trkpt>
+ <trkpt lat="51.66730399" lon="6.98979487">
+  <ele>37.148</ele>
+ </trkpt>
+ <trkpt lat="51.66699914" lon="6.99014858">
+  <ele>36.667</ele>
+ </trkpt>
+ <trkpt lat="51.66686025" lon="6.99026727">
+  <ele>36.667</ele>
+ </trkpt>
+ <trkpt lat="51.66673067" lon="6.99034506">
+  <ele>37.148</ele>
+ </trkpt>
+ <trkpt lat="51.66626338" lon="6.99052569">
+  <ele>36.667</ele>
+ </trkpt>
+ <trkpt lat="51.66618886" lon="6.99052786">
+  <ele>37.148</ele>
+ </trkpt>
+ <trkpt lat="51.66592869" lon="6.99054773">
+  <ele>36.667</ele>
+ </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

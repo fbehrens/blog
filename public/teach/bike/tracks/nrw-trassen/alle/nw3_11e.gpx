@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="www.bahntrassenradeln.de" version="1.1">
+
+<trk>
+  <name>NW 3.11e*</name>
+    <extensions>
+      <gpxx:TrackExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayColor>DarkRed</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+  <trkseg>
+    <trkpt lat="51.505140" lon="6.924600"/>
+    <trkpt lat="51.505830" lon="6.926400"/>
+    <trkpt lat="51.506280" lon="6.927460"/>
+    <trkpt lat="51.506730" lon="6.928560"/>
+    <trkpt lat="51.507340" lon="6.929960"/>
+    <trkpt lat="51.507510" lon="6.930300"/>
+    <trkpt lat="51.507740" lon="6.930670"/>
+  </trkseg>
+</trk>
+
+</gpx>

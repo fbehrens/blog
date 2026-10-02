@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.16.3" version="1.1">
+
+  <trk>
+    <name>NW 4.18a</name>
+    <trkseg>
+ <trkpt lat="50.83126400" lon="7.02309100">
+  <ele>45.930</ele>
+ </trkpt>
+ <trkpt lat="50.83133800" lon="7.02305700">
+  <ele>45.711</ele>
+ </trkpt>
+ <trkpt lat="50.83163600" lon="7.02256500">
+  <ele>46.068</ele>
+ </trkpt>
+ <trkpt lat="50.83191400" lon="7.02214100">
+  <ele>45.060</ele>
+ </trkpt>
+ <trkpt lat="50.83202200" lon="7.02201900">
+  <ele>46.028</ele>
+ </trkpt>
+ <trkpt lat="50.83247000" lon="7.02145800">
+  <ele>46.223</ele>
+ </trkpt>
+ <trkpt lat="50.83285500" lon="7.02095800">
+  <ele>47.952</ele>
+ </trkpt>
+ <trkpt lat="50.83296600" lon="7.02074400">
+  <ele>47.386</ele>
+ </trkpt>
+ <trkpt lat="50.83305000" lon="7.02057700">
+  <ele>47.748</ele>
+ </trkpt>
+ <trkpt lat="50.83334400" lon="7.01998400">
+  <ele>48.108</ele>
+ </trkpt>
+ <trkpt lat="50.83370000" lon="7.01903200">
+  <ele>48.375</ele>
+ </trkpt>
+ <trkpt lat="50.83372300" lon="7.01888600">
+  <ele>49.100</ele>
+ </trkpt>
+ <trkpt lat="50.83371700" lon="7.01882000">
+  <ele>49.410</ele>
+ </trkpt>
+ <trkpt lat="50.83367500" lon="7.01872100">
+  <ele>49.719</ele>
+ </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.16.3" version="1.1">
+
+<trk>
+  <name>NW 4.01a*</name>
+<trkseg>
+ <trkpt lat="51.42033000" lon="6.74193000">
+ </trkpt>
+ <trkpt lat="51.41723000" lon="6.74706000">
+ </trkpt>
+ <trkpt lat="51.41425000" lon="6.75182000">
+ </trkpt>
+ <trkpt lat="51.41446000" lon="6.75223000">
+ </trkpt>
+ <trkpt lat="51.41426000" lon="6.75253000">
+ </trkpt>
+ <trkpt lat="51.41402000" lon="6.75281000">
+ </trkpt>
+ <trkpt lat="51.41396000" lon="6.75297000">
+ </trkpt>
+ <trkpt lat="51.41332000" lon="6.75307000">
+ </trkpt>
+ <trkpt lat="51.41181000" lon="6.75507000">
+ </trkpt>
+ <trkpt lat="51.41079000" lon="6.75649000">
+ </trkpt>
+ <trkpt lat="51.41057000" lon="6.75689000">
+ </trkpt>
+ <trkpt lat="51.41010000" lon="6.75793000">
+ </trkpt>
+</trkseg>
+</trk>
+
+</gpx>
