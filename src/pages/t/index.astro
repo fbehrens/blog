@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import { getMissions } from '../../lib/missions';
 
 const missions = getMissions();
-const linkClass = 'text-(--color-primary) underline hover:text-(--color-primary-hover)';
 ---
 <Layout title="Teach" description="Learning missions, published from my teach workspace.">
   <header class="mb-8">
@@ -24,24 +23,10 @@ const linkClass = 'text-(--color-primary) underline hover:text-(--color-primary-
   <div>
     {missions.map(m => (
       <article class="py-6 border-b border-(--color-border) last:border-0">
-        <h2 class="font-serif text-xl font-semibold mb-1">{m.title}</h2>
-        {m.why && <p class="text-(--color-muted) text-sm leading-relaxed mb-3">{m.why}</p>}
-        {m.lessons.length > 0 && (
-          <>
-            <h3 class="text-sm font-semibold mt-3 mb-1">Lessons</h3>
-            <ol class="list-decimal pl-5 space-y-1 text-sm">
-              {m.lessons.map(l => <li><a href={l.href} class={linkClass}>{l.title}</a></li>)}
-            </ol>
-          </>
-        )}
-        {m.references.length > 0 && (
-          <>
-            <h3 class="text-sm font-semibold mt-3 mb-1">References</h3>
-            <ul class="list-disc pl-5 space-y-1 text-sm">
-              {m.references.map(r => <li><a href={r.href} class={linkClass}>{r.title}</a></li>)}
-            </ul>
-          </>
-        )}
+        <a href={`/t/${m.name}/`} class="group">
+          <h2 class="font-serif text-xl font-semibold mb-1 group-hover:text-(--color-primary) transition-colors">{m.title}</h2>
+        </a>
+        {m.why && <p class="text-(--color-muted) text-sm leading-relaxed">{m.why}</p>}
       </article>
     ))}
     {missions.length === 0 && (

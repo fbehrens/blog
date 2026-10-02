@@ -16,9 +16,10 @@ small benefit, and it only handled teach missions — not other static folders
 - `bun run sync-public` rsyncs each source **raw** (`--delete --delete-excluded`)
   into `public/teach/<name>/` (`teach`, `link`) or `public/<name>/` (`unlisted`).
   Dotfiles, `NOTES.md`, `learning-records` and `node_modules` are always excluded.
-- No landing pages. `/teach` lists every `teach` mission with its lessons and
-  references, read from the synced files at build time. `link` entries appear in
-  the header's Links menu and point to `/teach/<name>/`.
+- Synced files under `/teach/<name>/` are raw only; generated pages live under
+  `/t/`. `/t/` lists every `teach` mission (title + Why), and `/t/<name>/`
+  links its lessons and references. `link` entries appear in the header's Links
+  menu and point to `/teach/<name>/`. `/teach` redirects to `/t/`.
 - Synced files are committed, so CI builds without access to the sources.
 
 ## Consequences

@@ -31,3 +31,6 @@ A standalone, self-styled HTML file in a mission's `lessons/` folder.
 
 **Reference**:
 A standalone HTML file in a mission's `reference/` folder, used to look things up rather than to work through.
+
+**Mission page**:
+The generated page for one mission, listing its lessons and references. Distinct from the mission's synced files.

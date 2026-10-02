@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getMissions, type Mission } from '../../lib/missions';
+
+export function getStaticPaths() {
+  return getMissions().map(m => ({ params: { mission: m.name }, props: { mission: m } }));
+}
+
+const { mission: m } = Astro.props as { mission: Mission };
+const linkClass = 'text-(--color-primary) underline hover:text-(--color-primary-hover)';
+---
+<Layout title={m.title} description={m.why}>
+  <article>
+    <header class="mb-8">
+      <h1 class="font-serif text-3xl font-bold leading-snug mb-2">{m.title}</h1>
+      {m.why && <p class="text-(--color-muted) leading-relaxed">{m.why}</p>}
+    </header>
+
+    {m.lessons.length > 0 && (
+      <section class="mb-8">
+        <h2 class="font-serif text-xl font-semibold mb-2">Lessons</h2>
+        <ol class="list-decimal pl-5 space-y-1">
+          {m.lessons.map(l => <li><a href={l.href} class={linkClass}>{l.title}</a></li>)}
+        </ol>
+      </section>
+    )}
+
+    {m.references.length > 0 && (
+      <section class="mb-8">
+        <h2 class="font-serif text-xl font-semibold mb-2">References</h2>
+        <ul class="list-disc pl-5 space-y-1">
+          {m.references.map(r => <li><a href={r.href} class={linkClass}>{r.title}</a></li>)}
+        </ul>
+      </section>
+    )}
+
+    <footer class="mt-10 pt-6 border-t border-(--color-border)">
+      <a href="/t/" class="text-sm text-(--color-primary) hover:underline">← All missions</a>
+    </footer>
+  </article>
+</Layout>
