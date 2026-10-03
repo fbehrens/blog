@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Q&amp;A 2025 · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m6" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m6-b2-06-integration.html" title="Integration">‹</a>
+<div class="t"><div class="k">Modul 6 · Block 2</div><h1>Q&amp;A 2025</h1></div>
+<a class="ic" rel="next" href="m6-b2-07-qa-ankommen-2025.html" title="Q&amp;A ankommen 2025">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">3:06</a><a href="#s3">17:41</a><a href="#s4">27:48</a><a href="#s5">35:20</a><a href="#s6">51:52</a><a href="#s7">1:04:53</a><a href="#s8">1:16:40</a><a href="#s9">1:36:00</a><a href="#s10">1:49:32</a><a href="#s11">2:09:50</a><a href="#s12">2:29:10</a><a href="#s13">2:49:10</a><a href="#s14">3:08:20</a></nav></header>
+<main><div class="meta"><span>⏱ 3:23:17</span><span>14 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>3 min</small></time>
+<h2>Begrüßung und Rahmen der QA-Session (Modul 6)</h2><ul><li>Willkommen, vier Stunden Zeit für Austausch und gemeinsames Lernen; Elisa unterstützt technisch</li><li>Format: vier Einheiten, jeweils zuerst vorgelesene Fragen, dann offene Mikros</li><li>Die letzte Einheit ist für offene Fragen aus der supervidierten Übungssession reserviert</li></ul></section>
+<section id="s2"><time>3:06<small>15 min</small></time>
+<h2>Ankommen und Einstimmung</h2><ul><li>Check-in: Wie geht es euch? (müde, berührt, neugierig, erkältet …)</li><li>Modul 6 gilt als innerlich herausforderndes Modul, bringt aber viel Tiefe für die traumasensible Haltung</li><li>Mitgefühl für Claudia nach dem Verlust eines Elternteils</li><li>Geführte Ankommens-Übung: Atem beobachten, Becken als Schale, Wirbelsäule wie eine Pflanze, sanftes Schunkeln, Hirnstamm und Vagus, Ausrichtung für den Nachmittag, Verbundenheit der Gruppe</li></ul></section>
+<section id="s3"><time>17:41<small>10 min</small></time>
+<h2>Bindungsstile, Mix und Bindungssuche</h2><ul><li>Menschen zeigen je nach Kontext unterschiedliche <strong>Bindungsstile</strong>; man differenziert nicht nach Körper-, Gefühls- oder Gedankenebene, denn ein Bindungsstil umfasst alle Ebenen als Arbeitsmodell</li><li>Grafik im Skript und im Buch *Trauma und Beziehung*: Bindungssystem und Nervensystem</li><li>Bindungssuche sollte bei kleinen Kindern zeitnah erwidert werden (<strong>Koregulation</strong>); mit wachsender Selbstregulation sind Dosierung und Verzögerung möglich</li><li>Bindung darf kein Deckel für Emotionen sein; <strong>„good enough“</strong> (Winnicott) statt perfekt</li></ul></section>
+<section id="s4"><time>27:48<small>8 min</small></time>
+<h2>Grenzensetzen bei Kindern (Ellen)</h2><ul><li>Grenzen vermitteln Sicherheit und Orientierung und gehören zur sicheren Bindung</li><li>Eltern müssen nicht immer reguliert sein; entscheidend ist, dass Disregulation nicht die Regel ist, sonst Hilfe holen</li><li>Hinweise auf Literatur (Karl-Heinz Brisch), Thomas Harms und den Austausch in der Community</li></ul></section>
+<section id="s5"><time>35:20<small>17 min</small></time>
+<h2>Das Bindungssystem im Detail (Lia, Maya, Nina)</h2><ul><li>Das Bindungssystem ist lebenslang aktiv: Bindung aufnehmen, erhalten, wiederherstellen</li><li>Spektrum: reguliert – aktiviert – deaktiviert; Stress aktiviert zuerst die Bindungssuche, auch bei Erwachsenen</li><li>Überaktiviert bei toxischen Beziehungen, deaktiviert bei „ich brauche niemanden“</li><li>Entwicklungstrauma kann mit Lernschwächen wie Dyskalkulie zusammenhängen (nicht kausal zwingend)</li><li>Bindungsstress kann sich mit Überlebensstrategien verkoppeln</li><li>Pause</li></ul></section>
+<section id="s6"><time>51:52<small>13 min</small></time>
+<h2>Verlust, Umzug und Säugling auf der Intensivstation</h2><ul><li>Umzug ins Ausland (Insa): sichere Bindung in der Kernfamilie ist der wichtigste Resilienzfaktor; Kontakte und Ressourcenanker erhalten</li><li>Neugeborenes mit Herz-Lungen-Maschine (Nathalie): potenziell traumatisch für alle; implizites Gedächtnis speichert auch unter Sedierung; frühe traumatherapeutische Unterstützung für Eltern und Kind (Thomas Harms, Brisch)</li></ul></section>
+<section id="s7"><time>1:04:53<small>12 min</small></time>
+<h2>Introjekte und Anteilearbeit</h2><ul><li>Introjekte erkennt man mit wachsendem Wissen nach und nach, oft über verletzte Anteile; Frage: „Wo habe ich das zum ersten Mal gehört?“</li><li>Martins Einwand zum Begriff aus konstruktivistischer Sicht; Antwort: Introjektion ist ein aktiver, hochintelligenter neurobiologischer Prozess, kein Fremdanteil; bei DIS psychoedukativ feinfühlig vermitteln</li><li>Ebenbürtigkeit und Loyalität von Täterintrojekten</li><li>Spiegelneuronen und Resonanz; Glaubenssätze oft introjiziert</li></ul></section>
+<section id="s8"><time>1:16:40<small>19 min</small></time>
+<h2>Täter-Introjekte: Schutzfunktion (Silke)</h2><ul><li>Hinter dem Introjekt steht ein bedürftiger Anteil, der Schutz braucht</li><li>Das Introjekt beruhigt sich, wenn der verletzte Anteil Sicherheit durch das Erwachsenen-Ich bekommt</li><li>Anteile lösen sich nicht auf, sie werden umgebaut; keine Trauma-Lösung in drei Sekunden</li></ul></section>
+<section id="s9"><time>1:36:00<small>14 min</small></time>
+<h2>Täterschaft benennen und Mittäterschaft</h2><ul><li>Barbara: Haltung zu Täterschaft; sie muss benannt werden, kann erklärt, aber nicht entschuldigt werden; Benennen ist Schutz</li><li>Auch Opferschaft zu benennen ist wichtig</li><li>Susanne: Mutter, die nicht schützt, ist Mittäterin; das zu benennen ist für Klientinnen wichtig, Introjekte und Beziehungsmuster werden verständlich</li><li>Pause</li></ul></section>
+<section id="s10"><time>1:49:32<small>20 min</small></time>
+<h2>Wahrnehmung, Schutz und Parteilichkeit</h2><ul><li>Julia: Zweifel an der eigenen Wahrnehmung ist Teil der Symptomatik; Außenperspektive durch Beratungsstellen holen, Sorgen beim begleiteten Umgang benennen</li><li>David: Umgang mit destruktiven Klienten, die ihr Verhalten nicht reflektieren; es braucht Passung und Mögen, Fragen stellen, Wirkung transparent machen ohne abzuwerten</li><li>Parteilichkeit heißt, sich mit dem schwächsten Glied zu solidarisieren</li></ul></section>
+<section id="s11"><time>2:09:50<small>19 min</small></time>
+<h2>Parentifizierung und Vulnerabilität</h2><ul><li>Raphael: Bindungstrauma ist in allen Lebensphasen möglich; die Vulnerabilität ist bei hoher Abhängigkeit am größten</li><li>Corinna: Eigene Parentifizierung kann in der Begleitung anspringen; Zeit dehnen, innerlich zurücktreten, sich verankern und regulieren</li><li>Lia: Parentifizierung im Erwachsenenalter, gesunde Distanz oder Kontaktabbruch, Hinweis auf juristische Pflichten</li><li>Jana: Verantwortungsübernahme auch durch Familienmuster; Miriam: kultursensibles Begleiten</li><li>Pause</li></ul></section>
+<section id="s12"><time>2:29:10<small>20 min</small></time>
+<h2>Offene Fragen: Bindungsmuster, Paare und Sucht</h2><ul><li>Ramona: Erkenntnis über das eigene Bindungsmuster und Ghosting; Erkenntnisse entlasten, können aber alten Schmerz hervorbringen</li><li>Anne: Paar mit vermeidend/abhängig: Psychoedukation und gemeinsames Forschen; Fachseminar zu Paardynamiken</li><li>Stefanie: Traumasensible Suchtarbeit mit Aufstellungen; nur eigene innere Anteile aufstellen, keine Konfrontation mit Tätern, wertschätzend arbeiten, „Anteil, der die Sucht trägt“, niedrigkomplex und kleinschrittig</li></ul></section>
+<section id="s13"><time>2:49:10<small>19 min</small></time>
+<h2>Ressourcenteam, junge Generation und Introjekt vs. Anteil</h2><ul><li>Margrit: Ein Baum kann ein innerer Helfer sein; die Zahl fünf ist flexibel</li><li>Sandra: Junge Menschen mit Existenzängsten, Orientierungslosigkeit und Langeweile; Neugier, Werte, Regulation und ventrale Verbundenheit</li><li>Julia: Ein Introjekt ist eine Unterkategorie von Anteilen</li></ul></section>
+<section id="s14"><time>3:08:20<small>15 min</small></time>
+<h2>Abschlussrunde und Integration</h2><ul><li>Chat-Feedback: dankbar, verbunden, genährt; das neue Format gefällt</li><li>Geführte Integration: Ressourcen in die Schatztruhe, eigene Verletzlichkeit als Stärke der Begleitung, Verletztes liebevoll umarmen</li><li>Musik und Verabschiedung mit Dank an Elisa</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m6-b2-06-integration.html"><b>‹</b><span><small>Vorherige</small>Integration</span></a><a class="nx" rel="next" href="m6-b2-07-qa-ankommen-2025.html"><span><small>Nächste</small>Q&amp;A ankommen 2025</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Traumafolgen erkennen Übererregung · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m2" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m2-b2-01-landen-und-ankommen.html" title="Landen und ankommen">‹</a>
+<div class="t"><div class="k">Modul 2 · Block 2</div><h1>Traumafolgen erkennen Übererregung</h1></div>
+<a class="ic" rel="next" href="m2-b2-03-traumafolgen-erkennen-untererregung.html" title="Traumafolgen erkennen Untererregung">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">1:26</a><a href="#s3">3:21</a><a href="#s4">8:32</a><a href="#s5">17:00</a><a href="#s6">20:17</a><a href="#s7">25:24</a><a href="#s8">30:54</a><a href="#s9">34:44</a><a href="#s10">38:19</a><a href="#s11">40:16</a><a href="#s12">42:16</a></nav></header>
+<main><div class="meta"><span>⏱ 48:43</span><span>12 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>1 min</small></time>
+<h2>Begrüßung und Einführung</h2><ul><li>Thema: Traumafolgen erkennen, in diesem Video vor allem die <strong>Übererregung</strong> (später die Untererregung)</li><li>Wichtig, um Menschen besser begleiten zu können</li><li>Vorbereitung: einen haltgebenden äußeren und inneren Raum schaffen</li></ul></section>
+<section id="s2"><time>1:26<small>2 min</small></time>
+<h2>Warum Traumafolgen erkennen?</h2><ul><li>Voraussetzung für <strong>traumasensibles Arbeiten</strong>; Symptome sind manchmal subtil, manchmal offensichtlich</li><li>Hintergrundwissen hilft, die richtigen Angebote zu machen</li><li>Ziel: Menschen so begleiten, dass sie sich weiter aus ihren Symptomen herausheilen können und Retraumatisierung vermieden wird</li></ul></section>
+<section id="s3"><time>3:21<small>5 min</small></time>
+<h2>Selbstregulation, Nervensystem und Neuroplastizität</h2><ul><li>Symptome bei anderen <strong>und</strong> bei sich selbst wahrnehmen, um nicht in den Trauma-Strudel zu geraten</li><li>Das <strong>Stresstoleranzfenster</strong> hilft, Zustände zu verorten</li><li>Viele Menschen suchen Hilfe wegen mangelnder <strong>Selbstregulation</strong>; Menschen nicht als Diagnosen betrachten</li><li>Das Nervensystem „erzählt die Geschichten von damals“; zuhören, Sicherheit und Verbundenheit entwickeln</li><li><strong>Neuroplastizität</strong>: frühe Prägungen sind nicht in Stein gemeißelt</li></ul></section>
+<section id="s4"><time>8:32<small>8 min</small></time>
+<h2>Lernprozess, Entdecken und Meistern (Deb Dana)</h2><ul><li>Über Traumafolgen hinauszuwachsen ist ein Lernprozess mit Wechsel aus Lernen und Regulieren; das Stresstoleranzfenster wächst</li><li>Entdecken in der Sitzung (Koregulation), <strong>Meistern</strong> zwischen den Sitzungen</li><li>Dysregulierte Zustände ohne Gefahr erforschen: fühlt sich gefährlich an, ist es aber nicht mehr</li><li>Selbstheilungskräfte und <strong>Reorganisation</strong> statt Disorganisation; mehr Zeit im ventralvagalen Zustand – Erfolge feiern</li></ul></section>
+<section id="s5"><time>17:00<small>3 min</small></time>
+<h2>Wie Traumafolgen erkennen: Grundprinzip</h2><ul><li>Gilt in Gruppen, Einzelsetting und privat; den Blick schulen, klare Beobachter werden</li><li>Leitfrage: <strong>reguliert oder dysreguliert?</strong> Auch intensive Erregung kann reguliert sein</li><li>Überblick über Anzeichen der Übererregung (Sympathikus); es folgt ein ergänzendes Skript</li></ul></section>
+<section id="s6"><time>20:17<small>5 min</small></time>
+<h2>Körperliche Anzeichen der Übererregung</h2><ul><li>Symptome müssen nicht alle gleichzeitig auftreten; chronisch, wechselnd oder latent/getriggert</li><li>Innere und körperliche Unruhe, Zappeligkeit, Konzentrationsschwierigkeiten (Bezug zu ADHS)</li><li>Kribbeln, Zuckungen, Atemprobleme, Hyperventilation, Schreckhaftigkeit</li><li>Erhöhter Puls, Schwitzen bei kalten Händen/Füßen, angespannter Muskeltonus, chronische Schmerzen, Schlafstörungen</li><li>Nägelkauen, Knibbeln, Trichotillomanie</li><li>Übersteuerung von Exterozeption, Interozeption und Neurozeption</li></ul></section>
+<section id="s7"><time>25:24<small>6 min</small></time>
+<h2>Kognitive Anzeichen der Übererregung</h2><ul><li>Rasende, zwanghafte, <strong>intrusive</strong> Gedanken, Sorgen und Grübeln (Beispiel Julika)</li><li>Schnelle, unorganisierte Sprache, Redeschwall, Themensprünge</li><li>Probleme mit Merkfähigkeit, Planen und Struktur</li><li>Schwierigkeiten, Entscheidungen zu treffen, da im Übererregungszustand die Suche nach Gefahr/Sicherheit dominiert</li></ul></section>
+<section id="s8"><time>30:54<small>4 min</small></time>
+<h2>Emotionale Anzeichen der Übererregung</h2><ul><li>Flüchtige Emotionen, Stimmungsschwankungen</li><li>Euphorie, Manie, Grandiosität, inadäquate Leichtigkeit (nahe an Kompensation)</li><li>Angst, Panik, <strong>emotionale Flashbacks</strong>, Albträume</li><li>Reizbarkeit, Jähzorn, Wut, Aggressivität</li></ul></section>
+<section id="s9"><time>34:44<small>4 min</small></time>
+<h2>Antrieb und Motivation</h2><ul><li>Exzessives, zwanghaftes Streben (High-Performer), Kontrollzwang, Skrupellosigkeit/Verbissenheit</li><li>Perfektionismus und Funktionieren</li><li>Vermeidung, Süchte als Pseudoregulation, spirituelle Flucht</li><li>Fluchtartiger Rückzug</li></ul></section>
+<section id="s10"><time>38:19<small>2 min</small></time>
+<h2>Videobeispiel: Verzettelt sein</h2><ul><li>Humorvolle Szene mit Einkaufsliste und vergessenem Kellergang als Beispiel für eingeschränkte Merkfähigkeit im Alltag</li></ul></section>
+<section id="s11"><time>40:16<small>2 min</small></time>
+<h2>Wahrnehmung in der Übererregung</h2><ul><li>Hypersensibilität auf allen Sinneskanälen (Geräusche, Licht, Gerüche, Berührung, Temperatur, innere Reize)</li><li>Bezug zur <strong>Hochsensibilität</strong>: wird sie leidvoll und führt aus dem Toleranzfenster, kann sie ein Traumasymptom sein</li></ul></section>
+<section id="s12"><time>42:16<small>6 min</small></time>
+<h2>Soziale Interaktion und Demonstration mit Elisa</h2><ul><li>Der ventrale Vagus ist in der Übererregung beeinträchtigt: sozialer Rückzug, soziale Angst, Enthemmung, Unterbrechen, Themensprünge</li><li>Augenkontakt wird als bedrohlich gemieden, suchende Augen</li><li>Demonstration mit Elisa: ohne Rhythmus kein Kontakt, man kann nicht folgen</li><li>Ziel: koregulieren, um den ventralen Vagus und gemeinsamen Rhythmus zu fördern</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m2-b2-01-landen-und-ankommen.html"><b>‹</b><span><small>Vorherige</small>Landen und ankommen</span></a><a class="nx" rel="next" href="m2-b2-03-traumafolgen-erkennen-untererregung.html"><span><small>Nächste</small>Traumafolgen erkennen Untererregung</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

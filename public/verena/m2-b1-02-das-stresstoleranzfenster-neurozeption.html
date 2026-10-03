@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Das Stresstoleranzfenster Neurozeption · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m2" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m2-b1-01-in-ruhe-ankommen.html" title="In Ruhe ankommen">‹</a>
+<div class="t"><div class="k">Modul 2 · Block 1</div><h1>Das Stresstoleranzfenster Neurozeption</h1></div>
+<a class="ic" rel="next" href="m2-b1-03-neurozeption-und-sicherheit.html" title="Neurozeption und Sicherheit">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:10</a><a href="#s2">1:32</a><a href="#s3">3:34</a><a href="#s4">7:15</a><a href="#s5">10:58</a><a href="#s6">13:57</a><a href="#s7">21:11</a><a href="#s8">29:41</a><a href="#s9">31:36</a><a href="#s10">38:14</a><a href="#s11">42:01</a><a href="#s12">46:20</a><a href="#s13">52:23</a></nav></header>
+<main><div class="meta"><span>⏱ 53:26</span><span>13 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:10<small>1 min</small></time>
+<h2>Begrüßung und Einstimmung</h2><ul><li>Einstieg in das <strong>Stresstoleranzfenster</strong> und anschließend in die Ebenen und Qualitäten der menschlichen Wahrnehmung, durch die <strong>traumasensible Brille</strong></li><li>Einladung, auf eigene Impulse zu achten, Pausen zu machen und Notizen zu schreiben</li></ul></section>
+<section id="s2"><time>1:32<small>2 min</small></time>
+<h2>Das Stresstoleranzfenster (Window of Tolerance)</h2><ul><li>Metapher aus der Trauma-Forschung und <strong>Psychoedukation</strong>, bekannt gemacht von <strong>Daniel Siegel</strong></li><li>Beschreibt unterschiedliche Niveaus nervöser Erregung und vereinfacht das Nervensystem und seine Stressreaktionen</li><li>Wird in späteren Modulen noch komplexer</li></ul></section>
+<section id="s3"><time>3:34<small>4 min</small></time>
+<h2>Das einfache Schema: Chaos, Integration, Rigidität</h2><ul><li>Wie ein Hamburger/Sandwich: innerhalb des Fensters ist es &quot;genau richtig&quot; (<strong>Integration</strong>)</li><li>Oberhalb: von allem zu viel = <strong>Chaos</strong> (Übererregung)</li><li>Unterhalb: von allem zu wenig = <strong>Rigidität</strong>, Starre (Untererregung)</li><li>Übersetzung auf das Nervensystem: <strong>autonome Zustände</strong>, die nicht willentlich gesteuert, aber beeinflussbar sind (Regulationsfähigkeit)</li></ul></section>
+<section id="s4"><time>7:15<small>4 min</small></time>
+<h2>Merkmale der drei Erregungsbereiche</h2><ul><li><strong>Optimales Erregungsniveau</strong>: Wahrnehmung, Emotionen, Wachsamkeit und innere Bilder ausgeglichen und integriert</li><li><strong>Übererregung</strong>: übersteuerte Wahrnehmung, zu intensive Emotionen, anstrengende Wachsamkeit, überflutende innere Bilder und Erinnerungen</li><li><strong>Untererregung</strong>: Taubheit, emotionale Taubheit, zu wenig Wachheit und Aktivität</li></ul></section>
+<section id="s5"><time>10:58<small>3 min</small></time>
+<h2>Auswirkungen auf die Verarbeitung</h2><ul><li>Im optimalen Bereich: <strong>ungestörte Verarbeitung</strong></li><li>In Übererregung: <strong>desorganisierte Verarbeitung</strong>, führt häufig zu Traumafolge-Symptomen</li><li>In Untererregung: <strong>verminderte Verarbeitung</strong>, das Erlebte bleibt quasi unverarbeitet stecken</li><li>Nutzen des Schemas für die Psychoedukation mit Klientinnen und Klienten</li></ul></section>
+<section id="s6"><time>13:57<small>7 min</small></time>
+<h2>Sicherheit und das autonome Nervensystem</h2><ul><li>Frage, wie autonome Zustände entstehen; Begriffe <strong>Exterozeption, Interozeption, Neurozeption</strong></li><li><strong>Sicherheit</strong> ist zentral für die Balance, lässt sich nicht durch Affirmationen einreden, sondern ist ein biologisches, verkörpertes Erleben</li><li>Sicherheit entsteht, wenn die komplexe Wahrnehmung des Organismus aus den gesammelten Daten ableitet, dass keine Gefahr besteht</li><li>Das autonome Nervensystem scannt wie ein <strong>Radar</strong> ständig nach Gefahr, unbewusst und überlebenswichtig</li><li>Bei Gefahr wird Energie mobilisiert und man bewegt sich an den Rand des Fensters</li><li>Bewertungsmuster sind durch Kindheitserfahrungen geprägt; man muss das Nervensystem am Verstand vorbei erreichen</li></ul></section>
+<section id="s7"><time>21:11<small>9 min</small></time>
+<h2>Exterozeption: Wahrnehmung der Umwelt</h2><ul><li>Wahrnehmung der Außenwelt über alle Sinne (sehen, hören, riechen, schmecken, tasten)</li><li><strong>Orientierungsübungen</strong> adressieren die Exterozeption und geben dem Nervensystem Feedback, dass der Raum sicher ist</li><li>Kurze Übung: Sehen, Hören, Tasten; Anekdote vom &quot;feuerspeienden Drachen&quot; (Dachdecker mit Flammenwerfer)</li><li>Einfache Übungen wirken regulierend, da bei starker Über- oder Untererregung nur Einfaches erreichbar ist</li><li>Prägung in der Kindheit: übersteuert, gedämpft oder entspannt aufmerksam</li></ul></section>
+<section id="s8"><time>29:41<small>2 min</small></time>
+<h2>Beispiel: übersteuerte Exterozeption</h2><ul><li>Putzfrau der Eltern (Maria) mit starker Schreckhaftigkeit und spätem Bemerken, Fluchtgeschichte und viel Verlust</li><li>Liebevolle Person, aber übersteuerte Exterozeption als Folge früher Unsicherheit</li></ul></section>
+<section id="s9"><time>31:36<small>7 min</small></time>
+<h2>Interozeption: Wahrnehmung der Innenwelt</h2><ul><li>Beispiel der Oma mit panikartigen Attacken: Wahrnehmung verschwand nach innen, Körperzustände wurden als bedrohlich bewertet, was zu verstärkten Reaktionen führte (typischer <strong>Angstkreislauf</strong>); komplex traumatisiert</li><li>Interozeption und Exterozeption bilden <strong>Feedback-Schleifen</strong></li><li>Dazu gehören Herzschlag, Kreislauf, Zittern, Hunger, Durst, Erkältungsanzeichen</li><li>Eigenes Beispiel: Energie steigt nach oben; die <strong>Körperressource</strong> (auf dem Gesäß ankommen, Schwerkraft) hilft</li></ul></section>
+<section id="s10"><time>38:14<small>4 min</small></time>
+<h2>Übung zur Interozeption und Propriozeption</h2><ul><li>Geführtes Nachspüren: Was meldet mein Körper, und wie wirkt es auf die Präsenz?</li><li><strong>Propriozeption</strong>: Wahrnehmung der Lage des Körpers im Raum, der Stellung der Gelenke, von Schwere, Spannung, Kraft und Geschwindigkeit</li><li>Beispiele: <strong>Fingerleiter</strong></li></ul></section>
+<section id="s11"><time>42:01<small>4 min</small></time>
+<h2>Propriozeption erleben und fördern</h2><ul><li>Experimente mit geschlossenen Augen: Ohr greifen, Zeigefinger zusammenführen, Nasenspitze</li><li>Balancebrett oder Einbeinstand als Interventionen, um wieder ins Stresstoleranzfenster zu kommen</li><li>Bei frühem Trauma (wenig Körperkontakt, wenig Bewegung) oft unterentwickelt oder blockiert</li><li>Beispiel einer Frau im Meer, die das Bewegtwerden der Wellen als sehr unangenehm erlebte</li></ul></section>
+<section id="s12"><time>46:20<small>6 min</small></time>
+<h2>Videos: Propriozeption auf Höchstniveau</h2><ul><li>Klippenspringer und Mountainbike-Slopestyle als Beispiele für Schulung der Propriozeption</li><li>Eigene Körperreaktionen (Atem anhalten, Zusammenzucken) hängen eher mit <strong>Spiegelneuronen</strong> und Gefahrenerleben zusammen</li><li>Propriozeption entwickelt sich durch Körperkontakt und vielfältige Bewegungserfahrungen</li><li>Früher Schmerz kann die Interozeption beeinträchtigen: entweder gedeckelt oder übersteuert; Vertiefung im Thema <strong>Entwicklungstrauma</strong></li></ul></section>
+<section id="s13"><time>52:23<small>1 min</small></time>
+<h2>Abschluss und Pause</h2><ul><li>Einladung zum Nachspüren auf körperlicher, emotionaler, Verstandes- und Bilderebene</li><li>Zeit zum Verdauen und Integrieren, Verabschiedung bis zum nächsten Video</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m2-b1-01-in-ruhe-ankommen.html"><b>‹</b><span><small>Vorherige</small>In Ruhe ankommen</span></a><a class="nx" rel="next" href="m2-b1-03-neurozeption-und-sicherheit.html"><span><small>Nächste</small>Neurozeption und Sicherheit</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

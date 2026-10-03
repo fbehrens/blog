@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Q&amp;A 2025 · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m4" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m4-b2-06-regulations-ressource-vagusumarmung.html" title="Regulations-Ressource Vagusumarmung">‹</a>
+<div class="t"><div class="k">Modul 4 · Block 2</div><h1>Q&amp;A 2025</h1></div>
+<a class="ic" rel="next" href="m4-b2-08-qa-ankommen-2025.html" title="Q&amp;A ankommen 2025">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:10</a><a href="#s2">2:00</a><a href="#s3">17:00</a><a href="#s4">31:50</a><a href="#s5">42:30</a><a href="#s6">1:00:20</a><a href="#s7">1:10:20</a><a href="#s8">1:21:10</a><a href="#s9">1:35:20</a><a href="#s10">1:47:00</a><a href="#s11">1:59:40</a><a href="#s12">2:11:00</a><a href="#s13">2:24:40</a><a href="#s14">2:35:40</a><a href="#s15">2:49:20</a><a href="#s16">2:58:50</a><a href="#s17">3:07:10</a><a href="#s18">3:11:20</a></nav></header>
+<main><div class="meta"><span>⏱ 3:25:22</span><span>18 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:10<small>2 min</small></time>
+<p><strong>Begrüßung und Einstieg</strong> in die Modul-4-QA-Session</p><ul><li>Willkommen durch Verena und Support Elisa</li><li>Anliegen: traumasensibel begleiten, Raum halten, Heilsames begünstigen</li></ul></section>
+<section id="s2"><time>2:00<small>15 min</small></time>
+<h2>Befindlichkeitsrunde im Chat und ventral-vagales Ankommen</h2><ul><li>Teilnehmende teilen ihren Zustand: lebendig, müde, neugierig, krank u. a.</li><li>Geführte Übung: Recken und Strecken, Orientierung im Raum, <strong>Anker</strong>, Kontaktpunkte und Schwerkraft spüren</li><li>Selbstberührung mit Blick auf den <strong>Vagusnerv</strong> (Nacken, Herz, Bauch) zur <strong>Selbstregulation</strong></li></ul></section>
+<section id="s3"><time>17:00<small>15 min</small></time>
+<h2>Liegt Trauma im Ereignis?</h2><ul><li>Trauma ist nicht das Ereignis selbst, sondern die <strong>Traumafolgen</strong> bei misslungener Verarbeitung</li><li>Ereignis = <strong>potenziell traumatisch</strong> bzw. Schockereignis; nicht jeder wird traumatisiert</li><li><strong>Stresstoleranzfenster</strong>, traumatische Zange und Schockreaktionswelle (Abflauen nach 4–8 Tagen, max. 4 Wochen)</li><li>Bewältigung (Flucht/Kampf) ≠ Verarbeitung</li><li>Hinweis auf Traumadiagnostik als komplexes Feld (Buch von Jan Gysi)</li></ul></section>
+<section id="s4"><time>31:50<small>11 min</small></time>
+<h2>Verarbeitung, Prävention und Akuttrauma</h2><ul><li>Beispiel Kind mit Gewalterfahrung; Verarbeitung durch korrigierende Erfahrungen, Therapie, Sicherheit und Selbstregulation</li><li>Unterstützung nach Akutereignis; <strong>Debriefing</strong> in Gruppen ist nicht hilfreich</li><li>Prävention durch gutes Auffangen; fragmentierte Erinnerung wird durch <strong>Koregulation</strong> sortiert</li><li>Vielen ist unverarbeitetes Material nicht bewusst</li><li>Literaturtipp: Zeitschrift *Trauma und Gewalt*</li></ul></section>
+<section id="s5"><time>42:30<small>18 min</small></time>
+<h2>Perinatale und frühe Traumatisierung</h2><ul><li>Wenig eindeutige Forschung, überwiegend empirisch; Speicherung im <strong>impliziten Gedächtnis/Körpergedächtnis</strong></li><li>Individuelle Auswirkungen (Nähe, Versorgung, Neugier), Beispiele aus Praxis und Verenas eigener Geschichte</li><li>Gute Bindung hilft bei der Verarbeitung; Kaiserschnitt nicht pauschal traumatisierend</li><li>Medical Gaslighting, Ressourcentipps; Pause</li></ul></section>
+<section id="s6"><time>1:00:20<small>10 min</small></time>
+<h2>Ressourcen und PTBS/KPTBS vs. Depression</h2><ul><li>Empfehlungen: Katrin Boger, Thomas Harms (Buch, Kongress, Podcast)</li><li>Depressive Symptome sind ein breites Spektrum; <strong>Trauma-Kontext</strong> mitdenken, ohne zu verallgemeinern</li><li>Wichtigkeit <strong>interdisziplinärer Zusammenarbeit</strong>; Diagnosen sind trendabhängig</li><li>Coaches stellen keine Diagnosen</li></ul></section>
+<section id="s7"><time>1:10:20<small>11 min</small></time>
+<h2>Haut/Berührung, Entwicklungstrauma und Intelligenz</h2><ul><li>Webinar von Antonia Pfeiffer zu Haut und Berührung</li><li>Entwicklungstrauma kann zu hoher, oft inselartiger oder emotionaler Intelligenz führen (Anpassungsleistung, Suche nach Sicherheit)</li><li>Kann aber auch schwere kognitive Beeinträchtigungen bedeuten; Beispiel Adoptivkind</li></ul></section>
+<section id="s8"><time>1:21:10<small>14 min</small></time>
+<h2>Flashbacks: Entstehung, emotionale und körperliche Flashbacks</h2><ul><li>Flashback = Reaktivierung von <strong>Nicht-Verarbeitetem</strong> in einem neuronalen Netzwerk; Wiederholung stärkt es (Neuroplastizität, Trauma-Strudel)</li><li>Unterschied zu <strong>Abreaktion</strong>: diese geschieht in Sicherheit, mit dualem Gewahrsein</li><li>Aufflammende Erinnerungen später im Leben können Integration anzeigen</li><li>Emotionale Flashbacks: Buch von Pete Walker</li></ul></section>
+<section id="s9"><time>1:35:20<small>12 min</small></time>
+<h2>Intrusives Wiedererleben, Bilder und Zwang</h2><ul><li>Intrusiv = eindringend; Überbegriff für Gedanken, Gefühle, Bilder, Gerüche</li><li>Erinnerung ist subjektiv; entscheidend ist, was die Bilder im Menschen bewirken</li><li>Zwangsgedanken können traumaassoziiert sein, müssen aber nicht; Wunsch nach Trauma-Anamnese bei Zwang</li><li>Pause</li></ul></section>
+<section id="s10"><time>1:47:00<small>13 min</small></time>
+<h2>Flashback vs. Retraumatisierung</h2><ul><li>Flashback ist abgegrenzt und endet; <strong>Retraumatisierung</strong> ist ein anhaltender Zustand wie nach dem Ursprungserleben, mit Dekompensation</li><li>Beispiel Klientin nach Atem-Retreat, die in Klinik musste</li><li>Trauma-Sog (Medusa-Effekt); anhaltende Dissoziation über Monate deutet auf Retraumatisierung</li><li>Aufdeckende Methoden (z. B. Familienaufstellung) sind riskant</li></ul></section>
+<section id="s11"><time>1:59:40<small>11 min</small></time>
+<h2>Glaubenssätze, Reinszenierung und unseriöse Heilversprechen</h2><ul><li>Traumasensibel heißt sicher arbeiten, nicht zwingend tief</li><li><strong>Reinszenierung</strong> als Überlebensstrategie mit hohem Preis</li><li>Kritik an Coaches, die Trauma in wenigen Wochen heilen wollen oder Loslassen fordern</li></ul></section>
+<section id="s12"><time>2:11:00<small>14 min</small></time>
+<h2>Unterschied Coaching und Therapie</h2><ul><li>Therapie: <strong>Traumakonfrontation</strong> und Durchprozessieren; Coaching: Sicherheit, Koregulation, Psychoedukation, Ressourcen, Anteile- und Imaginationsarbeit</li><li>Hinweise auf Therapiebedarf: wiederkehrende Flashbacks, Überforderung des Coaches; dann weitervermitteln</li><li>Vorwissen der Klienten ist keine Voraussetzung</li></ul></section>
+<section id="s13"><time>2:24:40<small>11 min</small></time>
+<h2>Neuroplastizität und Trauer um Verpasstes</h2><ul><li>Nicht Bagatellisieren; <strong>Trauerprozess</strong> zulassen und zugleich Veränderungsmöglichkeiten offenhalten</li><li>Beispiel Klientin mit 20 % Potenzial</li><li>Unterschied zwischen Trauern dürfen und getröstet werden</li><li>Pause mit Musik</li></ul></section>
+<section id="s14"><time>2:35:40<small>14 min</small></time>
+<h2>Dekompensation, Burnout, Autoimmunerkrankungen und Gähnen</h2><ul><li><strong>Dekompensation</strong>: Kompensationsstrategien brechen zusammen, oft im höheren Alter oder bei Belastungen; wird oft als Burnout gesehen; wichtige Zielgruppe für Coaching</li><li>Autoimmunerkrankungen häufiger bei frühem Stress (<strong>ACE-Studie</strong>)</li><li>Gähnen als Zeichen ventral-vagaler Aktivierung und Stressabbau</li></ul></section>
+<section id="s15"><time>2:49:20<small>10 min</small></time>
+<h2>Sekundärtraumatisierung und Selbstfürsorge</h2><ul><li>Risiko sinkt mit Arbeit im regulierten Zustand, Verankerung im Hier und Jetzt</li><li>Gefahr durch Überwältigung/Ohnmacht bei rein narrativen Methoden</li><li>Verbindliche Selbstfürsorge, Supervision, begrenzte Klientenzahl (Verenas Praxis: max. 4 pro Tag)</li></ul></section>
+<section id="s16"><time>2:58:50<small>8 min</small></time>
+<h2>Sichere Arbeit mit Gefühlen</h2><ul><li>Arbeit mit Gefühlen ermöglicht Integration ohne Traumakonfrontation</li><li>Traumanahe Gefühle sind Eingang in den Trauma-Strudel; Beobachterperspektive und <strong>Safety first</strong></li><li>Übungsanweisungen mit Sicherheitsaspekten befolgen</li><li>Ressourcen: Melanie Büttner (sexuelles Trauma)</li></ul></section>
+<section id="s17"><time>3:07:10<small>4 min</small></time>
+<h2>Organisatorisches und Abschlussrunde</h2><ul><li>Befindlichkeits-Check im Chat, Anekdote zu &quot;K.O.-Regulation&quot;</li><li>Offene Fragen in Integrationswoche einreichen</li><li>Ressourcenliste im Kursbereich, Video zur Anatomie des Vagusnervs</li></ul></section>
+<section id="s18"><time>3:11:20<small>14 min</small></time>
+<h2>Abschlussübung und Verabschiedung</h2><ul><li>Geführte Integration: Nachklang, innere Quelle, Würdigung der eigenen Räume, Verbundenheit, sanfte Selbstberührung</li><li>Abschlusslied (&quot;I am light&quot;), Dank und Verabschiedung ins Wochenende</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m4-b2-06-regulations-ressource-vagusumarmung.html"><b>‹</b><span><small>Vorherige</small>Regulations-Ressource Vagusumarmung</span></a><a class="nx" rel="next" href="m4-b2-08-qa-ankommen-2025.html"><span><small>Nächste</small>Q&amp;A ankommen 2025</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

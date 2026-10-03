@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Traumabedingte Glaubenssysteme · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m3" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m3-b1-04-neuroplastizitaet-und-veraenderung.html" title="Neuroplastizität und Veränderung">‹</a>
+<div class="t"><div class="k">Modul 3 · Block 1</div><h1>Traumabedingte Glaubenssysteme</h1></div>
+<a class="ic" rel="next" href="m3-b1-06-regulationsuebung-die-schmetterlingsumarmung.html" title="Regulationsübung die Schmetterlingsumarmung">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">1:06</a><a href="#s3">4:17</a><a href="#s4">6:49</a><a href="#s5">14:02</a><a href="#s6">18:52</a><a href="#s7">25:20</a><a href="#s8">31:48</a><a href="#s9">37:43</a><a href="#s10">46:16</a></nav></header>
+<main><div class="meta"><span>⏱ 46:55</span><span>10 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>1 min</small></time>
+<p><strong>Begrüßung und Einführung</strong> ins Thema traumabedingte Glaubenssätze</p><ul><li>Wichtiges Feld, das traumasensible von nicht traumasensibler Arbeit unterscheidet</li></ul></section>
+<section id="s2"><time>1:06<small>3 min</small></time>
+<h2>Warum Glaubenssysteme wichtig sind: die Überlebensstrategie, sich selbst zu verleugnen</h2><ul><li>Traumabedingte Überlebensstrategien verdecken das wahre Wesen, die wahren Bedürfnisse und Kräfte</li><li>Wer die Glaubenssätze kennt, kennt die Vergangenheit – auch ohne Details der Geschichte</li><li>Das Erkennen vermeidet, an soliden <strong>neuronalen Netzwerken</strong> vorbeizuarbeiten</li></ul></section>
+<section id="s3"><time>4:17<small>3 min</small></time>
+<h2>Was sind traumabedingte Glaubenssysteme?</h2><ul><li>Ein Komplex aus <strong>Gefühlen, Überzeugungen, Empfindungen und Bewertungen</strong>, nicht nur ein kognitiver Satz</li><li>In der Kindheit, auch vorsprachlich, entstanden; an Traumaenergie gebunden und daher besonders solide („sechsspurige Autobahnen“)</li></ul></section>
+<section id="s4"><time>6:49<small>7 min</small></time>
+<h2>Entstehung: Anpassung, Internalisierung und implizite Erinnerung</h2><ul><li>Kinder sind <strong>Meister der Anpassung</strong>, das sichert Überleben und soziale Sicherheit</li><li>Frühe <strong>implizite Erinnerungen</strong> sind wortlos, fühlen sich aber wie Identität und Wahrheit an</li><li>Deshalb ist <strong>körperorientierte Arbeit</strong> (bottom-up, top-down) nötig; kognitive Ansätze und herkömmliches Glaubenssatz-Coaching reichen für diese Ebene nicht</li></ul></section>
+<section id="s5"><time>14:02<small>5 min</small></time>
+<h2>Wohlwollende vs. bedrohliche Welt und Internalisierung</h2><ul><li>In einer liebevollen Umgebung führt Anpassung zu harmonischem Verbundensein</li><li>In einer bedrohlichen Welt passen sich Kinder ebenso an und nehmen das Erlebte nach innen</li><li>Für Kinder ist das Erlebte immer <strong>Realität</strong> (Weihnachtsmann, Ironie, Botschaften über sich selbst)</li></ul></section>
+<section id="s6"><time>18:52<small>6 min</small></time>
+<h2>Vom frühen Erleben zu Selbst- und Weltbild; Arbeit am Kern</h2><ul><li>Empfindungen werden später mit Worten und Assoziationen zu Selbst- und Weltbild</li><li>Viele negative Reaktionen deuten auf einen Schmerzpunkt hin, der auf vieles übertragen wird</li><li>Nicht an einzelnen Glaubenssätzen herumdoktern, sondern den <strong>Kern („Urwunde“)</strong> berühren, dann verändern sich die Ausläufer</li><li>Eigene Glaubenssätze reflektieren, um nicht auf Klienten zu projizieren (Worksheets, Partnerübungen folgen)</li></ul></section>
+<section id="s7"><time>25:20<small>6 min</small></time>
+<h2>Beispiele traumabedingter Glaubenssätze und Spürübung</h2><ul><li>„Ich bin nicht erwünscht und willkommen“, „Ich muss es alleine schaffen“, „Ich bin nicht gut genug“, „Die Welt ist gefährlich“ u. a.</li><li>Jeder Satz ist mit Körperreaktionen, Gefühlen und Assoziationen verknüpft; enthält den Teufelskreis negativer Erwartungen</li><li>Haltung: nicht verurteilen, die Sätze waren sinnvoll und hilfreich</li><li>Sie beziehen sich auf die Beziehung zu sich selbst oder zu anderen</li></ul></section>
+<section id="s8"><time>31:48<small>6 min</small></time>
+<h2>Das Dilemma: Veränderungswunsch und Vermeidung</h2><ul><li>Glaubenssysteme sind an mobilisierte <strong>Überlebensenergie</strong> gekoppelt, daher unangenehm („220-Volt-Kabel“)</li><li>Menschen wollen heilen und gleichzeitig nicht dorthin zurück</li><li>Druck wie „wo ein Wille ist, ist ein Weg“ ist nicht traumasensibel</li><li>Die Sehnsucht nach <strong>Hinwendung und Heilung</strong> ist die stärkere, nachhaltigere Kraft; Hinwendung bringt <strong>Energiegewinn</strong>, gebundene Energie fließt in den Lebensfluss zurück</li></ul></section>
+<section id="s9"><time>37:43<small>9 min</small></time>
+<h2>Prozessleitfaden: Wie wir uns zuwenden</h2><ul><li><strong>Bewusstwerdung</strong> (präfrontaler Kortex) und Körperbewusstsein (implizite Erinnerung), top-down und bottom-up</li><li>Erforschen von Körperwahrnehmungen, inneren Bildern, Verhaltensmustern, Gefühlen, ohne zu urteilen</li><li><strong>Pendeln</strong> zwischen Erforschtem und Ressourcen, auch über Sitzungen hinweg; <strong>ventrale Momente</strong> (Deb Dana)</li><li>So entsteht Raum für den Schmerz, für Ressourcen, fürs Ankommen im Hier und Jetzt und die gestaltbare Zukunft</li><li>Später kommt die Anteilearbeit; sanfte Schritte bewirken tiefe Transformation</li></ul></section>
+<section id="s10"><time>46:16<small>1 min</small></time>
+<h2>Abschluss</h2><ul><li>Einladung, das Gehörte mit dem Integrationsvideo oder auf eigene Weise sacken zu lassen und sich Ruhe zu gönnen</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m3-b1-04-neuroplastizitaet-und-veraenderung.html"><b>‹</b><span><small>Vorherige</small>Neuroplastizität und Veränderung</span></a><a class="nx" rel="next" href="m3-b1-06-regulationsuebung-die-schmetterlingsumarmung.html"><span><small>Nächste</small>Regulationsübung die Schmetterlingsumarmung</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Bindung und Trauma Teil 1 das Bindungssystem und Bindungsstile · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m6" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m6-b1-03-bindung-und-trauma-teil-1-die-basis-fortsetzung.html" title="Bindung und Trauma Teil 1 die Basis Fortsetzung">‹</a>
+<div class="t"><div class="k">Modul 6 · Block 1</div><h1>Bindung und Trauma Teil 1 das Bindungssystem und Bindungsstile</h1></div>
+<a class="ic" rel="next" href="m6-b1-05-bindung-und-trauma-teil-1-das-bindungssystem-und-bindungsstile-fortsetzung.html" title="Bindung und Trauma Teil 1 das Bindungssystem und Bindungsstile Fortsetzung">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">1:22</a><a href="#s3">4:58</a><a href="#s4">8:17</a><a href="#s5">16:15</a><a href="#s6">18:45</a><a href="#s7">22:45</a><a href="#s8">26:06</a><a href="#s9">35:10</a><a href="#s10">37:47</a><a href="#s11">44:54</a><a href="#s12">54:35</a><a href="#s13">1:04:11</a></nav></header>
+<main><div class="meta"><span>⏱ 1:07:58</span><span>13 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>1 min</small></time>
+<h2>Begrüßung und Einführung in die Imaginationsreise</h2><ul><li>Vor der Theorie folgt eine Imaginationsreise (ca. 20 Minuten), die zugleich Experiment und Übung zum eigenen <strong>Bindungssystem</strong> ist</li><li>Inspiriert von <strong>Diane Poole Heller</strong></li><li>Die Worte sind eine Einladung, jeder darf seinen eigenen Weg gehen</li></ul></section>
+<section id="s2"><time>1:22<small>4 min</small></time>
+<h2>Vorbereitung: Person oder Wesen der Sicherheit finden</h2><ul><li>Rückblick auf das Leben: Wer hat mir Sicherheit gegeben (Mensch, Tier oder Fantasiefigur)?</li><li>Bequeme Position finden, Augen schließen oder ruhen lassen</li><li>Schwerkraft spüren, Muskelspannung abgeben, in die Mitte kommen</li></ul></section>
+<section id="s3"><time>4:58<small>3 min</small></time>
+<h2>Bild eines schlafenden Wesens</h2><ul><li>Vorstellung eines selig schlummernden Menschenbabys oder Tieres</li><li>Ruhe, Frieden und gleichmäßiger Atem; Wirkung auf den eigenen Körper beobachten, ohne zu bewerten</li></ul></section>
+<section id="s4"><time>8:17<small>8 min</small></time>
+<h2>Wohlwollender Blick der sicheren Person</h2><ul><li>Die Person oder das Wesen der Sicherheit taucht in angenehmer Nähe und Distanz auf</li><li>Sie schaut bedingungslos freundlich und wohlwollend, will nichts von dir</li><li>Dosierung selbst regulieren, Körperempfindungen und Bewegungsimpulse wahrnehmen</li><li>Botschaften empfangen und zurückgeben, Hände zur Verstärkung auf den Körper legen</li><li>Gedanke: Du hast es bedingungslos verdient, freundlich gesehen zu werden</li><li>Verabschiedung des Wesens</li></ul></section>
+<section id="s5"><time>16:15<small>2 min</small></time>
+<h2>Rückkehr, Einordnung und Ausblick</h2><ul><li>Zurückorientieren im Raum, Augen öffnen</li><li>Die Übung als <strong>Ressource</strong> und Training im Empfangen von Wohlwollen; relevant bei Selbstwertzweifeln durch fehlende oder unzuverlässige Zuwendung in der Kindheit</li><li>Ziel der Bindungstheorie: Prägungen und Bindungstraumatisierungen verstehen, Menschen angemessen begleiten, <strong>nicht</strong> in Schubladen stecken</li></ul></section>
+<section id="s6"><time>18:45<small>4 min</small></time>
+<h2>Bindungsstile als inneres Arbeitsmodell</h2><ul><li>Wiederholte Erfahrungen bilden neuronale Netzwerke (innere Anteile); frühe Bindungserfahrungen prägen das <strong>implizite Gedächtnis</strong></li><li>Bindungsstil = unbewusstes <strong>inneres Arbeitsmodell</strong>, steuert Verhalten und Interpretationen in Beziehungen</li><li>Vier Stile: <strong>sicher</strong>, <strong>unsicher-vermeidend</strong>, <strong>unsicher-ambivalent/ängstlich</strong>, <strong>desorganisiert</strong>; Bindungsstörungen sind davon getrennt (Pathologie)</li></ul></section>
+<section id="s7"><time>22:45<small>3 min</small></time>
+<h2>Verteilung in der Bevölkerung</h2><ul><li>Ca. 60–70 % sicher gebunden (Therapeuten bezweifeln das teils)</li><li>Vermeidend ca. 20 %, ambivalent ca. 10 %, desorganisiert 3–5 %</li><li>Modell stammt aus klinischen Studien mit Eltern und Kindern; wir bleiben bei der Essenz</li></ul></section>
+<section id="s8"><time>26:06<small>9 min</small></time>
+<h2>Grobe Einteilung: Bindungssystem und Nervensystem</h2><ul><li>Spektrum: Deaktivierung – Balance – Hyperaktivität</li><li><strong>Sicher</strong>: balanciert, Nähe und Distanz im Wechsel, tiefe Bindungen, Konfliktfähigkeit ohne Bindungsabbruch, Integrität, differenzierte Wahrnehmung des Gegenübers (ventraler Vagus)</li><li><strong>Vermeidend</strong>: deaktiviert, Nähe wird vermieden, Öffnen schwer, distanziert, Abwertung, emotionslos (untererregt)</li><li><strong>Ängstlich/ambivalent</strong>: hyperaktiviert, Klammern, Verlustangst, Bedürfnis nach Bestätigung, Idealisierung, Eifersucht</li><li>Heilungsweg: Ängstliche brauchen mehr <strong>Selbstregulation</strong>, Vermeidende mehr <strong>Koregulation</strong></li><li>Besser als Auswendiglernen: Prinzip Über-/Untererregung nutzen</li></ul></section>
+<section id="s9"><time>35:10<small>3 min</small></time>
+<h2>Mischformen, Anteile und Spektren</h2><ul><li>Die meisten tragen einen Mix aus Bindungsstilen, je nach Kontext oder aktivem Anteil (z. B. inneres Kind)</li><li>Arbeiten mit Spektren statt Kategorien; übergeordnete Prinzipien: Nervensystem, Anteile, Überlebensreaktionen</li><li>Nutzen: eigene Muster erkennen und Klienten mit passenden <strong>korrigierenden Erfahrungen</strong> abholen</li></ul></section>
+<section id="s10"><time>37:47<small>7 min</small></time>
+<h2>Metapher Fundament der Persönlichkeit</h2><ul><li><strong>Sicher</strong>: breites, solides Fundament; Schutz, Resilienz, großes Toleranzfenster</li><li><strong>Unsicher</strong>: schmaleres, weicheres Fundament; höhere Vulnerabilität, braucht liebevolle Zuwendung; Stil ist kein Stigma, sondern intelligente Überlebensstrategie</li><li><strong>Desorganisiert</strong>: Fundament mit Löchern; Übergang zur Pathologie (Brisch), oft nach langer schwerer Traumatisierung; erschwert tragfähige Beziehungen, auch zu inneren Anteilen; Veränderung durch Neuroplastizität möglich</li><li><strong>Bindungsstörung</strong>: Fundament wie ein Sumpf; frühe manifeste Psychopathologie nach schwerer Gewalt, verwirrtes Nervensystem</li></ul></section>
+<section id="s11"><time>44:54<small>10 min</small></time>
+<h2>Entstehung des sicheren Bindungsstils</h2><ul><li>Liebevolle Energie fließt in beide Richtungen, die Bindungssuche wird erwidert</li><li>Folge: Wechsel zwischen Bindung und Autonomie (Bindungs-Explorations-Wippe), bei sich sein und verbunden sein</li><li>Die Anlage zur sicheren Bindung ist in jedem Menschen vorhanden und kann sich später entfalten</li><li>Merkmale: Koregulation gelingt, reale Sicherheit, Genährtsein, Selbstvertrauen, <strong>Urvertrauen</strong>, Resilienz</li><li>Für Begleitende: Ein Raum sicherer Bindungserfahrung ist heilsam wie nichts anderes; die eigene Person und das eigene Nervensystem nicht unterschätzen</li></ul></section>
+<section id="s12"><time>54:35<small>10 min</small></time>
+<h2>Entstehung des vermeidenden Bindungsstils</h2><p>Drei Varianten, oft kombiniert:</p><ul><li>Aktive <strong>Zurückweisung</strong> der Bindungssuche (&quot;Stell dich nicht so an&quot;), auch Vertrösten</li><li>Bindungsperson <strong>nicht verfügbar</strong> (Depression, Sucht, Dissoziation), Bindungssuche läuft ins Leere wie beim Still-Face-Experiment</li><li>Zuwendung nur <strong>an Bedingungen geknüpft</strong> (Leistung, Ordnung, Noten), Überzeugung: Ich bin nur willkommen, wenn ich etwas leiste</li><li>Folge: Kind bleibt unversorgt, Einsamkeit, dorsaler Vagus greift, Selbstfokus steigt</li><li>Strategien: &quot;Ich mache es besser selbst&quot;, einsamer Wolf, Hochfunktionalität; das Bindungssystem resigniert (Scheinautonomie)</li></ul></section>
+<section id="s13"><time>1:04:11<small>4 min</small></time>
+<h2>Folgen, Narzissmus-Hinweis und Stressverhalten; Pause</h2><ul><li>Verbindung zu narzisstischen Tendenzen: vor einer Diagnose nach dem Bindungsstil fragen</li><li>Vermeidung von Bindung, Panzerung, &quot;Ich verlasse dich, bevor du mich verlässt&quot;, kurze Beziehungen</li><li>Laut Diane Poole Heller zeigen sich frühe Bindungsstile etwa nach einem Jahr in einer Beziehung</li><li>Unter Stress greifen frühe Stile: Rückzug versus Klammern (&quot;Wir müssen reden&quot;)</li><li>Pause und Verabschiedung</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m6-b1-03-bindung-und-trauma-teil-1-die-basis-fortsetzung.html"><b>‹</b><span><small>Vorherige</small>Bindung und Trauma Teil 1 die Basis Fortsetzung</span></a><a class="nx" rel="next" href="m6-b1-05-bindung-und-trauma-teil-1-das-bindungssystem-und-bindungsstile-fortsetzung.html"><span><small>Nächste</small>Bindung und Trauma Teil 1 das Bindungssystem und Bindungsstile Fortsetzung</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

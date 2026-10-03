@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Systemische Prinzipien in der traumasensiblen Begleitung Teil 4 · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m7" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m7-b1-04-systemische-prinzipien-in-der-traumasensiblen-begleitung-teil-3.html" title="Systemische Prinzipien in der traumasensiblen Begleitung Teil 3">‹</a>
+<div class="t"><div class="k">Modul 7 · Block 1</div><h1>Systemische Prinzipien in der traumasensiblen Begleitung Teil 4</h1></div>
+<a class="ic" rel="next" href="m7-b1-06-integration.html" title="Integration">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:10</a><a href="#s2">1:13</a><a href="#s3">5:04</a><a href="#s4">9:20</a><a href="#s5">11:01</a><a href="#s6">15:17</a><a href="#s7">19:16</a><a href="#s8">21:56</a><a href="#s9">24:19</a><a href="#s10">28:20</a><a href="#s11">32:24</a><a href="#s12">38:36</a></nav></header>
+<main><div class="meta"><span>⏱ 40:02</span><span>12 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:10<small>1 min</small></time>
+<h2>Begrüßung und Einstimmung</h2><ul><li>Einladung, sich als Coach bzw. Begleiter:in wieder bewusst einzuchecken und präsent zu werden</li><li>Thema des Videos: die interaktiven Phänomene <strong>Projektion</strong> und <strong>Übertragung</strong></li><li>Anknüpfung an Identifikation und Übernahme von Gefühlen</li></ul></section>
+<section id="s2"><time>1:13<small>4 min</small></time>
+<h2>Projektion: Wie sie funktioniert</h2><ul><li>Leitsatz: *Was nicht reflektiert wird, wird projiziert.*</li><li>Projiziert wird nur, was uns <strong>unbewusst</strong> ist (Inhalt des &quot;Rucksacks&quot; des Unterbewusstseins: introjizierte Werte, Normen, Glaubenssätze, Gefühle, Symptome)</li><li>Wie ein Projektor auf eine Projektionsfläche (anderer Mensch): Die Wut ist entweder beim anderen oder der andere löst sie in mir aus</li><li>Beispiel: Wut beim Autofahren auf langsame Fahrer</li></ul></section>
+<section id="s3"><time>5:04<small>4 min</small></time>
+<h2>Beispiele für Projektion und Relevanz in der Begleitung</h2><ul><li>Klientin fühlt sich plötzlich unsicher, deutet einen Blick der Begleiterin als abwertend: aktiviertes Nervensystem sucht Gründe im Außen</li><li>Unbewusste Verlassenheitsangst: &quot;Du wirst mich verlassen, du kommst schon wieder zu spät&quot;</li><li>Unbewusste Überzeugung &quot;Ich werde immer benachteiligt&quot;: Projektion auf Geflüchtete</li><li>Unbewusste Anspannung: Lärm der Kinder, Nachbarn</li></ul></section>
+<section id="s4"><time>9:20<small>2 min</small></time>
+<h2>Parabel von Paul Watzlawick (Der Hammer)</h2><ul><li>Ein Mann will sich einen Hammer leihen und steigert sich in Unterstellungen über den Nachbarn hinein</li><li>Am Ende schreit er den Nachbarn an: &quot;Behalten Sie sich Ihren Hammer, Sie Rüpel!&quot;</li><li>Anschauliches Beispiel für Projektion; wir sind oft Projektionsfläche oder selbst Projizierende</li></ul></section>
+<section id="s5"><time>11:01<small>4 min</small></time>
+<h2>Übertragung</h2><ul><li>Anders als reine Projektion werden <strong>Beziehungsdynamiken</strong> und innere Bilder von Menschen aus der Vergangenheit auf andere übertragen (&quot;Du bist wie mein Vater&quot;)</li><li>Unbewusst, enthält ein Beziehungsangebot; im Traumakontext auch Suche nach sicheren, bekannten Beziehungskontexten</li><li>Kann zu <strong>Reinszenierungen</strong> und Konflikten führen; korrigierende Erfahrungen werden erschwert, weil die Person von der Übertragung &quot;umnebelt&quot; wird</li><li>Auf Übertragung folgt oft <strong>Gegenübertragung</strong>: Menschen reagieren auf das, was auf sie übertragen wird</li></ul></section>
+<section id="s6"><time>15:17<small>4 min</small></time>
+<h2>Übertragung und Gegenübertragung in der Praxis</h2><ul><li>Beispiel: Klientin misstraut der Therapeutin wegen der begrenzten Stunde (Muster aus der Kindheit); Therapeutin überzieht zunehmend</li><li>Eigenes Beispiel: Klientin mit Vorerfahrungen schlechter Therapien; Gefühl, ja keinen Fehler machen zu dürfen</li><li>Wichtig: Übertragungs- und Gegenübertragungsdynamiken regelmäßig überprüfen und sich selbst reflektieren</li></ul></section>
+<section id="s7"><time>19:16<small>3 min</small></time>
+<h2>Eigene Übertragung der Begleiterin und Umgang damit</h2><ul><li>Eigene Unsicherheit (&quot;Bin ich gut genug?&quot;) kann zur unbewussten Erwartung führen, dass es Klient:innen am Stundenende besser geht; feinfühlige Klient:innen spüren den Druck</li><li>Ehrliche Selbstreflexion macht exzellente Begleiter:innen</li><li>Übertragung ansprechen und bewusst machen, um korrigierende Erfahrungen zu ermöglichen (Beispiel für eine Formulierung gegenüber der Klientin)</li></ul></section>
+<section id="s8"><time>21:56<small>2 min</small></time>
+<h2>Heilungsprinzip: Verantwortung bei jedem selbst</h2><ul><li>Niemand kann die Wunden eines anderen heilen, aber jeder kann die eigenen heilen und Unterstützung empfangen</li><li>Für andere zu tragen heißt nicht, ihnen Gutes zu tun; es kann ihnen etwas wegnehmen, was sie zur Heilung brauchen</li><li>Stärken heißt: an die Kraft des anderen glauben, bei sich bleiben und doch nah sein, Anteil nehmen ohne sich einzumischen</li></ul></section>
+<section id="s9"><time>24:19<small>4 min</small></time>
+<h2>Prinzip des guten Platzes</h2><ul><li>In jedem System hat jedes zugehörige Element seinen Platz: im eigenen Verantwortungsbereich, sichtbar, in der eigenen Energie, mit Sicherheit (wie ein Mobile im Gleichgewicht)</li><li>Frühe Bindungstraumatisierungen verwirren das Gefühl, einen Platz zu haben; Anpassung als Sicherheitssuche, bis zum Zweifel an der Existenzberechtigung</li><li>Folgen: Neigung zur <strong>Symbiose</strong> (&quot;Dein Platz ist mein Platz&quot;) oder zur <strong>Bindungslosigkeit</strong></li></ul></section>
+<section id="s10"><time>28:20<small>4 min</small></time>
+<h2>Den eigenen Platz einnehmen</h2><ul><li>Bewusstwerdung ermächtigt; der <strong>Körper</strong> ist zentral (Schwerkraft spüren, im Hier und Jetzt ankommen)</li><li>Beziehung ohne Verschmelzen oder Selbstverlassen, die eigene Wahrheit sprechen</li><li>Wenn ich meinen Platz nicht einnehme, wackelt das Gefüge; das ist heilsam für alle</li><li>Verweis auf das Worksheet mit Reflexionsfragen (Selbstwert, Loyalitäten, Schuldgefühle, ggf. Platz im Job verändern)</li><li>Wer in sich ankommt, muss den Platz nicht mehr draußen suchen</li></ul></section>
+<section id="s11"><time>32:24<small>6 min</small></time>
+<h2>Prinzip Integration</h2><ul><li>Vorlesen eines Buchzitats: Trauma fragmentiert die Innenwelt; Heilung heißt Wiederherstellen von Verbundenheit</li><li>Heilung auf drei Ebenen: <strong>Körper und Nervensystem</strong>, <strong>Beziehung zu sich selbst</strong>, <strong>Beziehung zu anderen und zur Welt</strong> (Begleiter:innen als vertrauenswürdige Menschen)</li><li>Integration bedeutet nicht vergessen oder ungeschehen machen, sondern dass Abgespaltenes seinen <strong>guten Platz</strong> bekommt; Anteilearbeit unterstützt dabei</li></ul></section>
+<section id="s12"><time>38:36<small>1 min</small></time>
+<h2>Schlusswort und Ausblick</h2><ul><li>Es geht immer um Integration, nicht um Loswerden oder schnelles Verändern: nachhaltige Heilung, Stärkung und <strong>posttraumatisches Wachstum</strong></li><li>Ende der Theorieeinheit: Integrationsübung machen, nachwirken lassen, mit Weggefährt:innen austauschen und achtsam mit sich sein</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m7-b1-04-systemische-prinzipien-in-der-traumasensiblen-begleitung-teil-3.html"><b>‹</b><span><small>Vorherige</small>Systemische Prinzipien in der traumasensiblen Begleitung Teil 3</span></a><a class="nx" rel="next" href="m7-b1-06-integration.html"><span><small>Nächste</small>Integration</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

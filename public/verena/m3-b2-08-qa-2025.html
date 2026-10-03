@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Q&amp;A 2025 · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m3" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m3-b2-07-integration.html" title="Integration">‹</a>
+<div class="t"><div class="k">Modul 3 · Block 2</div><h1>Q&amp;A 2025</h1></div>
+<a class="ic" rel="next" href="m3-b2-09-qa-ankommen-2025.html" title="Q&amp;A ankommen 2025">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:12</a><a href="#s2">4:20</a><a href="#s3">17:20</a><a href="#s4">21:30</a><a href="#s5">29:20</a><a href="#s6">40:30</a><a href="#s7">52:20</a><a href="#s8">1:03:20</a><a href="#s9">1:15:40</a><a href="#s10">1:27:00</a><a href="#s11">1:41:00</a><a href="#s12">1:52:50</a><a href="#s13">2:06:40</a><a href="#s14">2:20:20</a><a href="#s15">2:31:40</a><a href="#s16">2:40:50</a><a href="#s17">2:54:40</a><a href="#s18">3:08:20</a><a href="#s19">3:15:40</a></nav></header>
+<main><div class="meta"><span>⏱ 3:31:05</span><span>19 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:12<small>4 min</small></time>
+<p><strong>Begrüßung und Check-in</strong> zum ersten QA-Termin 2026</p><ul><li>Willkommen im neuen Jahr, Tina begleitet als Unterstützung</li><li>Teilnehmende teilen im Chat, wie es ihnen geht (müde, gemütlich, aufgeregt, neugierig)</li><li>Rahmen: Pausentage in Modul 3, kein Druck</li></ul></section>
+<section id="s2"><time>4:20<small>13 min</small></time>
+<h2>Ankommen und Erdung</h2><ul><li><strong>Orientierung im Raum</strong>, Anker im Raum als Zeichen der Sicherheit des Moments</li><li>Schwerkraft spüren, <strong>Erdung</strong>, Atem nutzen</li><li>Fragen für das neue Jahr: Wofür möchte ich mich öffnen? Wie möchte ich mich auf dem Weg zur traumasensiblen Begleiterin fühlen?</li><li>Verkörperung der Qualität durch Selbstberührung, Blick in die Galerie und Verbundenheit</li></ul></section>
+<section id="s3"><time>17:20<small>4 min</small></time>
+<h2>Rahmen und Ablauf</h2><ul><li>Julias Frage, wie sich Schwerkraft/Erdung anfühlt: Austausch im Community-Bereich (Ressourcicum)</li><li>Orientierung im Raum auch im Alltag nützlich</li><li>Heutiger Ablauf: bunte Fragen aus Modul 3, Pausen, Selbstfürsorge, Aufzeichnung</li></ul></section>
+<section id="s4"><time>21:30<small>8 min</small></time>
+<h2>Fawn Response und Haltung der Begleiterin</h2><ul><li>Frage von Dora: Wie Menschen aus der Fawn Response helfen, wenn sie sich dessen nicht bewusst sind?</li><li>Nicht unsere Aufgabe, jemanden herauszuholen; stattdessen <strong>Raum für Erkenntnis und Selbstreflexion</strong> in Sicherheit öffnen</li><li>Augenhöhe: Wissen verleitet zu <strong>Hypothesen</strong>, die wir als Möglichkeit, nicht als Gewissheit halten (Bias vermeiden)</li><li>Daniels Ergänzung: Scharwenzeln, Liebe dienen, Katzbuckeln</li></ul></section>
+<section id="s5"><time>29:20<small>11 min</small></time>
+<h2>Gemischte Zustände, Kontinuum und chronifizierte Muster</h2><ul><li>Zustände liegen auf einem <strong>Kontinuum</strong> (Paternoster-Bild); entscheidend ist der <strong>dominierende Zustand</strong></li><li>Beispiel: Körper erschöpft, Gedanken kreisen: sympathikoner Zustand führend, Erschöpfung darunter</li><li>Eindeutig sind nur die <strong>primären Zustände</strong></li><li>In der Praxis meist <strong>chronifizierte Überlebensreaktionen</strong> statt akuter Reaktionen</li><li>Chronische Untererregung (dorsal) wirkt unnahbar/dumpf, darunter liegt Stress; Gegenstück: <strong>immer on</strong> (chronische Übererregung)</li><li>Hinweis auf Podcast-Folgen in den Ressourcen</li></ul></section>
+<section id="s6"><time>40:30<small>12 min</small></time>
+<h2>Aus der Untererregung herauskommen, Entspannung und Stresstoleranzfenster</h2><ul><li>Heilungsweg: braucht <strong>Containment</strong> und sanfte Sympathikus-Aktivierung, am sichersten über den <strong>ventralen Vagus</strong> (Beziehung, Lebendigkeit), nicht mit der Brechstange</li><li>Chronisch Übererregte fürchten Entspannung (&quot;Bauchlandung&quot;), brauchen Übergänge mit Stimulation</li><li>&quot;Bipolar&quot; ist fachlich eine feste Diagnose und sollte hier nicht verwendet werden</li><li>Schneller Zustandswechsel und <strong>enges Stresstoleranzfenster</strong> (Zickzack-Bewegungen)</li></ul></section>
+<section id="s7"><time>52:20<small>11 min</small></time>
+<h2>Cannabis, Fatigue und neurogenes Zittern</h2><ul><li>Cannabis: keine valide Aussage; Sucht als Ersatz für fehlende Selbstregulation, Selbstmedikation je nach Symptomatik</li><li>ME/CFS: keine Kompetenz, Nervensystemarbeit kann manchmal lindern</li><li>Unwillkürliches Zittern als natürliche Spannungsentladung; <strong>TRE</strong> wird von Verena nicht genutzt, Beobachtung: kann habituell werden und leerlaufen</li><li>Kurze Pause</li></ul></section>
+<section id="s8"><time>1:03:20<small>12 min</small></time>
+<h2>Erschöpfung vs. Untererregung, Freeze vs. dorsaler Shutdown, kathartische Methoden</h2><ul><li>Erschöpfung ist angemessen, vorübergehend und erholbar; chronische Untererregung ist grundlegend da und durch Erholung kaum berührbar</li><li><strong>Dorsaler Shutdown</strong>: primärer Zustand, letzter Überlebenstrumpf; <strong>Freeze</strong>: gemischter Zustand (Sympathikus will fliehen, dorsaler Vagus hemmt)</li><li>Kissenboxen, Schreien, Breathwork: bei Trauma mit kleinem Stresstoleranzfenster potenziell gefährlich, wenn außerhalb des Fensters; Praktiker erkennen Dissoziation oft nicht</li><li>Teilnehmende ergänzen eigene Erfahrungen</li></ul></section>
+<section id="s9"><time>1:15:40<small>11 min</small></time>
+<h2>Ohnmacht, Diagnostik, Wut und Sicherheit</h2><ul><li>Ohnmacht medizinisch abklären lassen</li><li>Diagnosekriterien: Klassifikation wird in die Ressourcen gestellt, Coaches diagnostizieren nicht</li><li>Berührungsbedürfnis und Bindung kommen in Modul 6</li><li><strong>Wut</strong> vs. natürliche Aggression (Abgrenzung): Wir wollen nicht zur Wut hinführen, sondern <strong>Sicherheit schaffen</strong>, damit sie entstehen kann</li><li>Neurozeption: das Nervensystem entscheidet vorbewusst</li></ul></section>
+<section id="s10"><time>1:27:00<small>14 min</small></time>
+<h2>Empörung, Manipulation, Stresstoleranzfenster erkennen und Sicherheit als Essenz</h2><ul><li>Fehlende Empörung bei Fawn Response, Gefahr ausbeuterischer Beziehungen</li><li>Manipulatives Verhalten kann Teil der Fawn Response sein</li><li>Feedback der Gruppe; Zustände verwirren anfangs, Notizen machen</li><li>Akute Disregulation (Panik, Dissoziation, Kontrollverlust) ist offensichtlich, chronische hinter Kompensation verborgen</li><li>Fawn als komplexes Muster, nicht nur akute Reaktion, schließt Freeze akut aus</li><li><strong>Sicherheit kultivieren</strong> ist die Antwort auf fast jede fachliche Frage</li></ul></section>
+<section id="s11"><time>1:41:00<small>12 min</small></time>
+<h2>Nachreifen und Heilung der Fawn Response</h2><ul><li>Marinas Beschreibung: Beifahrerin im eigenen Leben, KPTBS, Neugier erwacht; <strong>Nachreifen</strong> in Sicherheit</li><li>Alle erlernten Methoden dienen dem Umgang mit chronisch dysregulierten Zuständen</li><li>ADHS/Masking: keine Expertise, Überschneidungen mit Funktionalsein</li><li>Fawn wird nicht &quot;geheilt&quot;, sondern Überlebensstrategie wird mit wachsender Sicherheit überflüssig</li><li>Pause</li></ul></section>
+<section id="s12"><time>1:52:50<small>14 min</small></time>
+<h2>Regulation zu Beginn und Sicherheit im Alltag</h2><ul><li>Körperliche Aktivierung über Gelenke (Propriozeption), Orientierung</li><li>Sammlung: Was hat in den letzten Tagen Sicherheit gegeben? Vielfältige Antworten im Chat</li><li>Sicherheit ist ein <strong>Zustand im Nervensystem</strong>, nicht ein Konstrukt; Beziehungen und Räume sicher gestalten</li><li>Bei äußerer Bedrohung nicht zum Komplizen werden; Sicherheit ermöglicht Entwicklung</li><li>Podcast-Folgen zu Sicherheit</li></ul></section>
+<section id="s13"><time>2:06:40<small>14 min</small></time>
+<h2>Modelle, Kinder, stilles Sitzen</h2><ul><li><strong>Dreieiniges Gehirn</strong> und Handmodell: Erklär- und didaktische Modelle, nicht anatomisch; Lisa Feldman Barrett als Kritikerin; weiter verwendbar</li><li>Kinder: Verweis auf Thomas Harms und Katrin Boger für Spezialisierung</li><li>Stilles Sitzen als Ressource ist individuell; Verena meditiert mit Visualisierungen (Herzensdiamant); Linda Maries Morgenritual</li></ul></section>
+<section id="s14"><time>2:20:20<small>11 min</small></time>
+<h2>Neuroplastizität, Autobahn-Metapher, Schmerz und Essen</h2><ul><li>Starke neuronale Netzwerke (Autobahnen) bleiben verfügbar, &quot;use it or lose it&quot;; Ziel: <strong>Ausfahrten bauen</strong>, Raum zwischen Reiz und Reaktion</li><li>Rückgriff auf alte Muster bei Höchstbelastung ist kein Rückschritt</li><li>Schmerzgedächtnis: keine valide Aussage</li><li>Untererregung nach dem Essen: mögliche Ursachen (frühe Essmuster, Unverträglichkeiten), Forschungsfrage</li></ul></section>
+<section id="s15"><time>2:31:40<small>9 min</small></time>
+<h2>Raum oder Struktur, eigene Impulse als Begleiterin</h2><ul><li>Raum vs. Struktur unterscheiden durch <strong>Ausprobieren und Transparenz</strong> mit dem Gegenüber</li><li>Eigene Impulse (Retterimpuls) erkennt man am <strong>eigenen Zustand</strong>; bei Aktivierung Sicherheit wiederherstellen (Orientierung, Schwerkraft), ggf. dosiert aussprechen</li><li>Pause</li></ul></section>
+<section id="s16"><time>2:40:50<small>14 min</small></time>
+<h2>Vagusbremse, Kontrolle vs. Regulation</h2><ul><li><strong>Vagusbremse</strong>: parasympathische Hemmung des Sinusknotens, bremst die Herzfrequenz; wird nur indirekt beeinflusst</li><li>Funktion kann je nach langfristigem Stress und Prägung schwanken</li><li>Kontrolle und Regulation sind oft nicht erkennbar (Anekdote vom Klienten mit Panik); Hinweise: flache Atmung, wippender Fuß, Erstarrung</li><li>Körperarbeit nach Cathy Kane</li></ul></section>
+<section id="s17"><time>2:54:40<small>14 min</small></time>
+<h2>Praxisfragen: kurze Beratungskontexte und Schmerz hinter den Ohren</h2><ul><li>Milena: nur 1–3 Sitzungen im Frauenzentrum: Atmosphäre gestalten, eigener guter Zustand, niedrigschwellige Übungen mit Erklärung, Priming vorab; Wirkung der Haltung nicht unterschätzen</li><li>Pulsierender Schmerz hinter den Ohren: medizinisch abklären, später Anteilearbeit</li><li>Ventraler Vagus in Beziehung; Orientierung im Raum erklären; Kopfschmerz bei anstrengenden Gesprächen</li></ul></section>
+<section id="s18"><time>3:08:20<small>7 min</small></time>
+<h2>Koregulation, Ressourcen, Demos und Grenzen</h2><ul><li>Fehlende Koregulation trotz Wissen und Tools: Beziehung ist die Basis</li><li>Ressourcen ohne Spürbarkeit: über Erinnerung Brücken zur Empfindungsebene bauen</li><li>Keine Live-Demos aus Schutz des Gegenübers</li><li>Keine Übungsempfehlungen ohne Kenntnis der Person (Borderline, soziale Ängste); Therapiebedarf erkennen, Grenzen sehen</li></ul></section>
+<section id="s19"><time>3:15:40<small>15 min</small></time>
+<h2>Abschluss und Integration</h2><ul><li>Feedback-Wörter der Gruppe (satt, dankbar, inspiriert)</li><li>Geführte Integration: Orientierung, Schwerkraft, Dankbarkeit, liebevolle Ausrichtung auf das Jahr, Verbundenheit</li><li>Abschlusslied &quot;I am light&quot; und Verabschiedung, Dank an Tina</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m3-b2-07-integration.html"><b>‹</b><span><small>Vorherige</small>Integration</span></a><a class="nx" rel="next" href="m3-b2-09-qa-ankommen-2025.html"><span><small>Nächste</small>Q&amp;A ankommen 2025</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Re-Orientierung Co-Regulation und Akutinterventionen · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m8" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m8-b1-05-intensive-gefuehle-begleiten-und-regulieren-teil-4.html" title="Intensive Gefühle begleiten und regulieren Teil 4">‹</a>
+<div class="t"><div class="k">Modul 8 · Block 1</div><h1>Re-Orientierung Co-Regulation und Akutinterventionen</h1></div>
+<a class="ic" rel="next" href="m8-b1-07-suizidalitaet-erkennen-und-begegnen.html" title="Suizidalität erkennen und begegnen">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">2:39</a><a href="#s3">4:21</a><a href="#s4">7:16</a><a href="#s5">13:20</a><a href="#s6">19:21</a><a href="#s7">28:03</a><a href="#s8">36:01</a><a href="#s9">39:30</a><a href="#s10">43:12</a></nav></header>
+<main><div class="meta"><span>⏱ 45:52</span><span>10 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>2 min</small></time>
+<h2>Einführung und Grundhaltung zu Akutinterventionen</h2><ul><li>Sammlung von Akutinterventionen als <strong>emotionale erste Hilfe</strong>, wenn jemand außerhalb des Stresstoleranzfensters ist oder droht, hinauszufallen</li><li>Auswahl aus der Praxis der Dozentin; offen für andere Methoden bleiben, <strong>nicht alles wirkt bei jedem</strong></li><li>Unbedingt <strong>Trockenübungen</strong> mit Weggefährt:innen: direktives Anleiten üben, die Stimme klar und bestimmt, aber nicht wütend oder herrschend</li></ul></section>
+<section id="s2"><time>2:39<small>2 min</small></time>
+<h2>Ziel und Grundregeln</h2><ul><li>Ziel: raus aus dysregulierten Zuständen und Traumastrudeln, rein ins Hier und Jetzt und ins Stresstoleranzfenster</li><li>Grundregel: <strong>Augen offen lassen</strong> (geschlossene Augen erschweren Kontakt und Präsenz); klare, freundliche, bestimmte Ansage</li><li>Überblick: Interventionen mit Bewegung, Atmung und Stimme sowie Berührung</li><li><strong>Orientierung ist die Basis jeder Akutintervention</strong></li></ul></section>
+<section id="s3"><time>4:21<small>3 min</small></time>
+<h2>Orientierung im Raum und Schwerkraft</h2><ul><li><strong>Raum</strong>: Umsehen, Halsbewegung (Musculus sternocleidomastoideus) signalisiert dem Nervensystem Sicherheit (Neurozeption)</li><li>Ergänzungen: Gesehenes laut beschreiben, vertikale Linien im Raum aufzählen</li><li><strong>Schwerkraft</strong>: aufrecht sitzen, stehen oder liegen; Aufmerksamkeit auf Sitzbeinhöcker oder Fußsohlen</li><li>Fersen fest in den Boden drücken (ca. 5 Sekunden), loslassen, nachspüren</li><li>Imaginationen: Stein im See, Dopsball, Bleikugel im Sand, Faultier</li></ul></section>
+<section id="s4"><time>7:16<small>6 min</small></time>
+<h2>Körperübungen zur Schwerkraft</h2><ul><li>Klient:in steht mit leicht gebeugten Knien, Begleitperson drückt hinter ihr kniend die Waden Richtung Boden, die Person richtet sich dagegen auf (3–4 Wiederholungen, dazwischen nachspüren)</li><li>Vorher erklären und um Erlaubnis bitten, hinter der Person zu stehen</li><li>Im Stehen die Beine leicht nach außen wegdrücken (ca. 3 Sekunden), aktiviert die Oberschenkelfaszie, mehr Empfindung in den Beinen</li><li>Alles zuerst mit Weggefährt:innen üben, um souverän zu sein</li></ul></section>
+<section id="s5"><time>13:20<small>6 min</small></time>
+<h2>Laut aussprechen und 5-4-3-2-1-Technik</h2><ul><li>Orientierung laut aussprechen: Name, Datum, Ort, &quot;Ich bin in Sicherheit, ich bin nicht allein&quot;</li><li><strong>5-4-3-2-1</strong>: 5 Dinge sehen, 4 spüren (auch anfassen), 3 hören, 2 riechen, 1 schmecken; Begleitperson wiederholt und führt klar</li><li>Bei Bedarf Durchgang wiederholen, Wiederholungen sind in Ordnung</li><li>Bei starker Dissoziation <strong>direktiver</strong> werden und konkret helfen (&quot;Siehst du die Blume?&quot;)</li><li>Reorientierung bewahrt vor dem Abrutschen in den Traumastrudel; Schamgrenzen beim Direktivsein überwinden, durch Üben</li></ul></section>
+<section id="s6"><time>19:21<small>9 min</small></time>
+<h2>Interventionen mit Bewegung</h2><ul><li>Bewegung hilft aus Untererregung/Erstarrung, verlangsamte Bewegung aus Übererregung</li><li><strong>Wand wegschieben</strong> (auch Liegestütze gegen die Wand, Musculus deltoideus: Abgrenzung und Kraft), geführt und nicht hektisch</li><li><strong>Hände reiben</strong> und aufs Herz legen, Hände in Gebetshaltung drücken, warme Handflächen auf die Augen (Vagus)</li><li><strong>Selbstberührung</strong>: Selbstumarmung, Schmetterlingsumarmung (langsam beruhigt, schnell aktiviert), Abklopfen mit Fingerknöcheln, Kneten; Tempo an Erregungslage anpassen</li><li><strong>Sanftes Schütteln</strong>: Federn auf Zehen und Fersen, Orientierung zur Schwerkraft, weder starr noch chaotisch</li><li><strong>Recken, Strecken, Gähnen</strong> (auch &quot;faken&quot;) bei Untererregung</li></ul></section>
+<section id="s7"><time>28:03<small>8 min</small></time>
+<h2>Atmung und Stimme: Gähnen, Summen, Zischen</h2><ul><li>Stimmbänder und Innenohr gehören zum <strong>ventralen Vaguskomplex</strong></li><li><strong>Gähnen</strong> entspannt die Stimmbänder</li><li><strong>Summen, Vokale tönen, Schnauben, Seufzen</strong>: verlängerte Ausatmung aktiviert den Parasympathikus</li><li><strong>Zischen/Fauchen</strong> bei Wut: Alternative zu Schreien oder Kissenschlagen, das in Übererregung und Kontrollverlust führen kann</li><li>Pausen einbauen (Hyperventilation vermeiden); Imagination wie Blitze aus Augen, Händen, Füßen</li><li>Traumasensibel: <strong>dosiert, geführt, klar</strong>, intensives Fühlen ohne Überflutung</li></ul></section>
+<section id="s8"><time>36:01<small>3 min</small></time>
+<h2>Atemtechniken und Prinzip</h2><ul><li>Viele Techniken (4-7-8, Boxatmung), aber starre Schemata überlagern den eigenen Atemrhythmus</li><li>Merkprinzip: <strong>verlängerte Ausatmung aktiviert den Parasympathikus (beruhigt)</strong>, <strong>aktive Einatmung aktiviert den Sympathikus (aktiviert)</strong></li><li>Beispiele: Frühlingsluft einatmen bei flacher Atmung, Feder mit Strohhalm pusten bei Überaktivierung</li><li>Immer beobachten, was das Gegenüber zeigt</li></ul></section>
+<section id="s9"><time>39:30<small>4 min</small></time>
+<h2>Interventionen mit Berührung</h2><ul><li>Berührung immer <strong>ankündigen und um Erlaubnis fragen</strong></li><li><strong>Hände halten</strong> (Händedruck bei kalter, schlaffer Hand), kann intim sein</li><li><strong>Fuß auf Fuß</strong> im Sitzen: erdend und beruhigend</li><li>Hand zwischen die Schulterblätter oder an die Schulter, nebeneinander sitzend</li><li>Kombinierbar mit Atemtechniken oder 5-4-3-2-1, wenn Berührung regulierend wirkt</li></ul></section>
+<section id="s10"><time>43:12<small>2 min</small></time>
+<h2>Abschluss und Essenz</h2><ul><li>Essenz jeder Akutintervention: <strong>Klarheit, Sicherheit und Ruhe ausstrahlen</strong>, das muss trainiert werden</li><li><strong>Gelingende Koregulation</strong> schenkt eine korrigierende Erfahrung und öffnet den Weg zu Selbstregulation, Selbstbestimmung und Selbstermächtigung</li><li>&quot;Von nix kommt nix&quot;: direktives Anleiten üben</li><li>Wunsch, Menschen bei Bedarf gut zu reorientieren und im Hier und Jetzt zu verankern</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m8-b1-05-intensive-gefuehle-begleiten-und-regulieren-teil-4.html"><b>‹</b><span><small>Vorherige</small>Intensive Gefühle begleiten und regulieren Teil 4</span></a><a class="nx" rel="next" href="m8-b1-07-suizidalitaet-erkennen-und-begegnen.html"><span><small>Nächste</small>Suizidalität erkennen und begegnen</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

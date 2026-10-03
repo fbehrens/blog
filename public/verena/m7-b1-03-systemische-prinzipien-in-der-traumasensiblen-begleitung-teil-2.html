@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Systemische Prinzipien in der traumasensiblen Begleitung Teil 2 · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m7" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m7-b1-02-systemische-prinzipien-in-der-traumasensiblen-begleitung-teil-1.html" title="Systemische Prinzipien in der traumasensiblen Begleitung Teil 1">‹</a>
+<div class="t"><div class="k">Modul 7 · Block 1</div><h1>Systemische Prinzipien in der traumasensiblen Begleitung Teil 2</h1></div>
+<a class="ic" rel="next" href="m7-b1-04-systemische-prinzipien-in-der-traumasensiblen-begleitung-teil-3.html" title="Systemische Prinzipien in der traumasensiblen Begleitung Teil 3">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">4:21</a><a href="#s3">6:12</a><a href="#s4">11:08</a><a href="#s5">15:14</a><a href="#s6">29:20</a><a href="#s7">38:18</a><a href="#s8">45:57</a><a href="#s9">57:08</a><a href="#s10">1:11:53</a></nav></header>
+<main><div class="meta"><span>⏱ 1:12:28</span><span>10 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>4 min</small></time>
+<h2>Einführung und Ergänzung: Kreisläufe der Traumadynamik</h2><ul><li>Rückblick: Kampf, Flucht, Erstarren, Todstellen und Bindungssuche als kollektive Reaktionen</li><li>Unbewusste Stressreaktionen verstärken Traumadynamiken und führen zu <strong>Reinszenierung</strong></li><li>Auch die Verhaltensmuster der Betroffenen erhalten die Dynamik aufrecht; Trauma-Kreisläufe werden <strong>systeminhärent</strong> (z. B. Konflikte, Krieg)</li><li>Beispiel: Rückzug aus Angst vor Ablehnung führt dazu, dass andere weniger auf mich zugehen, und ich fühle mich bestätigt abgelehnt</li></ul></section>
+<section id="s2"><time>4:21<small>2 min</small></time>
+<h2>Leitstern: Dinge aussprechen</h2><ul><li>Benennen und Aussprechen holt Unausgesprochenes ins Bewusstsein und bringt Traumadynamiken in heilsame Bewegung</li><li>Beispiel &quot;Wir dürfen nicht vergessen&quot;: In Deutschland wurde wenig darüber gesprochen, Auseinandersetzung würde das Bewusstsein erhöhen</li><li>Ohne Reden kein Lernen</li></ul></section>
+<section id="s3"><time>6:12<small>5 min</small></time>
+<h2>Transgenerationales Trauma und Epigenetik: Einführung</h2><ul><li>Wir tragen unerlöstes Trauma, aber auch die <strong>Kraft des Überlebens</strong> und Weisheit in uns; Blick auf Ressourcen lenken</li><li>Sensibilität für das, was jenseits des eigenen Erlebens wirkt</li><li>Der Begriff ist <strong>kein Diagnosebegriff</strong>, beschreibt aber ein real wahrnehmbares Phänomen</li></ul></section>
+<section id="s4"><time>11:08<small>4 min</small></time>
+<h2>Drei Wege der Weitergabe und Epigenetik</h2><ul><li>Drei Wege: Schwangerschaft (Mutter-Kind), <strong>Gene (Epigenetik)</strong>, unbewusstes Ausagieren der Bindungspersonen</li><li>Prinzip: <strong>Was nicht aufgearbeitet ist, wird weitergegeben</strong>; Bewusstheit und Reflexion verringern die Weitergabe</li><li>Epigenetik als &quot;Gedächtnis der Zelle&quot; (Peter Spork, *Gesundheit ist kein Zufall*): Gene werden an Stress und Umwelt angepasst</li><li>Zellen werden Teil der Überlebensstrategie</li></ul></section>
+<section id="s5"><time>15:14<small>14 min</small></time>
+<h2>Epigenetik: Einfluss, Neuroplastizität und Tierversuche</h2><ul><li>Es ist die eigene Zelle im Hier und Jetzt; Epigenetik ist wie Neuroplastizität <strong>veränderbar</strong>, Ressourcen und korrigierende Erfahrungen wirken bis auf Nachkommen</li><li>Tierversuch: traumatisierte Vatertiere, künstliche Befruchtung; Genveränderungen zeigen sich bei Kindern und Enkeln, gute soziale Erfahrungen können sie zurückentwickeln</li><li>Unerklärliche Muster bei sich oder anderen verstehen; Entlastung durch Blick in Familiensysteme statt vorschneller Diagnosen</li><li>Über wie viele Generationen die Wirkung reicht, hängt von den Umweltbedingungen ab (bis zur vierten Generation, in Kriegsgebieten ggf. länger)</li></ul></section>
+<section id="s6"><time>29:20<small>9 min</small></time>
+<h2>Familie als Ort von Trauma und Anpassungsreaktionen</h2><ul><li>Die meisten Traumatisierungen geschehen in Familien, besonders Bindungstraumata</li><li>Flucht und Kampf sind in abhängiger Bindung kaum möglich, daher Erstarrung und Untererregung</li><li>Mit dem Alter kommt die <strong>Anpassung</strong> hinzu: komplexe, intelligente Überlebensreaktion (Unterwerfung, Brav-Sein, Introjektion, Identifikation mit dem Aggressor)</li><li>Anpassungen sind von außen schwer erkennbar; wichtig, Klient:innen wirklich kennenzulernen (gegen Kurzzeitangebote bei komplexem Trauma)</li><li>Beispiel der lächelnden Klientin: Überlebensstrategien gemeinsam erforschen und bewusst machen</li></ul></section>
+<section id="s7"><time>38:18<small>8 min</small></time>
+<h2>Selbstreflexion: eigene Anpassungsreaktion</h2><ul><li>Geführte Übung: Welche Anpassungsreaktion kenne ich von mir? Welche Energiequalität hat sie (übererregt oder gelähmt)? Ist sie jetzt aktiv?</li><li>Was würde geschehen, wenn sie sich beruhigte? Die Strategie würdigen, wo sie noch schützt</li><li>Eigenes Verhalten in neuen Kontexten regelmäßig reflektieren</li></ul></section>
+<section id="s8"><time>45:57<small>11 min</small></time>
+<h2>Familie als geschlossenes System und Bindungserhalt</h2><ul><li>Eigene, oft unausgesprochene Regeln, Rituale und Kommunikationsmuster; für das Kind ist die Familie die Welt</li><li>Auch <strong>toxische Bindungen</strong> sind intensiv und schwer zu lösen: &quot;Bindungserhalt über alles&quot;</li><li>Loslösen kann <strong>Todesangst</strong> auslösen, manchmal auch Todessehnsucht; Muster bleiben auch nach dem Tod der Eltern</li><li>Ansatz: positive Bindungserfahrungen und Ressourcen fördern, schrittweise <strong>Trennungskompetenz</strong> entwickeln</li><li>Auch Geschwisterbindungen und Missbrauch unter Geschwistern; freundlich mit sich sein, Berührtheit steigert Kompetenz</li></ul></section>
+<section id="s9"><time>57:08<small>15 min</small></time>
+<h2>Familienmuster und Familiengeheimnisse: Schweigen</h2><ul><li>Trauma-Muster sind besonders solide, da sie Schutzmechanismen sind; würdigende Geduld</li><li><strong>Schweigen</strong> als häufiges Muster: Illusion, Beschwiegenes habe keine Wirkung; verhindert Heilung und führt zu Starre</li><li>Folgen: fehlende Konfliktfähigkeit und Streitkultur, Kinder beziehen alles auf sich (&quot;Reden ist Silber, Schweigen ist Gold&quot;)</li><li><strong>Geheimnisse</strong> führen in Isolation, mit Schweige- und Redeverboten; wir sollten eigene Geheimnisse in vertrauensvollen Bindungen lüften</li><li>Sexuelle Gewalt als häufigstes Geheimnis; Betroffene erleben, dass jemand es wusste, aber nichts geschah</li><li>Begleitende stehen für Aussprechen, Bezeugen und Stabilität durch Wahrheit</li><li>Hoch funktionale Familiensysteme: Funktionalität heißt nicht Balance</li></ul></section>
+<section id="s10"><time>1:11:53<small>1 min</small></time>
+<h2>Abschluss und Pause</h2><ul><li>Nachklingen lassen, Notizen machen, dem Nervensystem etwas Gutes tun und dann weitermachen</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m7-b1-02-systemische-prinzipien-in-der-traumasensiblen-begleitung-teil-1.html"><b>‹</b><span><small>Vorherige</small>Systemische Prinzipien in der traumasensiblen Begleitung Teil 1</span></a><a class="nx" rel="next" href="m7-b1-04-systemische-prinzipien-in-der-traumasensiblen-begleitung-teil-3.html"><span><small>Nächste</small>Systemische Prinzipien in der traumasensiblen Begleitung Teil 3</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

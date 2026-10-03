@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Regulationssession 2025 · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m6" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m6-b1-06-integration.html" title="Integration">‹</a>
+<div class="t"><div class="k">Modul 6 · Block 1</div><h1>Regulationssession 2025</h1></div>
+<a class="ic" rel="next" href="m6-b1-r01-meditative-uebung-sichere-bindung.html" title="Meditative Übung sichere Bindung">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">4:20</a><a href="#s3">8:30</a><a href="#s4">17:02</a><a href="#s5">28:46</a><a href="#s6">38:40</a><a href="#s7">48:20</a><a href="#s8">54:22</a></nav></header>
+<main><div class="meta"><span>⏱ 58:28</span><span>8 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>4 min</small></time>
+<h2>Begrüßung und Stimmungsbild</h2><ul><li>Willkommen, Elisa unterstützt bei Technik und Organisation, Fragen im Chat</li><li>Teilnehmende teilen ihren Zustand (müde, entspannt, aktiviert, „durchgerallert“ nach langen Diensten usw.)</li><li>Einordnung auf einer inneren Skala von entspannt (0) bis aktiviert (10)</li></ul></section>
+<section id="s2"><time>4:20<small>4 min</small></time>
+<h2>Rahmen, Gedicht und Intention</h2><ul><li>Hinweis: auf sich selbst achten, sich nehmen, was guttut; <strong>Regulation</strong> kann auch aktivieren oder Gefühle spürbar machen – mit dir ist nichts falsch</li><li>Gedicht „Frühlingswendung“ von Vivia Schapiro (Übersetzung)</li><li>Einladung, eine <strong>Intention</strong> oder Widmung für den Abend zu setzen</li></ul></section>
+<section id="s3"><time>8:30<small>9 min</small></time>
+<h2>Ankommen und Orientierung</h2><ul><li>Orientierung im Raum: Augen schweifen lassen, Kopf und Wirbelsäule mitdrehen</li><li>Schultern und Kopf hängen lassen, Pendeln zwischen Ausdehnen und Zurückkommen, Umarmung, Gelenkrotationen</li><li>Arbeit mit <strong>Propriozeption, Interozeption, Exterozeption</strong>; Gesicht ausstreichen, tönen</li><li>Übergänge sind nötig: das Nervensystem hat gemischte Zustände, keinen An-/Aus-Schalter</li><li>Nachspüren und Teilen im Chat (mehr Farben, präsenter, wacher)</li></ul></section>
+<section id="s4"><time>17:02<small>12 min</small></time>
+<h2>Bewegungs- und Balanceübungen (Bottom-up)</h2><ul><li>Ziel: Propriozeption und vestibuläres System nutzen, <strong>kleine planbare Stressimpulse</strong> fördern Neuroplastizität</li><li>Sanftes Ausschütteln/Wippen bei guter Erdung; <strong>Nachspüren ist die Übung</strong></li><li>Guter Stand finden („richtig“ und „falsch“ hinterfragen)</li><li>Füße eng, diagonale Armbewegung mit Augen und Händen folgen, auch mit geschlossenen Augen; Balance heißt immer neu ausloten</li><li>Verknüpfung der Gehirnhälften, Kleinhirn</li></ul></section>
+<section id="s5"><time>28:46<small>10 min</small></time>
+<h2>Liegende Acht und Baum/Flieger</h2><ul><li>Liegende Acht mit Hand-Augen-Koordination, Kopf in den Kurven, Richtungswechsel, auch mit geschlossenen Augen</li><li>Baum- oder Fliegerhaltung auf einem Bein, eigener Ausdruck, Seitenwechsel</li><li>Lösen, ausschütteln, Orientierung im Außen, Lippenblubbern/Pferdeatmung</li><li>Austausch: leichter, warm, Übelkeit bei Nina (achtsam, weniger machen, Rein- und Rausdippen); Frage zur Bezeichnung der Acht; Übungen schulen Propriozeption und Integration über den Körper</li></ul></section>
+<section id="s6"><time>38:40<small>10 min</small></time>
+<h2>Herzkohärenzatmung</h2><ul><li>Hinweis auf das HeartMath Institute und dessen App</li><li>Hand aufs Herz, länger und tiefer atmen (z. B. 5/5 oder 4/6 Sekunden), „durch das Herz ein- und ausatmen“</li><li>Erinnerung an Wohlbefinden, Geborgenheit, Wärme, Verbundenheit in den Herzraum bringen; Farben und Gefühle wahrnehmen</li><li>Herzschlag und Atmung synchronisieren, messbar</li><li>Rückmeldungen: Ruhe, Gelassenheit, Wärme, Frieden, Tränen</li></ul></section>
+<section id="s7"><time>48:20<small>6 min</small></time>
+<h2>Rückblick und rhythmischer Abschluss</h2><ul><li>Rückblick auf Start und Intention; Kopfweh bei einer Teilnehmenden verschwunden</li><li>Rhythmische, strukturierte Bewegungen <strong>regulieren den Hirnstamm</strong>: Wiegen, Umarmung, Abstreichen, Schmetterlingsumarmung, Rückenlage mit Fußwippen</li><li>Integrieren und auf den Alltag vorbereiten, auch vor dem Schlafen möglich</li><li>Dank, Antwort auf Frage (Hirnstamm wird reguliert, nicht aktiviert), Verabschiedung bis zum nächsten Treffen in etwa einem Monat</li></ul></section>
+<section id="s8"><time>54:22<small>4 min</small></time>
+<h2>Abschlussmusik</h2><ul><li>Englischsprachiges Lied „I am light“ zum Ausklang, Winken zum Abschied</li><li>Letzte Verabschiedung: „Tschüss, ihr Lieben, bis ganz bald“</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m6-b1-06-integration.html"><b>‹</b><span><small>Vorherige</small>Integration</span></a><a class="nx" rel="next" href="m6-b1-r01-meditative-uebung-sichere-bindung.html"><span><small>Nächste</small>Meditative Übung sichere Bindung</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

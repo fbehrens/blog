@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Sitzungsverlauf und Erstgespräch · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m8" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m8-b2-01-in-ruhe-ankommen.html" title="In Ruhe ankommen">‹</a>
+<div class="t"><div class="k">Modul 8 · Block 2</div><h1>Sitzungsverlauf und Erstgespräch</h1></div>
+<a class="ic" rel="next" href="m8-b2-03-familiendynamiken-entkoppeln-demo.html" title="Familiendynamiken entkoppeln Demo">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">1:39</a><a href="#s3">4:55</a><a href="#s4">11:00</a><a href="#s5">16:41</a><a href="#s6">24:00</a><a href="#s7">29:00</a><a href="#s8">38:40</a><a href="#s9">47:40</a><a href="#s10">1:00:50</a><a href="#s11">1:08:35</a></nav></header>
+<main><div class="meta"><span>⏱ 1:13:14</span><span>11 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>1 min</small></time>
+<h2>Einführung und Überblick</h2><ul><li>Zwei Themen: Gestaltung einer <strong>traumasensiblen Sitzung</strong> und das <strong>Erstgespräch</strong></li><li>Impulse, die sich gut in die eigene Praxis integrieren lassen</li><li>Einladung, sich mit den eigenen Ressourcen zu verbinden</li></ul></section>
+<section id="s2"><time>1:39<small>3 min</small></time>
+<h2>Leitfaden Sitzungsverlauf: drei Phasen</h2><ul><li>Kein starres Schema, sondern ein Leitfaden mit Prinzipien und viel Raum; jede Sitzung verläuft individuell</li><li>Drei Phasen: <strong>Ankommen</strong>, <strong>Arbeitsphase</strong> (Interventionen), <strong>Ausklang/Abschluss</strong></li><li>Ankommen und Ausklang sind <strong>Priming</strong>: Ausrichtung für die Sitzung bzw. für den Alltag bis zum Wiedersehen</li><li>Ohne Blick auf den Transfer in den Alltag wäre die Arbeit ein „Paralleluniversum“</li></ul></section>
+<section id="s3"><time>4:55<small>6 min</small></time>
+<h2>Das Ankommen</h2><ul><li>Die Sitzung beginnt schon, wenn die Person zur Tür hereinkommt; die <strong>Begrüßung ist bereits eine Intervention</strong></li><li>Persönlicher Empfang statt Summer und Wartezimmer; „Schön, dass du da bist“ als erste Ressource (Würdigung der Leistung zu kommen)</li><li>Einladung, sich im Raum zu orientieren und den Platz zu wählen</li><li>Auch für Begleitende wichtig, sich auf das Gegenüber einzuschwingen</li><li><strong>Du oder Sie</strong>: im Zweifel nachfragen; das Du fördert Ebenbürtigkeit und Teamenergie</li><li><strong>Online</strong>: ebenfalls Zeit zum Ankommen (Sicht, Ton, Sitzposition, Getränk), Fürsorge und klarer Raum</li></ul></section>
+<section id="s4"><time>11:00<small>6 min</small></time>
+<h2>Arbeitsphase: Übergang, Ebenen und Zuhören</h2><ul><li><strong>Übergänge</strong> schaffen, z. B. durch Orientierung im Raum</li><li>Pendeln zwischen <strong>Prozess-, Inhalts- und Meta-Ebene</strong> bringt Lebendigkeit und Flexibilität; Hinweis auf die Demo im Kursbereich</li><li>Interventionen: Anteilearbeit, inneres Team, Körpererforschung, Externalisierung</li><li><strong>Zuhören</strong> ist eine zentrale Basisintervention, die Methodenfreaks oft vergessen</li><li>Fragen nur aus echtem Verstehenwollen, nicht aus Unruhe</li></ul></section>
+<section id="s5"><time>16:41<small>7 min</small></time>
+<h2>Monitoring und Erregungsniveau</h2><ul><li>Das Erregungsniveau der Klienten beobachten („monitoren“); Ziel: <strong>reguliert genug für den Alltag</strong>, nicht geheilt</li><li>Ist jemand sehr aktiviert, hat die Regulation Vorrang vor dem geplanten Thema</li><li>Bei kompensierten Personen kann die Erregung im Verlauf steigen: rechtzeitig pendeln, Meta-Ebene, Strudel vermeiden</li><li><strong>Rechtzeitig mit dem „Landeanflug“ beginnen</strong>, lieber zu früh als zu spät</li><li>Spät aufgemachte große Themen: würdigen, „gut einpacken“ und beim nächsten Mal mit Zeit bearbeiten; ggf. Tresortechnik</li></ul></section>
+<section id="s6"><time>24:00<small>5 min</small></time>
+<h2>Ausklang und Abschluss</h2><ul><li>Genauso wichtig wie Ankommen und Arbeit; Übergang in den Alltag</li><li>Auf die Meta-Ebene gehen und <strong>zusammenfassen</strong>, ressourcenorientiert und wertschätzend formulieren</li><li>Kleiner <strong>Smalltalk</strong> am Ende (Pläne für den Tag) hilft, als Erwachsene/r in den Alltag zu gehen, ohne zuzumachen</li><li>Eine Sitzung ist vor allem <strong>Begegnung</strong>; Intuition, Menschlichkeit und Persönlichkeit leiten, ergänzt durch Fachwissen und Techniken</li></ul></section>
+<section id="s7"><time>29:00<small>10 min</small></time>
+<h2>Erstkontakt und Erstgespräch: Einstieg</h2><ul><li>Perspektivwechsel: Wie fühlt es sich an, Unterstützung zu suchen und Kontakt aufzunehmen?</li><li>Kontaktverlauf: Information (Webseite) → Kontaktaufnahme → Telefonat zur Terminvereinbarung → erster Termin → gemeinsamer Prozess</li><li>Jede Etappe kann Öffnung erleichtern oder erschweren; der erste Eindruck ist <strong>Priming</strong></li></ul></section>
+<section id="s8"><time>38:40<small>9 min</small></time>
+<h2>Webseite und Transparenz</h2><ul><li>Hilfesuchende sind verletzlich und wollen sich zunächst <strong>beobachtend informieren</strong></li><li>Hilfreich: Fotos von Person und Räumen, Haltung und Werte, klare Angaben zu <strong>Honorar, Ablauf, Rahmenbedingungen</strong></li><li><strong>Transparenz und Klarheit</strong> sind tragende Säulen; sie entlasten die Beziehungsebene und verringern Projektionen und Verunsicherung, besonders bei Bindungstrauma</li><li>Bestätigungs-E-Mail mit Zusammenfassung der Rahmenbedingungen</li><li>Erste Informationen aus der Kontaktaufnahme und den ersten Eindruck notieren</li></ul></section>
+<section id="s9"><time>47:40<small>13 min</small></time>
+<h2>Telefonat zur Terminvereinbarung (nach Manfred Prior)</h2><ul><li>Kein kostenloses Erstgespräch, sondern ein kurzes Telefonat (ca. 10–15 Min.) mit kraftvollem <strong>Priming</strong></li><li>Als Person spürbar werden: Haltung, Respekt, Wohlwollen, Führung</li><li>Typische Fragen der Klienten beantworten: Was erwartet mich? Wie bereite ich mich vor?</li><li>Ankündigen, wonach in der ersten Stunde gefragt wird: was wesentlich ist, das Anliegen/Bedürfnis, was bisher geholfen hat und was nicht, was sich bis zum Termin verändert hat</li><li>Die Fragen werden <strong>nicht am Telefon beantwortet</strong>, sie wirken im Inneren nach</li><li>Studien: in etwa <strong>70 %</strong> der Fälle positive Veränderung nach Vorgespräch und Termin (Hypothesen: Entschluss, Selbstwirksamkeit, Interesse)</li></ul></section>
+<section id="s10"><time>1:00:50<small>8 min</small></time>
+<h2>Der erste Termin</h2><ul><li>Priming für den weiteren Prozess: Ankommen, Kennenlernen, Anliegen klären</li><li>Angekündigte Fragen auch stellen (Vorhersehbarkeit); so lässt sich ein starker Erzähldruck gut führen</li><li>Am Ende <strong>Einschätzung/Zusammenfassung</strong> auf der Meta-Ebene: Ressourcen betonen, nichts wiederholen, was nicht geholfen hat</li><li><strong>Nachfragen, bis man verstanden hat</strong>, besonders bei hochempathischen Menschen</li><li><strong>„Sondern“-Frage</strong>: Vom Problem zur Zielrichtung („du willst nicht übergangen werden, sondern …?“) fördert Selbstwirksamkeit und Ressourcenorientierung</li></ul></section>
+<section id="s11"><time>1:08:35<small>4 min</small></time>
+<h2>Schluss und ergänzende Hinweise</h2><ul><li>Essenz: die eigene einzigartige Präsenz ist die Kraft; auf Ressourcen, Grenzen und Bedürfnisse achten</li><li><strong>Wartezeiten und Notfälle</strong>: Kontingent einplanen, sonst weitervermitteln; nie über die eigenen Kapazitätsgrenzen gehen</li><li>Traumasensibles Arbeiten ist <strong>prozess- statt zielorientiert</strong>; Anliegen können sich ändern, übergeordnete Anliegen sind korrigierende Erfahrungen, sichere Bindung, Wachstum und Heilung</li><li>Abschluss mit Wunsch für gute Integration</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m8-b2-01-in-ruhe-ankommen.html"><b>‹</b><span><small>Vorherige</small>In Ruhe ankommen</span></a><a class="nx" rel="next" href="m8-b2-03-familiendynamiken-entkoppeln-demo.html"><span><small>Nächste</small>Familiendynamiken entkoppeln Demo</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

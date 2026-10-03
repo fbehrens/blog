@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Neuroplastizität und Veränderung · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m3" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m3-b1-03-neuroplastizitaet-und-neuronale-netzwerke.html" title="Neuroplastizität und neuronale Netzwerke">‹</a>
+<div class="t"><div class="k">Modul 3 · Block 1</div><h1>Neuroplastizität und Veränderung</h1></div>
+<a class="ic" rel="next" href="m3-b1-05-traumabedingte-glaubenssysteme.html" title="Traumabedingte Glaubenssysteme">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">1:53</a><a href="#s3">5:32</a><a href="#s4">19:29</a><a href="#s5">26:20</a><a href="#s6">35:00</a><a href="#s7">42:04</a><a href="#s8">50:00</a><a href="#s9">55:40</a><a href="#s10">1:08:03</a></nav></header>
+<main><div class="meta"><span>⏱ 1:10:27</span><span>10 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>2 min</small></time>
+<h2>Begrüßung und Überblick</h2><ul><li>Check-in: Wo befinde ich mich im <strong>Stresstoleranzfenster</strong>?</li><li>Thema: Besonderheiten neuronaler Netzwerke, die unter <strong>traumatischem Stress</strong> entstanden sind</li><li>Ansätze für die Arbeit damit, Infos für heilsame Veränderung, kleines Experiment (Reise nach innen)</li></ul></section>
+<section id="s2"><time>1:53<small>4 min</small></time>
+<h2>Warum Veränderung bei Traumafolgen so schwer ist</h2><ul><li><strong>Neuroplastizität</strong> ist in jedem funktionierenden Gehirn erwiesen, aber nicht gleich leicht umsetzbar</li><li>Betroffene wollen und verstehen, können aber nicht: wachsende Hilflosigkeit und Frustration</li><li>Trauma-Netzwerke sind an die mobilisierte <strong>Überlebensenergie</strong> gekoppelt</li><li>Merkmale: Intensität der Bedrohungsreaktion; <strong>Stammhirn</strong> übernimmt, Neokortex wird gehemmt; <strong>bedingungslos</strong> und autonom am Willen vorbei; <strong>Stoffwechsellage</strong> (Stresshormone, Neurotransmitter, Endorphine) und Körperzustand; durch Wiederholung &quot;autobahnig&quot;</li><li>Daher stimmt die Aussage nicht, jeder könne sein Gehirn einfach per Technik oder Meditation verändern</li></ul></section>
+<section id="s3"><time>5:32<small>14 min</small></time>
+<h2>Top-down- und Bottom-up-Ansätze</h2><ul><li>Mit dem Verstand allein ist keine Veränderung möglich</li><li><strong>Top-down</strong>: vom präfrontalen Kortex abwärts (Verhaltenstherapie, Gesprächstherapie, Psychoanalyse, DBT); anders denken, bewerten, ausrichten</li><li><strong>Bottom-up</strong>: über Körper, Instinkt- und Gefühlsebene (traumasensibles Yoga, <strong>EMDR</strong>, <strong>Somatic Experiencing</strong> nach Peter Levine, Ego-State-Therapie, hypnotherapeutische und imaginative Verfahren)</li><li>Bei komplexer Traumatisierung ist eine <strong>Mischung</strong> am hilfreichsten; der Verstand gibt Sicherheit und Einordnung</li><li>Es wird noch zu wenig interdisziplinär gearbeitet; körper- und imaginationsorientierte Ansätze müssen sich empirisch belegen</li></ul></section>
+<section id="s4"><time>19:29<small>7 min</small></time>
+<h2>Konsequenzen für die traumasensible Begleitung</h2><ul><li><strong>Psychoedukation</strong> (top-down) verändert bereits neuronale Netzwerke und wirkt als Rahmen</li><li>Von &quot;es soll weg&quot; zu &quot;ich lerne etwas, damit es weniger werden kann&quot;: die Zuwendung ist der erste Umbau, wie eine Ausfahrt von der Autobahn</li><li>Dann über Körper und Nervensystem: Ressourcen verkörpern, Containment, <strong>Stresstoleranzfenster</strong> weiten</li><li><strong>Pendeln</strong> zwischen Ressource und Stressor verknüpft Netzwerke bewusst und reguliert</li><li>Lernen ist Netzwerkbau, auch für Heilung</li></ul></section>
+<section id="s5"><time>26:20<small>9 min</small></time>
+<h2>Lernen und das Stresstoleranzfenster</h2><ul><li>Im regulierten <strong>Sweet Spot</strong> ist Lernen möglich; Überforderung führt zu Überlebensreaktionen, Unterforderung/Langeweile schaltet die Lernbereitschaft aus</li><li>Die <strong>Komfortzone</strong> ist nicht Langeweile; Lernen unter Stress funktioniert nicht</li><li>Stressbasierte Methoden (Extremzustände, Schlafentzug, Massenseminare) erzeugen intensive Prägungen, keine Integration; ähnlich Drill beim Militär</li><li>Wirkliches Lernen braucht <strong>Integration</strong> in die Persönlichkeit, sonst bleiben rigide Prägungen</li></ul></section>
+<section id="s6"><time>35:00<small>7 min</small></time>
+<h2>Angst-Immobilitätskreislauf und Flow</h2><ul><li>Außerhalb des Fensters wird nur der <strong>Angst-Immobilitätskreislauf</strong> gelernt (Erregung, Hilflosigkeit, Immobilität/Dissoziation, erneute Erregung), nach Peter Levine</li><li><strong>Flow-Zustand</strong>: Selbstwirksamkeit, Verkörperung, Genuss; <strong>Dopamin</strong> wirkt wie Dünger für neue Synapsen</li><li>Beispiel der Nichte am Klettergerüst: Freude, Autonomie und Sicherheit durch den Vater</li></ul></section>
+<section id="s7"><time>42:04<small>8 min</small></time>
+<h2>Flow-Kreislauf vs. Überforderungskreislauf</h2><ul><li>Flow: angemessene Herausforderung, Bewältigung, Selbstvertrauen, positive Erwartung, Neugier, Lust auf mehr</li><li>Gegenkreislauf: Überforderung, gescheiterte Bewältigung, Selbstzweifel, negative Erwartung, Angst, Vermeidung</li><li>Herausforderungen in der Begleitung müssen <strong>angemessen</strong> sein, ohne Angst oder Panik</li><li>Ansatzpunkt: Überforderung durch <strong>taktische Entlastung und Koregulation</strong> entgegenwirken; Pendeln in Portionen</li><li>Netzwerke werden nicht gelöscht, sondern es wird <strong>angebaut</strong>; &quot;Konzentrier dich aufs Schöne&quot; ist nicht traumasensibel</li></ul></section>
+<section id="s8"><time>50:00<small>6 min</small></time>
+<h2>Realistische Erwartungen und Dauer</h2><ul><li>Es braucht Top-down und Bottom-up, um sich der Überforderung zuzuwenden</li><li>Traumabedingte Netzwerke erfordern mehr Zeit und Aufmerksamkeit; das ist kein Kleinmachen, sondern Anerkennung früher Überlebenslernens</li><li>Eigene Erwartungen als Begleiter (&quot;Bin ich gut genug?&quot;) erzeugen Druck</li><li>Frage nach Dauer und Sitzungszahl: transparent kommunizieren, keine festen Versprechen (zwei Monate bis drei Jahre möglich)</li></ul></section>
+<section id="s9"><time>55:40<small>12 min</small></time>
+<h2>Imaginationsreise: Der Seesternmoment</h2><ul><li>Einladung zu einem Experiment mit Musik, Ankommen im Körper, Freiheit zum Augenöffnen</li><li>Geschichte: Strand am Morgen, ein Kind wirft Seesterne ins Meer; &quot;Für diesen einen macht es einen Unterschied&quot;</li><li>Wahrnehmen von Körpergefühlen, Gedanken, Gefühlen; Anteile des Kindes und des Erwachsenen</li><li>Rückkehr: Recken, Strecken, Orientieren im Raum</li></ul></section>
+<section id="s10"><time>1:08:03<small>2 min</small></time>
+<h2>Auswertung der Übung</h2><ul><li>Die Reise war eine <strong>Bottom-up-Variante</strong>: Geschichten, Bilder und Körpererfahrung erzeugen Fühlen</li><li>Ganzheitliches Verstehen in allen drei Gehirnbereichen geht tiefer als eine reine Studie mit Wahrscheinlichkeiten</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m3-b1-03-neuroplastizitaet-und-neuronale-netzwerke.html"><b>‹</b><span><small>Vorherige</small>Neuroplastizität und neuronale Netzwerke</span></a><a class="nx" rel="next" href="m3-b1-05-traumabedingte-glaubenssysteme.html"><span><small>Nächste</small>Traumabedingte Glaubenssysteme</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

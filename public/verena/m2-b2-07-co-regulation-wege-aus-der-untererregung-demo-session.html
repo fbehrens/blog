@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Co-Regulation Wege aus der Untererregung Demo Session · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m2" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m2-b2-06-co-regulation-wege-aus-der-uebererregung-demo-session.html" title="Co-Regulation Wege aus der Übererregung Demo Session">‹</a>
+<div class="t"><div class="k">Modul 2 · Block 2</div><h1>Co-Regulation Wege aus der Untererregung Demo Session</h1></div>
+<a class="ic" rel="next" href="m2-b2-08-die-kraft-des-pendelns-demo.html" title="Die Kraft des Pendelns Demo">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:12</a><a href="#s2">1:29</a><a href="#s3">2:30</a><a href="#s4">5:15</a><a href="#s5">7:21</a><a href="#s6">8:45</a></nav></header>
+<main><div class="meta"><span>⏱ 11:43</span><span>6 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:12<small>1 min</small></time>
+<h2>Einführung in die Demo-Session</h2><ul><li>Ziel: Klient:in aus der <strong>Untererregung</strong> herausbegleiten</li><li>Zwei Ansatzpunkte: <strong>Ventralen Vagus</strong> aktivieren (Kontakt halten bzw. wieder aufnehmen) und <strong>Sympathikus</strong> aktivieren (sanfte Bewegungen gegen Starre und Unlebendigkeit)</li><li>Ziel: Rückkehr ins <strong>Stresstoleranzfenster</strong></li><li>Beobachtungstipp: Wie genau Ute angeleitet wird und wie viel ihrer Körpersprache aufgegriffen wird</li></ul></section>
+<section id="s2"><time>1:29<small>1 min</small></time>
+<h2>Ute schildert ihren Arbeitsstress und rutscht in die Untererregung</h2><ul><li>Ute berichtet von viel Arbeit, einem nervigen Kollegen, ständigen Unterbrechungen und Verbesserungsversuchen</li><li>Sie wird zunehmend still und wirkt abwesend</li><li>Rückfrage nach dem Gefühl, dann Kontaktaufnahme (&quot;Ute, bist du noch da?&quot;)</li><li>Antworten werden knapp: &quot;Ich weiß nicht&quot;, &quot;so anstrengend&quot;</li></ul></section>
+<section id="s3"><time>2:30<small>3 min</small></time>
+<h2>Sanfte Bewegungen im Sitzen</h2><ul><li>Normalisierung: Man fühlt sich bei solchen Erfahrungen oft wie ausgeschaltet; Einladung, wieder &quot;aufzutauchen&quot;</li><li>Füße auf den Boden, Zehen bewegen, schneller bewegen, auf Zehenspitzen abwechselnd, Fußgelenke spüren</li><li>Handgelenke kreisen oder schütteln, Schultern kreisen – angenehm, ohne Kraftanstrengung</li><li>Erklärung: Ohnmacht kann zu <strong>Starre</strong> führen</li><li>Ute bemerkt, dass sie sich lange nicht bewegt hat; es knackt, tut aber nicht weh</li></ul></section>
+<section id="s4"><time>5:15<small>2 min</small></time>
+<h2>Aufstehen, Orientieren und Federn</h2><ul><li>Gemeinsam aufstehen, etwas dichter stehen (Rückfrage, ob es okay ist)</li><li><strong>Orientierung im Raum</strong>: umschauen und mit dem ganzen Körper drehen</li><li><strong>Federn</strong> auf den Fersen, Arme baumeln lassen, Gewicht Richtung Boden spüren (wie Marionetten)</li><li>Sanft statt heftig, Hauptsache der Körper wird spürbar</li></ul></section>
+<section id="s5"><time>7:21<small>1 min</small></time>
+<h2>Pause, Atemzug und Kontaktprüfung</h2><ul><li>Pause, Atemzug kommt von selbst, Augen öffnen</li><li>Ute spürt ihren Körper besser und nimmt den Kontakt zur Begleiterin deutlich wahr</li><li>Zweite Federrunde, Ute folgt den Impulsen ihres Körpers</li><li>Wieder eine Pause mit Atemzug; gegenseitiges Spüren &quot;viel besser&quot;</li><li>Wieder hinsetzen</li></ul></section>
+<section id="s6"><time>8:45<small>3 min</small></time>
+<h2>Nachbesprechung und Psychoedukation</h2><ul><li>Wichtig: mitzubekommen, wie es Ute geht; sie war &quot;weggerutscht&quot;, das passiert ihr öfter</li><li>Ute fühlt sich wieder im Raum und mehr da</li><li>Erklärung: Stressreaktionen des Nervensystems sind natürlich – <strong>aufgescheuchte Hühner</strong> (Übererregung) vs. <strong>Opossum</strong> (Totstellen, Untererregung)</li><li>Ziel: früh bemerken, damit umgehen lernen und mehr in <strong>Balance</strong> sein</li><li>Ute fühlt sich geschafft; das wird als wertvolle Arbeit gewürdigt, die verarbeitet wird</li><li>Es fühlt sich stimmiger an, danach geht es mit dem Thema weiter</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m2-b2-06-co-regulation-wege-aus-der-uebererregung-demo-session.html"><b>‹</b><span><small>Vorherige</small>Co-Regulation Wege aus der Übererregung Demo Session</span></a><a class="nx" rel="next" href="m2-b2-08-die-kraft-des-pendelns-demo.html"><span><small>Nächste</small>Die Kraft des Pendelns Demo</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

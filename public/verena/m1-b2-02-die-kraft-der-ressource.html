@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Die Kraft der Ressource · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m1" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m1-b2-01-in-ruhe-ankommen.html" title="In Ruhe ankommen">‹</a>
+<div class="t"><div class="k">Modul 1 · Block 2</div><h1>Die Kraft der Ressource</h1></div>
+<a class="ic" rel="next" href="m1-b2-03-gute-begleiter-und-begleiterinnen-sein.html" title="Gute Begleiter und Begleiterinnen sein">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:10</a><a href="#s2">1:35</a><a href="#s3">6:35</a><a href="#s4">10:05</a><a href="#s5">13:58</a><a href="#s6">21:20</a><a href="#s7">24:35</a><a href="#s8">31:25</a><a href="#s9">35:00</a><a href="#s10">38:50</a><a href="#s11">41:45</a><a href="#s12">45:42</a><a href="#s13">49:50</a></nav></header>
+<main><div class="meta"><span>⏱ 51:17</span><span>13 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:10<small>1 min</small></time>
+<h2>Einführung: Die Kraft der Ressource</h2><ul><li>Rolle von Ressourcen in der traumasensiblen Arbeit und warum sie wichtig sind</li><li>Themen: Was ist eine Ressource, Arten, Unverzichtbarkeit, wofür wir sie brauchen, Zugang schaffen, ressourcenorientierter Blick</li><li>Ressourcen helfen nur, wenn wir sie wirklich <strong>spüren</strong></li></ul></section>
+<section id="s2"><time>1:35<small>5 min</small></time>
+<h2>Definition: Was ist eine Ressource?</h2><ul><li>Synonym für Kraftquelle, Energiequelle, Hilfsmittel</li><li>Alles, was uns mit unserer <strong>Fähigkeit zur Regulation</strong> in Kontakt bringt und hilft, das Leben nach wahren Bedürfnissen zu gestalten</li><li><strong>Brücken</strong> zum Hier und Jetzt und zu uns selbst – wichtig, da Traumabetroffene oft im Erleben der Vergangenheit sind</li><li><strong>Innere oder äußere Anker</strong> für gefühlte Sicherheit, Wohltat und Regulation</li><li>Verweis auf Podcast-Folge „Trauma und die Suche nach Sicherheit“</li></ul></section>
+<section id="s3"><time>6:35<small>4 min</small></time>
+<h2>Präsenz, Selbst, Integrität und Wechselspiel mit Regulation</h2><ul><li>Ressourcen wecken ein Gefühl von <strong>Präsenz, Selbst und Integrität</strong></li><li>Frühe Traumatisierung verhindert oft die freie Entwicklung des Selbstgefühls; Ressourcen helfen, dies nachzunähren</li><li>Ressourcen führen zu Regulation und entstehen durch Regulation – eine sich gegenseitig verstärkende <strong>Synthese</strong></li></ul></section>
+<section id="s4"><time>10:05<small>4 min</small></time>
+<h2>Äußere (externe) Ressourcen</h2><p>Drei Arten: interne, externe und relationale Ressourcen.</p><ul><li>Orte (Kraftort, Lieblingscafé, Meditationsplatz)</li><li>Tätigkeiten und Hobbys (Lesen, Tanzen, Musizieren)</li><li><strong>Finanzielle Mittel</strong> – bei Klienten im Blick behalten</li><li>Freudvolle Arbeit</li><li>Musik, sinnliche Genüsse, Kultur</li><li>Mutter Natur</li><li>Vieles davon ist uns nicht als Ressource bewusst</li></ul></section>
+<section id="s5"><time>13:58<small>7 min</small></time>
+<h2>Innere (interne) Ressourcen</h2><ul><li>Eigenschaften, Fähigkeiten, Stärken, Talente</li><li>Positive Erinnerungen und Erfahrungen (posttraumatisches Wachstum)</li><li>Stimmungen und Gefühle, angenehme <strong>Körperempfindungen</strong> (z. B. Fußmassage, warme Dusche)</li><li><strong>Innere Haltung</strong> des Wohlwollens</li><li>Visionen, Ziele und Ideen als Quelle lebendiger Energie</li><li>Innere Verbundenheit</li><li><strong>Erfolgreiche Strategien</strong>, auch Überlebensstrategien, in denen verborgene Ressourcen stecken</li></ul></section>
+<section id="s6"><time>21:20<small>3 min</small></time>
+<h2>Relationale Ressourcen</h2><ul><li>Beziehungen zu Familie, Partner, Freunden, Kollegen, Therapeuten</li><li>Bedeutung für Selbst- und <strong>Koregulation</strong> (Polyvagaltheorie folgt)</li><li>Beziehungen zu Tieren</li><li>Gruppen, z. B. Ausbildungsgruppe – wichtig, da Traumafolgen oft zu Isolation führen</li><li><strong>Soziales Engagement</strong>: das Gefühl, einen Platz in der Welt zu haben</li></ul></section>
+<section id="s7"><time>24:35<small>7 min</small></time>
+<h2>Warum Ressourcen unverzichtbar sind – und warum sie bei Trauma fehlen</h2><ul><li>Sie fehlen und werden gebraucht, um zu heilen</li><li>Das traumatisierte Nervensystem sucht nach <strong>Gefahr</strong> statt nach Schönem; es entsteht ein Kreislauf mit immer engerem Fokus auf Defizite</li><li>Frühe Traumatisierung bedeutet Mangel oder Verlust an Ressourcen (Verlust-, Bindungstrauma); Ressourcen sind ungewohnt, werden nicht genutzt oder unbewusst gemieden</li><li>Hinderliche <strong>Glaubenssätze</strong>: „Wenn es schön ist, wird es mir genommen“, „Ich bin das nicht wert“, „Ich darf nicht glücklich sein“</li></ul></section>
+<section id="s8"><time>31:25<small>4 min</small></time>
+<h2>Überlebensstrategien überlagern Ressourcen</h2><ul><li>Vermeidung: weniger Angst, aber Verlust z. B. des sozialen Engagements</li><li><strong>Prokrastination</strong> als Schutzstrategie (Podcast-Verweis)</li><li>Hohe Funktionalität: rettend, aber kräftezehrend</li><li>Überlebensstrategien kennen keine Pause – kein Genuss, Innehalten oder Feiern möglich</li><li>Kleine Pause, Einladung zur Pflege einer Ressource</li></ul></section>
+<section id="s9"><time>35:00<small>4 min</small></time>
+<h2>Wofür wir Ressourcen brauchen</h2><ul><li><strong>Anker im Hellen</strong>, wenn wir uns dem Dunklen zuwenden</li><li>Anker im Hier und Jetzt (auch Erinnerungen im Körper spüren)</li><li><strong>Regulatoren des Nervensystems</strong> – ohne Ressourcen keine Regulation</li><li>Brücken zu Verbundenheit, Lebendigkeit, Zuversicht, Kreativität, Motivation</li><li>Teil der Lebensqualität: „kleine Inseln“, die zum Festland ausgebaut werden</li><li>Nötig zum <strong>Pendeln</strong> zwischen traumabezogenen Empfindungen und Ressource</li></ul></section>
+<section id="s10"><time>38:50<small>3 min</small></time>
+<h2>Zugang zu Ressourcen schaffen</h2><ul><li><strong>Erkennen</strong>: auch kleine Dinge wie Aufstehen oder Selbstversorgung würdigen</li><li><strong>Suchen</strong>: aktiv und intensiv erfragen</li><li><strong>Aktivieren</strong>: nicht nur darüber sprechen, sondern leben</li><li><strong>Pflegen</strong>: regelmäßig und strukturiert</li><li><strong>Ressourcarium anlegen</strong>: eine Sammlung von Ressourcen als greifbarer Gegenstand, mit Übung dazu</li></ul></section>
+<section id="s11"><time>41:45<small>4 min</small></time>
+<h2>Den ressourcenorientierten Blick schulen</h2><ul><li>Üben, üben, üben – wir neigen zum Negativen und zur Defizitorientierung</li><li>In jeder <strong>Überlebensstrategie</strong> steckt eine Ressource</li><li>Fragen: Mit welcher Kraft wird die Strategie aufrechterhalten? Was wird dadurch möglich?</li><li>Diese Kraft kann in die Selbstregulation umgelenkt werden</li><li>Ressourcenorientierung beinhaltet <strong>Wertschätzung</strong>, selbst wenn wir bewerten</li></ul></section>
+<section id="s12"><time>45:42<small>4 min</small></time>
+<h2>Ressourcen müssen gespürt werden</h2><ul><li>Eine Ressource als To-do (z. B. Saunatermin) wirkt nicht, wenn innerlich Getriebensein herrscht</li><li>Ressourcen müssen erobert, verinnerlicht, integriert und <strong>verkörpert</strong> werden</li><li>Kreislauf: mehr Regulation, mehr Genuss der Ressourcen, mehr Regulation</li><li>Hilfreiche Fragen: „Wo spürst du die Ressource im Körper?“ und „Wie würde es sich anfühlen, wenn du das spüren könntest?“</li><li>Mindestens einmal pro Sitzung Ressourcenfokus</li></ul></section>
+<section id="s13"><time>49:50<small>1 min</small></time>
+<h2>Übung und Abschluss</h2><ul><li>Einladung: Welche Ressource kannst du heute pflegen? Morgens: Tag ressourcig gestalten; abends: Tag bewusst vollenden (Meditation, Schreiben)</li><li>Dank, gute Wünsche und Verabschiedung</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m1-b2-01-in-ruhe-ankommen.html"><b>‹</b><span><small>Vorherige</small>In Ruhe ankommen</span></a><a class="nx" rel="next" href="m1-b2-03-gute-begleiter-und-begleiterinnen-sein.html"><span><small>Nächste</small>Gute Begleiter und Begleiterinnen sein</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

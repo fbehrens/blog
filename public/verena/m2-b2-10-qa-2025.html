@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Q&amp;A 2025 · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m2" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m2-b2-09-integration.html" title="Integration">‹</a>
+<div class="t"><div class="k">Modul 2 · Block 2</div><h1>Q&amp;A 2025</h1></div>
+<a class="ic" rel="next" href="m2-b2-11-qa-ankommen-2025.html" title="Q&amp;A ankommen 2025">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:10</a><a href="#s2">2:07</a><a href="#s3">4:21</a><a href="#s4">18:17</a><a href="#s5">29:20</a><a href="#s6">42:00</a><a href="#s7">47:10</a><a href="#s8">53:20</a><a href="#s9">1:02:40</a><a href="#s10">1:06:59</a><a href="#s11">1:16:00</a><a href="#s12">1:25:20</a><a href="#s13">1:32:10</a><a href="#s14">1:55:00</a><a href="#s15">2:01:00</a><a href="#s16">2:13:10</a><a href="#s17">2:22:00</a><a href="#s18">2:36:10</a><a href="#s19">2:49:30</a><a href="#s20">2:56:00</a><a href="#s21">3:05:40</a><a href="#s22">3:15:20</a><a href="#s23">3:20:10</a></nav></header>
+<main><div class="meta"><span>⏱ 3:32:09</span><span>23 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:10<small>2 min</small></time>
+<h2>Begrüßung und Einstimmung</h2><ul><li>Willkommen zur zweiten QA-Session, Elisa ist vor Ort dabei</li><li>Ablauf: Ankommen, Fragen, mehrere Pausen, Abschluss; alles wird aufgezeichnet</li><li>Einladung, gut für sich zu sorgen</li></ul></section>
+<section id="s2"><time>2:07<small>2 min</small></time>
+<h2>Befindlichkeitsrunde im Chat</h2><ul><li>Modul 2 neigt sich dem Ende zu</li><li>Teilnehmende teilen ihre Stimmung (müde, motiviert, neugierig, reich beschenkt nach der Supervision)</li><li>Pausenplanung: etwa alle zwei Stunden mindestens eine Viertelstunde</li></ul></section>
+<section id="s3"><time>4:21<small>14 min</small></time>
+<h2>Ankommensübung</h2><ul><li>Reck- und Streckübung, Orientierung im Raum mit dem Blick</li><li>Gelenke kreisen lassen, Sitzposition finden, Gewicht an die <strong>Schwerkraft</strong> abgeben</li><li>Nach innen spüren, Belastendes wohlwollend wahrnehmen</li><li>Wunsch-Energiequalität für die Session wählen und im Chat teilen</li></ul></section>
+<section id="s4"><time>18:17<small>11 min</small></time>
+<h2>Vorab-Hinweise zu den Fragen</h2><ul><li>Viele Fragen greifen späteren Modulen vor (Praxis-&quot;Wie gehe ich um mit...&quot;-Fragen) und werden dort beantwortet (<strong>Zopftechnik</strong>)</li><li><strong>ADHS/Autismus/Neurodivergenz</strong>: keine Expertise, Buchtipp zu Autismus und Trauma im Ressourcen-Sheet, Empfehlungen aus der Gruppe willkommen</li><li>Gemischte Nervensystemzustände (blended states) kommen später</li><li><strong>Polyvagal-Kritik</strong>: Wikipedia-Artikel unsachlich, Kritik betrifft v. a. phylogenetische Aspekte, für die Praxis nicht relevant; Link zur Polyvagalakademie (Dr. Antonia Pfeiffer); differenziert betrachten</li><li>Integrationswoche startet Freitag mit Fragen an die Fachassistentinnen</li></ul></section>
+<section id="s5"><time>29:20<small>13 min</small></time>
+<h2>Regulierte vs. dysregulierte Erregung und Kompensation</h2><ul><li>Erregungszustände liegen auf einem Spektrum; intensive Gefühle können innerhalb des <strong>Stresstoleranzfensters</strong> noch reguliert sein</li><li>Außerhalb übernimmt das autonome Nervensystem (reaktiv, reflexhaft); Marker: <strong>Verlust von Kontakt</strong> und Handlungsfähigkeit</li><li>Bei frühem Trauma entstehen komplexe Anpassungsleistungen, Dysregulation ist dann nach außen oft nicht sichtbar</li><li>Nervensystem-Einordnungen sind Landkarten, keine Schubladen</li></ul></section>
+<section id="s6"><time>42:00<small>5 min</small></time>
+<h2>Warum Trauma das Stresstoleranzfenster verkleinert</h2><ul><li>Stresstoleranz lernt man durch Sicherheit beim Erleben intensiver Gefühle (Beispiel Kind mit aufgeschlagenem Knie)</li><li>Fehlt Halt, kommt zusätzlicher Stress und es entwickeln sich Anpassungen</li><li>Kompensationsstrategien können später zu Ressourcen umgeformt werden</li><li>Co-Regulation fehlt, wenn die Bezugsperson selbst panisch ist; Podcast zu Vermeidung kommt in die Ressourcen</li></ul></section>
+<section id="s7"><time>47:10<small>6 min</small></time>
+<h2>Dissoziation</h2><ul><li>Dissoziation als Überbegriff: Gedankenversunkensein oder Trance sind nicht pathologisch</li><li>Traumabedingte Dissoziation tritt auch bei Hocherregung auf (Details in Modul 4)</li><li>Strukturelle Dissoziation/DIS werden nicht explizit behandelt, nur Literaturtipps</li></ul></section>
+<section id="s8"><time>53:20<small>9 min</small></time>
+<h2>Depression und Nervensystem</h2><ul><li>Warnung vor der Tendenz, alles auf Trauma zurückzuführen</li><li>Manche Depressionsformen sind mit Untererregung verbunden; Diagnosen sind Fachleuten vorbehalten</li><li>Komorbidität, depressive Symptome bei komplexer PTBS</li><li>Ressourcenarbeit und ventral-vagale Aktivierung sind nie verkehrt</li><li>Hinweis: manifeste Depression geht oft mit fehlender <strong>Schwingungsfähigkeit</strong> einher; Klienten sollten zusätzlich therapeutisch begleitet sein</li></ul></section>
+<section id="s9"><time>1:02:40<small>4 min</small></time>
+<h2>Erschöpfung vs. Untererregung und Pause</h2><ul><li>Erholsame Erschöpfung: Person ist noch verbunden, genießt die Ruhe</li><li>Untererregung: Abwesenheit, Ausgeschaltetsein, keine echte Entspannung</li><li>Unterscheidung gelingt über Kennenlernen des Menschen</li><li>Erste kurze Pause</li></ul></section>
+<section id="s10"><time>1:06:59<small>9 min</small></time>
+<h2>Praxisfragen: Pendeln bei Scham und konkretes Beispiel</h2><ul><li>Befindlichkeitsrunde nach der Pause</li><li><strong>Pendeln</strong> zwischen Stressor und Ressource ist bei jeder Belastung einsetzbar und wird zur Technik im Gesprächsfluss</li><li>Beispiel: Bei Scham transparent zu den Füßen/ins Hier und Jetzt pendeln, dann weitererzählen</li></ul></section>
+<section id="s11"><time>1:16:00<small>9 min</small></time>
+<h2>Wirkprinzip des Pendelns</h2><ul><li>Ressourcenseite wächst, weil Sicherheit im Hier und Jetzt und Co-Regulation gestärkt werden</li><li>Stress wird weniger belastend, Stresstoleranzfenster weitet sich (Prinzip der Traumaintegration)</li><li>Bei maximaler Erregung nicht pendeln, sondern nur orientieren und regulieren</li><li>Pendeln ist natürlich, bekannt durch Somatic Experiencing (Peter Levine)</li></ul></section>
+<section id="s12"><time>1:25:20<small>7 min</small></time>
+<h2>Lachen und Stressabbau</h2><ul><li>Echtes Lachen ist ventral und entlastend</li><li>Lachen kann auch Ersatz fürs Weinen sein; Lachkrämpfe als Spannungsabbau</li><li>Unpassendes Lachen bei Tragischem (inadäquater Affekt) ist oft Schutzreaktion/Dissoziation</li><li>Haltung: neugierig und würdevoll hinschauen statt bewerten</li></ul></section>
+<section id="s13"><time>1:32:10<small>23 min</small></time>
+<h2>Kommunikationsstil und Stimme als Sicherheit</h2><ul><li>Frage nach Verenas Sprechweise: Ziel ist, <strong>Sicherheit zu verkörpern</strong>, nicht Fawning</li><li>Prosodie, Konjunktiv (Wahlfreiheit), Ressourcenorientierung statt Positivismus</li><li>Stimme als &quot;Geländer durch die Dunkelheit&quot;; Meditationen bewusst mit kurzen Pausen</li><li>Chat-Erfahrungen: eigene Reaktionen auf die Stimme reflektieren, Stimmlage hängt von Sozialisierung und Zustand ab; Exkurs zu ASMR</li></ul></section>
+<section id="s14"><time>1:55:00<small>6 min</small></time>
+<h2>Ist Sicherheit ein eigener Zustand?</h2><ul><li>Sicherheit ist ein körperlicher Nervensystemzustand, nicht nur Abwesenheit von Angst</li><li>Angst kann da sein und trotzdem Sicherheit; fehlende Angst kann Dissoziation sein</li><li>Sicherheit = reguliertes, schwingungsfähiges System ohne aktive Stressachse</li><li>Podcast-Folgen zu Sicherheit kommen in die Ressourcen; Pause</li></ul></section>
+<section id="s15"><time>2:01:00<small>12 min</small></time>
+<h2>Rückkehr aus der Pause und Stresstoleranz nach Entspannung</h2><ul><li>Ressourcen aus der Pause im Chat</li><li>Warum nach entspannten Tagen das Stresstoleranzfenster kleiner wirken kann: Kontrast zum Funktionsmodus, Bedürfnisse werden spürbar, Inneres meldet sich</li><li>Ressource darf auch nur neutrale Körperempfindung sein</li></ul></section>
+<section id="s16"><time>2:13:10<small>9 min</small></time>
+<h2>Ressourcenübung, Trauer und Nachlernen</h2><ul><li>Übungen werden in der Praxis zu flexiblen <strong>Interventionen</strong>; auftauchende Trauer darf Raum bekommen</li><li>Nachlernen, Gefahr- von Aufregungserregung zu unterscheiden: <strong>korrigierende Erfahrung</strong>, Psychoedukation, Tracking der Körperempfindungen, behutsam dosieren</li></ul></section>
+<section id="s17"><time>2:22:00<small>14 min</small></time>
+<h2>Interozeption, Ressourcenwahl, Sicherheit lernen und Ressourcikum</h2><ul><li>Körperwahrnehmungsübungen können erst aktivieren; niedrigschwellig bleiben, neugierig über das erste Signal hinaus</li><li>Ressourcenwahl individuell, nicht einengen</li><li>Sicherheit ist Werkseinstellung; bei Trauma muss sie gelernt und immer wieder erarbeitet werden</li><li>Fragen zu Ressourcen: &quot;Was tut dir gut?&quot;, Ressourcikum gemeinsam oder als Hausaufgabe, regelmäßig darauf zurückkommen</li></ul></section>
+<section id="s18"><time>2:36:10<small>13 min</small></time>
+<h2>Orientierung im Raum: Eintönigkeit und unsichere Räume</h2><ul><li>Lippenbremse/verlängerter Ausatem kurz erwähnt</li><li>Klienten gewinnt man durch Sinn und Transparenz; Übung muss nicht gefallen</li><li>Orientierung hilft auch in unsicheren Kontexten, stärkt Selbstwirksamkeit; Rückzug nach innen ist nur eine Schutzstrategie</li><li>Abwandlungen bei Vorträgen; Tipp mit dem Hund als Beispiel</li></ul></section>
+<section id="s19"><time>2:49:30<small>7 min</small></time>
+<h2>Widerstand gegen Selbstregulation</h2><ul><li>Zustandsbedingt und typisch in schweren Zeiten</li><li>Hilfreich: Bewusstsein schulen, <strong>Verbündete</strong> suchen, verbindliche Ressourcen im Alltag verankern, Lebenswandel anpassen</li><li>Kurze Pause</li></ul></section>
+<section id="s20"><time>2:56:00<small>10 min</small></time>
+<h2>Orientierungsreaktion, Körper und Nervensystem</h2><ul><li>Defensive vs. erkundende Orientierungsreaktion; Übung ermöglicht das Vollenden</li><li>Anfangs kann Orientierung kurz aktivieren; alternativ Orientierung über Sensorik (Kontaktpunkte)</li><li>Körperliche Symptome (Darm, Haut) nicht immer nervensystembedingt, meist multifaktoriell; Stress wirkt aber stark körperlich</li></ul></section>
+<section id="s21"><time>3:05:40<small>10 min</small></time>
+<h2>Weitere Chat-Themen</h2><ul><li>Hochsensibilität und Trauma: Überschneidungen, Elaine Aaron</li><li>Zyklus, Magersucht, Übergewicht, Kinderwunsch: Stress wirkt körperlich, Grenzen der eigenen Expertise (Mikronährstoffe, Hormone)</li><li>Podcast-Empfehlungen aus der Gruppe für das Ressourcen-Sheet</li></ul></section>
+<section id="s22"><time>3:15:20<small>5 min</small></time>
+<h2>Bleiben Tools für immer nötig?</h2><ul><li>Ziel: Stresstoleranzfenster weitet sich, Übungen werden weniger nötig</li><li>Phasenweise Rückgriff auf Tools ist kein Rückschritt, sondern kompetente Selbstführung</li><li>Abschluss-Befindlichkeit im Chat</li></ul></section>
+<section id="s23"><time>3:20:10<small>12 min</small></time>
+<h2>Abschluss-Ressourcenbad und Verabschiedung</h2><ul><li>Geführte Entspannung: Schwerkraft, Herz weit werden lassen, Essenz des Tages, Selbstwertschätzung und ein konkretes Geschenk an sich selbst</li><li>Abschlusslied (&quot;I am light&quot;)</li><li>Dank, Hinweis auf Integrationswoche und Start ins neue Modul</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m2-b2-09-integration.html"><b>‹</b><span><small>Vorherige</small>Integration</span></a><a class="nx" rel="next" href="m2-b2-11-qa-ankommen-2025.html"><span><small>Nächste</small>Q&amp;A ankommen 2025</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

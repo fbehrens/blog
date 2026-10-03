@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Intensive Gefühle begleiten und regulieren Teil 1 · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m8" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m8-b1-01-in-ruhe-ankommen.html" title="In Ruhe ankommen">‹</a>
+<div class="t"><div class="k">Modul 8 · Block 1</div><h1>Intensive Gefühle begleiten und regulieren Teil 1</h1></div>
+<a class="ic" rel="next" href="m8-b1-03-intensive-gefuehle-begleiten-und-regulieren-teil-2.html" title="Intensive Gefühle begleiten und regulieren Teil 2">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:10</a><a href="#s2">2:03</a><a href="#s3">5:40</a><a href="#s4">12:00</a><a href="#s5">16:55</a><a href="#s6">23:05</a><a href="#s7">26:30</a><a href="#s8">35:25</a><a href="#s9">41:11</a></nav></header>
+<main><div class="meta"><span>⏱ 50:50</span><span>9 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:10<small>2 min</small></time>
+<h2>Begrüßung und Einführung ins Thema intensive Gefühle</h2><ul><li>Erstes Theorievideo in Modul 8: Umgang mit, Begleitung und Regulation <strong>intensiver Gefühle</strong></li><li>Viele Klient:innen wie Begleiter:innen müssen lernen, dies ohne Angst und Abwehrstrategien zu können</li><li>Am Ende gibt es eine kleine <strong>Forschungsreise</strong> (Selbstreflexion)</li><li>Praktische Relevanz in jedem Arbeitskontext und im Privatleben</li></ul></section>
+<section id="s2"><time>2:03<small>4 min</small></time>
+<h2>Trauma und intensive Gefühle</h2><ul><li>Einladung zur Selbstreflexion: Welche spontane Reaktion löst „intensive Gefühle“ aus?</li><li>Trauma und Traumafolgen sind immer mit intensiven Zuständen (<strong>Über-/Untererregung</strong>) und Gefühlen verbunden</li><li>Das <strong>implizite Gedächtnis</strong> (Körpergedächtnis) enthält fragmentierte, spannungsgeladene Erinnerungen</li><li>Trigger führen zu <strong>emotionalen oder somatischen Flashbacks</strong> oder zu Kompensation, bei der Druck „unterm Deckel“ gehalten wird</li></ul></section>
+<section id="s3"><time>5:40<small>6 min</small></time>
+<h2>Was in Integrationsprozessen passiert</h2><ul><li>Das <strong>Bewusstsein</strong> für innere Wirklichkeiten steigt (Psychoedukation, z. B. Anteile)</li><li>Das <strong>Containment</strong> wächst durch Selbst- und Koregulation</li><li><strong>Kompensationsstrategien</strong> werden schwächer</li><li>Deshalb werden intensive Gefühle frei – das ist „Integration in Aktion“: Menschen erleben, dass es unangenehm, aber nicht schlimm ist</li><li>Aufgabe der Begleitung: wahrnehmen, einordnen, damit umgehen</li><li>Eigenes Monitoring und Wohlwollen: Begleiter:innen dürfen selbst noch an Themen arbeiten</li></ul></section>
+<section id="s4"><time>12:00<small>5 min</small></time>
+<h2>Intensive Gefühle und das Stresstoleranzfenster</h2><ul><li>Intensive Gefühle sind <strong>nicht automatisch außerhalb des Stresstoleranzfensters</strong>; hohe sympathikotone Erregung liegt noch im Fenster</li><li>Viele Begleiter:innen scheuen intensive Erlebnisqualitäten und versuchen, sie schnell wegzuregulieren, wegzupendeln oder zu kontrollieren</li><li>Problem: Integration braucht Spüren, <strong>Abreaktion</strong> und Entladung; zu schnelles Eindämmen „sperrt die Energie zurück in die Kiste“ (Vergleich Niesreiz)</li><li>Unser Umgang spiegelt unsere eigenen Erfahrungen und deren Integration</li></ul></section>
+<section id="s5"><time>16:55<small>6 min</small></time>
+<h2>Persönliches Beispiel: Paartherapie und Streit</h2><ul><li>Erste Paarsitzung ohne Ausbildung: Das Paar stritt laut, die Referentin fühlte sich überfordert</li><li>Hintergrund: Familie, in der durch Schweigen gemanagt wurde, unterschwelliger Konflikt</li><li>Konsequenz: systemische Paartherapie-Ausbildung und Reflexion der Familienmuster</li><li>Botschaft: Reaktionen zeigen, wo wir weiterlernen dürfen; wir müssen nicht fertig sein, aber <strong>ehrlich</strong> und uns bewusst, wo wir stehen</li><li>Empfehlung: traumasensible Paartherapie von Dr. Katharina Klees (Ausbildung und Buch)</li></ul></section>
+<section id="s6"><time>23:05<small>3 min</small></time>
+<h2>Kompensationsstrategien in der Begleitung</h2><ul><li>Kompensation ersetzt Selbstregulation; scheitert sie, folgen Überflutung und Kontrollverlust</li><li>Klient:innen setzen Kompensation oft auch in Sitzungen fort: distanziert berichten, funktionale Anteile vorn, verletzte Anteile dahinter</li><li>Heilsame Arbeit: die gehaltene Energie <strong>integrieren und transformieren</strong></li><li>Körperorientierung und Orientierung im Hier und Jetzt laden indirekt ein, lockerzulassen</li></ul></section>
+<section id="s7"><time>26:30<small>9 min</small></time>
+<h2>Das Trauma-U</h2><ul><li>Die Reihenfolge ist oft anders: Bewusstsein steigt, Kompensation greift nicht mehr, <strong>Destabilisierung</strong> entsteht, bevor Containment da ist</li><li><strong>Trauma-U</strong>: Wohlbefinden steigt zunächst, sinkt dann in eine Talsohle, später wieder Anstieg auf höherem Grundniveau</li><li>Typisch im U: Erkenntnis von Überlebensmustern in Beziehungen (People-Pleasing), Trauer um ungelebtes Leben</li><li>Begleiter:innen sollten das erklären und <strong>normalisieren</strong>; sonst droht Abbruch der Zusammenarbeit</li><li>Gilt auch in Weiterbildungen und beim Podcast; nicht bei allen Menschen gleich ausgeprägt, daher nicht präventiv ausmalen, aber bei Bedarf einsetzen</li></ul></section>
+<section id="s8"><time>35:25<small>6 min</small></time>
+<h2>Korrigierende Erfahrung und Vertrauen als Türöffner</h2><ul><li>Essenz traumasensibler Begleitung: intensive Empfindungen erleben, <strong>ohne geflutet zu werden</strong> – erst durch Koregulation, dann Selbstregulation</li><li>Keine falschen Erwartungen wecken, aber auch keine Angst machen</li><li>Wachsendes Vertrauen und Sicherheit öffnen die Tür für intensive Emotionen – ein gutes Zeichen</li><li>Gefahr: ungünstige <strong>Übertragungen</strong> (kindliche Anteile agieren aus, Begleiter:in wird elterlich) und Gegenübertragung; Meta-Ebene und Nachreflexion nutzen</li></ul></section>
+<section id="s9"><time>41:11<small>9 min</small></time>
+<h2>Forschungsreise: eigene Reaktion auf unangenehme Gefühle</h2><p>Fragen zum Notieren:</p><ul><li>Welches Gefühl bzw. welchen Ausdruck bei anderen finde ich am unangenehmsten (Weinen, Wut, Aggression, Schweigen)?</li><li>Woran merke ich das (Fluchtimpuls, Angst, Schwindel)?</li><li>Welcher <strong>Nervensystemzustand</strong> wird aktiviert (Übererregung, Untererregung, Starre, Fawn)?</li><li>Reagiert ein <strong>Anteil</strong>? Wie alt ist er, wie ist meine Beziehung zu ihm?</li><li>Was bräuchte dieser Anteil?</li><li>Diese Qualität im Inneren spüren (Körperempfindung, Ressource, Bild), sich dem Anteil damit zuwenden und die Wirkung nachspüren</li><li>Abschluss: Zeit lassen vor dem nächsten Video</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m8-b1-01-in-ruhe-ankommen.html"><b>‹</b><span><small>Vorherige</small>In Ruhe ankommen</span></a><a class="nx" rel="next" href="m8-b1-03-intensive-gefuehle-begleiten-und-regulieren-teil-2.html"><span><small>Nächste</small>Intensive Gefühle begleiten und regulieren Teil 2</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

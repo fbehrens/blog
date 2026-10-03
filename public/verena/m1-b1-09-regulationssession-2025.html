@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Regulationssession 2025 · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m1" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m1-b1-08-integration.html" title="Integration">‹</a>
+<div class="t"><div class="k">Modul 1 · Block 1</div><h1>Regulationssession 2025</h1></div>
+<a class="ic" rel="next" href="m1-b1-r01-hand-faust-uebung.html" title="Hand Faust Übung">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">1:44</a><a href="#s3">4:50</a><a href="#s4">8:40</a><a href="#s5">10:30</a><a href="#s6">15:20</a><a href="#s7">21:10</a><a href="#s8">27:40</a><a href="#s9">34:20</a><a href="#s10">39:20</a><a href="#s11">43:50</a><a href="#s12">48:30</a><a href="#s13">52:05</a></nav></header>
+<main><div class="meta"><span>⏱ 53:56</span><span>13 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>2 min</small></time>
+<h2>Begrüßung und Rahmen</h2><ul><li>Willkommen am Samstagabend, Einladung, gut für sich zu sorgen (stehen, sitzen oder liegen)</li><li>Technische Unterstützung durch Elisa</li><li>Hinweis, dass die Aufzeichnung jederzeit nachgeschaut werden kann</li></ul></section>
+<section id="s2"><time>1:44<small>3 min</small></time>
+<h2>Einchecken auf der Skala 0–10 und Programmüberblick</h2><ul><li>Skala: 0 = balanciert/ruhig, 10 = stark erregt bis taub oder erschöpft</li><li>Im Chat zeigen sich viele Zustände: entspannt, müde, viel los im Kopf</li><li>Programm: <strong>Orientierung</strong>, Wirbelsäule und <strong>Regulation über das Nervensystem</strong>, Berührung, Imagination und Zentrierung</li><li>Orientierung und Einchecken als „zweite Haut“ im Alltag einüben</li></ul></section>
+<section id="s3"><time>4:50<small>4 min</small></time>
+<h2>Disclaimer, Ressourcen und Ton</h2><ul><li>Übungen können angenehm sein, aber auch Unruhe oder Gefühle hochbringen</li><li>Auf <strong>Ressourcen</strong> besinnen und zwischen Aktivierung und Ressource pendeln (weiche Unterlage, Blume, Kerze, Licht)</li><li>Klärung der Lautstärke (Kopfhörer, lauter sprechen)</li><li>Wechsel zum Du</li></ul></section>
+<section id="s4"><time>8:40<small>2 min</small></time>
+<h2>Gedicht „Der Wald“ von Nikita Gill</h2><ul><li>Gedicht über Wurzeln, Stärke, Geschichten und Erinnerungen als Teil des eigenen inneren Waldes</li><li>Orientierung über den Hörsinn</li></ul></section>
+<section id="s5"><time>10:30<small>5 min</small></time>
+<h2>Orientierung im Raum und Atem</h2><ul><li>Visuelle Orientierung: Blick weit werden lassen, Kopf drehen, Ausgänge, hinten, oben, unten wahrnehmen</li><li>Langsam <strong>titrieren</strong>, wenn die Erregung hoch ist</li><li>Quellen von Wärme, Geborgenheit, Stabilität suchen</li><li>Lange Ausatmung, Pferdeatmung, <strong>Tönen</strong> als Signal von Sicherheit für das Nervensystem</li></ul></section>
+<section id="s6"><time>15:20<small>6 min</small></time>
+<h2>Pandikuläre Bewegungen und Austausch</h2><ul><li>Intuitives Räkeln, Strecken, Gähnen, Katze-Kuh, Wirbelsäule sanft bewegen</li><li>Mittellinie und gutes Sitzen für sich finden</li><li>Rückmeldungen im Chat: lebendiger, wärmer, müder, mehr Kontakt</li><li>Wir tragen tierische Impulse im Nervensystem, der moderne Lebensstil entfernt uns vom Körper</li></ul></section>
+<section id="s7"><time>21:10<small>7 min</small></time>
+<h2>Zustandserkundung (Selbsterkundung)</h2><ul><li>Körperempfindungen, neutrale Orte, Gefühle und Ambivalenzen</li><li>Energie, Atem (im traumasensiblen Kontext Ressource und zugleich herausfordernd), Gedanken beobachten ohne Bewertung</li><li>Berührung, Anker im Außen oder Augen schließen als Hilfen</li></ul></section>
+<section id="s8"><time>27:40<small>7 min</small></time>
+<h2>Rotkehlchenatmung und Herzdrehung</h2><ul><li>Brust weit machen und wieder nach innen ziehen, im eigenen Rhythmus</li><li>Herzdrehung: Arme von der Mittellinie nach hinten, Blick folgt, Wirbelsäule rotiert</li><li>Nachspüren ist ebenso wichtig, denn dort entsteht die <strong>Regulation</strong></li><li>Stammhirn erreichen über Entschleunigung, der Vagusnerv als „Stromkabel“</li></ul></section>
+<section id="s9"><time>34:20<small>5 min</small></time>
+<h2>Hände halten und Zwischen-Check-in</h2><ul><li>Selbstumarmung oder Hände/Daumen halten als Ressource, persönliche Geschichte dazu</li><li>Taktile Rezeptoren in den Fingern; später eigene Session zu Berührung</li><li>Chat-Rückmeldungen: ruhiger, beseelt, Energie durch Bewegung, ungewohnt aber interessant</li></ul></section>
+<section id="s10"><time>39:20<small>5 min</small></time>
+<h2>Beckenschale und Sitzknochen</h2><ul><li>Sitzknochen spüren, Becken als Schale rechts/links, vor/zurück und kreisen</li><li>Wirbelsäule schwingt mit</li><li>Zur eigenen Mitte und Mittellinie finden</li></ul></section>
+<section id="s11"><time>43:50<small>5 min</small></time>
+<h2>Imagination der Wirbelsäule</h2><ul><li>Wirbelsäule als Lebenslinie und Energiequelle zwischen Becken und Kopf, Licht oder Farben</li><li>Veränderung von Haltung und innerer Haltung wahrnehmen</li><li>Augen öffnen und aus der zentrierten Haltung in den Raum schauen</li></ul></section>
+<section id="s12"><time>48:30<small>4 min</small></time>
+<h2>Abschluss-Check-in und Reise</h2><ul><li>Rückmeldungen: aufrechter, geerdet, präsent, glücklich da zu sein</li><li>Hinweis: Das ist eine <strong>Reise</strong> ohne Endstation, kein Muss; Taubheit am Anfang ist normal (Kern von Trauma: Körper nicht sicher)</li></ul></section>
+<section id="s13"><time>52:05<small>2 min</small></time>
+<h2>Gedicht zum Abschluss und Verabschiedung</h2><ul><li>Erneutes Vorlesen von „Der Wald“</li><li>Dank, Wünsche für das Wochenende, Abschlusslied und Tschüss</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m1-b1-08-integration.html"><b>‹</b><span><small>Vorherige</small>Integration</span></a><a class="nx" rel="next" href="m1-b1-r01-hand-faust-uebung.html"><span><small>Nächste</small>Hand Faust Übung</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

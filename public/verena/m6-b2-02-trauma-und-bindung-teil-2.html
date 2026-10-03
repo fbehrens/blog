@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Trauma und Bindung Teil 2 · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m6" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m6-b2-01-in-ruhe-ankommen.html" title="In Ruhe ankommen">‹</a>
+<div class="t"><div class="k">Modul 6 · Block 2</div><h1>Trauma und Bindung Teil 2</h1></div>
+<a class="ic" rel="next" href="m6-b2-03-bindungsorientiertes-begleiten.html" title="Bindungsorientiertes begleiten">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">1:38</a><a href="#s3">5:27</a><a href="#s4">21:00</a><a href="#s5">36:46</a><a href="#s6">45:46</a><a href="#s7">55:46</a><a href="#s8">1:03:12</a><a href="#s9">1:10:06</a><a href="#s10">1:16:09</a><a href="#s11">1:20:01</a></nav></header>
+<main><div class="meta"><span>⏱ 1:26:42</span><span>11 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>1 min</small></time>
+<h2>Begrüßung und Überblick</h2><ul><li>Anknüpfen an Bindung und Trauma aus Teil 1</li><li>Themen: welche Traumata auf das Bindungssystem wirken, Folgen erkennen, <strong>emotionale Abhängigkeit</strong>, traumabedingte Beziehungsdynamiken</li><li>Einladung zur Integration nach dem Video</li></ul></section>
+<section id="s2"><time>1:38<small>4 min</small></time>
+<h2>Welche Traumatisierungen wirken auf das Bindungssystem?</h2><ul><li>Fast jedes Trauma berührt das Bindungssystem; <strong>Man-Made-Traumata</strong> besonders stark</li><li>Je größer die Abhängigkeit, desto tiefer die Prägung – frühe Lebensjahre besonders vulnerabel</li><li><strong>Bindungstrauma</strong> ist kein offizieller Diagnosebegriff, stammt aus der Bindungsforschung; grenzt sich vom unscharfen Begriff Entwicklungstrauma ab</li><li>Einordnung in die <strong>komplexe Traumatisierung</strong>, am ehesten in der komplexen PTBS; Diagnosemanuale hinken hinterher</li></ul></section>
+<section id="s3"><time>5:27<small>16 min</small></time>
+<h2>Pränatale Traumatisierungen</h2><ul><li>Schon in der Schwangerschaft entsteht ein intensives Bindungsband; Belastung der Mutter stört den Bindungsaufbau</li><li>Beim Kind entsteht ein <strong>implizites, vorsprachliches Empfinden</strong> (z. B. Nicht-willkommen-Sein)</li><li>Mögliche Faktoren: unerwünschte Schwangerschaft, Abtreibungsversuche, verheimlichte Schwangerschaft, Stress, Konflikte, medizinische Komplikationen, existenzielle Sorgen, Gewalt, Verluste, Krieg/Flucht, eigene Traumafolgen der Mutter</li><li>Fallbeispiel einer jungen Klientin: Tod der eigenen Mutter, Risikoschwangerschaft – und trotzdem eine gelungene Bindung; Traumata müssen nicht weitergegeben werden</li><li><strong>Verlust eines Zwillings/Mehrlings im Mutterleib</strong> (Verlusttrauma, Sehnsucht, Einsamkeit); Hinweis auf Franz Ruppert (Symbiosetrauma)</li><li>Jedes bedrohliche Ereignis kann die Verbundenheit beeinträchtigen</li><li>Einladung, durchzuatmen und sich zu spüren</li></ul></section>
+<section id="s4"><time>21:00<small>16 min</small></time>
+<h2>Perinatale und postnatale Traumatisierungen (Geburt)</h2><ul><li>Geburt als prägende Bindungserfahrung: Trennung und Wiederfinden, unterstützt durch Hormone</li><li>Nicht jede problematische Geburt führt zum Trauma; intuitiv nach der Geburt fragen</li><li><strong>Perinatal</strong>: Vollnarkose (Gefühl von Verlassenwerden), Komplikationen mit starker Angst, Gewalt unter der Geburt, Medikamente (verändern Hormoncocktail), Frühgeburt (Trennung, Inkubator, Intensivmedizin), Kaiserschnitt (geplante Kaiserschnitte kritisch gesehen)</li><li><strong>Postnatal</strong>: Trennungen, Krankheit von Kind oder Mutter, <strong>postpartale Depression</strong> – Mütter brauchen Unterstützung</li><li>Häufig geht es gut; dank <strong>Neuroplastizität</strong> und der Kraft der Bindung ist viel Balance möglich</li></ul></section>
+<section id="s5"><time>36:46<small>9 min</small></time>
+<h2>Frühe Kindheit: Verluste, Gewalt, Parentifizierung</h2><ul><li>Verluste (Tod, Trennung der Eltern, Umzüge, Krankenhausaufenthalte) bedeuten Angst, Trauer, Wut, Ohnmacht, Einsamkeit; Beispiel Diplomatenkind</li><li>Anregung: Was ist Trennung in meinem eigenen Bewusstsein?</li><li><strong>Gewalt</strong> umfasst auch Vernachlässigung und emotionale Gewalt; wird oft als normal erlebt und bagatellisiert</li><li>Einordnen statt persönlich nehmen, wenn Klienten ambivalent reagieren</li><li>Selbstumarmung und Präsenz zwischendurch</li></ul></section>
+<section id="s6"><time>45:46<small>10 min</small></time>
+<h2>Parentifizierung und Introjektion</h2><ul><li><strong>Parentifizierung</strong> als Form emotionalen Missbrauchs: Kinder werden überfordert und instrumentalisiert</li><li>Betroffene sind funktional, übernehmen Verantwortung, kontrollieren die Beziehung, haben schlechtes Gewissen; dahinter steckt Einsamkeit</li><li>Begleitende bieten einen neuen Erfahrungsraum, in dem sie nicht verantwortlich sind</li><li>Kurzer Ausblick auf <strong>Introjektion</strong>: verinnerlichte Botschaften der Bindungspersonen als Blaupause für Selbst- und Fremdbild (später im Modul)</li></ul></section>
+<section id="s7"><time>55:46<small>7 min</small></time>
+<h2>Körperübung und Blaupause früher Bindungserfahrungen</h2><ul><li>Fingerleiter als Übung zur Präsenz</li><li>Frühe Bindungserfahrungen sind eine <strong>Blaupause</strong> für spätere Beziehungen</li><li>Überlebensstrategien und Stressprägung werden bei Nähe und Grundbedürfnissen reaktiviert</li><li>Prägungen zeigen sich oft erst ca. ein Jahr nach Beziehungsbeginn (Diane Poole Heller, David Wallin)</li></ul></section>
+<section id="s8"><time>1:03:12<small>7 min</small></time>
+<h2>Emotionale Abhängigkeit, Objektpermanenz und Objektkonstanz</h2><ul><li>Ausdruck eines <strong>überaktivierten Bindungssystems</strong>; keine gesunde Autonomie entwickelt</li><li><strong>Objektpermanenz</strong>: Der andere existiert, auch wenn ich ihn nicht sehe</li><li><strong>Objektkonstanz</strong>: Der andere bleibt derselbe Mensch, wenn er wiederkommt</li><li>Bei unzuverlässiger Bindung entsteht eine On-Off-Dynamik und ständiges Rückversichern; Begleiter brauchen Zuverlässigkeit</li></ul></section>
+<section id="s9"><time>1:10:06<small>6 min</small></time>
+<h2>Muster der emotionalen Abhängigkeit</h2><ul><li>Unterwerfungsreaktion (Fawn): Aufopferung, Selbstlosigkeit, Vernachlässigung eigener Grenzen, Selbstbetrug, toxisches Verständnis</li><li>Verlustpanik, zwanghafte Kontrolle, Eifersucht, Alarm bei Eigenständigkeit des anderen</li><li>Symbiotische Muster, emotionale Erpressung, nicht allein sein können, Identitätsverlust</li><li>Unentbehrlich sein wollen, ständige Bestätigung suchen; der andere als Lebensmittelpunkt</li></ul></section>
+<section id="s10"><time>1:16:09<small>4 min</small></time>
+<h2>Scheinautonomie</h2><ul><li>Gegenpol: <strong>deaktiviertes Bindungssystem</strong>, Bindungsvermeidung</li><li>Kompensation fehlender Selbstwirksamkeit: Abhängigkeit, Scheinautonomie oder Pendeln</li><li>Starr und rigide, mehr Selbstkontrolle als Selbstbestimmung</li><li>Erscheinungsformen: einsame Wölfe, Globetrotter, Nomaden, Job- und Partnerwechsel</li></ul></section>
+<section id="s11"><time>1:20:01<small>7 min</small></time>
+<h2>Wertekonflikte, Reinszenierung und Schlusswort</h2><ul><li><strong>Wertekonflikte</strong>: Wir wollen anders leben, als das Bindungssystem geprägt ist – ein gutes Heilungszeichen</li><li><strong>Reinszenierung</strong>: Wir suchen unbewusst Vertrautes, das dem Bindungssystem der primären Bezugspersonen ähnelt (z. B. emotional nicht verfügbare Partner)</li><li>Muster sind heilbar; in uns ist <strong>sichere Bindung angelegt</strong>, lebenslang entfaltbar</li><li>Einladung zur Integration und Selbstfürsorge</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m6-b2-01-in-ruhe-ankommen.html"><b>‹</b><span><small>Vorherige</small>In Ruhe ankommen</span></a><a class="nx" rel="next" href="m6-b2-03-bindungsorientiertes-begleiten.html"><span><small>Nächste</small>Bindungsorientiertes begleiten</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Q&amp;A 2025 · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m1" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m1-b2-06-integration.html" title="Integration">‹</a>
+<div class="t"><div class="k">Modul 1 · Block 2</div><h1>Q&amp;A 2025</h1></div>
+<a class="ic" rel="next" href="m1-b2-08-qa-ankommen-2025.html" title="Q&amp;A ankommen 2025">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">2:08</a><a href="#s3">9:05</a><a href="#s4">20:50</a><a href="#s5">25:30</a><a href="#s6">35:20</a><a href="#s7">42:40</a><a href="#s8">50:30</a><a href="#s9">1:01:30</a><a href="#s10">1:18:00</a><a href="#s11">1:32:10</a><a href="#s12">1:45:10</a><a href="#s13">1:52:40</a><a href="#s14">2:11:40</a><a href="#s15">2:25:00</a><a href="#s16">2:38:20</a><a href="#s17">2:58:50</a><a href="#s18">3:17:10</a></nav></header>
+<main><div class="meta"><span>⏱ 3:22:12</span><span>18 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>2 min</small></time>
+<h2>Begrüßung und Chat-Runde</h2><ul><li>Willkommen zur ersten QA-Session von Modul 1, Check-in im Chat (wer ist neu, wer wieder da)</li><li>Tina unterstützt bei technischen Fragen</li><li>Abfrage der Stimmungen: Neugier, Müdigkeit, Anspannung, Berührtheit – alles ist willkommen</li></ul></section>
+<section id="s2"><time>2:08<small>7 min</small></time>
+<h2>Rahmen und Ablauf der QA-Sessions</h2><ul><li>Fragen sind geclustert; nicht alle können beantwortet werden, viele Themen kommen in späteren Modulen</li><li>Offene Fragen können in der <strong>Integrationswoche</strong> den Fachassistentinnen gestellt werden</li><li>Organisatorische/technische Fragen gehören an den <strong>Support</strong></li><li>Pausen als wichtiger Teil für ein balanciertes Nervensystem, Integration am Ende</li><li>Hinweis auf Transkriptionen und Timestamps der Aufzeichnung</li></ul></section>
+<section id="s3"><time>9:05<small>12 min</small></time>
+<h2>Ankommen: Orientierung im Raum und Körperübung</h2><ul><li>Bewusste <strong>Orientierung im Raum</strong>, Anker der Sicherheit finden</li><li>Aufrichten, Schwerkraft spüren, Schultern und <strong>Kiefer</strong> entspannen</li><li>Raum öffnen für belastende Anteile („kuscheliges Sofa“) und Kontakt zum erwachsenen, neugierigen Ich</li><li>Ausrichtung für den Nachmittag festlegen und sanft ins Außen zurückkehren</li></ul></section>
+<section id="s4"><time>20:50<small>5 min</small></time>
+<h2>Hinweise zu Fragen und Organisation</h2><ul><li>Ausrichtungen notieren, eigene Pausen machen, Galerieansicht nutzen</li><li>Fragen werden passend zum Modulstand ausgewählt; nicht beantwortete Fragen gehen nicht verloren</li><li>Persönliche Fragen nur, wenn fachlich passend</li></ul></section>
+<section id="s5"><time>25:30<small>10 min</small></time>
+<h2>Ressourcen: Wie wird eine Ressource wirklich gefühlt?</h2><ul><li>Ressourcen wirken nur, wenn man präsent ist und sie spürt; Ziel ist <strong>Erfahrung ermöglichen</strong>, nicht ein Ergebnis erzwingen</li><li><strong>Verkörperung</strong> und Selbstwahrnehmung lernen; Ressourcenarbeit ist ein sicherer Einstieg</li><li>Unterscheidung <strong>Ressource vs. Kompensationsstrategie</strong>: Fühlbarkeit, Sicherheit, Regulation, kein <strong>Rebound-Effekt</strong> (Beispiel stundenlanges Lesen)</li><li>Am Anfang wollen Klienten oft „es gut machen“</li></ul></section>
+<section id="s6"><time>35:20<small>7 min</small></time>
+<h2>Ressourcen im Alltag: Überwindung, Mikroressourcen, fehlende Ressourcen</h2><ul><li>Ressource gelingt nicht immer sofort; Initialimpuls bzw. Überwindung ist zustandsabhängig (Untererregung/Übererregung)</li><li>Wenn Klienten keine Ressource nennen können: aus dem Verstand heraus neugierig erkunden, spielerisch statt Mangeldruck</li><li><strong>Mikroressourcen</strong> (Atem, Füße spüren, Duft, Blick aus dem Fenster)</li></ul></section>
+<section id="s7"><time>42:40<small>8 min</small></time>
+<h2>Praxisfragen zur Ressourcenarbeit</h2><ul><li>Klienten, die „Knall“ suchen: Psychoedukation und gutes Rahmen, warum stabilisierende Arbeit wichtig ist</li><li>Wann Ressourcen ansprechen, ohne dass sich Klienten nicht gesehen fühlen</li><li><strong>Hausaufgaben</strong> besser als Integrationseinladung formulieren</li></ul></section>
+<section id="s8"><time>50:30<small>11 min</small></time>
+<h2>Verknüpfte Bewertungen, guter Grund im Symptom und Wesenskern</h2><ul><li>Negative Bewertungen an Ressourcen (z. B. Serien schauen): Bewusstwerden ermöglicht späteres <strong>Entkoppeln</strong></li><li>Ressource im destruktiven Verhalten (z. B. Essanfälle): Strategie war damals rettend, Selbstempathie, neugierig erkunden</li><li>Audioaufnahmen von Übungen für Klienten</li><li>Ressourcen als Zugang zum unversehrten Wesenskern; Pause</li></ul></section>
+<section id="s9"><time>1:01:30<small>17 min</small></time>
+<h2>Rückkehr und Säulen: Begleiter-Zustand, Gefühlsansteckung, Tränen</h2><ul><li>Überleitung zu den Säulen der traumasensiblen Begleitung</li><li>Guter Begleiter zu sein heißt nicht alles aufgearbeitet zu haben, sondern sich <strong>halten, containen und regulieren</strong> zu können; <strong>Selbstfürsorge</strong> ist Verantwortung</li><li>Ehrliche Antwort, ob man selbst betroffen war</li><li>Tränen sind okay, wenn Sicherheit bleibt und Rollenumkehr vermieden wird (klar rahmen)</li></ul></section>
+<section id="s10"><time>1:18:00<small>14 min</small></time>
+<h2>Raum halten, Beziehung und professionelle Distanz</h2><ul><li>Raum halten hängt vom eigenen Zustand ab; Nahbarkeit statt „Allwissen“ (Hospizbeispiel)</li><li>Freundschaftliche Wünsche von Klienten: natürlich bei bindungsorientierter Arbeit, Distanz durch die professionelle Position</li><li>Phasenweise <strong>Abhängigkeit</strong> als Entwicklungsphase bei Bindungstrauma, später Autonomie</li><li>Social Media und Events als Mischebene; Hinweis auf Buch „Trauma und Beziehungen“</li></ul></section>
+<section id="s11"><time>1:32:10<small>13 min</small></time>
+<h2>Körperarbeit, Barrieren und Berührung</h2><ul><li>Müdigkeit in der Übertragung als Untererregung</li><li>Körperorientiert arbeiten ohne Übergriffigkeit (z. B. bei Geflüchteten, Menschen mit Behinderung): kleinschrittig, <strong>prozess- statt ergebnisorientiert</strong></li><li><strong>Berührung</strong> ist nicht verboten, nur missbräuchliche; Einverständnis und klarer Rahmen; Hinweis auf Weiterbildung (Cathy Kane)</li><li>Pause</li></ul></section>
+<section id="s12"><time>1:45:10<small>8 min</small></time>
+<h2>Rückkehr, Mini-Körperübung und Regulation lernen</h2><ul><li>Übung nach Stanley Rosenberg (Rotation an der Wirbelsäule) zur Regulation</li><li>Regulation lernen: Wissen, Übungen und <strong>vernetztes Denken</strong> greifen ineinander</li></ul></section>
+<section id="s13"><time>1:52:40<small>19 min</small></time>
+<h2>Regulationsübungen: Pausen, von außen nach innen, Sicherheit</h2><ul><li>Pausen zwischen Übungen: der Impuls wirkt wie eine Welle, die ausklingen darf</li><li>Übungen von außen nach innen (Neurozeption, Sicherheit) vs. von innen nach außen (Selbstwahrnehmung); keine feste Zuordnung, individuell erkunden</li><li>„Blockiert“ als Beobachtung, neugierig erforschen</li><li><strong>Sicherheit</strong> ist unsere Arbeit, nicht die Voraussetzung; Üben ohne Anleitung durch achtsames, bewertungsfreies Üben</li></ul></section>
+<section id="s14"><time>2:11:40<small>13 min</small></time>
+<h2>Der gute Grund und Abgrenzung zur Traumatherapie</h2><ul><li>Mit dem guten Grund arbeiten ohne <strong>Traumakonfrontation</strong>: Geschichte hören und bezeugen, im Hier und Jetzt regulieren</li><li>Traumakonfrontation = detailliertes Wiedererleben in Therapie (z. B. bei Flashbacks/PTBS)</li><li>Coaching darf mit Trauma arbeiten, aber nicht Therapiebedarf/Diagnosen ersetzen; Details in Modul 8</li><li>Dank und Pause</li></ul></section>
+<section id="s15"><time>2:25:00<small>13 min</small></time>
+<h2>Gemischte Praxisfragen</h2><ul><li>Klient lässt sich aus Angst nicht auf Übung ein: Zeit und Raum geben (Hand-Faust-Übung), Hypothesen und Neugier</li><li>Disregulation in der Kleingruppe: Leitfaden im Kursbereich</li><li>Leistungs- und Geldorientierung, Klienten mit Zeitdruck: Mitgefühl, Psychoedukation, Prozessorientierung</li><li>Feedback von außen, da Betroffene ihre Fortschritte nicht sehen</li><li>Verändern vs. Aushalten, sich nicht zum Komplizen schlechter Umstände machen</li></ul></section>
+<section id="s16"><time>2:38:20<small>21 min</small></time>
+<h2>Klare Sprache bei toxischen Beziehungen</h2><ul><li>Behutsam fragen statt direkt benennen, Bewusstwerdung als Prozess; zu frühes Benennen kann Ambivalenz und Bindungsbedrohung auslösen</li><li>Raum für Ehrlichkeit sich selbst gegenüber schaffen</li><li>Große Themen (z. B. narzisstischer Ex-Partner, Kontaktverweigerung) werden später behandelt</li><li>Abschluss der Fragen</li></ul></section>
+<section id="s17"><time>2:58:50<small>18 min</small></time>
+<h2>Abschlussintegration</h2><ul><li>Befindlichkeitsrunde im Chat</li><li>Geführte Integration: Wertschätzung für sich und den Körper, Selbstberührung</li><li>Imagination des <strong>Lichts der Unversehrtheit</strong> im Herzen und Verbundenheitsnetzwerk aller Teilnehmenden</li><li>Sanftes Zurückkommen in den Raum</li></ul></section>
+<section id="s18"><time>3:17:10<small>5 min</small></time>
+<h2>Verabschiedung und Abschlusslied</h2><ul><li>Dank an Teilnehmende und Tina, Einladung, im Chat Feedback zu geben</li><li>Abschlusslied „I am light“</li><li>Herzliche Verabschiedung und Wünsche fürs Wochenende</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m1-b2-06-integration.html"><b>‹</b><span><small>Vorherige</small>Integration</span></a><a class="nx" rel="next" href="m1-b2-08-qa-ankommen-2025.html"><span><small>Nächste</small>Q&amp;A ankommen 2025</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

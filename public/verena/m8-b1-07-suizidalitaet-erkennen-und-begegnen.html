@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Suizidalität erkennen und begegnen · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m8" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m8-b1-06-re-orientierung-co-regulation-und-akutinterventionen.html" title="Re-Orientierung Co-Regulation und Akutinterventionen">‹</a>
+<div class="t"><div class="k">Modul 8 · Block 1</div><h1>Suizidalität erkennen und begegnen</h1></div>
+<a class="ic" rel="next" href="m8-b1-08-integration.html" title="Integration">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:10</a><a href="#s2">2:22</a><a href="#s3">6:56</a><a href="#s4">11:20</a><a href="#s5">15:05</a><a href="#s6">19:52</a><a href="#s7">24:21</a><a href="#s8">25:37</a><a href="#s9">29:20</a><a href="#s10">36:31</a><a href="#s11">39:00</a><a href="#s12">43:44</a><a href="#s13">48:10</a></nav></header>
+<main><div class="meta"><span>⏱ 50:35</span><span>13 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:10<small>2 min</small></time>
+<h2>Einführung und Begriffsdefinitionen</h2><ul><li>Thema: Suizidalität erkennen und ihr begegnen</li><li><strong>Suizidalität</strong>: Summe aller Kräfte eines Menschen, die in Richtung Selbstvernichtung gehen</li><li><strong>Suizidale Handlung</strong>: bewusste, beabsichtigte Tat, die zum Tode führen soll (vollendeter Suizid oder Suizidversuch)</li><li><strong>Parasuizidale Handlung</strong>: Wissen, dass sie nicht zum Tod führt; Ziel ist Veränderung, oft appellativer Charakter</li><li><strong>Suizidideen</strong>: gedankliche Auseinandersetzung von Todeswünschen bis zum Entschluss</li><li>Quelle: Intensivkurs Psychiatrie und Psychotherapie (Urban &amp; Fischer)</li></ul></section>
+<section id="s2"><time>2:22<small>5 min</small></time>
+<h2>Einengung und epidemiologische Daten</h2><ul><li>Suizidalität ist Ausdruck einer <strong>Einengung des Erlebens</strong>; Zustand der Disregulation ohne Ressourcen, Stresstoleranz und Coping</li><li>Weltweit hohe Zahlen; in Deutschland ca. 12.000 Suizide pro Jahr (alle 45 Minuten ein Tod)</li><li>Männer suizidieren sich 3–4x häufiger, Frauen versuchen es ca. 3x häufiger</li><li>Suizide nehmen ab 60 zu, Versuche im Alter ab</li><li>Bei ca. 90 % liegen psychische Störungen vor (Depression 40–60 %, Alkoholismus 20 %, Schizophrenie 10 %, Persönlichkeitsstörungen 5 %, Angsterkrankungen 5 %)</li><li><strong>Über zwei Drittel kündigen den Suizid an</strong></li><li>30–50 % nach einem Versuch versuchen es erneut</li><li>Bei 12- bis 24-Jährigen zweithäufigste Todesursache nach Unfällen</li></ul></section>
+<section id="s3"><time>6:56<small>4 min</small></time>
+<h2>Risikogruppen</h2><ul><li>Höchste und niedrigste soziale Schicht</li><li>Sozial isolierte, arbeitslose, existenziell bedrohte Menschen</li><li>Chronisch/unheilbar Kranke und Suchtkranke</li><li>Starke Veränderungen der Lebensumstände (auch positive)</li><li>Menschen über 60; Ärztinnen und Ärzte (Verantwortungsdruck, Fehlernulltoleranz)</li><li>Depressive: ca. 15 % der früher stationär behandelten sterben durch Suizid</li><li>Menschen mit akuter Belastungsreaktion und <strong>Kurzschlusshandlung</strong></li><li>Krisen sind nicht einfach vorbei, Wachsamkeit bleibt wichtig</li></ul></section>
+<section id="s4"><time>11:20<small>4 min</small></time>
+<h2>Präsuizidales Syndrom nach Ringel</h2><ul><li>Drei Bereiche:</li></ul><p>1. <strong>Einengung</strong> der sozialen und psychischen Lebensbereiche (sozialer Rückzug)</p><p>2. <strong>Aggressionshemmung</strong> nach außen und Wendung gegen die eigene Person</p><p>3. <strong>Rückgang der Appetenz</strong> (Lebenslust) und erste Todesfantasien</p></section>
+<section id="s5"><time>15:05<small>5 min</small></time>
+<h2>Stadien der Suizidalität: Erwägungsstadium</h2><ul><li>Abfolge: Erwägung, Ambivalenz, Entschluss, dann Suizid</li><li>Erwägung: erste Suizidgedanken, Suizid als mögliche Konfliktlösung</li><li>Einflüsse: psychodynamisch (nach innen gewendete Aggression) und suggestiv von außen</li><li><strong>Werther-Effekt</strong> (Goethe 1774); weniger Suizide beim Zeitungsstreik in Boston</li><li>Distanzierungs- und Steuerungsfähigkeit noch erhalten, geringe Intensität, Schwanken zwischen Ja und Nein, vorsichtige Hinweise</li></ul></section>
+<section id="s6"><time>19:52<small>4 min</small></time>
+<h2>Ambivalenz- und Entschlussstadium</h2><ul><li>Ambivalenz: Kampf zwischen selbsterhaltenden und selbstzerstörerischen Kräften; direkte/indirekte Ankündigungen als <strong>Hilferufe und Kontaktsuche</strong></li><li>Mythos „Wer davon spricht, tut es nicht“ ist falsch (ca. 80 % kündigen an); Appelle immer ernst nehmen, auch bei Kindern und Jugendlichen</li><li>Entschluss: Steuerungsfähigkeit aufgehoben, <strong>trügerische Ruhe</strong> – Schweigen ist keine Entwarnung</li><li>Nachfragen, warum jemand jetzt leben will; wer leben will, kann Gründe nennen</li></ul></section>
+<section id="s7"><time>24:21<small>1 min</small></time>
+<h2>Zeitrahmen</h2><ul><li>Ambivalenzstadium dauert laut Statistik etwa 60 Stunden</li><li>Vom Entschluss bis zur Handlung meist ca. <strong>24 Stunden</strong></li><li>Jemanden in dieser Zeit allein zu lassen kann ein Fehler sein</li></ul></section>
+<section id="s8"><time>25:37<small>4 min</small></time>
+<h2>Prävention, Ernstnehmen und Fragen im Gespräch</h2><ul><li>Beste Prävention: <strong>stabile Bindung und Vertrauen</strong>; wertschätzend auffangen statt abwerten oder bagatellisieren</li><li>Suizidgedanken immer ernst nehmen, offensiv und ohne Scheu ansprechen</li><li>Beispielfragen: Gedanken in letzter Zeit? Konkrete Vorstellungen? Schon mit jemandem gesprochen? Drängen sich Todesfantasien auf? Rückzug, Hoffnungslosigkeit? Aggressionen? Zukunftspläne?</li><li>Fragen ermöglichen Risikoeinschätzung und entlasten</li></ul></section>
+<section id="s9"><time>29:20<small>7 min</small></time>
+<h2>Haltung und Interventionen bei Suizidalität</h2><ul><li>Eng getaktete Kontakte, Umfeld mobilisieren</li><li>Offen ansprechen (Verbalisierung entlastet), Erleben akzeptieren, aber nicht befürworten</li><li>Empathie, Hoffnung, Ressourcenorientierung statt Druck oder Schuldvorwürfe</li><li>Hilfsmöglichkeiten und Therapie ansprechen, nächste Schritte festlegen</li><li><strong>Antisuizidvertrag</strong>: Versprechen für einen Zeitraum, nutzt das Bindungssystem</li><li>Weitere Bezugspersonen einbeziehen</li></ul></section>
+<section id="s10"><time>36:31<small>2 min</small></time>
+<h2>Rechtliche Aspekte</h2><ul><li>Suizidversuch ist in Deutschland nicht strafbar (Unglücksfall)</li><li>Zeugen sind zur Hilfe verpflichtet (sonst unterlassene Hilfeleistung); Beihilfe ist strafbar</li><li>Mit Heilerlaubnis (Ärzte, Psychotherapeuten, Heilpraktiker) besteht bei fehlender Krankheitseinsicht und akuter Gefährdung die Pflicht zu <strong>Zwangsmaßnahmen</strong></li><li>Ohne Heilerlaubnis (z. B. Coaches) keine Pflicht, Polizei zu rufen oder einzuweisen</li></ul></section>
+<section id="s11"><time>39:00<small>5 min</small></time>
+<h2>Umgang mit akuter Suizidalität</h2><ul><li>Akut = Suiziddrohungen, ausgesprochene Absichten, hohe Erregung; Lebensgefahr</li><li>Person <strong>nicht allein lassen</strong>, Vier-Augen-Gespräch, offensiv ansprechen, Kränkungen erfragen, Affektabfuhr ermöglichen</li><li>Dokumentieren (Heilerlaubnis: rechtliche Absicherung)</li><li>Vorstellung in psychiatrischer Klinik; Polizei rufen oder Angehörige informieren und abholen lassen</li><li>Praxisbeispiel eines jungen Mannes, der sagte „Ich habe Angst, dass ich es tue“ – Familie informiert, Klinikaufenthalt, positive Entwicklung</li></ul></section>
+<section id="s12"><time>43:44<small>4 min</small></time>
+<h2>Typische Fehler im Umgang</h2><ul><li>Latente Signale übersehen, direktes Fragen vermeiden</li><li>Bagatellisieren (auch das des Klienten mitmachen)</li><li>Bewerten und Verurteilen</li><li>Übertragung/Gegenübertragung nicht ansprechen – oder zu früh ansprechen</li><li>Provokationen persönlich nehmen</li><li>Umstände der Einengung nicht explorieren</li><li>Zu schnell nach Positivem suchen</li></ul></section>
+<section id="s13"><time>48:10<small>2 min</small></time>
+<h2>Fazit und Abschluss</h2><ul><li>Kernsatz: <strong>Über das Sterben wollen zu reden, kann Leben retten</strong></li><li>Lieber mutig und unbeholfen nachfragen, als jemanden allein zu lassen</li><li>Kein Anspruch, jede Suizidalität zu erkennen oder alle zu retten; Ziel ist Kompetenz und Gewappnetsein wie ein Ersthelfer</li><li>Verabschiedung und gute Wünsche</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m8-b1-06-re-orientierung-co-regulation-und-akutinterventionen.html"><b>‹</b><span><small>Vorherige</small>Re-Orientierung Co-Regulation und Akutinterventionen</span></a><a class="nx" rel="next" href="m8-b1-08-integration.html"><span><small>Nächste</small>Integration</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>

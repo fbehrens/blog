@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<title>Regulationssession 2025 · Neurosystemische Integration</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bg2:#f4f5f7;--ink:#16181d;--mute:#6b7280;--line:#e5e7eb;--acc:#2563eb;--accbg:#eff4ff;
+ --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--bg2:#181b21;--ink:#e8eaee;--mute:#9098a5;--line:#262a32;--acc:#7aa2ff;--accbg:#1a2340}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);
+ backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line);
+ padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:.5rem;padding:.55rem .75rem;max-width:52rem;margin:0 auto}
+.bar .t{flex:1;min-width:0;text-align:center}
+.bar .k{font-size:.7rem;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar h1{margin:0;font-size:.98rem;font-weight:650;line-height:1.25;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ic{flex:none;display:grid;place-items:center;min-width:2.5rem;height:2.5rem;border-radius:10px;color:var(--acc);font-size:1.3rem}
+.ic:active{background:var(--bg2)}
+.ic[aria-disabled]{opacity:.25}
+.chips{display:flex;gap:.4rem;overflow-x:auto;padding:0 .75rem .55rem;max-width:52rem;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font:600 .75rem/1 var(--mono);padding:.4rem .6rem;border-radius:99px;background:var(--bg2);color:var(--mute)}
+.chips a:hover{color:var(--acc);background:var(--accbg)}
+main{max-width:52rem;margin:0 auto;padding:1rem .9rem 5rem}
+.search{width:100%;font:inherit;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);margin:.4rem 0 1rem}
+.mod{margin:0 0 1.6rem}
+.mod>h2{position:sticky;top:calc(3.35rem + env(safe-area-inset-top));z-index:5;margin:0;padding:.5rem 0;
+ background:var(--bg);font-size:1.35rem;letter-spacing:-.01em;scroll-margin-top:7rem}
+.blk{background:var(--bg2);border-radius:14px;margin:.4rem 0 .8rem;overflow:hidden}
+.blk h3{margin:0;padding:.7rem 1rem .3rem;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.row{display:flex;align-items:center;gap:.75rem;padding:.7rem 1rem;border-top:1px solid var(--line)}
+.blk h3+.row{border-top:0}
+.row:hover .x{color:var(--acc)}
+.row .n{flex:none;width:2rem;height:2rem;display:grid;place-items:center;border-radius:8px;background:var(--bg);font:600 .72rem var(--mono);color:var(--mute)}
+.row.res .n{color:var(--acc);background:var(--accbg)}
+.row .x{flex:1;min-width:0;font-weight:500;line-height:1.3}
+.row .d{flex:none;font:.75rem var(--mono);color:var(--mute)}
+.row .d::after{content:"›";margin-left:.5rem;font:1.1rem var(--sans);color:var(--line)}
+.row.none{opacity:.4;pointer-events:none}
+.meta{display:flex;gap:1rem;color:var(--mute);font-size:.85rem;margin:.6rem 0 1.4rem}
+.tl{position:relative;padding-left:5rem}
+.tl::before{content:"";position:absolute;left:3.95rem;top:.5rem;bottom:.5rem;width:2px;background:var(--line);border-radius:2px}
+.tl section{position:relative;margin:0 0 1.8rem;scroll-margin-top:7.5rem}
+.tl section::before{content:"";position:absolute;left:-1.35rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;
+ background:var(--bg);border:2px solid var(--acc)}
+.tl time{position:absolute;left:-5rem;width:3.3rem;top:.2rem;text-align:right;font:600 .78rem/1.4 var(--mono);color:var(--acc)}
+.tl time small{display:block;font-weight:400;font-size:.66rem;color:var(--mute)}
+.tl h2{font-size:1.08rem;line-height:1.35;margin:0 0 .35rem}
+.tl ul{margin:.2rem 0;padding-left:1.1rem}
+.tl li{margin:.2rem 0}
+.tl p{margin:.3rem 0}
+.tl :target h2{color:var(--acc)}
+@media(max-width:520px){
+ .tl{padding-left:1.4rem}
+ .tl::before{left:.3rem}
+ .tl section::before{left:-1.4rem}
+ .tl time{position:static;display:inline-flex;gap:.45rem;align-items:baseline;width:auto;text-align:left;margin-bottom:.15rem}
+ .tl time small{display:inline}
+}
+.pn{display:flex;flex-direction:column;gap:.6rem;margin-top:2.5rem}
+.pn a{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border-radius:14px;background:var(--bg2)}
+.pn a span{flex:1;min-width:0}
+.pn small{display:block;font-size:.72rem;color:var(--mute)}
+.pn b{font-weight:600;color:var(--acc);font-size:1.3rem}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+<header class="top"><div class="bar">
+<a class="ic" href="index.html#m4" title="Übersicht">⌂</a><a class="ic" rel="prev" href="m4-b1-06-integration.html" title="Integration">‹</a>
+<div class="t"><div class="k">Modul 4 · Block 1</div><h1>Regulationssession 2025</h1></div>
+<a class="ic" rel="next" href="m4-b2-01-in-ruhe-ankommen.html" title="In Ruhe ankommen">›</a><span class="ic" aria-hidden="true"></span></div>
+<nav class="chips"><a href="#s1">0:11</a><a href="#s2">2:22</a><a href="#s3">5:41</a><a href="#s4">18:10</a><a href="#s5">21:03</a><a href="#s6">28:31</a><a href="#s7">31:28</a><a href="#s8">43:40</a><a href="#s9">48:21</a><a href="#s10">52:06</a></nav></header>
+<main><div class="meta"><span>⏱ 54:08</span><span>10 Abschnitte</span></div>
+<div class="tl"><section id="s1"><time>0:11<small>2 min</small></time>
+<h2>Begrüßung und Stimmungsbild</h2><ul><li>Willkommen zur Regulations-Session nach längerer Pause; Rückkehr zu Struktur und Ritualen, die das Nervensystem beruhigen</li><li>Elisa unterstützt bei technischen Fragen</li><li>Teilnehmende teilen im Chat, wie sie heute Abend da sind (Freude, Müdigkeit, Entspannung)</li><li>Der Abend wird eher ruhig und nach innen gerichtet</li></ul></section>
+<section id="s2"><time>2:22<small>3 min</small></time>
+<h2>Hinweise zu den Regulationsübungen und Ablauf</h2><ul><li>Eigenen Impulsen folgen; Übungen wirken unterschiedlich (Parasympathikus, ventrale Schwingung, Sicherheitssignale), können aber auch mehr Erregung auslösen</li><li>Dann gut auf sich achten (aufstehen, trinken, frische Luft); neugierig und wertfrei erforschen</li><li>Ablauf: langes Einchecken, Austausch im Chat, Zwerchfell- und Atemübungen (sensorisch und meditativ)</li><li><strong>Innere Skala</strong> zum Einchecken: eine Zahl für die aktuelle Erregung notieren oder im Chat teilen</li></ul></section>
+<section id="s3"><time>5:41<small>12 min</small></time>
+<h2>Einchecken mit Orientierungsübung</h2><ul><li>Blick weit werden lassen, Umgebung wertfrei wahrnehmen, Gegenstände und Farben benennen, Impulse (Strecken, Regeln) zulassen</li><li>Sich selbst begrüßen und anerkennen, dass man sich die Zeit schenkt</li><li><strong>Ein Auge außen, ein Auge innen</strong>: schrittweise nach innen gehen</li><li>Drei Schritte: 1) Was spüre ich (Atem, Gefühle, Empfindungen, Temperatur)? 2) Wo im Körper? 3) Welche Gedanken sind damit verbunden?</li><li>Mit Neugierde kommt mehr ventraler Funke; Anspruch senken, Annäherung genügt</li><li>Zum Schluss Ton, Geste oder Bewegung zulassen und langsam ankommen</li></ul></section>
+<section id="s4"><time>18:10<small>3 min</small></time>
+<h2>Austausch nach dem Einchecken</h2><ul><li>Rückmeldungen: erfrischt, ruhig, verbunden, müde, berührt, auch traurig</li><li>Müdigkeit kann spürbar werden, wenn die Aktivierung nachlässt</li><li>Sich Raum zu nehmen hilft; alleine ist man oft ruhelos</li><li>Das Gehirn braucht <strong>Wiederholungen</strong>, um Körperwahrnehmung zu lernen; es wird leichter</li><li>Auch Nicht-Einlassen ist in Ordnung</li></ul></section>
+<section id="s5"><time>21:03<small>7 min</small></time>
+<h2>Zwerchfell und Atem: Berührung und Lockerung</h2><ul><li>Atem ist für manche Ressource, für andere Red Flag; bei Trauma sind Atemmuster oft mit Stress gekoppelt (Anhalten, schnell, flach), Verspannungen können entstehen</li><li>Zwerchfell unterhalb der Rippenbögen ertasten: sanft streichen oder massieren, nicht invasiv; alternativ nur Hände ruhen lassen</li><li>Beim Ausatmen Hände auf dem Sonnengeflecht sanft lockern, nur wenige Male im eigenen Rhythmus</li><li>Achtsam sein, da Berührung auch das Gegenteil bewirken kann</li></ul></section>
+<section id="s6"><time>28:31<small>3 min</small></time>
+<h2>Bewegungsvarianten für mehr Atemraum</h2><ul><li>Arme beim Einatmen nach oben nehmen</li><li>Tönen tut dem Nervensystem gut</li><li>Seitbeuge zum Dehnen der Flanke, Rippenzwischenmuskulatur und Faszien</li><li>Einfache Übungen, auch im Gespräch mit Klienten einsetzbar, wenn es eng wird und der Atem stockt</li><li>Nachspüren, was sich an Stimmung und Blick verändert</li></ul></section>
+<section id="s7"><time>31:28<small>12 min</small></time>
+<h2>Atemmeditation mit Händen am Brustkorb</h2><ul><li>Bequeme Position wählen (liegend oder angelehnt, Kopf und Arme gestützt)</li><li>Hände seitlich an den unteren Rippenbögen, Atembewegung, Wärme, Gewicht und Berührung wahrnehmen</li><li>Nichts erreichen müssen; Gedanken und Gefühle dürfen später oder in Begleitung angeschaut werden</li><li>Impulse zu Bewegung folgen; den Fokus auf das Gehaltenwerden richten</li><li>Übergang bewusst gestalten: Gelenke bewegen, Kopf drehen, umschauen (Halswirbel, Nerv zum Zwerchfell, Atemzug)</li><li>Ähnliche Anleitung von Verena im Kursbereich</li></ul></section>
+<section id="s8"><time>43:40<small>5 min</small></time>
+<h2>Austausch und Fragen</h2><ul><li>Rückmeldungen: aufgeräumter, heller, entspannend, vom Körper gehalten, Vertrauen, Sicherheit, frischer; manche sind kurz eingeschlafen (auch Regeneration)</li><li>Das Nervensystem wird am Ende des Tages entlastet</li><li>Die Übung hat keinen bekannten Namen, etwa &quot;Zwerchfelllockerung&quot;</li><li>Sonnengeflecht-Lockerung ist auch im Liegen möglich, im Sitzen aber mit mehr Kontrolle</li></ul></section>
+<section id="s9"><time>48:21<small>4 min</small></time>
+<h2>Ausklang und Intention</h2><ul><li>Auf der inneren Skala, im Toleranzfenster oder auf der polyvagalen Landkarte einordnen</li><li>Impuls ableiten: Umarmung, Hand am Hinterkopf oder Stirn, Hand auf Herz und Bauch, Summen, Tönen, Wiegen</li><li>Intention oder Wunsch für das Wochenende formulieren, wie man mit sich in Kontakt bleiben möchte</li><li>Es gab kein Anfangsgedicht; stattdessen ein Abschlusslied</li></ul></section>
+<section id="s10"><time>52:06<small>2 min</small></time>
+<h2>Abschlusslied und Verabschiedung</h2><ul><li>Gemeinsames Singen von &quot;You gotta move slow to find your flow...&quot;, ein Lied aus dem somatischen Raum; schief und krumm ist erlaubt</li><li>Idee eines Chors</li><li>Dank für Zeit, Vertrauen und Mitpraktizieren; Wiedersehen in ein paar Wochen</li></ul></section></div>
+<nav class="pn"><a rel="prev" href="m4-b1-06-integration.html"><b>‹</b><span><small>Vorherige</small>Integration</span></a><a class="nx" rel="next" href="m4-b2-01-in-ruhe-ankommen.html"><span><small>Nächste</small>In Ruhe ankommen</span><b>›</b></a></nav>
+</main><script>
+addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest("input,textarea")) return;
+  const a = document.querySelector(e.key === "ArrowLeft" ? "a[rel=prev]" : e.key === "ArrowRight" ? "a[rel=next]" : null);
+  if (a) location.href = a.href;
+});
+</script>
+</body>
+</html>
