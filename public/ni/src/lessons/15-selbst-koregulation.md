@@ -155,3 +155,17 @@ Früh Traumatisierte haben sie **nicht gelernt** und haben ein **enges STF**. An
 - Schütteln mit geschlossenen Augen bis zur Erschöpfung
 - Gar kein Schütteln, nur Stillhalten
 > „sanftes (!) Schütteln“.
+
+===FREITEXT===
+?? Definiere Selbstregulation und Containment und grenze Selbstregulation von Selbstkontrolle ab.
+* Fähigkeit, Erregung und Impulse zu regulieren ohne Überflutung
+* Nicht Selbstkontrolle, Stärke oder Funktionieren – flexibel statt rigide
+* Containment = Halt und Raum, Ergebnis oder Grundlage der Selbstregulation
+* Führt zu Embodiment und Selbstwirksamkeit
+>> Selbstregulation ist die Fähigkeit, eigene Erregungszustände und Impulse zu regulieren und mit intensiven Gefühlen umzugehen, ohne überflutet zu werden. Sie ist nicht Selbstkontrolle oder Funktionieren – diese sind rigide, Selbstregulation ist flexibel und lebendig. Containment bedeutet Halt und Raum; es ergibt sich aus Selbstregulation oder ist ihre Grundlage.
+?? Wie förderst du Selbstregulation langfristig und in akuten Situationen?
+* Langfristig: Lernprozess, kein Dauerstress, soziale Kontakte, Regeneration, Ressourcen
+* Akut: einfache Interventionen, direkte Ansprache des Nervensystems
+* Übererregung → Parasympathikus; Untererregung → Sympathikus
+* Koregulation, ventraler Vagus; Ausatem verlängern
+>> Langfristig: Arbeit mit dem Nervensystem als Lernprozess, Dauerstress vermeiden, soziale Kontakte, Regeneration, Kompensationsstrategien bewusst machen, Ressourcen. Akut: einfache Interventionen, weil der präfrontale Cortex „aus“ ist – bei Übererregung den Parasympathikus aktivieren (Ausatem verlängern, Schwerkraft), bei Untererregung den Sympathikus (abklopfen, aufstehen); Koregulation über den ventralen Vagus.

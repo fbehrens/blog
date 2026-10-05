@@ -154,3 +154,17 @@ Sicherheit **lässt sich nicht einreden** (Affirmationen), sie ist ein **verkör
 - Nein, im Fenster ist nur der dorsale Vagus aktiv
 - Ja, aber nur während des Schlafs
 > Auch der Sympathikus ist im Fenster aktiv und nützlich.
+
+===FREITEXT===
+?? Erkläre das Stresstoleranzfenster mit seinen drei Bereichen und wovon seine Größe abhängt.
+* Modell nach Daniel Siegel
+* Übererregung (Chaos), Fenster (Integration), Untererregung (Rigidität)
+* Verarbeitung: desorganisiert – ungestört – vermindert
+* Größe hängt vom Maß an empfundener Sicherheit ab
+>> Das Stresstoleranzfenster nach Daniel Siegel beschreibt Erregungsniveaus: oberhalb Übererregung (Chaos, desorganisierte Verarbeitung), im Fenster Integration (ungestörte Verarbeitung), unterhalb Untererregung (Rigidität, verminderte Verarbeitung). Seine Größe bestimmt das grundlegende Maß an empfundener Sicherheit, geprägt durch frühe Erfahrungen.
+?? Unterscheide Exterozeption, Interozeption, Propriozeption und Neurozeption.
+* Exterozeption: Wahrnehmung der Außenwelt
+* Interozeption: Wahrnehmung der Innenwelt/Körperzustand
+* Propriozeption: Lage des Körpers im Raum, Schwere
+* Neurozeption: Gesamtheit innen/außen (Porges), sicher – gefährlich – lebensgefährlich
+>> Exterozeption ist die Wahrnehmung der Umwelt (auch Atmosphäre), Interozeption die Wahrnehmung des Körperinneren (Hunger, Herzschlag), Propriozeption die Wahrnehmung der Körperlage, Schwere und Geschwindigkeit. Neurozeption (Porges) ist die unbewusste Gesamtbewertung aus innen und außen, die zwischen gefahrlos, gefährlich und lebensgefährlich unterscheidet.

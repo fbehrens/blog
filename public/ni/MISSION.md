@@ -11,7 +11,7 @@ Die Abschlussprüfung der Weiterbildung „Neurosystemische Integration“ siche
 ## Constraints
 - Sprache: Deutsch
 - Grundlage: Skript „NI kompakt“ (58 S.) und die 162 Kursaufnahmen; keine fremden Inhalte ohne Kennzeichnung
-- Prüfungstermin und genaues Prüfungsformat: noch offen
+- Prüfungstermin: 10. Oktober 2026 (5 Tage ab 05.10.); Format: noch offen, Fallvignetten wahrscheinlich
 
 ## Out of scope
 - Traumatherapie im engeren Sinn (Heilkunde), Diagnostik

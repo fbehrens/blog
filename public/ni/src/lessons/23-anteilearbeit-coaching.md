@@ -180,3 +180,20 @@ Sie macht deutlich, **dass wir mehr sind als das, womit wir gerade identifiziert
 - Zu Diagnose und Therapie
 - Zu Dissoziation und Rückzug
 > Skript S. 36.
+
+===FREITEXT===
+?? Warum wirkt Anteilearbeit und welche Regeln gelten für traumasensibles Coaching mit Anteilen?
+* Wir sind mehr als das, womit wir identifiziert sind – beobachtendes Gewahrsein
+* Distanzierung, die Verbindung ermöglicht; Desidentifikation schützt vor Überflutung
+* Vor allem vertikale Kommunikation, horizontal nur mit ressourcenreichen Anteilen
+* Moderation durch das Alltags-Ich; keine traumanahen Inhalte; Koregulation
+>> Anteilearbeit zeigt, dass wir mehr sind als das, womit wir gerade identifiziert sind: Das beobachtende Gewahrsein wird aktiv und schafft eine Distanz, die zugleich Verbindung ermöglicht. Regeln: helfende Hand sein, Koregulation, erwachsene und ressourcenreiche Anteile stärken, vor allem vertikal kommunizieren, horizontal mit ressourcenreichen Anteilen, immer moderiert durch das Alltags-Ich, keine traumanahen Inhalte.
+?? Nenne die sieben Schritte der Anteilearbeit bis zum harmonischen inneren Team.
+* Kontakt
+* Aufbau der Kommunikation
+* Akzeptanz und Annahme
+* Verständnis
+* Unterstützung von Entwicklung und Heilung
+* Wandlung und Reifung
+* Intaktes, harmonisches inneres Team
+>> 1. Kontakt zu inneren Anteilen, 2. Aufbau der Kommunikation, 3. Akzeptanz und Annahme, 4. Verständnis, 5. Unterstützung von Entwicklung und Heilung, 6. Wandlung und Reifung durch Verständnis und Beziehung, 7. Entwicklung eines intakten, harmonischen inneren Teams – ein Potenzial und fortwährender Prozess, kein Pauschalziel.

@@ -128,3 +128,18 @@ Im Coaching Anteile als **dritte Person** benennen (Distanz); direktes Sprechen 
 - Sie sind bei diesen Menschen nicht vorhanden
 - Sie entstehen nur unter Hypnose
 > Man kann nicht nicht imaginieren.
+
+===FREITEXT===
+?? Beschreibe den traumasensiblen Aufbau einer Intervention mit Imagination.
+* Sicherheit in der Beziehung
+* Sicherheit im Raum (Orientierung)
+* Wendung nach innen (Ankommen)
+* Arbeiten: sanft führen, Ressourcen verkörpern, Schwerkraft
+* Wendung nach außen, Orientieren und Reflektieren
+>> 1. Sicherheit in der Beziehung, 2. Sicherheit im Raum durch Orientierung im Außen, 3. Wendung nach innen und Ankommen, 4. Arbeiten: gemeinsam erforschen, genau zuhören, sanft führen, Ressourcen verkörpern, an die Schwerkraft erinnern, 5. sanfte und klare Wendung nach außen, 6. Orientieren, Ankommen und Reflektieren.
+?? Wie unterscheidest du Konzentration (Trance) von Dissoziation, und was tust du, wenn jemand „nicht imaginieren kann“?
+* Beides schwer zu unterscheiden – Beobachter-Ich aktiv halten
+* Immer wieder Ankerndes und Orientierendes einweben
+* Nicht imaginieren: entlasten, das geht vielen so
+* Über Urlaubserinnerung spielerisch einsteigen und verändern
+>> Konzentriertes Imaginieren ist Trance und ähnelt der Dissoziation; deshalb das beobachtende Gewahrsein aktiv halten und immer wieder Anker und Orientierung einweben (Körper, Stimme, Schwerkraft). Wer meint, nicht imaginieren zu können, wird entlastet („Das geht vielen so“) und spielerisch über eine Erinnerung eingeladen, z. B. den letzten Urlaub, den man dann verändert (rosaroter Elefant am Strand).

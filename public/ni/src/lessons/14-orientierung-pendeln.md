@@ -169,3 +169,17 @@ Immer die **Referenz zum Körpererleben** einbeziehen: Wie wirkt die Umfokussier
 - Als Treppe nach oben
 - Als Kreis, der sich nicht verändert
 > Wie im Lebensflussmodell.
+
+===FREITEXT===
+?? Erkläre die Orientierungsreaktion, ihre zwei Arten und was sich bei Trauma verändert.
+* Allererste Reaktion: Wo? Was? Gefährlich?
+* Defensive Orientierung (Schutzreflex) und erkundende Orientierung (entspannte Wachsamkeit)
+* Bei Trauma übersteuert (Schreckhaftigkeit) oder ausgeknipst (Dissoziation)
+* Medusa: Fokus nur auf traumaassoziierte Reize
+>> Die Orientierungsreaktion ist die allererste Reaktion des Nervensystems: Wo ist es, was ist es, ist es gefährlich? Die Antwort liefert die Neurozeption. Es gibt die defensive (Schutzreflex) und die erkundende Orientierung (entspannte Wachsamkeit). Bei Trauma ist sie übersteuert (Schreckhaftigkeit) oder wie ausgeknipst (Dissoziation, Unfälle) oder richtet sich nur auf Traumareize (Medusa). Orientierungsübungen stellen beide Reaktionen wieder her und lassen Sicherheit im Hier und Jetzt erleben.
+?? Was ist Pendeln, wozu dient es und auf welchen vier Ebenen kann man pendeln?
+* Aufmerksamkeit bewusst lenken zwischen Stressor und Ressource
+* Immer mit dem Körper verknüpft, keine Ablenkung
+* Dem Traumastrudel begegnen, ohne darin zu verschwinden; Intensität steuern
+* innen↔innen, innen↔außen, außen↔außen, außen↔innen
+>> Pendeln heißt, die Aufmerksamkeit bewusst zwischen Stressor und Ressource zu verlagern, immer mit Bezug zum Körpererleben (Skala 0–10). Es ist keine Ablenkung, sondern steuert die Intensität, schwächt den Medusa-Effekt und ermöglicht, dem Traumastrudel zu begegnen. Ebenen: innerer Stressor ↔ innere Ressource, innerer ↔ äußere, äußerer ↔ äußere, äußerer ↔ innere.

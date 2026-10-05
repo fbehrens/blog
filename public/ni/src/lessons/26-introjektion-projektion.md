@@ -183,3 +183,17 @@ Mit jemandem identifiziert sein = eigenes Empfinden zu Teilen **über diese Pers
 - Zu einem weiteren Toleranzfenster
 - Zur Auflösung aller Bindungen
 > Suche nach „sicheren“, bekannten Beziehungskontexten.
+
+===FREITEXT===
+?? Definiere Introjektion, Identifikation und Projektion und grenze sie voneinander ab.
+* Introjektion: ungefiltertes Aufsaugen fremder Botschaften → Introjekt
+* Identifikation: unbewusste Gleichsetzung mit dem Täter, gegen Ohnmacht
+* Projektion: Abschieben unerträglicher eigener Gefühle auf andere
+* „Was nicht reflektiert wird, wird projiziert“
+>> Introjektion ist das ungefilterte Aufsaugen und Verankern fremder (Täter-)Botschaften im eigenen Ich; das Ergebnis ist ein Introjekt (innere Repräsentanz). Identifikation mit dem Aggressor ist die unbewusste Gleichsetzung mit dem Täter, um Ohnmacht zu bekämpfen. Projektion ist das Abschieben unerträglicher eigener Gefühle auf andere – was nicht reflektiert wird, wird projiziert.
+?? Erkläre Übertragung und Gegenübertragung an einem Beispiel und wie du mit schwierigen Introjekten arbeitest.
+* Übertragung: Beziehungsdynamiken auf andere übertragen
+* Gegenübertragung: Reaktion entsprechend der Übertragung
+* Beispiel: „Therapeutin hat nur eine Stunde Zeit“ → sie überzieht
+* Introjekte: willkommen heißen, keine Gewalt, Psychoedukation, Leid anerkennen
+>> Bei der Übertragung werden innere Bilder und Beziehungsdynamiken auf andere übertragen („Du bist wie mein Vater“); in der Gegenübertragung reagiert das Gegenüber entsprechend. Beispiel: Die Klientin vertraut der Therapeutin, beklagt aber, dass sie nur eine Stunde Zeit hat – die Therapeutin beginnt zu überziehen. Mit schwierigen Introjekten: wahrnehmen, willkommen heißen, Regel „keine Gewalt nach innen und außen“, Vorbild sein, Psychoedukation (warum das Verletzende einst rettend war), Leid anerkennen.

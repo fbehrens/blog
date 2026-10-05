@@ -22,6 +22,7 @@ TEILE = {
     "III": "Gehirn, Glaubenssysteme, Körper",
     "IV": "Anteile, Imagination, Systemik",
     "V": "Bindung, Grenzen, intensive Gefühle, Praxis",
+    "VI": "Fallvignetten – Wissen anwenden",
 }
 
 
@@ -69,6 +70,22 @@ def parse_quiz(text: str, where: str):
     return qs
 
 
+def parse_freitext(text: str, where: str):
+    items, cur = [], None
+    for raw in text.splitlines():
+        line = raw.rstrip()
+        if line.startswith("?? "):
+            cur = {"q": inline(line[3:]), "k": [], "m": ""}
+            items.append(cur)
+        elif line.startswith("* "):
+            cur["k"].append(inline(line[2:]))
+        elif line.startswith(">> "):
+            cur["m"] += (" " if cur["m"] else "") + inline(line[3:])
+    for i, it in enumerate(items, 1):
+        assert it["k"] and it["m"], f"{where}: Freitext {i} ohne Kernpunkte/Musterantwort"
+    return items
+
+
 def parse_lesson(path: pathlib.Path):
     text = path.read_text()
     head, rest = text.split("\n---\n", 1)
@@ -78,6 +95,8 @@ def parse_lesson(path: pathlib.Path):
             k, v = line.split(":", 1)
             meta[k.strip()] = v.strip()
     summary, quiz = rest.split("\n===QUIZ===\n")
+    quiz, _, ft = quiz.partition("\n===FREITEXT===\n")
+    meta["freitext"] = parse_freitext(ft, path.name)
     meta["summary"] = summary
     meta["quiz"] = parse_quiz(quiz, path.name)
     meta["file"] = f"{meta['nr']}-{meta['slug']}.html"
@@ -117,6 +136,13 @@ def render_lesson(m, prev, nxt):
     pager += f'<a href="{prev["file"]}">← {prev["nr"]} {html.escape(prev["title"])}</a>' if prev else "<span></span>"
     pager += f'<a href="{nxt["file"]}">{nxt["nr"]} {html.escape(nxt["title"])} →</a>' if nxt else '<a href="pruefung.html">Prüfungssimulation →</a>'
     pager += "</nav>"
+    ft_html = ""
+    if m["freitext"]:
+        ft_html = f"""<section class="freitext-section">
+<h2>Freitext-Fragen <span class="count">({len(m['freitext'])})</span></h2>
+<p class="hint">Schreib deine Antwort in Stichworten oder ganzen Sätzen. Dann Musterlösung aufdecken und ehrlich abhaken, welche Kernpunkte du genannt hast.</p>
+<div id="freitext"></div>
+</section>"""
     body = f"""<header>
 <p class="kicker">Lektion {m['nr']} · Teil {teil}: {TEILE[teil]}</p>
 <h1>{html.escape(m['title'])}</h1>
@@ -138,11 +164,13 @@ def render_lesson(m, prev, nxt):
 <button type="button" class="toggle-summary">Zusammenfassung ausblenden</button></p>
 <div id="quiz"></div>
 </section>
+{ft_html}
 {ASK}
 {pager}"""
     data = json.dumps(m["quiz"], ensure_ascii=False)
     lesson = json.dumps({"id": m["nr"], "title": m["title"]}, ensure_ascii=False)
-    scripts = f'<script>window.LESSON={lesson};window.QUIZ={data};</script>\n<script src="../assets/quiz.js"></script>'
+    ftdata = json.dumps(m["freitext"], ensure_ascii=False)
+    scripts = f'<script>window.LESSON={lesson};window.QUIZ={data};window.FREITEXT={ftdata};</script>\n<script src="../assets/quiz.js"></script>'
     return page(f"{m['nr']} · {m['title']}", body, 1, scripts)
 
 
@@ -159,6 +187,8 @@ def render_exam():
 <select id="exam-n"><option>20</option><option selected>40</option><option>80</option><option value="0">alle</option></select></label>
 <label>Aus Teil
 <select id="exam-teil"><option value="">alle Teile</option>{"".join(f'<option value="{k}">Teil {k}: {v}</option>' for k, v in TEILE.items())}</select></label>
+<label>Fragetyp
+<select id="exam-typ"><option value="mc">Multiple Choice</option><option value="ft">Freitext</option></select></label>
 <button type="button" id="exam-start">Neue Simulation starten</button>
 </div>
 <div id="quiz"></div>
@@ -173,7 +203,7 @@ def render_index(lessons):
     for k, name in TEILE.items():
         items = "".join(
             f'<li><a href="lessons/{m["file"]}"><span class="nr">{m["nr"]}</span> {html.escape(m["title"])}</a>'
-            f' <span class="meta">{len(m["quiz"])} Fragen · {html.escape(m["skript"])}</span>'
+            f' <span class="meta">{len(m["quiz"])} Fragen{(" + " + str(len(m["freitext"])) + " Freitext") if m["freitext"] else ""} · {html.escape(m["skript"])}</span>'
             f' <span class="progress" data-progress="{m["nr"]}"></span></li>'
             for m in lessons if m["teil"] == k
         )
@@ -187,7 +217,7 @@ def render_index(lessons):
 <p class="goal"><strong>So lernst du:</strong> Eine Lektion pro Sitzung. Zusammenfassung lesen, ausblenden, Fragen beantworten.
 Falsche Fragen wiederholen. Nach ein paar Tagen dieselbe Lektion noch einmal (Abstand festigt).
 Ab und zu die <a href="lessons/pruefung.html">Prüfungssimulation</a> mit gemischten Fragen.
-Nachschlagen: <a href="reference/glossar.html">Glossar</a> · <a href="reference/modelle.html">Modelle auf einen Blick</a>.</p>
+<strong><a href="reference/lernplan.html">Lernplan bis 10.10.</a></strong> · Nachschlagen: <a href="reference/glossar.html">Glossar</a> · <a href="reference/modelle.html">Modelle auf einen Blick</a>.</p>
 {"".join(parts)}
 <h2>Gemischt</h2>
 <ol class="lessons"><li><a href="lessons/pruefung.html"><span class="nr">★</span> Prüfungssimulation</a> <span class="meta">zufällige Fragen aus allen Lektionen</span> <span class="progress" data-progress="exam"></span></li></ol>
@@ -217,7 +247,10 @@ def main():
     for m in lessons:
         for q in m["quiz"]:
             bank.append({**q, "l": m["nr"], "t": m["title"], "f": m["file"], "p": m["teil"]})
-    (ROOT / "assets" / "fragenbank.js").write_text("window.BANK=" + json.dumps(bank, ensure_ascii=False) + ";\n")
+    ftbank = [{**f, "l": m["nr"], "t": m["title"], "f": m["file"], "p": m["teil"]} for m in lessons for f in m["freitext"]]
+    (ROOT / "assets" / "fragenbank.js").write_text(
+        "window.BANK=" + json.dumps(bank, ensure_ascii=False) + ";\n"
+        + "window.FTBANK=" + json.dumps(ftbank, ensure_ascii=False) + ";\n")
 
     ref = ROOT / "reference"
     ref.mkdir(exist_ok=True)
@@ -225,7 +258,7 @@ def main():
         (ref / f"{p.stem}.html").write_text(render_reference(p))
 
     (ROOT / "index.html").write_text(render_index(lessons))
-    print(f"{len(lessons)} Lektionen, {len(bank)} Fragen gebaut.")
+    print(f"{len(lessons)} Lektionen, {len(bank)} MC-Fragen, {len(ftbank)} Freitextfragen gebaut.")
 
 
 if __name__ == "__main__":

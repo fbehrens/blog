@@ -143,3 +143,12 @@ ol.lessons .meta { display: block; font: 0.75rem/1.4 -apple-system, sans-serif; 
   a { color: var(--ink); text-decoration: none; }
   h2 { break-after: avoid; }
 }
+
+/* Freitext */
+.ft textarea { width: 100%; font: inherit; font-size: 0.95rem; padding: 0.6rem; border: 1px solid var(--line); background: #fff; margin-bottom: 0.5rem; }
+.solution { background: var(--note); padding: 0.7rem 0.9rem; margin-top: 0.6rem; font-size: 0.93rem; }
+.solution .label { margin: 0 0 0.3rem; font-weight: 600; }
+.solution ul.kp { list-style: none; padding: 0; margin: 0 0 0.6rem; }
+.solution ul.kp li { margin: 0.25rem 0; }
+.solution .model { margin: 0.5rem 0; }
+@media print { .ft textarea { height: 6rem; } .solution { display: none; } }

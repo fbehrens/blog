@@ -119,3 +119,17 @@ Warum der Körper? Trauma hat **immer eine körperliche Komponente**; besonders 
 - Die Bosheit hinter der Sucht
 - Die Genetik hinter der Sucht
 > „Die Flucht hinter der Sucht“, „Verletzlichkeit hinter Härte“, „Schmerz hinter Unfreundlichkeit“.
+
+===FREITEXT===
+?? Erkläre das „Prinzip des guten Grundes“ und warum es in der traumasensiblen Arbeit wichtig ist.
+* Herkunft Traumapädagogik
+* Kein Verhalten ohne Grund – „Alles, was du fühlst, ergibt Sinn“
+* Am guten Grund arbeiten, nicht nur am Verhalten
+* Verstehen statt bewerten oder pathologisieren
+>> Das Prinzip stammt aus der Traumapädagogik: Keine Verhaltensweise entsteht ohne guten Grund. Statt nur das Verhalten zu verändern, sucht man den Grund (oft einen Trigger, ein inneres Kind). Das führt zu einer Haltung des Verstehens ohne Bewertung oder Pathologisierung und ermöglicht ressourcenorientierte, entlastende Arbeit.
+?? Was ist Koregulation und wie hängt sie mit Selbstregulation zusammen?
+* Reguliertes Nervensystem hilft einem dysregulierten, sich zu regulieren
+* Natürlich in der Kindheit durch Bezugspersonen
+* Selbstregulation entsteht aus erlebter Koregulation
+* Für Menschen mit Mangel ist Koregulation eine korrigierende Erfahrung
+>> Koregulation bedeutet, dass ein Mensch (oder Tier) mit reguliertem Nervensystem einem dysregulierten hilft, sich selbst zu regulieren. Kinder lernen Selbstregulation durch Koregulation ihrer Bezugspersonen. Wer das nicht erlebt hat, kann es in der Begleitung als korrigierende Erfahrung nachholen und Selbstregulation üben.

@@ -183,3 +183,17 @@ Erinnerungsfragmente schieben sich **mit ungebremster Kraft** in die Wahrnehmung
 - Weil Überforderung den ventralen Vagus stärkt
 - Weil Überforderung die Erinnerung löscht
 > M4.1·03.
+
+===FREITEXT===
+?? Nenne je drei Anzeichen von Übererregung und Untererregung auf verschiedenen Ebenen.
+* Übererregung körperlich: Unruhe, Herzrasen, Schlaflosigkeit
+* Übererregung kognitiv/emotional: Grübeln, Panik, Reizbarkeit, Perfektionismus
+* Untererregung körperlich: schlaffer Tonus, glasiger Blick, wenig Mimik
+* Untererregung: Leere im Kopf, emotionale Abstumpfung, Derealisation/Depersonalisation
+>> Übererregung: innere Unruhe, erhöhter Puls, Schlaflosigkeit; rasende Gedanken, Grübeln; Angst, Panik, Reizbarkeit; Kontrollzwang, Perfektionismus; Hypersensitivität; nicht ausreden lassen. Untererregung: schlaffer Muskeltonus, fixierter/glasiger Blick, wenig Mimik; Leere im Kopf, verlangsamtes Antworten; emotionale Abstumpfung, Sinnverlust; Derealisation, Depersonalisation; „Alles ist gut“.
+?? Erkläre Trigger und Flashback und nenne die Arten von Flashbacks.
+* Trigger: Auslösereiz innen oder außen (Waffenlehre: Abzug)
+* Flashback: unverarbeitete Fragmente drängen ins Hier und Jetzt
+* Intrusives Wiedererleben, Körperflashback, emotionaler Flashback, traumanaher Zustand
+* Linderung durch Containment und Selbstregulation, ohne am Trauma zu arbeiten
+>> Ein Trigger (aus der Waffenlehre: der Abzug) ist ein Auslösereiz im Außen oder Innen, der dissoziierte Fragmente aktiviert. Im Flashback schieben sich diese Fragmente mit ungebremster Kraft ins Erleben, als wäre es jetzt. Arten: intrusives Wiedererleben, Körperflashbacks (Erinnerungsschmerz), emotionale Flashbacks und traumanahe Zustände der Über- oder Untererregung. Containment und Selbstregulation verringern Flashbacks.

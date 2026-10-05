@@ -147,3 +147,17 @@ Bild im Kurs: **Fahrradbremse** (Deb Dana) – bergab bremsen, in der Ebene lös
 - Cues of Joy
 - Cues of Rest
 > Der Zustand prägt die Wahrnehmung.
+
+===FREITEXT===
+?? Beschreibe die polyvagale Leiter und wie man sie in der Praxis nutzt.
+* Modell von Deb Dana, basierend auf Porges
+* Oben ventral (Sicherheit), Mitte Sympathikus (Gefahr), unten dorsal (Lebensbedrohung)
+* Keine Sprosse kann übersprungen werden
+* Nervensystem-Mapping: Selbstverortung, Körpergefühl, Gedanken, Auslöser
+>> Die polyvagale Leiter von Deb Dana zeigt drei Stufen: oben ventraler Vagus (sicher, verbunden), Mitte Sympathikus (Fight or Flight), unten dorsaler Vagus (Shutdown). Keine Sprosse kann übersprungen werden. In der Praxis dient sie dem Nervensystem-Mapping: Klient:innen verorten sich („Wo bist du auf der Leiter?“) und erforschen Körpergefühl, Gedanken und Auslöser.
+?? Was ist die Vagusbremse und wie kann man sie stärken?
+* Regler des Herzschlags, gesteuert vom ventralen Vagus
+* Dosiert sympathische Energie, verhindert Panik bei Alltagsstress
+* Nach frühem Trauma schwächer – Pendeln zwischen Extremen
+* Stärken: Gewahrsein, State Shifts erkennen, Selbstregulation, Sicherheitsanker, Körperübungen, Pendeln
+>> Die Vagusbremse ist der vom ventralen Vagus gesteuerte Regler des Herzschlags; sie lässt bei Aktivität etwas Energie durch, ohne dass wir in Panik geraten. Nach früher Traumatisierung ist sie schwächer entwickelt, man pendelt zwischen Über- und Untererregung. Stärken lässt sie sich durch Gewahrsein, Selbstbeobachtung von State Shifts, Selbstregulation, Sicherheitsanker, Körperübungen und Pendeln.

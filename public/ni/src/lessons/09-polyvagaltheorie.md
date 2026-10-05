@@ -159,3 +159,17 @@ Teil unserer sozialen Natur, reagiert auf **Signale von Sicherheit**. Versorgt *
 - Ständiges Powern und Getriebensein
 - Gefälliges, anbiederndes Verhalten
 > M2.1·06.
+
+===FREITEXT===
+?? Beschreibe die drei primären Zustände der Polyvagaltheorie jeweils in Sicherheit und unter Stress.
+* Ventraler Vagus: Verbundenheit / unter Stress Fawn Response
+* Sympathikus: Handlungsbereitschaft / Kampf und Flucht
+* Dorsaler Vagus: tiefe Entspannung, angstfreie Bewegungslosigkeit / Shutdown
+* Begründer: Stephen Porges
+>> Nach Porges gibt es drei primäre Zustände: ventral-vagal (in Sicherheit soziale Verbundenheit; unter zwischenmenschlichem Stress beteiligt an der Fawn Response), sympathisch (in Sicherheit Handlungsbereitschaft; unter Bedrohung Kampf/Flucht) und dorsal-vagal (in Sicherheit tiefe Regeneration, angstfreie Bewegungslosigkeit; unter Lebensbedrohung Shutdown).
+?? Erkläre den Unterschied zwischen Freeze und dorsalem Shutdown.
+* Freeze: Sympathikus unter Hochstress plus dorsaler Vagus
+* Freeze: höchste innere Ladung, Bewegung blockiert, „Reh im Scheinwerferlicht“
+* Shutdown: Kraft fließt aus den Muskeln, Immobilität, gedämpftes Erleben
+* Freeze ist zeitlich begrenzt, kippt in Flucht/Kampf oder Untererregung
+>> Freeze ist ein gemischter Zustand aus hochgestresstem Sympathikus und dorsalem Vagus: höchste Ladung, aber Flucht und Kampf sind blockiert (Gas und Bremse gleichzeitig, Reh im Scheinwerferlicht). Er hält nur begrenzt an. Im dorsalen Shutdown dagegen fließt die Kraft aus den Muskeln, Schmerz und Gefühl werden gedämpft, Herz- und Atemfrequenz sinken.

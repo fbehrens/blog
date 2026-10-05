@@ -120,3 +120,18 @@ Psychoedukation ist ein **Top-down-Zugang** (über den Verstand) und verändert 
 - Nur Informationen über Medikamente
 - Gar nichts – Wissen bleibt beim Coach
 > M1.1·06: Alles Gelernte soll an Klientinnen und Klienten weitergegeben werden.
+
+===FREITEXT===
+?? Worin unterscheidet sich die NI von klassischen Therapie- und Coachingansätzen?
+* Körper und autonomes Nervensystem im Mittelpunkt
+* Nicht nur über den Verstand verändern
+* Gesprächstherapie versteht, verändert aber Körperreaktionen nicht
+* Ganzheitlicher Werkzeugkasten aus mehreren Methoden
+>> Die NI stellt Körper und autonomes Nervensystem konsequent in den Mittelpunkt, statt Veränderung nur über den Verstand zu erzwingen. Reine Gesprächstherapien verstehen das Problem oft, verändern aber die körperlichen Reaktionen im Hier und Jetzt nicht. Die NI verbindet Psychotraumatologie, Neurobiologie, Systemik und Anteilearbeit zu einem ganzheitlichen Werkzeugkasten.
+?? Definiere Psychoedukation und nenne ihre vier Kernziele.
+* Verständliche Vermittlung wissenschaftlichen Wissens an Betroffene
+* Entlastung und Entmystifizierung
+* Förderung der Compliance
+* Frühwarnzeichen erkennen
+* Stärkung der Selbstregulation
+>> Psychoedukation ist die verständliche Vermittlung von wissenschaftlich fundiertem Wissen über Symptome, Gehirnfunktionen und Stressreaktionen. Ziele: Entlastung und Entmystifizierung (keine Schwäche), Förderung der Compliance, Frühwarnzeichen erkennen und Stärkung der Selbstregulation.

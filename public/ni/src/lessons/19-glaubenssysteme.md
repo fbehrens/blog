@@ -137,3 +137,17 @@ Ein **Komplex aus Gefühlen, Überzeugungen, Empfindungen und Bewertungen** – 
 - Analysieren – Bewerten – Ersetzen – Kontrollieren
 - Konfrontieren – Verarbeiten – Integrieren – Abschließen
 > Skript S. 29.
+
+===FREITEXT===
+?? Was sind traumabedingte Glaubenssysteme und wie entstehen sie?
+* Komplex aus Gefühlen, Überzeugungen, Empfindungen, Bewertungen
+* Kinder als Meister der Anpassung; implizite (Körper-)Erinnerung
+* Mischung aus Anpassungsleistung und Verinnerlichung der Botschaften
+* An Überlebensenergie gekoppelt – sechsspurige Autobahnen
+>> Traumabedingte Glaubenssysteme sind ein Komplex aus Gefühlen, Überzeugungen, Empfindungen und Bewertungen. Kinder passen sich an; frühe Eindrücke werden als wortlose, aber eindeutige Körpererinnerung (implizit) gespeichert. In widrigen Umständen entsteht eine Mischung aus Anpassung an das Außen und Verinnerlichung der Botschaften. Weil sie an Überlebensenergie gekoppelt sind, sind sie sehr stabil.
+?? Beschreibe den Prozessleitfaden für die Arbeit mit Glaubenssystemen.
+* Bewusstwerdung: erkennen und erforschen (Körper, Bilder, Muster, Gefühle)
+* Pendeln mit Ressourcen / ventralen Momenten
+* Anerkennen, was ist, und was war
+* Ankommen im Hier und Jetzt, Ausrichtung auf gestaltbare Zukunft
+>> Zuerst Bewusstwerdung: das Glaubenssystem erkennen und wohlwollend erforschen (Körperwahrnehmungen, innere Bilder, Verhaltensmuster, Gefühle, Bewertungen). Dann zwischen dem Erforschten und Ressourcen pendeln (ventrale Momente). Anerkennen, was ist und was war, im Hier und Jetzt ankommen und sich auf die gestaltbare Zukunft ausrichten.

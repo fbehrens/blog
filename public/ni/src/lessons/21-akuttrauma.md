@@ -166,3 +166,16 @@ Chronifiziert die Belastungsreaktion nach Wochen oder bricht sie nach Jahren dur
 - Es treten nie wieder Gefühle auf
 - Der Täter hat sich entschuldigt
 > Weitere: Gefühle ertragbar, Selbstwert wiederhergestellt, Trauma in neues Wertesystem integriert.
+
+===FREITEXT===
+?? Beschreibe die Phasen nach einem Schocktrauma.
+* Akuter Schock: erste Stunden, Über- oder Untererregung
+* Akute Belastungsreaktion: Tage bis Wochen, physiologisch, noch kein Trauma
+* Posttrauma: Integration oder Chronifizierung zur PTBS
+>> Zuerst der akute Schock in den ersten Stunden (Angst, Wut, Panik oder Erstarrung, Apathie). Dann die akute Belastungsreaktion über Tage bis Wochen (Unruhe, Schlafstörungen, Schreckhaftigkeit, Hoffnungslosigkeit) – physiologisch und noch kein Trauma. Im Posttrauma wird das Erlebte verarbeitet und integriert oder es chronifiziert zur PTBS.
+?? Was hilft in den ersten Stunden und Tagen nach einem Akuttrauma – und was sollte man vermeiden?
+* Keine aktive Konfrontation in den ersten 2 Wochen
+* Koregulation, Reorientierung, Essen, Schlafen, Bewegung, Routinen
+* Ziel: Ruhe, Abstand, Sicherheit; Reaktionen normalisieren
+* Vermeiden: „Reiß dich zusammen“, sofort Therapie, Trauer als Depression, Psychopharmaka
+>> In den ersten zwei Wochen keine aktive Traumakonfrontation. Hilfreich sind Koregulation, Reorientierung, Essen, Schlafen, Bewegung, Routinen und dosierte Gespräche; Gesprächsziel ist Ruhe, Abstand und Sicherheit, Reaktionen werden normalisiert, relationale Ressourcen genutzt. Zu vermeiden sind „Reiß dich zusammen“, sofortige Therapieempfehlung, Trauer als Depression zu deuten und Psychopharmaka; Betroffene nicht pathologisieren.

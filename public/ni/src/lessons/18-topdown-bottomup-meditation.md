@@ -159,3 +159,17 @@ Viele Menschen mit Traumafolgen fühlen sich beim Meditieren sofort unwohl: Bei 
 - Ohne Übergang einfach aufhören
 - Die Teilnehmenden weiter in Trance lassen
 > Plus Zeit zum Nachspüren.
+
+===FREITEXT===
+?? Erkläre Top-down- und Bottom-up-Ansätze mit Beispielen und was für früh traumatisierte Menschen empfohlen wird.
+* Top-down: über den Verstand zum Unwillkürlichen (Gesprächstherapie, Psychoedukation)
+* Bottom-up: über Körper zum Verstand (Somatic Experiencing, EMDR, Yoga)
+* Je früher die Prägung, desto weniger wirkt Top-down
+* Mischung beider Ansätze empfohlen
+>> Top-down-Ansätze wollen über den bewussten Verstand das Unwillkürliche erreichen (Gesprächs-, Verhaltenstherapie, Psychoedukation). Bottom-up-Ansätze gehen vom Körper, Fühlen und Spüren aus (Somatic Experiencing, EMDR, traumasensibles Yoga). Je früher die Prägung, desto weniger wirken Top-down-Ansätze; empfohlen ist eine Mischung.
+?? Nenne die Elemente traumasensibler Meditation und begründe, warum sie nötig ist.
+* Viele Traumatisierte erleben Meditation als aktivierend oder dissoziieren
+* Vorhersehbarkeit, Nachvollziehbarkeit
+* Wahlmöglichkeit (Augen auf/zu, innere/äußere Anker)
+* Sprache einladend, nicht hypnotisch; Setting; Ablauf mit klarem Ende
+>> Menschen mit Traumafolgen werden beim Meditieren oft unruhig, getriggert, schlafen ein oder dissoziieren. Ziele: Hyperfokussierung und Dysregulation vermeiden. Elemente: Vorhersehbarkeit, Nachvollziehbarkeit, Wahlmöglichkeit (Augen offen oder zu, innere und äußere Anker, Auslassen erlaubt), einladende, respektvolle, nicht hypnotische Sprache, passendes Setting und ein Ablauf mit Ankommen, sanftem aber klarem Ende und Zeit zum Nachspüren.

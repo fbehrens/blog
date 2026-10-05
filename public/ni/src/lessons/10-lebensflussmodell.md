@@ -144,3 +144,18 @@ Traumastrudel haben **starke Sogkraft** → **Hyperfokussierung** (Neurozeption 
 - Das Thema zu meiden und schnell zu wechseln
 - Den Klienten zur Konfrontation zu drängen
 > Empathie ohne zu starke Resonanz.
+
+===FREITEXT===
+?? Erkläre das Lebensflussmodell mit seinen Elementen.
+* Fluss = Persönlichkeit und Lebensverlauf
+* Ufer = Ich-Grenzen, Resilienz, Toleranzfenster
+* Ressourcenwirbel im gesunden Fluss
+* Traumastrudel bei traumatischem Stress (Steckenbleiben)
+* Ursprung Levine, erweitert von Hartmann
+>> Das Lebensflussmodell (Levine, erweitert von Woltemade Hartmann) zeigt den Fluss als Persönlichkeit und Lebensverlauf, die Ufer als Ich-Grenzen, Resilienz und Toleranzfenster. Im gesunden Fluss entstehen Ressourcenwirbel; bei Stress tritt Wasser über die Ufer und wird zurückgezogen. Bei traumatischem Stress ohne Lösung entsteht ein Traumastrudel, bei weiterer Eskalation einer in der Untererregung (z. B. „Burnout“).
+?? Was bedeutet die Medusa-Metapher und was folgt daraus für die Begleitung?
+* Sogkraft des Traumastrudels, Hyperfokussierung auf Gefahr
+* Neurozeption sucht ständig Gefahr
+* Ressourcenwirbel weniger Sog auf Wahrnehmung, aber ähnliche Wirkung aufs System
+* Begleitung: Koregulation, Ressourcen, Pendeln; Begleiter brauchen „Schilde“
+>> Wer Medusa anblickte, erstarrte – so hat der Traumastrudel eine starke Sogwirkung und führt zur Hyperfokussierung auf Gefahr. Ressourcenwirbel ziehen die Wahrnehmung weniger an, wirken aber ähnlich stark auf das Gesamtsystem. Deshalb stärken wir mit Koregulation, Ressourcen und Pendeln die Ressourcenwirbel; Begleitende schützen sich durch Hier-und-Jetzt-Bewusstsein, Körperressourcen und Metaebene.

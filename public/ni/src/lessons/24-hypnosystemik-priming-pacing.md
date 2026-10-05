@@ -175,3 +175,17 @@ Zwei Erlebniskriterien (nach **Gunther Schmidt**): **willkürlich / unwillkürli
 - Einen Duft im Raum verbreiten
 - Eine Liste von Glaubenssätzen vorlesen
 > Ebenso: wörtlich wiederholen, ähnliche Körperhaltung.
+
+===FREITEXT===
+?? Erkläre den Unterschied zwischen willkürlichen und unwillkürlichen Prozessen und warum Imagination wirkt.
+* Willkürlich: bewusst, kontrollierbar; unwillkürlich: von allein (Atmung, Stimmung, Trigger)
+* Unwillkürliches wirkt schneller und effektiver
+* Sprache erreicht explizites, kaum implizites Gedächtnis
+* Imagination erreicht Unwillkürliches und verknüpft es mit dem Willkürlichen; bahnt Netzwerke vor
+>> Willkürliche Prozesse erleben wir als bewusst entschieden und kontrollierbar, unwillkürliche geschehen „von allein“ (Atmung, Stimmung, getriggerte Muster) und wirken schneller und effektiver. Sprache erreicht vor allem das explizite Gedächtnis; das implizite setzt sich gegen bewusste Steuerung durch. Imagination erreicht die unwillkürliche Ebene, verknüpft sie wieder mit dem Willkürlichen und bahnt neue neuronale Netzwerke vor.
+?? Definiere Priming und Pacing und gib je ein Beispiel.
+* Priming: Bahnung von Assoziationen durch Hinweisreize, unbewusst
+* Beispiel: „Ich freue mich, dass du da bist“
+* Pacing: Haltung der Zustimmung, sich angleichen
+* Beispiel: Sprache, Rhythmus, Haltung, Atemrhythmus anpassen; keine Manipulation
+>> Priming ist die Bahnung von Assoziationen durch einen Hinweisreiz (Wort, Bild, Geruch), der unbewusst Wissensbausteine aktiviert – etwa „Ich freue mich, dass du da bist“. Pacing ist die Haltung der Zustimmung und Zugewandtheit: ähnliche Sprachmuster, Rhythmus, Körperhaltung, Sprechen im Atemrhythmus des Klienten. Es dient der Verbundenheit und ist keine Manipulation.

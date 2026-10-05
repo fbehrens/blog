@@ -167,3 +167,17 @@ Anteile aus **traumatischem Stress** bleiben oft **rigide**, entwickeln sich wen
 - Ja, durch Hypnose
 - Nein, und sie verändern sich auch nie
 > Teil des Nervensystems; Neuroplastizität.
+
+===FREITEXT===
+?? Was sind innere Anteile aus Sicht der NI und wie entstehen sie unter guten bzw. erschwerten Bedingungen?
+* Neurophysiologische Repräsentanzen gemachter Erfahrungen (Hartmann) = neuronale Netzwerke
+* Normal; enthalten Erinnerungen, Gefühle, Glaubenssätze, Alter, Funktion
+* Gute Bedingungen: integriert, wachsen mit, nah am Wesenskern
+* Erschwerte Bedingungen: rigide, isoliert, entstehen um zu schützen
+>> Innere Anteile sind nach Woltemade Hartmann neurophysiologische Repräsentanzen gemachter Erfahrungen – neuronale Netzwerke aus wiederholten Erfahrungen, mit eigenen Erinnerungen, Gefühlen, Glaubenssätzen, Alter und Funktion. Unter guten Bedingungen sind sie integriert, entwickeln sich weiter und sind dem Wesenskern nah. Unter traumatischem Stress entstehen sie, um zu schützen, und bleiben oft rigide und isoliert.
+?? Nenne die drei Kategorien von Anteilen nach Woltemade Hartmann mit Beispielen und dem Fokus im Coaching.
+* Ressourcenreich: innere Helfer, zukünftiges Selbst
+* Verletzt: braves Mädchen, süchtiger, depressiver Anteil
+* Verletzend: innerer Richter, täterloyal, täterimitierend
+* Fokus im Coaching: ressourcenreiche Anteile; verletzte nachnähren
+>> Ressourcenreiche Anteile (innere Helfer, Coach-Selbst, zukünftiges Selbst) entstehen aus guten Erfahrungen; verletzte Anteile (ängstliche Stimme, braves Mädchen, süchtiger oder depressiver Anteil) tragen Überlebensstrategien; verletzende Anteile (innerer Richter, Miesmacher, täterloyale und täterimitierende Anteile) tragen hohe Spannung, sind aber nicht zum Schaden gedacht. Im Coaching liegt der Fokus auf ressourcenreichen Anteilen; verletzte werden nachgenährt.

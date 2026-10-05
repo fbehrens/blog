@@ -177,3 +177,17 @@ Netzwerke, die mit **Überlebensreaktionen** verknüpft sind, sind enorm solide 
 - Sie lassen sich mit dem Verstand allein umbauen
 - Sie sind grundsätzlich unveränderbar
 > „Ausfahrten bauen“; Konzentration nur aufs Schöne ist nicht traumasensibel.
+
+===FREITEXT===
+?? Beschreibe das dreieinige Gehirn und die Rolle von Amygdala und Hippocampus.
+* Stammhirn: Überleben, Autopilot
+* Limbisches System: Fühlen, Bewerten, hasst Veränderung
+* Neocortex/PFC: Denken, Impulskontrolle, mag Veränderung
+* Amygdala = Feuerwehr/Alarm; Hippocampus = Bibliothekar/Puzzlezusammensetzer
+>> Nach MacLean: Das Stammhirn (Überleben, Autopilot) ist der älteste Teil und hat in Gefahr die meiste Macht. Das limbische System (Fühlen, „gut oder schlecht?“) liebt Routinen und hasst Veränderung; dazu gehören die Amygdala (Feuerwehr, Alarm) und der Hippocampus (Bibliothekar, formt Erinnerungen). Der Neocortex/präfrontale Cortex (Denken, Impulskontrolle, Empathie) ist der einzige Teil, der Veränderung mag.
+?? Was ist Neuroplastizität und warum ist Veränderung bei Traumafolgen trotzdem so schwer?
+* Fähigkeit von Nervenzellen, sich zu vernetzen; erfahrungsabhängig, lebenslang
+* What fires together, wires together; Trampelpfad vs. Autobahn
+* Überlebensnetzwerke: Stammhirn regiert, bedingungslos, am Willen vorbei
+* Stoffwechsellage und viele Wiederholungen – Verstand allein reicht nicht
+>> Neuroplastizität ist die Fähigkeit einer Nervenzelle, sich mit anderen zu vernetzen; die Verschaltungen entstehen durch Erfahrungen und bleiben lebenslang veränderbar („What fires together, wires together“, Trampelpfade und Autobahnen). Traumanetzwerke sind schwer zu verändern, weil sie an extreme Bedrohung gekoppelt sind (Stammhirn regiert, bedingungslos am Willen vorbei), eine geprägte Stoffwechsellage haben und durch Wiederholung zu Autobahnen wurden – mit dem Verstand allein ist keine Veränderung möglich.

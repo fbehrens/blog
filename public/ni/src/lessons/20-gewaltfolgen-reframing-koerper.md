@@ -157,3 +157,17 @@ Aus der **systemischen Therapie**; wörtlich „**einen neuen Rahmen geben**“:
 - Den Klienten bis an seine Grenze bringen
 - Energie grundsätzlich im Körper halten
 > Lieber eine Runde früher aufhören.
+
+===FREITEXT===
+?? Was ist Reframing, wie wird es traumasensibel eingesetzt und wo liegen seine Grenzen?
+* Aus der systemischen Therapie: neuer Bedeutungsrahmen
+* Beispiele: Unterwerfung als Selbstschutz, Dissoziation als Überlebensenergie
+* Story follows State – im ventralen Zustand leichter
+* Grenze: nie bagatellisieren, nicht zu früh
+>> Reframing (systemische Therapie) heißt, Erfahrungen in einen neuen Bedeutungsrahmen zu setzen, um starre Überzeugungen zu lösen – z. B. Unterwerfung als Selbstschutz oder Dissoziation als rettende Überlebensenergie. Da „story follows state“, gelingt es im ventralen Zustand leichter. Es darf das Trauma nie relativieren oder bagatellisieren; zu frühes Reframing kann blockieren.
+?? Warum ist der Körper in der traumasensiblen Arbeit so wichtig?
+* Unverarbeitete Erlebnisse enthalten die „Ladung“ im Körper, nicht in Gedanken
+* Fluchtversuche: rationalisieren, dissoziieren, Körper kontrollieren, Kompensation
+* Frühes Trauma im impliziten Gedächtnis, vor dem 3. Lebensjahr
+* Energie im STF fließen lassen → Integration (Zittern, Weinen, Gänsehaut)
+>> Durch Fragmentierung bleibt die Überlebensenergie im Körper gespeichert, nicht in den Gedanken. Versuche, ihr zu entkommen (Rationalisieren, Dissoziieren, Kontrollieren, Kompensation), lösen sie nicht. Frühe Erfahrungen sind im impliziten Körpergedächtnis gespeichert (explizit erst ab ca. 3 Jahren) und über Sprache kaum erreichbar. Wird die gehaltene Energie innerhalb des STF gespürt, kann sie fließen (Zittern, Gänsehaut, Weinen, vertiefte Atmung) und integriert werden.

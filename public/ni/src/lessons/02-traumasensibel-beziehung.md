@@ -144,3 +144,19 @@ Trauma zerreißt Sicherheit und Verbundenheit. Themenfelder: **Wertschätzung & 
 - No pain, no gain
 - Fake it till you make it
 > Sicherheit braucht Zeit; Wiederkommen ist schon ein Erfolg.
+
+===FREITEXT===
+?? Was ist traumasensibles Arbeiten? Nenne die vier Bereiche und die drei Säulen.
+* Wissen über Trauma
+* Traumasymptome erkennen
+* Damit umgehen
+* Retraumatisierung vermeiden / für Sicherheit sorgen
+* Säulen: Beziehung, Traumawissen, Körper
+>> Traumasensibles Arbeiten umfasst Wissen über Trauma, das Erkennen von Traumasymptomen, den hilfreichen Umgang damit und das Vermeiden von Retraumatisierung. Es ist keine Traumatherapie, sondern vergrößert die Kapazität, reguliert und schafft Containment. Die drei Säulen sind Beziehung, Traumawissen und Körper.
+?? Beschreibe, was die Säule „Beziehung“ ausmacht und was einen „sicheren Menschen“ kennzeichnet.
+* Elementarste Säule, Trauma zerreißt Sicherheit
+* Wertschätzung und Wohlwollen
+* Transparenz und Augenhöhe (erklären, Einverständnis)
+* Verlässlichkeit, Berechenbarkeit, Klarheit, Präsenz
+* Umsetzbarkeit: keine Parallelwelt, Alltagstransfer
+>> Die Beziehung ist die elementarste Säule, weil Trauma Sicherheit zerreißt. Sie lebt von Wertschätzung und Wohlwollen, einem sicheren Ort, Transparenz (erklären, was wir warum tun) und Augenhöhe. Der sichere Mensch ist verlässlich, berechenbar, klar, präsent, empathisch und kann eine Metaperspektive einnehmen. Die Arbeit muss umsetzbar sein – keine Parallelwelt.

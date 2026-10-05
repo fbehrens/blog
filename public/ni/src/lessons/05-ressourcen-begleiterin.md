@@ -149,3 +149,18 @@ Zugang schaffen: **erkennen, suchen, aktivieren, pflegen** (z. B. ein „Ressour
 - Als Fälle eines bestimmten Störungsbildes
 - Als vollständig gesund und ohne Verletzung
 > Der Fokus auf das Unversehrte schafft Raum, in dem alles Versehrte Platz hat.
+
+===FREITEXT===
+?? Was ist eine Ressource? Nenne die drei Arten mit je einem Beispiel und erkläre, warum Ressourcen bei Trauma oft fehlen.
+* Alles, was mit der Fähigkeit zur Regulation in Kontakt bringt
+* Innere (z. B. Talente), äußere (z. B. Orte), relationale (z. B. Freunde)
+* Traumatisiertes Nervensystem sucht Gefahr statt Schönes
+* Ressourcen ungewohnt, gemieden, an Glaubenssätze gekoppelt
+>> Eine Ressource ist alles, was uns mit unserer Regulationsfähigkeit in Kontakt bringt – Anker im Hier und Jetzt. Arten: innere (Talente, Stärken), äußere (Orte, Tätigkeiten) und relationale (Freunde, Familie). Bei Trauma fehlen sie, weil das Nervensystem nach Gefahr sucht und Ressourcen ungewohnt sind oder unbewusst gemieden werden („Wenn es schön ist, passiert gleich etwas Schlimmes“).
+?? Was braucht eine traumasensible Begleiterin? Nenne die fünf Bausteine.
+* Wissen / Kompetenz
+* Erfahrung
+* Stabilität
+* Hohe Selbstkenntnis
+* Haltung und Ausrichtung
+>> Wissen und Kompetenz, Erfahrung, Stabilität (Resilienz, Schutz vor sekundärer Traumatisierung), hohe Selbstkenntnis (weniger Projektion) sowie eine klare Haltung und Ausrichtung.

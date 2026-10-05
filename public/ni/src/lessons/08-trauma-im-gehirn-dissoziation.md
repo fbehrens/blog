@@ -141,3 +141,17 @@ Dissoziation ist **Überlebensreaktion und zugleich Traumafolge**. Sie zu lösen
 - Den Klienten so lange zu konfrontieren, bis er nichts mehr fühlt
 - Die Fragmente dauerhaft im Unbewussten zu belassen
 > Das Ereignis bekommt seine Struktur zurück: Anfang, Verlauf, Ende, Bedeutung.
+
+===FREITEXT===
+?? Was passiert im Gehirn bei einer traumatischen Erfahrung?
+* Notprogramm: Stammhirn übernimmt, Amygdala im Alarm
+* Informationsfluss zu Hippocampus und Broca-Zentrum blockiert
+* Fragmentierte Speicherung – Puzzleteile
+* Heiße, triggerbare Erinnerungsfragmente
+>> Das Gehirn schaltet auf Notprogramm: Das Stammhirn übernimmt, die Amygdala löst Stresskaskaden aus. Die Körperchemie blockiert den Informationsfluss zum Hippocampus (zeitliche Einordnung) und zum Sprachzentrum. Die Eindrücke werden fragmentiert abgelegt – statt eines Puzzlebilds bleiben „heiße“, noch geladene und daher triggerbare Fragmente.
+?? Definiere Dissoziation und erkläre ihre Schutzfunktion sowie Derealisation und Depersonalisation.
+* Auto-protektive Wahrnehmungsveränderung
+* Letzter Schutz: Flucht nach innen, Wucht wird gemildert
+* Derealisation: weg von der Realität; Depersonalisation: weg von der Person
+* Alle Reize kommen an, nur die Verknüpfung fehlt
+>> Dissoziation ist eine auto-protektive (selbstschützende) Wahrnehmungsveränderung und der letzte Schutz: Wenn äußere Flucht unmöglich ist, flieht man nach innen; das Zerlegen in Teile mildert die Wucht, sodass man nicht am Schock stirbt. Derealisation heißt weg von dieser Realität, Depersonalisation weg von dieser Person. Alle Reize kommen an, nur die assoziative Fähigkeit ist ausgeschaltet – daher fragmentierte Speicherung.

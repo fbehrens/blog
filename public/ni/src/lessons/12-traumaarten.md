@@ -186,3 +186,17 @@ einen Menschen **„aus der Bahn werfen“**.
 - Ein Trauma, das durch Fernsehbilder entsteht
 - Ein Trauma, das in einer Generation vollständig heilt
 > Z. B. Sklaverei, Kriege, Enteignung.
+
+===FREITEXT===
+?? Definiere Trauma und nenne die vier Merkmale traumatischer Ereignisse.
+* Übersteigt die Bewältigungs- und Verarbeitungsfähigkeit
+* Hilflosigkeit, Ohnmacht, Lebensbedrohung
+* Plötzlichkeit, Heftigkeit, Ausweglosigkeit/Hilflosigkeit, Dauer
+* Trauma liegt in den Folgen, nicht im Ereignis
+>> Ein traumatisches Erlebnis übersteigt die Bewältigungs- und Verarbeitungsfähigkeit und löst Hilflosigkeit, Ohnmacht und Lebensbedrohung aus. Merkmale: Plötzlichkeit, Heftigkeit, Ausweglosigkeit/Hilflosigkeit/Ohnmacht und Dauer – sie werfen einen Menschen aus der Bahn. Trauma liegt in den Folgen, in der nicht gelingenden Verarbeitung.
+?? Unterscheide Monotrauma, sequenzielles Trauma und Komplextrauma; ordne Bindungs- und Entwicklungstrauma ein.
+* Monotrauma Typ I: einzelnes Ereignis (Schocktrauma)
+* Sequenziell Typ II: wiederholt über längere Zeit, auch Mikrotraumata
+* Komplextrauma: meist früh, toxischer Stress durch Menschen über längere Zeit
+* Bindungs- und Entwicklungstrauma gehören zum Komplextrauma
+>> Monotrauma (Typ I) ist ein einzelnes Ereignis wie ein Unfall. Sequenzielles Trauma (Typ II) geschieht wiederholt über längere Zeit, auch durch Mikrotraumata. Komplextrauma ist eine meist frühe sequenzielle Traumatisierung durch toxischen Stress, den Menschen über längere Zeit auslösen. Dazu gehören Bindungstrauma (betrifft die Bindung Kind–Bezugsperson) und Entwicklungstrauma (behindert die Entwicklung).

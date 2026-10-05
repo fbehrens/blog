@@ -140,3 +140,18 @@ Ruhe, Regeneration, **Integration von Gelerntem** (daher: Pausen kultivieren). K
 - Hyperventilation ist ein Zeichen des dorsalen Shutdowns
 - Weite Pupillen zeigen einen parasympathischen Zustand
 > M2.1·04.
+
+===FREITEXT===
+?? Beschreibe Funktion und Körperwirkungen von Sympathikus und Parasympathikus.
+* Sympathikus: Mobilisierung von Energie, Kampf/Flucht
+* Sympathikus: Herz, Blutdruck, Muskeltonus hoch, Glykolyse
+* Parasympathikus: Ruhe, Regeneration, „Verdauung im Körper und Geiste“
+* Parasympathikus: Puls/Blutdruck sinken, Glykogensynthese, Stresshormone abgebaut
+* Beide arbeiten zusammen
+>> Der Sympathikus mobilisiert Energie und Handlungsbereitschaft, unter Bedrohung für Kampf oder Flucht: Herztätigkeit, Blutdruck und Muskeltonus steigen, Glykolyse stellt Energie bereit. Der Parasympathikus steuert Ruhe, Regeneration und Integration: Puls und Blutdruck sinken, Energie wird gespeichert (Glykogensynthese), Stresshormone werden abgebaut. Beide arbeiten im Wechselspiel.
+?? Wann führt Stress nicht zu Trauma? Erkläre gelingende Stressverarbeitung.
+* Stress ist nicht gleich Trauma
+* Bewältigung durch Kampf, Flucht, Koregulation oder Selbstregulation
+* Rückkehr ins Stresstoleranzfenster
+* Keine Traumafolgen bleiben
+>> Stress ist nicht gleich Trauma. Gelingt es, die Übererregung durch Kampf, Flucht, Koregulation oder Selbstregulation zu bewältigen, kehrt man ins Stresstoleranzfenster zurück und es bleiben keine Traumafolgen. Erst wenn das nicht gelingt, gerät der Organismus in die traumatische Zange.

@@ -136,3 +136,20 @@ Loswerden-Wollen entspricht **Kampf**, Ausblenden entspricht **Flucht** – beid
 - Menschen heilen, sobald ihre Symptome verschwinden
 - Menschen heilen nur durch konsequente Konfrontation
 > M1.1·03 Abschluss: gesehen im Nervensystem, Körper, Verstand und emotional.
+
+===FREITEXT===
+?? Erkläre die drei Bestandteile des Begriffs „Neurosystemische Integration“.
+* Neuro: Traumafolgen zeigen sich im Nervensystem; Muster und Anteile sind neuronale Netzwerke
+* Neuroplastizität: Netzwerke sind veränderbar
+* Systemisch: Trauma betrifft immer Systeme, nichts existiert für sich allein
+* Integration: Gegenpol zur Dissoziation, getrennte Netzwerke werden wieder verknüpft
+>> Neuro: Traumabedingte Symptome zeigen sich im Nervensystem, das Stimmung und Befinden bestimmt; Glaubenssätze, Muster und Anteile sind neuronale Netzwerke und durch Neuroplastizität veränderbar. Systemisch: Trauma ist nichts Singuläres, es wirkt in Systemen (Familie, Gesellschaft). Integration: der unterschätzte Schlüssel zu Autonomie und Selbstwirksamkeit, Gegenpol zur Dissoziation – neurologisch werden getrennte Netzwerke wieder verknüpft.
+?? Nenne mindestens fünf Methoden, aus denen die NI schöpft.
+* Neurobiologie
+* Systemik
+* Ego-State-Therapie / Anteilearbeit
+* Hypnosystemik
+* Psychotraumatologie
+* Bindungstheorie
+* Körperarbeit
+>> Neurobiologie, Systemik, Ego-State-Theorien (Anteilearbeit), Hypnosystemik, Psychotraumatologie, Bindungstheorien und Körperarbeit.

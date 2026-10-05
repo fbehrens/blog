@@ -174,3 +174,18 @@ Die **meisten Traumatisierungen geschehen in Familien**. Durch Bindung/Abhängig
 - Die Schuld des Täters gegenüber dem Opfer
 - Die Pflicht, anderen Überlebenden zu helfen
 > Innere Anteile fürchten Ausschluss, Bestrafung oder Anklage.
+
+===FREITEXT===
+?? Erkläre transgenerationales Trauma und die drei Wege der Weitergabe.
+* Kein Diagnosebegriff, aber wahrnehmbares Phänomen
+* Schwangerschaft (Mutter–Kind)
+* Gene / Epigenetik („Gedächtnis der Zellen“)
+* Unbewusstes Ausagieren der Bindungspersonen
+* Was nicht aufgearbeitet ist, wird weitergegeben
+>> Transgenerationales Trauma beschreibt, dass unerlöstes Trauma der Familie und Kultur weitergegeben wird – kein Diagnosebegriff, aber ein wahrnehmbares Phänomen. Wege: über die Mutter–Kind-Verbindung in der Schwangerschaft, über Epigenetik (veränderbares „Gedächtnis der Zellen“) und über das unbewusste Ausagieren ungelöster Traumata der Bindungspersonen. Was nicht aufgearbeitet ist, wird weitergegeben.
+?? Warum ist Anpassung die häufigste Traumareaktion in Familien und welche Familienmuster halten Trauma aufrecht?
+* Bindung/Abhängigkeit: Flucht und Kampf nicht möglich
+* Anpassung als komplexe, biologisch gebahnte Überlebensreaktion (Fawn, braves Kind, Introjektion)
+* Schweigen und Familiengeheimnisse – Scheinbalance
+* Falsche Loyalität, Überlebensschuld
+>> In Familien sind Kinder abhängig; Flucht und Kampf sind nicht möglich, deshalb bleiben Erstarren und – mit zunehmendem Alter – die Anpassung als sicherste, biologisch gebahnte Reaktion (von Fawn über „braves Kind“ bis Introjektion und Identifikation mit dem Aggressor). Schweigen und Familiengeheimnisse erhalten eine Scheinbalance; falsche Loyalität und Überlebensschuld hindern, das eigene Leben voll zu leben.

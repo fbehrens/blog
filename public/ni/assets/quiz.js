@@ -14,7 +14,7 @@
     const prev = all[id] || {};
     const pct = Math.round((100 * right) / total);
     all[id] = { best: Math.max(prev.best || 0, pct), last: pct, date: new Date().toISOString().slice(0, 10), runs: (prev.runs || 0) + 1 };
-    localStorage.setItem(KEY, JSON.stringify(all));
+    try { localStorage.setItem(KEY, JSON.stringify(all)); } catch (e) { /* kein Speicher verfügbar */ }
   }
 
   function shuffle(arr) {
@@ -100,10 +100,69 @@
     }
   }
 
+  // Freitext: {q, k:[Kernpunkte], m:Musterantwort, l?, t?, f?}
+  function renderFreitext(root, items, opts) {
+    root.innerHTML = "";
+    const tally = el("div", "tally");
+    root.appendChild(tally);
+    let done = 0, got = 0, max = 0;
+    const update = () => { tally.textContent = `${done} / ${items.length} ausgewertet · ${got} / ${max} Kernpunkte`; };
+    update();
+    items.forEach((it, i) => {
+      const box = el("div", "q ft");
+      if (opts.exam && it.l) box.appendChild(el("span", "q-ref", `Lektion ${it.l} · ${it.t}`));
+      box.appendChild(el("p", "q-text", `<span class="n">${i + 1}.</span>${it.q}`));
+      const ta = el("textarea");
+      ta.rows = 5;
+      ta.placeholder = "Deine Antwort …";
+      box.appendChild(ta);
+      const show = el("button", null, "Musterlösung aufdecken");
+      show.type = "button";
+      box.appendChild(show);
+      show.addEventListener("click", () => {
+        show.remove();
+        ta.readOnly = true;
+        const sol = el("div", "solution");
+        sol.appendChild(el("p", "label", "Kernpunkte – hake ab, was du genannt hast:"));
+        const list = el("ul", "kp");
+        const boxes = it.k.map((k) => {
+          const li = el("li");
+          const cb = el("input");
+          cb.type = "checkbox";
+          const lab = el("label");
+          lab.appendChild(cb);
+          lab.appendChild(el("span", null, " " + k));
+          li.appendChild(lab);
+          list.appendChild(li);
+          return cb;
+        });
+        sol.appendChild(list);
+        sol.appendChild(el("p", "model", `<strong>Musterantwort:</strong> ${it.m}`));
+        const link = opts.exam && it.f ? ` <a href="${it.f}">→ Lektion ${it.l}</a>` : "";
+        const rate = el("button", null, "Auswerten");
+        rate.type = "button";
+        rate.addEventListener("click", () => {
+          const n = boxes.filter((b) => b.checked).length;
+          boxes.forEach((b) => { b.disabled = true; });
+          rate.remove();
+          done++; got += n; max += it.k.length;
+          const ok = n / it.k.length >= 0.75;
+          sol.appendChild(el("p", `why ${ok ? "ok" : "bad"}`, `<span class="verdict">${n} / ${it.k.length} Kernpunkte.</span>${ok ? "Gut abgedeckt." : "Lies die Musterantwort und formuliere sie einmal laut nach."}${link}`));
+          update();
+        });
+        sol.appendChild(rate);
+        box.appendChild(sol);
+      });
+      root.appendChild(box);
+    });
+  }
+
   function initLesson() {
     const root = document.getElementById("quiz");
     if (!root || !window.QUIZ) return;
     render(root, window.QUIZ, { id: window.LESSON.id, full: true });
+    const ft = document.getElementById("freitext");
+    if (ft && window.FREITEXT && window.FREITEXT.length) renderFreitext(ft, window.FREITEXT, {});
     const t = document.querySelector(".toggle-summary");
     if (t) t.addEventListener("click", () => {
       document.body.classList.toggle("recall");
@@ -118,7 +177,10 @@
     const go = () => {
       const n = parseInt(document.getElementById("exam-n").value, 10);
       const teil = document.getElementById("exam-teil").value;
-      let pool = shuffle(window.BANK.filter((q) => !teil || q.p === teil));
+      const typ = document.getElementById("exam-typ").value;
+      const src = typ === "ft" ? (window.FTBANK || []) : window.BANK;
+      let pool = shuffle(src.filter((q) => !teil || q.p === teil));
+      if (typ === "ft") { renderFreitext(root, pool.slice(0, Math.min(n || pool.length, 10)), { exam: true }); return; }
       if (n) pool = pool.slice(0, n);
       render(root, pool, { id: "exam", exam: true, full: true, restart: go });
     };
@@ -136,6 +198,6 @@
     });
   }
 
-  window.NIQuiz = { render, load, shuffle };
+  window.NIQuiz = { render, renderFreitext, load, shuffle };
   document.addEventListener("DOMContentLoaded", () => { initLesson(); initExam(); initIndex(); });
 })();
