@@ -1,0 +1,145 @@
+/* Gemeinsames Stylesheet für alle Lektionen und Referenzen – ruhig, lesbar, druckfreundlich. */
+:root {
+  --ink: #1d1d1b;
+  --muted: #6b6b66;
+  --paper: #fffff8;
+  --line: #e4e1d6;
+  --accent: #8a3b12;
+  --ok: #2f6b3a;
+  --ok-bg: #e6f2e4;
+  --bad: #9b2226;
+  --bad-bg: #f8e4e2;
+  --note: #f4efe1;
+  --measure: 40rem;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+main { max-width: var(--measure); margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+
+nav.top {
+  display: flex; gap: 1.25rem; flex-wrap: wrap;
+  max-width: var(--measure); margin: 0 auto; padding: 1rem 1.25rem 0;
+  font: 0.8rem/1.4 -apple-system, "Helvetica Neue", sans-serif; letter-spacing: 0.02em;
+}
+nav.top a { color: var(--muted); text-decoration: none; }
+nav.top a:hover { color: var(--accent); }
+
+a { color: var(--accent); text-underline-offset: 2px; }
+
+header { margin: 2rem 0 1.5rem; }
+.kicker {
+  font: 600 0.72rem/1.3 -apple-system, "Helvetica Neue", sans-serif;
+  text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin: 0 0 0.5rem;
+}
+h1 { font-weight: 400; font-size: 2.1rem; line-height: 1.15; margin: 0; }
+.subtitle { font-style: italic; color: var(--muted); margin: 0.5rem 0 0; font-size: 1.1rem; }
+h2 { font-weight: 400; font-size: 1.4rem; margin: 2.5rem 0 0.75rem; border-bottom: 1px solid var(--line); padding-bottom: 0.25rem; }
+h3 { font-weight: 600; font-size: 1.05rem; margin: 1.6rem 0 0.4rem; }
+.count { color: var(--muted); font-size: 1rem; }
+
+.goal, .ask {
+  background: var(--note); border-left: 3px solid var(--accent);
+  padding: 0.75rem 1rem; margin: 1.5rem 0; font-size: 0.95rem;
+}
+.ask { border-left-color: var(--muted); margin-top: 3rem; }
+
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; margin: 1rem 0; }
+th, td { text-align: left; vertical-align: top; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--line); }
+th { font-weight: 600; border-bottom: 1.5px solid var(--ink); }
+
+blockquote { margin: 1rem 0; padding: 0 1rem; border-left: 2px solid var(--line); color: var(--muted); font-style: italic; }
+
+.sources { font-size: 0.92rem; }
+.sources .more { margin-bottom: 0.25rem; }
+.recs { margin-top: 0; padding-left: 1.2rem; }
+
+.hint { font-size: 0.9rem; color: var(--muted); }
+button {
+  font: 0.85rem/1 -apple-system, "Helvetica Neue", sans-serif;
+  background: none; border: 1px solid var(--muted); color: var(--ink);
+  border-radius: 3px; padding: 0.45rem 0.7rem; cursor: pointer;
+}
+button:hover { border-color: var(--accent); color: var(--accent); }
+.toggle-summary { margin-left: 0.4rem; }
+body.recall #summary { display: none; }
+
+/* Quiz */
+.tally {
+  position: sticky; top: 0; z-index: 2; background: var(--paper);
+  font: 0.8rem/1 -apple-system, "Helvetica Neue", sans-serif; color: var(--muted);
+  padding: 0.6rem 0; border-bottom: 1px solid var(--line); margin-bottom: 1rem;
+}
+.q { margin: 0 0 1.8rem; }
+.q-text { margin: 0 0 0.5rem; font-weight: 600; }
+.q-text .n { color: var(--accent); margin-right: 0.35rem; font-weight: 400; }
+.q-ref { font: 0.72rem/1 -apple-system, "Helvetica Neue", sans-serif; color: var(--muted); display: block; margin-bottom: 0.3rem; }
+.options { list-style: none; padding: 0; margin: 0; }
+.options li { margin: 0.3rem 0; }
+.options button {
+  display: flex; gap: 0.6rem; width: 100%; text-align: left;
+  font: inherit; font-size: 0.97rem; line-height: 1.4; padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line); background: #fff;
+}
+.options button .l { color: var(--muted); font: 600 0.8rem/1.75 -apple-system, sans-serif; }
+.options button:hover:not(:disabled) { border-color: var(--accent); }
+.options button:disabled { cursor: default; color: var(--ink); }
+.options button.ok { background: var(--ok-bg); border-color: var(--ok); }
+.options button.bad { background: var(--bad-bg); border-color: var(--bad); }
+.why { font-size: 0.92rem; margin: 0.5rem 0 0; padding: 0.5rem 0.75rem; border-left: 3px solid var(--line); }
+.why.ok { border-color: var(--ok); }
+.why.bad { border-color: var(--bad); }
+.why .verdict { font-weight: 600; margin-right: 0.3rem; }
+.why.ok .verdict { color: var(--ok); }
+.why.bad .verdict { color: var(--bad); }
+.result { background: var(--note); padding: 1rem 1.2rem; margin: 2rem 0; }
+.result .big { font-size: 1.8rem; display: block; }
+.result button { margin: 0.6rem 0.4rem 0 0; }
+.result ul { margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.92rem; }
+
+.exam-setup { display: flex; gap: 1rem; flex-wrap: wrap; align-items: end; margin: 1rem 0 2rem;
+  font: 0.85rem/1.3 -apple-system, "Helvetica Neue", sans-serif; }
+.exam-setup label { display: flex; flex-direction: column; gap: 0.25rem; color: var(--muted); }
+.exam-setup select { font: inherit; padding: 0.3rem; }
+
+/* Kursübersicht */
+ol.lessons { list-style: none; padding: 0; }
+ol.lessons li { padding: 0.45rem 0; border-bottom: 1px dotted var(--line); }
+ol.lessons a { text-decoration: none; color: var(--ink); }
+ol.lessons a:hover { color: var(--accent); }
+ol.lessons .nr { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: 0.3rem; }
+ol.lessons .meta { display: block; font: 0.75rem/1.4 -apple-system, sans-serif; color: var(--muted); margin-left: 1.9rem; }
+.progress { font: 600 0.72rem/1 -apple-system, sans-serif; color: var(--ok); margin-left: 1.9rem; }
+.progress.low { color: var(--bad); }
+
+/* Pager */
+.pager { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: 0.9rem; }
+
+/* Referenz */
+.reference h2 { margin-top: 2rem; }
+.reference dl dt { font-weight: 600; margin-top: 0.8rem; }
+.reference dl dd { margin: 0.1rem 0 0 1rem; }
+
+@media print {
+  html { font-size: 11pt; }
+  body { background: #fff; }
+  nav.top, .pager, .ask, .hint, .tally, .result, .exam-setup, .toggle-summary { display: none !important; }
+  body.recall #summary { display: block; }
+  main { max-width: none; padding: 0; }
+  .options button { border: none; padding: 0.1rem 0; background: none; }
+  .why { display: none; }
+  .q { break-inside: avoid; }
+  a { color: var(--ink); text-decoration: none; }
+  h2 { break-after: avoid; }
+}
