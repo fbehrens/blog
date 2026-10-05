@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prüfungssimulation</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="top"><a href="../index.html">Kursübersicht</a><a href="../lessons/pruefung.html">Prüfungssimulation</a><a href="../reference/glossar.html">Glossar</a><a href="../reference/modelle.html">Modelle</a></nav>
+<main>
+<header>
+<p class="kicker">Gemischtes Training · alle Lektionen</p>
+<h1>Prüfungssimulation</h1>
+<p class="subtitle">Zufällige Fragen aus allen Lektionen – gemischt, wie in der echten Prüfung.</p>
+</header>
+<p class="goal"><strong>Warum gemischt?</strong> Wenn Themen durcheinander kommen, musst du erst erkennen, <em>welches</em> Modell gefragt ist. Genau das trainiert die Prüfungssituation und festigt das Langzeitgedächtnis.</p>
+<section class="quiz">
+<div class="exam-setup">
+<label>Anzahl Fragen
+<select id="exam-n"><option>20</option><option selected>40</option><option>80</option><option value="0">alle</option></select></label>
+<label>Aus Teil
+<select id="exam-teil"><option value="">alle Teile</option><option value="I">Teil I: Grundlagen der Neurosystemischen Integration</option><option value="II">Teil II: Nervensystem, Stress und Trauma</option><option value="III">Teil III: Gehirn, Glaubenssysteme, Körper</option><option value="IV">Teil IV: Anteile, Imagination, Systemik</option><option value="V">Teil V: Bindung, Grenzen, intensive Gefühle, Praxis</option></select></label>
+<button type="button" id="exam-start">Neue Simulation starten</button>
+</div>
+<div id="quiz"></div>
+</section>
+<aside class="ask"><strong>Frag nach!</strong> Etwas unklar, eine Frage falsch verstanden oder du willst ein Thema vertiefen?
+Frag deinen Lehrer (Claude) direkt im Chat – z.&nbsp;B. „Erklär mir den Unterschied zwischen Freeze und dorsalem Shutdown nochmal“ oder „Gib mir 10 neue Fragen zu Lektion 09“.</aside>
+</main>
+<script src="../assets/fragenbank.js"></script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>
