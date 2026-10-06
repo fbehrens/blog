@@ -109,8 +109,9 @@ def parse_lesson(path: pathlib.Path):
     return meta
 
 
-def page(title: str, body: str, depth: int = 1, scripts: str = "") -> str:
+def page(title: str, body: str, depth: int = 1, scripts: str = "", nav: str = "") -> str:
     up = "../" * depth
+    nav = nav or f'<a href="{up}index.html">Kursübersicht</a><a href="{up}lessons/pruefung.html">Prüfungssimulation</a><a href="{up}reference/glossar.html">Glossar</a><a href="{up}reference/modelle.html">Modelle</a>'
     return f"""<!doctype html>
 <html lang="de">
 <head>
@@ -120,7 +121,7 @@ def page(title: str, body: str, depth: int = 1, scripts: str = "") -> str:
 <link rel="stylesheet" href="{up}assets/style.css">
 </head>
 <body>
-<nav class="top"><a href="{up}index.html">Kursübersicht</a><a href="{up}lessons/pruefung.html">Prüfungssimulation</a><a href="{up}reference/glossar.html">Glossar</a><a href="{up}reference/modelle.html">Modelle</a></nav>
+<nav class="top">{nav}</nav>
 <main>
 {body}
 </main>
@@ -144,14 +145,14 @@ def render_lesson(m, prev, nxt):
     pager += "</nav>"
     mr_html = ""
     if m["mehrfach"]:
-        mr_html = f"""<section class="quiz">
+        mr_html = f"""<section id="mehrfach" class="quiz">
 <h2>Mehrfachauswahl <span class="count">({len(m['mehrfach'])})</span></h2>
 <p class="hint">Hier können eine, mehrere oder alle Antworten richtig sein. Wähle alle zutreffenden aus und klicke dann „Prüfen“ – richtig ist die Frage nur, wenn die Auswahl genau stimmt.</p>
 <div id="mquiz"></div>
 </section>"""
     ft_html = ""
     if m["freitext"]:
-        ft_html = f"""<section class="freitext-section">
+        ft_html = f"""<section id="freitext-fragen" class="freitext-section">
 <h2>Freitext-Fragen <span class="count">({len(m['freitext'])})</span></h2>
 <p class="hint">Schreib deine Antwort in Stichworten oder ganzen Sätzen. Dann Musterlösung aufdecken und ehrlich abhaken, welche Kernpunkte du genannt hast.</p>
 <div id="freitext"></div>
@@ -171,7 +172,7 @@ def render_lesson(m, prev, nxt):
 <p><strong>Skript „NI kompakt“</strong>, {html.escape(m['skript'])} – lies diese Seiten zuerst. Hauptaufnahme: {rec_link(m['primaer'])}</p>
 {"<p class='more'>Weitere Aufnahmen:</p><ul class='recs'>" + rec_html + "</ul>" if rec_html else ""}
 </section>
-<section class="quiz">
+<section id="fragen" class="quiz">
 <h2>Prüfungsfragen <span class="count">({len(m['quiz'])})</span></h2>
 <p class="hint">Tipp: Blende erst die Zusammenfassung aus und beantworte aus dem Gedächtnis – das Erinnern selbst festigt das Wissen.
 <button type="button" class="toggle-summary">Zusammenfassung ausblenden</button></p>
@@ -186,7 +187,10 @@ def render_lesson(m, prev, nxt):
     ftdata = json.dumps(m["freitext"], ensure_ascii=False)
     mrdata = json.dumps(m["mehrfach"], ensure_ascii=False)
     scripts = f'<script>window.LESSON={lesson};window.QUIZ={data};window.MEHRFACH={mrdata};window.FREITEXT={ftdata};</script>\n<script src="../assets/quiz.js"></script>'
-    return page(f"{m['nr']} · {m['title']}", body, 1, scripts)
+    nav = '<a href="../index.html">Kursübersicht</a><a href="#fragen">Fragen</a>'
+    nav += '<a href="#mehrfach">Mehrfachauswahl</a>' if m["mehrfach"] else ""
+    nav += '<a href="#freitext-fragen">Freitext</a>' if m["freitext"] else ""
+    return page(f"{m['nr']} · {m['title']}", body, 1, scripts, nav)
 
 
 def render_exam():
@@ -213,12 +217,22 @@ def render_exam():
     return page("Prüfungssimulation", body, 1, scripts)
 
 
+def lesson_links(m):
+    f = f'lessons/{m["file"]}'
+    links = [f'<a href="{f}#fragen">Fragen ({len(m["quiz"])})</a>']
+    if m["mehrfach"]:
+        links.append(f'<a href="{f}#mehrfach">Mehrfachauswahl ({len(m["mehrfach"])})</a>')
+    if m["freitext"]:
+        links.append(f'<a href="{f}#freitext-fragen">Freitext ({len(m["freitext"])})</a>')
+    return " | ".join(links)
+
+
 def render_index(lessons):
     parts = []
     for k, name in TEILE.items():
         items = "".join(
             f'<li><a href="lessons/{m["file"]}"><span class="nr">{m["nr"]}</span> {html.escape(m["title"])}</a>'
-            f' <span class="meta">{len(m["quiz"])} Fragen{(" + " + str(len(m["mehrfach"])) + " Mehrfachauswahl") if m["mehrfach"] else ""}{(" + " + str(len(m["freitext"])) + " Freitext") if m["freitext"] else ""} · {html.escape(m["skript"])}</span>'
+            f' <span class="meta">{lesson_links(m)} · {html.escape(m["skript"])}</span>'
             f' <span class="progress" data-progress="{m["nr"]}"></span><span class="progress" data-progress="{m["nr"]}m" data-label="Mehrfach: "></span></li>'
             for m in lessons if m["teil"] == k
         )

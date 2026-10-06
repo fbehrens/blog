@@ -158,3 +158,5 @@ ol.lessons .meta { display: block; font: 0.75rem/1.4 -apple-system, sans-serif; 
 .options button.sel { border-color: var(--accent); background: var(--note); box-shadow: inset 3px 0 0 var(--accent); }
 .options button.miss { border: 1px dashed var(--ok); background: #fff; box-shadow: inset 3px 0 0 var(--ok); }
 .q .check { margin-top: 0.5rem; }
+ol.lessons .meta a { color: var(--accent); }
+ol.lessons .meta a:hover { text-decoration: underline; }
