@@ -135,6 +135,54 @@ aufnahmen: M2.2·07 Demo Koregulation aus Untererregung | 12782 | 00:00 ;; Q&A M
 - Er ist sicher gebunden und daher besonders aufgeregt
 > Freude und Gefahr sind physiologisch ähnlich; Erregung kann an Bedrohung gekoppelt sein → entkoppeln.
 
+===MEHRFACH===
+? Eine Klientin spricht sehr schnell, springt zwischen Themen, unterbricht ständig und schaut sich im Raum um. Welche Interventionen passen?
++ Erst mitgehen (Pacing), dann gemeinsam verlangsamen
++ Ausatmen verlängern
++ Schwerkraft und Raum spüren lassen
+- Aufstehen und abklopfen, um sie zu aktivieren
+- Ausführlich vom Auslöser erzählen lassen
+> Übererregung → Parasympathikus aktivieren.
+
+? Ein Klient antwortet verzögert, sein Blick ist glasig, er sagt „Ich weiß nicht“, du wirst selbst müde. Was trifft zu?
++ Es liegt vermutlich Untererregung bzw. Dissoziation vor
++ Deine Müdigkeit ist ein Warnsignal
++ Leicht aktivieren: gemeinsam aufstehen, im Raum orientieren, abklopfen
+- Es ist tiefe Entspannung – die Sitzung wirkt gut
+- Augen schließen lassen und nach innen gehen
+> „Wenn du müde wirst, hab acht!“
+
+? Eine Klientin sagt zu allem sofort Ja, entschuldigt sich häufig und fragt „Mache ich das richtig?“. Was trifft zu?
++ Es zeigt sich eine Fawn Response
++ Mehr nachfragen und aktive Zustimmung einholen
++ Augenhöhe betonen
+- Klar vorgeben, was sie tun soll, damit sie sich nicht entscheiden muss
+- Ihr Verhalten als Charakterschwäche benennen
+> Fawn = Sympathikus unter Stress mit ventralem Vagus.
+
+? Ein Klient erzählt von schwerer Gewalt sachlich und lächelnd: „War doch nicht schlimm.“ Was ist angemessen?
++ Es als mögliches Zeichen von Dissoziation bzw. Untererregung einordnen
++ Körper und Hier und Jetzt einbeziehen
++ Achtsamkeit behutsam erhöhen
+- Nachfragen, bis er die Gefühle von damals spürt
+- Mit Details konfrontieren, um die Dissoziation zu brechen
+> Im Coaching keine traumanahen Inhalte vertiefen.
+
+? Eine Klientin weint heftig, bleibt aber im Blickkontakt und sagt: „Das tut gut, endlich.“ Was ist angemessen?
++ Präsent bleiben und Raum geben
+- Sofort wegpendeln, damit das Weinen aufhört
+- Eine Atemübung anordnen, bis sie ruhig ist
+- Das Thema wechseln, um sie zu schonen
+> Kontakt besteht; intensives Fühlen ist nicht automatisch Dysregulation.
+
+? Welche Zuordnungen von Fallbeschreibung und Zustand stimmen?
++ Erstarrt beim Türknall, hält die Luft an, hellwach, kann sich nicht bewegen – Freeze
++ Wochenlang „Powern“, dann Absturz in Erschöpfung – enges STF mit Pendeln zwischen Über- und Untererregung
++ Burnout, taub, leer, kraftlos – Traumastrudel der Untererregung (dorsaler Shutdown)
++ „Mitte der Leiter – angespannt, alles fühlt sich gefährlich an“ – Sympathikus
+- Herzrasen bei Vorfreude auf den Urlaub – sichere Bindung
+> Herzrasen bei Vorfreude: Erregung ist an Gefahr gekoppelt → entkoppeln.
+
 ===FREITEXT===
 ?? Fall: Eine Klientin redet ohne Pause, springt zwischen Themen, atmet flach und hält kaum Blickkontakt. Ordne ihren Zustand ein und beschreibe dein Vorgehen.
 * Übererregung / Sympathikus, außerhalb des STF (oben)

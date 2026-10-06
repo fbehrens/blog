@@ -151,6 +151,54 @@ Die Fragen werden **nicht am Telefon beantwortet** – sie wirken nach. Im erste
 - Arbeite ausschließlich mit der Zukunft
 > Skript S. 58.
 
+===MEHRFACH===
+? Welche Aussagen zum Sitzungsverlauf stimmen?
++ Die drei Phasen sind Ankommen, Arbeitsphase und Ausklang
++ Die Begrüßung ist bereits eine Intervention
++ Ankommen und Ausklang sind Priming – für die Sitzung bzw. den Alltag
++ Ziel des Monitorings: reguliert genug für den Alltag, nicht „geheilt“
+- Bei starker Aktivierung bringt man das Thema um jeden Preis zu Ende
+> Bei starker Aktivierung hat Regulation Vorrang.
+
+? Was tut man mit einem großen Thema, das spät in der Sitzung aufkommt?
++ Würdigen
++ Gut einpacken, ggf. mit Tresortechnik
++ Beim nächsten Mal mit Zeit bearbeiten
+- Sofort vollständig bearbeiten, auch wenn die Zeit überzogen wird
+- Ignorieren und nicht mehr ansprechen
+> Rechtzeitig mit dem „Landeanflug“ beginnen – lieber zu früh als zu spät.
+
+? Welche Aussagen zu den Ebenen stimmen?
++ Auf der Inhaltsebene können Menschen sich im Detail verstricken
++ Die Metaebene schaut aus Präsenz und Verbundenheit über dem Strudel
++ Die Prozessebene liegt zwischen Meta- und Inhaltsebene
++ Heilsame Veränderungen finden auf der Prozessebene statt
+- Heilsame Veränderungen finden auf der Inhaltsebene statt
+> Sie werden dann auf der Inhaltsebene spürbar.
+
+? Was gilt für die unterbewusste Ebene?
++ Sie wirkt oft unbemerkt auf die Inhaltsebene
++ Sie enthält auch jede Menge Ressourcen und Anteile des unversehrten Wesens
++ Auf Prozess- und Metaebene wird sie wahrgenommen und utilisiert
+- Sie enthält ausschließlich verdrängte Traumata
+- Sie wirkt gar nicht auf die Inhaltsebene
+> Skript S. 57.
+
+? Welche Aussagen zum Erstkontakt stimmen?
++ Der erste Eindruck ist Priming für den weiteren Prozess
++ Transparenz zu Honorar, Ablauf und Rahmen entlastet die Beziehungsebene
++ Am Telefon kündigt man an: „Was ich unbedingt wissen muss“ und „Was ist dein drängendstes Anliegen?“
++ Die angekündigten Fragen werden am Telefon nicht beantwortet, sondern wirken nach
+- Am Telefon nennt man die genaue Zahl benötigter Sitzungen
+> Im ersten Termin werden sie dann gestellt.
+
+? Welcher Satz beschließt das Skript?
++ Arbeite mit dem, was jetzt gefühlt wird – dann musst du nicht zwingend mit dem arbeiten, was damals war
+- Arbeite immer zuerst mit dem, was damals war
+- Arbeite nur mit dem, was der Klient erzählt
+- Arbeite ausschließlich mit der Zukunft
+> Skript S. 58.
+
 ===FREITEXT===
 ?? Beschreibe die drei Phasen einer traumasensiblen Sitzung.
 * Ankommen: Begrüßung als Intervention, Orientierung, Priming

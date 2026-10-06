@@ -137,6 +137,55 @@ Loswerden-Wollen entspricht **Kampf**, Ausblenden entspricht **Flucht** – beid
 - Menschen heilen nur durch konsequente Konfrontation
 > M1.1·03 Abschluss: gesehen im Nervensystem, Körper, Verstand und emotional.
 
+===MEHRFACH===
+? Welche Aussagen beschreiben die drei Wortteile der NI zutreffend?
++ „Neuro“: Traumafolgen zeigen sich im Nervensystem und prägen das Befinden
++ „Systemisch“: Nichts existiert für sich allein; Trauma betrifft immer Systeme
++ „Integration“: Getrennte neuronale Netzwerke werden wieder verknüpft
+- „Systemisch“: Man geht nach einem festen Schema vor
+- „Integration“: Traumatische Erinnerungen werden dauerhaft gelöscht
+> Neuro = Nervensystem, systemisch = nichts existiert für sich allein, Integration = Verknüpfen getrennter Netzwerke (Gegenpol zur Dissoziation).
+
+? Welche der folgenden gehören zu den sieben Methoden, aus denen die NI schöpft?
++ Hypnosystemik
++ Ego-State-Therapie / Anteilearbeit
++ Bindungstheorie
++ Körperarbeit / Körperpsychotherapie
+- Klassische Psychoanalyse
+> Die sieben: Neurobiologie, Systemik, Ego-State/Anteilearbeit, Hypnosystemik, Psychotraumatologie, Bindungstheorie, Körperarbeit.
+
+? Was ist Integration im Sinne der NI der Gegenpol?
++ Dissoziation
++ Abspaltung
++ Verdrängung
+- Koregulation
+- Containment
+> Integration ist der Gegenpol zu Abspaltung, Verdrängung und Entfremdung. Koregulation und Containment fördern Integration.
+
+? Welche Aussagen zu „Loswerden-Wollen“, „Ausblenden“ und Kompensation treffen zu?
++ Loswerden-Wollen entspricht Kampf
++ Ausblenden entspricht Flucht
++ Bei reiner Kompensation wandern Symptome, die Lebensqualität bleibt gleich
+- Kompensationsstrategien integrieren das Trauma vollständig
+- Ausblenden weitet das Stresstoleranzfenster dauerhaft
+> Beides hält im Überlebensmuster fest; Kompensation verschiebt nur Energie.
+
+? Welche Aussagen treffen auf Coaches ohne Heilerlaubnis zu?
++ Sie dürfen Heilung nie versprechen
++ Sie dürfen mit inneren Anteilen ressourcenorientiert arbeiten
++ Sie dürfen Psychoedukation über Traumafolgen anbieten
+- Sie dürfen nicht mit dem Nervensystem ihrer Klienten arbeiten
+- Sie dürfen Heilung zusagen, wenn sie oft „nebenbei“ geschieht
+> Heilung geschieht oft nebenbei, darf aber ohne Heilerlaubnis nie versprochen werden.
+
+? Welche Aussagen zu den Methoden der NI stimmen?
++ Neurobiologie wirkt wie ein Filter für alle weiteren Ebenen
++ Ein rein „psychisches“ Trauma gibt es eigentlich nicht, der Körper ist immer beteiligt
+- Anteilearbeit folgt einem festen Protokoll mit vorgeschriebenen Schritten
+- Hypnosystemik ersetzt die Arbeit mit dem Körper
+- Neurobiologie dient in der NI vor allem der Diagnosestellung
+> Anteilearbeit ist strukturiert, aber nicht schematisch (Prinzipien als Kompass); Hypnosystemik geht mit Anteilearbeit einher.
+
 ===FREITEXT===
 ?? Erkläre die drei Bestandteile des Begriffs „Neurosystemische Integration“.
 * Neuro: Traumafolgen zeigen sich im Nervensystem; Muster und Anteile sind neuronale Netzwerke

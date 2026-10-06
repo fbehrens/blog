@@ -181,6 +181,55 @@ Sie macht deutlich, **dass wir mehr sind als das, womit wir gerade identifiziert
 - Zu Dissoziation und Rückzug
 > Skript S. 36.
 
+===MEHRFACH===
+? Welche Effekte hat Anteilearbeit laut Skript?
++ Sie zeigt, dass wir mehr sind als das, womit wir gerade identifiziert sind
++ Das beobachtende Gewahrsein wird aktiv – Distanzierung, die zugleich Verbindung bewirkt
++ Sie fördert Mentalisieren – unerklärliche Gefühle und Muster erklären können
+- Sie löscht belastende Anteile dauerhaft
+- Sie bewirkt eine Verschmelzung mit dem Anteil
+> Bewusstheit schafft eine Brücke zu Selbstregulation und Selbstwirksamkeit.
+
+? Welche Techniken bzw. Begriffe sind richtig beschrieben?
++ Externalisierung – Anteile außen betrachten, z. B. mit leerem Stuhl
++ Personalisierung – einem inneren Zustand eine Form geben, mit der man interagieren kann
++ Desidentifikation – aus einem Anteil zurück ins beobachtende Gewahrsein
+- Externalisierung – Anteile aus der Persönlichkeit entfernen
+- Personalisierung – einen Anteil zu einer realen Person machen
+> Desidentifikation schützt vor Überflutung.
+
+? Welche Regeln gelten für Anteilearbeit im traumasensiblen Coaching?
++ Das bewusste Alltags-Ich moderiert immer
++ Vertikale Kommunikation zwischen Alltags-Ich und Anteil steht im Vordergrund
++ Man versetzt sich nicht direkt in einen Anteil hinein, sondern spricht in der dritten Person
++ Erwachsene und ressourcenreiche Anteile werden gestärkt
+- Traumanahe Inhalte werden gezielt in der Tiefe bearbeitet
+> Traumanahes gehört in die Therapie.
+
+? Wozu nutzt man Anteilearbeit im Coaching?
++ Ressourcenstärkung
++ Stabilisierung
++ Achtsame Selbstreflexion
+- Diagnose dissoziativer Störungen
+- Bearbeitung von Täterintrojekten in der Tiefe
+> Skript S. 35.
+
+? Welche Aussagen zu den sieben Schritten stimmen?
++ Sie wurden von Kai Fritzsche und Woltemade Hartmann inspiriert
++ Am Anfang steht der Kontakt zu inneren Anteilen
++ Auf „Aufbau der Kommunikation“ folgt „Akzeptanz und Annahme“
++ Der siebte Schritt ist ein intaktes, harmonisches inneres Team
+- Der siebte Schritt ist die Verschmelzung aller Anteile zu einem
+> Das harmonische Team ist ein fortwährender Prozess, kein Pauschalziel.
+
+? Welche Aussagen zur horizontalen Kommunikation stimmen?
++ Anteile kommunizieren miteinander
++ Ein ressourcenreicher Anteil kann z. B. einen verletzten trösten
++ Sie wird stets moderiert
+- Das Alltags-Ich spricht direkt mit einem Anteil
+- Sie findet zwischen Coach und Klient statt
+> Gespräch Alltags-Ich ↔ Anteil = vertikal.
+
 ===FREITEXT===
 ?? Warum wirkt Anteilearbeit und welche Regeln gelten für traumasensibles Coaching mit Anteilen?
 * Wir sind mehr als das, womit wir identifiziert sind – beobachtendes Gewahrsein

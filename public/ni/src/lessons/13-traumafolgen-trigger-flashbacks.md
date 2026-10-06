@@ -184,6 +184,55 @@ Erinnerungsfragmente schieben sich **mit ungebremster Kraft** in die Wahrnehmung
 - Weil Überforderung die Erinnerung löscht
 > M4.1·03.
 
+===MEHRFACH===
+? Welche Anzeichen sprechen für Übererregung?
++ Rasende, sich aufdrängende Gedanken und Grübeln
++ Perfektionismus, Kontrollzwang und Funktionieren
++ Andere nicht ausreden lassen, suchende Augen
+- Schlaffer Muskeltonus und glasiger Blick
+- „Alles ist gut“ und „War doch nicht schlimm“
+> Die letzten beiden gehören zur Untererregung.
+
+? Welche Anzeichen sprechen für Untererregung?
++ Schlaffer Muskeltonus, oft mit Verhärtungen in der Tiefenmuskulatur
++ Derealisation – die Welt wirkt unecht
++ Emotionale Abstumpfung und Sinnverlust
++ Äußerungen wie „Alles ist gut“
+- Hyperventilation und Kribbeln
+> Untererregung wird leichter übersehen und ähnelt oft einer Depression.
+
+? Welche Aussagen zu Triggern stimmen?
++ Der Begriff stammt aus der Waffenlehre (Abzug)
++ Ein Trigger kann im Außen oder Innen liegen
++ Getriggert wird der unverarbeitete, dissoziierte Inhalt
+- Ein Trigger ist eine bewusste Erinnerung an ein schönes Erlebnis
+- Der Geruch von Motoröl wäre ein akustischer Trigger
+> Motoröl = olfaktorischer Trigger.
+
+? Welche Aussagen zu Flashbacks treffen zu?
++ Sie fühlen sich wie „jetzt“ an, weil die Fragmente nicht zeitlich eingeordnet wurden
++ Körperflashbacks zeigen sich z. B. als Schmerz ohne Befund
++ Emotionale Flashbacks können stundenlang anhalten und werden schwer erkannt
++ Starre und Katatonie können Flashbacks starker Untererregung sein
+- Flashbacks sind besonders gut im Hippocampus gespeicherte Erinnerungen
+> Der Hippocampus konnte die Fragmente nicht mit Zeitstempel ablegen.
+
+? Was hilft laut Kurs, Traumafolgen zu lindern?
++ Containment und Selbstregulation
++ Achtsamkeit behutsam erhöhen, um Dissoziation zu lösen
+- Das Trauma im Detail erinnern und erzählen
+- Den Klienten mit dem Trauma konfrontieren
+- Möglichst schnell ablenken
+> Mit dem arbeiten, was jetzt gefühlt wird.
+
+? Welche Aussagen stimmen?
++ Leitfrage beim Erkennen von Traumafolgen: reguliert oder dysreguliert?
++ In jeder Traumafolge steckt reine Lebenskraft
++ Auch Überforderung kann Flashbacks auslösen, weil Kompensation Kraft kostet
+- Intensive Erregung ist immer ein Zeichen von Dysregulation
+- Übererregung wird leichter übersehen als Untererregung
+> Auch intensive Erregung kann reguliert sein.
+
 ===FREITEXT===
 ?? Nenne je drei Anzeichen von Übererregung und Untererregung auf verschiedenen Ebenen.
 * Übererregung körperlich: Unruhe, Herzrasen, Schlaflosigkeit

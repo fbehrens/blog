@@ -173,6 +173,55 @@ Akut = Suiziddrohungen, ausgesprochene Absichten, Erregungszustände. **Akutinte
 - Nur Ärzte dürfen über Suizid sprechen
 > Lieber mutig und unbeholfen nachfragen.
 
+===MEHRFACH===
+? Welche Begriffe sind richtig erklärt?
++ Suizidalität – Summe aller Kräfte, die in Richtung Selbstvernichtung gehen
++ Parasuizidale Handlung – Wissen, dass sie nicht zum Tod führt, mit Absicht etwas zu verändern
++ Suizidideen – gedankliche Auseinandersetzung von Todeswünschen bis zum Entschluss
+- Suizidalität – ausschließlich ein vollendeter Suizidversuch
+- Parasuizidale Handlung – bewusste Tat mit dem Ziel der Selbsttötung
+> Prozess: Erwägung – Ambivalenz – Entschluss.
+
+? Welche Zahlen nennt das Skript?
++ Ca. 12.000 Suizide pro Jahr in Deutschland – etwa alle 45 Minuten einer
++ Männer suizidieren sich 3–4× häufiger, Frauen versuchen es ca. 3× häufiger
++ Bei ca. 90 % der Suizide liegt eine psychische Erkrankung vor
++ Bei 12- bis 24-Jährigen ist Suizid die zweithäufigste Todesursache
+- Frauen suizidieren sich häufiger als Männer
+> Weltweit ca. 1 Million.
+
+? Welche Bereiche gehören zum präsuizidalen Syndrom nach Ringel?
++ Einengung
++ Aggressionshemmung / Wendung gegen sich selbst
++ Rückgang der Lebenslust mit Todesfantasien
+- Übererregung mit Kampfimpulsen
+- Euphorie und Größenideen
+> M8.1·07.
+
+? Was ist bei vermuteter Suizidalität angemessen?
++ Engmaschiger Kontakt
++ Umfeld mobilisieren
++ Ggf. Antisuizidvertrag – er nutzt das Bindungssystem
++ Suizidalität immer dokumentieren
+- Kontakt reduzieren, um keinen Druck zu machen
+> Beste Prävention: stabile Bindung und Vertrauensverhältnis.
+
+? Was gehört zur Akutintervention bei akuter Suizidalität?
++ Vier-Augen-Gespräch
++ Nicht allein lassen
++ Offen ansprechen und dokumentieren
++ Klinik einbeziehen
+- Termin in zwei Wochen vereinbaren
+> Akute Suizidalität = Lebensgefahr.
+
+? Welche Aussagen stimmen?
++ „Wer vom Suizid spricht, vollbringt ihn nicht“ ist mit Sicherheit falsch
++ Ruhe im Entschlussstadium ist keine Entwarnung
++ Zu schnell nach Positivem suchen und bagatellisieren ist ein typischer Fehler
++ Über das Sterben-Wollen zu reden, kann Leben retten
+- Direktes Fragen nach Suizidgedanken bringt Menschen erst auf die Idee
+> Lieber mutig und unbeholfen nachfragen.
+
 ===FREITEXT===
 ?? Definiere Suizidalität und beschreibe Stadien und präsuizidales Syndrom.
 * Summe aller Kräfte in Richtung Selbstvernichtung

@@ -152,3 +152,9 @@ ol.lessons .meta { display: block; font: 0.75rem/1.4 -apple-system, sans-serif; 
 .solution ul.kp li { margin: 0.25rem 0; }
 .solution .model { margin: 0.5rem 0; }
 @media print { .ft textarea { height: 6rem; } .solution { display: none; } }
+
+/* Mehrfachauswahl */
+.q-text .multi { font-weight: 400; font-size: 0.85rem; color: var(--muted); font-style: italic; }
+.options button.sel { border-color: var(--accent); background: var(--note); box-shadow: inset 3px 0 0 var(--accent); }
+.options button.miss { border: 1px dashed var(--ok); background: #fff; box-shadow: inset 3px 0 0 var(--ok); }
+.q .check { margin-top: 0.5rem; }

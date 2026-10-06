@@ -50,23 +50,27 @@ def rec_link(entry: str) -> str:
     return f'<a href="{url}">{html.escape(label)}{stamp}</a>'
 
 
-def parse_quiz(text: str, where: str):
+def parse_quiz(text: str, where: str, multi: bool = False):
     qs, cur = [], None
     for raw in text.splitlines():
         line = raw.rstrip()
         if line.startswith("? "):
-            cur = {"q": inline(line[2:]), "o": [], "a": None, "e": ""}
+            cur = {"q": inline(line[2:]), "o": [], "a": [] if multi else None, "e": ""}
             qs.append(cur)
         elif line.startswith("+ "):
-            cur["a"] = len(cur["o"])
+            if multi:
+                cur["a"].append(len(cur["o"]))
+            else:
+                assert cur["a"] is None, f"{where}: Frage „{cur['q']}“ hat mehrere richtige Antworten"
+                cur["a"] = len(cur["o"])
             cur["o"].append(inline(line[2:]))
         elif line.startswith("- "):
             cur["o"].append(inline(line[2:]))
         elif line.startswith("> "):
             cur["e"] += (" " if cur["e"] else "") + inline(line[2:])
     for i, q in enumerate(qs, 1):
-        assert q["a"] is not None, f"{where}: Frage {i} ohne richtige Antwort"
-        assert len(q["o"]) >= 3, f"{where}: Frage {i} hat < 3 Optionen"
+        assert q["a"] not in (None, []), f"{where}: Frage {i} ohne richtige Antwort"
+        assert len(q["o"]) >= (4 if multi else 3), f"{where}: Frage {i} hat zu wenige Optionen"
     return qs
 
 
@@ -96,7 +100,9 @@ def parse_lesson(path: pathlib.Path):
             meta[k.strip()] = v.strip()
     summary, quiz = rest.split("\n===QUIZ===\n")
     quiz, _, ft = quiz.partition("\n===FREITEXT===\n")
+    quiz, _, mr = quiz.partition("\n===MEHRFACH===\n")
     meta["freitext"] = parse_freitext(ft, path.name)
+    meta["mehrfach"] = parse_quiz(mr, path.name, multi=True)
     meta["summary"] = summary
     meta["quiz"] = parse_quiz(quiz, path.name)
     meta["file"] = f"{meta['nr']}-{meta['slug']}.html"
@@ -136,6 +142,13 @@ def render_lesson(m, prev, nxt):
     pager += f'<a href="{prev["file"]}">← {prev["nr"]} {html.escape(prev["title"])}</a>' if prev else "<span></span>"
     pager += f'<a href="{nxt["file"]}">{nxt["nr"]} {html.escape(nxt["title"])} →</a>' if nxt else '<a href="pruefung.html">Prüfungssimulation →</a>'
     pager += "</nav>"
+    mr_html = ""
+    if m["mehrfach"]:
+        mr_html = f"""<section class="quiz">
+<h2>Mehrfachauswahl <span class="count">({len(m['mehrfach'])})</span></h2>
+<p class="hint">Hier können eine, mehrere oder alle Antworten richtig sein. Wähle alle zutreffenden aus und klicke dann „Prüfen“ – richtig ist die Frage nur, wenn die Auswahl genau stimmt.</p>
+<div id="mquiz"></div>
+</section>"""
     ft_html = ""
     if m["freitext"]:
         ft_html = f"""<section class="freitext-section">
@@ -164,13 +177,15 @@ def render_lesson(m, prev, nxt):
 <button type="button" class="toggle-summary">Zusammenfassung ausblenden</button></p>
 <div id="quiz"></div>
 </section>
+{mr_html}
 {ft_html}
 {ASK}
 {pager}"""
     data = json.dumps(m["quiz"], ensure_ascii=False)
     lesson = json.dumps({"id": m["nr"], "title": m["title"]}, ensure_ascii=False)
     ftdata = json.dumps(m["freitext"], ensure_ascii=False)
-    scripts = f'<script>window.LESSON={lesson};window.QUIZ={data};window.FREITEXT={ftdata};</script>\n<script src="../assets/quiz.js"></script>'
+    mrdata = json.dumps(m["mehrfach"], ensure_ascii=False)
+    scripts = f'<script>window.LESSON={lesson};window.QUIZ={data};window.MEHRFACH={mrdata};window.FREITEXT={ftdata};</script>\n<script src="../assets/quiz.js"></script>'
     return page(f"{m['nr']} · {m['title']}", body, 1, scripts)
 
 
@@ -188,7 +203,7 @@ def render_exam():
 <label>Aus Teil
 <select id="exam-teil"><option value="">alle Teile</option>{"".join(f'<option value="{k}">Teil {k}: {v}</option>' for k, v in TEILE.items())}</select></label>
 <label>Fragetyp
-<select id="exam-typ"><option value="mc">Multiple Choice</option><option value="ft">Freitext</option></select></label>
+<select id="exam-typ"><option value="mc">Einfachauswahl</option><option value="mr">Mehrfachauswahl</option><option value="mix">Einfach + Mehrfach gemischt</option><option value="ft">Freitext</option></select></label>
 <button type="button" id="exam-start">Neue Simulation starten</button>
 </div>
 <div id="quiz"></div>
@@ -203,12 +218,12 @@ def render_index(lessons):
     for k, name in TEILE.items():
         items = "".join(
             f'<li><a href="lessons/{m["file"]}"><span class="nr">{m["nr"]}</span> {html.escape(m["title"])}</a>'
-            f' <span class="meta">{len(m["quiz"])} Fragen{(" + " + str(len(m["freitext"])) + " Freitext") if m["freitext"] else ""} · {html.escape(m["skript"])}</span>'
-            f' <span class="progress" data-progress="{m["nr"]}"></span></li>'
+            f' <span class="meta">{len(m["quiz"])} Fragen{(" + " + str(len(m["mehrfach"])) + " Mehrfachauswahl") if m["mehrfach"] else ""}{(" + " + str(len(m["freitext"])) + " Freitext") if m["freitext"] else ""} · {html.escape(m["skript"])}</span>'
+            f' <span class="progress" data-progress="{m["nr"]}"></span><span class="progress" data-progress="{m["nr"]}m" data-label="Mehrfach: "></span></li>'
             for m in lessons if m["teil"] == k
         )
         parts.append(f"<h2>Teil {k}: {name}</h2><ol class='lessons'>{items}</ol>")
-    total = sum(len(m["quiz"]) for m in lessons)
+    total = sum(len(m["quiz"]) + len(m["mehrfach"]) for m in lessons)
     body = f"""<header>
 <p class="kicker">Prüfungsvorbereitung · Weiterbildung 25/26</p>
 <h1>Neurosystemische Integration nach Verena König</h1>
@@ -245,7 +260,7 @@ def main():
 
     bank = []
     for m in lessons:
-        for q in m["quiz"]:
+        for q in m["quiz"] + m["mehrfach"]:
             bank.append({**q, "l": m["nr"], "t": m["title"], "f": m["file"], "p": m["teil"]})
     ftbank = [{**f, "l": m["nr"], "t": m["title"], "f": m["file"], "p": m["teil"]} for m in lessons for f in m["freitext"]]
     (ROOT / "assets" / "fragenbank.js").write_text(
@@ -258,7 +273,7 @@ def main():
         (ref / f"{p.stem}.html").write_text(render_reference(p))
 
     (ROOT / "index.html").write_text(render_index(lessons))
-    print(f"{len(lessons)} Lektionen, {len(bank)} MC-Fragen, {len(ftbank)} Freitextfragen gebaut.")
+    print(f"{len(lessons)} Lektionen, {sum(1 for q in bank if not isinstance(q["a"], list))} MC-Fragen, {sum(1 for q in bank if isinstance(q["a"], list))} Mehrfachauswahl, {len(ftbank)} Freitextfragen gebaut.")
 
 
 if __name__ == "__main__":

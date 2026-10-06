@@ -153,6 +153,55 @@ Abgrenzungsfähigkeit ist die Kompetenz, **Konflikte** innen und außen zu meist
 - „Grenzen braucht man nur bei Fremden.“
 > M7.2·02.
 
+===MEHRFACH===
+? Welche Aussagen zur Entwicklung von Grenzen stimmen?
++ Abgrenzungsthemen spiegeln frühe Bindungsmuster und Überlebensstrategien
++ Das Ich-Bewusstsein reift etwa ab dem 3. Lebensjahr
++ Somatische Abgrenzung (z. B. Kopf wegdrehen) gibt es schon vor dem Ich-Gefühl
++ Werden Grenzen zugunsten sozialer Normen übergangen, wird ihr Wahren mit Schuld verknüpft
+- Ein klares Nein braucht keine Basis auf Körperebene
+> Ohne kohärente Körperempfindung entsteht ein „Jein“.
+
+? Welche Grenzen werden unter traumatischem Stress überschritten?
++ Die Grenze der körperlichen Kraft
++ Die Grenze der Selbstbestimmung
++ Die Grenze der Unversehrtheit
+- Nur die Grenze der Geduld
+- Nur die Landesgrenze bei Flucht
+> Trauma ist immer eine Grenzverletzungserfahrung.
+
+? Welche Zuordnungen von Reflex und Muster stimmen?
++ Ja-Reflex – Selbstwert an Aufopferung gebunden, Fawn Response
++ Nein-Reflex – Rettung durch Sich-Entziehen
+- Nein-Reflex – Rettung durch Anpassung
+- Ja-Reflex – rigide Kontrolle in Beziehungen
+- Ja-Reflex – klare, flexible Grenzen
+> Beim Nein-Reflex können Grenzen sehr rigide sein.
+
+? Wie geht man im Coaching mit diffusen Grenzen und Überanpassung um?
++ Mehr fragen und Feedback holen
++ Aktive Zustimmung einholen
++ Klar und defensiv von vorne, frontal führen
+- Sanft von der Seite, nicht frontal führen
+- Konfrontativ auf die Grenze hinweisen
+> Frontal = Einladung zum Ich und Du.
+
+? Wie geht man mit rigiden Grenzen und hohem Kontrollbedürfnis um?
++ Klarer Rahmen und kleinschrittige Interventionen
++ Selbstbestimmung betonen: „Du entscheidest, ob die Augen offen oder zu sind.“
++ Sanft einladend von der Seite führen
+- Mehr Druck, um die Kontrolle zu brechen
+- Klar und frontal von vorne führen
+> Keinen Machtkampf eingehen; ein „Wir“ statt Isolation.
+
+? Welche Aussagen zu Nervensystem und Abgrenzung stimmen?
++ Klare, verbundene Abgrenzung geht mit ventral-vagalem Zustand einher
++ Bei überaktiviertem Bindungssystem ist Abgrenzung diffus und schwach
++ „Du darfst Grenzen haben“ ist eine psychoedukative Botschaft
+- Bei überaktiviertem Bindungssystem ist Abgrenzung rigide und hart
+- Klare Abgrenzung gelingt am besten im Freeze
+> M7.2·02.
+
 ===FREITEXT===
 ?? Warum ist Trauma immer eine Grenzverletzung und welche Abgrenzungsmuster können daraus entstehen?
 * Unter traumatischem Stress werden Grenzen überschritten (Kraft, Selbstbestimmung, Unversehrtheit)

@@ -120,6 +120,55 @@ aufnahmen: M4.2·03 Akuttrauma begleiten | 12796 | 12:12 ;; M8.1·07 Suizidalit�
 - verzichtest du grundsätzlich auf jede Absprache
 > Berührung immer ankündigen und um Erlaubnis bitten.
 
+===MEHRFACH===
+? Eine Klientin riecht dein Parfum, wird panisch: „Er ist hier!“ Was ist angemessen?
++ Klar ins Hier und Jetzt orientieren: Augen offen, Raum benennen, Füße spüren
++ Bei kaum Reaktion 5-4-3-2-1 direktiver anleiten
++ Danach normalisieren und erklären, was ein Trigger ist
+- Nachfragen, wer „er“ ist und was damals passiert ist
+- Eine Imagination mit geschlossenen Augen anleiten
+> Olfaktorischer Trigger → Flashback; Orientierung ist die Basis.
+
+? Eine Bekannte ist drei Stunden nach dem Unfall ihres Partners verwirrt und zittert. Was ist angemessen?
++ Ruhe, Sicherheit und Orientierung geben
++ Koregulierend präsent sein
+- Den Unfallhergang Schritt für Schritt rekonstruieren
+- Ihr erklären, dass sie wahrscheinlich eine PTBS entwickeln wird
+- Ihr sofort eine Psychotherapie empfehlen
+> Akuter Schock: nicht Einsicht oder Aufarbeitung.
+
+? Was rätst du der Bekannten in den ersten Tagen nach dem Unfall?
++ Routinen beibehalten
++ Essen, schlafen, bewegen
++ Dosiert mit Vertrauten sprechen
+- Sich zusammenreißen und normal weiterfunktionieren
+- Mit Alkohol zur Ruhe kommen
+> Schlafprobleme, Schreckhaftigkeit, Weinen sind als akute Belastungsreaktion normal.
+
+? Ein Klient sagt: „Ich habe schon überlegt, wie ich es machen würde“ und ist sehr ruhig. Was trifft zu?
++ Die Ruhe ist keine Entwarnung – möglicherweise Entschlussstadium
++ Offen und direkt nach Suizidgedanken fragen ist richtig
++ Suizidalität wird dokumentiert
+- Die Ruhe zeigt eine gelungene Selbstregulation
+- Das Thema auf etwas Positives lenken
+> Suizidideen immer ernst nehmen.
+
+? Eine Klientin kündigt konkret an, sich heute das Leben zu nehmen. Was ist richtig?
++ Sie nicht allein lassen
++ Offen ansprechen
++ Hilfe bzw. Klinik organisieren
++ Dokumentieren
+- Einen Antisuizidvertrag schicken und sie gehen lassen
+> Akute Suizidalität = Lebensgefahr.
+
+? Welche Interventionen sind in den Akutsituationen traumasensibel?
++ Bei Wut: dosiert zischen oder fauchen, mit Pausen und Orientierung
++ Bei Dissoziation in der Imagination: beenden, Augen öffnen, orientieren, aktivieren
++ Bei Panik mit Fluchtimpuls: Fersen in den Boden drücken, Wand wegschieben, langsam ausatmen
++ Vor einer Berührung: ankündigen und um Erlaubnis fragen
+- Ein Gruppendebriefing aller Zeugen am Tag nach dem Unfall
+> Frühe aktive Konfrontation kann retraumatisieren.
+
 ===FREITEXT===
 ?? Fall: Mitten in der Sitzung gerät eine Klientin durch einen Geruch in einen Flashback und reagiert kaum noch. Beschreibe Schritt für Schritt, was du tust.
 * Orientierung ist Basis: klar, freundlich, direktiv; Augen offen

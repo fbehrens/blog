@@ -193,6 +193,55 @@ Präsent sein im Hier und Jetzt · eigene **Schmerzpunkte** kennen (Resonanz erk
 - Es ersetzt die Selbstregulation
 > Neue State-dependent Memories gewinnen neben den alten an Kraft.
 
+===MEHRFACH===
+? Welche Aussagen zu intensiven Gefühlen im Prozess stimmen?
++ Gehaltene Gefühle werden freigesetzt, wenn Kompensation nachlässt
++ Nicht jedes intensive Erleben ist dysreguliert
++ Überflutung erkennt man besonders am Kontaktabriss – „es gibt kein Wir mehr“
+- Intensive Gefühle zeigen, dass die Begleitung etwas falsch macht
+- Intensität bedeutet immer, dass jemand außerhalb des Fensters ist
+> Das ist „Integration in Aktion“.
+
+? Welche Aussagen zum Trauma-U stimmen?
++ Das Wohlbefinden sinkt zwischendurch in eine Talsohle, bevor es höher steigt
++ Häufig wächst Bewusstsein, Kompensation lässt nach, Destabilisierung kommt vor Containment
++ Begleitende sollen es erklären und normalisieren
+- Begleitende sollen es verschweigen, um nicht zu beunruhigen
+- Es zeigt, dass die Begleitung sofort beendet werden sollte
+> Sonst droht ein Abbruch der Zusammenarbeit.
+
+? Was gilt beim Weinen und bei hoher Erregung?
++ Tränen dürfen fließen, aber man darf regulierend führen
++ Starkes Weinen kann zu Hyperventilation führen – Ausatmen verlängern, Augen offen
++ Ab einem gewissen Erregungsniveau direkt mit dem Körper statt mit inneren Bildern arbeiten
++ Wichtigste Regel: Klienten im Hier und Jetzt orientieren
+- Weinen muss sofort gestoppt werden
+> Skript S. 52.
+
+? Was hilft bei Erstarrung und Dissoziation durch zu hohe Intensität?
++ Aufstehen
++ Umhergehen
++ Abklopfen
+- Augen schließen und tiefer ins Bild gehen
+- Stillhalten und abwarten
+> Leicht aktivierende Interventionen; alles, was den ventralen Vagus anspricht.
+
+? Welche Distanzierungstechniken nennt das Skript?
++ Über „das Kind, das du einmal warst“ in der dritten Person sprechen
++ Externalisierung mit Gegenständen
++ Tresorübung
++ Bildschirmtechnik
+- Geborgener Ort
+> Geborgener Ort, innere Helfer und Herzdiamant sind stärkende, keine distanzierenden Imaginationen.
+
+? Welche Aussagen zu NELA, Entkoppeln und State-dependent Memory stimmen?
++ NELA: Nimm es wahr – Erlaube es – Lass es durchlaufen – Atme weiter
++ Entkoppeln heißt, bei der Empfindung zu bleiben, statt sie automatisch zu deuten
++ State-dependent Memory: Der Zustand bestimmt, woran wir uns erinnern
++ Eigene Müdigkeit der Begleitperson ist ein Warnsignal für Untererregung des Klienten
+- Sichere Berührungsorte sind Gesicht, Hals und Brust
+> Sichere Orte: Fuß auf Fuß, über dem Handgelenk, unter dem Ellenbogen.
+
 ===FREITEXT===
 ?? Was ist das Trauma-U und wie unterscheidest du intensives Fühlen von Überflutung?
 * Bewusstsein wächst, Kompensation lässt nach, Destabilisierung vor Containment

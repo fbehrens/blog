@@ -127,6 +127,55 @@ aufnahmen: M5.1·04 Grundsätze Anteilearbeit | 12823 | 59:19 ;; M6.2·04 Umgang
 - Den Klienten bitten, sich zusammenzureißen
 > Beobachtendes Gewahrsein stärken schützt vor Überflutung.
 
+===MEHRFACH===
+? „Ein Teil von mir will die Stelle, ein anderer hat panische Angst.“ Was ist angemessen?
++ Es als normale Ambivalenz zwischen Anteilen verstehen
++ Beide Anteile wohlwollend kennenlernen und ihre Bedürfnisse würdigen
++ Das Alltags-Ich moderiert
+- Den ängstlichen Anteil überstimmen
+- Direkt aus dem ängstlichen Anteil sprechen lassen, bis die Angst weg ist
+> Vertikale Kommunikation, keine Überflutung.
+
+? Wie begegnest du einem inneren Richter („Du Versager“) im Coaching?
++ Seine Schutzabsicht anerkennen
++ Ressourcenreiche Anteile stärken
++ Bei starker Intensität weiterverweisen
+- Ihn bekämpfen und zum Schweigen bringen
+- Mit ihm direkt über das ursprüngliche Trauma arbeiten
+> „Entdämonisieren“.
+
+? Welche Zuordnungen von Aussage und Anteil stimmen?
++ „Sie hat es nicht so gemeint, das sind doch meine Eltern.“ – täterloyal
++ „Heulsusen verachte ich.“ – täterimitierend
++ „Du Versager, du kriegst nichts hin.“ – verletzender Anteil (innerer Richter)
+- „Sie hat es nicht so gemeint.“ – täterimitierend
+- „Du Versager“ – ressourcenreicher, motivierender Anteil
+> Loyale Anteile entschuldigen den Täter, imitierende verhalten sich wie er.
+
+? Welche Zuordnungen von Fallbeschreibung und Dynamik stimmen?
++ „Du hast eben so abwertend geguckt“ (du schautest aus dem Fenster) – Projektion
++ „Du bist wie meine Mutter“ und du beginnst zu überziehen – Übertragung und Gegenübertragung
++ Unerklärliche Wut auf den Partner wie die still wütende Mutter – übernommenes Gefühl und Projektion
+- „Du bist wie meine Mutter“ – Introjektion und Identifikation
+- Abwertender Blick – Gegenübertragung, du hast sie wirklich abgewertet
+> Ein aktiviertes Nervensystem fördert Projektionen.
+
+? Wie reagierst du auf Projektion und Übertragung?
++ Nicht verteidigen, neugierig erkunden, was in ihr aufgestiegen ist
++ Die Dynamik auf der Metaebene bzw. in Supervision reflektieren
++ Übertragung behutsam ansprechen
+- Ihr erklären, dass sie sich irrt, und weitermachen
+- Die Rolle der Mutter bewusst übernehmen
+> Bewusstmachen ermöglicht korrigierende Erfahrungen.
+
+? Welche Vorgehensweisen sind traumasensibel?
++ „Braver“ Kindanteil: nachnähren mit Schutz, Wohlwollen, Gesehenwerden
++ „Ich bin nicht gut genug“: bewusst machen, Körper erforschen, mit ventralen Momenten pendeln
++ In Kindanteil „gerutscht“: Desidentifikation fördern, „ein Teil von dir …“
++ Schwieriges Introjekt: Regel „keine Gewalt – nach innen wie nach außen“ erklären
+- „Ich bin nicht gut genug“: zehnmal täglich positiv umformulieren lassen
+> Glaubenssätze sind körperlich verankert; kognitive Ansätze allein reichen nicht.
+
 ===FREITEXT===
 ?? Fall: Ein Klient wertet sich ständig mit einer harten inneren Stimme ab („Du Versager“). Wie arbeitest du damit im Coaching?
 * Verletzender Anteil (innerer Richter), aus Überlebensstrategie

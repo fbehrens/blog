@@ -121,6 +121,55 @@ Psychoedukation ist ein **Top-down-Zugang** (über den Verstand) und verändert 
 - Gar nichts – Wissen bleibt beim Coach
 > M1.1·06: Alles Gelernte soll an Klientinnen und Klienten weitergegeben werden.
 
+===MEHRFACH===
+? Welche sind die vier Kernziele der Psychoedukation?
++ Entlastung & Entmystifizierung
++ Compliance
++ Frühwarnzeichen erkennen
++ Selbstregulation stärken
+- Diagnosestellung
+> Skript Kap. 5.
+
+? Was gehört zur traumasensiblen Begleitung im Coaching?
++ Psychoedukation über das Nervensystem
++ Ressourcenarbeit und Koregulation
++ Anteilearbeit mit ressourcenreichen Anteilen
+- Konfrontative Bearbeitung von Traumainhalten
+- Medikation zur Symptomreduktion
+> Traumanahe, konfrontative Arbeit gehört in die Therapie.
+
+? Was unterscheidet die NI laut Skript von reinen Gesprächstherapien?
++ Körper und autonomes Nervensystem stehen konsequent im Mittelpunkt
++ Es geht auch um die Körperreaktionen im Hier und Jetzt, nicht nur ums Verstehen
+- Die NI verzichtet vollständig auf Gespräche
+- Die NI arbeitet ausschließlich mit Diagnosen nach ICD
+- Die NI konzentriert sich nur auf die Kindheit
+> Veränderung wird nicht nur über den Verstand erzwungen.
+
+? Welche Aussagen zur Psychoedukation treffen zu?
++ Sie ist die verständliche Vermittlung wissenschaftlich fundierten Wissens an Betroffene
++ Sie ist ein Top-down-Zugang
++ Bereits sie kann neuronale Netzwerke verändern
+- Sie ist ein Bottom-up-Zugang über den Körper
+- Sie bedeutet, Klienten zu gesundem Verhalten zu erziehen
+> Über den Verstand zum Unwillkürlichen.
+
+? Was bewirkt Psychoedukation laut Skript?
++ Reaktionen werden als biologisch verursacht statt als Schwäche verstanden
++ Wer versteht, wie Coaching wirkt, arbeitet aktiver mit
++ Wissen um Trigger ermöglicht gezielte Beruhigungsstrategien
+- Trigger werden dadurch vollständig vermieden
+- Klienten folgen Anweisungen ohne Frage
+> Entlastung, Compliance im Sinne aktiver Mitwirkung, Selbstregulation.
+
+? Wie fühlen sich Klient:innen laut Skript im NI-Ansatz?
++ Wertschätzend begegnet
++ Ermächtigt
++ Sicher
+- Diagnostiziert
+- Konfrontiert
+> Skript Kap. 4: wertschätzend begegnet, ermächtigt, sicher.
+
 ===FREITEXT===
 ?? Worin unterscheidet sich die NI von klassischen Therapie- und Coachingansätzen?
 * Körper und autonomes Nervensystem im Mittelpunkt

@@ -120,6 +120,55 @@ Warum der Körper? Trauma hat **immer eine körperliche Komponente**; besonders 
 - Die Genetik hinter der Sucht
 > „Die Flucht hinter der Sucht“, „Verletzlichkeit hinter Härte“, „Schmerz hinter Unfreundlichkeit“.
 
+===MEHRFACH===
+? Welche Elemente gehören zur Säule Traumawissen?
++ Prinzip des guten Grundes
++ Psychoedukation
++ Ressourcenorientierung
++ Zuversicht
+- Koregulation
+> Koregulation gehört zur Säule Körper.
+
+? Welche Punkte umfasst die Säule Körper?
++ Sprache des Nervensystems
++ Koregulation
++ Selbstregulation
++ Selbstermächtigung
+- Interozeption als eigener Säulenpunkt
+> M1.1·07: Sprache des NS, Koregulation, Selbstregulation, Selbstermächtigung.
+
+? Welche Aussagen zum Prinzip des guten Grundes treffen zu?
++ Es stammt aus der Traumapädagogik
++ Man versteht Verhalten, ohne zu bewerten oder zu pathologisieren
++ Man arbeitet am guten Grund, nicht nur am Verhalten
+- Es stammt aus der Polyvagaltheorie
+- Der Grund liegt immer in der aktuellen Beziehung
+> Keine Verhaltensweise entsteht ohne Grund.
+
+? Welche Aussagen zu Ko- und Selbstregulation stimmen?
++ Bei Koregulation hilft ein reguliertes Nervensystem einem dysregulierten, sich selbst zu regulieren
++ Selbstregulation entwickelt sich aus erlebter Koregulation
++ Mangelnde Selbstregulation ist das Symptom, unter dem Menschen mit Traumafolgen leiden
+- Koregulation heißt, dass zwei dysregulierte Menschen sich gegenseitig beruhigen
+- Gelingende Selbstregulation bedeutet dauerhaftes Glück ohne schwierige Gefühle
+> Folge gelingender Selbstregulation ist Selbstermächtigung, nicht ständiges Glück.
+
+? Was erkennt traumasensible Psychoedukation hinter auffälligem Verhalten?
++ Die Flucht hinter der Sucht
++ Die Verletzlichkeit hinter der Härte
++ Den Schmerz hinter der Unfreundlichkeit
+- Die Faulheit hinter der Sucht
+- Die Bosheit hinter der Unfreundlichkeit
+> Symptome sind gesunde Reaktionen auf unnormale Ereignisse.
+
+? Welche Aussagen zu Fallbeispielen und Zuversicht treffen zu?
++ Bei Hannah war das Geräusch des Schlüssels im Schloss der Trigger
++ Symptome verschwinden oft unbemerkt – daher regelmäßig nachfragen
++ Begleitende sind Stellvertreter einer besseren Welt
+- Zuversicht heißt, das Verschwinden aller Symptome zu versprechen
+- Fortschritte zeigen sich immer sofort und deutlich
+> Korrigierende Erfahrungen stiften Hoffnung; Heilung verläuft in Prozessen.
+
 ===FREITEXT===
 ?? Erkläre das „Prinzip des guten Grundes“ und warum es in der traumasensiblen Arbeit wichtig ist.
 * Herkunft Traumapädagogik

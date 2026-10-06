@@ -184,6 +184,55 @@ Mit jemandem identifiziert sein = eigenes Empfinden zu Teilen **über diese Pers
 - Zur Auflösung aller Bindungen
 > Suche nach „sicheren“, bekannten Beziehungskontexten.
 
+===MEHRFACH===
+? Ordne zu: Welche Definitionen stimmen?
++ Introjektion – ungefiltertes Aufsaugen fremder Botschaften und Verankerung im Ich
++ Identifikation mit dem Aggressor – aktive, unbewusste Gleichsetzung mit dem Täter
++ Projektion – Abschieben unerträglicher eigener Gefühle auf andere
+- Projektion – Übertragung ganzer Beziehungsdynamiken
+- Introjektion – bewusstes Nachahmen eines Vorbilds
+> Übertragung betrifft ganze Beziehungsdynamiken.
+
+? Welche Aussagen zu Introjekten stimmen?
++ Ein Introjekt ist eine innere Repräsentanz einer wichtigen Person
++ Introjektion ist ein natürlicher Lernprozess; Introjekte können ressourcenreich sein
++ Frühe Introjektion wirkt stark, weil die Ich-Grenzen vor ca. 18 Monaten kaum spürbar sind
++ Introjekte haben das Potenzial, fürsorgliche, schützende Anteile zu werden
+- Introjektion ist grundsätzlich pathologisch
+> Toxisch wird sie, wenn Grundbedürfnisse nicht gestillt werden.
+
+? Welche Aussagen zu Täterintrojekten stimmen?
++ Sie entstehen aus dem Dilemma „Ich brauche dich“ und „Ich habe Angst vor dir“
++ Täterloyale Anteile beschwichtigen und decken den Täter („So schlimm war es nicht“)
++ Täterimitierende Anteile verhalten sich wie der Täter, meist nach innen („Heulsusen verachte ich“)
+- Täterloyale Anteile verhalten sich wie der Täter
+- Täterintrojekte entstehen, wenn das Kind erfolgreich fliehen oder kämpfen kann
+> Das Kind kann weder fliehen noch kämpfen und übernimmt Botschaften und Energie des Aggressors.
+
+? Wie geht man mit schwierigen Introjekten um?
++ Willkommen heißen
++ Die Regel erklären: keine Gewalt, weder nach innen noch nach außen
++ Psychoedukation: warum das Verletzende „eigentlich“ rettend war
++ Leid anerkennen
+- Sie zum Verlassen der Sitzung auffordern
+> Leitsterne aus Skript S. 50.
+
+? Welche Aussagen zu Projektion und übernommenen Gefühlen stimmen?
++ „Was nicht reflektiert wird, wird projiziert.“
++ Ein aktiviertes Nervensystem fördert Projektionen
++ Übernommene Gefühle erkennt man daran, dass man sie nicht loswird
+- Ein ventral-vagaler Zustand fördert Projektionen
+- Regelmäßige Selbstreflexion verstärkt Projektionen
+> Beispiel: Klientin deutet einen Blick als abwertend.
+
+? Welche Aussagen zu Übertragung und Gegenübertragung stimmen?
++ Bei Übertragung werden ganze Beziehungsdynamiken übertragen
++ Gegenübertragung ist die Reaktion des Gegenübers, die der Übertragung entspricht
++ Übertragung kann zu Reinszenierungen vertrauter Beziehungsmuster führen
+- Übertragung ist bewusst, Projektion unbewusst
+- Gegenübertragung ist die bewusste Abwehr einer Übertragung
+> Beispiel: Die Therapeutin beginnt zu überziehen („Sie hat immer nur eine Stunde Zeit“).
+
 ===FREITEXT===
 ?? Definiere Introjektion, Identifikation und Projektion und grenze sie voneinander ab.
 * Introjektion: ungefiltertes Aufsaugen fremder Botschaften → Introjekt

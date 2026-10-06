@@ -139,6 +139,55 @@ Essenz: **Klarheit, Sicherheit und Ruhe ausstrahlen.** Gelingende Koregulation i
 - Den Klienten sofort an eine Klinik verweisen
 > Gelingende Koregulation ist eine korrigierende Erfahrung.
 
+===MEHRFACH===
+? Auf welchen Ebenen findet Traumaintegration statt?
++ Körper / Nervensystem
++ Beziehung zu sich selbst
++ Beziehung zu anderen und zur Welt
+- Vergangenheit und Zukunft
+- Beruf und Freizeit
+> Skript S. 54–55.
+
+? Was bedeutet Integration?
++ Sich im eigenen Körper wohl statt bedroht fühlen
++ Erkennen, dass die Welt heute eine andere ist als damals
++ Das Abgespaltene bekommt seinen Platz und spaltet nicht mehr
+- Das Trauma vollständig vergessen
+- Allen Menschen bedingungslos vertrauen
+> Integrieren heißt nicht vergessen.
+
+? Welche Grundregeln gelten bei Akutinterventionen?
++ Orientierung ist die Basis
++ Augen offen lassen
++ Stimme klar, freundlich und bestimmt – nicht herrschend
++ Klarheit, Sicherheit und Ruhe ausstrahlen
+- Stimme monoton und hypnotisch
+> Gelingende Koregulation ist eine korrigierende Erfahrung.
+
+? Was wirkt beruhigend (eher aus Übererregung heraus)?
++ Verlängerte Ausatmung
++ Gähnen, Summen und Tönen
++ Langsame Schmetterlingsumarmung
++ Verlangsamte Bewegung
+- Aktive, kräftige Einatmung
+> Aktive Einatmung aktiviert den Sympathikus.
+
+? Was wirkt eher aus Untererregung heraus?
++ Wand wegschieben
++ Abklopfen
++ Recken und Strecken
++ Schnelle Schmetterlingsumarmung
+- Langes Ausatmen mit Summen
+> Langsam beruhigt die Schmetterlingsumarmung, schnell aktiviert sie.
+
+? Welche Aussagen zu einzelnen Techniken stimmen?
++ 5-4-3-2-1: 5 sehen, 4 spüren, 3 hören, 2 riechen, 1 schmecken
++ Halsbewegung (Sternocleidomastoideus) meldet dem Nervensystem eine sichere Umgebung
++ Bei Wut ist dosiertes Zischen oder Fauchen eine Alternative zum Schreien
++ Berührung wird immer angekündigt und erfragt
+- Gähnen und Summen wirken über den Sympathikus
+> Stimmbänder und Innenohr gehören zum ventralen Vaguskomplex.
+
 ===FREITEXT===
 ?? Auf welchen drei Ebenen findet Traumaintegration statt und was bedeutet Integration?
 * Körper und Nervensystem

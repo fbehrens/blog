@@ -158,6 +158,55 @@ Aus der **systemischen Therapie**; wörtlich „**einen neuen Rahmen geben**“:
 - Energie grundsätzlich im Körper halten
 > Lieber eine Runde früher aufhören.
 
+===MEHRFACH===
+? Was „gilt immer“ bei früher zwischenmenschlicher Traumatisierung?
++ Psychoedukation
++ Beziehung
++ Achtsames Erforschen und Ressourcenarbeit
++ Reflexion im Alltag
+- Konfrontation mit den Tätern
+> Skript S. 30.
+
+? Welche Aussagen zu Gewaltfolgen stimmen?
++ Bei emotionaler Gewalt: sichere Erfahrungsräume gestalten und „die andere Welt“ zeigen
++ Nach körperlicher Gewalt dissoziieren Menschen oft ihren Körper und entwickeln Starre
++ Bei sexualisierter Gewalt taucht oft die Frage „Wieso habe ich mich nicht gewehrt?“ auf
+- Bei emotionaler Gewalt sollte man die Täterperspektive verständlich machen
+- Nach körperlicher Gewalt entwickelt sich meist ein besonders weites Toleranzfenster
+> Glaubenssysteme bezogen auf mich, Körper, Beziehungen und Sexualität erforschen.
+
+? Welche Aussagen zum Reframing stimmen?
++ Der Begriff stammt aus der systemischen Therapie
++ „Story follows state“: der NS-Zustand gibt den Deutungsrahmen
++ Es gelingt am leichtesten im ventral-vagalen Zustand
++ Zu früh oder unsensibel kann es den Schmerz bagatellisieren
+- Es gelingt am besten im Freeze
+> Beispiel: Dissoziation als Überlebensenergie, die gut und wichtig war.
+
+? Wie versuchen Menschen, der im Körper gespeicherten Ladung zu entkommen?
++ Den Körper unterwerfen und kontrollieren
++ Rationalisieren
++ Dissoziieren
++ Kompensationsstrategien
+- Pendeln zwischen Stressor und Ressource
+> Pendeln ist ein Weg der Regulation, kein Entkommen.
+
+? Welche Aussagen zu Körper und Gedächtnis stimmen?
++ Die Ladung unverarbeiteter Erlebnisse ist im Körper gespeichert
++ Das explizite Gedächtnis entwickelt sich ab Vollendung des dritten Lebensjahres
++ Implizite frühe Erinnerungen sind wortlos, diffus und intensiv
++ „Aufflammende“ Energie zeigt sich, löst sich dabei aber nicht
+- Implizite Erinnerungen sind klar geordnet und gut erzählbar
+> Zitat Gabor Maté: „Trauma is not what happens to you, but what happens inside of you.“
+
+? Welche Phänomene können auftreten, wenn Energie wieder zu fließen beginnt?
++ Gänsehaut
++ Zittern und Bewegungsimpulse
++ Weinen
++ Vertiefte Atmung
+- Bewusstlosigkeit
+> Kernprinzip: im STF bleiben, pendeln, koregulieren – weniger ist mehr.
+
 ===FREITEXT===
 ?? Was ist Reframing, wie wird es traumasensibel eingesetzt und wo liegen seine Grenzen?
 * Aus der systemischen Therapie: neuer Bedeutungsrahmen

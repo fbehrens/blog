@@ -194,6 +194,55 @@ Eine **sichere Person** sein: emotional erreichbar, präsent, koregulierend, ach
 - Nur über Angehörige kommunizieren
 > Klarer Rahmen verhindert Zurückweisungserfahrungen.
 
+===MEHRFACH===
+? Welche Häufigkeiten nennt das Skript für westliche Gesellschaften?
++ Sicher ca. 60–70 %
++ Vermeidend ca. 20 %
++ Ambivalent ca. 10 %
+- Vermeidend ca. 60 %
+- Sicher ca. 20 %
+> Ein Bindungsstil ist ein unbewusstes inneres Arbeitsmodell.
+
+? Welche Fundament-Bilder sind richtig zugeordnet?
++ Sichere Bindung – breites, solides Fundament
++ Desorganisierte Bindung – Fundament mit Löchern und fehlenden Teilen
++ Bindungsstörung – Sumpf als Fundament
+- Desorganisierte Bindung – Sumpf
+- Bindungsstörung – breites Fundament mit Rissen
+> Desorganisiert = Übergang zur Pathologie; Störung = manifeste Psychopathologie.
+
+? Welche Aussagen zum vermeidenden Bindungsstil stimmen?
++ Das Bindungssystem ist deaktiviert
++ Passender Satz: „Ich verlasse dich, bevor du mich verlässt.“
++ Auf dem Heilungsweg brauchen Betroffene vor allem mehr Koregulation
+- Das Bindungssystem ist hyperaktiv
+- Passender Satz: „Wenn ich nur genug gebe, bin ich sicher.“
+> Ängstlich-ambivalente brauchen mehr Selbstregulation.
+
+? Welche Aussagen zum ambivalenten Bindungsstil stimmen?
++ Das Bindungssystem ist hyperaktiv
++ Er entsteht durch eine unzuverlässige Bindungsperson – mal präsent, mal nicht
++ Typisch: Helfersyndrom und hohe Bereitschaft zur Selbstaufgabe
+- Er entsteht durch Gewalt und Doppelbotschaften
+- Passender Satz: „Ich brauche niemanden.“
+> Gewalt und widersprüchliche Botschaften führen zur desorganisierten Bindung.
+
+? Welche Begriffe sind richtig erklärt?
++ Perinatale Traumatisierung – während der Geburt, z. B. Vollnarkose der Mutter
++ Parentifizierung – Kinder übernehmen Elternverantwortung (emotionaler Missbrauch)
++ Emotionale Abhängigkeit – Ausdruck eines überaktivierten Bindungssystems
++ Reinszenierung – unbewusst Vertrautes suchen, das frühen Bindungsmustern ähnelt
+- Bindungstrauma – offizielle Diagnose im DSM-5
+> Bindungstrauma ist nicht offiziell anerkannt.
+
+? Welche Aussagen zur bindungsorientierten Begleitung stimmen?
++ Menschen kommen bereits abhängig, gute Begleiter machen nicht abhängig
++ Erreichbarkeit: adressierbar sein, aber nicht immer sofort antworten
++ Bewusst werdende Wertekonflikte sind ein kraftvolles Heilungssymptom
+- Bindungsorientiertes Arbeiten macht Klienten immer abhängig
+- Rund um die Uhr sofort antworten schafft Sicherheit
+> Abhängigkeit fördert nur, wer Selbstwirksamkeit unterbindet.
+
 ===FREITEXT===
 ?? Beschreibe die vier Bindungsstile mit Häufigkeit, Fundament-Bild und Entstehung.
 * Sicher (60–70 %): breites, solides Fundament, feinfühlige Bezugspersonen

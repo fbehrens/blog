@@ -141,6 +141,55 @@ Ruhe, Regeneration, **Integration von Gelerntem** (daher: Pausen kultivieren). K
 - Weite Pupillen zeigen einen parasympathischen Zustand
 > M2.1·04.
 
+===MEHRFACH===
+? Welche Aussagen zum Aufbau des Nervensystems stimmen?
++ Das periphere NS gliedert sich in somatisches und autonomes NS
++ Zum autonomen NS gehören Sympathikus, Parasympathikus und enterisches NS
++ Das enterische NS wird auch „Bauchhirn“ genannt
+- Sympathikus und Parasympathikus gehören zum somatischen NS
+- Das somatische NS arbeitet automatisch, das autonome willkürlich
+> Somatisch = willkürlich, autonom = automatisch.
+
+? Welche Wirkungen gehören zum Sympathikus?
++ Erhöhter Blutdruck
++ Verminderter Speichelfluss
++ Glykolyse – Energiebereitstellung durch Abbau von Kohlenhydraten
+- Glykogensynthese – Aufbau und Speicherung von Energie
+- Gesteigerte Verdauung
+> Glykogensynthese und Verdauung sind parasympathisch.
+
+? Welche Funktionen hat der Parasympathikus?
++ Ventral in Sicherheit: soziale Verbundenheit
++ Dorsal in Sicherheit: tiefe Entspannung und Regeneration
++ Unter Stress: Unterwerfung (Fawn Response)
++ Unter Stress: Totstellreflex / Immobilität
+- Unter Stress: Kampf und Flucht
+> Kampf und Flucht sind sympathisch.
+
+? Welche Aussagen zum Zusammenspiel von Sympathikus und Parasympathikus treffen zu?
++ Sie arbeiten zusammen und sind im Fenster im Wechselspiel aktiv
++ Der Parasympathikus steht für „Verdauung im Körper und im Geiste“
+- Sie sind reine Gegenspieler; immer ist nur einer aktiv
+- Der Parasympathikus blockiert den Sympathikus vollständig
+- Der Sympathikus ist nur unter Bedrohung aktiv
+> M2.1·05.
+
+? Wodurch kann Stressverarbeitung gelingen, sodass keine Traumafolgen bleiben?
++ Kampf
++ Flucht
++ Koregulation
++ Selbstregulation
+- Möglichst schnelles Vergessen
+> Rückkehr ins Stresstoleranzfenster.
+
+? Welche Merksätze und Aussagen aus Lektion 07 stimmen?
++ Ein Mangel an empfundener Sicherheit führt zu (traumatischem) Stress
++ Traumafolgestörungen sind Stress-Verarbeitungsstörungen
++ Bei Traumafolgen geht es immer um Überlebensenergie
++ Koregulation ist Traumaprävention
+- Weite Pupillen zeigen einen parasympathischen Zustand
+> Weite Pupillen und Hyperventilation sind sympathisch.
+
 ===FREITEXT===
 ?? Beschreibe Funktion und Körperwirkungen von Sympathikus und Parasympathikus.
 * Sympathikus: Mobilisierung von Energie, Kampf/Flucht

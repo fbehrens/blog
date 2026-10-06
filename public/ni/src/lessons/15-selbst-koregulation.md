@@ -156,6 +156,55 @@ Früh Traumatisierte haben sie **nicht gelernt** und haben ein **enges STF**. An
 - Gar kein Schütteln, nur Stillhalten
 > „sanftes (!) Schütteln“.
 
+===MEHRFACH===
+? Welche Aussagen zur Selbstregulation stimmen?
++ Sie ist die Fähigkeit, eigene Erregungszustände und Impulse zu regulieren
++ Sie ist flexibel und lebendig
++ Sie ist Grundlage für Embodiment – lebendige Präsenz im Körper
+- Sie ist dasselbe wie Selbstkontrolle und Funktionieren
+- Sie ist rigide wie Kompensation
+> Kontrolle und Kompensation sind rigide.
+
+? Welche Kompensationsstrategien nennt das Skript als Ersatz für Selbstregulation?
++ Sucht
++ Vermeidung
++ Reinszenierung
+- Pendeln
+- Koregulation
+> Skript S. 22.
+
+? Welche Interventionen passen zu akuter Übererregung?
++ Den Ausatem verlängern
++ Umschauen und die Schwerkraft spüren
+- Abklopfen und aufstehen, um den Sympathikus zu aktivieren
+- Kräftig und schnell einatmen
+- Die Luft lange anhalten
+> Bei Übererregung den Parasympathikus aktivieren.
+
+? Welche Interventionen passen zu akuter Untererregung?
++ Abklopfen
++ Aufstehen
++ Sanftes Schütteln
+- Ausatem stark verlängern, um weiter zu beruhigen
+- Kräftiges Schütteln bis zur Erschöpfung
+> Bei Untererregung den Sympathikus aktivieren – sanft!
+
+? Welche Aussagen zu Koregulation, Containment und Toleranzfenster stimmen?
++ Containment bedeutet Halt und Raum – wie ein Gefäß
++ Die Weite des kindlichen STF hängt von Menge und Zuverlässigkeit der Koregulation ab
++ Der ventrale Vagus ist der Schlüssel zum Toleranzfenster
++ Soziale Kontakte fördern Selbstregulation über den ventralen Vagus
+- Containment ist die Abschottung gegen alle Gefühle
+> Koregulation suchen – das Bindungssystem ist aktiv.
+
+? Welche Aussagen zu Interventionen und Förderung stimmen?
++ In akuten Situationen sollen Interventionen einfach sein, weil der präfrontale Cortex „aus“ ist
++ Impulsivität kann ein Zeichen mangelnder Selbstregulation sein
++ Langfristig hilft ein Lernprozess mit dem Nervensystem ohne Dauerstress
+- Langfristig hilft vollständiger sozialer Rückzug
+- Strenge Selbstdisziplin ohne Pausen fördert Selbstregulation am besten
+> Soziale Kontakte und Regeneration gehören dazu.
+
 ===FREITEXT===
 ?? Definiere Selbstregulation und Containment und grenze Selbstregulation von Selbstkontrolle ab.
 * Fähigkeit, Erregung und Impulse zu regulieren ohne Überflutung

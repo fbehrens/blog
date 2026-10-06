@@ -121,6 +121,55 @@ aufnahmen: M1.1·05 Der sichere Ort | 12827 | 00:11 ;; M7.2·02 Grenzen im Coach
 - „Das spielt keine Rolle, Hauptsache du zahlst.“
 > Keine Heilungsversprechen; prozess- statt zielorientiert.
 
+===MEHRFACH===
+? Eine neue, angespannte Klientin betritt deinen Raum. Was ist traumasensibel?
++ Persönlich begrüßen
++ Zeit zur Orientierung lassen
++ Den Platz selbst wählen lassen
+- Direkt nach dem Problem fragen, um Zeit zu sparen
+- Mit einer Meditation mit geschlossenen Augen starten
+> Die Begrüßung ist bereits eine Intervention.
+
+? Wie leitest du eine Körperübung traumasensibel ein?
++ Erklären, was du anbietest
++ Erklären, warum und was es bewirken kann
++ Einverständnis einholen
+- Einfach anfangen, damit sie nicht nachdenken muss
+- Die Übung als Pflicht für den Fortschritt darstellen
+> Vorhersehbarkeit und Nachvollziehbarkeit.
+
+? Welche Zuordnungen von Grenzmuster und Vorgehen stimmen?
++ „Ich weiß nicht, ob ich das will“ und passt sich doch an – kleinschrittiger werden, aktiv Zustimmung erfragen
++ Lehnt fast alles ab und will kontrollieren – klarer Rahmen, winzige Schritte, von der Seite führen
+- Lehnt fast alles ab – Machtkampf eingehen, um die Kontrolle zu brechen
+- Passt sich ständig an – Übung durchziehen, er macht ja mit
+- Lehnt fast alles ab – frontal und direktiv vorgeben
+> Rigide Grenzen sind Schutz; diffuse Grenzen brauchen aktive Zustimmung.
+
+? Welche Reaktionen sind als Coach traumasensibel?
++ Spät geöffnetes Thema (sexueller Übergriff): würdigen, einpacken, regulieren, Raum für nächste Sitzung planen
++ Wunsch, Missbrauch „Schritt für Schritt“ durchzugehen: transparent auf Therapie verweisen, Stabilisierung anbieten
++ Frage nach Sitzungszahl: transparent, ohne feste Versprechen
+- „Genau fünf Sitzungen, dann bist du geheilt.“
+- Die Sitzung um eine Stunde verlängern und alles durcharbeiten
+> Keine Heilungsversprechen; Traumakonfrontation gehört in die Therapie.
+
+? Welche Formulierungen und Abläufe sind in einer Gruppenmeditation traumasensibel?
++ „Wenn du magst, schließ die Augen – oder lass den Blick auf einem Punkt ruhen.“
++ Am Ende sanft, aber klar ins Außen zurückführen und orientieren
++ Zeit zum Nachspüren lassen
+- „Schließ jetzt die Augen, sonst funktioniert es nicht.“
+- Mit einem lauten Gong abrupt beenden
+> Einladend statt direktiv.
+
+? Welche Reaktionen sind bindungs- und prozessorientiert?
++ Lange Nachricht zwischen Sitzungen: kurz bestätigen, Inhalt in der nächsten Sitzung aufgreifen
++ „Seit ich das verstehe, geht es mir schlechter“: Trauma-U erklären und normalisieren
++ Sitzungen helfen nur, beim gewalttätigen Partner „durchzuhalten“: Gefahr der Komplizenschaft ansprechen
++ Sitzungsende: auf der Metaebene ressourcenorientiert zusammenfassen
+- Bei gewalttätigem Partner allparteilich auch dessen Sicht vertreten
+> Parteilichkeit und Recht auf Unversehrtheit.
+
 ===FREITEXT===
 ?? Fall: Eine Klientin will mit dir „endlich ihren Missbrauch aufarbeiten“ und alles im Detail erzählen. Wie reagierst du als traumasensibler Coach?
 * Wertschätzen und den Wunsch würdigen

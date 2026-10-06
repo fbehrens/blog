@@ -142,6 +142,55 @@ Dissoziation ist **Überlebensreaktion und zugleich Traumafolge**. Sie zu lösen
 - Die Fragmente dauerhaft im Unbewussten zu belassen
 > Das Ereignis bekommt seine Struktur zurück: Anfang, Verlauf, Ende, Bedeutung.
 
+===MEHRFACH===
+? Welche Aussagen zur traumatischen Zange stimmen?
++ Das Konzept stammt von Michaela Huber
++ Man gerät hinein, wenn Flucht, Kampf und Koregulation die Bedrohung nicht entschärfen
++ Sie ist gekennzeichnet von Hilflosigkeit, Ohnmacht und Ausgeliefertsein
+- Sie entsteht, sobald der Sympathikus aktiviert wird
+- Sie ist gekennzeichnet von Wut und Kampfgeist
+> M4.1·02.
+
+? Welche Aussagen zum Gedächtnis unter traumatischem Stress treffen zu?
++ Der Hippocampus ist der „Bibliothekar“, der Eindrücke zeitlich verknüpft ablegt
++ Der Informationsfluss zum Hippocampus und zum Broca-Zentrum wird blockiert
++ Traumatische Fragmente sind „heiß“ – noch mit Überlebensenergie geladen
+- Traumatische Erinnerungen haben klar Anfang, Verlauf, Ende und Bedeutung
+- Im Notprogramm übernimmt der präfrontale Kortex die Führung
+> Im Notprogramm führt das Stammhirn; die Amygdala stößt Stresskaskaden an.
+
+? Welche Aussagen zur Dissoziation stimmen?
++ Sie ist eine auto-protektive Wahrnehmungsveränderung
++ Sie mildert die Wucht, sodass man nicht am Schock stirbt
++ Sie ist sowohl Überlebensreaktion als auch Traumafolge
++ Alle Reize kommen voll an, nur die verknüpfende Fähigkeit ist ausgeschaltet
+- Sie ist eine bewusste Entscheidung, nicht hinzusehen
+> Gespeichert wird fragmentiert und unverbunden.
+
+? Welche Zuordnungen sind richtig?
++ Derealisation – die Welt wirkt unecht
++ Depersonalisation – Distanz zur eigenen Person, z. B. Geschehen von oben betrachten
+- Derealisation – Übernahme der Persönlichkeit des Täters
+- Depersonalisation – Verlust der Sprache unter Stress
+- Derealisation – Verlust jeder Erinnerung an das Ereignis
+> De-Realisation = weg von dieser Realität; De-Personalisation = weg von dieser Person.
+
+? Welche neurobiologischen Merkmale gehören zum dissoziativen Trance-Zustand?
++ Dorsaler Vagus
++ Endorphine
++ Körpereigene Opiate
+- Ventraler Vagus mit Oxytocin
+- Adrenalin und Glykolyse
+> Skript S. 8.
+
+? Was bedeutet es, Dissoziation zu lösen?
++ Abgespaltene Fragmente werden integriert
++ Das Ereignis bekommt Anfang, Verlauf, Ende und Bedeutung zurück
+- Das Ereignis wird möglichst oft im Detail wiederholt
+- Die Fragmente bleiben dauerhaft im Unbewussten
+- Der Klient wird so lange konfrontiert, bis er nichts mehr fühlt
+> Ein vollständiges Puzzle entsteht.
+
 ===FREITEXT===
 ?? Was passiert im Gehirn bei einer traumatischen Erfahrung?
 * Notprogramm: Stammhirn übernimmt, Amygdala im Alarm

@@ -167,6 +167,55 @@ Chronifiziert die Belastungsreaktion nach Wochen oder bricht sie nach Jahren dur
 - Der Täter hat sich entschuldigt
 > Weitere: Gefühle ertragbar, Selbstwert wiederhergestellt, Trauma in neues Wertesystem integriert.
 
+===MEHRFACH===
+? Welche Aussagen zum Verlauf nach einem Akuttrauma stimmen?
++ Die Schockphase umfasst die ersten Stunden
++ Auf den Schock folgt die akute Belastungsreaktion (Tage bis Wochen)
++ Die akute Belastungsreaktion ist physiologisch – noch kein Trauma
++ Im Posttrauma wird das Erlebnis integriert oder es chronifiziert zur PTBS
+- Die akute Belastungsreaktion ist bereits eine eindeutige PTBS
+> Skript S. 31.
+
+? Was gilt in den ersten zwei Wochen nach einem Akuttrauma?
++ Keine aktive Trauma-Konfrontation
++ Wut, Trauer und Furcht als normale Reaktionen normalisieren
++ Ruhe, Abstand, Sicherheit und Alltagsroutinen herstellen
+- Sofortiges Gruppendebriefing
+- Möglichst ausführliche Schilderung des Ereignisses
+> Gruppendebriefing wirkte oft retraumatisierend.
+
+? Was hilft direkt nach der Katastrophe?
++ Reorientierung
++ Essen, auch ohne Hunger
++ Schlafen
++ Bewegung
+- Alkohol zur Beruhigung
+> Das Körpergefühl ist oft dissoziiert.
+
+? Was sollte nach einem Akuttrauma vermieden werden?
++ Sofort Psychotherapie empfehlen
++ Trauer als Depression deuten
++ „Reiß dich zusammen“
++ Betroffene als „Patienten“ behandeln
+- Einen normalen Tagesablauf beibehalten
+> Routinen, dosierte Gespräche, Bewegung, Schlaf und Ernährung helfen.
+
+? Welche Haltungen gehören zur Akutbegleitung?
++ Empathische Abstinenz – mitfühlend ohne Retterhaltung
++ Salutogenetische Orientierung – Alltagsressourcen, Verstehbarkeit, Bewältigbarkeit
+- Fokus auf die Entstehung der Krankheit
+- Keinerlei Gefühle zeigen
+- Schuldige identifizieren und benennen
+> Salutogenese = Entstehung von Gesundheit.
+
+? Welche Aussagen zu PTBS und Genesung stimmen?
++ Zur PTBS gehören Intrusionen, Vermeidung, Übererregung und Veränderungen in Denken/Stimmung
++ Eine PTBS kann auch später durch Überlastung aufbrechen
++ Die „sieben Kriterien der Genesung“ stammen von Judith Herman
++ Ein Kriterium: die Geschichte ist zusammenhängend erzählbar
+- Ein Kriterium: das Ereignis ist vollständig vergessen
+> Weitere: Gefühle ertragbar, Selbstwert wiederhergestellt.
+
 ===FREITEXT===
 ?? Beschreibe die Phasen nach einem Schocktrauma.
 * Akuter Schock: erste Stunden, Über- oder Untererregung

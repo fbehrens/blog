@@ -145,6 +145,55 @@ Trauma zerreißt Sicherheit und Verbundenheit. Themenfelder: **Wertschätzung & 
 - Fake it till you make it
 > Sicherheit braucht Zeit; Wiederkommen ist schon ein Erfolg.
 
+===MEHRFACH===
+? Welche Bereiche umfasst traumasensibles Arbeiten (nach Treleaven)?
++ Wissen
++ Erkennen
++ Damit umgehen
++ Retraumatisierung vermeiden
+- Konfrontieren
+> Wissen, Erkennen, Damit umgehen, Retraumatisierung vermeiden – Konfrontation gehört nicht dazu.
+
+? Welche Aussagen über traumasensible Begleitung treffen zu?
++ Sie ist keine Traumatherapie, aber Basis jeder guten Traumatherapie
++ Ihr Ziel ist, die Kapazität für Erlebensqualitäten zu vergrößern und Containment zu erreichen
++ Sie ist in allen Berufsfeldern anwendbar
+- Sie darf nur mit Heilerlaubnis angewendet werden
+- Sie zielt darauf, das Ereignis möglichst detailliert zu erinnern
+> Keine konfrontative Traumaarbeit; Ziel: Kapazität, Regulation, Containment.
+
+? Welche sind die drei Säulen der traumasensiblen Begleitung?
++ Beziehung
++ Traumawissen
++ Körper
+- Diagnose
+- Konfrontation
+> Beziehung (die elementarste), Traumawissen, Körper – miteinander vernetzt.
+
+? Welche Qualitäten gehören zum „sicheren Menschen“ bzw. „sicheren Ort“?
++ Verlässlichkeit und Berechenbarkeit
++ Klarheit und Transparenz
++ Exklusivität – ein ungestörter Raum
+- Überraschende Interventionen ohne Vorankündigung
+- Umräumen des Praxisraums ohne Ankündigung, damit Klienten sich an Neues gewöhnen
+> Berechenbarkeit statt Überraschung; Veränderungen am Ort vorher ankündigen.
+
+? Welche Haltungen gehören zur Säule Beziehung?
++ Parteilichkeit für Betroffene gegen Unrecht und Täterschaft
++ Augenhöhe: Wir haben Wissen, wissen es aber nicht besser
++ Umsetzbarkeit: Das Erlebte muss in den Alltag übertragbar sein
+- Allparteilichkeit, die auch die Sichtweise des Täters besonders würdigt
+- Klare Zielformulierungen, um Druck aufzubauen
+> Fehlende Parteilichkeit fühlt sich verlassen an; „Anliegen“ statt Ziel, um Leistungsdruck zu vermeiden.
+
+? Welche Aussagen zu Zahlen, Zitaten und Leitsätzen stimmen?
++ Ca. 90 % erleben ein Trauma, ca. 8 % entwickeln eine PTBS
++ „Safety is the presence of connection“ stammt von Bessel van der Kolk
++ „The slower you go, the faster you grow“
+- „Safety is the presence of connection“ stammt von Stephen Porges
+- Ca. 50 % aller Menschen entwickeln nach einem Trauma eine PTBS
+> M1.1·04: 90 % / 8 %; Zitat van der Kolk; Sicherheit braucht Zeit.
+
 ===FREITEXT===
 ?? Was ist traumasensibles Arbeiten? Nenne die vier Bereiche und die drei Säulen.
 * Wissen über Trauma

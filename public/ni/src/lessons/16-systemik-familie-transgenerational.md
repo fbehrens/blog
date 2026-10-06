@@ -175,6 +175,55 @@ Die **meisten Traumatisierungen geschehen in Familien**. Durch Bindung/Abhängig
 - Die Pflicht, anderen Überlebenden zu helfen
 > Innere Anteile fürchten Ausschluss, Bestrafung oder Anklage.
 
+===MEHRFACH===
+? Welche Wege der transgenerationalen Weitergabe nennt das Skript?
++ Schwangerschaft
++ Gene (Epigenetik)
++ Unbewusstes Ausagieren der Bindungspersonen
+- Schule
+- Medien
+> Skript S. 22–23.
+
+? Welche Aussagen zu Epigenetik und transgenerationalem Trauma stimmen?
++ Peter Spork nennt Epigenetik das „Gedächtnis der Zellen“
++ Epigenetische Prägungen sind veränderbar
++ Transgenerationales Trauma ist keine wissenschaftliche Diagnose
++ Was nicht aufgearbeitet ist, wird mit hoher Wahrscheinlichkeit weitergegeben
+- Transgenerationales Trauma steht im DSM-5
+> Ressourcen und korrigierende Erfahrungen wirken bis auf Nachkommen.
+
+? Welche Reaktionen zeigen Systemmitglieder typischerweise auf das Trauma eines Einzelnen?
++ Bindungssuche
++ Flucht und Kampf
++ Erstarren und Totstellen
+- Neugier und Exploration
+- Spiel und Kreativität
+> Diese meist unbewussten Reaktionen verstärken die Traumadynamik (Bild: Mobile).
+
+? Welche Aussagen zur Anpassung in der Familie stimmen?
++ Sie ist die sicherste, biologisch gebahnte Traumareaktion innerhalb der Familie
++ Flucht und Kampf stehen Kindern wegen der Bindung oft nicht zur Verfügung
++ Ihr Spektrum reicht von Fawn Response bis zur Identifikation mit dem Aggressor
+- Flucht ist die sicherste Reaktion in der Familie
+- Kinder besitzen Kampf und Flucht noch nicht
+> Erstarren und Untererregung sind oft „der Ausweg“.
+
+? Welche Aussagen zu Familienmustern stimmen?
++ Das häufigste Familienmuster im Traumakontext ist das Schweigen
++ Familiengeheimnisse halten eine Scheinbalance und Scheinsicherheit aufrecht
++ Familien mit gehüteten Geheimnissen wirken nach außen oft hoch funktional
+- Beschwiegenes hat keine Wirkung
+- Familiengeheimnisse schaffen echte Sicherheit
+> Jeder hat seine Aufgabe im System des Schweigens.
+
+? Welche Aussagen zu Loyalität und Überlebensschuld stimmen?
++ Loyalität wird toxisch, wenn wir sie unter Stress leben und einen Teil von uns verleugnen
++ Bei falscher Loyalität bleiben wir nur der Traumadynamik treu
++ Überlebensschuld: Schuldgefühl, glücklich sein zu dürfen, während andere es nicht durften
++ Toxische Bindungen sind schwer zu lösen, weil Loslassen Todesangst auslösen kann
+- Loyalität ist toxisch, sobald man sie Freunden gegenüber zeigt
+> Beispiel Börsenhändler: „Geld = Täter“ löste Panik bei Erfolg aus.
+
 ===FREITEXT===
 ?? Erkläre transgenerationales Trauma und die drei Wege der Weitergabe.
 * Kein Diagnosebegriff, aber wahrnehmbares Phänomen

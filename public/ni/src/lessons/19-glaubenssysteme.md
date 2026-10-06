@@ -138,6 +138,55 @@ Ein **Komplex aus Gefühlen, Überzeugungen, Empfindungen und Bewertungen** – 
 - Konfrontieren – Verarbeiten – Integrieren – Abschließen
 > Skript S. 29.
 
+===MEHRFACH===
+? Welche Aussagen über traumabedingte Glaubenssysteme stimmen?
++ Sie sind ein Komplex aus Gefühlen, Überzeugungen, Empfindungen und Bewertungen
++ In der Kindheit entstandene sind oft „sechsspurige Autobahnen“
++ Sie sind an die Überlebensenergie gekoppelt, die unter Hochstress mobilisiert wurde
+- Sie sind ein einzelner negativer Satz, den man einfach umformulieren kann
+- Sie sind rein kognitiv ohne Körperbezug
+> „Wer seine Glaubenssätze kennt, kennt seine Vergangenheit.“
+
+? Welche Sätze sind Beispiele für traumabedingte Glaubenssysteme?
++ „Eigene Bedürfnisse zu haben, ist falsch.“
++ „Die Welt ist gefährlich.“
++ „Mit mir ist etwas falsch.“
+- „Ich bin willkommen, so wie ich bin.“
+- „Ich darf Fehler machen und daraus lernen.“
+> Skript Kap. 14.
+
+? Warum ist körperorientiertes Arbeiten bei Glaubenssystemen wichtig?
++ In frühester Kindheit entsteht vor allem eine implizite Körpererinnerung
++ Über den Körper gibt es Zugang zum frühen Empfinden von Identität und Wirklichkeit
+- Weil Gespräche bei Glaubenssätzen verboten sind
+- Weil das explizite Gedächtnis schon vor der Geburt reift
+- Weil Glaubenssätze ausschließlich in den Muskeln gespeichert sind
+> Frühe Empfindungen werden später unbewusst mit Worten umschrieben.
+
+? Welche Aussagen zur Arbeit mit Glaubenssystemen stimmen?
++ Man setzt am Kern („Urwunde“) an, dann verändern sich die Ausläufer
++ Es gibt ein Dilemma aus Veränderungswunsch und gleichzeitiger Vermeidung
++ Ventrale Momente dienen als Ressourcen zum Pendeln
+- „Wo ein Wille ist, ist ein Weg“ ist eine zentrale Intervention der NI
+- Man formuliert jeden einzelnen Satz um, bis alle positiv sind
+> Sätze wie „Wo ein Wille ist…“ erzeugen Druck und sind nicht traumasensibel.
+
+? Welche Schritte gehören zum Prozessleitfaden?
++ Bewusstwerdung – das Glaubenssystem erkennen und erforschen
++ Anerkennen, was ist und was war
++ Ankommen im Hier und Jetzt
++ Ausrichtung auf die gestaltbare Zukunft
+- Konfrontation mit dem auslösenden Ereignis
+> Skript S. 29.
+
+? Woraus bestehen traumabedingte Glaubenssysteme laut Skript?
++ Anpassungsleistungen an das Außen
++ Verinnerlichung der Botschaften
+- Genetischer Veranlagung
+- Bewusster Entscheidung
+- Medienkonsum
+> Die innere Welt formt sich.
+
 ===FREITEXT===
 ?? Was sind traumabedingte Glaubenssysteme und wie entstehen sie?
 * Komplex aus Gefühlen, Überzeugungen, Empfindungen, Bewertungen

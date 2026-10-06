@@ -150,6 +150,55 @@ Zugang schaffen: **erkennen, suchen, aktivieren, pflegen** (z. B. ein „Ressour
 - Als vollständig gesund und ohne Verletzung
 > Der Fokus auf das Unversehrte schafft Raum, in dem alles Versehrte Platz hat.
 
+===MEHRFACH===
+? Ordne zu: Welche Beispiele sind innere Ressourcen?
++ Talente und Stärken
++ Positive Erinnerungen
+- Freunde und Partner
+- Haustiere
+- Finanzielle Mittel
+> Freunde, Partner, Haustiere = relational; Finanzen = äußere Ressource.
+
+? Welche Beispiele sind relationale Ressourcen?
++ Freunde
++ Partner
++ Haustiere
+- Talente
+- Finanzielle Mittel
+> Relational = Beziehung betreffend; wichtig für Selbst- und Koregulation.
+
+? Welche Aussagen zu Ressourcen treffen zu?
++ Eine Ressource ist alles, was uns mit unserer Fähigkeit zur Regulation in Kontakt bringt
++ Ressourcen sind Anker im Hellen, wenn wir uns dem Dunkleren zuwenden
++ Ressourcen müssen gespürt und verkörpert werden
++ In jeder Überlebensstrategie steckt eine Ressource
+- Eine Ressource als reines To-do wirkt auch bei innerem Getriebensein zuverlässig
+> Hilfreiche Frage: „Wo spürst du die Ressource im Körper?“
+
+? Warum fällt Menschen mit frühem Trauma der Zugang zu Ressourcen oft schwer?
++ Ressourcen sind an negative Glaubenssysteme gekoppelt („Es steht mir nicht zu“)
++ Das traumatisierte Nervensystem sucht bevorzugt nach Gefahr statt nach Schönem
++ Die Erwartung „Wenn es schön ist, passiert gleich was Schlimmes“
+- Traumatisierte Menschen besitzen keine Ressourcen
+- Ressourcen überreizen grundsätzlich das Nervensystem
+> Es entsteht ein Kreislauf mit immer engerem Fokus auf Defizite.
+
+? Welche Bausteine braucht eine traumasensible Begleiterin?
++ Wissen
++ Stabilität
++ Selbstkenntnis
++ Haltung
+- Heilerlaubnis
+> Wissen, Erfahrung, Stabilität, Selbstkenntnis, Haltung.
+
+? Welche Aussagen über die Begleitperson stimmen?
++ Ihre Stabilität schützt vor sekundärer Traumatisierung
++ Hohe Selbstkenntnis bedeutet weniger Projektion und weniger Triggern
++ Sie sieht Klient:innen als versehrt, aber mit unversehrtem Kern
+- Mit hoher Selbstkenntnis braucht sie keine Supervision mehr
+- Sie sieht Klient:innen vor allem als Fälle eines Störungsbildes
+> Der Fokus auf das Unversehrte schafft Raum für das Versehrte.
+
 ===FREITEXT===
 ?? Was ist eine Ressource? Nenne die drei Arten mit je einem Beispiel und erkläre, warum Ressourcen bei Trauma oft fehlen.
 * Alles, was mit der Fähigkeit zur Regulation in Kontakt bringt

@@ -155,6 +155,55 @@ Sicherheit **lässt sich nicht einreden** (Affirmationen), sie ist ein **verkör
 - Ja, aber nur während des Schlafs
 > Auch der Sympathikus ist im Fenster aktiv und nützlich.
 
+===MEHRFACH===
+? Welche Aussagen zum Stresstoleranzfenster treffen zu?
++ Es geht auf Daniel Siegel zurück
++ Die drei Bereiche heißen Chaos – Integration – Rigidität
++ Seine Größe hängt vom Maß an empfundener Sicherheit ab
+- Es geht auf Stephen Porges zurück
+- Im Fenster ist der Sympathikus nicht aktiv
+> Im Fenster arbeiten Sympathikus und Parasympathikus im Wechselspiel.
+
+? Wie verläuft die Verarbeitung von Erfahrungen außerhalb des Fensters?
++ In der Übererregung desorganisiert
++ In der Untererregung vermindert – Erlebtes bleibt stecken
+- In der Übererregung ungestört und vollständig
+- In der Untererregung verstärkt und besonders deutlich
+- In beiden Bereichen genauso wie im Fenster
+> Desorganisierte oder verminderte Verarbeitung begünstigt Traumafolgesymptome.
+
+? Ordne zu: Welche Zuordnungen von Wahrnehmungsart und Beispiel stimmen?
++ Exterozeption – die Atmosphäre auf einem Konzert
++ Interozeption – ein Kratzen im Hals vor einer Erkältung
++ Propriozeption – die Lage des Körpers im Raum
+- Neurozeption – die Wahrnehmung von Hunger und Herzschlag
+- Propriozeption – die Stimmung anderer Menschen
+> Hunger und Herzschlag = Interozeption; Neurozeption = unbewusste Gesamtbewertung von Gefahr.
+
+? Welche Aussagen zur Neurozeption stimmen?
++ Der Begriff stammt von Stephen Porges
++ Sie unterscheidet gefahrlos, gefährlich und lebensgefährlich
++ Sie verbindet Informationen von innen und außen
+- Sie lässt sich durch Affirmationen zuverlässig auf „sicher“ stellen
+- Bei Kindern mit toxischem Stress meldet sie grundsätzlich Sicherheit
+> Sicherheit ist verkörpertes, biologisches Erleben.
+
+? Welche frühen Prägungen beschreibt das Skript?
++ Bedrohung durch die Umwelt → angespannte, alarmierte Exterozeption
++ Früher körperlicher Schmerz → Interozeption stuft Inneres schnell als bedrohlich ein
++ Wenig Berührung und toxischer Stress → Neurozeption meldet beständig Gefahr
+- Bedrohung durch die Umwelt → besonders entspannte Interozeption
+- Früher Schmerz → abgeschaltete Neurozeption
+> Skript S. 4.
+
+? Welche Aussagen zu Erregung und Hoberman-Sphere treffen zu?
++ Freudige Erregung und Erregung durch Gefahr sind physiologisch gleich
++ Bei der Hoberman-Sphere entspricht Expansion der Übererregung, Kontraktion der Untererregung
++ Misslingt die Unterscheidung, kann Freude mit Angst verknüpft werden
+- Freudige Erregung findet nur im Parasympathikus statt
+- Im Fenster bleibt die Hoberman-Sphere vollkommen unbewegt
+> Im Fenster pendelt man rhythmisch.
+
 ===FREITEXT===
 ?? Erkläre das Stresstoleranzfenster mit seinen drei Bereichen und wovon seine Größe abhängt.
 * Modell nach Daniel Siegel

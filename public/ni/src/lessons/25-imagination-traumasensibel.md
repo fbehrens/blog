@@ -129,6 +129,54 @@ Im Coaching Anteile als **dritte Person** benennen (Distanz); direktes Sprechen 
 - Sie entstehen nur unter Hypnose
 > Man kann nicht nicht imaginieren.
 
+===MEHRFACH===
+? Warum soll Imagination traumasensibel angewendet werden?
++ Um Überflutung zu vermeiden
++ Um Druck zu vermeiden, wenn jemand meint, nicht imaginieren zu können
++ Weil Nach-innen-Schauen bei Traumafolgen aktivieren oder überfluten kann
+- Um Traumainhalte schneller zugänglich zu machen
+- Um den Klienten in tiefe Hypnose zu führen
+> Skript S. 38.
+
+? Welche Aussagen zur konzentrierten Imagination stimmen?
++ Sie ist eine Trance – starke Aufmerksamkeitsfokussierung
++ Sie ist anstrengend und daher oft kürzer
++ Konzentration und Dissoziation sind schwer zu unterscheiden – deshalb Ankerndes einweben
++ Das Beobachter-Ich muss aktiv bleiben
+- Je länger, desto besser die Wirkung
+> Weniger ist mehr.
+
+? Welche Schritte gehören zur traumasensiblen Imaginationsintervention?
++ Sicherheit in der Beziehung
++ Sicherheit im Raum
++ Wendung nach außen
++ Orientieren
+- Konfrontation mit dem Trauma
+> Beziehung – Raum – nach innen – Arbeiten – nach außen – Orientieren.
+
+? Welche Formulierungen und Vorgehensweisen sind traumasensibel?
++ „Während dein Körper hier sicher sitzt, kannst du in Ruhe dies betrachten …“
++ Einchecken mit S(I)FT: Körperempfindungen, Gefühle, Gedanken
++ Wendung nach außen sanft und klar
+- „Lass dich ganz tief in das Bild fallen.“
+- „Vergiss jetzt alles um dich herum.“
+> Erinnern an die Schwerkraft verankert im Körper.
+
+? Wie geht man mit Menschen um, die meinen, nicht imaginieren zu können?
++ Über eine Urlaubserinnerung einladen, die spielerisch verändert wird
++ Bilder dürfen schemenhaft sein
++ Jeder imaginiert unwillkürlich
+- Länger die Augen schließen lassen, bis Bilder kommen
+- Imagination ist dann ausgeschlossen
+> Man kann nicht nicht imaginieren.
+
+? Wie benennt man Anteile im Coaching bei Imaginationen?
++ Als dritte Person
+- In der Ich-Form, als spräche der Anteil selbst
+- Mit diagnostischen Fachbegriffen
+- Gar nicht
+> Direktes Sprechen aus Anteilen braucht Spezialausbildung.
+
 ===FREITEXT===
 ?? Beschreibe den traumasensiblen Aufbau einer Intervention mit Imagination.
 * Sicherheit in der Beziehung

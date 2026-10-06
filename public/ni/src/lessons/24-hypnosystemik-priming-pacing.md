@@ -176,6 +176,55 @@ Zwei Erlebniskriterien (nach **Gunther Schmidt**): **willkürlich / unwillkürli
 - Eine Liste von Glaubenssätzen vorlesen
 > Ebenso: wörtlich wiederholen, ähnliche Körperhaltung.
 
+===MEHRFACH===
+? Welche Aussagen zur Hypnosystemik stimmen?
++ Sie vereint Systemik und Elemente der Hypnotherapie
++ Leitsätze: „Kontext bestimmt Verhalten“ und „Story follows State“
++ „Die Probleme von heute sind die Lösungsversuche von damals“
+- Sie vereint Psychoanalyse und Verhaltenstherapie
+- Symptome haben in der Hypnosystemik keinen Sinn
+> Symptome sind (Hin-)weise; das Problem beinhaltet die Lösung.
+
+? Was bedeutet es, „am guten Platz“ zu sein?
++ Im eigenen Verantwortungsbereich
++ Sichtbar
++ In der eigenen Energie und mit Sicherheit
+- Den Platz anderer einnehmen, um sie zu schützen
+- Möglichst unauffällig im Hintergrund bleiben
+> Fehlt er, rührt das an der Existenzberechtigung.
+
+? Welche Aussagen zu willkürlichen und unwillkürlichen Prozessen stimmen?
++ Die Unterscheidung geht im Kurs auf Gunther Schmidt zurück
++ Unwillkürliche Prozesse wirken schneller und effektiver
++ Beispiele für unwillkürliche Prozesse: Atmung, Herztätigkeit, Verdauung, Stimmung
++ Ihr harmonisches Zusammenspiel heißt Flow State
+- Sprache erreicht das implizite Gedächtnis besonders gut
+> Sprache erreicht vor allem das explizite Gedächtnis.
+
+? Welche Aussagen zu Imagination und Trance stimmen?
++ Imagination bahnt neuronale Netzwerke vor
++ Der „Zaubertrick“ ist die Aufmerksamkeitsfokussierung (Trance)
++ Problemtrance ist die Aufmerksamkeitsfokussierung auf ein Problem
+- Imagination löscht neuronale Netzwerke dauerhaft
+- Problemtrance ist Hypnose zur Lösung von Problemen
+> „Energie folgt der Absicht.“ Pendeln wirkt der Problemtrance entgegen.
+
+? Welche Beispiele sind Pacing?
++ Die eigene Sprache auf den Atemrhythmus des Klienten abstimmen
++ Wörtlich wiederholen
++ Eine ähnliche Körperhaltung einnehmen
+- „Ich freue mich, dass du da bist.“
+- Einen Duft im Raum verbreiten
+> „Ich freue mich, dass du da bist“ ist Priming.
+
+? Welche Aussagen zu Priming und Pacing stimmen?
++ Priming ist die Bahnung von Assoziationen durch einen Hinweisreiz
++ Pacing ist eine Haltung der Zustimmung und Zugewandtheit
++ Pacing ist keine Manipulation, sondern dient der Verbundenheit
+- Pacing ist die Bahnung von Assoziationen durch Reize
+- Pacing heißt, Klienten zu schnellerem Tempo anzutreiben
+> Pacing ist eine fortwährende Aufgabe für den Begleiter.
+
 ===FREITEXT===
 ?? Erkläre den Unterschied zwischen willkürlichen und unwillkürlichen Prozessen und warum Imagination wirkt.
 * Willkürlich: bewusst, kontrollierbar; unwillkürlich: von allein (Atmung, Stimmung, Trigger)

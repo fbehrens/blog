@@ -173,6 +173,55 @@ Die Bindungsperson muss die Signale des Kindes **wahrnehmen – richtig interpre
 - Mimik spielt für Säuglinge keine Rolle
 > Bindungssysteme sind sehr empfindsam.
 
+===MEHRFACH===
+? Welche Aussagen zu Bindung und Bindungssystem stimmen?
++ Bowlby: Bindung ist das gefühlsgetragene Band zu einer spezifischen Person über Raum und Zeit
++ Bei Sorge und Belastung spannt sich das Bindungsband
++ Unter Bedrohung wird das Bindungssystem noch vor Flucht und Kampf aktiviert
++ Dauerhafte Aktivierung des Bindungssystems führt häufig in einen dorsalen Shutdown
+- Unter Bedrohung ist das Bindungssystem abgeschaltet
+> Das Bindungssystem schafft eine sichere Basis.
+
+? Welche Aussagen zu Bindung und Exploration stimmen?
++ Ist das Bindungsbedürfnis aktiv, ist das Explorationsbedürfnis deaktiviert
++ Für Exploration ohne Angst braucht ein Kind einen sicheren Hafen
++ Die Wippe gilt auch für Erwachsene
+- Bindung und Exploration sind immer gleichzeitig aktiv
+- Exploration ist nur ohne Bindungspersonen möglich
+> Grundbedürfnisse im Kurs nach Karl-Heinz Brisch.
+
+? Welche Merkmale hat feinfühliges Reagieren?
++ Wahrnehmen
++ Richtig interpretieren
++ Angemessen reagieren
++ Prompt reagieren
+- Bewerten
+> Skript S. 43.
+
+? Über welche Kanäle läuft feinfühlige Interaktion?
++ Sprache
++ Rhythmus
++ Blickkontakt
++ Berührung
+- Geschenke
+> Berührung ist die ehrlichste und intensivste Rückmeldung.
+
+? Welche Aussagen zu Selbstwert und Selbstwirksamkeit stimmen?
++ Selbst können + Wertschätzung = Selbstwert
++ Das Gegenteil von Selbstwirksamkeit ist erlernte Hilflosigkeit
++ Wertschätzung erkennt den Menschen an, Lob die Leistung
+- Leistung + Lob = Selbstwert
+- Lob ist immer aufrichtiger als Wertschätzung
+> Lob kann zur Bedingung werden.
+
+? Welche Aussagen zur frühen Bindungsforschung stimmen?
++ Säuglinge wählen die feinfühligste Person als Hauptbindungsperson
++ Säuglinge bewerten Mimik und Stimme als sicher oder bedrohlich, noch bevor sie scharf sehen
++ Im Still-Face-Experiment gerät das Kind bei regloser Mimik in Not und beruhigt sich nach der Reparatur
++ Vernachlässigung reduziert neuronale Wachstumshormone
+- Säuglinge wählen immer die Person, die am häufigsten versorgt
+> „Misattribution of arousal“: erhöhte Erregung steigert Anziehung.
+
 ===FREITEXT===
 ?? Definiere Bindung nach Bowlby und erkläre die Aufgabe des Bindungssystems.
 * Gefühlsgetragenes Band zu einer spezifischen Person über Raum und Zeit

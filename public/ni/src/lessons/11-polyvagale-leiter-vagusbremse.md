@@ -148,6 +148,55 @@ Bild im Kurs: **Fahrradbremse** (Deb Dana) – bergab bremsen, in der Ebene lös
 - Cues of Rest
 > Der Zustand prägt die Wahrnehmung.
 
+===MEHRFACH===
+? Welche Aussagen zur polyvagalen Leiter stimmen?
++ Sie wurde von Deb Dana entwickelt
++ Oben steht der ventrale Vagus (Sicherheit), in der Mitte der Sympathikus, unten der dorsale Vagus
++ Beim Wechsel kann keine Sprosse übersprungen werden
+- Man springt bei Gefahr immer direkt von oben nach unten
+- Sie dient vor allem der Diagnose einer PTBS
+> Sie dient dem Nervensystem-Mapping und der Selbstverortung.
+
+? Welche Forschungsfragen stellt man laut Kurs für jeden Zustand auf der Leiter?
++ Wie fühlt sich der Körper an?
++ Welche Gedanken und Überzeugungen tauchen auf?
++ Was sind die Auslöser?
+- Welche Diagnose passt dazu?
+- Welche Medikation ist angezeigt?
+> M3.2·02.
+
+? Welche Aussagen zur Vagusbremse stimmen?
++ Sie ist der körpereigene Regler des Herzschlags, gesteuert vom ventralen Vagus
++ Leicht gelöst steigt der Puls leicht, um Energie zu geben, ohne Panik
++ Komplett gelöst rast das Herz und der Sympathikus übernimmt
+- Komplett gelöst fällt man sofort in den dorsalen Shutdown
+- Sie ist eine Atemtechnik zum Anhalten der Luft
+> Deb Dana: Fahrradbremse – bergab bremsen, in der Ebene lösen.
+
+? Was gehört zum Stärken der Vagusbremse?
++ State Shifts früh erkennen
++ Sicherheitsanker stärken
++ Pendeln üben
+- Möglichst oft intensive Trigger aufsuchen
+- Ressourcen meiden, weil sie Vermeidung sind
+> Wegpendeln in eine Ressource ist Training, keine Vermeidung.
+
+? Welche Folgen hat eine schlecht entwickelte Vagusbremse nach früher Traumatisierung?
++ Pendeln zwischen Extremen von Über- und Untererregung
++ Ein erschöpfendes Leben voller täglicher Kraftanstrengung
+- Ein besonders weites Stresstoleranzfenster
+- Dauerhaft ruhiger Herzschlag in jeder Lage
+- Fehlende Fähigkeit zu Kampf und Flucht
+> Skript Kap. 10.
+
+? Welche Beispiele passen zur jeweiligen Stufe?
++ Unterste Stufe: heftiger Schock oder Burnout mit innerer Leere
++ Mittlere Stufe: plötzlicher Abgabetermin im Job
++ Oberste Stufe: gemütlicher Abend mit Freunden
+- Oberste Stufe: Beinahe-Unfall beim Autofahren
+- Im Traumastrudel sieht man überall Cues of Safety
+> Im Traumastrudel sieht man überall Cues of Danger.
+
 ===FREITEXT===
 ?? Beschreibe die polyvagale Leiter und wie man sie in der Praxis nutzt.
 * Modell von Deb Dana, basierend auf Porges

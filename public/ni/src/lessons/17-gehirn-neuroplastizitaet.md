@@ -178,6 +178,55 @@ Netzwerke, die mit **Überlebensreaktionen** verknüpft sind, sind enorm solide 
 - Sie sind grundsätzlich unveränderbar
 > „Ausfahrten bauen“; Konzentration nur aufs Schöne ist nicht traumasensibel.
 
+===MEHRFACH===
+? Ordne zu: Welche Mottos der Gehirnteile stimmen?
++ Stammhirn – Überleben, alles andere ist egal
++ Limbisches System – Bewerten: ist das gut oder schlecht?
++ Neocortex / präfrontaler Cortex – der einzige Teil, der Veränderung mag
+- Limbisches System – liebt Veränderung
+- Stammhirn – Denken, planen, reflektieren
+> Das limbische System „hasst Veränderung“, weil Routinen Sicherheit geben.
+
+? Welche Funktionen gehören zum präfrontalen Cortex?
++ Impulskontrolle
++ Planung
++ Empathie und Mentalisieren
+- Alarm bei Gefahr und Stresshormone
+- Herzschlag und Atmung
+> Jüngster Gehirnteil.
+
+? Welche Aussagen zu Gehirnstrukturen und Modellen stimmen?
++ Das Modell des dreieinigen Gehirns stammt von MacLean
++ Die Amygdala ist die „Feuerwehr“, die Alarm schlägt
++ Der Hippocampus hat Seepferdchenform und ist „Bibliothekar“
++ Im Handmodell von Daniel Siegel stellt der Daumen das limbische System dar
+- Der präfrontale Cortex hat in der Hierarchie die meiste Macht
+> Die meiste Macht hat das Stammhirn.
+
+? Welche Aussagen zur Neuroplastizität stimmen?
++ Sie ist die Fähigkeit einer Nervenzelle, sich mit einer anderen zu vernetzen
++ Die Zahl der Verschaltungen ergibt sich aus Erfahrungen
++ Im Säuglingsalter haben wir die meisten Nervenzellen
+- Die Zahl der Verschaltungen ist ausschließlich genetisch bestimmt
+- Die meisten Nervenzellen haben wir mit etwa 25 Jahren
+> Das Gehirn entwickelt sich nutzungsabhängig.
+
+? Was ist laut Skript genetisch festgelegt?
++ Bindungsbedürfnis
++ Erkundungsbedürfnis
++ Überlebensreaktionsmuster
+- Persönlichkeit und Charakter
+- Bindungsstil
+> Persönlichkeit prägen stärker die Nutzungsbedingungen (Lebensumstände).
+
+? Welche Aussagen zu neuronalen Netzwerken stimmen?
++ „What fires together, wires together“
++ Trampelpfad und Autobahn stehen für wenig vs. stark genutzte Netzwerke (Hüther)
++ Je häufiger, länger und emotional intensiver eine Erfahrung, desto stabiler das Netzwerk
++ Traumabedingte Netzwerke werden nicht gelöscht, sondern neue angebaut
+- Überlebensnetzwerke lassen sich mit dem Verstand allein umbauen
+> Überlebensnetzwerke laufen autonom am Willen vorbei; „Ausfahrten bauen“.
+
 ===FREITEXT===
 ?? Beschreibe das dreieinige Gehirn und die Rolle von Amygdala und Hippocampus.
 * Stammhirn: Überleben, Autopilot

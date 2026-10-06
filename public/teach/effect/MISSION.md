@@ -23,7 +23,7 @@ into opencode's shape, and watch its spans flow into a local telemetry viewer.
 - You can read an opencode module and explain *why* it's shaped that way.
 
 ## Constraints
-- Stack is fixed: Bun, `effect@^4.0.0-beta`, `@effect/platform-bun`, oxc, jj.
+- Stack is fixed: Bun, `effect@^4.0.1`, `@effect/platform-bun`, oxc, jj.
 - Short, concise lessons. You already write working Effect 4 — start above beginner level.
 - No worktrees.
 

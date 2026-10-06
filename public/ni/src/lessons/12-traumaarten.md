@@ -187,6 +187,55 @@ einen Menschen **„aus der Bahn werfen“**.
 - Ein Trauma, das in einer Generation vollständig heilt
 > Z. B. Sklaverei, Kriege, Enteignung.
 
+===MEHRFACH===
+? Welche Merkmale traumatischer Ereignisse nennt das Skript?
++ Plötzlichkeit
++ Heftigkeit
++ Ausweglosigkeit / Hilflosigkeit
++ Dauer
+- Häufigkeit
+> Sie werfen einen Menschen „aus der Bahn“.
+
+? Welche Aussagen zur Definition von Trauma stimmen?
++ Trauma liegt in den Folgen, in der nicht gelingenden Verarbeitung
++ Ein traumatisches Erlebnis übersteigt die Bewältigungs- und Verarbeitungsfähigkeit
++ Nach DSM-IV (1994) kann auch die Bedrohung anderer (Zeugenschaft) traumatisieren
+- Trauma liegt ausschließlich im auslösenden Ereignis
+- Trauma setzt immer eine körperliche Verletzung voraus
+> WHO (ICD-10): außergewöhnliche Bedrohung katastrophalen Ausmaßes.
+
+? Welche Formen zählen zu Komplextrauma bzw. früher Traumatisierung?
++ Bindungstrauma
++ Entwicklungstrauma
+- Monotrauma
+- Sekundäres Trauma
+- Kollektives Trauma
+> Oberbegriff: frühe Traumatisierung / Kindheitstrauma; Grenzen fließend.
+
+? Welche Aussagen zu Komplextrauma und Entwicklungstrauma stimmen?
++ Komplextrauma ist meist frühe Traumatisierung durch toxischen Stress von Menschen über längere Zeit
++ Viele Betroffene bewerten das als Kind Erlebte als normal
++ Die Aufnahme von Entwicklungstrauma ins DSM-5 wurde 2009 beantragt, aber nicht umgesetzt
+- Entwicklungstrauma ist seit 1980 fester Bestandteil des DSM
+- Komplextrauma betrifft ausschließlich Erwachsene
+> Kinder bekommen deshalb oft andere Diagnose-Etiketten.
+
+? Welche Aussagen zur sekundären Traumatisierung stimmen?
++ Sie entsteht durch empathisches Mitfühlen mit einer traumatisierten Person
++ Eigene ungelöste Traumata begünstigen sie
++ Fehlende Ressourcen und Überforderung begünstigen sie
+- Regelmäßige Supervision begünstigt sie
+- Sie ist ein zweites Trauma derselben Art
+> Die Begleitperson wird in den Traumastrudel hineingezogen.
+
+? Welche Zuordnungen von Traumaart und Beschreibung stimmen?
++ Monotrauma (Typ I) – einzelnes Ereignis wie Unfall oder Überfall
++ Kollektives Trauma – betrifft eine Gruppe gleichzeitig, z. B. 11. September
++ Pränatales Trauma – im impliziten Gedächtnis gespeichert
++ Mikrotrauma – scheinbar kleine Erlebnisse wie Bloßstellung, die in Summe prägen
+- Transgenerationales Trauma – heilt in einer Generation vollständig
+> Man-made-Traumata erschüttern zusätzlich unsere soziale Natur.
+
 ===FREITEXT===
 ?? Definiere Trauma und nenne die vier Merkmale traumatischer Ereignisse.
 * Übersteigt die Bewältigungs- und Verarbeitungsfähigkeit

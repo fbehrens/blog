@@ -160,6 +160,55 @@ Viele Menschen mit Traumafolgen fühlen sich beim Meditieren sofort unwohl: Bei 
 - Die Teilnehmenden weiter in Trance lassen
 > Plus Zeit zum Nachspüren.
 
+===MEHRFACH===
+? Welche Methoden sind Bottom-up-Ansätze?
++ Somatic Experiencing
++ EMDR
++ Traumasensibles Yoga
++ Ego-State-Therapie
+- Psychoedukation
+> Psychoedukation ist top-down.
+
+? Welche Aussagen zu Top-down und Bottom-up stimmen?
++ Top-down: über den bewussten Verstand das Unwillkürliche erreichen
++ Bottom-up: von der Körperebene die Verstandesebene erreichen
++ Je früher die Prägung, desto weniger erfolgreich sind Top-down-Ansätze
++ Für früh belastete Menschen wird eine Mischung empfohlen
+- Für früh belastete Menschen werden ausschließlich Top-down-Ansätze empfohlen
+> Der Verstand gibt Sicherheit und Einordnung.
+
+? Welche Aussagen zum Lernen und zu den Kreisläufen stimmen?
++ Echtes Lernen gelingt nur im regulierten Zustand innerhalb des STF
++ Dopamin wirkt im Flow wie „Dünger“ für neue Synapsen
++ Das Konzept des Angst-Immobilitätskreislaufs stammt von Peter Levine
+- Lernen unter Hochstress prägt am nachhaltigsten
+- Cortisol ist der Dünger für neue Synapsen
+> Außerhalb des Fensters wird nur der Angst-Immobilitätskreislauf gelernt.
+
+? Welche Elemente gehören zu traumasensibler Meditation?
++ Vorhersehbarkeit – vorher sagen, was wir machen und wie lange
++ Nachvollziehbarkeit – erklären, warum wir etwas tun
++ Wahlmöglichkeit – Augen offen oder geschlossen
+- Möglichst hypnotische, monotone Sprache
+- Abruptes Ende mit lautem Signal
+> Zu monotone Sprache kann Dissoziation fördern; Ende sanft, aber klar orientierend.
+
+? Welche Ziele und Risiken traumasensibler Meditation nennt das Skript?
++ Ziel: Hyperfokussierung (Medusa) vermeiden
++ Ziel: Dysregulation vermeiden
++ Risiko: Menschen mit Neigung zur Untererregung schlafen ein oder dissoziieren
+- Ziel: tiefe Trance und völlige Stille erreichen
+- Ziel: Traumainhalte gezielt hervorholen
+> Skript S. 28.
+
+? Welche sind innere Anker der Aufmerksamkeit?
++ Der Atem
++ Die Hände
++ Die Füße
+- Ein Handschmeichler
+- Eine Decke
+> Handschmeichler und Decke sind äußere Anker.
+
 ===FREITEXT===
 ?? Erkläre Top-down- und Bottom-up-Ansätze mit Beispielen und was für früh traumatisierte Menschen empfohlen wird.
 * Top-down: über den Verstand zum Unwillkürlichen (Gesprächstherapie, Psychoedukation)

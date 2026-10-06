@@ -1,6 +1,6 @@
 /* Quiz-Komponente: Multiple Choice mit sofortigem Feedback, gemischten Antworten,
    Wiederholung falscher Fragen und Fortschritt im localStorage.
-   Frageformat: {q, o:[...], a:<Index der richtigen Option>, e:<Erklärung>, l?, t?, f?} */
+   Frageformat: {q, o:[...], a:<Index der richtigen Option | [Indizes] bei Mehrfachauswahl>, e:<Erklärung>, l?, t?, f?} */
 (function () {
   const KEY = "ni-quiz";
   const LETTERS = "ABCDEFG";
@@ -49,30 +49,53 @@
     questions.forEach((q, i) => {
       const box = el("div", "q");
       if (opts.exam && q.l) box.appendChild(el("span", "q-ref", `Lektion ${q.l} · ${q.t}`));
-      box.appendChild(el("p", "q-text", `<span class="n">${i + 1}.</span>${q.q}`));
-      const list = el("ol", "options");
+      const multi = Array.isArray(q.a);
+      box.appendChild(el("p", "q-text", `<span class="n">${i + 1}.</span>${q.q}${multi ? ' <span class="multi">(eine oder mehrere richtig)</span>' : ""}`));
       const order = shuffle(q.o.map((text, idx) => ({ text, idx })));
+      const list = el("ol", "options");
       const buttons = [];
+      const link = opts.exam && q.f ? ` <a href="${q.f}">→ Lektion ${q.l} wiederholen</a>` : "";
+      const done = (ok) => {
+        if (!ok) wrong.push(q); else right++;
+        answered++;
+        box.appendChild(el("p", `why ${ok ? "ok" : "bad"}`, `<span class="verdict">${ok ? "Richtig." : "Leider nicht."}</span>${q.e || ""}${link}`));
+        update();
+        if (answered === questions.length) finish();
+      };
       order.forEach((opt, k) => {
         const li = el("li");
         const b = el("button", null, `<span class="l">${LETTERS[k]}</span><span>${opt.text}</span>`);
         b.type = "button";
         b.addEventListener("click", () => {
-          const ok = opt.idx === q.a;
+          if (multi) { b.classList.toggle("sel"); return; }
           buttons.forEach((bb) => { bb.disabled = true; });
           buttons[order.findIndex((o) => o.idx === q.a)].classList.add("ok");
-          if (!ok) { b.classList.add("bad"); wrong.push(q); } else { right++; }
-          answered++;
-          const link = opts.exam && q.f ? ` <a href="${q.f}">→ Lektion ${q.l} wiederholen</a>` : "";
-          box.appendChild(el("p", `why ${ok ? "ok" : "bad"}`, `<span class="verdict">${ok ? "Richtig." : "Leider nicht."}</span>${q.e || ""}${link}`));
-          update();
-          if (answered === questions.length) finish();
+          if (opt.idx !== q.a) b.classList.add("bad");
+          done(opt.idx === q.a);
         });
         buttons.push(b);
         li.appendChild(b);
         list.appendChild(li);
       });
       box.appendChild(list);
+      if (multi) {
+        const check = el("button", "check", "Prüfen");
+        check.type = "button";
+        check.addEventListener("click", () => {
+          check.remove();
+          let ok = true;
+          order.forEach((opt, k) => {
+            const b = buttons[k], should = q.a.includes(opt.idx), sel = b.classList.contains("sel");
+            b.disabled = true;
+            b.classList.remove("sel");
+            if (should) b.classList.add(sel ? "ok" : "miss");
+            else if (sel) b.classList.add("bad");
+            if (should !== sel) ok = false;
+          });
+          done(ok);
+        });
+        box.appendChild(check);
+      }
       root.appendChild(box);
     });
 
@@ -161,6 +184,8 @@
     const root = document.getElementById("quiz");
     if (!root || !window.QUIZ) return;
     render(root, window.QUIZ, { id: window.LESSON.id, full: true });
+    const mq = document.getElementById("mquiz");
+    if (mq && window.MEHRFACH && window.MEHRFACH.length) render(mq, window.MEHRFACH, { id: window.LESSON.id + "m", full: true });
     const ft = document.getElementById("freitext");
     if (ft && window.FREITEXT && window.FREITEXT.length) renderFreitext(ft, window.FREITEXT, {});
     const t = document.querySelector(".toggle-summary");
@@ -179,10 +204,11 @@
       const teil = document.getElementById("exam-teil").value;
       const typ = document.getElementById("exam-typ").value;
       const src = typ === "ft" ? (window.FTBANK || []) : window.BANK;
-      let pool = shuffle(src.filter((q) => !teil || q.p === teil));
+      const multi = (q) => Array.isArray(q.a);
+      let pool = shuffle(src.filter((q) => (!teil || q.p === teil) && (typ !== "mc" || !multi(q)) && (typ !== "mr" || multi(q))));
       if (typ === "ft") { renderFreitext(root, pool.slice(0, Math.min(n || pool.length, 10)), { exam: true }); return; }
       if (n) pool = pool.slice(0, n);
-      render(root, pool, { id: "exam", exam: true, full: true, restart: go });
+      render(root, pool, { id: typ === "mc" ? "exam" : "exam-" + typ, exam: true, full: true, restart: go });
     };
     start.addEventListener("click", go);
     go();
@@ -193,7 +219,7 @@
     document.querySelectorAll("[data-progress]").forEach((n) => {
       const d = data[n.dataset.progress];
       if (!d) return;
-      n.textContent = `zuletzt ${d.last} % · best ${d.best} % · ${d.date} · ${d.runs}×`;
+      n.textContent = `${n.dataset.label || ""}zuletzt ${d.last} % · best ${d.best} % · ${d.date} · ${d.runs}×`;
       if (d.last < 70) n.classList.add("low");
     });
   }

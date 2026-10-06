@@ -145,6 +145,55 @@ Traumastrudel haben **starke Sogkraft** → **Hyperfokussierung** (Neurozeption 
 - Den Klienten zur Konfrontation zu drängen
 > Empathie ohne zu starke Resonanz.
 
+===MEHRFACH===
+? Welche Aussagen zum Ursprung und Bild des Lebensflussmodells stimmen?
++ Es geht auf Peter Levine zurück und wurde von Woltemade Hartmann erweitert
++ Der Fluss steht für Persönlichkeit und Lebensverlauf
++ Die Ufer stehen für Ich-Grenzen, Ich-Stärke, Resilienz und Toleranzfenster
+- Die Ufer stehen für die Bezugspersonen der Kindheit
+- Das Modell stammt von Daniel Siegel
+> Analogie zum Stresstoleranzfenster.
+
+? Welche Aussagen zu Ressourcenwirbeln treffen zu?
++ Sie entstehen durch einen stimmigen Rhythmus von Sympathikus und Parasympathikus
++ Ihre Sogkraft hilft bei normalem Stress, ins Flussbett zurückzufinden
++ Sie haben weniger Sog auf die Wahrnehmung, aber ähnlich starke Wirkung auf das System
+- Sie haben mehr Sog als der Traumastrudel
+- Sie entstehen durch einen dorsalen Shutdown
+> Ressourcenwirbel sind eine Gegenkraft zum Strudel.
+
+? Welche Aussagen zum Traumastrudel stimmen?
++ Der Begriff stammt von Peter Levine
++ Er entsteht, wenn der Organismus keine Lösung für den Stress hat
++ Seine Sogkraft und Hyperfokussierung wird mit der Medusa beschrieben
+- Er entsteht bei jedem anstrengenden Arbeitstag
+- Er entsteht, wenn der ventrale Vagus besonders aktiv ist
+> Wer Medusa anblickte, erstarrte zu Stein.
+
+? Mit welchen Prinzipien begleiten wir Menschen zurück in den Lebensfluss?
++ Koregulation
++ Ressourcen
++ Pendeln
+- Konfrontation
+- Diagnose
+> Skript S. 11; Energie wird in einer liegenden Acht bewegt.
+
+? Welche „Schilde“ schützen Begleitende vor dem Sog der Medusa?
++ Hier-und-Jetzt-Bewusstsein
++ Körperressourcen
++ Beobachterperspektive / Meta-Ebene
+- Völlige Verschmelzung mit dem Klienten
+- Das Thema schnell wechseln
+> Empathie ohne zu starke Resonanz.
+
+? Welche Werte entstehen im gesunden Lebensfluss?
++ Flow
++ Containment
++ Kohärenz
++ Verbundenheit
+- Perfektion
+> Zugleich Ziele der traumasensiblen Begleitung.
+
 ===FREITEXT===
 ?? Erkläre das Lebensflussmodell mit seinen Elementen.
 * Fluss = Persönlichkeit und Lebensverlauf

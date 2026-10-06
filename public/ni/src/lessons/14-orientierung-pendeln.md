@@ -170,6 +170,54 @@ Immer die **Referenz zum Körpererleben** einbeziehen: Wie wirkt die Umfokussier
 - Als Kreis, der sich nicht verändert
 > Wie im Lebensflussmodell.
 
+===MEHRFACH===
+? Welche Aussagen zur Orientierungsreaktion stimmen?
++ Sie ist die allererste Reaktion des Nervensystems
++ Bei einem unbekannten Geräusch fragt sie: Wo ist es? Was ist es? Ist es gefährlich?
++ Man unterscheidet defensive und erkundende Orientierung
+- Erkundende Orientierung findet in maximaler Übererregung statt
+- Die Fluchtreaktion kommt immer vor der Orientierung
+> Erkundende Orientierung geschieht in entspannter Wachsamkeit.
+
+? Wie kann die Orientierung bei Traumafolgen verändert sein?
++ Übersteuert, mit Schreckhaftigkeit
++ Wie ausgeknipst bei Menschen, die in dissoziativen Zuständen zuhause sind
++ Medusa-Phänomen: ausschließlich auf traumaassoziierte Reize gerichtet
+- Besonders entspannt erkundend durch übersteuerte Neurozeption
+- Ausschließlich auf Ressourcen ausgerichtet
+> Ausgeknipste Orientierung kann zu häufigen Unfällen führen.
+
+? Was bewirken Orientierungsübungen?
++ Sie stellen beide Orientierungsreaktionen wieder her
++ Sie balancieren übersteuerte Reaktionen
++ Sie verkörpern Sicherheit im Hier und Jetzt
+- Sie löschen traumatische Erinnerungen
+- Sie ersetzen jede weitere Begleitung
+> Skript S. 20.
+
+? Welche Aussagen zum Pendeln stimmen?
++ Aufmerksamkeit wird bewusst gelenkt, um Überwältigendes zu regulieren
++ Pendeln ist keine Ablenkung – man bleibt in Kontakt mit sich
++ Man pendelt zwischen Stressor und Ressource
++ Eine Skala von 0 bis 10 macht die Wirkung greifbar
+- Ziel ist, den Traumastrudel vollständig zu vermeiden
+> Sinn: dem Strudel begegnen, ohne darin zu verschwinden; Bild: liegende Acht.
+
+? Welche Pendelebenen sind richtig zugeordnet?
++ Unruhe im Herzbereich ↔ Ruhe im Bauch: innerer Stressor ↔ innere Ressource
++ Große Menschenmenge ↔ Schwerkraft: äußerer Stressor ↔ äußere Ressource
++ Konfliktreiche Begegnung ↔ ruhiger Atem: äußerer Stressor ↔ innere Ressource
+- Gestresste Atmung ↔ Handschmeichler: äußerer Stressor ↔ innere Ressource
+- Konfliktreiche Begegnung ↔ ruhiger Atem: innerer Stressor ↔ äußere Ressource
+> Gestresste Atmung ↔ Handschmeichler = innerer Stressor ↔ äußere Ressource.
+
+? Welche Paare sind Beispiele für „innerer Stressor ↔ äußere Ressource“?
++ Gestresste Atmung ↔ Handschmeichler
+- Unruhe im Herzbereich ↔ Ruhe im Bauch
+- Große Menschenmenge ↔ Schwerkraft
+- Konfliktreiche Begegnung ↔ ruhiger Atem
+> Nur ein Paar passt; die anderen sind innen↔innen, außen↔außen, außen↔innen.
+
 ===FREITEXT===
 ?? Erkläre die Orientierungsreaktion, ihre zwei Arten und was sich bei Trauma verändert.
 * Allererste Reaktion: Wo? Was? Gefährlich?

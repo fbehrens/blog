@@ -160,6 +160,55 @@ Teil unserer sozialen Natur, reagiert auf **Signale von Sicherheit**. Versorgt *
 - Gefälliges, anbiederndes Verhalten
 > M2.1·06.
 
+===MEHRFACH===
+? Welche Aussagen zur Polyvagaltheorie stimmen?
++ Sie wurde von Stephen Porges begründet
++ Deb Dana übersetzte sie mit der polyvagalen Leiter für die Praxis
++ Der dorsale Vagus ist phylogenetisch der älteste Teil
+- Der ventrale Vagus ist phylogenetisch der älteste Teil
+- Sie wurde von Peter Levine begründet
+> Reihenfolge: dorsaler Vagus, Sympathikus, ventraler Vagus.
+
+? Welche Aussagen zum ventralen Vagus treffen zu?
++ Er versorgt Teile des Gehörs, Kehlkopf und Mimik
++ Er ist die „Adresse der Koregulation“
++ Er ist an der Fawn Response beteiligt
+- Er löst im Notfall den dorsalen Shutdown aus
+- Er versorgt vor allem die Verdauungsorgane im Bauchraum
+> Über Mimik, Stimme und Verbundenheit zurück ins Fenster.
+
+? Welche Mischzustände sind richtig zugeordnet?
++ Sympathisch + ventral-vagal = Mobilisierung in Sicherheit (Spiel, Tanz)
++ Dorsal-vagal + ventral-vagal = Immobilität in Sicherheit (Ruhe, Regeneration)
++ Sympathikus unter Hochstress + dorsaler Vagus = Freeze
++ Sympathikus unter Hochstress + ventraler Vagus = Fawn Response
+- Dorsal-vagal + ventral-vagal = Freeze
+> Freeze = Gas und Bremse gleichzeitig.
+
+? Welche Merkmale gehören zum dorsalen Shutdown?
++ Immobilität
++ Gedämpfter Schmerz
++ Gedrosselte Herz- und Atemfrequenz
+- Erhöhter Puls und Fluchtimpuls
+- Höchste innere Ladung bei blockierter Bewegung
+> Hohe Ladung bei Erstarrung kennzeichnet Freeze, nicht Shutdown.
+
+? Welche Aussagen zu Freeze und Shutdown stimmen?
++ Freeze: das Reh im Scheinwerferlicht
++ Beim Shutdown fließt die Kraft aus den Muskeln
++ Das Impala kommt über Atem, dann Zittern, dann Sympathikus zurück
+- Freeze und Shutdown meinen dasselbe
+- Freeze ist ein Zustand in Sicherheit
+> M2.1·06.
+
+? Welche Merkmale zeigt latente Untererregung (Fallbeispiel Fritz)?
++ Kaum Mimik
++ Monotone Sprache
++ Taubheit
+- Schreckhaftigkeit und Schlafstörungen
+- Ständiges Powern und Funktionieren
+> Julika zeigt dagegen den Wechsel zwischen Über- und Untererregung.
+
 ===FREITEXT===
 ?? Beschreibe die drei primären Zustände der Polyvagaltheorie jeweils in Sicherheit und unter Stress.
 * Ventraler Vagus: Verbundenheit / unter Stress Fawn Response

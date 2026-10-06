@@ -168,6 +168,55 @@ Anteile aus **traumatischem Stress** bleiben oft **rigide**, entwickeln sich wen
 - Nein, und sie verändern sich auch nie
 > Teil des Nervensystems; Neuroplastizität.
 
+===MEHRFACH===
+? Welche Aussagen zu inneren Anteilen stimmen?
++ Hartmann definiert sie als neurophysiologische Repräsentanzen gemachter Erfahrungen
++ Anteile zu haben ist ein natürliches menschliches Phänomen
++ Das „Selbst“ ist im Ego-State-Modell die Gesamtpersönlichkeit aus allen Anteilen
++ Anteile entstehen, um zu schützen
+- Anteile gibt es nur bei dissoziativen Störungen
+> Anteile sind neuronale Netzwerke.
+
+? Was enthalten innere Anteile laut Skript?
++ Eigene Erinnerungen und Gefühle
++ Glaubenssysteme und Bedürfnisse
++ Ein Alter und Funktionen
++ Körperempfindungen
+- Ausschließlich die Erinnerung an ein Trauma
+> Dazu Weltanschauungen, Wünsche, Fähigkeiten.
+
+? Welche Kategorien von Anteilen unterscheidet Woltemade Hartmann?
++ Ressourcenreiche Anteile
++ Verletzte Anteile
++ Verletzende / destruktiv wirkende Anteile
+- Bewusste und unbewusste Anteile
+- Gute und böse Anteile
+> Im Coaching liegt der Fokus auf den ressourcenreichen Anteilen.
+
+? Welche Anteile gehören zu den verletzenden Anteilen?
++ Innerer Richter
++ Miesmacher
++ Täterimitierende Anteile
++ Täterloyale Anteile
+- Das brave Mädchen
+> Das brave Mädchen ist ein verletzter Anteil (Fawn Response).
+
+? Welche Zuordnungen von Anteil und Überlebensstrategie stimmen?
++ Süchtiger Anteil – Flucht
++ Depressiver Anteil – Shutdown
++ Braves Mädchen – Fawn Response
+- Süchtiger Anteil – Kampf
+- Depressiver Anteil – Flucht
+> Skript S. 34.
+
+? Welche Aussagen zur Veränderung von Anteilen stimmen?
++ Verletzte Anteile verändern sich, wenn sie bekommen, was ihnen damals gefehlt hat
++ Anteile können nicht eliminiert werden, aber reifen
++ Verletzende Anteile werden „entdämonisiert“, weil sie nicht zum Schaden gedacht sind
++ Unter guten Bedingungen entstandene Anteile sind integriert und dem Wesenskern nah
+- Unter traumatischem Stress entstandene Anteile entwickeln sich besonders schnell weiter
+> Traumabedingte Anteile bleiben oft rigide und isoliert.
+
 ===FREITEXT===
 ?? Was sind innere Anteile aus Sicht der NI und wie entstehen sie unter guten bzw. erschwerten Bedingungen?
 * Neurophysiologische Repräsentanzen gemachter Erfahrungen (Hartmann) = neuronale Netzwerke

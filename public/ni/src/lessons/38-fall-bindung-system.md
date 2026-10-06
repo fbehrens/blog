@@ -133,6 +133,55 @@ aufnahmen: M6.2·02 Beziehungsdynamiken | 12833 | 63:12 ;; M7.1·03 Familie als 
 - Das hat keinen Einfluss auf das Nervensystem
 > Säuglinge können sich nicht selbst regulieren.
 
+===MEHRFACH===
+? Welche Zuordnungen von Fallbeschreibung und Bindungsstil stimmen?
++ „Ich mache alles allein, Nähe engt mich ein“ – unsicher-vermeidend
++ Dutzende Nachrichten, wenn der Partner nicht antwortet – unsicher-ambivalent
++ Gleichzeitig Annäherung und Flucht, Kindheit mit Gewalt – desorganisiert
+- „Ich mache alles allein“ – unsicher-ambivalent
+- Dutzende Nachrichten – sicher gebunden
+> Vermeidend = deaktiviert, ambivalent = hyperaktiv.
+
+? Was brauchen die Klienten auf dem Heilungsweg vor allem?
++ Vermeidend gebunden: Koregulation und sichere Bindungserfahrung
++ Ängstlich-ambivalent: mehr Selbstregulation
+- Vermeidend gebunden: mehr Alleinsein
+- Ängstlich-ambivalent: ständige Erreichbarkeit der Begleitung
+- Vermeidend gebunden: Konfrontation mit der Bindungsangst
+> M6.1·04.
+
+? Welche Zuordnungen von Fallbeschreibung und Begriff stimmen?
++ Tröstete als Kind die depressive Mutter und will dich in der Begleitung „schonen“ – Parentifizierung
++ „Ich lande immer bei Frauen, die emotional nicht erreichbar sind“ – Reinszenierung
++ Schuldgefühl, glücklich zu sein, weil der Bruder vor ihrer Geburt starb – Überlebensschuld
++ Herzrasen und Geldverlust bei gutem Verdienst, Reichtum galt als „Täterschaft“ – falsche Loyalität
+- „Immer emotional unerreichbare Partnerinnen“ – Introjektion
+> Wir suchen unbewusst Vertrautes.
+
+? Welche Zuordnungen von Fallbeschreibung und Traumaart stimmen?
++ Einmaliger Überfall auf der Straße – Monotrauma (Typ I), man-made
++ Jahrelange Vernachlässigung, „ganz normale Kindheit“ – Komplextrauma
++ Intensivpflegekraft mit Albträumen ohne eigene Bedrohung – sekundäre Traumatisierung
+- Einmaliger Überfall – Entwicklungstrauma
+- Jahrelange Vernachlässigung – Akuttrauma
+> Betroffene von Komplextrauma halten das Erlebte oft für normal.
+
+? Welche systemischen Einordnungen stimmen?
++ Über den Alkoholismus des Vaters wird geschwiegen, nach außen wirkt alles perfekt – Scheinbalance
++ Der jüngste Sohn als „Problemkind“ – vermutlich Symptomträger einer Dysbalance
++ Todesangst beim Gedanken an Kontaktabbruch zur gewalttätigen Mutter – Prägung auf Bindungserhalt
+- Hohe Funktionalität nach außen zeigt ein gesundes System
+- Das Problem des „Problemkinds“ liegt ausschließlich bei ihm
+> Bild des Mobiles.
+
+? Welche Aussagen zu den Bindungsfällen stimmen?
++ Sichere Bindungserfahrung macht nicht abhängig, sondern stärkt Selbstwirksamkeit
++ Ein Baby, das ohne Koregulation „schreit, bis es still wird“, gleitet in Untererregung
++ Säuglinge können sich nicht selbst regulieren
+- Die Stille des Babys zeigt gelungene Selbstregulation
+- Abhängigkeit ist das Ziel der Begleitung
+> Mythos Abhängigkeit; Stille kann Shutdown sein.
+
 ===FREITEXT===
 ?? Fall: Ein Klient beendet jede Beziehung, sobald sie eng wird, und sagt „Ich brauche niemanden“. Ordne den Bindungsstil ein und beschreibe, was er in der Begleitung braucht.
 * Unsicher-vermeidender Bindungsstil, deaktiviertes Bindungssystem
