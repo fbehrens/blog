@@ -39,5 +39,10 @@
     "name": "ni",
     "source": "/Users/fb/c/teach/ni",
     "typ": "unlisted"
+  },
+  {
+    "name": "sketchbook",
+    "source": "/Users/fb/c/teach/sketchbook",
+    "typ": "teach"
   }
 ]

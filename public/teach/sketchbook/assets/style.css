@@ -1,0 +1,101 @@
+/* Shared stylesheet for all Sketchbook lessons and references. Tufte-ish. */
+:root {
+  --ink: #1d1b19;
+  --muted: #6b665f;
+  --paper: #fffdf8;
+  --rule: #e6e0d4;
+  --accent: #c2410c;
+  --ok: #15803d;
+  --bad: #b91c1c;
+  --note: #f6f1e6;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: -apple-system, "SF Pro Text", "Helvetica Neue", sans-serif;
+  --mono: "SF Mono", Menlo, monospace;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); color: var(--ink); }
+body {
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.55;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+}
+header .kicker {
+  font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--accent);
+}
+h1 { font-weight: 400; font-size: 2.3rem; line-height: 1.15; margin: 0.3rem 0 0.4rem; }
+h2 { font-weight: 400; font-size: 1.45rem; margin: 2.6rem 0 0.6rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.25rem; }
+h3 { font-weight: 600; font-size: 1.05rem; margin: 1.6rem 0 0.3rem; }
+.subtitle { color: var(--muted); font-style: italic; margin: 0; }
+.meta { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); margin-top: 0.8rem; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+code, kbd { font-family: var(--mono); font-size: 0.85em; }
+kbd, .ui {
+  font-family: var(--sans); font-size: 0.8em; background: #fff; border: 1px solid var(--rule);
+  border-bottom-width: 2px; border-radius: 4px; padding: 0.05em 0.4em; white-space: nowrap;
+}
+.path { font-family: var(--sans); font-size: 0.88em; font-weight: 600; }
+.path .sep { color: var(--muted); font-weight: 400; padding: 0 0.2em; }
+sup.cite a { font-family: var(--sans); font-size: 0.7em; text-decoration: none; }
+
+.callout {
+  background: var(--note); border-left: 3px solid var(--accent);
+  padding: 0.8rem 1rem; margin: 1.2rem 0; font-size: 0.95em;
+}
+.callout.ask::before { content: "Ask your teacher — "; font-weight: 600; }
+.win {
+  border: 1px solid var(--ok); color: var(--ok); border-radius: 6px;
+  padding: 0.7rem 1rem; font-family: var(--sans); font-size: 0.9rem;
+}
+
+/* Step checklist (assets/steps.js) */
+ol.steps { list-style: none; padding: 0; counter-reset: step; }
+ol.steps > li {
+  counter-increment: step; position: relative; padding: 0.6rem 0 0.9rem 3.2rem;
+  border-bottom: 1px dotted var(--rule);
+}
+ol.steps > li::before {
+  content: counter(step); position: absolute; left: 0; top: 0.55rem;
+  width: 2.1rem; height: 2.1rem; border-radius: 50%; border: 1.5px solid var(--ink);
+  font-family: var(--sans); font-size: 0.9rem; display: grid; place-items: center;
+}
+ol.steps > li.done::before { content: "✓"; background: var(--ok); border-color: var(--ok); color: #fff; }
+ol.steps > li.done > :not(.step-toggle) { opacity: 0.55; }
+ol.steps .step-toggle {
+  float: right; font-family: var(--sans); font-size: 0.75rem; margin-left: 1rem;
+  background: none; border: 1px solid var(--rule); border-radius: 999px; padding: 0.2rem 0.7rem; cursor: pointer;
+}
+ol.steps p { margin: 0.2rem 0; }
+.why { color: var(--muted); font-size: 0.9em; }
+.progress { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); }
+
+/* Quiz (assets/quiz.js) */
+.quiz { margin: 1.2rem 0 1.8rem; }
+.quiz .q { font-weight: 600; margin-bottom: 0.4rem; }
+.quiz button.opt {
+  display: block; width: 100%; text-align: left; font: inherit; font-size: 0.95em;
+  background: #fff; border: 1px solid var(--rule); border-radius: 6px;
+  padding: 0.5rem 0.8rem; margin: 0.3rem 0; cursor: pointer;
+}
+.quiz button.opt:hover:not(:disabled) { border-color: var(--ink); }
+.quiz button.opt.right { border-color: var(--ok); background: #f0fdf4; }
+.quiz button.opt.wrong { border-color: var(--bad); background: #fef2f2; }
+.quiz .fb { font-family: var(--sans); font-size: 0.85rem; min-height: 1.2em; margin-top: 0.3rem; }
+.quiz .fb.right { color: var(--ok); } .quiz .fb.wrong { color: var(--bad); }
+
+/* Reference tables */
+table { border-collapse: collapse; width: 100%; font-size: 0.92em; margin: 0.8rem 0; }
+th, td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-family: var(--sans); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+
+nav.lesson-nav { font-family: var(--sans); font-size: 0.85rem; margin-top: 3rem; display: flex; justify-content: space-between; border-top: 1px solid var(--rule); padding-top: 1rem; }
+
+@media print {
+  body { font-size: 11pt; max-width: none; padding: 0; }
+  .step-toggle, .quiz, nav.lesson-nav { display: none; }
+  a { color: var(--ink); }
+  h2 { break-after: avoid; } tr, li { break-inside: avoid; }
+}
